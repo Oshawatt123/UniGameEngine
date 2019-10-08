@@ -13,8 +13,8 @@ Game::Game()
 		"My First Window",	// Title
 		250,				// initial x position
 		50,					// initial y position
-		640,				// width, in pixels
-		480,				// height, in pixels
+		SCREEN_WIDTH,		// width, in pixels
+		SCREEN_HEIGHT,		// height, in pixels
 		0					// window behaviour flags
 	);
 
@@ -29,7 +29,7 @@ Game::Game()
 	m_Renderer = SDL_CreateRenderer(
 		m_Window,
 		-1,
-		0
+		SDL_RENDERER_ACCELERATED
 	);
 
 	if (!m_Renderer) {
@@ -51,24 +51,24 @@ Game::~Game()
 	}
 }
 
-void Game::SetDisplayColour(void)
+void Game::SetDisplayColour(int r, int g, int b)
 {
 	if (m_Renderer) {
 		int result = SDL_SetRenderDrawColor(
 			m_Renderer,	// our target renderer
-			255,		// red
-			0,			// green
-			255,		// blue
+			r,		// red
+			g,			// green
+			b,		// blue
 			255			// alpha
 		);
-
-		// wipe the display to the colour we just set
-		SDL_RenderClear(m_Renderer);
-
-			// show what we've drawn
-			SDL_RenderPresent(m_Renderer);
-
-		// pause for 5 seconds
-			SDL_Delay(4000);
 	}
+}
+
+void Game::UpdateRenderer(void)
+{
+	// wipe the display to the colour we just set
+	SDL_RenderClear(m_Renderer);
+
+	// show what we've drawn
+	SDL_RenderPresent(m_Renderer);
 }
