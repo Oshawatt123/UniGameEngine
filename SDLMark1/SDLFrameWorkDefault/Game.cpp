@@ -1,4 +1,5 @@
 #include "Game.h"
+#include "Bitmap.h"
 
 Game::Game()
 {
@@ -38,10 +39,19 @@ Game::Game()
 		std::cin;
 		return;
 	}
+
+	// create the bitmap
+	m_wood = new Bitmap(m_Renderer, "filthyfrank.bmp", 200, 100, true);
 }
 
 Game::~Game()
 {
+	// CLEAN IN REVERSE ORDER!!
+	if (m_wood)
+	{
+		delete m_wood;
+	}
+
 	if (m_Renderer) {
 		SDL_DestroyRenderer(m_Renderer);
 	}
@@ -49,6 +59,8 @@ Game::~Game()
 	if (m_Window) {
 		SDL_DestroyWindow(m_Window);
 	}
+
+	
 }
 
 void Game::SetDisplayColour(int r, int g, int b)
@@ -68,6 +80,8 @@ void Game::UpdateRenderer(void)
 {
 	// wipe the display to the colour we just set
 	SDL_RenderClear(m_Renderer);
+
+	m_wood->draw();
 
 	// show what we've drawn
 	SDL_RenderPresent(m_Renderer);

@@ -8,7 +8,7 @@ int main() {
 
 	int red = 0;
 	int green = 0;
-	int blue = 0;
+	int blue = 255;
 
 	Game* game = new Game();
 
