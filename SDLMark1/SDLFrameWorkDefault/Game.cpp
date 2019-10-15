@@ -1,5 +1,6 @@
 #include "Game.h"
 #include "Bitmap.h"
+#include "ResourceManager.h"
 
 Game::Game()
 {
@@ -40,8 +41,14 @@ Game::Game()
 		return;
 	}
 
+	// create resource manager
+	ResourceManager* resourceManager = new ResourceManager(m_Renderer);
+
 	// create the bitmap
-	m_wood = new Bitmap(m_Renderer, "filthyfrank.bmp", 200, 100, true);
+	for (size_t i = 0; i < 100; i++)
+	{
+		m_wood = new Bitmap(m_Renderer, 200, 100, resourceManager->Load("filthyFileName.bmp", true));
+	}
 }
 
 Game::~Game()
