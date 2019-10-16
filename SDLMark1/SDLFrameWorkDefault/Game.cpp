@@ -47,17 +47,14 @@ Game::Game()
 	// create the bitmap
 	for (size_t i = 0; i < 100; i++)
 	{
-		m_wood = new Bitmap(m_Renderer, 200, 100, resourceManager->Load("filthyFileName.bmp", true));
+		m_wood = new Bitmap(m_Renderer, 200, 100, resourceManager->Load("filthyFrank.bmp", true));
 	}
 }
 
 Game::~Game()
 {
 	// CLEAN IN REVERSE ORDER!!
-	if (m_wood)
-	{
-		delete m_wood;
-	}
+	delete m_wood;
 
 	if (m_Renderer) {
 		SDL_DestroyRenderer(m_Renderer);
