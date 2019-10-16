@@ -1,6 +1,8 @@
 #include <SDL.h>
+#include <algorithm>
 #undef main
 #include "Game.h"
+#include "InputManager.h"
 
 int main() {
 
@@ -11,22 +13,16 @@ int main() {
 	int blue = 255;
 
 	Game* game = new Game();
+	InputManager* inputManager = new InputManager;
 
 	while (game != nullptr && running) {
 
-		// this while loop COULD go on for a while
-		// marked as legacy - update in future
-		SDL_Event e;
-		while(SDL_PollEvent(&e))
+		inputManager->pollEvent();
+
+		/*if (std::find(inputManager->eventVector.begin(), inputManager->eventVector.end(), SDL_WINDOWEVENT_CLOSE) != inputManager->eventVector.end())
 		{
-			if (e.type == SDL_WINDOWEVENT)
-			{
-				if (e.window.event == SDL_WINDOWEVENT_CLOSE)
-				{
-					running = false;
-				}
-			}
-		}
+			running = false;
+		}*/
 
 		// update renderer
 		game->SetDisplayColour(red, green, blue);
