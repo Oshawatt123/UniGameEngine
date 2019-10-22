@@ -17,17 +17,19 @@ int main() {
 
 	while (game != nullptr && running) {
 
+		// take input
 		inputManager->pollEvent();
 
-		/*if (std::find(inputManager->eventVector.begin(), inputManager->eventVector.end(), SDL_WINDOWEVENT_CLOSE) != inputManager->eventVector.end())
+		if (inputManager->checkHashMap(KeyDown) != NULL)
 		{
-			running = false;
-		}*/
+
+		}
 
 		// update renderer
 		game->SetDisplayColour(red, green, blue);
 		game->UpdateRenderer();
 
+		inputManager->clearEventQueue();
 		SDL_Delay(16);
 	}
 
