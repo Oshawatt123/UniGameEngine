@@ -13,27 +13,15 @@ int main() {
 	int blue = 255;
 
 	Game* game = new Game();
-	InputManager* inputManager = new InputManager;
 
 	while (game != nullptr && running) {
 
-		// take input
-		inputManager->pollEvents();
-
-		if (inputManager->checkHashMap(KeyDown) != NULL)
-		{
-
-		}
-		else
-		{
-			std::cout << "Found null SDL_Event. No KeyDown input" << std::endl;
-		}
+		//update inputs
 
 		// update renderer
 		game->SetDisplayColour(red, green, blue);
-		game->UpdateRenderer();
+		game->Tick();
 
-		inputManager->clearEventQueue();
 		SDL_Delay(16);
 	}
 

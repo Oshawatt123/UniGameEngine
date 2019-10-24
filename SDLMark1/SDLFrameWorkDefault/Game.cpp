@@ -1,6 +1,5 @@
 #include "Game.h"
-#include "Bitmap.h"
-#include "ResourceManager.h"
+
 
 Game::Game()
 {
@@ -42,12 +41,12 @@ Game::Game()
 	}
 
 	// create resource manager
-	ResourceManager* resourceManager = new ResourceManager(m_Renderer);
+	ResourceManager::Instance(m_Renderer);
 
 	// create the bitmap
 	for (size_t i = 0; i < 100; i++)
 	{
-		m_wood = new Bitmap(m_Renderer, 200, 100, resourceManager->Load("filthyFrank.bmp", true));
+		m_wood = new Bitmap(m_Renderer, 200, 100, ResourceManager::Instance()->Load("filthyFrank.bmp", true));
 	}
 }
 
@@ -65,6 +64,12 @@ Game::~Game()
 	}
 
 	
+}
+
+void Game::Tick(void)
+{
+	UpdateRenderer();
+	InputManager::Instance()->Update();
 }
 
 void Game::SetDisplayColour(int r, int g, int b)
@@ -89,4 +94,9 @@ void Game::UpdateRenderer(void)
 
 	// show what we've drawn
 	SDL_RenderPresent(m_Renderer);
+}
+
+void Game::UpdateInputManager(void)
+{
+	InputManager::Instance()->Update();
 }

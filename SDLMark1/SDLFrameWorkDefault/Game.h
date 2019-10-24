@@ -6,6 +6,10 @@
 #include <stdio.h>
 #include <iostream>
 
+#include "Bitmap.h"
+#include "ResourceManager.h"
+#include "InputManager.h"
+
 class Bitmap;
 
 class Game
@@ -26,9 +30,13 @@ public:
 	Game();
 	~Game();
 
+	void Tick(void);
+
 	void SetDisplayColour(int r, int g, int b);
 
+private:
 	void UpdateRenderer(void);
+	void UpdateInputManager(void);
 };
 
 #endif

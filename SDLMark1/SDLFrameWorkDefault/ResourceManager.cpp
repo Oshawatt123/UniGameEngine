@@ -1,8 +1,14 @@
 #include "ResourceManager.h"
 
+ResourceManager* ResourceManager::sInstance = NULL;
+
 ResourceManager::ResourceManager(SDL_Renderer* renderer)
 {
-	m_pRenderer = renderer;
+	ResourceManager::m_pRenderer = renderer;
+}
+
+ResourceManager::~ResourceManager()
+{
 }
 
 BitMapPack ResourceManager::Load(std::string filePath, bool transparency)
@@ -72,6 +78,27 @@ BitMapPack ResourceManager::Load(std::string filePath, bool transparency)
 
 	// after we have loaded the texture/width/height, return the BitMapPack
 	return returnPack;
+}
+
+ResourceManager* ResourceManager::Instance()
+{
+	if (sInstance == NULL)
+	{
+		std::cout << "Reource Manager Singleton not initialized with renderer!\n";
+		std::cout << "Please initialize with renderer before attempting to access.\n";
+		return NULL;
+	}
+	return sInstance;
+}
+
+ResourceManager* ResourceManager::Instance(SDL_Renderer* renderer)
+{
+	if (sInstance == NULL)
+	{
+		std::cout << "Initializing resource manager with a renderer.\n";
+		sInstance = new ResourceManager(renderer);
+	}
+	return sInstance;
 }
 
 bool ResourceManager::checkHashMap(std::string key)

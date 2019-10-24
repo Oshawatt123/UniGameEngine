@@ -11,15 +11,25 @@ struct SDL_Renderer;
 
 class ResourceManager
 {
-public:
-	ResourceManager(SDL_Renderer* renderer);
-	BitMapPack Load(std::string filePath, bool transparency);
+
 private:
+	static ResourceManager* sInstance;
+
 	SDL_Surface* m_pBitMapTempSurface;
 	SDL_Texture* m_pBitMapTempTexture;
 	SDL_Renderer* m_pRenderer;
 
 	std::unordered_map<std::string, BitMapPack> textureHashMap;
 
+public:
+	BitMapPack Load(std::string filePath, bool transparency);
+
+	static ResourceManager* Instance();
+	static ResourceManager* Instance(SDL_Renderer* renderer);
+
+private:
 	bool checkHashMap(std::string key);
+
+	ResourceManager(SDL_Renderer* renderer);
+	~ResourceManager();
 };
