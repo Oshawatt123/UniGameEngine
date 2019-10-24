@@ -24,7 +24,16 @@ bool InputManager::KeyDown(SDL_Scancode scanCode)
 
 void InputManager::Update()
 {
+	//SDL_PumpEvents();
 	mKeyBoardStates = SDL_GetKeyboardState(NULL);
+	SDL_Event ev;
+	while(SDL_PollEvent(&ev))
+	{
+		if (ev.type == SDL_QUIT)
+		{
+
+		}
+	}
 }
 
 

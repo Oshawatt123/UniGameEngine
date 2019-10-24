@@ -1,6 +1,7 @@
 #include "Game.h"
 #include "Bitmap.h"
 #include "ResourceManager.h"
+#include "InputManager.h"
 
 Game::Game()
 {
