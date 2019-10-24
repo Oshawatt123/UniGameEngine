@@ -21,7 +21,8 @@ enum MyEventTypes
 	RightMouse,
 	MiddleMouse,
 	MouseWheel,
-	MouseGesture
+	MouseGesture,
+	Window,
 };
 
 enum KeyBoardKeys

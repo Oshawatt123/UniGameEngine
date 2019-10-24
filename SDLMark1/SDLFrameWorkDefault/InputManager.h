@@ -6,14 +6,21 @@
 #include "EngineStructs.h"
 class InputManager
 {
+private:
+	static InputManager* sInstance;
+
+	const Uint8* mKeyBoardStates;
+
 public:
-	void pollEvent();
-	void clearEventQueue();
+	static InputManager* Instance();
+	static void Release();
 
-	std::unordered_map<int, SDL_Event*> frameEvents;
+	bool KeyDown(SDL_Scancode scanCode);
 
-	SDL_Event* checkHashMap(int eventInfo);
+	void Update();
 
 private:
-	bool m_keysPressed[SIZE_OF_KEYS_ENUM]
+
+	InputManager();
+	~InputManager();
 };

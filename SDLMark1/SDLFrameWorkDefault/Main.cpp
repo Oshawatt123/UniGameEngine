@@ -18,11 +18,15 @@ int main() {
 	while (game != nullptr && running) {
 
 		// take input
-		inputManager->pollEvent();
+		inputManager->pollEvents();
 
 		if (inputManager->checkHashMap(KeyDown) != NULL)
 		{
 
+		}
+		else
+		{
+			std::cout << "Found null SDL_Event. No KeyDown input" << std::endl;
 		}
 
 		// update renderer
