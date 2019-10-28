@@ -19,7 +19,8 @@ Game::Game()
 		0					// window behaviour flags
 	);
 
-	if (!m_Window) {
+	if (!m_Window)
+	{
 		std::cout << "WINDOW initialisation failed" << SDL_GetError() << std::endl;
 		std::cout << "Press any key to continue. Please, press it and end my suffering" << std::endl;
 		std::cin;
@@ -33,7 +34,8 @@ Game::Game()
 		SDL_RENDERER_ACCELERATED
 	);
 
-	if (!m_Renderer) {
+	if (!m_Renderer)
+	{
 		std::cout << "RENDERER initialisation failed" << SDL_GetError() << std::endl;
 		std::cout << "Press any key to continue. Please, press it and end my AWFUL suffering" << std::endl;
 		std::cin;
@@ -55,11 +57,13 @@ Game::~Game()
 	// CLEAN IN REVERSE ORDER!!
 	delete m_wood;
 
-	if (m_Renderer) {
+	if (m_Renderer)
+	{
 		SDL_DestroyRenderer(m_Renderer);
 	}
 
-	if (m_Window) {
+	if (m_Window)
+	{
 		SDL_DestroyWindow(m_Window);
 	}
 
@@ -74,12 +78,13 @@ void Game::Tick(void)
 
 void Game::SetDisplayColour(int r, int g, int b)
 {
-	if (m_Renderer) {
+	if (m_Renderer)
+	{
 		int result = SDL_SetRenderDrawColor(
 			m_Renderer,	// our target renderer
-			r,		// red
+			r,			// red
 			g,			// green
-			b,		// blue
+			b,			// blue
 			255			// alpha
 		);
 	}

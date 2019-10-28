@@ -1,2 +1,7 @@
-﻿  Game.cpp
+﻿  Bitmap.cpp
+  Game.cpp
+  InputManager.cpp
+  Main.cpp
+  ResourceManager.cpp
+  Generating Code...
   SDLFrameWorkDefault.vcxproj -> D:\GitHub Tings\UniGameEngine\SDLMark1\Debug\SDLFrameWorkDefault.exe
