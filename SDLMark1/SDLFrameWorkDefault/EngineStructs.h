@@ -7,12 +7,6 @@ struct BitMapPack
 	int height;
 };
 
-struct EventInfo
-{
-	int EventType;
-	int EventData;
-};
-
 enum MyEventTypes
 {
 	KeyDown,
@@ -25,7 +19,14 @@ enum MyEventTypes
 	Window,
 };
 
-enum WindowEvents
+typedef enum WindowEvents
 {
 	WinEvent_QUIT=1,
+};
+
+enum ComponentMask
+{
+	COMPONENT_Position =		0b0000000000000001,
+	COMPONENT_Velocity =		0b0000000000000010,
+	COMPONENT_Sprite   =		0b0000000000000100,
 };

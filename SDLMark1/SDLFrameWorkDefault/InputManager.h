@@ -10,14 +10,14 @@ private:
 	static InputManager* sInstance;
 
 	const Uint8* mKeyBoardStates;
-	const Uint8* mWindowStates;
+	bool WindowIsQuit;
 
 public:
 	static InputManager* Instance();
 	static void Release();
 
 	bool KeyDown(SDL_Scancode scanCode);
-	bool WindowEvent(int eventCode);
+	bool WindowQuit();
 
 	void Update();
 

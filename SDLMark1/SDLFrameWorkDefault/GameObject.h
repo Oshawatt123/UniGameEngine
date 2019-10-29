@@ -1,15 +1,18 @@
 #pragma once
+
+#include <stdint.h>
+
 class GameObject
 {
-	struct Transform
-	{
-		int x;
-		int y;
 
-	};
 public:
+	GameObject();
+	~GameObject();
+
+	void AddComponent(uint16_t component);
+
+	void Tick();
 
 private:
-
+	uint16_t GameObjectComponents;
 };
-

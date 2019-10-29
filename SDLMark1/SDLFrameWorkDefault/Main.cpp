@@ -20,7 +20,7 @@ int main() {
 
 		// update renderer
 		game->SetDisplayColour(red, green, blue);
-		game->Tick();
+		running = game->Tick();
 
 		SDL_Delay(16);
 	}

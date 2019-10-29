@@ -9,6 +9,8 @@
 #include "Bitmap.h"
 #include "ResourceManager.h"
 #include "InputManager.h"
+#include "GameObject.h"
+#include "EngineStructs.h"
 
 class Bitmap;
 
@@ -23,14 +25,14 @@ private:
 	const int SCREEN_WIDTH = 640;
 	const int SCREEN_HEIGHT = 480;
 
-	//Bitmaps!
-	Bitmap* m_wood;
+	//Objects!
+	GameObject* myGameObject;
 
 public:
 	Game();
 	~Game();
 
-	void Tick(void);
+	bool Tick(void);
 
 	void SetDisplayColour(int r, int g, int b);
 

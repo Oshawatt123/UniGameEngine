@@ -45,17 +45,16 @@ Game::Game()
 	// create resource manager
 	ResourceManager::Instance(m_Renderer);
 
-	// create the bitmap
-	for (size_t i = 0; i < 100; i++)
-	{
-		m_wood = new Bitmap(m_Renderer, 200, 100, ResourceManager::Instance()->Load("filthyFrank.bmp", true));
-	}
+	// create my GameObject
+	myGameObject = new GameObject();
+	myGameObject->AddComponent(COMPONENT_Sprite);
+
 }
 
 Game::~Game()
 {
 	// CLEAN IN REVERSE ORDER!!
-	delete m_wood;
+	delete myGameObject;
 
 	if (m_Renderer)
 	{
@@ -70,10 +69,18 @@ Game::~Game()
 	
 }
 
-void Game::Tick(void)
+bool Game::Tick(void)
 {
 	UpdateRenderer();
 	InputManager::Instance()->Update();
+
+	if (InputManager::Instance()->WindowQuit())
+	{
+		return false;
+	}
+
+
+	return true;
 }
 
 void Game::SetDisplayColour(int r, int g, int b)
@@ -94,8 +101,6 @@ void Game::UpdateRenderer(void)
 {
 	// wipe the display to the colour we just set
 	SDL_RenderClear(m_Renderer);
-
-	m_wood->draw();
 
 	// show what we've drawn
 	SDL_RenderPresent(m_Renderer);

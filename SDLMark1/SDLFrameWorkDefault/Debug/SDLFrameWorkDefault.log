@@ -1,7 +1,6 @@
-﻿  Bitmap.cpp
-  Game.cpp
-  InputManager.cpp
+﻿  Game.cpp
   Main.cpp
-  ResourceManager.cpp
+C:\Users\Games\Documents\GitHub\UniGameEngine\SDLMark1\SDLFrameWorkDefault\EngineStructs.h(25,2): warning C4091: 'typedef ': ignored on left of 'WindowEvents' when no variable is declared
   Generating Code...
-  SDLFrameWorkDefault.vcxproj -> D:\GitHub Tings\UniGameEngine\SDLMark1\Debug\SDLFrameWorkDefault.exe
+C:\Users\Games\Documents\GitHub\UniGameEngine\SDLMark1\SDLFrameWorkDefault\EngineStructs.h(25,2): warning C4091: 'typedef ': ignored on left of 'WindowEvents' when no variable is declared
+  SDLFrameWorkDefault.vcxproj -> C:\Users\Games\Documents\GitHub\UniGameEngine\SDLMark1\Debug\SDLFrameWorkDefault.exe

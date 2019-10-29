@@ -7,4 +7,3 @@ class MathHelper
 		int y;
 	};
 };
-
