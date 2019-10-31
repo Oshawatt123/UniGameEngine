@@ -22,7 +22,7 @@ BitMapPack ResourceManager::Load(std::string filePath, bool transparency)
 	// check if we have already loaded our texture, and then load it from the hashmap
 	if (checkHashMap(filePath))
 	{
-		returnPack = textureHashMap[filePath];
+		returnPack = m_textureHashMap[filePath];
 
 		std::cout << "Retrieved BitMapPack from textureHashMap" << std::endl;
 	}
@@ -71,7 +71,7 @@ BitMapPack ResourceManager::Load(std::string filePath, bool transparency)
 			SDL_FreeSurface(m_pBitMapTempSurface);
 		}
 
-		textureHashMap.insert(std::make_pair(filePath, returnPack));
+		m_textureHashMap.insert(std::make_pair(filePath, returnPack));
 
 		std::cout << "Added BitMapPack " << filePath << " to textureHashMap" << std::endl;
 	}
@@ -103,6 +103,6 @@ ResourceManager* ResourceManager::Instance(SDL_Renderer* renderer)
 
 bool ResourceManager::checkHashMap(std::string key)
 {
-	if (textureHashMap.find(key) == textureHashMap.end()) return false;
+	if (m_textureHashMap.find(key) == m_textureHashMap.end()) return false;
 	return true;
 }

@@ -7,6 +7,7 @@
 #include <iostream>
 
 #include "Bitmap.h"
+#include "Renderer.h"
 #include "ResourceManager.h"
 #include "InputManager.h"
 #include "GameObject.h"

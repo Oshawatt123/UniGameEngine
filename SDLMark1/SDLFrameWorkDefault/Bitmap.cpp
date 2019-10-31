@@ -4,11 +4,8 @@
 #include "SDL.h"
 #include "SDL_render.h"
 
-Bitmap::Bitmap(SDL_Renderer* renderer, int xPos, int yPos, BitMapPack bmpPack)
+Bitmap::Bitmap(int xPos, int yPos, BitMapPack bmpPack)
 {
-	// grab the renderer
-	m_pRenderer = renderer;
-
 	// store position values
 	m_x = xPos;
 	m_y = yPos;
@@ -28,9 +25,5 @@ Bitmap::~Bitmap()
 
 void Bitmap::draw()
 {
-	if (m_pbitmapTexture)
-	{
-		SDL_Rect destRect = { m_x, m_y, m_w, m_h };
-		SDL_RenderCopy(m_pRenderer, m_pbitmapTexture, NULL, &destRect);
-	}
+	
 }

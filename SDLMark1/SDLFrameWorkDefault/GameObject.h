@@ -14,5 +14,5 @@ public:
 	void Tick();
 
 private:
-	uint16_t GameObjectComponents;
+	uint16_t m_GameObjectComponents;
 };

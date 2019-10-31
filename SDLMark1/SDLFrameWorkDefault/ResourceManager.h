@@ -19,9 +19,10 @@ private:
 	SDL_Texture* m_pBitMapTempTexture;
 	SDL_Renderer* m_pRenderer;
 
-	std::unordered_map<std::string, BitMapPack> textureHashMap;
+	std::unordered_map<std::string, BitMapPack> m_textureHashMap;
 
 public:
+	// should this and all member variables be static?
 	BitMapPack Load(std::string filePath, bool transparency);
 
 	static ResourceManager* Instance();

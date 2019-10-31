@@ -3,7 +3,7 @@
 
 GameObject::GameObject()
 {
-	GameObjectComponents = 0b0000000000000000;
+	m_GameObjectComponents = 0b0000000000000000;
 }
 
 GameObject::~GameObject()
@@ -12,7 +12,7 @@ GameObject::~GameObject()
 
 void GameObject::AddComponent(uint16_t component)
 {
-	GameObjectComponents |= component;
+	m_GameObjectComponents |= component;
 }
 
 void GameObject::Tick()

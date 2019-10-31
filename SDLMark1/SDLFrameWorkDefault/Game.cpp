@@ -27,23 +27,11 @@ Game::Game()
 		return;
 	}
 
-	// create the renderer
-	m_Renderer = SDL_CreateRenderer(
-		m_Window,
-		-1,
-		SDL_RENDERER_ACCELERATED
-	);
-
-	if (!m_Renderer)
-	{
-		std::cout << "RENDERER initialisation failed" << SDL_GetError() << std::endl;
-		std::cout << "Press any key to continue. Please, press it and end my AWFUL suffering" << std::endl;
-		std::cin;
-		return;
-	}
+	// create renderer
+	Renderer::Instance(m_Window);
 
 	// create resource manager
-	ResourceManager::Instance(m_Renderer);
+	ResourceManager::Instance(Renderer::Instance()->m_pRenderer);
 
 	// create my GameObject
 	myGameObject = new GameObject();
