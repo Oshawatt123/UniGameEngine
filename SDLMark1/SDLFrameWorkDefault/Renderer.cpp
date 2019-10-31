@@ -32,6 +32,11 @@ Renderer* Renderer::Instance(SDL_Window* Window)
 	return sInstance;
 }
 
+SDL_Renderer* Renderer::getRenderer()
+{
+	return m_pRenderer;
+}
+
 Renderer::Renderer(SDL_Window* Window)
 {
 	m_pRenderer = SDL_CreateRenderer(
@@ -51,4 +56,16 @@ Renderer::Renderer(SDL_Window* Window)
 
 Renderer::~Renderer()
 {
+	SDL_DestroyRenderer(m_pRenderer);
+	m_pRenderer = NULL;
 }
+
+
+/*void Game::UpdateRenderer(void)
+{
+	// wipe the display to the colour we just set
+	SDL_RenderClear(m_Renderer);
+
+	// show what we've drawn
+	SDL_RenderPresent(m_Renderer);
+}*/

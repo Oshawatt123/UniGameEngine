@@ -9,16 +9,20 @@ class Renderer
 {
 
 public:
-	static SDL_Renderer* m_pRenderer;
+
 private:
 	static Renderer* sInstance;
 
+	SDL_Renderer* m_pRenderer;
+
 public:
-	static void Draw(BitMapPack bitMapPack, SDL_Rect* destRect);
+	void Draw(BitMapPack bitMapPack, SDL_Rect* destRect);
 
 	static Renderer* Instance();
 
 	static Renderer* Instance(SDL_Window* Window);
+
+	SDL_Renderer* getRenderer();
 
 private:
 	Renderer(SDL_Window* Window);

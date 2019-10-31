@@ -4,7 +4,6 @@
 Game::Game()
 {
 	m_Window = nullptr;
-	m_Renderer = nullptr;
 
 	//start up
 	SDL_Init(SDL_INIT_EVERYTHING);
@@ -31,7 +30,7 @@ Game::Game()
 	Renderer::Instance(m_Window);
 
 	// create resource manager
-	ResourceManager::Instance(Renderer::Instance()->m_pRenderer);
+	ResourceManager::Instance(Renderer::Instance()->getRenderer());
 
 	// create my GameObject
 	myGameObject = new GameObject();
@@ -44,11 +43,6 @@ Game::~Game()
 	// CLEAN IN REVERSE ORDER!!
 	delete myGameObject;
 
-	if (m_Renderer)
-	{
-		SDL_DestroyRenderer(m_Renderer);
-	}
-
 	if (m_Window)
 	{
 		SDL_DestroyWindow(m_Window);
@@ -59,7 +53,7 @@ Game::~Game()
 
 bool Game::Tick(void)
 {
-	UpdateRenderer();
+	//UpdateRenderer();
 	InputManager::Instance()->Update();
 
 	if (InputManager::Instance()->WindowQuit())
@@ -71,28 +65,7 @@ bool Game::Tick(void)
 	return true;
 }
 
-void Game::SetDisplayColour(int r, int g, int b)
-{
-	if (m_Renderer)
-	{
-		int result = SDL_SetRenderDrawColor(
-			m_Renderer,	// our target renderer
-			r,			// red
-			g,			// green
-			b,			// blue
-			255			// alpha
-		);
-	}
-}
 
-void Game::UpdateRenderer(void)
-{
-	// wipe the display to the colour we just set
-	SDL_RenderClear(m_Renderer);
-
-	// show what we've drawn
-	SDL_RenderPresent(m_Renderer);
-}
 
 void Game::UpdateInputManager(void)
 {
