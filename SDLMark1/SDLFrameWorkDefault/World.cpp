@@ -1,5 +1,8 @@
 #include "World.h"
 
+World* World::sInstance = NULL;
+std::vector<GameObject> World::EntityList;
+
 std::vector<GameObject> World::GetEntityList()
 {
 	return EntityList;

@@ -23,3 +23,8 @@ void GameObject::Tick()
 {
 
 }
+
+uint16_t GameObject::m_GetComponentMask()
+{
+	return m_GameObjectComponents;
+}

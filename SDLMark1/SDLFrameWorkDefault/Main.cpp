@@ -16,9 +16,7 @@ int main() {
 
 	while (game != nullptr && running) {
 
-		//update inputs
-
-		// update renderer
+		// run game main loop
 		running = game->Tick();
 
 		SDL_Delay(16);

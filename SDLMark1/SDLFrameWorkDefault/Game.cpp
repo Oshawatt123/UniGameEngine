@@ -36,6 +36,8 @@ Game::Game()
 	myGameObject = new GameObject();
 	myGameObject->AddComponent(COMPONENT_Sprite);
 
+	World::Instance()->AddEntity(*myGameObject);
+
 }
 
 Game::~Game()
@@ -53,27 +55,30 @@ Game::~Game()
 
 bool Game::Tick(void)
 {
-	//UpdateRenderer();
-	InputManager::Instance()->Update();
+	UpdateInputManager();
 
+	// check for application quit
 	if (InputManager::Instance()->WindowQuit())
 	{
 		return false;
 	}
 
+	UpdateRenderer();
 
 	return true;
 }
 
 
-
+#define DRAW_MASK (COMPONENT_Sprite)
 void Game::UpdateRenderer(void)
 {
 	for (auto x : World::Instance()->GetEntityList())
 	{
-		// check if entity is renderable
+		if ((x.m_GetComponentMask() & DRAW_MASK) == DRAW_MASK)
+		{
+			std::cout << "render this bitch\n";
+		}
 	}
-	
 }
 
 void Game::UpdateInputManager(void)

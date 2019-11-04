@@ -14,6 +14,8 @@ public:
 
 	void Tick();
 
+	uint16_t m_GetComponentMask();
+
 private:
 	uint16_t m_GameObjectComponents;
 	

@@ -13,6 +13,7 @@
 #include "GameObject.h"
 #include "EngineStructs.h"
 #include "World.h"
+#include "Systems.h"
 
 class Bitmap;
 
