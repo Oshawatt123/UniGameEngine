@@ -22,8 +22,3 @@ Bitmap::~Bitmap()
 {
 	if (m_pbitmapTexture) SDL_DestroyTexture(m_pbitmapTexture);
 }
-
-void Bitmap::draw()
-{
-	
-}

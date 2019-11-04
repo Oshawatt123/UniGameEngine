@@ -35,6 +35,7 @@ Game::Game()
 	// create my GameObject
 	myGameObject = new GameObject();
 	myGameObject->AddComponent(COMPONENT_Sprite);
+	myGameObject->m_ObjectBitMapPack = ResourceManager::Instance()->Load("../SDLFrameWorkDefault/filthyfrank.bmp", false);
 
 	World::Instance()->AddEntity(*myGameObject);
 
@@ -68,17 +69,18 @@ bool Game::Tick(void)
 	return true;
 }
 
-
 #define DRAW_MASK (COMPONENT_Sprite)
 void Game::UpdateRenderer(void)
 {
+	Renderer::Instance()->ClearRenderer();
 	for (auto x : World::Instance()->GetEntityList())
 	{
 		if ((x.m_GetComponentMask() & DRAW_MASK) == DRAW_MASK)
 		{
-			std::cout << "render this bitch\n";
+			Renderer::Instance()->Draw(x.m_ObjectBitMapPack, x.m_x, x.m_y);
 		}
 	}
+	Renderer::Instance()->UpdateRenderer();
 }
 
 void Game::UpdateInputManager(void)

@@ -15,8 +15,7 @@ private:
 	int m_w, m_h;
 
 public:
-	Bitmap(int xPos, int yPos, BitMapPack bmpPack);	~Bitmap();
-
-	void draw();
+	Bitmap(int xPos, int yPos, BitMapPack bmpPack);
+	~Bitmap();
 };
 
