@@ -67,6 +67,15 @@ bool Game::Tick(void)
 
 
 
+void Game::UpdateRenderer(void)
+{
+	for (auto x : World::Instance()->GetEntityList())
+	{
+		// check if entity is renderable
+	}
+	
+}
+
 void Game::UpdateInputManager(void)
 {
 	InputManager::Instance()->Update();

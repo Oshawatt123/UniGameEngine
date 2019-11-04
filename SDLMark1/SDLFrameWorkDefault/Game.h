@@ -12,6 +12,7 @@
 #include "InputManager.h"
 #include "GameObject.h"
 #include "EngineStructs.h"
+#include "World.h"
 
 class Bitmap;
 

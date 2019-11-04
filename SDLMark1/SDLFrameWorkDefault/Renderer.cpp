@@ -60,7 +60,6 @@ Renderer::~Renderer()
 	m_pRenderer = NULL;
 }
 
-
 /*void Game::UpdateRenderer(void)
 {
 	// wipe the display to the colour we just set

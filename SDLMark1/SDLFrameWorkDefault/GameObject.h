@@ -1,6 +1,7 @@
 #pragma once
 
 #include <stdint.h>
+#include "EngineStructs.h"
 
 class GameObject
 {
@@ -15,4 +16,8 @@ public:
 
 private:
 	uint16_t m_GameObjectComponents;
+	
+	int x, y = 100;
+
+	BitMapPack m_ObjectBitMapPack;
 };
