@@ -2,13 +2,16 @@
 
 #include <stdint.h>
 #include "EngineStructs.h"
+#include "MathHelper.h"
 
 class GameObject
 {
 
 public:
 	GameObject();
-	~GameObject();
+
+	// needs to be virtual so children class can deconstruct
+	virtual ~GameObject();
 
 	void AddComponent(uint16_t component);
 
@@ -16,11 +19,8 @@ public:
 
 	uint16_t m_GetComponentMask();
 
-	// temp fix
-	BitMapPack m_ObjectBitMapPack;
 	// also temp fix
-	int m_x = 100;
-	int m_y = 100;
+	Vector2 m_position;
 
 private:
 	uint16_t m_GameObjectComponents;

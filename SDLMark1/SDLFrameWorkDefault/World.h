@@ -9,14 +9,14 @@ class World
 private:
 	static World* sInstance;
 
-	static std::vector<GameObject> EntityList;
+	static std::vector<GameObject*> EntityList;
 
 public:
-	std::vector<GameObject> GetEntityList();
+	std::vector<GameObject*> GetEntityList();
 
 	static World* Instance();
 
-	static void AddEntity(GameObject EntityToAdd);
+	static void AddEntity(GameObject* EntityToAdd);
 
 private:
 	World();

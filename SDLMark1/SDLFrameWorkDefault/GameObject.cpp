@@ -4,10 +4,8 @@
 GameObject::GameObject()
 {
 	m_GameObjectComponents = 0b0000000000000000;
-
-	m_ObjectBitMapPack.texture = NULL;
-	m_ObjectBitMapPack.width = 0;
-	m_ObjectBitMapPack.height = 0;
+	m_position.x = 100;
+	m_position.y = 100;
 }
 
 GameObject::~GameObject()

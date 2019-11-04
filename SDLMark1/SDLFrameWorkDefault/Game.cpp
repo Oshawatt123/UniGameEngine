@@ -35,9 +35,15 @@ Game::Game()
 	// create my GameObject
 	myGameObject = new GameObject();
 	myGameObject->AddComponent(COMPONENT_Sprite);
-	myGameObject->m_ObjectBitMapPack = ResourceManager::Instance()->Load("../SDLFrameWorkDefault/filthyfrank.bmp", false);
+	Sprite* myGameObjectSprite = dynamic_cast<Sprite*>(myGameObject);
 
-	World::Instance()->AddEntity(*myGameObject);
+	if (myGameObjectSprite == NULL)
+	{
+		std::cout << "WTF\n";
+	}
+//	myGameObjectSprite->m_ObjectBitMapPack = ResourceManager::Instance()->Load("../SDLFrameWorkDefauly/filthyfrank.bmp", false);
+
+	World::Instance()->AddEntity(myGameObject);
 
 }
 
@@ -72,14 +78,21 @@ bool Game::Tick(void)
 #define DRAW_MASK (COMPONENT_Sprite)
 void Game::UpdateRenderer(void)
 {
+	// Clear Renderer buffer from last frame
 	Renderer::Instance()->ClearRenderer();
+
+	// Draw sprite for every Entity with sprite Component
 	for (auto x : World::Instance()->GetEntityList())
 	{
-		if ((x.m_GetComponentMask() & DRAW_MASK) == DRAW_MASK)
+		if ((x->m_GetComponentMask() & DRAW_MASK) == DRAW_MASK)
 		{
-			Renderer::Instance()->Draw(x.m_ObjectBitMapPack, x.m_x, x.m_y);
+			// cast entity to sprite to get sprite variables
+			//Sprite* objectSprite = dynamic_cast<Sprite*>(x);
+			//Renderer::Instance()->Draw(objectSprite->m_ObjectBitMapPack, x->m_position.x, x->m_position.y);
 		}
 	}
+
+	// Update the renderer with the newly drawn Sprites
 	Renderer::Instance()->UpdateRenderer();
 }
 

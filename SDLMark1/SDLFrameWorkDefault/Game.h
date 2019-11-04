@@ -6,16 +6,16 @@
 #include <stdio.h>
 #include <iostream>
 
-#include "Bitmap.h"
 #include "Renderer.h"
 #include "ResourceManager.h"
 #include "InputManager.h"
-#include "GameObject.h"
 #include "EngineStructs.h"
 #include "World.h"
-#include "Systems.h"
 
-class Bitmap;
+// GAMEOBJECT COMPONENTS
+#include "GameObject.h"
+#include "Sprite.h"
+//#include "Movement.h"
 
 class Game
 {
@@ -35,8 +35,6 @@ public:
 	~Game();
 
 	bool Tick(void);
-
-	void SetDisplayColour(int r, int g, int b);
 
 private:
 	void UpdateRenderer(void);

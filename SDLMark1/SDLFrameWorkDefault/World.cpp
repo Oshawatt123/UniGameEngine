@@ -1,9 +1,9 @@
 #include "World.h"
 
 World* World::sInstance = NULL;
-std::vector<GameObject> World::EntityList;
+std::vector<GameObject*> World::EntityList;
 
-std::vector<GameObject> World::GetEntityList()
+std::vector<GameObject*> World::GetEntityList()
 {
 	return EntityList;
 }
@@ -18,7 +18,7 @@ World* World::Instance()
 	return sInstance;
 }
 
-void World::AddEntity(GameObject EntityToAdd)
+void World::AddEntity(GameObject* EntityToAdd)
 {
 	EntityList.push_back(EntityToAdd);
 }
