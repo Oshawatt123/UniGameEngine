@@ -19,8 +19,12 @@ public:
 
 	uint16_t m_GetComponentMask();
 
-	// also temp fix
+	// Position & Movement
 	Vector2 m_position;
+	Vector2 m_velocity;
+
+	// Sprite
+	BitMapPack m_ObjectBitMapPack;
 
 private:
 	uint16_t m_GameObjectComponents;

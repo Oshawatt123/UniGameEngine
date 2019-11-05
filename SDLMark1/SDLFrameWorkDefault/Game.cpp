@@ -35,13 +35,8 @@ Game::Game()
 	// create my GameObject
 	myGameObject = new GameObject();
 	myGameObject->AddComponent(COMPONENT_Sprite);
-	Sprite* myGameObjectSprite = dynamic_cast<Sprite*>(myGameObject);
 
-	if (myGameObjectSprite == NULL)
-	{
-		std::cout << "WTF\n";
-	}
-//	myGameObjectSprite->m_ObjectBitMapPack = ResourceManager::Instance()->Load("../SDLFrameWorkDefauly/filthyfrank.bmp", false);
+	myGameObject->m_ObjectBitMapPack = ResourceManager::Instance()->Load("../SDLFrameWorkDefault/filthyfrank.bmp", false);
 
 	World::Instance()->AddEntity(myGameObject);
 
@@ -86,9 +81,7 @@ void Game::UpdateRenderer(void)
 	{
 		if ((x->m_GetComponentMask() & DRAW_MASK) == DRAW_MASK)
 		{
-			// cast entity to sprite to get sprite variables
-			//Sprite* objectSprite = dynamic_cast<Sprite*>(x);
-			//Renderer::Instance()->Draw(objectSprite->m_ObjectBitMapPack, x->m_position.x, x->m_position.y);
+			Renderer::Instance()->Draw(x->m_ObjectBitMapPack, x->m_position.x, x->m_position.y);
 		}
 	}
 

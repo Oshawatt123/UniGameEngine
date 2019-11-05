@@ -14,8 +14,6 @@
 
 // GAMEOBJECT COMPONENTS
 #include "GameObject.h"
-#include "Sprite.h"
-//#include "Movement.h"
 
 class Game
 {
