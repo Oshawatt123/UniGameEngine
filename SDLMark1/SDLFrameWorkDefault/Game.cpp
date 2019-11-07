@@ -45,18 +45,11 @@ Game::Game()
 	// create resource manager
 	ResourceManager* resourceManager = new ResourceManager(m_Renderer);
 
-<<<<<<< HEAD
 	// create the bitmap
 	for (size_t i = 0; i < 100; i++)
 	{
 		m_wood = new Bitmap(m_Renderer, 200, 100, resourceManager->Load("filthyFrank.bmp", true));
 	}
-=======
-	myGameObject->m_ObjectBitMapPack = ResourceManager::Instance()->Load("../SDLFrameWorkDefault/filthyfrank.bmp", false);
-
-	World::Instance()->AddEntity(myGameObject);
-
->>>>>>> InputManager
 }
 
 Game::~Game()
@@ -77,7 +70,6 @@ Game::~Game()
 
 void Game::SetDisplayColour(int r, int g, int b)
 {
-<<<<<<< HEAD
 	if (m_Renderer) {
 		int result = SDL_SetRenderDrawColor(
 			m_Renderer,	// our target renderer
@@ -99,41 +91,3 @@ void Game::UpdateRenderer(void)
 	// show what we've drawn
 	SDL_RenderPresent(m_Renderer);
 }
-=======
-	UpdateInputManager();
-
-	// check for application quit
-	if (InputManager::Instance()->WindowQuit())
-	{
-		return false;
-	}
-
-	UpdateRenderer();
-
-	return true;
-}
-
-#define DRAW_MASK (COMPONENT_Sprite)
-void Game::UpdateRenderer(void)
-{
-	// Clear Renderer buffer from last frame
-	Renderer::Instance()->ClearRenderer();
-
-	// Draw sprite for every Entity with sprite Component
-	for (auto x : World::Instance()->GetEntityList())
-	{
-		if ((x->m_GetComponentMask() & DRAW_MASK) == DRAW_MASK)
-		{
-			Renderer::Instance()->Draw(x->m_ObjectBitMapPack, x->m_position.x, x->m_position.y);
-		}
-	}
-
-	// Update the renderer with the newly drawn Sprites
-	Renderer::Instance()->UpdateRenderer();
-}
-
-void Game::UpdateInputManager(void)
-{
-	InputManager::Instance()->Update();
-}
->>>>>>> InputManager

@@ -7,19 +7,7 @@ void Renderer::Draw(BitMapPack bitMapPack, SDL_Rect* destRect)
 	if (bitMapPack.texture)
 	{
 		SDL_RenderCopy(m_pRenderer, bitMapPack.texture, NULL, destRect);
-		std::cout << "Rendered sprite at " << destRect->x << " " << destRect->y << "\n";
 	}
-}
-
-void Renderer::Draw(BitMapPack bitMapPack, int x_in, int y_in)
-{
-	SDL_Rect* destRect = new SDL_Rect();
-	destRect->x = x_in;
-	destRect->y = y_in;
-	destRect->w = bitMapPack.width;
-	destRect->h = bitMapPack.height;
-
-	Draw(bitMapPack, destRect);
 }
 
 Renderer* Renderer::Instance()
@@ -72,13 +60,12 @@ Renderer::~Renderer()
 	m_pRenderer = NULL;
 }
 
-void Renderer::UpdateRenderer(void)
-{
-	// show what we've drawn
-	SDL_RenderPresent(m_pRenderer);
-}
 
-void Renderer::ClearRenderer()
+/*void Game::UpdateRenderer(void)
 {
-	SDL_RenderClear(m_pRenderer);
-}
+	// wipe the display to the colour we just set
+	SDL_RenderClear(m_Renderer);
+
+	// show what we've drawn
+	SDL_RenderPresent(m_Renderer);
+}*/

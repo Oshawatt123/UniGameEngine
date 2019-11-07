@@ -1,7 +1,9 @@
 #pragma once
-
-struct Vector2
+class MathHelper
 {
-	int x;
-	int y;
+	struct Vector2
+	{
+		int x;
+		int y;
+	};
 };

@@ -6,5 +6,7 @@
 class Systems
 {
 public:
-	//void DrawSprite(Renderer* renderer, GameObject objectToRender); // replace with singleton renderer class instead of pointer to renderer
+
+private:
+	void DrawSprite(SDL_Renderer* renderer); // replace with singleton renderer class instead of pointer to renderer
 };

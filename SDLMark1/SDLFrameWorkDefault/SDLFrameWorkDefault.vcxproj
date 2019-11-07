@@ -139,29 +139,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Bitmap.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="InputManager.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="ResourceManager.cpp" />
-<<<<<<< HEAD
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Bitmap.h" />
-=======
-    <ClCompile Include="World.cpp" />
-  </ItemGroup>
-  <ItemGroup>
->>>>>>> InputManager
     <ClInclude Include="EngineStructs.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="InputManager.h" />
     <ClInclude Include="ResourceManager.h" />
-<<<<<<< HEAD
-=======
-    <ClInclude Include="World.h" />
->>>>>>> InputManager
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
