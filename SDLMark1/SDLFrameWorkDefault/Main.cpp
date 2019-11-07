@@ -14,6 +14,7 @@ int main() {
 
 	Game* game = new Game();
 
+<<<<<<< HEAD
 	while (game != nullptr && running)
 	{
 		// update input
@@ -21,6 +22,12 @@ int main() {
 		// update renderer
 		game->SetDisplayColour(red, green, blue);
 		game->UpdateRenderer();
+=======
+	while (game != nullptr && running) {
+
+		// run game main loop
+		running = game->Tick();
+>>>>>>> InputManager
 
 		SDL_Delay(16);
 	}

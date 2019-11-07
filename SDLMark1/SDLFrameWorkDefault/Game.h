@@ -6,7 +6,18 @@
 #include <stdio.h>
 #include <iostream>
 
+<<<<<<< HEAD
 class Bitmap;
+=======
+#include "Renderer.h"
+#include "ResourceManager.h"
+#include "InputManager.h"
+#include "EngineStructs.h"
+#include "World.h"
+
+// GAMEOBJECT COMPONENTS
+#include "GameObject.h"
+>>>>>>> InputManager
 
 class Game
 {
@@ -26,8 +37,14 @@ public:
 	Game();
 	~Game();
 
+<<<<<<< HEAD
 	void SetDisplayColour(int r, int g, int b);
 
+=======
+	bool Tick(void);
+
+private:
+>>>>>>> InputManager
 	void UpdateRenderer(void);
 };
 
