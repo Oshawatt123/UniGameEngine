@@ -1,3 +1,4 @@
 ﻿  Game.cpp
 C:\Users\Games\Documents\GitHub\UniGameEngine\SDLMark1\SDLFrameWorkDefault\EngineStructs.h(25,2): warning C4091: 'typedef ': ignored on left of 'WindowEvents' when no variable is declared
+  LINK : C:\Users\Games\Documents\GitHub\UniGameEngine\SDLMark1\Debug\SDLFrameWorkDefault.exe not found or not built by the last incremental link; performing full link
   SDLFrameWorkDefault.vcxproj -> C:\Users\Games\Documents\GitHub\UniGameEngine\SDLMark1\Debug\SDLFrameWorkDefault.exe
