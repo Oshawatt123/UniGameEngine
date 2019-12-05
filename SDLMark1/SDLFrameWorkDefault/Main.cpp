@@ -5,7 +5,6 @@
 #include "InputManager.h"
 
 int main() {
-
 	bool running = true;
 
 	int red = 0;
