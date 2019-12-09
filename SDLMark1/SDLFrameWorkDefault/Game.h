@@ -10,7 +10,7 @@
 #include "ResourceManager.h"
 #include "InputManager.h"
 #include "EngineStructs.h"
-#include "World.h"
+#include "Scene.h"
 
 // GAMEOBJECT COMPONENTS
 #include "GameObject.h"
@@ -27,6 +27,9 @@ private:
 
 	//Objects!
 	GameObject* myGameObject;
+
+	// PLACEHOLDER SCENE
+	Scene* Level1;
 
 public:
 	Game();

@@ -3,6 +3,7 @@
 #undef main
 #include "Game.h"
 #include "InputManager.h"
+#include "Profiler.h"
 
 int main() {
 	bool running = true;
@@ -12,13 +13,18 @@ int main() {
 	int blue = 255;
 
 	Game* game = new Game();
+	Profiler myGhettoProfiler;
+
+	std::cout << "GET SCENE BUILD FROM SCENEMANAGER" << std::endl;
 
 	while (game != nullptr && running) {
-
+		myGhettoProfiler.StartProfile();
 		// run game main loop
 		running = game->Tick();
 
 		SDL_Delay(16);
+		myGhettoProfiler.EndProfile();
+
 	}
 
 	delete game;

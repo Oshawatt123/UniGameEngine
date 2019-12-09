@@ -1,4 +1,5 @@
 #include "ResourceManager.h"
+#include "Logger.h"
 
 ResourceManager* ResourceManager::sInstance = NULL;
 
@@ -24,7 +25,7 @@ BitMapPack ResourceManager::Load(std::string filePath, bool transparency)
 	{
 		returnPack = m_textureHashMap[filePath];
 
-		std::cout << "Retrieved BitMapPack from textureHashMap" << std::endl;
+		Logger::Instance()->LogString("Retrieved BitMapPack from textureHashMap", DEBUG);
 	}
 	// if we haven't loaded the texture, load it and add it to the hashmap
 	else
@@ -95,7 +96,7 @@ ResourceManager* ResourceManager::Instance(SDL_Renderer* renderer)
 {
 	if (sInstance == NULL)
 	{
-		std::cout << "Initializing resource manager with a renderer.\n";
+		Log("Initializing resource manager with a renderer.", DEBUG);
 		sInstance = new ResourceManager(renderer);
 	}
 	return sInstance;

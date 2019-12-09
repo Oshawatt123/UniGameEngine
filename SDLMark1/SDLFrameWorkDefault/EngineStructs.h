@@ -1,5 +1,10 @@
 #pragma once
 #include "SDL.h"
+#include <string>
+
+// REALLY USEFUL MACROS
+#define Log(string, verbosity) Logger::Instance()->LogString(string, verbosity)
+
 struct BitMapPack
 {
 	SDL_Texture* texture;
@@ -26,7 +31,14 @@ typedef enum WindowEvents
 
 enum ComponentMask
 {
-	COMPONENT_Position =		0b0000000000000001,
-	COMPONENT_Velocity =		0b0000000000000010,
-	COMPONENT_Sprite   =		0b0000000000000100,
+	COMPONENT_Position =				0b0000000000000001,
+	COMPONENT_CharacterControl =		0b0000000000000010,
+	COMPONENT_Sprite   =				0b0000000000000100,
+};
+
+enum Verbosity
+{
+	EVERYONE,
+	DEBUG,
+	NOTHING,
 };

@@ -35,11 +35,12 @@ Game::Game()
 	// create my GameObject
 	myGameObject = new GameObject();
 	myGameObject->AddComponent(COMPONENT_Sprite);
+	myGameObject->AddComponent(COMPONENT_CharacterControl);
 
-	myGameObject->m_ObjectBitMapPack = ResourceManager::Instance()->Load("../SDLFrameWorkDefault/filthyfrank.bmp", false);
+	myGameObject->m_ObjectBitMapPack = ResourceManager::Instance()->Load("../SDLFrameWorkDefault/filthyfrank.bmp", true);
 
-	World::Instance()->AddEntity(myGameObject);
-
+	Level1 = new Scene("Level1");
+	Level1->AddEntity(myGameObject);
 }
 
 Game::~Game()
@@ -65,21 +66,22 @@ bool Game::Tick(void)
 		return false;
 	}
 
+	myGameObject->Tick();
+
 	UpdateRenderer();
 
 	return true;
 }
 
-#define DRAW_MASK (COMPONENT_Sprite)
 void Game::UpdateRenderer(void)
 {
 	// Clear Renderer buffer from last frame
 	Renderer::Instance()->ClearRenderer();
 
 	// Draw sprite for every Entity with sprite Component
-	for (auto x : World::Instance()->GetEntityList())
+	for (auto x : Level1->GetEntityList())
 	{
-		if ((x->m_GetComponentMask() & DRAW_MASK) == DRAW_MASK)
+		if ((x->m_GetComponentMask() & COMPONENT_Sprite) == COMPONENT_Sprite)
 		{
 			Renderer::Instance()->Draw(x->m_ObjectBitMapPack, x->m_position.x, x->m_position.y);
 		}

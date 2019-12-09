@@ -1,5 +1,6 @@
 #include "GameObject.h"
 #include "EngineStructs.h"
+#include "InputManager.h"
 
 GameObject::GameObject()
 {
@@ -19,7 +20,17 @@ void GameObject::AddComponent(uint16_t component)
 
 void GameObject::Tick()
 {
-
+	if (m_GameObjectComponents & COMPONENT_CharacterControl)
+	{
+		if (InputManager::Instance()->KeyDown(SDL_SCANCODE_D))
+		{
+			m_position.x += 5;
+		}
+		if (InputManager::Instance()->KeyDown(SDL_SCANCODE_A))
+		{
+			m_position.x -= 5;
+		}
+	}
 }
 
 uint16_t GameObject::m_GetComponentMask()

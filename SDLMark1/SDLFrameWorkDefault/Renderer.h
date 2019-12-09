@@ -4,7 +4,6 @@
 
 #include "SDL.h"
 #include "EngineStructs.h"
-#include "World.h"
 
 class Renderer
 {
