@@ -39,12 +39,13 @@ Game::Game()
 	myGameObject->AddComponent(COMPONENT_Sprite);
 	myGameObject->AddComponent(COMPONENT_CharacterControl);
 
-	myGameObject->m_ObjectBitMapPack = ResourceManager::Instance()->Load("../SDLFrameWorkDefault/filthyfrank.bmp", true);
+	myGameObject->m_ObjectBitMapPack = ResourceManager::Instance()->LoadBitMap("../Sprites/filthyfrank.bmp", true);
 
-	//physicsEngine->AddMoveableObject(myGameObject);
+	physicsEngine->AddMoveableObject(myGameObject);
 
 	Level1 = new Scene("Level1");
 	Level1->AddEntity(myGameObject);
+
 }
 
 Game::~Game()
@@ -84,14 +85,7 @@ void Game::UpdateRenderer(void)
 	// Clear Renderer buffer from last frame
 	Renderer::Instance()->ClearRenderer();
 
-	// Draw sprite for every Entity with sprite Component
-	for (auto x : Level1->GetEntityList())
-	{
-		if ((x->m_GetComponentMask() & COMPONENT_Sprite) == COMPONENT_Sprite)
-		{
-			Renderer::Instance()->Draw(x->m_ObjectBitMapPack, x->m_position.x, x->m_position.y);
-		}
-	}
+	Level1->Draw();
 
 	// Update the renderer with the newly drawn Sprites
 	Renderer::Instance()->UpdateRenderer();

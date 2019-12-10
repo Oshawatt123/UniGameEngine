@@ -4,6 +4,10 @@
 
 // REALLY USEFUL MACROS
 #define Log(string, verbosity) Logger::Instance()->LogString(string, verbosity)
+#define TILE_WIDTH 64
+
+// FILE PATH MACROS
+#define DEFAULT_TILE_PATH "../Sprites/Floor_Placeholder.bmp"
 
 struct BitMapPack
 {
@@ -24,7 +28,7 @@ enum MyEventTypes
 	Window,
 };
 
-typedef enum WindowEvents
+enum WindowEvents
 {
 	WinEvent_QUIT=1,
 };
@@ -40,5 +44,5 @@ enum Verbosity
 {
 	EVERYONE,
 	DEBUG,
-	NOTHING,
+	ERROR,
 };

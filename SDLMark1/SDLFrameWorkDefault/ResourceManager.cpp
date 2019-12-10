@@ -1,5 +1,4 @@
 #include "ResourceManager.h"
-#include "Logger.h"
 
 ResourceManager* ResourceManager::sInstance = NULL;
 
@@ -12,7 +11,7 @@ ResourceManager::~ResourceManager()
 {
 }
 
-BitMapPack ResourceManager::Load(std::string filePath, bool transparency)
+BitMapPack ResourceManager::LoadBitMap(std::string filePath, bool transparency)
 {
 
 	BitMapPack returnPack;
@@ -79,6 +78,25 @@ BitMapPack ResourceManager::Load(std::string filePath, bool transparency)
 
 	// after we have loaded the texture/width/height, return the BitMapPack
 	return returnPack;
+}
+
+std::vector<std::string> ResourceManager::LoadMap(std::string filePath)
+{
+	inFile.open(filePath);
+	if (!inFile)
+	{
+		Logger::Instance()->LogString("Failed to load map from filepath " + filePath, ERROR);
+	}
+	std::string line;
+	std::vector<std::string> mapReturnVector;
+
+	while (std::getline(inFile, line))
+	{
+		Log("Map Line" + line, DEBUG);
+		mapReturnVector.push_back(line);
+	}
+
+	return mapReturnVector;
 }
 
 ResourceManager* ResourceManager::Instance()
