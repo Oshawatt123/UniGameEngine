@@ -1,6 +1,5 @@
 #include "Game.h"
 
-
 Game::Game()
 {
 	m_Window = nullptr;
@@ -29,6 +28,9 @@ Game::Game()
 	// create renderer
 	Renderer::Instance(m_Window);
 
+	// create physics engine
+	physicsEngine = new PhysicsEngine();
+
 	// create resource manager
 	ResourceManager::Instance(Renderer::Instance()->getRenderer());
 
@@ -38,6 +40,8 @@ Game::Game()
 	myGameObject->AddComponent(COMPONENT_CharacterControl);
 
 	myGameObject->m_ObjectBitMapPack = ResourceManager::Instance()->Load("../SDLFrameWorkDefault/filthyfrank.bmp", true);
+
+	//physicsEngine->AddMoveableObject(myGameObject);
 
 	Level1 = new Scene("Level1");
 	Level1->AddEntity(myGameObject);
@@ -67,6 +71,8 @@ bool Game::Tick(void)
 	}
 
 	myGameObject->Tick();
+
+	physicsEngine->Tick();
 
 	UpdateRenderer();
 

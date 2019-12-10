@@ -8,6 +8,7 @@
 
 #include "Renderer.h"
 #include "ResourceManager.h"
+#include "PhysicsEngine.h"
 #include "InputManager.h"
 #include "EngineStructs.h"
 #include "Scene.h"
@@ -24,6 +25,9 @@ private:
 
 	const int SCREEN_WIDTH = 640;
 	const int SCREEN_HEIGHT = 480;
+
+	//SOME MORE JAZZ
+	PhysicsEngine* physicsEngine;
 
 	//Objects!
 	GameObject* myGameObject;
