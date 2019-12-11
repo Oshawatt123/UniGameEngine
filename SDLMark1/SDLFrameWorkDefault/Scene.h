@@ -6,6 +6,7 @@
 #include "Map.h"
 #include "Renderer.h"
 #include "ResourceManager.h"
+#include "EngineStructs.h"
 
 class Scene
 {
@@ -16,6 +17,8 @@ private:
 	Map* sceneMap;
 
 	std::vector<GameObject*> EntityList;
+
+	BitMapPack drawBitMap;
 
 public:
 

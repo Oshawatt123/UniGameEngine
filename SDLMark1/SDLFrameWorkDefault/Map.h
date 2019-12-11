@@ -6,4 +6,6 @@ class Map
 public:
 	std::vector<std::string> mapTileData;
 	std::vector<std::string> mapEntityData;
+
+	std::vector <std::string> tileSet;
 };

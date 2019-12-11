@@ -11,7 +11,7 @@
 
 struct BitMapPack
 {
-	SDL_Texture* texture;
+	SDL_Texture* texture = nullptr;
 	int width;
 	int height;
 };
