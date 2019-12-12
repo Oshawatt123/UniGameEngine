@@ -18,7 +18,17 @@ private:
 
 	std::vector<GameObject*> EntityList;
 
-	BitMapPack drawBitMap;
+	BitMapPack tileBitMap;
+	BitMapPack indexBitMap;
+
+	int Xcounter;
+
+	SDL_Rect* indexRect;
+
+	int index;
+
+	int yIndex;
+	int xIndex;
 
 public:
 

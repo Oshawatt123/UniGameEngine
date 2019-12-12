@@ -21,31 +21,25 @@ void Scene::Draw()
 
 	//draw the map
 
-	int Xcounter = 0;
+	Xcounter = 0;
 	std::string tilePath = sceneMap->tileSet;
-	BitMapPack tileBitMap = ResourceManager::Instance()->LoadBitMap(tilePath, true);
+	tileBitMap = ResourceManager::Instance()->LoadBitMap(tilePath, true);
 
-	int tilesWide = tileBitMap.width / TILE_WIDTH;
-	int tilesHigh = tileBitMap.height / TILE_WIDTH;
-	Log("Height : " + std::to_string(tilesHigh) + " Width : " + std::to_string(tilesWide), DEBUG);
-	Log("Height : " + std::to_string(tileBitMap.height) + " Width : " + std::to_string(tileBitMap.width), DEBUG);
 	for (auto MapRow : sceneMap->mapTileData)
 	{
 		for (std::string::size_type Ycounter = 0; Ycounter < MapRow.length(); Ycounter++)
 		{
 			try {
 				// THIS IS DISTURBING
-				int index = (int)sceneMap->mapTileData[Xcounter][Ycounter] - 65;
-				
-				BitMapPack indexBitMap;
+				index = (int)sceneMap->mapTileData[Xcounter][Ycounter] - 65;
+
 				indexBitMap.texture = tileBitMap.texture;
 				indexBitMap.width = TILE_WIDTH;
 				indexBitMap.height = TILE_WIDTH;
 
 				// GET THE INDEX OF THE TILE IN THE SPRITESHEET
-				SDL_Rect* indexRect = new SDL_Rect();
-				int xIndex = ((index * TILE_WIDTH) % tileBitMap.width) / TILE_WIDTH;
-				int yIndex = ((TILE_WIDTH * index) / tileBitMap.width);
+				xIndex = ((index * TILE_WIDTH) % tileBitMap.width) / TILE_WIDTH;
+				yIndex = ((TILE_WIDTH * index) / tileBitMap.width);
 
 				Log("Char : " + std::to_string(sceneMap->mapTileData[Xcounter][Ycounter]) + " Index : " + std::to_string(index) + " xIndex: " + std::to_string(xIndex) + " yIndex: " + std::to_string(yIndex), DEBUG);
 
@@ -88,7 +82,8 @@ void Scene::SceneInit()
 	// load map
 	sceneMap = new Map();
 	sceneMap->mapTileData = ResourceManager::Instance()->LoadMap("../Maps/map1.txt");
-	drawBitMap = ResourceManager::Instance()->LoadBitMap(DEFAULT_TILE_PATH, true);
+
+	indexRect = new SDL_Rect();
 
 	sceneMap->tileSet = "../Sprites/defaultTiles.bmp";
 }
