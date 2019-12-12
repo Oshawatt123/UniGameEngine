@@ -5,6 +5,7 @@
 #include <SDL.h>
 #include <stdio.h>
 #include <iostream>
+#include <thread>
 
 #include "Renderer.h"
 #include "ResourceManager.h"

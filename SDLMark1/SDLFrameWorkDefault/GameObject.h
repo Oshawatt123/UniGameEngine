@@ -8,7 +8,7 @@ class GameObject
 {
 
 public:
-	GameObject();
+	GameObject(bool isStatic = false);
 
 	// needs to be virtual so children class can deconstruct
 	virtual ~GameObject();
@@ -21,10 +21,14 @@ public:
 
 	// Position & Movement
 	Vector2 m_position;
+	Vector2 m_size;
 	Vector2 m_velocity;
 
 	// Sprite
 	BitMapPack m_ObjectBitMapPack;
+
+	// Physics Variables
+	bool staticObject;
 
 private:
 	uint16_t m_GameObjectComponents;

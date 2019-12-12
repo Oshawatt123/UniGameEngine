@@ -38,6 +38,7 @@ enum ComponentMask
 	COMPONENT_Position =				0b0000000000000001,
 	COMPONENT_CharacterControl =		0b0000000000000010,
 	COMPONENT_Sprite   =				0b0000000000000100,
+	COMPONENT_Collidable =				0b0000000000001000,
 };
 
 enum Verbosity

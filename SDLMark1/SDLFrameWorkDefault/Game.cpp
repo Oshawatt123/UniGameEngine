@@ -46,6 +46,7 @@ Game::Game()
 	Level1 = new Scene("Level1");
 	Level1->AddEntity(myGameObject);
 
+	// Make the physics thread
 }
 
 Game::~Game()

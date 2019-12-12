@@ -24,8 +24,7 @@ private:
 	int Xcounter;
 
 	SDL_Rect* indexRect;
-
-	int index;
+		int index;
 
 	int yIndex;
 	int xIndex;
@@ -44,4 +43,3 @@ private:
 
 	void SceneInit();
 };
-
