@@ -24,7 +24,7 @@ BitMapPack ResourceManager::LoadBitMap(std::string filePath, bool transparency)
 	{
 		returnPack = m_textureHashMap[filePath];
 
-		Logger::Instance()->LogString("Retrieved BitMapPack from textureHashMap", DEBUG);
+		Log("Retrieved BitMapPack from textureHashMap", DEBUG);
 	}
 	// if we haven't loaded the texture, load it and add it to the hashmap
 	else

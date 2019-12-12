@@ -39,7 +39,7 @@ Game::Game()
 	myGameObject->AddComponent(COMPONENT_Sprite);
 	myGameObject->AddComponent(COMPONENT_CharacterControl);
 
-	myGameObject->m_ObjectBitMapPack = ResourceManager::Instance()->LoadBitMap("../Sprites/filthyfrank.bmp", true);
+	myGameObject->m_ObjectBitMapPack = ResourceManager::Instance()->LoadBitMap("../Sprites/ElvisPretzels.bmp", true);
 
 	physicsEngine->AddMoveableObject(myGameObject);
 

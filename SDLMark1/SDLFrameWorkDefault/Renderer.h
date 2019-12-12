@@ -4,6 +4,7 @@
 
 #include "SDL.h"
 #include "EngineStructs.h"
+#include "Logger.h"
 
 class Renderer
 {
@@ -16,9 +17,9 @@ private:
 	SDL_Renderer* m_pRenderer;
 
 public:
-	void Draw(BitMapPack bitMapPack, SDL_Rect* destRect);
+	void Draw(BitMapPack bitMapPack, SDL_Rect* destRect, SDL_Rect* srcRect = NULL);
 
-	void Draw(BitMapPack bitMapPack, int x, int y);
+	void Draw(BitMapPack bitMapPack, int x, int y, SDL_Rect* srcRect = NULL);
 
 	static Renderer* Instance();
 

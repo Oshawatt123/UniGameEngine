@@ -4,7 +4,7 @@
 
 // REALLY USEFUL MACROS
 #define Log(string, verbosity) Logger::Instance()->LogString(string, verbosity)
-#define TILE_WIDTH 64
+#define TILE_WIDTH 32
 
 // FILE PATH MACROS
 #define DEFAULT_TILE_PATH "../Sprites/Floor_Placeholder.bmp"
@@ -43,6 +43,7 @@ enum ComponentMask
 enum Verbosity
 {
 	EVERYONE,
-	DEBUG,
 	ERROR,
+	DEBUG,
+	NOTHING,
 };
