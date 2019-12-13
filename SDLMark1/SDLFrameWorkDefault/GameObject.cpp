@@ -16,6 +16,7 @@ GameObject::GameObject(bool isStatic)
 
 GameObject::~GameObject()
 {
+
 }
 
 void GameObject::AddComponent(uint16_t component)

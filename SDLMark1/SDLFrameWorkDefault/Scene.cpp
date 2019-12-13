@@ -31,6 +31,7 @@ void Scene::Draw()
 		{
 			try {
 				// THIS IS DISTURBING
+				// -65 is because "A" gives 65, so -65 gives 0; the index we want
 				index = (int)sceneMap->mapTileData[Xcounter][Ycounter] - 65;
 
 				indexBitMap.texture = tileBitMap.texture;
@@ -58,9 +59,10 @@ void Scene::Draw()
 		Xcounter++;
 	}
 
-	// Draw sprite for every Entity with sprite Component
+	// Update Every GameObject
 	for (auto x : EntityList)
 	{
+		// GameObject Draw
 		if ((x->m_GetComponentMask() & COMPONENT_Sprite) == COMPONENT_Sprite)
 		{
 			Renderer::Instance()->Draw(x->m_ObjectBitMapPack, x->m_position.x, x->m_position.y);

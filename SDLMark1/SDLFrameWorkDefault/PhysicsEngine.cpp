@@ -15,6 +15,11 @@ void PhysicsEngine::AddMoveableObject(GameObject* object)
 	MoveAble.push_back(object);
 }
 
+void PhysicsEngine::AddCollidableObject(GameObject* object)
+{
+	Collidable.push_back(object);
+}
+
 bool PhysicsEngine::CheckPointCollision(Vector2 point)
 {
 	for (auto object : Collidable)

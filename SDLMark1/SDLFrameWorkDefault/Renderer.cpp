@@ -83,6 +83,24 @@ Renderer::~Renderer()
 void Renderer::UpdateRenderer(void)
 {
 	// show what we've drawn
+
+#ifdef RENDER_DEBUG
+	
+	// draw a bunch of lines
+	for (size_t i = 0; i < 10; i++)
+	{
+		for (size_t j = 0; j < 10; j++)
+		{
+			SDL_RenderDrawLine(Instance()->getRenderer(),
+				i * TILE_WIDTH,
+				j * TILE_WIDTH,
+				i * TILE_WIDTH,
+				j * TILE_WIDTH + 1000);
+		}
+	}
+
+#endif
+
 	SDL_RenderPresent(m_pRenderer);
 }
 

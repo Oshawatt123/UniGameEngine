@@ -41,10 +41,18 @@ Game::Game()
 
 	myGameObject->m_ObjectBitMapPack = ResourceManager::Instance()->LoadBitMap("../Sprites/ElvisPretzels.bmp", true);
 
+	myCollidableObject = new GameObject();
+	myCollidableObject->AddComponent(COMPONENT_Collidable);
+	myCollidableObject->AddComponent(COMPONENT_Sprite);
+
+	myCollidableObject->m_ObjectBitMapPack = ResourceManager::Instance()->LoadBitMap("../Sprites/Floor_Placeholder.bmp", true);
+
 	physicsEngine->AddMoveableObject(myGameObject);
+	physicsEngine->AddCollidableObject(myCollidableObject);
 
 	Level1 = new Scene("Level1");
 	Level1->AddEntity(myGameObject);
+	Level1->AddEntity(myCollidableObject);
 
 	// Make the physics thread
 }
@@ -73,8 +81,11 @@ bool Game::Tick(void)
 	}
 
 	myGameObject->Tick();
+	myCollidableObject->Tick();
 
 	physicsEngine->Tick();
+
+	std::cout << physicsEngine->CheckPointCollision(myGameObject->m_position) << std::endl;
 
 	UpdateRenderer();
 

@@ -16,5 +16,7 @@ public:
 
 	void AddMoveableObject(GameObject* object);
 
+	void AddCollidableObject(GameObject* object);
+
 	bool CheckPointCollision(Vector2 point);
 };

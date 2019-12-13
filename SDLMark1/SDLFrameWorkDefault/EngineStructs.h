@@ -2,6 +2,9 @@
 #include "SDL.h"
 #include <string>
 
+// DEBUG DEFINES
+#define RENDER_DEBUG
+
 // REALLY USEFUL MACROS
 #define Log(string, verbosity) Logger::Instance()->LogString(string, verbosity)
 #define TILE_WIDTH 32
@@ -35,10 +38,9 @@ enum WindowEvents
 
 enum ComponentMask
 {
-	COMPONENT_Position =				0b0000000000000001,
-	COMPONENT_CharacterControl =		0b0000000000000010,
-	COMPONENT_Sprite   =				0b0000000000000100,
-	COMPONENT_Collidable =				0b0000000000001000,
+	COMPONENT_CharacterControl =		0b0000000000000001,
+	COMPONENT_Sprite   =				0b0000000000000010,
+	COMPONENT_Collidable =				0b0000000000000100,
 };
 
 enum Verbosity

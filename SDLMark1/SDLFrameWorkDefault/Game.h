@@ -32,6 +32,7 @@ private:
 
 	//Objects!
 	GameObject* myGameObject;
+	GameObject* myCollidableObject;
 
 	// PLACEHOLDER SCENE
 	Scene* Level1;
