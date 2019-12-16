@@ -1,7 +1,9 @@
 #pragma once
 
 #include <stdint.h>
+#include <vector>
 #include "EngineStructs.h"
+#include "ComponentBase.h"
 #include "MathHelper.h"
 
 class GameObject
@@ -13,11 +15,7 @@ public:
 	// needs to be virtual so children class can deconstruct
 	virtual ~GameObject();
 
-	void AddComponent(uint16_t component);
-
 	void Tick();
-
-	uint16_t m_GetComponentMask();
 
 	// Position & Movement
 	Vector2 m_position;
@@ -31,6 +29,5 @@ public:
 	bool staticObject;
 
 private:
-	uint16_t m_GameObjectComponents;
-
+	std::vector<ComponentBase*> m_GameObjectComponents;
 };

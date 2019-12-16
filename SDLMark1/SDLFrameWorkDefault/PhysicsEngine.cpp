@@ -44,6 +44,6 @@ bool PhysicsEngine::CheckPointCollision(Vector2 point)
 			}
 			return false;
 		}
-		return false;
 	}
+	return false;
 }

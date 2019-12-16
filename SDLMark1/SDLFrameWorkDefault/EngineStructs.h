@@ -3,7 +3,7 @@
 #include <string>
 
 // DEBUG DEFINES
-#define RENDER_DEBUG
+//#define RENDER_DEBUG
 
 // REALLY USEFUL MACROS
 #define Log(string, verbosity) Logger::Instance()->LogString(string, verbosity)

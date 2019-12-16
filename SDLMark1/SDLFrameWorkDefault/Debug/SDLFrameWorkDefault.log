@@ -1,2 +1,5 @@
-﻿  GameObject.cpp
+﻿  Game.cpp
+  GameObject.cpp
+  SceneManager.cpp
+  Generating Code...
   SDLFrameWorkDefault.vcxproj -> C:\Users\Games\Documents\GitHub\UniGameEngine\SDLMark1\Debug\SDLFrameWorkDefault.exe

@@ -4,7 +4,6 @@
 
 GameObject::GameObject(bool isStatic)
 {
-	m_GameObjectComponents = 0b0000000000000000;
 	m_position.x = 0;
 	m_position.y = 0;
 
@@ -19,18 +18,13 @@ GameObject::~GameObject()
 
 }
 
-void GameObject::AddComponent(uint16_t component)
-{
-	m_GameObjectComponents |= component;
-}
-
 void GameObject::Tick()
 {
 	// Reset velocity
 	m_velocity.x = 0;
 	m_velocity.y = 0;
 
-	if (m_GameObjectComponents & COMPONENT_CharacterControl)
+	/*if (m_GameObjectComponents & COMPONENT_CharacterControl)
 	{
 		if (InputManager::Instance()->KeyDown(SDL_SCANCODE_D))
 		{
@@ -48,10 +42,5 @@ void GameObject::Tick()
 		{
 			m_velocity.y += 5;
 		}
-	}
-}
-
-uint16_t GameObject::m_GetComponentMask()
-{
-	return m_GameObjectComponents;
+	}*/
 }

@@ -36,14 +36,14 @@ Game::Game()
 
 	// create my GameObject
 	myGameObject = new GameObject();
-	myGameObject->AddComponent(COMPONENT_Sprite);
-	myGameObject->AddComponent(COMPONENT_CharacterControl);
+	//myGameObject->AddComponent(COMPONENT_Sprite);
+	//myGameObject->AddComponent(COMPONENT_CharacterControl);
 
-	myGameObject->m_ObjectBitMapPack = ResourceManager::Instance()->LoadBitMap("../Sprites/ElvisPretzels.bmp", true);
+	myGameObject->m_ObjectBitMapPack = ResourceManager::Instance()->LoadBitMap("../Sprites/Mudkip.bmp", true);
 
 	myCollidableObject = new GameObject();
-	myCollidableObject->AddComponent(COMPONENT_Collidable);
-	myCollidableObject->AddComponent(COMPONENT_Sprite);
+	//myCollidableObject->AddComponent(COMPONENT_Collidable);
+	//myCollidableObject->AddComponent(COMPONENT_Sprite);
 
 	myCollidableObject->m_ObjectBitMapPack = ResourceManager::Instance()->LoadBitMap("../Sprites/Floor_Placeholder.bmp", true);
 

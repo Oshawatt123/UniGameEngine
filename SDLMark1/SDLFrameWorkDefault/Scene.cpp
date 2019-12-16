@@ -63,10 +63,10 @@ void Scene::Draw()
 	for (auto x : EntityList)
 	{
 		// GameObject Draw
-		if ((x->m_GetComponentMask() & COMPONENT_Sprite) == COMPONENT_Sprite)
+		/*if ((x->m_GetComponentMask() & COMPONENT_Sprite) == COMPONENT_Sprite)
 		{
 			Renderer::Instance()->Draw(x->m_ObjectBitMapPack, x->m_position.x, x->m_position.y);
-		}
+		}*/
 	}
 }
 
