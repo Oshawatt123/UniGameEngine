@@ -17,6 +17,9 @@ public:
 
 	void Tick();
 
+	template <class component> void addComponent();
+
+	// ###### TO BE REMOVED AND REPLACED WITH ECS COMPONENTS #####
 	// Position & Movement
 	Vector2 m_position;
 	Vector2 m_size;
@@ -24,6 +27,7 @@ public:
 
 	// Sprite
 	BitMapPack m_ObjectBitMapPack;
+	// ############################################################
 
 	// Physics Variables
 	bool staticObject;
@@ -31,3 +35,11 @@ public:
 private:
 	std::vector<ComponentBase*> m_GameObjectComponents;
 };
+
+template<class component>
+inline void GameObject::addComponent()
+{
+	// get component from ECS
+
+	// add component to component list
+}

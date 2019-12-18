@@ -36,11 +36,11 @@ enum WindowEvents
 	WinEvent_QUIT=1,
 };
 
-enum ComponentMask
+enum ComponentType
 {
-	COMPONENT_CharacterControl =		0b0000000000000001,
-	COMPONENT_Sprite   =				0b0000000000000010,
-	COMPONENT_Collidable =				0b0000000000000100,
+	COMPONENT_BASE,
+	COMPONENT_TRANSFORM,
+	COMPONENT_SPRITE,
 };
 
 enum Verbosity

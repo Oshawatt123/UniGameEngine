@@ -24,6 +24,7 @@ void GameObject::Tick()
 	m_velocity.x = 0;
 	m_velocity.y = 0;
 
+	//############# MOVE TO CHARACTERCONTROL COMPONENT ################
 	/*if (m_GameObjectComponents & COMPONENT_CharacterControl)
 	{
 		if (InputManager::Instance()->KeyDown(SDL_SCANCODE_D))
@@ -43,4 +44,16 @@ void GameObject::Tick()
 			m_velocity.y += 5;
 		}
 	}*/
+}
+
+ComponentBase* GameObject::getComponent(ComponentType componentType)
+{
+	for (auto component : m_GameObjectComponents)
+	{
+		if (component->type == componentType)
+		{
+			return component;
+		}
+	}
+	return nullptr;
 }

@@ -1,5 +1,7 @@
 #include "Game.h"
 
+#include "ECS.h"
+
 Game::Game()
 {
 	m_Window = nullptr;
@@ -55,6 +57,16 @@ Game::Game()
 	Level1->AddEntity(myCollidableObject);
 
 	// Make the physics thread
+
+	// Component testing
+	std::cout << getComponentTypeID<ComponentBase>();
+	std::cout << getComponentTypeID<Transform>();
+	std::cout << getComponentTypeID<Sprite>();
+	std::cout << getComponentTypeID<Transform>();
+	std::cout << getComponentTypeID<Transform>();
+	std::cout << getComponentTypeID<Transform>();
+	std::cout << getComponentTypeID<Sprite>();
+	std::cout << getComponentTypeID<Sprite>();
 }
 
 Game::~Game()

@@ -2,6 +2,7 @@
 
 void ComponentBase::Start()
 {
+	type = COMPONENT_BASE;
 }
 
 void ComponentBase::Tick()
