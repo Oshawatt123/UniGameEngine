@@ -2,5 +2,4 @@
 
 void Transform::Start()
 {
-	type = COMPONENT_TRANSFORM;
 }

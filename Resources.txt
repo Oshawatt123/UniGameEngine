@@ -8,3 +8,4 @@ https://www.youtube.com/watch?v=2rW7ALyHaas&t=29s
 https://medium.com/ingeniouslysimple/entities-components-and-systems-89c31464240d
 http://bitsquid.blogspot.com/2014/08/building-data-oriented-entity-system.html
 https://www.gamedev.net/articles/programming/general-and-gameplay-programming/the-entity-component-system-c-game-design-pattern-part-1-r4803/
+https://www.randygaul.net/2013/05/20/component-based-engine-design/

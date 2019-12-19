@@ -1,6 +1,6 @@
 #include "Game.h"
 
-#include "ECS.h"
+#include "Components.h"
 
 Game::Game()
 {
@@ -36,37 +36,14 @@ Game::Game()
 	// create resource manager
 	ResourceManager::Instance(Renderer::Instance()->getRenderer());
 
-	// create my GameObject
-	myGameObject = new GameObject();
-	//myGameObject->AddComponent(COMPONENT_Sprite);
-	//myGameObject->AddComponent(COMPONENT_CharacterControl);
-
-	myGameObject->m_ObjectBitMapPack = ResourceManager::Instance()->LoadBitMap("../Sprites/Mudkip.bmp", true);
-
-	myCollidableObject = new GameObject();
-	//myCollidableObject->AddComponent(COMPONENT_Collidable);
-	//myCollidableObject->AddComponent(COMPONENT_Sprite);
-
-	myCollidableObject->m_ObjectBitMapPack = ResourceManager::Instance()->LoadBitMap("../Sprites/Floor_Placeholder.bmp", true);
-
-	physicsEngine->AddMoveableObject(myGameObject);
-	physicsEngine->AddCollidableObject(myCollidableObject);
+	// create my Entity
+	Entity* player = new Entity();
+	player->addComponent<PositionComponent>();
 
 	Level1 = new Scene("Level1");
-	Level1->AddEntity(myGameObject);
-	Level1->AddEntity(myCollidableObject);
+	Level1->AddEntity(player);
 
 	// Make the physics thread
-
-	// Component testing
-	std::cout << getComponentTypeID<ComponentBase>();
-	std::cout << getComponentTypeID<Transform>();
-	std::cout << getComponentTypeID<Sprite>();
-	std::cout << getComponentTypeID<Transform>();
-	std::cout << getComponentTypeID<Transform>();
-	std::cout << getComponentTypeID<Transform>();
-	std::cout << getComponentTypeID<Sprite>();
-	std::cout << getComponentTypeID<Sprite>();
 }
 
 Game::~Game()
@@ -92,13 +69,6 @@ bool Game::Tick(void)
 		return false;
 	}
 
-	myGameObject->Tick();
-	myCollidableObject->Tick();
-
-	physicsEngine->Tick();
-
-	std::cout << physicsEngine->CheckPointCollision(myGameObject->m_position) << std::endl;
-
 	UpdateRenderer();
 
 	return true;
@@ -109,6 +79,8 @@ void Game::UpdateRenderer(void)
 	// Clear Renderer buffer from last frame
 	Renderer::Instance()->ClearRenderer();
 
+	// THIS DOES MORE THAN DRAW AT THE MOMENT
+	// SPLIT THIS INTO TICK AND DRAW
 	Level1->Draw();
 
 	// Update the renderer with the newly drawn Sprites

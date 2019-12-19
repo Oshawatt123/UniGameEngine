@@ -159,8 +159,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ComponentBase.h" />
+    <ClInclude Include="Components.h" />
     <ClInclude Include="ECS.h" />
     <ClInclude Include="EngineStructs.h" />
+    <ClInclude Include="FilthyComponents.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="InputManager.h" />

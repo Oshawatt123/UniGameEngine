@@ -134,8 +134,14 @@
     <ClInclude Include="Sprite.h">
       <Filter>Header Files\ECS</Filter>
     </ClInclude>
+    <ClInclude Include="FilthyComponents.h">
+      <Filter>Header Files\ECS</Filter>
+    </ClInclude>
     <ClInclude Include="ECS.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Components.h">
+      <Filter>Header Files\ECS</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

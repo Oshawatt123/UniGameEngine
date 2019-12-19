@@ -9,7 +9,7 @@ class Sprite :
 {
 public:
 	void Start();
-	void Update();
+	void Tick();
 
 	Transform* objectTransform;
 	SDL_Rect* destRect;

@@ -60,17 +60,13 @@ void Scene::Draw()
 	}
 
 	// Update Every GameObject
-	for (auto x : EntityList)
+   	for (auto entity : EntityList)
 	{
-		// GameObject Draw
-		/*if ((x->m_GetComponentMask() & COMPONENT_Sprite) == COMPONENT_Sprite)
-		{
-			Renderer::Instance()->Draw(x->m_ObjectBitMapPack, x->m_position.x, x->m_position.y);
-		}*/
+		entity->Tick();
 	}
 }
 
-void Scene::AddEntity(GameObject* EntityToAdd)
+void Scene::AddEntity(Entity* EntityToAdd)
 {
 	EntityList.push_back(EntityToAdd);
 }

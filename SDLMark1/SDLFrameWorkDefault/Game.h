@@ -12,6 +12,7 @@
 #include "PhysicsEngine.h"
 #include "InputManager.h"
 #include "EngineStructs.h"
+#include "FilthyComponents.h"
 #include "Scene.h"
 
 // GAMEOBJECT COMPONENTS

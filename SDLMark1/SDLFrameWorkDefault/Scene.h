@@ -2,7 +2,7 @@
 #include <string>
 #include <vector>
 
-#include "GameObject.h"
+#include "ECS.h"
 #include "Map.h"
 #include "Renderer.h"
 #include "ResourceManager.h"
@@ -16,7 +16,7 @@ private:
 
 	Map* sceneMap;
 
-	std::vector<GameObject*> EntityList;
+	std::vector<Entity*> EntityList;
 
 	BitMapPack tileBitMap;
 	BitMapPack indexBitMap;
@@ -36,7 +36,7 @@ public:
 
 	void Draw();
 
-	void AddEntity(GameObject* EntityToAdd);
+	void AddEntity(Entity* EntityToAdd);
 
 private:
 	~Scene();

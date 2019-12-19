@@ -3,7 +3,7 @@
 #include <stdint.h>
 #include <vector>
 #include "EngineStructs.h"
-#include "ComponentBase.h"
+#include "FilthyComponents.h"
 #include "MathHelper.h"
 
 class GameObject
@@ -17,8 +17,6 @@ public:
 
 	void Tick();
 
-	template <class component> void addComponent();
-
 	// ###### TO BE REMOVED AND REPLACED WITH ECS COMPONENTS #####
 	// Position & Movement
 	Vector2 m_position;
@@ -27,19 +25,25 @@ public:
 
 	// Sprite
 	BitMapPack m_ObjectBitMapPack;
-	// ############################################################
 
 	// Physics Variables
 	bool staticObject;
+	// ############################################################
+
+	struct transform
+	{
+		Vector2 position;
+		Vector2 rotation;
+		Vector2 scale;
+	};
+
+	struct sprite
+	{
+		BitMapPack bitMapPack;
+	};
 
 private:
-	std::vector<ComponentBase*> m_GameObjectComponents;
+	uint32_t m_ComponentMask;
+
+	int ID;
 };
-
-template<class component>
-inline void GameObject::addComponent()
-{
-	// get component from ECS
-
-	// add component to component list
-}

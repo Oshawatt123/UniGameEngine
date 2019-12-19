@@ -2,10 +2,10 @@
 
 void Sprite::Start()
 {
-	type = COMPONENT_SPRITE;
 }
 
-void Sprite::Update()
+void Sprite::Tick()
 {
-	Renderer::Instance()->Draw(sprite, objectTransform->Position.x, objectTransform->Position.y);
+	Log("WOW", DEBUG);
+	//Renderer::Instance()->Draw(sprite, objectTransform->Position.x, objectTransform->Position.y);
 }

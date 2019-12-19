@@ -44,16 +44,5 @@ void GameObject::Tick()
 			m_velocity.y += 5;
 		}
 	}*/
-}
 
-ComponentBase* GameObject::getComponent(ComponentType componentType)
-{
-	for (auto component : m_GameObjectComponents)
-	{
-		if (component->type == componentType)
-		{
-			return component;
-		}
-	}
-	return nullptr;
 }
