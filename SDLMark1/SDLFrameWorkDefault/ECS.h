@@ -35,8 +35,8 @@ class Component
 public:
 	Entity* entity;
 
-	virtual void init() {}
-	virtual void tick() {}
+	virtual void Init() {}
+	virtual void Tick() {}
 
 	virtual ~Component() {}
 };
@@ -48,7 +48,7 @@ public:
 	{
 		for (auto& c : components)
 		{
-			c->tick();
+			c->Tick();
 		}
 	}
 
@@ -87,7 +87,7 @@ public:
 		componentBitSet[getComponentTypeID<T>()] = true;
 
 		// call init on the new component
-		c->init();
+		c->Init();
 		return *c;
 	}
 

@@ -19,7 +19,8 @@ Scene::Scene(std::string name)
 void Scene::Draw()
 {
 
-	//draw the map
+	// draw the map
+	// move the index-finding code into the renderer / resourceManager
 
 	Xcounter = 0;
 	std::string tilePath = sceneMap->tileSet;

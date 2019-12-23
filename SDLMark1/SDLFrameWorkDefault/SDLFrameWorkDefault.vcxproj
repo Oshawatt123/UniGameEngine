@@ -170,12 +170,14 @@
     <ClInclude Include="Map.h" />
     <ClInclude Include="MathHelper.h" />
     <ClInclude Include="PhysicsEngine.h" />
+    <ClInclude Include="PositionComponent.h" />
     <ClInclude Include="Profiler.h" />
     <ClInclude Include="Renderer.h" />
     <ClInclude Include="ResourceManager.h" />
     <ClInclude Include="Scene.h" />
     <ClInclude Include="SceneManager.h" />
     <ClInclude Include="Sprite.h" />
+    <ClInclude Include="SpriteComponent.h" />
     <ClInclude Include="Transform.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
