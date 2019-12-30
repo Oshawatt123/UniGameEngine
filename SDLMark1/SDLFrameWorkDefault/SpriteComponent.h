@@ -15,7 +15,7 @@ public:
 	SpriteComponent() = default;
 	SpriteComponent(std::string path)
 	{
-
+		m_bitMapPack = ResourceManager::Instance()->LoadBitMap(path, true);
 	}
 
 	void Init() override
@@ -25,7 +25,7 @@ public:
 
 	void Tick() override
 	{
-
+		Renderer::Instance()->Draw(m_bitMapPack, m_positionComponent->getPos().x, m_positionComponent->getPos().y);
 	}
 
 };

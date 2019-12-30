@@ -23,8 +23,5 @@ public:
 
 	void Tick() override
 	{
-		Position.x++;
-		Position.y++;
-		std::cout << Position.x << " , " << Position.y << std::endl;
 	}
 };

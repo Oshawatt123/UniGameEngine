@@ -39,6 +39,7 @@ Game::Game()
 	// create my Entity
 	Entity* player = new Entity();
 	player->addComponent<PositionComponent>();
+	player->addComponent<SpriteComponent>("../Sprites/ElvisPretzels.bmp");
 
 	Level1 = new Scene("Level1");
 	Level1->AddEntity(player);
