@@ -2,27 +2,27 @@
 
 bool PhysicsEngine::Tick()
 {
-	for (auto x : MoveAble)
+	/*for (auto x : MoveAble)
 	{
 		x->m_position.x += x->m_velocity.x;
 		x->m_position.y += x->m_velocity.y;
-	}
+	}*/
 	return true;
 }
 
-void PhysicsEngine::AddMoveableObject(GameObject* object)
+void PhysicsEngine::AddMoveableObject(Entity* object)
 {
 	MoveAble.push_back(object);
 }
 
-void PhysicsEngine::AddCollidableObject(GameObject* object)
+void PhysicsEngine::AddCollidableObject(Entity* object)
 {
 	Collidable.push_back(object);
 }
 
 bool PhysicsEngine::CheckPointCollision(Vector2 point)
 {
-	for (auto object : Collidable)
+	/*for (auto object : Collidable)
 	{
 		// Is Point X to the RIGHT of the object's LEFT edge?
 		if (point.x > object->m_position.x)
@@ -45,5 +45,7 @@ bool PhysicsEngine::CheckPointCollision(Vector2 point)
 			return false;
 		}
 	}
+	return false;*/
+
 	return false;
 }

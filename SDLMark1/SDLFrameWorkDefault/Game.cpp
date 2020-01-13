@@ -50,7 +50,6 @@ Game::Game()
 Game::~Game()
 {
 	// CLEAN IN REVERSE ORDER!!
-	delete myGameObject;
 
 	if (m_Window)
 	{

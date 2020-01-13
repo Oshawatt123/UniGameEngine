@@ -28,6 +28,9 @@ void Renderer::Draw(BitMapPack bitMapPack, int x_in, int y_in, SDL_Rect* srcRect
 	destRect->h = bitMapPack.height;
 
 	Draw(bitMapPack, destRect, srcRect);
+
+	delete destRect;
+	destRect = nullptr;
 }
 
 Renderer* Renderer::Instance()

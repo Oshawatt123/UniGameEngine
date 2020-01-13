@@ -1,2 +1,5 @@
 ﻿  Game.cpp
-  SDLFrameWorkDefault.vcxproj -> D:\GitHub Tings\UniGameEngine\SDLMark1\Debug\SDLFrameWorkDefault.exe
+  SceneManager.cpp
+  Generating Code...
+C:\Users\Games\Desktop\UnrealP\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PhysicsEngine.h(5,10): warning C4067:  unexpected tokens following preprocessor directive - expected a newline
+  SDLFrameWorkDefault.vcxproj -> C:\Users\Games\Desktop\UnrealP\UniGameEngine\SDLMark1\Debug\SDLFrameWorkDefault.exe

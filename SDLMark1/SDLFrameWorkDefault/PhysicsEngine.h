@@ -1,22 +1,22 @@
 #pragma once
 
 #include <vector>
-
-#include "GameObject.h"
+#include "MathHelper.h"
+#include "ECS.h";
 
 class PhysicsEngine
 {
 private:
 
-	std::vector<GameObject*> MoveAble;
-	std::vector<GameObject*> Collidable;
+	std::vector<Entity*> MoveAble;
+	std::vector<Entity*> Collidable;
 
 public:
 	bool Tick();
 
-	void AddMoveableObject(GameObject* object);
+	void AddMoveableObject(Entity* object);
 
-	void AddCollidableObject(GameObject* object);
+	void AddCollidableObject(Entity* object);
 
 	bool CheckPointCollision(Vector2 point);
 };
