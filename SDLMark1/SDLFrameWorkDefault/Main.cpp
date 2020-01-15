@@ -5,7 +5,8 @@
 #include "InputManager.h"
 #include "Profiler.h"
 
-int main() {
+int main()
+{
 	bool running = true;
 
 	int red = 0;
@@ -17,7 +18,8 @@ int main() {
 
 	std::cout << "GET SCENE BUILD FROM SCENEMANAGER" << std::endl;
 
-	while (game != nullptr && running) {
+	while (game != nullptr && running)
+	{
 		myGhettoProfiler.StartProfile();
 		// run game main loop
 		running = game->Tick();

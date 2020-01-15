@@ -39,8 +39,10 @@ Game::Game()
 	// create my Entity
 	Entity* player = new Entity();
 	player->addComponent<PositionComponent>();
+	player->addComponent<CharacterController>();
 	player->addComponent<SpriteComponent>("../Sprites/ElvisPretzels.bmp");
 
+	// replace this with a build list of scenes and load the first one in
 	Level1 = new Scene("Level1");
 	Level1->AddEntity(player);
 

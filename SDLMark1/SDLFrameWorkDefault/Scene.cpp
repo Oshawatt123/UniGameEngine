@@ -74,6 +74,12 @@ void Scene::AddEntity(Entity* EntityToAdd)
 
 Scene::~Scene()
 {
+	// scene clean-up
+	for (auto entity : EntityList)
+	{
+		delete entity;
+		entity = nullptr;
+	}
 }
 
 void Scene::SceneInit()
