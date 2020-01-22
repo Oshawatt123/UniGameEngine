@@ -1,0 +1,11 @@
+Vector2 class & operator overloading
+Collision detection
+Tile Component
+Map files possible rework
+Scene files & scene loading
+Render layers & grouping
+Sprite Animations
+Scrolling tilemaps
+camera follow
+tilemap collisions
+instantiation
