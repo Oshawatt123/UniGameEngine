@@ -46,7 +46,7 @@ enum ComponentType
 enum Verbosity
 {
 	EVERYONE,
-	ERROR,
 	DEBUG,
+	ERROR,
 	NOTHING,
 };

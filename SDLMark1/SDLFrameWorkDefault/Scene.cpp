@@ -23,8 +23,7 @@ void Scene::Draw()
 	// move the index-finding code into the renderer / resourceManager
 
 	Xcounter = 0;
-	std::string tilePath = sceneMap->tileSet;
-	tileBitMap = ResourceManager::Instance()->LoadBitMap(tilePath, true);
+	tileBitMap = ResourceManager::Instance()->LoadBitMap(sceneMap->tileSet, true);
 
 	for (auto MapRow : sceneMap->mapTileData)
 	{
@@ -32,7 +31,7 @@ void Scene::Draw()
 		{
 			try {
 				// THIS IS DISTURBING
-				// -65 is because "A" gives 65, so -65 gives 0; the index we want
+				// -65 is because "A" in the map file has an ASCII value of 65, so -65 gives 0; the index we want
 				index = (int)sceneMap->mapTileData[Xcounter][Ycounter] - 65;
 
 				indexBitMap.texture = tileBitMap.texture;
@@ -85,10 +84,68 @@ Scene::~Scene()
 void Scene::SceneInit()
 {
 	// load map
+	// needs to be replaced by an actual load
+
+	// load the scene file
+	rapidxml::file<> xmlFile("../Assets/Scenes/Level1.xml");
+	rapidxml::xml_document<> doc;
+	doc.parse<0>(xmlFile.data());
+
+	std::cout << doc.first_node()->name() << std::endl;
+
+	rapidxml::xml_node<>* entitiesNode = doc.first_node()->first_node();
+	std::cout << entitiesNode->name() << std::endl;
+	// for each entity under the entities node
+	for (rapidxml::xml_node<>* entity = entitiesNode->first_node(); entity;
+		entity = entitiesNode->first_node())
+	{
+
+		// the first attribute (name tag)
+		std::cout << entity->first_attribute()->value() << std::endl;
+		Entity* newEntity = new Entity();
+		// for every data entry in an entity
+		for (rapidxml::xml_node<>* entityData = entity->first_node(); entityData;
+			entityData = entity->first_node())
+		{
+			std::cout << entityData->name() << std::endl;
+			if (std::string(entityData->name()) == "component")
+			{
+				std::cout << entityData->first_attribute()->value() << std::endl;
+				if (std::string(entityData->first_attribute()->value()) == "PositionComponent")
+				{
+					newEntity->addComponent<PositionComponent>();
+				}
+				if (std::string(entityData->first_attribute()->value()) == "SpriteComponent")
+				{
+					newEntity->addComponent<SpriteComponent>(entityData->first_node()->first_attribute()->value());
+				}
+				if (std::string(entityData->first_attribute()->value()) == "CharacterController")
+				{
+					newEntity->addComponent<CharacterController>();
+				}
+			}
+			else
+			{
+				std::cout << "Anomoly found, data :" << entityData->first_attribute()->value() << std::endl;
+			}
+
+			AddEntity(newEntity);
+
+			entity->remove_first_node();
+		}
+		entitiesNode->remove_first_node();
+	}
+
 	sceneMap = new Map();
 	sceneMap->mapTileData = ResourceManager::Instance()->LoadMap("../Maps/map1.txt");
 
 	indexRect = new SDL_Rect();
-
-	sceneMap->tileSet = "../Sprites/defaultTiles.bmp";
+	if (sceneMap->MapLoaded())
+	{
+		sceneMap->tileSet = "../Assets/Sprites/defaultTiles.bmp";
+	}
+	else
+	{
+		Log("Map Tile Data not loaded", ERROR);
+	}
 }

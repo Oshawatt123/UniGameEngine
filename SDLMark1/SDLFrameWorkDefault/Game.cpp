@@ -36,15 +36,15 @@ Game::Game()
 	// create resource manager
 	ResourceManager::Instance(Renderer::Instance()->getRenderer());
 
-	// create my Entity
-	Entity* player = new Entity();
+	// replace with load from scene file
+	/*Entity* player = new Entity();
 	player->addComponent<PositionComponent>();
 	player->addComponent<CharacterController>();
-	player->addComponent<SpriteComponent>("../Sprites/ElvisPretzels.bmp");
+	player->addComponent<SpriteComponent>("../Assets/Sprites/ElvisPretzels.bmp");*/
 
 	// replace this with a build list of scenes and load the first one in
 	Level1 = new Scene("Level1");
-	Level1->AddEntity(player);
+	//Level1->AddEntity(player);
 
 	// Make the physics thread
 }

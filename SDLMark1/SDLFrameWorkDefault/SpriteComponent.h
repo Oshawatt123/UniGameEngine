@@ -1,6 +1,7 @@
 #pragma once
 #include "Components.h"
 #include "EngineStructs.h"
+#include "ResourceManager.h"
 
 class SpriteComponent : public Component
 {

@@ -9,7 +9,7 @@ class Logger
 {
 private:
 	static Logger* sInstance;
-	int mVerbosity = NOTHING;
+	int mVerbosity = DEBUG;
 
 public:
 	static Logger* Instance();

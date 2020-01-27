@@ -1,3 +1,18 @@
 ﻿  Game.cpp
-C:\Users\Games\Documents\GitHub\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PhysicsEngine.h(5,10): warning C4067:  unexpected tokens following preprocessor directive - expected a newline
-  SDLFrameWorkDefault.vcxproj -> C:\Users\Games\Documents\GitHub\UniGameEngine\SDLMark1\Debug\SDLFrameWorkDefault.exe
+C:\Users\Games\Documents\GitHub\UniGameEngine\SDLMark1\SDLFrameWorkDefault\SpriteComponent.h(19,1): error C2653: 'ResourceManager': is not a class or namespace name
+  Main.cpp
+C:\Users\Games\Documents\GitHub\UniGameEngine\SDLMark1\SDLFrameWorkDefault\SpriteComponent.h(19,35): error C3861: 'Instance': identifier not found
+C:\Users\Games\Documents\GitHub\UniGameEngine\SDLMark1\SDLFrameWorkDefault\SpriteComponent.h(19,1): error C2653: 'ResourceManager': is not a class or namespace name
+  ResourceManager.cpp
+C:\Users\Games\Documents\GitHub\UniGameEngine\SDLMark1\SDLFrameWorkDefault\SpriteComponent.h(19,35): error C3861: 'Instance': identifier not found
+C:\Users\Games\Documents\GitHub\UniGameEngine\SDLMark1\SDLFrameWorkDefault\SpriteComponent.h(19,1): error C2653: 'ResourceManager': is not a class or namespace name
+C:\Users\Games\Documents\GitHub\UniGameEngine\SDLMark1\SDLFrameWorkDefault\SpriteComponent.h(19,35): error C3861: 'Instance': identifier not found
+C:\Users\Games\Documents\GitHub\UniGameEngine\SDLMark1\SDLFrameWorkDefault\SpriteComponent.h(29,1): error C2653: 'Renderer': is not a class or namespace name
+  Scene.cpp
+C:\Users\Games\Documents\GitHub\UniGameEngine\SDLMark1\SDLFrameWorkDefault\SpriteComponent.h(29,13): error C3861: 'Instance': identifier not found
+C:\Users\Games\Documents\GitHub\UniGameEngine\SDLMark1\SDLFrameWorkDefault\SpriteComponent.h(29,1): error C2653: 'Renderer': is not a class or namespace name
+  SceneManager.cpp
+C:\Users\Games\Documents\GitHub\UniGameEngine\SDLMark1\SDLFrameWorkDefault\SpriteComponent.h(29,13): error C3861: 'Instance': identifier not found
+C:\Users\Games\Documents\GitHub\UniGameEngine\SDLMark1\SDLFrameWorkDefault\SpriteComponent.h(29,1): error C2653: 'Renderer': is not a class or namespace name
+  Generating Code...
+C:\Users\Games\Documents\GitHub\UniGameEngine\SDLMark1\SDLFrameWorkDefault\SpriteComponent.h(29,13): error C3861: 'Instance': identifier not found

@@ -2,7 +2,7 @@
 
 #include <vector>
 #include "MathHelper.h"
-#include "ECS.h";
+#include "ECS.h"
 
 class PhysicsEngine
 {

@@ -13,6 +13,10 @@ Logger* Logger::Instance()
 
 void Logger::LogString(std::string message, Verbosity verbosity)
 {
+	if (verbosity == ERROR)
+	{
+		std::cout << "[ERROR]" << message << std::endl;
+	}
 	if (verbosity >= mVerbosity)
 	{
 		std::cout << message << std::endl;

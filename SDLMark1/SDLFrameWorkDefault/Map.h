@@ -9,4 +9,8 @@ public:
 	std::vector<std::string> mapEntityData;
 
 	std::string tileSet;
+
+	Map();
+	~Map();
+	bool MapLoaded();
 };

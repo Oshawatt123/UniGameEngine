@@ -3,10 +3,13 @@
 #include <vector>
 
 #include "ECS.h"
+#include "Components.h"
 #include "Map.h"
 #include "Renderer.h"
 #include "ResourceManager.h"
 #include "EngineStructs.h"
+
+#include "rapidxml_utils.hpp"
 
 class Scene
 {
@@ -24,7 +27,7 @@ private:
 	int Xcounter;
 
 	SDL_Rect* indexRect;
-		int index;
+	int index;
 
 	int yIndex;
 	int xIndex;

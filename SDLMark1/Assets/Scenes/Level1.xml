@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<scene>
+	<entities>
+		<entity name = "Player">
+			<component type = "PositionComponent">
+			</component>
+			<component type = "SpriteComponent">
+				<sprite path = "../Assets/Sprites/ElvizPretzels.bmp">
+          
+        </sprite>
+			</component>
+			<component type = "CharacterController">
+			</component>
+		</entity>
+	</entities>
+
+	<map path = "../Assets/Maps/map1.txt">
+  </map>
+</scene>

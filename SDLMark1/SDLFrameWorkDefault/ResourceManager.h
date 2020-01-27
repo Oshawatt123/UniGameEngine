@@ -10,6 +10,8 @@
 #include "Logger.h"
 #include "Scene.h"
 
+#define ASSETS "../Assets"
+
 struct SDL_Surface;
 struct SDL_Texture;
 struct SDL_Renderer;
