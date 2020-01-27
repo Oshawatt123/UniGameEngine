@@ -1,5 +1,5 @@
 #pragma once
-#include "Components.h"
+#include "PositionComponent.h"
 #include "InputManager.h"
 
 class CharacterController : public Component

@@ -8,7 +8,7 @@
 #include "SDL.h"
 #include "EngineStructs.h"
 #include "Logger.h"
-#include "Scene.h"
+
 
 #define ASSETS "../Assets"
 

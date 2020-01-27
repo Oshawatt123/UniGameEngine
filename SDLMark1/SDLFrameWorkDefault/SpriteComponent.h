@@ -1,6 +1,7 @@
 #pragma once
-#include "Components.h"
+#include "PositionComponent.h"
 #include "EngineStructs.h"
+#include "Renderer.h"
 #include "ResourceManager.h"
 
 class SpriteComponent : public Component
@@ -22,6 +23,7 @@ public:
 	void Init() override
 	{
 		m_positionComponent = &entity->getComponent<PositionComponent>();
+		m_index = 0;
 	}
 
 	void Tick() override

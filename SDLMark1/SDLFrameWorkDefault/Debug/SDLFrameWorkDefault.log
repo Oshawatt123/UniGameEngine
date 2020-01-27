@@ -1,18 +1,10 @@
 ﻿  Game.cpp
-C:\Users\Games\Documents\GitHub\UniGameEngine\SDLMark1\SDLFrameWorkDefault\SpriteComponent.h(19,1): error C2653: 'ResourceManager': is not a class or namespace name
   Main.cpp
-C:\Users\Games\Documents\GitHub\UniGameEngine\SDLMark1\SDLFrameWorkDefault\SpriteComponent.h(19,35): error C3861: 'Instance': identifier not found
-C:\Users\Games\Documents\GitHub\UniGameEngine\SDLMark1\SDLFrameWorkDefault\SpriteComponent.h(19,1): error C2653: 'ResourceManager': is not a class or namespace name
-  ResourceManager.cpp
-C:\Users\Games\Documents\GitHub\UniGameEngine\SDLMark1\SDLFrameWorkDefault\SpriteComponent.h(19,35): error C3861: 'Instance': identifier not found
-C:\Users\Games\Documents\GitHub\UniGameEngine\SDLMark1\SDLFrameWorkDefault\SpriteComponent.h(19,1): error C2653: 'ResourceManager': is not a class or namespace name
-C:\Users\Games\Documents\GitHub\UniGameEngine\SDLMark1\SDLFrameWorkDefault\SpriteComponent.h(19,35): error C3861: 'Instance': identifier not found
-C:\Users\Games\Documents\GitHub\UniGameEngine\SDLMark1\SDLFrameWorkDefault\SpriteComponent.h(29,1): error C2653: 'Renderer': is not a class or namespace name
   Scene.cpp
-C:\Users\Games\Documents\GitHub\UniGameEngine\SDLMark1\SDLFrameWorkDefault\SpriteComponent.h(29,13): error C3861: 'Instance': identifier not found
-C:\Users\Games\Documents\GitHub\UniGameEngine\SDLMark1\SDLFrameWorkDefault\SpriteComponent.h(29,1): error C2653: 'Renderer': is not a class or namespace name
+C:\Users\Games\Documents\GitHub\UniGameEngine\SDLMark1\SDLFrameWorkDefault\rapidxml_utils.hpp(40,25): warning C4244: 'initializing': conversion from 'std::streamoff' to 'size_t', possible loss of data
+C:\Users\Games\Documents\GitHub\UniGameEngine\SDLMark1\SDLFrameWorkDefault\rapidxml_utils.hpp(28): message : while compiling class template member function 'rapidxml::file<char>::file(const char *)'
+C:\Users\Games\Documents\GitHub\UniGameEngine\SDLMark1\SDLFrameWorkDefault\Scene.cpp(90): message : see reference to function template instantiation 'rapidxml::file<char>::file(const char *)' being compiled
   SceneManager.cpp
-C:\Users\Games\Documents\GitHub\UniGameEngine\SDLMark1\SDLFrameWorkDefault\SpriteComponent.h(29,13): error C3861: 'Instance': identifier not found
-C:\Users\Games\Documents\GitHub\UniGameEngine\SDLMark1\SDLFrameWorkDefault\SpriteComponent.h(29,1): error C2653: 'Renderer': is not a class or namespace name
   Generating Code...
-C:\Users\Games\Documents\GitHub\UniGameEngine\SDLMark1\SDLFrameWorkDefault\SpriteComponent.h(29,13): error C3861: 'Instance': identifier not found
+C:\Users\Games\Documents\GitHub\UniGameEngine\SDLMark1\SDLFrameWorkDefault\Scene.cpp(90): message : see reference to class template instantiation 'rapidxml::file<char>' being compiled
+  SDLFrameWorkDefault.vcxproj -> C:\Users\Games\Documents\GitHub\UniGameEngine\SDLMark1\Debug\SDLFrameWorkDefault.exe

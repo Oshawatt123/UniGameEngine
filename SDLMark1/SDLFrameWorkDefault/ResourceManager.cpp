@@ -103,7 +103,7 @@ ResourceManager* ResourceManager::Instance()
 {
 	if (sInstance == NULL)
 	{
-		std::cout << "Reource Manager Singleton not initialized with renderer!\n";
+		std::cout << "Resource Manager Singleton not initialized with renderer!\n";
 		std::cout << "Please initialize with renderer before attempting to access.\n";
 		return NULL;
 	}
