@@ -1,8 +1,16 @@
+##### NECESSARY #####
+Re-factor code to be cleaner
+	Clean up pointers better
+	Create more functions
+	Be rid of singletons!!
+Remember to clean up, and add release functions to all your systems (especially resource manager)
+
+####### TO DO #######
 Vector2 class & operator overloading
 Collision detection
 Tile Component
-Map files possible rework
-Scene files & scene loading
+[DONE] Map files possible rework
+[DONE] Scene files & scene loading
 Render layers & grouping
 Sprite Animations
 Scrolling tilemaps

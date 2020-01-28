@@ -15,7 +15,7 @@ void Renderer::Draw(BitMapPack bitMapPack, SDL_Rect* destRect, SDL_Rect* srcRect
 	if (bitMapPack.texture)
 	{
 		SDL_RenderCopy(m_pRenderer, bitMapPack.texture, srcRect, destRect);
-		Log("Rendered sprite at " + std::to_string(destRect->x) + " " + std::to_string(destRect->y), DEBUG);
+		Log("Rendered sprite at " + std::to_string(destRect->x) + " " + std::to_string(destRect->y), FILTHY_DEBUG);
 	}
 }
 

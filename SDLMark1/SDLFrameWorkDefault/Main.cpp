@@ -13,6 +13,9 @@ int main()
 	int green = 0;
 	int blue = 255;
 
+	// renderer* R = new Renderer();
+	// resouceManager* RM = new ResourceManager(R);
+
 	Game* game = new Game();
 	Profiler myGhettoProfiler;
 
@@ -20,13 +23,12 @@ int main()
 
 	while (game != nullptr && running)
 	{
-		myGhettoProfiler.StartProfile();
+		//myGhettoProfiler.StartProfile();
 		// run game main loop
 		running = game->Tick();
 
-		SDL_Delay(16);
-		myGhettoProfiler.EndProfile();
-
+		SDL_Delay(32);
+		//myGhettoProfiler.EndProfile();
 	}
 
 	delete game;

@@ -24,7 +24,7 @@ BitMapPack ResourceManager::LoadBitMap(std::string filePath, bool transparency)
 	{
 		returnPack = m_textureHashMap[filePath];
 
-		Log("Retrieved BitMapPack from textureHashMap", DEBUG);
+		Log("Retrieved BitMapPack from textureHashMap", FILTHY_DEBUG);
 	}
 	// if we haven't loaded the texture, load it and add it to the hashmap
 	else
@@ -69,6 +69,7 @@ BitMapPack ResourceManager::LoadBitMap(std::string filePath, bool transparency)
 		if (m_pBitMapTempSurface)
 		{
 			SDL_FreeSurface(m_pBitMapTempSurface);
+			m_pBitMapTempSurface = nullptr;
 		}
 
 		m_textureHashMap.insert(std::make_pair(filePath, returnPack));

@@ -3,17 +3,24 @@
 	<entities>
 		<entity name = "Player">
 			<component type = "PositionComponent">
+        <xpos>20</xpos>
+        <ypos>100</ypos>
 			</component>
 			<component type = "SpriteComponent">
-				<sprite path = "../Assets/Sprites/ElvizPretzels.bmp">
-          
-        </sprite>
+        <sprite>../Assets/Sprites/ElvisPretzels.bmp</sprite>
 			</component>
 			<component type = "CharacterController">
 			</component>
 		</entity>
+    <entity name ="OtherThing">
+      <component type ="PositionComponent">
+      </component>
+      <component type ="SpriteComponent">
+        <sprite>../Assets/Sprites/Mudkip.bmp</sprite>
+      </component>
+    </entity>
 	</entities>
-
-	<map path = "../Assets/Maps/map1.txt">
+  
+	<map path = "../Assets/Maps/map1.filthymap">
   </map>
 </scene>

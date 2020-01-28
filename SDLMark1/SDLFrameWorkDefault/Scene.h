@@ -39,7 +39,7 @@ public:
 
 	void Draw();
 
-	void AddEntity(Entity* EntityToAdd);
+	void AddEntity( Entity* const EntityToAdd);
 
 private:
 	~Scene();

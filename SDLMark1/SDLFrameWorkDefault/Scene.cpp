@@ -42,7 +42,7 @@ void Scene::Draw()
 				xIndex = ((index * TILE_WIDTH) % tileBitMap.width) / TILE_WIDTH;
 				yIndex = ((TILE_WIDTH * index) / tileBitMap.width);
 
-				Log("Char : " + std::to_string(sceneMap->mapTileData[Xcounter][Ycounter]) + " Index : " + std::to_string(index) + " xIndex: " + std::to_string(xIndex) + " yIndex: " + std::to_string(yIndex), DEBUG);
+				Log("Char : " + std::to_string(sceneMap->mapTileData[Xcounter][Ycounter]) + " Index : " + std::to_string(index) + " xIndex: " + std::to_string(xIndex) + " yIndex: " + std::to_string(yIndex), FILTHY_DEBUG);
 
 				indexRect->x = xIndex * TILE_WIDTH;
 				indexRect->y = yIndex * TILE_WIDTH;
@@ -62,11 +62,15 @@ void Scene::Draw()
 	// Update Every GameObject
    	for (auto entity : EntityList)
 	{
+		if (entity->hasComponent<CharacterController>())
+		{
+			//std::cout << entity->getComponent<PositionComponent>().getPos().x << std::endl;
+		}
 		entity->Tick();
 	}
 }
 
-void Scene::AddEntity(Entity* EntityToAdd)
+void Scene::AddEntity(Entity* const EntityToAdd)
 {
 	EntityList.push_back(EntityToAdd);
 }
@@ -85,40 +89,89 @@ void Scene::SceneInit()
 {
 	// load map
 	// needs to be replaced by an actual load
-
+	Log("#################### [XML DEBUG] #####################", DEBUG);
 	// load the scene file
 	rapidxml::file<> xmlFile("../Assets/Scenes/Level1.xml");
+	// setup rapidXML
 	rapidxml::xml_document<> doc;
 	doc.parse<0>(xmlFile.data());
 
-	std::cout << doc.first_node()->name() << std::endl;
+	// set root sceneNode
+	rapidxml::xml_node<>* sceneNode = doc.first_node();
 
-	rapidxml::xml_node<>* entitiesNode = doc.first_node()->first_node();
-	std::cout << entitiesNode->name() << std::endl;
+	Log(sceneNode->name(), DEBUG);
+
+	// set entities parent Node
+	rapidxml::xml_node<>* entitiesNode = sceneNode->first_node();
+	Log(entitiesNode->name(), DEBUG);
 	// for each entity under the entities node
 	for (rapidxml::xml_node<>* entity = entitiesNode->first_node(); entity;
 		entity = entitiesNode->first_node())
 	{
+		std::string logstring = "ENTITYNODE NAME ";
+		logstring.append(entity->name());
+		Log(logstring, DEBUG);
 
-		// the first attribute (name tag)
-		std::cout << entity->first_attribute()->value() << std::endl;
+		// create the entity
 		Entity* newEntity = new Entity();
+
 		// for every data entry in an entity
 		for (rapidxml::xml_node<>* entityData = entity->first_node(); entityData;
 			entityData = entity->first_node())
 		{
-			std::cout << entityData->name() << std::endl;
 			if (std::string(entityData->name()) == "component")
 			{
-				std::cout << entityData->first_attribute()->value() << std::endl;
+				// check for position component
 				if (std::string(entityData->first_attribute()->value()) == "PositionComponent")
 				{
-					newEntity->addComponent<PositionComponent>();
+					int newEntityX = 0;
+					int newEntityY = 0;
+					// try for x position and remove the node if it is there
+					if (entityData->first_node("xpos"))
+					{
+						// convert the value to a string
+						// value is a char*, so this needs to be converted to a string
+						// and then std::stoi converts this to an integer
+						std::string xString = entityData->first_node("xpos")->value();
+						newEntityX = std::stoi(xString);
+
+						// debug jazz, will be cleaned with logger upgrade
+						std::string logstring = "Entity x position set to ";
+						logstring.append(entityData->first_node("xpos")->value());
+						Log(logstring, DEBUG);
+
+						// remove this node so we can access the next one
+						entityData->remove_first_node();
+					}
+					else
+					{
+						Log("Error parsing x position data form scene data : x position set to default 0", WARNING);
+						newEntityX = 0;
+					}
+					// try for y position and remove the node if it is there
+					if (entityData->first_node("ypos"))
+					{
+						std::string yString = entityData->first_node("ypos")->value();
+						newEntityY = std::stoi(yString);
+
+						std::string logstring = "Entity y position set to ";
+						logstring.append(entityData->first_node("ypos")->value());
+						Log(logstring, DEBUG);
+						entityData->remove_first_node();
+					}
+					else
+					{
+						Log("Error parsing y position data form scene data : y position set to default 0", WARNING);
+						newEntityY = 0;
+					}
+					newEntity->addComponent<PositionComponent>(newEntityX, newEntityY);
 				}
+				// check for sprite component
 				if (std::string(entityData->first_attribute()->value()) == "SpriteComponent")
 				{
-					newEntity->addComponent<SpriteComponent>(entityData->first_node()->first_attribute()->value());
+					newEntity->addComponent<SpriteComponent>(entityData->first_node()->first_node()->value());
 				}
+				// check for charactercontroller
 				if (std::string(entityData->first_attribute()->value()) == "CharacterController")
 				{
 					newEntity->addComponent<CharacterController>();
@@ -126,18 +179,27 @@ void Scene::SceneInit()
 			}
 			else
 			{
-				std::cout << "Anomoly found, data :" << entityData->first_attribute()->value() << std::endl;
+				std::cout << "Anomaly found, data :" << entityData->first_attribute()->value() << std::endl;
 			}
-
-			AddEntity(newEntity);
 
 			entity->remove_first_node();
 		}
+		AddEntity(newEntity);
 		entitiesNode->remove_first_node();
 	}
 
+	// set map node
+
+	entitiesNode = nullptr;
+	sceneNode->remove_first_node();
+	// the above needs to happen so we can get the second node, and we must clean up entitiesNode so we
+	// avoid a pointer pointing to jazz that doesn't exist anymore
+	rapidxml::xml_node<>* mapNode = sceneNode->first_node();
+
+
+	// load map data into the scene
 	sceneMap = new Map();
-	sceneMap->mapTileData = ResourceManager::Instance()->LoadMap("../Maps/map1.txt");
+	sceneMap->mapTileData = ResourceManager::Instance()->LoadMap(mapNode->first_attribute()->value());
 
 	indexRect = new SDL_Rect();
 	if (sceneMap->MapLoaded())

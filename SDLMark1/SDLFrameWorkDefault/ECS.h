@@ -35,8 +35,8 @@ class Component
 public:
 	Entity* entity;
 
-	virtual void Init() {}
-	virtual void Tick() {}
+	virtual void Init() = 0;
+	virtual void Tick() = 0;
 
 	virtual ~Component() {}
 };
@@ -60,7 +60,7 @@ public:
 	// check the componentBitSet to see if an object has component of type T
 	template<typename T> bool hasComponent() const
 	{
-		return componentBitSet[getComponentTypeID<T>];
+		return componentBitSet[getComponentTypeID<T>()];
 	}
 
 	// add a component of type T to a GameObject

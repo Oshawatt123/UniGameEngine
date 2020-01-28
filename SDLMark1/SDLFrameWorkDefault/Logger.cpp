@@ -13,13 +13,24 @@ Logger* Logger::Instance()
 
 void Logger::LogString(std::string message, Verbosity verbosity)
 {
-	if (verbosity == ERROR)
-	{
-		std::cout << "[ERROR]" << message << std::endl;
-	}
 	if (verbosity >= mVerbosity)
 	{
-		std::cout << message << std::endl;
+		if (verbosity == ERROR)
+		{
+			std::cout << "[ERROR]" << message << std::endl;
+		}
+		else if (verbosity == DEBUG)
+		{
+			std::cout << "[DEBUG]" << message << std::endl;
+		}
+		else if (verbosity == WARNING)
+		{
+			std::cout << "[WARNING]" << message << std::endl;
+		}
+		else
+		{
+			std::cout << message << std::endl;
+		}
 	}
 }
 

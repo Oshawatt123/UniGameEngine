@@ -28,6 +28,7 @@ public:
 
 	void Tick() override
 	{
+		//std::cout << "Drawing a dude" << std::endl;
 		Renderer::Instance()->Draw(m_bitMapPack, m_positionComponent->getPos().x, m_positionComponent->getPos().y);
 	}
 
