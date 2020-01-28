@@ -24,8 +24,7 @@ private:
 
 	std::ifstream inFile;
 
-	SDL_Surface* m_pBitMapTempSurface;
-	SDL_Texture* m_pBitMapTempTexture;
+	
 	SDL_Renderer* m_pRenderer;
 
 	std::unordered_map<std::string, BitMapPack> m_textureHashMap;
@@ -40,6 +39,8 @@ public:
 
 	static ResourceManager* Instance();
 	static ResourceManager* Instance(SDL_Renderer* renderer);
+
+	void release();
 
 private:
 	bool checkHashMap(std::string key);

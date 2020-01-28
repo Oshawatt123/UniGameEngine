@@ -13,8 +13,10 @@ int main()
 	int green = 0;
 	int blue = 255;
 
+	// InputManager* IM = new InputManager();
 	// renderer* R = new Renderer();
-	// resouceManager* RM = new ResourceManager(R);
+	// ResouceManager* RM = new ResourceManager(R);
+	// PhysicsEngine* PE = new PhysicsEngine();
 
 	Game* game = new Game();
 	Profiler myGhettoProfiler;

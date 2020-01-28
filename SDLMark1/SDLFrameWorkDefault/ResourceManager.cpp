@@ -29,6 +29,9 @@ BitMapPack ResourceManager::LoadBitMap(std::string filePath, bool transparency)
 	// if we haven't loaded the texture, load it and add it to the hashmap
 	else
 	{
+		SDL_Surface* m_pBitMapTempSurface = nullptr;
+		SDL_Texture* m_pBitMapTempTexture = nullptr;
+
 		// create bitmap surface
 		m_pBitMapTempSurface = SDL_LoadBMP(filePath.c_str());
 		// check bitmap surface was created successfully
@@ -66,15 +69,22 @@ BitMapPack ResourceManager::LoadBitMap(std::string filePath, bool transparency)
 			returnPack.texture = m_pBitMapTempTexture;
 		}
 
+		m_textureHashMap.insert(std::make_pair(filePath, returnPack));
+
+		std::cout << "Added BitMapPack " << filePath << " to textureHashMap" << std::endl;
+
+		// pointer cleaning
 		if (m_pBitMapTempSurface)
 		{
 			SDL_FreeSurface(m_pBitMapTempSurface);
 			m_pBitMapTempSurface = nullptr;
 		}
-
-		m_textureHashMap.insert(std::make_pair(filePath, returnPack));
-
-		std::cout << "Added BitMapPack " << filePath << " to textureHashMap" << std::endl;
+		if (m_pBitMapTempTexture != nullptr)
+		{
+			// this texture pointer is freed but cannot be destroyed as it
+			//  would also destroy the texture in the map
+			m_pBitMapTempTexture = nullptr;
+		}
 	}
 
 	// after we have loaded the texture/width/height, return the BitMapPack
@@ -119,6 +129,11 @@ ResourceManager* ResourceManager::Instance(SDL_Renderer* renderer)
 		sInstance = new ResourceManager(renderer);
 	}
 	return sInstance;
+}
+
+void ResourceManager::release()
+{
+
 }
 
 bool ResourceManager::checkHashMap(std::string key)
