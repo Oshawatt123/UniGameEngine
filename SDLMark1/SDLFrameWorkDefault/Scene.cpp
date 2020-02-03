@@ -176,6 +176,11 @@ void Scene::SceneInit()
 				{
 					newEntity->addComponent<CharacterController>();
 				}
+				// check for collider
+				if (std::string(entityData->first_attribute()->value()) == "CollisionComponent")
+				{
+					newEntity->addComponent<CollisionComponent>();
+				}
 			}
 			else
 			{

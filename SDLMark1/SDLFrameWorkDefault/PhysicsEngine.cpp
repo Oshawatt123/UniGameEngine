@@ -22,19 +22,21 @@ void PhysicsEngine::AddCollidableObject(Entity* object)
 
 bool PhysicsEngine::CheckPointCollision(Vector2 point)
 {
-	/*for (auto object : Collidable)
+	SDL_Rect otherCollider;
+	for (auto object : Collidable)
 	{
+		otherCollider = object->getComponent<CollisionComponent>().collider;
 		// Is Point X to the RIGHT of the object's LEFT edge?
-		if (point.x > object->m_position.x)
+		if (point.x > otherCollider.x)
 		{
 			// Is Point X to the LEFT of the object's RIGHT edge?
-			if (point.x < object->m_position.x + object->m_size.x)
+			if (point.x < otherCollider.x + otherCollider.w)
 			{
 				// Is Point Y BELOW the object's TOP edge?
-				if (point.y < object->m_position.y)
+				if (point.y < otherCollider.y)
 				{
 					// Is Point Y ABOVE the object's BOTTOM edge?
-					if (point.y > object->m_position.y - object->m_size.y)
+					if (point.y > otherCollider.y - otherCollider.h)
 					{
 						return true;
 					}
@@ -45,7 +47,21 @@ bool PhysicsEngine::CheckPointCollision(Vector2 point)
 			return false;
 		}
 	}
-	return false;*/
+	return false;
+}
+
+bool PhysicsEngine::AABB(const SDL_Rect& A, const SDL_Rect& B)
+{
+	// nested for over each object? there must be a better way???
+	if (
+		A.x + A.w >= B.x &&
+		B.x + B.w >= A.x &&
+		A.y + A.h >= B.y &&
+		B.y + B.h >= A.y
+		)
+	{
+		return true;
+	}
 
 	return false;
 }

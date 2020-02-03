@@ -154,6 +154,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CharacterController.h" />
+    <ClInclude Include="CollisionComponent.h" />
     <ClInclude Include="Components.h" />
     <ClInclude Include="ECS.h" />
     <ClInclude Include="EngineStructs.h" />

@@ -97,30 +97,30 @@ Vector2& operator/(Vector2& v1, const float& value)
 // Advanced operator overloading
 Vector2& Vector2::operator+=(const Vector2& vec)
 {
-	this->Add(vec);
+	return this->Add(vec);
 }
 
 Vector2& Vector2::operator-=(const Vector2& vec)
 {
-	this->Subtract(vec);
+	return this->Subtract(vec);
 }
 
 Vector2& Vector2::operator*=(const Vector2& vec)
 {
-	this->Multiply(vec);
+	return this->Multiply(vec);
 }
 
 Vector2& Vector2::operator/=(const Vector2& vec)
 {
-	this->Divide(vec);
+	return this->Divide(vec);
 }
 
 Vector2& Vector2::operator*=(const float& value)
 {
-	this->Multiply(value);
+	return this->Multiply(value);
 }
 
 Vector2& Vector2::operator/=(const float& value)
 {
-	this->Multiply(value);
+	return this->Multiply(value);
 }

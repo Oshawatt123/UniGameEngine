@@ -2,10 +2,11 @@
 
 class PositionComponent : public Component
 {
-private:
-	Vector2 Position;
 
 public:
+	Vector2 Position;
+	Vector2 Rotation;
+	int scale;
 
 	PositionComponent()
 	{

@@ -1,20 +1,12 @@
-﻿  Game.cpp
-  InputManager.cpp
-  Logger.cpp
-  Main.cpp
-C:\Users\Games\Documents\GitHub\UniGameEngine\SDLMark1\SDLFrameWorkDefault\Main.cpp(22,11): warning C4101: 'myGhettoProfiler': unreferenced local variable
-  Map.cpp
-C:\Users\Games\Documents\GitHub\UniGameEngine\SDLMark1\SDLFrameWorkDefault\Map.cpp(6,18): warning C4834: discarding return value of function with 'nodiscard' attribute
-  MathHelper.cpp
-  PhysicsEngine.cpp
-  Profiler.cpp
-  Renderer.cpp
-  ResourceManager.cpp
-  Scene.cpp
-C:\Users\Games\Documents\GitHub\UniGameEngine\SDLMark1\SDLFrameWorkDefault\rapidxml_utils.hpp(40,25): warning C4244: 'initializing': conversion from 'std::streamoff' to 'size_t', possible loss of data
-C:\Users\Games\Documents\GitHub\UniGameEngine\SDLMark1\SDLFrameWorkDefault\rapidxml_utils.hpp(28): message : while compiling class template member function 'rapidxml::file<char>::file(const char *)'
-C:\Users\Games\Documents\GitHub\UniGameEngine\SDLMark1\SDLFrameWorkDefault\Scene.cpp(94): message : see reference to function template instantiation 'rapidxml::file<char>::file(const char *)' being compiled
-C:\Users\Games\Documents\GitHub\UniGameEngine\SDLMark1\SDLFrameWorkDefault\Scene.cpp(94): message : see reference to class template instantiation 'rapidxml::file<char>' being compiled
+﻿  MathHelper.cpp
   SceneManager.cpp
+C:\Users\Games\Documents\GitHub\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(17,16): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\Games\Documents\GitHub\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(18,16): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\Games\Documents\GitHub\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(24,16): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\Games\Documents\GitHub\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(25,16): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\Games\Documents\GitHub\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(36,33): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Games\Documents\GitHub\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(36,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Games\Documents\GitHub\UniGameEngine\SDLMark1\SDLFrameWorkDefault\SpriteComponent.h(34,106): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Games\Documents\GitHub\UniGameEngine\SDLMark1\SDLFrameWorkDefault\SpriteComponent.h(34,73): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
   Generating Code...
   SDLFrameWorkDefault.vcxproj -> C:\Users\Games\Documents\GitHub\UniGameEngine\SDLMark1\Debug\SDLFrameWorkDefault.exe

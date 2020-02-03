@@ -113,5 +113,8 @@
     <ClInclude Include="CharacterController.h">
       <Filter>Header Files\ECS</Filter>
     </ClInclude>
+    <ClInclude Include="CollisionComponent.h">
+      <Filter>Header Files\ECS</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

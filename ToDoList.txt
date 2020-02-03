@@ -7,14 +7,17 @@ Remember to clean up, and add release functions to all your systems (especially 
 Fix smol leak in input manager
 
 ####### TO DO #######
-Vector2 class & operator overloading
-Collision detection
+[DONE] Vector2 class & operator overloading
+[-started] Collision detection
+Component auto-add if required components are not present
 [DONE] Map files possible rework
 [DONE] Scene files & scene loading
 Render layers & grouping
-Sprite Animations
 Scrolling tilemaps
 camera follow
+Sprite Animations
 tilemap collisions
 instantiation
+
+####### MAYBE #######
 Tile Component

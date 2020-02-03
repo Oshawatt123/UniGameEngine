@@ -13,7 +13,7 @@
 
 // REALLY USEFUL MACROS
 #define Log(string, verbosity) Logger::Instance()->LogString(string, verbosity)
-#define TILE_WIDTH 32
+const int TILE_WIDTH = 32;
 
 // FILE PATH MACROS
 const std::string DEFAULT_TILE_PATH = "..Assets/Sprites/Floor_Placeholder.bmp";

@@ -6,6 +6,7 @@
 #include <algorithm>
 #include <bitset>
 #include <array>
+#include <string>
 
 class Entity;
 class Component;
@@ -44,6 +45,9 @@ public:
 class Entity
 {
 public:
+
+	std::string tag = "";
+
 	void Tick()
 	{
 		for (auto& c : components)
