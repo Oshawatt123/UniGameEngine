@@ -20,6 +20,8 @@ public:
 		m_bitMapPack = ResourceManager::Instance()->LoadBitMap(path, true);
 	}
 
+	// Init is not called in the constructor because if we add components, they are created and if we add them in a weird order, it will still work as long as we
+	// have a position component on the object since Init() happens after a full load
 	void Init() override
 	{
 		m_positionComponent = &entity->getComponent<PositionComponent>();

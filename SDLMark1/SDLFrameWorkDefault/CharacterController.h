@@ -37,8 +37,7 @@ public:
 		}
 		if (InputManager::Instance()->KeyDown(SDL_SCANCODE_Q))
 		{
-			translation.x *= 2;
-			translation.y *= 2;
+			translation *= 2;
 			std::cout << "DASSHHHHH" << std::endl;
 			std::cout << "DASSHHHHH" << std::endl;
 			std::cout << "DASSHHHHH" << std::endl;

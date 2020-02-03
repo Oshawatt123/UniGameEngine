@@ -4,11 +4,11 @@ Re-factor code to be cleaner
 	Create more functions
 	Be rid of singletons!!
 Remember to clean up, and add release functions to all your systems (especially resource manager)
+Fix smol leak in input manager
 
 ####### TO DO #######
 Vector2 class & operator overloading
 Collision detection
-Tile Component
 [DONE] Map files possible rework
 [DONE] Scene files & scene loading
 Render layers & grouping
@@ -17,3 +17,4 @@ Scrolling tilemaps
 camera follow
 tilemap collisions
 instantiation
+Tile Component

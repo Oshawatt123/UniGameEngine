@@ -49,7 +49,6 @@ Game::~Game()
 		SDL_DestroyWindow(m_Window);
 	}
 
-	
 }
 
 bool Game::Tick(void)
