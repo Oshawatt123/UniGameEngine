@@ -5,6 +5,7 @@ class PositionComponent : public Component
 
 public:
 	Vector2 Position;
+	Vector2 RenderPosition;
 	Vector2 Rotation;
 	int scale;
 

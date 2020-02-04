@@ -64,7 +64,7 @@ void Scene::Draw()
 	{
 		if (entity->hasComponent<CharacterController>())
 		{
-			//std::cout << entity->getComponent<PositionComponent>().getPos().x << std::endl;
+			// world camera follow player
 			camera->x = entity->getComponent<PositionComponent>().getPos().x;
 			camera->y = entity->getComponent<PositionComponent>().getPos().y;
 		}

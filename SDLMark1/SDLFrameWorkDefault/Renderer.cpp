@@ -22,8 +22,8 @@ void Renderer::Draw(BitMapPack bitMapPack, SDL_Rect* destRect, SDL_Rect* srcRect
 void Renderer::Draw(BitMapPack bitMapPack, int x_in, int y_in, SDL_Rect* srcRect)
 {
 	SDL_Rect* destRect = new SDL_Rect();
-	destRect->x = x_in - camera->x;
-	destRect->y = y_in - camera->y;
+	destRect->x = x_in -camera->x;
+	destRect->y = y_in -camera->y;
 	destRect->w = bitMapPack.width;
 	destRect->h = bitMapPack.height;
 
@@ -105,8 +105,7 @@ void Renderer::UpdateRenderer()
 	}
 
 #endif
-
-	SDL_RenderSetClipRect(m_pRenderer, renderCamera);
+	SDL_RenderSetViewport(m_pRenderer, renderCamera);
 	SDL_RenderPresent(m_pRenderer);
 }
 

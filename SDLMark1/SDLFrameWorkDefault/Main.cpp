@@ -29,7 +29,7 @@ int main()
 		// run game main loop
 		running = game->Tick();
 
-		SDL_Delay(32);
+		//SDL_Delay(32);
 		//myGhettoProfiler.EndProfile();
 	}
 
