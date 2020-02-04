@@ -3,8 +3,8 @@
 	<entities>
 		<entity name = "Player">
 			<component type = "PositionComponent">
-        <xpos>20</xpos>
-        <ypos>100</ypos>
+        <xpos>200</xpos>
+        <ypos>300</ypos>
 			</component>
 			<component type = "SpriteComponent">
         <sprite>../Assets/Sprites/ElvisPretzels.bmp</sprite>
@@ -23,6 +23,7 @@
     </entity>
     <entity name ="Wall">
       <component type ="PositionComponent">
+        <scale>1</scale>
       </component>
       <component type ="SpriteComponent">
         <sprite>../Assets/Sprites/Floor_Placeholder.bmp</sprite>

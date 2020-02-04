@@ -18,6 +18,13 @@ public:
 		Position.x = x;
 		Position.y = y;
 	}
+
+	PositionComponent(int x, int y, int scale)
+	{
+		Position.x = x;
+		Position.y = y;
+		this->scale = scale;
+	}
 	Vector2 getPos() { return Position; }
 
 	void setPosition(int x, int y)

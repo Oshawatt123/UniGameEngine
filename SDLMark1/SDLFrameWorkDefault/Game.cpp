@@ -27,8 +27,14 @@ Game::Game()
 		return;
 	}
 
+	// set up render view
+	renderCamera.x = SCREEN_WIDTH * 0.25;
+	renderCamera.y = SCREEN_HEIGHT * 0.05;
+	renderCamera.w = SCREEN_WIDTH * 0.5;
+	renderCamera.h = SCREEN_HEIGHT * 0.65;
+
 	// create renderer
-	Renderer::Instance(m_Window);
+	Renderer::Instance(m_Window, &camera, &renderCamera);
 
 	// create physics engine
 	physicsEngine = new PhysicsEngine();
@@ -37,7 +43,7 @@ Game::Game()
 	ResourceManager::Instance(Renderer::Instance()->getRenderer());
 
 	// replace this with a build list of scenes and load the first one in
-	Level1 = new Scene("Level1");
+	Level1 = new Scene("Level1", physicsEngine, &camera);
 }
 
 Game::~Game()
@@ -61,7 +67,12 @@ bool Game::Tick(void)
 		return false;
 	}
 
+	// update physics
+	physicsEngine->Tick();
+
 	UpdateRenderer();
+
+	// do the thing with the camera
 
 	return true;
 }

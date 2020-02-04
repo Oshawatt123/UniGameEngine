@@ -22,8 +22,8 @@ void Renderer::Draw(BitMapPack bitMapPack, SDL_Rect* destRect, SDL_Rect* srcRect
 void Renderer::Draw(BitMapPack bitMapPack, int x_in, int y_in, SDL_Rect* srcRect)
 {
 	SDL_Rect* destRect = new SDL_Rect();
-	destRect->x = x_in;
-	destRect->y = y_in;
+	destRect->x = x_in - camera->x;
+	destRect->y = y_in - camera->y;
 	destRect->w = bitMapPack.width;
 	destRect->h = bitMapPack.height;
 
@@ -45,13 +45,15 @@ Renderer* Renderer::Instance()
 	return sInstance;
 }
 
-Renderer* Renderer::Instance(SDL_Window* Window)
+Renderer* Renderer::Instance(SDL_Window* Window, SDL_Rect* camera, SDL_Rect* renderCamera)
 {
 	if (sInstance == NULL)
 	{
 		Log("Initializing renderer with a renderer", DEBUG);
 		sInstance = new Renderer(Window);
 	}
+	sInstance->camera = camera;
+	sInstance->renderCamera = renderCamera;
 	return sInstance;
 }
 
@@ -83,7 +85,7 @@ Renderer::~Renderer()
 	m_pRenderer = NULL;
 }
 
-void Renderer::UpdateRenderer(void)
+void Renderer::UpdateRenderer()
 {
 	// show what we've drawn
 
@@ -104,6 +106,7 @@ void Renderer::UpdateRenderer(void)
 
 #endif
 
+	SDL_RenderSetClipRect(m_pRenderer, renderCamera);
 	SDL_RenderPresent(m_pRenderer);
 }
 

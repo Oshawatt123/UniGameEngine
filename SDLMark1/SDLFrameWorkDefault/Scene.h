@@ -8,6 +8,7 @@
 #include "Renderer.h"
 #include "ResourceManager.h"
 #include "EngineStructs.h"
+#include "PhysicsEngine.h"
 
 #include "rapidxml_utils.hpp"
 
@@ -32,10 +33,12 @@ private:
 	int yIndex;
 	int xIndex;
 
+	SDL_Rect* camera;
+
 public:
 
-	Scene();
-	Scene(std::string name);
+	Scene(PhysicsEngine* PE, SDL_Rect* camera);
+	Scene(std::string name, PhysicsEngine* PE, SDL_Rect* camera);
 
 	void Draw();
 
@@ -44,5 +47,5 @@ public:
 private:
 	~Scene();
 
-	void SceneInit();
+	void SceneInit(PhysicsEngine* PE);
 };

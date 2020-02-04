@@ -21,11 +21,17 @@ private:
 	//SDL Jazz
 	SDL_Window* m_Window;
 
-	const int SCREEN_WIDTH = 640;
-	const int SCREEN_HEIGHT = 480;
+	const int SCREEN_WIDTH = 1024;
+	const int SCREEN_HEIGHT = 768;
+
+	const int LEVEL_WIDTH = 1024;
+	const int LEVEL_HEIGHT = 768;
 
 	//My Own Jazz
 	PhysicsEngine* physicsEngine;
+
+	SDL_Rect camera = { 0,0,SCREEN_WIDTH,SCREEN_HEIGHT };
+	SDL_Rect renderCamera;
 
 	// PLACEHOLDER SCENE
 	Scene* Level1;

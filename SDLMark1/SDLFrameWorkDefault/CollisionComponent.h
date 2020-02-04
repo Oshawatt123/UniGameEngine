@@ -5,6 +5,7 @@
 #include "PositionComponent.h"
 #include "MathHelper.h"
 #include "EngineStructs.h"
+#include "Renderer.h"
 
 class CollisionComponent : public Component
 {
@@ -16,15 +17,23 @@ public:
 
 	PositionComponent* pos;
 
+	bool colliding;
+
 	void Init() override
 	{
 		pos = &entity->getComponent<PositionComponent>();
+		colDimension.x = TILE_WIDTH * pos->scale;
+		colDimension.y = TILE_WIDTH * pos->scale;
 	}
 
 	void Tick() override
 	{
 		colPosition = pos->getPos();
-		colDimension.x = TILE_WIDTH * pos->scale;
-		colDimension.y = TILE_WIDTH * pos->scale;
+		collider.x = colPosition.x;
+		collider.y = colPosition.y;
+		collider.w = colDimension.x;
+		collider.h = colDimension.y;
+
+		SDL_RenderDrawLine(Renderer::Instance()->getRenderer(), collider.x, collider.y, collider.x+collider.w, collider.y+collider.h);
 	}
 };

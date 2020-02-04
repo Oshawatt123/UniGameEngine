@@ -16,6 +16,9 @@ private:
 
 	SDL_Renderer* m_pRenderer;
 
+	SDL_Rect* camera;
+	SDL_Rect* renderCamera;
+
 public:
 	void Draw(BitMapPack bitMapPack, SDL_Rect* destRect, SDL_Rect* srcRect = NULL);
 
@@ -23,7 +26,7 @@ public:
 
 	static Renderer* Instance();
 
-	static Renderer* Instance(SDL_Window* Window);
+	static Renderer* Instance(SDL_Window* Window, SDL_Rect* camera, SDL_Rect* renderCamera);
 
 	SDL_Renderer* getRenderer();
 

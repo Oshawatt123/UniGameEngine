@@ -7,6 +7,21 @@ bool PhysicsEngine::Tick()
 		x->m_position.x += x->m_velocity.x;
 		x->m_position.y += x->m_velocity.y;
 	}*/
+	// make a quad tree
+	for (Entity* objectA : Collidable)
+	{
+		for (Entity* objectB : Collidable)
+		{
+			if (objectA != objectB)
+			{
+				bool collision = AABB(objectA->getComponent<CollisionComponent>().collider, objectB->getComponent<CollisionComponent>().collider);
+				if (collision)
+				{
+					std::cout << "Collision" << std::endl;
+				}
+			}
+		}
+	}
 	return true;
 }
 

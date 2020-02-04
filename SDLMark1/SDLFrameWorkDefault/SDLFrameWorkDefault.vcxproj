@@ -139,6 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="BlackBoard.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="InputManager.cpp" />
     <ClCompile Include="Logger.cpp" />
@@ -153,6 +154,7 @@
     <ClCompile Include="SceneManager.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BlackBoard.h" />
     <ClInclude Include="CharacterController.h" />
     <ClInclude Include="CollisionComponent.h" />
     <ClInclude Include="Components.h" />

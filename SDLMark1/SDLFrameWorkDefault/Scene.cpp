@@ -1,19 +1,19 @@
 #include "Scene.h"
 
-Scene::Scene()
+Scene::Scene(PhysicsEngine* PE, SDL_Rect* camera)
 {
 	SceneBuildNumber = 0;
 	SceneName = "DefaultSceneName";
-
-	SceneInit();
+	this->camera = camera;
+	SceneInit(PE);
 }
 
-Scene::Scene(std::string name)
+Scene::Scene(std::string name, PhysicsEngine* PE, SDL_Rect* camera)
 {
 	SceneBuildNumber = 0;
 	SceneName = name;
-
-	SceneInit();
+	this->camera = camera;
+	SceneInit(PE);
 }
 
 void Scene::Draw()
@@ -65,6 +65,8 @@ void Scene::Draw()
 		if (entity->hasComponent<CharacterController>())
 		{
 			//std::cout << entity->getComponent<PositionComponent>().getPos().x << std::endl;
+			camera->x = entity->getComponent<PositionComponent>().getPos().x;
+			camera->y = entity->getComponent<PositionComponent>().getPos().y;
 		}
 		entity->Tick();
 	}
@@ -85,7 +87,7 @@ Scene::~Scene()
 	}
 }
 
-void Scene::SceneInit()
+void Scene::SceneInit(PhysicsEngine* PE)
 {
 	// load map
 	// needs to be replaced by an actual load
@@ -124,8 +126,11 @@ void Scene::SceneInit()
 				// check for position component
 				if (std::string(entityData->first_attribute()->value()) == "PositionComponent")
 				{
+					// change this shit to a for loop
+					std::cout << "FOR LOOP ME PLEEAASEEEEEE" << std::endl;
 					int newEntityX = 0;
 					int newEntityY = 0;
+					int newEntityScale = 1;
 					// try for x position and remove the node if it is there
 					if (entityData->first_node("xpos"))
 					{
@@ -146,7 +151,6 @@ void Scene::SceneInit()
 					else
 					{
 						Log("Error parsing x position data form scene data : x position set to default 0", WARNING);
-						newEntityX = 0;
 					}
 					// try for y position and remove the node if it is there
 					if (entityData->first_node("ypos"))
@@ -162,9 +166,23 @@ void Scene::SceneInit()
 					else
 					{
 						Log("Error parsing y position data form scene data : y position set to default 0", WARNING);
-						newEntityY = 0;
 					}
-					newEntity->addComponent<PositionComponent>(newEntityX, newEntityY);
+					if (entityData->first_node("scale"))
+					{
+						std::string yString = entityData->first_node("scale")->value();
+						newEntityScale = std::stoi(yString);
+
+						std::string logstring = "Entity scale set to ";
+						logstring.append(entityData->first_node("scale")->value());
+						Log(logstring, DEBUG);
+						entityData->remove_first_node();
+					}
+					else
+					{
+						Log("Error parsing scale data form scene data : scale set to default 1", WARNING);
+						newEntityScale = 1;
+					}
+					newEntity->addComponent<PositionComponent>(newEntityX, newEntityY, newEntityScale);
 				}
 				// check for sprite component
 				if (std::string(entityData->first_attribute()->value()) == "SpriteComponent")
@@ -176,10 +194,11 @@ void Scene::SceneInit()
 				{
 					newEntity->addComponent<CharacterController>();
 				}
-				// check for collider
+				// check for collider, and add it to the physics engine
 				if (std::string(entityData->first_attribute()->value()) == "CollisionComponent")
 				{
 					newEntity->addComponent<CollisionComponent>();
+					PE->AddCollidableObject(newEntity);
 				}
 			}
 			else
