@@ -1,5 +1,7 @@
 #include "Renderer.h"
 
+#define RENDER_DEBUG
+
 Renderer* Renderer::sInstance = NULL;
 
 /*
@@ -31,6 +33,15 @@ void Renderer::Draw(BitMapPack bitMapPack, int x_in, int y_in, SDL_Rect* srcRect
 
 	delete destRect;
 	destRect = nullptr;
+}
+
+void Renderer::DrawLine(int x1, int y1, int x2, int y2)
+{
+	SDL_RenderDrawLine(m_pRenderer,
+		x1 - camera->x,
+		y1 - camera->y,
+		x2 - camera->x,
+		y2 - camera->y);
 }
 
 Renderer* Renderer::Instance()
@@ -96,11 +107,16 @@ void Renderer::UpdateRenderer()
 	{
 		for (size_t j = 0; j < 10; j++)
 		{
-			SDL_RenderDrawLine(Instance()->getRenderer(),
+			DrawLine(
 				i * TILE_WIDTH,
 				j * TILE_WIDTH,
 				i * TILE_WIDTH,
 				j * TILE_WIDTH + 1000);
+			DrawLine(
+				i * TILE_WIDTH,
+				j * TILE_WIDTH,
+				i * TILE_WIDTH + 1000,
+				j * TILE_WIDTH);
 		}
 	}
 

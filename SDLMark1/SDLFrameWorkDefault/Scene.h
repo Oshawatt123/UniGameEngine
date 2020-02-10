@@ -34,11 +34,12 @@ private:
 	int xIndex;
 
 	SDL_Rect* camera;
+	int SW, SH;
 
 public:
 
-	Scene(PhysicsEngine* PE, SDL_Rect* camera);
-	Scene(std::string name, PhysicsEngine* PE, SDL_Rect* camera);
+	Scene(PhysicsEngine* PE, SDL_Rect* camera, int screen_width, int screen_height);
+	Scene(std::string name, PhysicsEngine* PE, SDL_Rect* camera, int screen_width, int screen_height);
 
 	void Draw();
 

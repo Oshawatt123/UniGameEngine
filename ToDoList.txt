@@ -4,17 +4,18 @@ Re-factor code to be cleaner
 	Create more functions
 	Be rid of singletons!!
 Remember to clean up, and add release functions to all your systems (especially resource manager)
-Fix smol leak in input manager
+Fix smol leak in input manager ( might just be SDL2 allocating enough memory, seems to plateau with time)
 
 ####### TO DO #######
 [DONE] Vector2 class & operator overloading
 [DONE] Collision detection
+[DONE] Move debug draws into the renderer class so that they are relative to the camera
 Component auto-add if required components are not present
 [DONE] Map files possible rework
 [DONE] Scene files & scene loading
 Render layers & grouping
 Scrolling tilemaps
-camera follow
+[---- ] camera follow
 Sprite Animations
 tilemap collisions
 instantiation

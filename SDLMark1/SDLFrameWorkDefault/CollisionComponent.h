@@ -34,6 +34,7 @@ public:
 		collider.w = colDimension.x;
 		collider.h = colDimension.y;
 
-		SDL_RenderDrawLine(Renderer::Instance()->getRenderer(), collider.x, collider.y, collider.x+collider.w, collider.y+collider.h);
+		// doesnt draw relative to the camera
+		Renderer::Instance()->DrawLine(collider.x, collider.y, collider.x+collider.w, collider.y+collider.h);
 	}
 };

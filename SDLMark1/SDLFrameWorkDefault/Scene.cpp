@@ -1,18 +1,22 @@
 #include "Scene.h"
 
-Scene::Scene(PhysicsEngine* PE, SDL_Rect* camera)
+Scene::Scene(PhysicsEngine* PE, SDL_Rect* camera, int screen_width, int screen_height)
 {
 	SceneBuildNumber = 0;
 	SceneName = "DefaultSceneName";
 	this->camera = camera;
+	SW = screen_width;
+	SH = screen_height;
 	SceneInit(PE);
 }
 
-Scene::Scene(std::string name, PhysicsEngine* PE, SDL_Rect* camera)
+Scene::Scene(std::string name, PhysicsEngine* PE, SDL_Rect* camera, int screen_width, int screen_height)
 {
 	SceneBuildNumber = 0;
 	SceneName = name;
 	this->camera = camera;
+	SW = screen_width;
+	SH = screen_height;
 	SceneInit(PE);
 }
 
@@ -21,7 +25,11 @@ void Scene::Draw()
 
 	// draw the map
 	// move the index-finding code into the renderer / resourceManager
-
+	if (InputManager::Instance()->KeyDown(SDL_SCANCODE_U))
+	{
+		SH++;
+		std::cout << SH << std::endl;
+	}
 	Xcounter = 0;
 	tileBitMap = ResourceManager::Instance()->LoadBitMap(sceneMap->tileSet, true);
 
@@ -64,9 +72,9 @@ void Scene::Draw()
 	{
 		if (entity->hasComponent<CharacterController>())
 		{
-			// world camera follow player
-			camera->x = entity->getComponent<PositionComponent>().getPos().x;
-			camera->y = entity->getComponent<PositionComponent>().getPos().y;
+			// world camera follow player & center over player
+			camera->x = entity->getComponent<PositionComponent>().getPos().x - SW/2;
+			camera->y = entity->getComponent<PositionComponent>().getPos().y - SH/2;
 		}
 		entity->Tick();
 	}

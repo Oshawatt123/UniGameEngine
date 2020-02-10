@@ -24,6 +24,8 @@ public:
 
 	void Draw(BitMapPack bitMapPack, int x, int y, SDL_Rect* srcRect = NULL);
 
+	void DrawLine(int x1, int y1, int x2, int y2);
+
 	static Renderer* Instance();
 
 	static Renderer* Instance(SDL_Window* Window, SDL_Rect* camera, SDL_Rect* renderCamera);

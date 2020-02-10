@@ -31,6 +31,18 @@
       <component type ="CollisionComponent">
       </component>
     </entity>
+  <entity name ="Wall">
+      <component type ="PositionComponent">
+        <xpos>200</xpos>
+        <ypos>200</ypos>
+        <scale>1</scale>
+      </component>
+      <component type ="SpriteComponent">
+        <sprite>../Assets/Sprites/Floor_Placeholder.bmp</sprite>
+      </component>
+      <component type ="CollisionComponent">
+      </component>
+    </entity>
 	</entities>
   
 	<map path = "../Assets/Maps/map1.filthymap">
