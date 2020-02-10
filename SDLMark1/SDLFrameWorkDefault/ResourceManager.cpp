@@ -103,7 +103,7 @@ std::vector<std::string> ResourceManager::LoadMap(std::string filePath)
 
 	while (std::getline(inFile, line))
 	{
-		Log("Map Line" + line, DEBUG);
+		Log("Map Line " + line, DEBUG);
 		mapReturnVector.push_back(line);
 	}
 

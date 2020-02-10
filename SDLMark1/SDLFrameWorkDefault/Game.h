@@ -7,6 +7,8 @@
 #include <iostream>
 #include <thread>
 
+#define RENDER_DEBUG
+
 #include "Renderer.h"
 #include "ResourceManager.h"
 #include "PhysicsEngine.h"

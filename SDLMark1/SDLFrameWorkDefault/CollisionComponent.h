@@ -34,7 +34,8 @@ public:
 		collider.w = colDimension.x;
 		collider.h = colDimension.y;
 
-		// doesnt draw relative to the camera
+#ifdef RENDER_DEBUG
 		Renderer::Instance()->DrawLine(collider.x, collider.y, collider.x+collider.w, collider.y+collider.h);
+#endif
 	}
 };

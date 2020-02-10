@@ -1,7 +1,5 @@
 #include "Renderer.h"
 
-#define RENDER_DEBUG
-
 Renderer* Renderer::sInstance = NULL;
 
 /*

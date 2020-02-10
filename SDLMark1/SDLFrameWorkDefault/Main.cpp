@@ -1,6 +1,7 @@
 #include <SDL.h>
 #include <algorithm>
 #undef main
+
 #include "Game.h"
 #include "InputManager.h"
 #include "Profiler.h"
