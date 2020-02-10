@@ -31,6 +31,7 @@ void Renderer::Draw(BitMapPack bitMapPack, int x_in, int y_in, SDL_Rect* srcRect
 
 	delete destRect;
 	destRect = nullptr;
+
 }
 
 void Renderer::DrawLine(int x1, int y1, int x2, int y2)

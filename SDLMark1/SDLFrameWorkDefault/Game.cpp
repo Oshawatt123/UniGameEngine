@@ -2,6 +2,11 @@
 
 #include "Components.h"
 
+#include "imgui.h"
+#include "imgui_impl_sdl.h"
+#include "imgui_impl_opengl3.h"
+#include <gl3w.h>
+
 Game::Game()
 {
 	m_Window = nullptr;
@@ -10,13 +15,14 @@ Game::Game()
 	SDL_Init(SDL_INIT_EVERYTHING);
 
 	//create the window
+	SDL_WindowFlags window_flags = (SDL_WindowFlags)(SDL_WINDOW_OPENGL | SDL_WINDOW_RESIZABLE | SDL_WINDOW_ALLOW_HIGHDPI);
 	m_Window = SDL_CreateWindow(
 		"My First Window",	// Title
 		250,				// initial x position
 		50,					// initial y position
 		SCREEN_WIDTH,		// width, in pixels
 		SCREEN_HEIGHT,		// height, in pixels
-		0					// window behaviour flags
+		window_flags					// window behaviour flags
 	);
 
 	if (!m_Window)
@@ -44,6 +50,22 @@ Game::Game()
 
 	// replace this with a build list of scenes and load the first one in
 	Level1 = new Scene("Level1", physicsEngine, &camera, RENDER_VIEW_WIDTH, RENDER_VIEW_HEIGHT);
+
+	// create openGL context
+	const char* glsl_version = "#version 130";
+	SDL_GL_SetAttribute(SDL_GL_CONTEXT_FLAGS, 0);
+	SDL_GL_SetAttribute(SDL_GL_CONTEXT_PROFILE_MASK, SDL_GL_CONTEXT_PROFILE_CORE);
+	SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, 3);
+	SDL_GL_SetAttribute(SDL_GL_CONTEXT_MINOR_VERSION, 0);
+
+	SDL_GLContext gl_context = SDL_GL_CreateContext(m_Window);
+	SDL_GL_MakeCurrent(m_Window, gl_context);
+
+	gl3wInit();
+
+	IMGUI_CHECKVERSION();
+	ImGui::CreateContext();
+
 }
 
 Game::~Game()

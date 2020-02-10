@@ -63,6 +63,9 @@
     <ClCompile Include="BlackBoard.cpp">
       <Filter>Source Files\Statics</Filter>
     </ClCompile>
+    <ClCompile Include="test.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game.h">
