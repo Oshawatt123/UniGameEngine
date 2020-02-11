@@ -1,6 +1,8 @@
 #pragma once
 #include <SDL.h>
 #include<iostream>
+#include "imgui.h"
+#include "imgui_impl_sdl.h"
 
 #include "EngineStructs.h"
 class InputManager
@@ -11,7 +13,14 @@ private:
 	const Uint8* mKeyBoardStates;
 	bool WindowIsQuit;
 
+	
+	
+
 public:
+	int mouseButtons;
+	int mouseX, mouseY;
+	int mouseWheel;
+
 	static InputManager* Instance();
 	static void Release();
 

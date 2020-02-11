@@ -96,7 +96,7 @@ std::vector<std::string> ResourceManager::LoadMap(std::string filePath)
 	inFile.open(filePath);
 	if (!inFile)
 	{
-		Logger::Instance()->LogString("Failed to load map from filepath " + filePath, ERROR);
+		Logger::Instance()->LogString("Failed to load map from filepath " + filePath, DBERROR);
 	}
 	std::string line;
 	std::vector<std::string> mapReturnVector;

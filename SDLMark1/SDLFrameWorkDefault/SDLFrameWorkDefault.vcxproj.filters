@@ -22,6 +22,12 @@
     <Filter Include="Header Files\ECS">
       <UniqueIdentifier>{89aaf0ac-7764-4302-9ced-a6ce305ba378}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\thirdparty">
+      <UniqueIdentifier>{90d46970-0630-4760-94cf-96ac2a7ec7dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\thirdparty">
+      <UniqueIdentifier>{91eac6e9-4304-40c9-8daf-9c562616467a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -63,8 +69,29 @@
     <ClCompile Include="BlackBoard.cpp">
       <Filter>Source Files\Statics</Filter>
     </ClCompile>
-    <ClCompile Include="test.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="gl3w.c">
+      <Filter>Source Files\thirdparty</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui.cpp">
+      <Filter>Source Files\thirdparty</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui_demo.cpp">
+      <Filter>Source Files\thirdparty</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui_draw.cpp">
+      <Filter>Source Files\thirdparty</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui_impl_opengl3.cpp">
+      <Filter>Source Files\thirdparty</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui_impl_sdl.cpp">
+      <Filter>Source Files\thirdparty</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui_widgets.cpp">
+      <Filter>Source Files\thirdparty</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui_sdl.cpp">
+      <Filter>Source Files\thirdparty</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -124,6 +151,36 @@
     </ClInclude>
     <ClInclude Include="BlackBoard.h">
       <Filter>Header Files\Statics</Filter>
+    </ClInclude>
+    <ClInclude Include="test.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="imconfig.h">
+      <Filter>Header Files\thirdparty</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui.h">
+      <Filter>Header Files\thirdparty</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui_impl_opengl3.h">
+      <Filter>Header Files\thirdparty</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui_impl_sdl.h">
+      <Filter>Header Files\thirdparty</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui_internal.h">
+      <Filter>Header Files\thirdparty</Filter>
+    </ClInclude>
+    <ClInclude Include="imstb_rectpack.h">
+      <Filter>Header Files\thirdparty</Filter>
+    </ClInclude>
+    <ClInclude Include="imstb_textedit.h">
+      <Filter>Header Files\thirdparty</Filter>
+    </ClInclude>
+    <ClInclude Include="imstb_truetype.h">
+      <Filter>Header Files\thirdparty</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui_sdl.h">
+      <Filter>Header Files\thirdparty</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

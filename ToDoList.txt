@@ -10,12 +10,13 @@ Fix smol leak in input manager ( might just be SDL2 allocating enough memory, se
 [DONE] Vector2 class & operator overloading
 [DONE] Collision detection
 [DONE] Move debug draws into the renderer class so that they are relative to the camera
+[DONE] GUI OMFG ITSSOTSUTPIDHDSDFNEOFO
 Component auto-add if required components are not present
 [DONE] Map files possible rework
 [DONE] Scene files & scene loading
 Render layers & grouping
 Scrolling tilemaps
-[---- ] camera follow
+[DONE] camera follow
 Sprite Animations
 tilemap collisions
 instantiation

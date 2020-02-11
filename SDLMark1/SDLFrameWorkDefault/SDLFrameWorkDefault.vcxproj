@@ -87,7 +87,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>..\SDL2\include;$(IncludePath);C:\Users\Games\Documents\GitHub\UniGameEngine\SDLMark1\libs\gl3w\GL</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\SDL2\include;$(IncludePath);C:\Users\Games\Documents\GitHub\UniGameEngine\SDLMark1\libs\gl3w\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -115,7 +115,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>..\SDL2\include;$(IncludePath);C:\Users\Games\Documents\GitHub\UniGameEngine\SDLMark1\libs\gl3w\GL</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\SDL2\include;$(IncludePath);C:\Users\Games\Documents\GitHub\UniGameEngine\SDLMark1\libs\gl3w\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -142,6 +142,14 @@
   <ItemGroup>
     <ClCompile Include="BlackBoard.cpp" />
     <ClCompile Include="Game.cpp" />
+    <ClCompile Include="gl3w.c" />
+    <ClCompile Include="imgui.cpp" />
+    <ClCompile Include="imgui_demo.cpp" />
+    <ClCompile Include="imgui_draw.cpp" />
+    <ClCompile Include="imgui_impl_opengl3.cpp" />
+    <ClCompile Include="imgui_impl_sdl.cpp" />
+    <ClCompile Include="imgui_sdl.cpp" />
+    <ClCompile Include="imgui_widgets.cpp" />
     <ClCompile Include="InputManager.cpp" />
     <ClCompile Include="Logger.cpp" />
     <ClCompile Include="Main.cpp" />
@@ -153,7 +161,6 @@
     <ClCompile Include="ResourceManager.cpp" />
     <ClCompile Include="Scene.cpp" />
     <ClCompile Include="SceneManager.cpp" />
-    <ClCompile Include="test.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BlackBoard.h" />
@@ -163,6 +170,15 @@
     <ClInclude Include="ECS.h" />
     <ClInclude Include="EngineStructs.h" />
     <ClInclude Include="Game.h" />
+    <ClInclude Include="imconfig.h" />
+    <ClInclude Include="imgui.h" />
+    <ClInclude Include="imgui_impl_opengl3.h" />
+    <ClInclude Include="imgui_impl_sdl.h" />
+    <ClInclude Include="imgui_internal.h" />
+    <ClInclude Include="imgui_sdl.h" />
+    <ClInclude Include="imstb_rectpack.h" />
+    <ClInclude Include="imstb_textedit.h" />
+    <ClInclude Include="imstb_truetype.h" />
     <ClInclude Include="InputManager.h" />
     <ClInclude Include="Logger.h" />
     <ClInclude Include="Map.h" />
@@ -175,6 +191,7 @@
     <ClInclude Include="Scene.h" />
     <ClInclude Include="SceneManager.h" />
     <ClInclude Include="SpriteComponent.h" />
+    <ClInclude Include="test.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -21,6 +21,7 @@ private:
 	Map* sceneMap;
 
 	std::vector<Entity*> EntityList;
+	std::vector<Entity*> renderables;
 
 	BitMapPack tileBitMap;
 	BitMapPack indexBitMap;
@@ -41,9 +42,12 @@ public:
 	Scene(PhysicsEngine* PE, SDL_Rect* camera, int screen_width, int screen_height);
 	Scene(std::string name, PhysicsEngine* PE, SDL_Rect* camera, int screen_width, int screen_height);
 
+	// updates every component except for rendering
+	void Tick();
+	// updates all the sprite components and renders the tilemap
 	void Draw();
 
-	void AddEntity( Entity* const EntityToAdd);
+	void AddEntity(Entity* const EntityToAdd);
 
 private:
 	~Scene();

@@ -15,7 +15,7 @@ void Logger::LogString(std::string message, Verbosity verbosity)
 {
 	if (verbosity >= mVerbosity)
 	{
-		if (verbosity == ERROR)
+		if (verbosity == DBERROR)
 		{
 			std::cout << "[ERROR]" << message << std::endl;
 		}

@@ -34,6 +34,8 @@ using ComponentArray = std::array<Component*, maxComponents>;
 class Component
 {
 public:
+	std::string name;
+
 	Entity* entity;
 
 	virtual void Init() = 0;
@@ -48,11 +50,15 @@ public:
 
 	std::string tag = "";
 
+	// tick DOES NOT render
 	void Tick()
 	{
 		for (auto& c : components)
 		{
-			c->Tick();
+			if (c->name != "SpriteComponent")
+			{
+				c->Tick();
+			}
 		}
 	}
 

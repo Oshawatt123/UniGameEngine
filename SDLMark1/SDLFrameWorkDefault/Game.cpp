@@ -1,11 +1,7 @@
 #include "Game.h"
 
 #include "Components.h"
-
-#include "imgui.h"
-#include "imgui_impl_sdl.h"
-#include "imgui_impl_opengl3.h"
-#include <gl3w.h>
+SDL_GLContext gl_context;
 
 Game::Game()
 {
@@ -15,7 +11,7 @@ Game::Game()
 	SDL_Init(SDL_INIT_EVERYTHING);
 
 	//create the window
-	SDL_WindowFlags window_flags = (SDL_WindowFlags)(SDL_WINDOW_OPENGL | SDL_WINDOW_RESIZABLE | SDL_WINDOW_ALLOW_HIGHDPI);
+	SDL_WindowFlags window_flags = (SDL_WindowFlags)(SDL_WINDOW_RESIZABLE);
 	m_Window = SDL_CreateWindow(
 		"My First Window",	// Title
 		250,				// initial x position
@@ -51,21 +47,8 @@ Game::Game()
 	// replace this with a build list of scenes and load the first one in
 	Level1 = new Scene("Level1", physicsEngine, &camera, RENDER_VIEW_WIDTH, RENDER_VIEW_HEIGHT);
 
-	// create openGL context
-	const char* glsl_version = "#version 130";
-	SDL_GL_SetAttribute(SDL_GL_CONTEXT_FLAGS, 0);
-	SDL_GL_SetAttribute(SDL_GL_CONTEXT_PROFILE_MASK, SDL_GL_CONTEXT_PROFILE_CORE);
-	SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, 3);
-	SDL_GL_SetAttribute(SDL_GL_CONTEXT_MINOR_VERSION, 0);
-
-	SDL_GLContext gl_context = SDL_GL_CreateContext(m_Window);
-	SDL_GL_MakeCurrent(m_Window, gl_context);
-
-	gl3wInit();
-
-	IMGUI_CHECKVERSION();
 	ImGui::CreateContext();
-
+	ImGuiSDL::Initialize(Renderer::Instance()->getRenderer(), 800, 600);
 }
 
 Game::~Game()
@@ -74,20 +57,42 @@ Game::~Game()
 
 	if (m_Window)
 	{
+		ImGuiSDL::Deinitialize();
+		ImGui::DestroyContext();
+
+		SDL_GL_DeleteContext(gl_context);
+
 		SDL_DestroyWindow(m_Window);
 	}
 
-}
+	SDL_Quit();
 
+}
+bool checkmate;
 bool Game::Tick(void)
 {
+
 	UpdateInputManager();
+	// set up ImGui input
+	ImGuiIO& io = ImGui::GetIO();
+	io.DeltaTime = 1.0f / 60.0f;
+	float mousex, mousey;
+	mousex = static_cast<float>(InputManager::Instance()->mouseX);
+	mousey = static_cast<float>(InputManager::Instance()->mouseY);
+	io.MousePos = ImVec2(mousex, mousey);
+	io.MouseDown[0] = InputManager::Instance()->mouseButtons & SDL_BUTTON(SDL_BUTTON_LEFT);
+	io.MouseDown[1] = InputManager::Instance()->mouseButtons & SDL_BUTTON(SDL_BUTTON_RIGHT);
+	//io.MouseWheel = static_cast<float>(InputManager::Instance()->mouseWheel);
+
 
 	// check for application quit
 	if (InputManager::Instance()->WindowQuit())
 	{
 		return false;
 	}
+
+	// scene tick
+	Level1->Tick();
 
 	// update physics
 	physicsEngine->Tick();
@@ -99,17 +104,27 @@ bool Game::Tick(void)
 	return true;
 }
 
+bool show_demo_window = true;
 void Game::UpdateRenderer(void)
 {
+	// add to the GUI render buffer
+	ImGui::NewFrame();
+	ImGui::ShowDemoWindow();
+
 	// Clear Renderer buffer from last frame
 	Renderer::Instance()->ClearRenderer();
 
-	// THIS DOES MORE THAN DRAW AT THE MOMENT
-	// SPLIT THIS INTO TICK AND DRAW
+	// draw the level, and all entities inside it
 	Level1->Draw();
 
+	// render GUI
+	ImGui::Render();
+	ImGuiSDL::Render(ImGui::GetDrawData());
+
 	// Update the renderer with the newly drawn Sprites
-	Renderer::Instance()->UpdateRenderer();
+	Renderer::Instance()->UpdateRenderer();	
+
+	
 }
 
 void Game::UpdateInputManager(void)

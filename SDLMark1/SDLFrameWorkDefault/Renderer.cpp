@@ -47,20 +47,21 @@ Renderer* Renderer::Instance()
 {
 	if (sInstance == NULL)
 	{
-		Log("Renderer Singleton not initialized with renderer!\n", ERROR);
-		Log("Please initialize with renderer before attempting to access.\n", ERROR);
+		Log("Renderer Singleton not initialized with renderer!\n", DBERROR);
+		Log("Please initialize with renderer before attempting to access.\n", DBERROR);
 		return NULL;
 	}
 
 	return sInstance;
 }
-
+SDL_Window* renderWindow;
 Renderer* Renderer::Instance(SDL_Window* Window, SDL_Rect* camera, SDL_Rect* renderCamera)
 {
+	renderWindow = Window;
 	if (sInstance == NULL)
 	{
 		Log("Initializing renderer with a renderer", DEBUG);
-		sInstance = new Renderer(Window);
+		sInstance = new Renderer(renderWindow);
 	}
 	sInstance->camera = camera;
 	sInstance->renderCamera = renderCamera;
@@ -120,11 +121,13 @@ void Renderer::UpdateRenderer()
 	}
 
 #endif
-	SDL_RenderSetViewport(m_pRenderer, renderCamera);
+	//SDL_RenderSetViewport(m_pRenderer, renderCamera);
+
 	SDL_RenderPresent(m_pRenderer);
 }
 
 void Renderer::ClearRenderer()
 {
+	SDL_SetRenderDrawColor(m_pRenderer, 114, 144, 154, 255);
 	SDL_RenderClear(m_pRenderer);
 }

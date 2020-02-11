@@ -2,7 +2,13 @@
 
 #ifndef GAME_H
  #define GAME_H
+
+
+#include "imgui.h"
+#include "imgui_sdl.h"
+
 #include <SDL.h>
+#include <GL/gl3w.h>
 #include <stdio.h>
 #include <iostream>
 #include <thread>
@@ -40,6 +46,11 @@ private:
 
 	// PLACEHOLDER SCENE
 	Scene* Level1;
+
+
+
+
+	ImGuiIO io;
 
 public:
 	Game();

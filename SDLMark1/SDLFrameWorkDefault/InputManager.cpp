@@ -31,12 +31,18 @@ void InputManager::Update()
 {
 	WindowIsQuit = false;
 	mKeyBoardStates = SDL_GetKeyboardState(NULL);
+	mouseButtons = SDL_GetMouseState(&mouseX, &mouseY);
 	SDL_Event e;
 	while (SDL_PollEvent(&e))
 	{
+		ImGui_ImplSDL2_ProcessEvent(&e);
 		if (e.type == SDL_QUIT)
 		{
 			WindowIsQuit = true;
+		}
+		else if (e.type == SDL_MOUSEWHEEL)
+		{
+			mouseWheel = e.wheel.y;
 		}
 	}
 }

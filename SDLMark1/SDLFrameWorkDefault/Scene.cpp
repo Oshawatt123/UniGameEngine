@@ -20,6 +20,20 @@ Scene::Scene(std::string name, PhysicsEngine* PE, SDL_Rect* camera, int screen_w
 	SceneInit(PE);
 }
 
+void Scene::Tick()
+{
+	for (auto entity : EntityList)
+	{
+		entity->Tick();
+		if (entity->hasComponent<CharacterController>())
+		{
+			// world camera follow player & center over player
+			camera->x = entity->getComponent<PositionComponent>().getPos().x - SW / 2;
+			camera->y = entity->getComponent<PositionComponent>().getPos().y - SH / 2;
+		}
+	}
+}
+
 void Scene::Draw()
 {
 
@@ -61,28 +75,26 @@ void Scene::Draw()
 			}
 			catch (int e)
 			{
-				Log("Error loading map. Tile not an integer. X: " + std::to_string(Xcounter) + " Y: " + std::to_string(Ycounter) + " \n" + std::to_string(e), ERROR);
+				Log("Error loading map. Tile not an integer. X: " + std::to_string(Xcounter) + " Y: " + std::to_string(Ycounter) + " \n" + std::to_string(e), DBERROR);
 			}
 		}
 		Xcounter++;
 	}
 
 	// Update Every GameObject
-   	for (auto entity : EntityList)
+   	for (auto entity : renderables)
 	{
-		if (entity->hasComponent<CharacterController>())
-		{
-			// world camera follow player & center over player
-			camera->x = entity->getComponent<PositionComponent>().getPos().x - SW/2;
-			camera->y = entity->getComponent<PositionComponent>().getPos().y - SH/2;
-		}
-		entity->Tick();
+		entity->getComponent<SpriteComponent>().Tick();
 	}
 }
 
 void Scene::AddEntity(Entity* const EntityToAdd)
 {
 	EntityList.push_back(EntityToAdd);
+	if (EntityToAdd->hasComponent<SpriteComponent>())
+	{
+		renderables.push_back(EntityToAdd);
+	}
 }
 
 Scene::~Scene()
@@ -240,6 +252,6 @@ void Scene::SceneInit(PhysicsEngine* PE)
 	}
 	else
 	{
-		Log("Map Tile Data not loaded", ERROR);
+		Log("Map Tile Data not loaded", DBERROR);
 	}
 }

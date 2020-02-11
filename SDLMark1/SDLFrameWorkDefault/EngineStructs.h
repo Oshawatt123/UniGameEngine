@@ -34,19 +34,19 @@ enum MyEventTypes
 	MiddleMouse,
 	MouseWheel,
 	MouseGesture,
-	Window,
+	Window
 };
 
 enum WindowEvents
 {
-	WinEvent_QUIT=1,
+	WinEvent_QUIT=1
 };
 
 enum ComponentType
 {
 	COMPONENT_BASE,
 	COMPONENT_TRANSFORM,
-	COMPONENT_SPRITE,
+	COMPONENT_SPRITE
 };
 
 enum Verbosity
@@ -55,6 +55,6 @@ enum Verbosity
 	FILTHY_DEBUG,
 	DEBUG,
 	WARNING,
-	ERROR,
-	NOTHING,
+	DBERROR,
+	NOTHING
 };

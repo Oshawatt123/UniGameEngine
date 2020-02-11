@@ -6,6 +6,12 @@
 #include "EngineStructs.h"
 #include "Logger.h"
 
+
+#include "imgui.h"
+#include "imgui_impl_sdl.h"
+#include "imgui_impl_opengl3.h"
+#include <Gl\gl3w.h>
+
 class Renderer
 {
 
