@@ -143,6 +143,7 @@ void Game::UpdateRenderer(void)
 	ImGui::EndChild();
 	ImGui::End();
 
+
 	// Heirarchy Window
 	ImGui::Begin("Heirarchy", &heirarchy);
 	ImGui::TextColored(ImVec4(1, 0, 1, 1), Level1->GetName().c_str());

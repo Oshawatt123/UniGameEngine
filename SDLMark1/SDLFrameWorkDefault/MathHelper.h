@@ -1,4 +1,5 @@
 #pragma once
+#include <math.h>
 
 class Vector2
 {
@@ -6,6 +7,7 @@ public:
 
 	float x;
 	float y;
+	float magnitude = 0;
 
 	Vector2();
 	Vector2(float x, float y);
@@ -33,9 +35,6 @@ public:
 	Vector2& operator*=(const float& value);
 	Vector2& operator/=(const float& value);
 
-	void Normalize()
-	{
-
-	}
+	void Normalize();
 
 };
