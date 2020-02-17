@@ -34,7 +34,7 @@ using ComponentArray = std::array<Component*, maxComponents>;
 class Component
 {
 public:
-	std::string name;
+	std::string name = "Look at this descriptive name!";
 
 	Entity* entity;
 
@@ -52,6 +52,9 @@ public:
 
 	std::string tag = "";
 
+	// intended for end-user to be able to enable/disable objects
+	bool enabled = true;
+
 	// tick DOES NOT render
 	void Tick()
 	{
@@ -66,6 +69,7 @@ public:
 
 	bool isActive() const { return active; }
 	bool isEnabled() const { return enabled; }
+	const std::vector<std::shared_ptr<Component>> getComponents() { return components; }
 
 	void destroy() { active = false; }
 
@@ -113,29 +117,14 @@ public:
 		return *static_cast<T*>(ptr);
 	}
 
-
-
 private:
-	// intended for end-user to be able to enable/disable objects
-	bool enabled = true;
+	
 
 	// intended for the engine to be able to track which objects to delete from memory
 	bool active = true;
 
-	std::vector<std::unique_ptr<Component>> components;
+	std::vector<std::shared_ptr<Component>> components;
 
 	ComponentArray componentArray;
 	ComponentBitSet componentBitSet;
-};
-
-class Manager
-{
-private:
-	std::vector<std::unique_ptr<Entity>> entities;
-
-public:
-	void Tick()
-	{
-
-	}
 };

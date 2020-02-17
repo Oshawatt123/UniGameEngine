@@ -47,6 +47,7 @@ public:
 
 	void Init() override
 	{
+		name = "Position Component";
 	}
 
 	void Tick() override

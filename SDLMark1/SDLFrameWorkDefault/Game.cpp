@@ -14,8 +14,8 @@ Game::Game()
 	SDL_WindowFlags window_flags = (SDL_WindowFlags)(SDL_WINDOW_RESIZABLE);
 	m_Window = SDL_CreateWindow(
 		"My First Window",	// Title
-		250,				// initial x position
-		50,					// initial y position
+		0,					// initial x position
+		10,					// initial y position
 		SCREEN_WIDTH,		// width, in pixels
 		SCREEN_HEIGHT,		// height, in pixels
 		window_flags					// window behaviour flags
@@ -44,16 +44,19 @@ Game::Game()
 	// create resource manager
 	ResourceManager::Instance(Renderer::Instance()->getRenderer());
 
-	// replace this with a build list of scenes and load the first one in
-	Level1 = new Scene("Level1", physicsEngine, &camera, RENDER_VIEW_WIDTH, RENDER_VIEW_HEIGHT);
-
 	ImGui::CreateContext();
 	ImGuiSDL::Initialize(Renderer::Instance()->getRenderer(), SCREEN_WIDTH, SCREEN_HEIGHT);
 
-	Entity* ghost = Level1->getEntityByName("Ghost1");
-	ghost->getComponent<GhostControl>().player = Level1->getEntityByName("Player");
 
-	//Level1->getEntityByName("Ghost1")->getComponent<GhostControl>().player = Level1->getEntityByName("Player");
+
+	// hard-coding
+
+
+	// replace this with a build list of scenes and load the first one in
+	Level1 = new Scene("Level1", physicsEngine, &camera, RENDER_VIEW_WIDTH, RENDER_VIEW_HEIGHT);
+
+	currentSelectedEntity = Level1->getEntityByName("Player");
+
 }
 
 Game::~Game()
@@ -110,11 +113,12 @@ bool Game::Tick(void)
 }
 
 bool firstToolOpen = true;
-bool heirarchy = true;
+bool heirarchyOpen = true;
+bool inspectorOpen = true;
 
 void Game::UpdateRenderer(void)
 {
-	// add to the GUI render buffer
+	// Add to the ImGui frame buffer
 	ImGui::NewFrame();
 	ImGui::ShowDemoWindow();
 
@@ -143,19 +147,18 @@ void Game::UpdateRenderer(void)
 	ImGui::EndChild();
 	ImGui::End();
 
+	DrawHeirarchy();
 
-	// Heirarchy Window
-	ImGui::Begin("Heirarchy", &heirarchy);
-	ImGui::TextColored(ImVec4(1, 0, 1, 1), Level1->GetName().c_str());
+	// Draw the inspector
+	ImGui::Begin("Entity Inspector", &inspectorOpen);
+	ImGui::Checkbox("EntityEnabledCheck", &currentSelectedEntity->enabled);
+	ImGui::TextColored(ImVec4(1, 1, 0, 1), currentSelectedEntity->name.c_str());
 
-	// populate heirarchy
-	if (ImGui::BeginChild("EntityList"))
+	for (auto component : currentSelectedEntity->getComponents())
 	{
-		ImGui::Text("");
-		Level1->PopulateHeirarchy();
+		ImGui::Text(component->name.c_str());
 	}
 
-	ImGui::EndChild();
 	ImGui::End();
 
 	// Clear Renderer buffer from last frame
@@ -177,4 +180,21 @@ void Game::UpdateRenderer(void)
 void Game::UpdateInputManager(void)
 {
 	InputManager::Instance()->Update();
+}
+
+void Game::DrawHeirarchy()
+{
+	// Heirarchy Window
+	ImGui::Begin("Heirarchy", &heirarchyOpen);
+	ImGui::TextColored(ImVec4(1, 0, 1, 1), Level1->GetName().c_str());
+
+	// populate heirarchy
+	if (ImGui::BeginChild("EntityList"))
+	{
+		ImGui::Text("");
+		Level1->PopulateHeirarchy();
+	}
+
+	ImGui::EndChild();
+	ImGui::End();
 }

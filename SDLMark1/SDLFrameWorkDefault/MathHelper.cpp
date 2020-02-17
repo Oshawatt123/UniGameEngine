@@ -125,8 +125,9 @@ Vector2& Vector2::operator/=(const float& value)
 	return this->Multiply(value);
 }
 
+// does nothing, needs fixing
 void Vector2::Normalize()
 {
 	magnitude = sqrt((x * x) + (y * y));
-	*this /= magnitude;
+	//*this /= magnitude;
 }

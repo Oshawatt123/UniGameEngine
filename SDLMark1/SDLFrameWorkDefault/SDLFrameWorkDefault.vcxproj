@@ -170,7 +170,6 @@
     <ClInclude Include="ECS.h" />
     <ClInclude Include="EngineStructs.h" />
     <ClInclude Include="Game.h" />
-    <ClInclude Include="GhostControl.h" />
     <ClInclude Include="imconfig.h" />
     <ClInclude Include="imgui.h" />
     <ClInclude Include="imgui_impl_opengl3.h" />

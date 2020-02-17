@@ -24,12 +24,15 @@ void Scene::Tick()
 {
 	for (auto entity : EntityList)
 	{
-		entity->Tick();
-		if (entity->hasComponent<CharacterController>())
+		if (entity->isEnabled())
 		{
-			// world camera follow player & center over player
-			camera->x = entity->getComponent<PositionComponent>().getPos().x - SW / 2;
-			camera->y = entity->getComponent<PositionComponent>().getPos().y - SH / 2;
+			entity->Tick();
+			if (entity->hasComponent<CharacterController>())
+			{
+				// world camera follow player & center over player
+				camera->x = entity->getComponent<PositionComponent>().getPos().x - SW / 2;
+				camera->y = entity->getComponent<PositionComponent>().getPos().y - SH / 2;
+			}
 		}
 	}
 }
@@ -84,7 +87,10 @@ void Scene::Draw()
 	// Update Every GameObject
    	for (auto entity : renderables)
 	{
-		entity->getComponent<SpriteComponent>().Tick();
+		if (entity->isEnabled())
+		{
+			entity->getComponent<SpriteComponent>().Tick();
+		}
 	}
 }
 
@@ -247,11 +253,6 @@ void Scene::SceneInit(PhysicsEngine* PE)
 				{
 					newEntity->addComponent<CollisionComponent>();
 					PE->AddCollidableObject(newEntity);
-				}
-				// add ghost component
-				if (std::string(entityData->first_attribute()->value()) == "GhostControl")
-				{
-					newEntity->addComponent<GhostControl>();
 				}
 			}
 			else

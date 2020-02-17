@@ -28,6 +28,8 @@ public:
 		m_index = 0;
 		m_bitMapPack.width *= entity->getComponent<PositionComponent>().scale;
 		m_bitMapPack.height *= entity->getComponent<PositionComponent>().scale;
+
+		name = "Sprite Component";
 	}
 
 	void Tick() override

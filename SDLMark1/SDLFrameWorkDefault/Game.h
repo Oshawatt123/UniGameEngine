@@ -12,6 +12,7 @@
 #include <stdio.h>
 #include <iostream>
 #include <thread>
+#include <memory>
 
 #define RENDER_DEBUG
 
@@ -53,6 +54,7 @@ private:
 
 	// Editor
 	bool EditMode = false;
+	Entity* currentSelectedEntity;
 
 public:
 	Game();
@@ -63,6 +65,8 @@ public:
 private:
 	void UpdateRenderer(void);
 	void UpdateInputManager(void);
+
+	void DrawHeirarchy();
 };
 
 #endif

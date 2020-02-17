@@ -24,6 +24,8 @@ public:
 		pos = &entity->getComponent<PositionComponent>();
 		colDimension.x = TILE_WIDTH * pos->scale;
 		colDimension.y = TILE_WIDTH * pos->scale;
+
+		name = "Box Collider";
 	}
 
 	void Tick() override

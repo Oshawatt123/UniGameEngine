@@ -182,8 +182,5 @@
     <ClInclude Include="imgui_sdl.h">
       <Filter>Header Files\thirdparty</Filter>
     </ClInclude>
-    <ClInclude Include="GhostControl.h">
-      <Filter>Header Files\ECS</Filter>
-    </ClInclude>
   </ItemGroup>
 </Project>

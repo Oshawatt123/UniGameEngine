@@ -14,6 +14,7 @@ public:
 	{
 		pos = & entity->getComponent<PositionComponent>();
 		speed = 2;
+		name = "Character Controller";
 	}
 	void Tick() override
 	{
