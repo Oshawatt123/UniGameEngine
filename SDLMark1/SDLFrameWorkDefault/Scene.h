@@ -49,6 +49,12 @@ public:
 
 	void AddEntity(Entity* const EntityToAdd);
 
+	std::string GetName();
+
+	void PopulateHeirarchy();
+
+	Entity* getEntityByName(std::string name);
+
 private:
 	~Scene();
 

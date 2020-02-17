@@ -32,4 +32,10 @@ public:
 
 	Vector2& operator*=(const float& value);
 	Vector2& operator/=(const float& value);
+
+	void Normalize()
+	{
+
+	}
+
 };

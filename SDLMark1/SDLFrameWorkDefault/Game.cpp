@@ -1,6 +1,6 @@
 #include "Game.h"
 
-#include "Components.h"
+
 SDL_GLContext gl_context;
 
 Game::Game()
@@ -49,6 +49,11 @@ Game::Game()
 
 	ImGui::CreateContext();
 	ImGuiSDL::Initialize(Renderer::Instance()->getRenderer(), SCREEN_WIDTH, SCREEN_HEIGHT);
+
+	Entity* ghost = Level1->getEntityByName("Ghost1");
+	ghost->getComponent<GhostControl>().player = Level1->getEntityByName("Player");
+
+	//Level1->getEntityByName("Ghost1")->getComponent<GhostControl>().player = Level1->getEntityByName("Player");
 }
 
 Game::~Game()
@@ -68,7 +73,7 @@ Game::~Game()
 	SDL_Quit();
 
 }
-bool checkmate;
+
 bool Game::Tick(void)
 {
 	UpdateInputManager();
@@ -105,6 +110,7 @@ bool Game::Tick(void)
 }
 
 bool firstToolOpen = true;
+bool heirarchy = true;
 
 void Game::UpdateRenderer(void)
 {
@@ -134,6 +140,20 @@ void Game::UpdateRenderer(void)
 	{
 		ImGui::Text("%04d: Some text", n);
 	}
+	ImGui::EndChild();
+	ImGui::End();
+
+	// Heirarchy Window
+	ImGui::Begin("Heirarchy", &heirarchy);
+	ImGui::TextColored(ImVec4(1, 0, 1, 1), Level1->GetName().c_str());
+
+	// populate heirarchy
+	if (ImGui::BeginChild("EntityList"))
+	{
+		ImGui::Text("");
+		Level1->PopulateHeirarchy();
+	}
+
 	ImGui::EndChild();
 	ImGui::End();
 

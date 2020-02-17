@@ -97,6 +97,32 @@ void Scene::AddEntity(Entity* const EntityToAdd)
 	}
 }
 
+std::string Scene::GetName()
+{
+	return SceneName;
+}
+
+void Scene::PopulateHeirarchy()
+{
+	for (auto entity : EntityList)
+	{
+		ImGui::Text(entity->name.c_str());
+	}
+	ImGui::Button("TestEntity");
+}
+
+Entity* Scene::getEntityByName(std::string name)
+{
+	for (auto entity : EntityList)
+	{
+		if (entity->name == name)
+		{
+			return entity;
+		}
+	}
+	return nullptr;
+}
+
 Scene::~Scene()
 {
 	// scene clean-up
@@ -110,7 +136,8 @@ Scene::~Scene()
 void Scene::SceneInit(PhysicsEngine* PE)
 {
 	// load map
-	// needs to be replaced by an actual load
+	// needs to be replaced by an actual load function
+
 	Log("#################### [XML DEBUG] #####################", DEBUG);
 	// load the scene file
 	rapidxml::file<> xmlFile("../Assets/Scenes/Level1.xml");
@@ -131,11 +158,12 @@ void Scene::SceneInit(PhysicsEngine* PE)
 		entity = entitiesNode->first_node())
 	{
 		std::string logstring = "ENTITYNODE NAME ";
-		logstring.append(entity->name());
+		logstring.append(entity->first_attribute()->value());
 		Log(logstring, DEBUG);
 
 		// create the entity
 		Entity* newEntity = new Entity();
+		newEntity->name = entity->first_attribute()->value();
 
 		// for every data entry in an entity
 		for (rapidxml::xml_node<>* entityData = entity->first_node(); entityData;
@@ -219,6 +247,11 @@ void Scene::SceneInit(PhysicsEngine* PE)
 				{
 					newEntity->addComponent<CollisionComponent>();
 					PE->AddCollidableObject(newEntity);
+				}
+				// add ghost component
+				if (std::string(entityData->first_attribute()->value()) == "GhostControl")
+				{
+					newEntity->addComponent<GhostControl>();
 				}
 			}
 			else

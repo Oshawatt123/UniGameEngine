@@ -21,6 +21,7 @@
 #include "InputManager.h"
 #include "EngineStructs.h"
 #include "Scene.h"
+#include "Components.h"
 
 class Game
 {
@@ -32,8 +33,8 @@ private:
 	const int SCREEN_WIDTH = 1920;
 	const int SCREEN_HEIGHT = 1080;
 
-	const int RENDER_VIEW_WIDTH = SCREEN_WIDTH;
-	const int RENDER_VIEW_HEIGHT = SCREEN_HEIGHT;
+	const int RENDER_VIEW_WIDTH = SCREEN_WIDTH * 0.5f;
+	const int RENDER_VIEW_HEIGHT = SCREEN_HEIGHT * 0.65f;
 
 	const int LEVEL_WIDTH = 1024;
 	const int LEVEL_HEIGHT = 768;
@@ -51,7 +52,7 @@ private:
 
 
 	// Editor
-	bool EditMode = true;
+	bool EditMode = false;
 
 public:
 	Game();

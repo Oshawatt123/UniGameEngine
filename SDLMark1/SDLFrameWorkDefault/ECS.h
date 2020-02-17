@@ -48,6 +48,8 @@ class Entity
 {
 public:
 
+	std::string name = "What a creative name!";
+
 	std::string tag = "";
 
 	// tick DOES NOT render

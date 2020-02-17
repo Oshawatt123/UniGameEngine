@@ -14,8 +14,30 @@
       <component type ="CollisionComponent">
       </component>
 		</entity>
-    <entity name ="OtherThing">
+    <entity name ="Ghost1">
       <component type ="PositionComponent">
+        <xpos>100</xpos>
+        <ypos>100</ypos>
+      </component>
+      <component type ="SpriteComponent">
+        <sprite>../Assets/Sprites/Mudkip.bmp</sprite>
+      </component>
+      <component type ="GhostControl">
+      </component>
+    </entity>
+    <entity name ="Ghost2">
+      <component type ="PositionComponent">
+        <xpos>100</xpos>
+        <ypos>100</ypos>
+      </component>
+      <component type ="SpriteComponent">
+        <sprite>../Assets/Sprites/Mudkip.bmp</sprite>
+      </component>
+    </entity>
+    <entity name ="Ghost3">
+      <component type ="PositionComponent">
+        <xpos>100</xpos>
+        <ypos>100</ypos>
       </component>
       <component type ="SpriteComponent">
         <sprite>../Assets/Sprites/Mudkip.bmp</sprite>
