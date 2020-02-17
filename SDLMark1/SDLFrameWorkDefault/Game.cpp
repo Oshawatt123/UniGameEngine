@@ -48,7 +48,7 @@ Game::Game()
 	Level1 = new Scene("Level1", physicsEngine, &camera, RENDER_VIEW_WIDTH, RENDER_VIEW_HEIGHT);
 
 	ImGui::CreateContext();
-	ImGuiSDL::Initialize(Renderer::Instance()->getRenderer(), 800, 600);
+	ImGuiSDL::Initialize(Renderer::Instance()->getRenderer(), SCREEN_WIDTH, SCREEN_HEIGHT);
 }
 
 Game::~Game()
@@ -71,8 +71,8 @@ Game::~Game()
 bool checkmate;
 bool Game::Tick(void)
 {
-
 	UpdateInputManager();
+
 	// set up ImGui input
 	ImGuiIO& io = ImGui::GetIO();
 	io.DeltaTime = 1.0f / 60.0f;
@@ -84,6 +84,14 @@ bool Game::Tick(void)
 	io.MouseDown[1] = InputManager::Instance()->mouseButtons & SDL_BUTTON(SDL_BUTTON_RIGHT);
 	//io.MouseWheel = static_cast<float>(InputManager::Instance()->mouseWheel);
 
+	if (!EditMode)
+	{
+		// scene tick
+		Level1->Tick();
+
+		// update physics
+		physicsEngine->Tick();
+	}
 
 	// check for application quit
 	if (InputManager::Instance()->WindowQuit())
@@ -91,25 +99,43 @@ bool Game::Tick(void)
 		return false;
 	}
 
-	// scene tick
-	Level1->Tick();
-
-	// update physics
-	physicsEngine->Tick();
-
 	UpdateRenderer();
-
-	// do the thing with the camera
 
 	return true;
 }
 
-bool show_demo_window = true;
+bool firstToolOpen = true;
+
 void Game::UpdateRenderer(void)
 {
 	// add to the GUI render buffer
 	ImGui::NewFrame();
 	ImGui::ShowDemoWindow();
+
+	ImGui::Begin("My First Tool", &firstToolOpen, ImGuiWindowFlags_MenuBar);
+	if (ImGui::BeginMenuBar())
+	{
+		if (ImGui::BeginMenu("File"))
+		{
+			ImGui::MenuItem("Open");
+			ImGui::MenuItem("Lmao");
+			ImGui::MenuItem("Baited");
+			ImGui::EndMenu();
+		}
+		ImGui::EndMenuBar();
+	}
+
+	const float my_value[] = { 0.2f, 0.1f, 1.0f, 0.5f, 0.9f, 2.2f };
+	ImGui::PlotLines("Frame time", my_value, IM_ARRAYSIZE(my_value));
+
+	ImGui::TextColored(ImVec4(1, 1, 0, 1), "Really important jazz");
+	ImGui::BeginChild("Scrolling child");
+	for (int n = 0; n < 50; n++)
+	{
+		ImGui::Text("%04d: Some text", n);
+	}
+	ImGui::EndChild();
+	ImGui::End();
 
 	// Clear Renderer buffer from last frame
 	Renderer::Instance()->ClearRenderer();

@@ -29,11 +29,11 @@ private:
 	//SDL Jazz
 	SDL_Window* m_Window;
 
-	const int SCREEN_WIDTH = 1024;
-	const int SCREEN_HEIGHT = 768;
+	const int SCREEN_WIDTH = 1920;
+	const int SCREEN_HEIGHT = 1080;
 
-	const int RENDER_VIEW_WIDTH = SCREEN_WIDTH * 0.5f;
-	const int RENDER_VIEW_HEIGHT = SCREEN_HEIGHT * 0.65f;
+	const int RENDER_VIEW_WIDTH = SCREEN_WIDTH;
+	const int RENDER_VIEW_HEIGHT = SCREEN_HEIGHT;
 
 	const int LEVEL_WIDTH = 1024;
 	const int LEVEL_HEIGHT = 768;
@@ -47,10 +47,11 @@ private:
 	// PLACEHOLDER SCENE
 	Scene* Level1;
 
-
-
-
 	ImGuiIO io;
+
+
+	// Editor
+	bool EditMode = true;
 
 public:
 	Game();

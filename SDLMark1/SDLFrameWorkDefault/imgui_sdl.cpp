@@ -176,7 +176,7 @@ namespace
 		{
 			Clip = rect;
 			const SDL_Rect clip = { rect.X, rect.Y, rect.Width, rect.Height };
-			SDL_RenderSetClipRect(Renderer, &clip);
+			//SDL_RenderSetClipRect(Renderer, &clip);
 		}
 
 		void EnableClip() { SetClipRect(Clip); }
@@ -379,7 +379,7 @@ namespace
 		}
 
 		CurrentDevice->UseAsRenderTarget(nullptr);
-		CurrentDevice->EnableClip();
+		//CurrentDevice->EnableClip();
 
 		cacheItem->Texture = cache;
 		cacheItem->Width = width;
@@ -666,7 +666,7 @@ namespace ImGuiSDL
 
 		SDL_SetRenderTarget(CurrentDevice->Renderer, initialRenderTarget);
 
-		SDL_RenderSetClipRect(CurrentDevice->Renderer, initialClipEnabled ? &initialClipRect : nullptr);
+		//SDL_RenderSetClipRect(CurrentDevice->Renderer, initialClipEnabled ? &initialClipRect : nullptr);
 
 		SDL_SetRenderDrawColor(CurrentDevice->Renderer,
 			initialR, initialG, initialB, initialA);

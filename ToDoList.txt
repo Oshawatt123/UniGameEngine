@@ -15,11 +15,12 @@ Component auto-add if required components are not present
 [DONE] Map files possible rework
 [DONE] Scene files & scene loading
 Render layers & grouping
-Scrolling tilemaps
+[DONE] Scrolling tilemaps
 [DONE] camera follow
 Sprite Animations
 tilemap collisions
 instantiation
+Delta-Time
 
 ####### MAYBE #######
 Tile Component
