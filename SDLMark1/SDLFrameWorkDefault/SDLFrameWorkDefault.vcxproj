@@ -42,7 +42,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
@@ -71,11 +71,11 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>..\SDL2\include;$(IncludePath)</IncludePath>
+    <IncludePath>D:\GitHub Tings\UniGameEngine\SDLMark1\libs\gl3w\include;..\SDL2\include;$(IncludePath)</IncludePath>
     <LibraryPath>..\SDL2\lib\x86;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <IncludePath>..\SDL2\include;$(IncludePath)</IncludePath>
+    <IncludePath>D:\GitHub Tings\UniGameEngine\SDLMark1\libs\gl3w\include;..\SDL2\include;$(IncludePath)</IncludePath>
     <LibraryPath>..\SDL2\lib\x86;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">

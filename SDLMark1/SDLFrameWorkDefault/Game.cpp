@@ -149,17 +149,7 @@ void Game::UpdateRenderer(void)
 
 	DrawHeirarchy();
 
-	// Draw the inspector
-	ImGui::Begin("Entity Inspector", &inspectorOpen);
-	ImGui::Checkbox("EntityEnabledCheck", &currentSelectedEntity->enabled);
-	ImGui::TextColored(ImVec4(1, 1, 0, 1), currentSelectedEntity->name.c_str());
-
-	for (auto component : currentSelectedEntity->getComponents())
-	{
-		ImGui::Text(component->name.c_str());
-	}
-
-	ImGui::End();
+	DrawInspector();
 
 	// Clear Renderer buffer from last frame
 	Renderer::Instance()->ClearRenderer();
@@ -196,5 +186,23 @@ void Game::DrawHeirarchy()
 	}
 
 	ImGui::EndChild();
+	ImGui::End();
+}
+
+void Game::DrawInspector()
+{
+	ImGui::Begin("Entity Inspector", &inspectorOpen);
+	ImGui::Checkbox("EntityEnabledCheck", &currentSelectedEntity->enabled);
+	ImGui::TextColored(ImVec4(1, 1, 0, 1), currentSelectedEntity->name.c_str());
+
+	for (auto component : currentSelectedEntity->getComponents())
+	{
+		if (component->name == "Position Component")
+		{
+			ImGui::Text(std::to_string(currentSelectedEntity->getComponent<PositionComponent>().getPos().x).c_str());
+		}
+		ImGui::Text(component->name.c_str());
+	}
+
 	ImGui::End();
 }

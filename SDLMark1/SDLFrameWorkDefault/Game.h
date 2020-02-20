@@ -67,6 +67,7 @@ private:
 	void UpdateInputManager(void);
 
 	void DrawHeirarchy();
+	void DrawInspector();
 };
 
 #endif
