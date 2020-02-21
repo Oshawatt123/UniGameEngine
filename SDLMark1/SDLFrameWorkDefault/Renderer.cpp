@@ -34,8 +34,9 @@ void Renderer::Draw(BitMapPack bitMapPack, int x_in, int y_in, SDL_Rect* srcRect
 
 }
 
-void Renderer::DrawLine(int x1, int y1, int x2, int y2)
+void Renderer::DrawLine(int x1, int y1, int x2, int y2, SDL_Color color)
 {
+	SDL_SetRenderDrawColor(m_pRenderer, color.r, color.g, color.b, color.a);
 	SDL_RenderDrawLine(m_pRenderer,
 		x1 - camera->x,
 		y1 - camera->y,

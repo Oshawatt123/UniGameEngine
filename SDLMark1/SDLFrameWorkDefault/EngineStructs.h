@@ -8,7 +8,7 @@
 	so they can be turned on and off when I want certain systems to show debug
 	also upgrade logger to work off off these macros and a bitset for greater flexibilty
 */
-//#define RENDER_DEBUG
+#define RENDER_DEBUG
 //#define XML_DEBUG // not implemented
 
 // REALLY USEFUL MACROS
@@ -17,6 +17,10 @@ const int TILE_WIDTH = 32;
 
 // FILE PATH MACROS
 const std::string DEFAULT_TILE_PATH = "..Assets/Sprites/Floor_Placeholder.bmp";
+
+static const float f_zero =	 0.0f;
+static const float f_min =	-10000;
+static const float f_max =   10000;
 
 struct BitMapPack
 {

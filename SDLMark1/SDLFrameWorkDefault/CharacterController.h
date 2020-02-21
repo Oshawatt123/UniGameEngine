@@ -6,7 +6,7 @@ class CharacterController : public Component
 {
 private:
 	PositionComponent* pos;
-	int speed;
+	float speed;
 	Vector2 translation;
 
 public:
@@ -49,5 +49,10 @@ public:
 
 		}
 		pos->translate(translation);
+	}
+
+	float& GetSpeed()
+	{
+		return speed;
 	}
 };

@@ -19,6 +19,8 @@ public:
 
 	bool colliding;
 
+	SDL_Color drawColor = { 255, 0, 0, 255 };
+
 	void Init() override
 	{
 		pos = &entity->getComponent<PositionComponent>();

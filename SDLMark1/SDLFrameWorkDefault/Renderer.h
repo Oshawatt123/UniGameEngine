@@ -30,7 +30,7 @@ public:
 
 	void Draw(BitMapPack bitMapPack, int x, int y, SDL_Rect* srcRect = NULL);
 
-	void DrawLine(int x1, int y1, int x2, int y2);
+	void DrawLine(int x1, int y1, int x2, int y2, SDL_Color color = { 0,0,0,255 });
 
 	static Renderer* Instance();
 

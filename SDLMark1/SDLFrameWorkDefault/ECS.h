@@ -8,6 +8,8 @@
 #include <array>
 #include <string>
 
+#include "imgui.h"
+
 class Entity;
 class Component;
 

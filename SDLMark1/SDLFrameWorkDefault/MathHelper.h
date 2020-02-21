@@ -9,6 +9,9 @@ public:
 	float y;
 	float magnitude = 0;
 
+	float& getXAddr() { return x; }
+	float& getYAddr() { return y; }
+
 	Vector2();
 	Vector2(float x, float y);
 
