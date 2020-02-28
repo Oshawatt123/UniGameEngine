@@ -49,13 +49,13 @@ Game::Game()
 
 
 
-	// hard-coding
+	// ##### hard-coding ##### //
 
 
 	// replace this with a build list of scenes and load the first one in
 	Level1 = new Scene("Level1", physicsEngine, &camera, RENDER_VIEW_WIDTH, RENDER_VIEW_HEIGHT);
 
-	currentSelectedEntity = Level1->getEntityByName("Player");
+	currentSelectedEntity = nullptr;
 
 }
 
@@ -99,6 +99,13 @@ bool Game::Tick(void)
 
 		// update physics
 		physicsEngine->Tick();
+	}
+	else
+	{
+		if (InputManager::Instance()->mouseButtons && SDL_BUTTON_LMASK)
+		{
+
+		}
 	}
 
 	// check for application quit
@@ -192,33 +199,40 @@ void Game::DrawHeirarchy()
 void Game::DrawInspector()
 {
 	ImGui::Begin("Entity Inspector", &inspectorOpen);
-	ImGui::Checkbox("EntityEnabledCheck", &currentSelectedEntity->enabled);
-	ImGui::TextColored(ImVec4(1, 1, 0, 1), currentSelectedEntity->name.c_str());
-
-	for (auto component : currentSelectedEntity->getComponents())
+	if (currentSelectedEntity != nullptr)
 	{
-		ImGui::Text(component->name.c_str());
-		if (component->name == "Position Component")
+		ImGui::Checkbox("EntityEnabledCheck", &currentSelectedEntity->enabled);
+		ImGui::TextColored(ImVec4(1, 1, 0, 1), currentSelectedEntity->name.c_str());
+
+		for (auto component : currentSelectedEntity->getComponents())
 		{
-			ImGui::Text(std::to_string(currentSelectedEntity->getComponent<PositionComponent>().getPos().x).c_str());
+			ImGui::Text(component->name.c_str());
+			if (component->name == "Position Component")
+			{
+				ImGui::Text(std::to_string(currentSelectedEntity->getComponent<PositionComponent>().getPos().x).c_str());
 
-			ImGui::DragScalar("X Position", ImGuiDataType_Float, &currentSelectedEntity->getComponent<PositionComponent>().getPosAddr().getXAddr(), 0.5f, &f_min, &f_max, "%f", 1.0f);
-			ImGui::DragScalar("Y Position", ImGuiDataType_Float, &currentSelectedEntity->getComponent<PositionComponent>().getPosAddr().getYAddr(), 0.5f, &f_min, &f_max, "%f", 1.0f);
+				ImGui::DragScalar("X Position", ImGuiDataType_Float, &currentSelectedEntity->getComponent<PositionComponent>().getPosAddr().getXAddr(), 0.5f, &f_min, &f_max, "%f", 1.0f);
+				ImGui::DragScalar("Y Position", ImGuiDataType_Float, &currentSelectedEntity->getComponent<PositionComponent>().getPosAddr().getYAddr(), 0.5f, &f_min, &f_max, "%f", 1.0f);
+			}
+			else if (component->name == "Sprite Component")
+			{
+				ImGui::Text(currentSelectedEntity->getComponent<SpriteComponent>().m_filePath.c_str());
+
+				ImVec2 texSize = ImVec2(currentSelectedEntity->getComponent<SpriteComponent>().getTexDim().x, currentSelectedEntity->getComponent<SpriteComponent>().getTexDim().y);
+
+
+				ImGui::Image(&currentSelectedEntity->getComponent<SpriteComponent>().getTexture(), texSize);
+			}
+			else if (component->name == "Character Controller")
+			{
+				ImGui::DragScalar("Speed", ImGuiDataType_Float, &currentSelectedEntity->getComponent<CharacterController>().GetSpeed(), 0.05f, &f_min, &f_max, "%f", 1.0f);
+			}
+			ImGui::Text("");
 		}
-		else if (component->name == "Sprite Component")
-		{
-			ImGui::Text(currentSelectedEntity->getComponent<SpriteComponent>().m_filePath.c_str());
-
-			ImVec2 texSize = ImVec2(currentSelectedEntity->getComponent<SpriteComponent>().getTexDim().x, currentSelectedEntity->getComponent<SpriteComponent>().getTexDim().y);
-
-
-			ImGui::Image(&currentSelectedEntity->getComponent<SpriteComponent>().getTexture(), texSize);
-		}
-		else if (component->name == "Character Controller")
-		{
-			ImGui::DragScalar("Speed", ImGuiDataType_Float, &currentSelectedEntity->getComponent<CharacterController>().GetSpeed(), 0.05f, &f_min, &f_max, "%f", 1.0f);
-		}
-		ImGui::Text("");
+	}
+	else
+	{
+		ImGui::TextColored(ImVec4(1, 1, 0, 1), "No Entity Selected");
 	}
 	ImGui::End();
 }

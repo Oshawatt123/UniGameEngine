@@ -2,11 +2,13 @@
 #include "SDL.h"
 #include <string>
 
+#define ENGINE_EDITOR_MODE
+
 // DEBUG DEFINES
 /*
 	expand this to have debug macros I can #define for each system
 	so they can be turned on and off when I want certain systems to show debug
-	also upgrade logger to work off off these macros and a bitset for greater flexibilty
+	also upgrade logger to work off off these macros and/or a bitset for greater flexibilty
 */
 #define RENDER_DEBUG
 //#define XML_DEBUG // not implemented

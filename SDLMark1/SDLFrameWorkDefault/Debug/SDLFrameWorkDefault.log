@@ -22,6 +22,8 @@ C:\Users\Games\Documents\GitHub\UniGameEngine\SDLMark1\SDLFrameWorkDefault\Game.
 C:\Users\Games\Documents\GitHub\UniGameEngine\SDLMark1\SDLFrameWorkDefault\Game.h(38,47): warning C4244: 'initializing': conversion from 'float' to 'const int', possible loss of data
 C:\Users\Games\Documents\GitHub\UniGameEngine\SDLMark1\SDLFrameWorkDefault\Game.cpp(33,32): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
 C:\Users\Games\Documents\GitHub\UniGameEngine\SDLMark1\SDLFrameWorkDefault\Game.cpp(34,33): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+  InputManager.cpp
+  Logger.cpp
   Main.cpp
 C:\Users\Games\Documents\GitHub\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(20,16): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
 C:\Users\Games\Documents\GitHub\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(21,16): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
@@ -63,6 +65,9 @@ C:\Users\Games\Documents\GitHub\UniGameEngine\SDLMark1\SDLFrameWorkDefault\Colli
 C:\Users\Games\Documents\GitHub\UniGameEngine\SDLMark1\SDLFrameWorkDefault\CollisionComponent.h(37,27): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
 C:\Users\Games\Documents\GitHub\UniGameEngine\SDLMark1\SDLFrameWorkDefault\CollisionComponent.h(38,28): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
 C:\Users\Games\Documents\GitHub\UniGameEngine\SDLMark1\SDLFrameWorkDefault\CollisionComponent.h(39,28): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  Profiler.cpp
+  Renderer.cpp
+  ResourceManager.cpp
   Scene.cpp
 C:\Users\Games\Documents\GitHub\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(20,16): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
 C:\Users\Games\Documents\GitHub\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(21,16): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
