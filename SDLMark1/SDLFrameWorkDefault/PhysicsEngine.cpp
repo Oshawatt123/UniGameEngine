@@ -35,7 +35,7 @@ void PhysicsEngine::AddCollidableObject(Entity* object)
 	Collidable.push_back(object);
 }
 
-bool PhysicsEngine::CheckPointCollision(Vector2 point)
+bool PhysicsEngine::CheckPointCollision(Vector2 point, Entity* outEntity)
 {
 	SDL_Rect otherCollider;
 	for (auto object : Collidable)
@@ -53,6 +53,7 @@ bool PhysicsEngine::CheckPointCollision(Vector2 point)
 					// Is Point Y ABOVE the object's BOTTOM edge?
 					if (point.y > otherCollider.y - otherCollider.h)
 					{
+						outEntity = object;
 						return true;
 					}
 					return false;

@@ -22,7 +22,7 @@ public:
 
 	void AddCollidableObject(Entity* object);
 
-	bool CheckPointCollision(Vector2 point);
+	bool CheckPointCollision(Vector2 point, Entity* outEntity);
 
 	bool AABB(const SDL_Rect& A, const SDL_Rect& B);
 };

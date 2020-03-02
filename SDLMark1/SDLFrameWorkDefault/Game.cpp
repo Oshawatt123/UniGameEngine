@@ -55,7 +55,7 @@ Game::Game()
 	// replace this with a build list of scenes and load the first one in
 	Level1 = new Scene("Level1", physicsEngine, &camera, RENDER_VIEW_WIDTH, RENDER_VIEW_HEIGHT);
 
-	currentSelectedEntity = nullptr;
+	currentSelectedEntity = Level1->getEntityByName("Player");
 
 }
 
@@ -84,7 +84,6 @@ bool Game::Tick(void)
 	// set up ImGui input
 	ImGuiIO& io = ImGui::GetIO();
 	io.DeltaTime = 1.0f / 60.0f;
-	float mousex, mousey;
 	mousex = static_cast<float>(InputManager::Instance()->mouseX);
 	mousey = static_cast<float>(InputManager::Instance()->mouseY);
 	io.MousePos = ImVec2(mousex, mousey);
@@ -104,7 +103,12 @@ bool Game::Tick(void)
 	{
 		if (InputManager::Instance()->mouseButtons && SDL_BUTTON_LMASK)
 		{
-
+			Log("Clicked mouse button!", DEBUG);
+			Level1->CheckPointCollideEntity(Vector2(mousex, mousey), clickedObject);
+			if (clickedObject != nullptr)
+			{
+				currentSelectedEntity = clickedObject;
+			}
 		}
 	}
 
@@ -118,10 +122,6 @@ bool Game::Tick(void)
 
 	return true;
 }
-
-bool firstToolOpen = true;
-bool heirarchyOpen = true;
-bool inspectorOpen = true;
 
 void Game::UpdateRenderer(void)
 {
@@ -157,6 +157,8 @@ void Game::UpdateRenderer(void)
 	DrawHeirarchy();
 
 	DrawInspector();
+
+	DrawEngineDebug();
 
 	// Clear Renderer buffer from last frame
 	Renderer::Instance()->ClearRenderer();
@@ -234,5 +236,13 @@ void Game::DrawInspector()
 	{
 		ImGui::TextColored(ImVec4(1, 1, 0, 1), "No Entity Selected");
 	}
+	ImGui::End();
+}
+
+void Game::DrawEngineDebug()
+{
+	ImGui::Begin("Debug Window", &heirarchyOpen);
+	ImGui::Text(std::to_string(mousex).c_str());
+	ImGui::Text(std::to_string(mousey).c_str());
 	ImGui::End();
 }

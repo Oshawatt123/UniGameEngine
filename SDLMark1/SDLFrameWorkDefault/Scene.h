@@ -55,6 +55,8 @@ public:
 
 	Entity* getEntityByName(std::string name);
 
+	bool CheckPointCollideEntity(Vector2 point, Entity*& outEntity);
+
 private:
 	~Scene();
 

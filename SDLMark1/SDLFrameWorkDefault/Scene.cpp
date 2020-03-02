@@ -129,6 +129,38 @@ Entity* Scene::getEntityByName(std::string name)
 	return nullptr;
 }
 
+bool Scene::CheckPointCollideEntity(Vector2 point, Entity*& outEntity)
+{
+	for (auto object : EntityList)
+	{
+		Vector2 otherPos = object->getComponent<PositionComponent>().getPos();
+		// Is Point X to the RIGHT of the object's LEFT edge?
+		if (point.x > otherPos.x)
+		{
+			// Is Point X to the LEFT of the object's RIGHT edge?
+			if (point.x < otherPos.x + TILE_WIDTH)
+			{
+				// Is Point Y BELOW the object's TOP edge?
+				if (point.y > otherPos.y)
+				{
+					// Is Point Y ABOVE the object's BOTTOM edge?
+					if (point.y < otherPos.y + TILE_WIDTH)
+					{
+						outEntity = object;
+						Log("Clicked an entity!", DEBUG);
+						Log(outEntity->name.c_str(), DEBUG);
+						return true;
+					}
+					return false;
+				}
+				return false;
+			}
+			return false;
+		}
+	}
+	return false;
+}
+
 Scene::~Scene()
 {
 	// scene clean-up

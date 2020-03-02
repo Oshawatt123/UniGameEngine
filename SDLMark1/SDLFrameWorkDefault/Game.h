@@ -53,8 +53,15 @@ private:
 
 
 	// Editor
-	bool EditMode = false;
+	bool EditMode = true;
 	Entity* currentSelectedEntity;
+
+	bool firstToolOpen = true;
+	bool heirarchyOpen = true;
+	bool inspectorOpen = true;
+	Entity* clickedObject;
+	bool debugOpen = true;
+	float mousex, mousey;
 
 public:
 	Game();
@@ -68,6 +75,7 @@ private:
 
 	void DrawHeirarchy();
 	void DrawInspector();
+	void DrawEngineDebug();
 };
 
 #endif
