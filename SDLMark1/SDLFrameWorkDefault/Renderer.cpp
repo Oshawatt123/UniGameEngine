@@ -36,12 +36,7 @@ void Renderer::Draw(BitMapPack bitMapPack, int x_in, int y_in, SDL_Rect* srcRect
 
 void Renderer::DrawLine(int x1, int y1, int x2, int y2, SDL_Color color)
 {
-	SDL_SetRenderDrawColor(m_pRenderer, color.r, color.g, color.b, color.a);
-	SDL_RenderDrawLine(m_pRenderer,
-		x1 - camera->x,
-		y1 - camera->y,
-		x2 - camera->x,
-		y2 - camera->y);
+	EditorRenderLines.push_back(Line(x1, y1, x2, y2, color));
 }
 
 Renderer* Renderer::Instance()
@@ -99,30 +94,19 @@ Renderer::~Renderer()
 
 void Renderer::UpdateRenderer()
 {
-	// show what we've drawn
-
-#ifdef RENDER_DEBUG
-	
-	// draw a bunch of lines
-	for (size_t i = 0; i < 10; i++)
-	{
-		for (size_t j = 0; j < 10; j++)
-		{
-			DrawLine(
-				i * TILE_WIDTH,
-				j * TILE_WIDTH,
-				i * TILE_WIDTH,
-				j * TILE_WIDTH + 1000);
-			DrawLine(
-				i * TILE_WIDTH,
-				j * TILE_WIDTH,
-				i * TILE_WIDTH + 1000,
-				j * TILE_WIDTH);
-		}
-	}
-
-#endif
 	//SDL_RenderSetViewport(m_pRenderer, renderCamera);
+
+	// draw all the editor lines
+	for (Line line : EditorRenderLines)
+	{
+		SDL_SetRenderDrawColor(m_pRenderer, line.color.r, line.color.g, line.color.b, line.color.a);
+		SDL_RenderDrawLine(m_pRenderer,
+			line.start.x - camera->x,
+			line.start.y - camera->y,
+			line.end.x - camera->x,
+			line.end.y - camera->y);
+	}
+	EditorRenderLines.clear();
 
 	SDL_RenderPresent(m_pRenderer);
 }

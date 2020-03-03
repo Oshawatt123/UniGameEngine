@@ -5,6 +5,8 @@ SDL_GLContext gl_context;
 
 Game::Game()
 {
+	_Time = new Time();
+
 	m_Window = nullptr;
 
 	//start up
@@ -79,6 +81,8 @@ Game::~Game()
 
 bool Game::Tick(void)
 {
+	_Time->NewFrame();
+
 	UpdateInputManager();
 
 	// set up ImGui input
@@ -91,6 +95,7 @@ bool Game::Tick(void)
 	io.MouseDown[1] = InputManager::Instance()->mouseButtons & SDL_BUTTON(SDL_BUTTON_RIGHT);
 	//io.MouseWheel = static_cast<float>(InputManager::Instance()->mouseWheel);
 
+	// editor mode
 	if (!EditMode)
 	{
 		// scene tick
@@ -101,15 +106,22 @@ bool Game::Tick(void)
 	}
 	else
 	{
+		// clicking to view an entity in the inspector
 		if (InputManager::Instance()->mouseButtons && SDL_BUTTON_LMASK)
 		{
-			Log("Clicked mouse button!", DEBUG);
-			Level1->CheckPointCollideEntity(Vector2(mousex, mousey), clickedObject);
+			Level1->CheckPointCollideEntityScreenSpace(Vector2(mousex, mousey), clickedObject);
 			if (clickedObject != nullptr)
 			{
+				// reset last entities edit mode
+				currentSelectedEntity->editMode = false;
+
+				// set new entity and set their edit mode
 				currentSelectedEntity = clickedObject;
+				currentSelectedEntity->editMode = true;
 			}
 		}
+
+		Level1->EditorTick();
 	}
 
 	// check for application quit
@@ -142,9 +154,6 @@ void Game::UpdateRenderer(void)
 		ImGui::EndMenuBar();
 	}
 
-	const float my_value[] = { 0.2f, 0.1f, 1.0f, 0.5f, 0.9f, 2.2f };
-	ImGui::PlotLines("Frame time", my_value, IM_ARRAYSIZE(my_value));
-
 	ImGui::TextColored(ImVec4(1, 1, 0, 1), "Really important jazz");
 	ImGui::BeginChild("Scrolling child");
 	for (int n = 0; n < 50; n++)
@@ -171,9 +180,9 @@ void Game::UpdateRenderer(void)
 	ImGuiSDL::Render(ImGui::GetDrawData());
 
 	// Update the renderer with the newly drawn Sprites
-	Renderer::Instance()->UpdateRenderer();	
+	Renderer::Instance()->UpdateRenderer();
 
-	
+	_Time->EndFrame();
 }
 
 void Game::UpdateInputManager(void)
@@ -244,5 +253,8 @@ void Game::DrawEngineDebug()
 	ImGui::Begin("Debug Window", &heirarchyOpen);
 	ImGui::Text(std::to_string(mousex).c_str());
 	ImGui::Text(std::to_string(mousey).c_str());
+	ImGui::Checkbox("EditMode", &EditMode);
+
+	ImGui::PlotLines("Frame time", _Time->deltaTimes, IM_ARRAYSIZE(_Time->deltaTimes));
 	ImGui::End();
 }

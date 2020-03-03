@@ -10,7 +10,7 @@
 	so they can be turned on and off when I want certain systems to show debug
 	also upgrade logger to work off off these macros and/or a bitset for greater flexibilty
 */
-#define RENDER_DEBUG
+//#define RENDER_DEBUG
 //#define XML_DEBUG // not implemented
 
 // REALLY USEFUL MACROS

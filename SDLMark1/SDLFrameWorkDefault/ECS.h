@@ -41,7 +41,8 @@ public:
 	Entity* entity;
 
 	virtual void Init() = 0;
-	virtual void Tick() = 0;
+	virtual void Tick() {};
+	virtual void EditorTick() {};
 
 	virtual ~Component() {}
 };
@@ -53,6 +54,8 @@ public:
 	std::string name = "What a creative name!";
 
 	std::string tag = "";
+
+	bool editMode;
 
 	// intended for end-user to be able to enable/disable objects
 	bool enabled = true;
@@ -66,6 +69,14 @@ public:
 			{
 				c->Tick();
 			}
+		}
+	}
+
+	void EditorTick()
+	{
+		for (auto& c : components)
+		{
+			c->EditorTick();
 		}
 	}
 

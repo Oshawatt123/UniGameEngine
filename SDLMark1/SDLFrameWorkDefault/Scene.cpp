@@ -37,6 +37,39 @@ void Scene::Tick()
 	}
 }
 
+void Scene::EditorTick()
+{
+	for (auto entity : EntityList)
+	{
+		if (entity->isEnabled())
+		{
+			entity->EditorTick();
+		}
+	}
+
+	// draw a bunch of lines
+#ifdef RENDER_DEBUG
+	for (size_t i = 0; i < 100; i++)
+	{
+		for (size_t j = 0; j < 100; j++)
+		{
+			Renderer::Instance()->DrawLine(
+				i * TILE_WIDTH,
+				j * TILE_WIDTH,
+				i * TILE_WIDTH,
+				j * TILE_WIDTH + 1000);
+			Renderer::Instance()->DrawLine(
+				i * TILE_WIDTH,
+				j * TILE_WIDTH,
+				i * TILE_WIDTH + 1000,
+				j * TILE_WIDTH);
+		}
+	}
+#endif // REDNER_DEBUG
+
+	
+}
+
 void Scene::Draw()
 {
 
@@ -129,22 +162,22 @@ Entity* Scene::getEntityByName(std::string name)
 	return nullptr;
 }
 
-bool Scene::CheckPointCollideEntity(Vector2 point, Entity*& outEntity)
+bool Scene::CheckPointCollideEntityScreenSpace(Vector2 point, Entity*& outEntity)
 {
 	for (auto object : EntityList)
 	{
 		Vector2 otherPos = object->getComponent<PositionComponent>().getPos();
 		// Is Point X to the RIGHT of the object's LEFT edge?
-		if (point.x > otherPos.x)
+		if (point.x + camera->x > otherPos.x)
 		{
 			// Is Point X to the LEFT of the object's RIGHT edge?
-			if (point.x < otherPos.x + TILE_WIDTH)
+			if (point.x + camera->x < otherPos.x + TILE_WIDTH)
 			{
 				// Is Point Y BELOW the object's TOP edge?
-				if (point.y > otherPos.y)
+				if (point.y + camera->y > otherPos.y)
 				{
 					// Is Point Y ABOVE the object's BOTTOM edge?
-					if (point.y < otherPos.y + TILE_WIDTH)
+					if (point.y + camera->y < otherPos.y + TILE_WIDTH)
 					{
 						outEntity = object;
 						Log("Clicked an entity!", DEBUG);

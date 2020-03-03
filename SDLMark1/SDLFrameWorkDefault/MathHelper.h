@@ -1,5 +1,6 @@
 #pragma once
 #include <math.h>
+#include "SDL.h"
 
 class Vector2
 {
@@ -40,4 +41,25 @@ public:
 
 	void Normalize();
 
+};
+
+struct Line
+{
+	Vector2 start;
+	Vector2 end;
+	SDL_Color color;
+
+	Line(int x1, int y1, int x2, int y2, SDL_Color _color = { 0,0,0,255 })
+	{
+		start = Vector2(x1, y1);
+		end = Vector2(x2, y2);
+		color = _color;
+	}
+
+	Line(Vector2 _start, Vector2 _end, SDL_Color _color = { 0,0,0,255 })
+	{
+		start = _start;
+		end = _end;
+		color = _color;
+	}
 };

@@ -44,6 +44,7 @@ public:
 
 	// updates every component except for rendering
 	void Tick();
+	void EditorTick();
 	// updates all the sprite components and renders the tilemap
 	void Draw();
 
@@ -55,7 +56,7 @@ public:
 
 	Entity* getEntityByName(std::string name);
 
-	bool CheckPointCollideEntity(Vector2 point, Entity*& outEntity);
+	bool CheckPointCollideEntityScreenSpace(Vector2 point, Entity*& outEntity);
 
 private:
 	~Scene();

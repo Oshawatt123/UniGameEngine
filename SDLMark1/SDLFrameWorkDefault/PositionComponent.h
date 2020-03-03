@@ -1,4 +1,6 @@
 #pragma once
+#include "Renderer.h"
+#include "SDL.h"
 
 class PositionComponent : public Component
 {
@@ -54,7 +56,11 @@ public:
 		name = "Position Component";
 	}
 
-	void Tick() override
+	void EditorTick() override
 	{
+		if (entity->editMode)
+		{
+			Renderer::Instance()->DrawLine(Position.x, Position.y, Position.x + 10, Position.y, SDL_Color{ 255, 0, 0, 255 });
+		}
 	}
 };

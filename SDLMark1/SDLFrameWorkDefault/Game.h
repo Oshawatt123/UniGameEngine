@@ -23,6 +23,7 @@
 #include "EngineStructs.h"
 #include "Scene.h"
 #include "Components.h"
+#include "Time.h"
 
 class Game
 {
@@ -42,6 +43,7 @@ private:
 
 	//My Own Jazz
 	PhysicsEngine* physicsEngine;
+	Time* _Time;
 
 	SDL_Rect camera = { 0, 0, SCREEN_WIDTH, SCREEN_HEIGHT};
 	SDL_Rect renderCamera;

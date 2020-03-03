@@ -36,10 +36,11 @@ public:
 		collider.x = colPosition.x;
 		collider.y = colPosition.y;
 		collider.w = colDimension.x;
-		collider.h = colDimension.y;
+		collider.h = colDimension.y;		
+	}
 
-#ifdef RENDER_DEBUG
-		Renderer::Instance()->DrawLine(collider.x, collider.y, collider.x+collider.w, collider.y+collider.h);
-#endif
+	void EditorTick() override
+	{
+		Renderer::Instance()->DrawLine(collider.x, collider.y, collider.x + collider.w, collider.y + collider.h);
 	}
 };

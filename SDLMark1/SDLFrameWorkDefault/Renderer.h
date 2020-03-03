@@ -1,10 +1,12 @@
 #pragma once
 
 #include <iostream>
+#include <vector>
 
 #include "SDL.h"
 #include "EngineStructs.h"
 #include "Logger.h"
+#include "MathHelper.h"
 
 
 #include "imgui.h"
@@ -24,6 +26,7 @@ private:
 
 	SDL_Rect* camera;
 	SDL_Rect* renderCamera;
+	std::vector<Line> EditorRenderLines;
 
 public:
 	void Draw(BitMapPack bitMapPack, SDL_Rect* destRect, SDL_Rect* srcRect = NULL);

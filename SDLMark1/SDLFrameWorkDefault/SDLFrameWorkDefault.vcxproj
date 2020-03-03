@@ -161,6 +161,7 @@
     <ClCompile Include="ResourceManager.cpp" />
     <ClCompile Include="Scene.cpp" />
     <ClCompile Include="SceneManager.cpp" />
+    <ClCompile Include="Time.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BlackBoard.h" />
@@ -192,6 +193,8 @@
     <ClInclude Include="SceneManager.h" />
     <ClInclude Include="SpriteComponent.h" />
     <ClInclude Include="test.h" />
+    <ClInclude Include="Time.h" />
+    <ClInclude Include="Timer.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
