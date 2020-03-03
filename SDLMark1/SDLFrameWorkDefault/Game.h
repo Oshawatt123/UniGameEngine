@@ -38,8 +38,6 @@ private:
 	const int RENDER_VIEW_WIDTH = SCREEN_WIDTH * 0.5f;
 	const int RENDER_VIEW_HEIGHT = SCREEN_HEIGHT * 0.65f;
 
-	const int LEVEL_WIDTH = 1024;
-	const int LEVEL_HEIGHT = 768;
 
 	//My Own Jazz
 	PhysicsEngine* physicsEngine;
@@ -60,6 +58,7 @@ private:
 
 	bool firstToolOpen = true;
 	bool heirarchyOpen = true;
+	bool treeNodeDoubleClick = false;
 	bool inspectorOpen = true;
 	Entity* clickedObject;
 	bool debugOpen = true;

@@ -199,6 +199,7 @@ void Game::DrawHeirarchy()
 	// populate heirarchy
 	if (ImGui::BeginChild("EntityList"))
 	{
+		ImGui::CheckboxFlags("Double Click to open", (unsigned int*)&treeNodeDoubleClick, ImGuiTreeNodeFlags_OpenOnDoubleClick);
 		ImGui::Text("");
 		Level1->PopulateHeirarchy();
 	}
@@ -254,7 +255,7 @@ void Game::DrawEngineDebug()
 	ImGui::Text(std::to_string(mousex).c_str());
 	ImGui::Text(std::to_string(mousey).c_str());
 	ImGui::Checkbox("EditMode", &EditMode);
-
+ 
 	ImGui::PlotLines("Frame time", _Time->deltaTimes, IM_ARRAYSIZE(_Time->deltaTimes));
 	ImGui::End();
 }
