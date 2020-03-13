@@ -33,7 +33,7 @@ public:
 		m_bitMapPack.width *= entity->getComponent<PositionComponent>().scale;
 		m_bitMapPack.height *= entity->getComponent<PositionComponent>().scale;
 
-		name = "Sprite Component";
+		name = "SpriteComponent";
 	}
 
 	void Tick() override
@@ -52,4 +52,10 @@ public:
 		return Vector2(m_bitMapPack.width, m_bitMapPack.height);
 	}
 
+	std::string GetSaveData()
+	{
+		std::string saveData;
+		saveData += "<sprite>" + m_filePath + "</sprite>";
+		return saveData;
+	}
 };

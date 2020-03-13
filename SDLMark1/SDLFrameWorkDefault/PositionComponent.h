@@ -53,7 +53,7 @@ public:
 
 	void Init() override
 	{
-		name = "Position Component";
+		name = "PositionComponent";
 	}
 
 	void EditorTick() override
@@ -62,5 +62,12 @@ public:
 		{
 			Renderer::Instance()->DrawLine(Position.x, Position.y, Position.x + 10, Position.y, SDL_Color{ 255, 0, 0, 255 });
 		}
+	}
+
+	std::string GetSaveData()
+	{
+		std::string saveData;
+		saveData += "<xpos>" + std::to_string(Position.x) + "</xpos>" + "<ypos>" + std::to_string(Position.y) + "</ypos>" + "<scale>" + std::to_string(scale) + "</scale>";
+		return saveData;
 	}
 };

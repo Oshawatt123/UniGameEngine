@@ -58,6 +58,8 @@ public:
 
 	bool CheckPointCollideEntityScreenSpace(Vector2 point, Entity*& outEntity);
 
+	std::string generateSaveData();
+
 private:
 	~Scene();
 

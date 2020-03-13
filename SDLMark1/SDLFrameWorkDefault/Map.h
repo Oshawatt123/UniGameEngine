@@ -8,6 +8,8 @@ public:
 	std::vector<std::string> mapCollisionData;
 	std::vector<std::string> mapEntityData;
 
+	std::string filePath;
+
 	std::string tileSet;
 
 	Map();

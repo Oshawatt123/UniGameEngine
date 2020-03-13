@@ -6,6 +6,8 @@
 #include <string>
 #include <vector>
 #include <unordered_map>
+#include <iostream>
+#include <fstream>
 
 class SceneManager
 {
@@ -35,6 +37,8 @@ public:
 	void LoadScene(std::string sceneName);
 	void LoadScene(int buildIndex);
 	void LoadSceneByPath(std::string path);
+
+	void SaveScene();
 
 	Scene* getCurrentScene();
 

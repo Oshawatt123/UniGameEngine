@@ -255,14 +255,14 @@ void Game::DrawInspector()
 		for (auto component : currentSelectedEntity->getComponents())
 		{
 			ImGui::Text(component->name.c_str());
-			if (component->name == "Position Component")
+			if (component->name == "PositionComponent")
 			{
 				ImGui::Text(std::to_string(currentSelectedEntity->getComponent<PositionComponent>().getPos().x).c_str());
 
 				ImGui::DragScalar("X Position", ImGuiDataType_Float, &currentSelectedEntity->getComponent<PositionComponent>().getPosAddr().getXAddr(), 0.5f, &f_min, &f_max, "%f", 1.0f);
 				ImGui::DragScalar("Y Position", ImGuiDataType_Float, &currentSelectedEntity->getComponent<PositionComponent>().getPosAddr().getYAddr(), 0.5f, &f_min, &f_max, "%f", 1.0f);
 			}
-			else if (component->name == "Sprite Component")
+			else if (component->name == "SpriteComponent")
 			{
 				ImGui::Text(currentSelectedEntity->getComponent<SpriteComponent>().m_filePath.c_str());
 
@@ -271,7 +271,7 @@ void Game::DrawInspector()
 
 				ImGui::Image(&currentSelectedEntity->getComponent<SpriteComponent>().getTexture(), texSize);
 			}
-			else if (component->name == "Character Controller")
+			else if (component->name == "CharacterController")
 			{
 				ImGui::DragScalar("Speed", ImGuiDataType_Float, &currentSelectedEntity->getComponent<CharacterController>().GetSpeed(), 0.05f, &f_min, &f_max, "%f", 1.0f);
 			}

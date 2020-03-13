@@ -44,7 +44,9 @@ public:
 	virtual void Tick() {};
 	virtual void EditorTick() {};
 
-	virtual ~Component() {}
+	virtual ~Component() {};
+
+	virtual std::string GetSaveData() { return ""; };
 };
 
 class Entity

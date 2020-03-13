@@ -27,7 +27,7 @@ public:
 		colDimension.x = TILE_WIDTH * pos->scale;
 		colDimension.y = TILE_WIDTH * pos->scale;
 
-		name = "Box Collider";
+		name = "CollisionComponent";
 	}
 
 	void Tick() override
@@ -42,5 +42,10 @@ public:
 	void EditorTick() override
 	{
 		Renderer::Instance()->DrawLine(collider.x, collider.y, collider.x + collider.w, collider.y + collider.h);
+	}
+
+	std::string GetSaveData()
+	{
+		return "";
 	}
 };

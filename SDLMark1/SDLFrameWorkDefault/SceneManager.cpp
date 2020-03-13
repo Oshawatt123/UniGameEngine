@@ -77,6 +77,11 @@ void SceneManager::LoadSceneByPath(std::string path)
 	LoadScene(loadedScenes[path]);
 }
 
+void SceneManager::SaveScene()
+{
+	std::string saveData = currentScene->generateSaveData();
+}
+
 Scene* SceneManager::getCurrentScene()
 {
 	return currentScene;
@@ -85,7 +90,17 @@ Scene* SceneManager::getCurrentScene()
 void SceneManager::LoadScene(Scene* scene)
 {
 	// clean up current scene
+	if (currentScene)
+	{
+		std::ofstream outfile;
+		std::string scenePath = "../Assets/Scenes/" + currentScene->GetName() + ".filthyscene";
+		outfile.open(scenePath);
+		// do the save
+		outfile << currentScene->generateSaveData();
 
+		outfile.close();
+
+	}
 	// load new scene
 	currentScene = scene;
 }

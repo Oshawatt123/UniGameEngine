@@ -1,5 +1,13 @@
 #include "Scene.h"
 
+void AddBrace(std::string* data, std::string brace, bool end)
+{
+	if (!end)
+		*data = *data + "<" + brace + ">";
+	else
+		*data = *data + "</" + brace + ">";
+}
+
 Scene::Scene(PhysicsEngine* PE, SDL_Rect* camera, int screen_width, int screen_height)
 {
 	SceneBuildNumber = 0;
@@ -197,6 +205,42 @@ bool Scene::CheckPointCollideEntityScreenSpace(Vector2 point, Entity*& outEntity
 	return false;
 }
 
+std::string Scene::generateSaveData()
+{
+	std::string saveData;
+	saveData = saveData + "<?xml version=\"1.0\" encoding=\"utf-8\"?>";
+	AddBrace(&saveData, "scene", false);
+
+	AddBrace(&saveData, "entities", false);
+	for (auto object : EntityList)
+	{
+		// start writing entity information
+		std::string braceData = "entity name = \"" + object->name + "\"";
+		AddBrace(&saveData, braceData, false);
+
+		// write entity component information
+		for (auto component : object->getComponents())
+		{
+			std::string componentBraceData = "component type = \"" + component->name + "\"";
+			AddBrace(&saveData, componentBraceData, false);
+
+			saveData += component->GetSaveData();
+
+			AddBrace(&saveData, "component", true);
+		}
+		AddBrace(&saveData, "entity", true);
+	}
+	AddBrace(&saveData, "entities", true);
+
+	// Add map to save file
+	std::string mapBraceData = "map path = \"" + sceneMap->filePath + "\"";
+	AddBrace(&saveData, mapBraceData, false);
+	AddBrace(&saveData, "map", true);
+
+	AddBrace(&saveData, "scene", true);
+	return saveData;
+}
+
 Scene::~Scene()
 {
 	// scene clean-up
@@ -348,6 +392,7 @@ void Scene::SceneInit(PhysicsEngine* PE)
 	// load map data into the scene
 	sceneMap = new Map();
 	sceneMap->mapTileData = ResourceManager::Instance()->LoadMap(mapNode->first_attribute()->value());
+	sceneMap->filePath = mapNode->first_attribute()->value();
 
 	indexRect = new SDL_Rect();
 	if (sceneMap->MapLoaded())

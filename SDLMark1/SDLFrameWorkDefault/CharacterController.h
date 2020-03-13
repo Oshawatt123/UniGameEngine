@@ -14,7 +14,7 @@ public:
 	{
 		pos = & entity->getComponent<PositionComponent>();
 		speed = 2;
-		name = "Character Controller";
+		name = "CharacterController";
 	}
 	void Tick() override
 	{
@@ -54,5 +54,10 @@ public:
 	float& GetSpeed()
 	{
 		return speed;
+	}
+
+	std::string GetSaveData()
+	{
+		return "";
 	}
 };
