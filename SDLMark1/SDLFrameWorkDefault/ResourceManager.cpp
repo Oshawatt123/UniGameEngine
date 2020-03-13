@@ -107,6 +107,8 @@ std::vector<std::string> ResourceManager::LoadMap(std::string filePath)
 		mapReturnVector.push_back(line);
 	}
 
+	inFile.close();
+
 	return mapReturnVector;
 }
 

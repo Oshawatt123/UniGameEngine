@@ -214,7 +214,9 @@ void Scene::SceneInit(PhysicsEngine* PE)
 
 	Log("#################### [XML DEBUG] #####################", DEBUG);
 	// load the scene file
-	rapidxml::file<> xmlFile("../Assets/Scenes/Level1.xml");
+	std::string scenePath = "../Assets/Scenes/" + SceneName + ".filthyscene";
+	std::cout << scenePath << std::endl;
+	rapidxml::file<> xmlFile(scenePath.c_str());
 	// setup rapidXML
 	rapidxml::xml_document<> doc;
 	doc.parse<0>(xmlFile.data());
@@ -350,6 +352,7 @@ void Scene::SceneInit(PhysicsEngine* PE)
 	indexRect = new SDL_Rect();
 	if (sceneMap->MapLoaded())
 	{
+		Log("Scene Map loaded!", DEBUG);
 		sceneMap->tileSet = "../Assets/Sprites/defaultTiles.bmp";
 	}
 	else

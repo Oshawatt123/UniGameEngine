@@ -24,6 +24,7 @@
 
 #include "Renderer.h"
 #include "ResourceManager.h"
+#include "SceneManager.h"
 #include "PhysicsEngine.h"
 #include "InputManager.h"
 #include "Scene.h"

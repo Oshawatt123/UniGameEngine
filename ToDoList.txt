@@ -9,7 +9,7 @@ Fix smol leak in input manager ( might just be SDL2 allocating enough memory, se
 ####### TO DO #######
 [DONE] File system viewer
 Scene saving
-Multiple scenes
+[DONE] Multiple scenes
 Seperate Scene and Game camera
 Widgets for invisible objects (e.g camera)
 [DONE] Vector2 class & operator overloading

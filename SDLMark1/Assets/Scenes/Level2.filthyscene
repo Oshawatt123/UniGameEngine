@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<scene>
+	<entities>
+		<entity name = "Player">
+			<component type = "PositionComponent">
+        <xpos>100</xpos>
+        <ypos>100</ypos>
+			</component>
+			<component type = "SpriteComponent">
+        <sprite>../Assets/Sprites/ElvisPretzels.bmp</sprite>
+			</component>
+			<component type = "CharacterController">
+			</component>
+      <component type ="CollisionComponent">
+      </component>
+		</entity>
+    <entity name ="Ghost1">
+      <component type ="PositionComponent">
+        <xpos>100</xpos>
+        <ypos>100</ypos>
+      </component>
+      <component type ="SpriteComponent">
+        <sprite>../Assets/Sprites/Mudkip.bmp</sprite>
+      </component>
+      <component type ="GhostControl">
+      </component>
+    </entity>
+    <entity name ="Ghost2">
+      <component type ="PositionComponent">
+        <xpos>100</xpos>
+        <ypos>100</ypos>
+      </component>
+      <component type ="SpriteComponent">
+        <sprite>../Assets/Sprites/Mudkip.bmp</sprite>
+      </component>
+    </entity>
+    <entity name ="Ghost3">
+      <component type ="PositionComponent">
+        <xpos>100</xpos>
+        <ypos>100</ypos>
+      </component>
+      <component type ="SpriteComponent">
+        <sprite>../Assets/Sprites/Mudkip.bmp</sprite>
+      </component>
+    </entity>
+    <entity name ="Wall">
+      <component type ="PositionComponent">
+        <scale>1</scale>
+      </component>
+      <component type ="SpriteComponent">
+        <sprite>../Assets/Sprites/Floor_Placeholder.bmp</sprite>
+      </component>
+      <component type ="CollisionComponent">
+      </component>
+    </entity>
+	</entities>
+  
+	<map path = "../Assets/Maps/map2.filthymap">
+  </map>
+</scene>

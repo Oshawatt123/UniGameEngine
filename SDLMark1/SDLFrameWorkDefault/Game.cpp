@@ -10,7 +10,16 @@ void FollowFilePath(std::string path)
 		// base case when there are no more folders to look through, as a folder should have no extension
 		if (entry.path().has_extension())
 		{
-			if (ImGui::TreeNodeEx(pathString.c_str()))
+			std::string extension = entry.path().extension().string();
+			if (extension == ".filthyscene")
+			{
+				if (ImGui::Button(pathString.c_str()))
+				{
+					// load a scene from this filePath
+					SceneManager::Instance()->LoadSceneByPath(pathString.c_str());
+				}
+			}
+			else if (ImGui::TreeNodeEx(pathString.c_str()))
 			{
 				ImGui::TreePop();
 			}
@@ -72,18 +81,18 @@ Game::Game()
 	// create resource manager
 	ResourceManager::Instance(Renderer::Instance()->getRenderer());
 
+	SceneManager::Instance(physicsEngine, &renderCamera);
+
 	ImGui::CreateContext();
 	ImGuiSDL::Initialize(Renderer::Instance()->getRenderer(), SCREEN_WIDTH, SCREEN_HEIGHT);
 
-
+	SceneManager::Instance()->LoadSceneByPath("../Assets/Scenes/Level1.filthyscene");
 
 	// ##### hard-coding ##### //
 
 
 	// replace this with a build list of scenes and load the first one in
-	Level1 = new Scene("Level1", physicsEngine, &camera, RENDER_VIEW_WIDTH, RENDER_VIEW_HEIGHT);
-
-	currentSelectedEntity = Level1->getEntityByName("Player");
+	currentSelectedEntity = SceneManager::Instance()->getCurrentScene()->getEntityByName("Player");
 }
 
 Game::~Game()
@@ -124,7 +133,7 @@ bool Game::Tick(void)
 	if (!EditMode)
 	{
 		// scene tick
-		Level1->Tick();
+		SceneManager::Instance()->getCurrentScene()->Tick();
 
 		// update physics
 		physicsEngine->Tick();
@@ -134,7 +143,7 @@ bool Game::Tick(void)
 		// clicking to view an entity in the inspector
 		if (InputManager::Instance()->mouseButtons && SDL_BUTTON_LMASK)
 		{
-			Level1->CheckPointCollideEntityScreenSpace(Vector2(mousex, mousey), clickedObject);
+			SceneManager::Instance()->getCurrentScene()->CheckPointCollideEntityScreenSpace(Vector2(mousex, mousey), clickedObject);
 			if (clickedObject != nullptr)
 			{
 				// reset last entities edit mode
@@ -146,7 +155,7 @@ bool Game::Tick(void)
 			}
 		}
 
-		Level1->EditorTick();
+		SceneManager::Instance()->getCurrentScene()->EditorTick();
 	}
 
 	// check for application quit
@@ -200,7 +209,7 @@ void Game::UpdateRenderer(void)
 	Renderer::Instance()->ClearRenderer();
 
 	// draw the level, and all entities inside it
-	Level1->Draw();
+	SceneManager::Instance()->getCurrentScene()->Draw();
 
 	// render GUI
 	ImGui::Render();
@@ -221,14 +230,14 @@ void Game::DrawHeirarchy()
 {
 	// Heirarchy Window
 	ImGui::Begin("Heirarchy", &heirarchyOpen);
-	ImGui::TextColored(ImVec4(1, 0, 1, 1), Level1->GetName().c_str());
+	ImGui::TextColored(ImVec4(1, 0, 1, 1), SceneManager::Instance()->getCurrentScene()->GetName().c_str());
 
 	// populate heirarchy
 	if (ImGui::BeginChild("EntityList"))
 	{
 		ImGui::CheckboxFlags("Double Click to open", (unsigned int*)&treeNodeDoubleClick, ImGuiTreeNodeFlags_OpenOnDoubleClick);
 		ImGui::Text("");
-		Level1->PopulateHeirarchy();
+		SceneManager::Instance()->getCurrentScene()->PopulateHeirarchy();
 	}
 
 	ImGui::EndChild();
