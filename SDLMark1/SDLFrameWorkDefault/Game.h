@@ -3,24 +3,29 @@
 #ifndef GAME_H
  #define GAME_H
 
-
+ // 3rd party includes
 #include "imgui.h"
 #include "imgui_sdl.h"
 
 #include <SDL.h>
 #include <GL/gl3w.h>
+
+// c++ includes
 #include <stdio.h>
 #include <iostream>
 #include <thread>
 #include <memory>
+#include <filesystem>
 
+// filthy includes
 #define RENDER_DEBUG
+
+#include "EngineStructs.h"
 
 #include "Renderer.h"
 #include "ResourceManager.h"
 #include "PhysicsEngine.h"
 #include "InputManager.h"
-#include "EngineStructs.h"
 #include "Scene.h"
 #include "Components.h"
 #include "Time.h"
@@ -57,10 +62,20 @@ private:
 	Entity* currentSelectedEntity;
 
 	bool firstToolOpen = true;
+
+	// Heirarchy Variables
 	bool heirarchyOpen = true;
 	bool treeNodeDoubleClick = false;
+
+	// Inspector Variables
 	bool inspectorOpen = true;
 	Entity* clickedObject;
+
+	// Scene Picker Variables
+	bool scenePickerOpen = true;
+	std::string assetsPath = "../Assets/";
+
+	// Debug window variables
 	bool debugOpen = true;
 	float mousex, mousey;
 
@@ -76,6 +91,7 @@ private:
 
 	void DrawHeirarchy();
 	void DrawInspector();
+	void DrawScenePicker();
 	void DrawEngineDebug();
 };
 

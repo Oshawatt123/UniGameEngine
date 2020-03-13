@@ -7,20 +7,25 @@ Remember to clean up, and add release functions to all your systems (especially 
 Fix smol leak in input manager ( might just be SDL2 allocating enough memory, seems to plateau with time)
 
 ####### TO DO #######
+[DONE] File system viewer
+Scene saving
+Multiple scenes
+Seperate Scene and Game camera
+Widgets for invisible objects (e.g camera)
 [DONE] Vector2 class & operator overloading
 [DONE] Collision detection
 [DONE] Move debug draws into the renderer class so that they are relative to the camera
 [DONE] GUI OMFG ITSSOTSUTPIDHDSDFNEOFO
 Component auto-add if required components are not present
 [DONE] Map files possible rework
-[DONE] Scene files & scene loading
+[DONE] Scene files & scene loading from explorer
 Render layers & grouping
 [DONE] Scrolling tilemaps
 [DONE] camera follow
 Sprite Animations
 tilemap collisions
 instantiation
-Delta-Time
+[DONE] Delta-Time
 
 ####### MAYBE #######
 Tile Component

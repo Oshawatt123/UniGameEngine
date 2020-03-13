@@ -20,6 +20,10 @@ const int TILE_WIDTH = 32;
 // FILE PATH MACROS
 const std::string DEFAULT_TILE_PATH = "..Assets/Sprites/Floor_Placeholder.bmp";
 
+// ImGui flags
+//static ImGuiTreeNodeFlags heirarchyFlags = ImGuiTreeNodeFlags_OpenOnArrow | ImGuiTreeNodeFlags_OpenOnDoubleClick | ImGuiTreeNodeFlags_SpanAvailWidth;
+//static ImGuiTreeNodeFlags fileViewerFlags = ImGuiTreeNodeFlags_OpenOnArrow | ImGuiTreeNodeFlags_OpenOnDoubleClick | ImGuiTreeNodeFlags_SpanAvailWidth;
+
 static const float f_zero =	 0.0f;
 static const float f_min =	-10000;
 static const float f_max =   10000;

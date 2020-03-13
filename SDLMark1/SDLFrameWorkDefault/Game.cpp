@@ -1,5 +1,31 @@
 #include "Game.h"
 
+void FollowFilePath(std::string path)
+{
+	// I AM THE BASE CASE
+	for (const auto& entry : std::filesystem::directory_iterator(path))
+	{
+		std::string pathString = entry.path().string();
+
+		// base case when there are no more folders to look through, as a folder should have no extension
+		if (entry.path().has_extension())
+		{
+			if (ImGui::TreeNodeEx(pathString.c_str()))
+			{
+				ImGui::TreePop();
+			}
+		}
+		else
+		{
+			if (ImGui::TreeNodeEx(pathString.c_str()))
+			{
+				// warning : recursive
+				FollowFilePath(entry.path().string());
+				ImGui::TreePop();
+			}
+		}
+	}
+}
 
 SDL_GLContext gl_context;
 
@@ -58,7 +84,6 @@ Game::Game()
 	Level1 = new Scene("Level1", physicsEngine, &camera, RENDER_VIEW_WIDTH, RENDER_VIEW_HEIGHT);
 
 	currentSelectedEntity = Level1->getEntityByName("Player");
-
 }
 
 Game::~Game()
@@ -167,6 +192,8 @@ void Game::UpdateRenderer(void)
 
 	DrawInspector();
 
+	DrawScenePicker();
+
 	DrawEngineDebug();
 
 	// Clear Renderer buffer from last frame
@@ -245,6 +272,36 @@ void Game::DrawInspector()
 	else
 	{
 		ImGui::TextColored(ImVec4(1, 1, 0, 1), "No Entity Selected");
+	}
+	ImGui::End();
+}
+
+void Game::DrawScenePicker()
+{
+	ImGui::Begin("Scene Picker", &scenePickerOpen);
+	for (const auto& entry : std::filesystem::directory_iterator(assetsPath))
+	{
+		std::string pathString = entry.path().string();
+		std::string pathExtension = entry.path().extension().string();
+		std::string fullFile = pathString + pathExtension;
+		ImGui::BeginChild("Assets");
+		// warning: recursive
+		if (entry.path().has_extension())
+		{
+			if (ImGui::TreeNodeEx(pathString.c_str()))
+			{
+				ImGui::TreePop();
+			}
+		}
+		else
+		{
+			if (ImGui::TreeNodeEx(pathString.c_str() ))
+			{
+				FollowFilePath(entry.path().string());
+				ImGui::TreePop();
+			}
+		}
+		ImGui::EndChild();
 	}
 	ImGui::End();
 }

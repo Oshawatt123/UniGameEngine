@@ -145,7 +145,7 @@ void Scene::PopulateHeirarchy()
 {
 	for (auto entity : EntityList)
 	{
-		if (ImGui::TreeNode(entity->name.c_str()))
+		if (ImGui::TreeNodeEx(entity->name.c_str()))
 		{
 			ImGui::TreePop();
 		}
