@@ -52,6 +52,13 @@ public:
 		return Vector2(m_bitMapPack.width, m_bitMapPack.height);
 	}
 
+	void PopulateInspector() override
+	{
+		ImGui::Text(m_filePath.c_str());
+		ImVec2 texSize = ImVec2(m_bitMapPack.width, m_bitMapPack.height);
+		ImGui::Image(m_bitMapPack.texture, texSize);
+	}
+
 	std::string GetSaveData()
 	{
 		std::string saveData;

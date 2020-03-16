@@ -46,6 +46,7 @@ public:
 
 	virtual ~Component() {};
 
+	virtual void PopulateInspector() {};
 	virtual std::string GetSaveData() { return ""; };
 };
 

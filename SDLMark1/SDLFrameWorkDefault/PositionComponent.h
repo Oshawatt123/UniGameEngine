@@ -32,7 +32,6 @@ public:
 	}
 
 	Vector2 getPos() { return Position; }
-	Vector2& getPosAddr() { return Position; }
 
 	void setPosition(int x, int y)
 	{
@@ -54,6 +53,12 @@ public:
 	void Init() override
 	{
 		name = "PositionComponent";
+	}
+
+	void PopulateInspector() override
+	{		
+		ImGui::DragScalar("X Position", ImGuiDataType_Float, &Position.x, 0.5f, &f_min, &f_max, "%f", 1.0f);
+		ImGui::DragScalar("Y Position", ImGuiDataType_Float, &Position.y, 0.5f, &f_min, &f_max, "%f", 1.0f);
 	}
 
 	void EditorTick() override

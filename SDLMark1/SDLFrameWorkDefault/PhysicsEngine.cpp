@@ -17,10 +17,18 @@ bool PhysicsEngine::Tick()
 				bool collision = AABB(objectA->getComponent<CollisionComponent>().collider, objectB->getComponent<CollisionComponent>().collider);
 				if (collision)
 				{
-					std::cout << "Collision" << std::endl;
+					objectA->getComponent<CollisionComponent>().colliding = true;
+					objectA->getComponent<CollisionComponent>().other = objectB;
+
+					objectB->getComponent<CollisionComponent>().colliding = true;
+					objectB->getComponent<CollisionComponent>().other = objectA;
+
+					std::cout << objectA->name << " : " << objectB->name << std::endl;
 				}
 			}
 		}
+		objectA->getComponent<CollisionComponent>().colliding = false;
+		objectA->getComponent<CollisionComponent>().other = nullptr;
 	}
 	return true;
 }
