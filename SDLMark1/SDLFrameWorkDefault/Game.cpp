@@ -141,7 +141,7 @@ bool Game::Tick(void)
 	else
 	{
 		// clicking to view an entity in the inspector
-		if (InputManager::Instance()->mouseButtons && SDL_BUTTON_LMASK)
+		if ((InputManager::Instance()->mouseButtons && SDL_BUTTON(SDL_BUTTON_LEFT)))
 		{
 			SceneManager::Instance()->getCurrentScene()->CheckPointCollideEntityScreenSpace(Vector2(mousex, mousey), clickedObject);
 			if (clickedObject != nullptr)
