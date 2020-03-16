@@ -50,9 +50,22 @@ public:
 	virtual std::string GetSaveData() { return ""; };
 };
 
+inline int getEntityID()
+{
+	static int lastEntityID = 0;
+	return lastEntityID++;
+}
+
 class Entity
 {
 public:
+
+	int ID;
+
+	Entity()
+	{
+		ID = getEntityID();
+	}
 
 	std::string name = "What a creative name!";
 

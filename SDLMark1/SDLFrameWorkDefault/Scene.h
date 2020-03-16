@@ -49,10 +49,11 @@ public:
 	void Draw();
 
 	void AddEntity(Entity* const EntityToAdd);
+	void RemoveEntity(Entity* const EntityToRemove);
 
 	std::string GetName();
 
-	void PopulateHeirarchy();
+	Entity* PopulateHeirarchy();
 
 	Entity* getEntityByName(std::string name);
 

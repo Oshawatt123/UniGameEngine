@@ -144,21 +144,35 @@ void Scene::AddEntity(Entity* const EntityToAdd)
 	}
 }
 
+void Scene::RemoveEntity(Entity* EntityToRemove)
+{
+	EntityList.erase(std::remove(EntityList.begin(), EntityList.end(), EntityToRemove), EntityList.end());
+}
+
 std::string Scene::GetName()
 {
 	return SceneName;
 }
 
-void Scene::PopulateHeirarchy()
+Entity* Scene::PopulateHeirarchy()
 {
 	for (auto entity : EntityList)
 	{
-		if (ImGui::TreeNodeEx(entity->name.c_str()))
+		std::string labelString = entity->ID + " " + entity->name;
+		if (ImGui::Selectable(labelString.c_str()))
 		{
-			ImGui::TreePop();
+			return entity;
+		}
+		if (ImGui::BeginPopupContextItem("EntityContextMenu"))
+		{
+			if (ImGui::Selectable("Delete"))
+				RemoveEntity(entity);
+
+			ImGui::EndPopup();
 		}
 	}
 	ImGui::Button("TestEntity");
+	return nullptr;
 }
 
 Entity* Scene::getEntityByName(std::string name)
@@ -178,30 +192,29 @@ bool Scene::CheckPointCollideEntityScreenSpace(Vector2 point, Entity*& outEntity
 	for (auto object : EntityList)
 	{
 		Vector2 otherPos = object->getComponent<PositionComponent>().getPos();
+
 		// Is Point X to the RIGHT of the object's LEFT edge?
-		if (point.x + camera->x > otherPos.x)
+		if (point.x + camera->x > otherPos.x + camera->x)
 		{
 			// Is Point X to the LEFT of the object's RIGHT edge?
-			if (point.x + camera->x < otherPos.x + TILE_WIDTH)
+			if (point.x + camera->x < otherPos.x + TILE_WIDTH + camera->x)
 			{
 				// Is Point Y BELOW the object's TOP edge?
-				if (point.y + camera->y > otherPos.y)
+				if (point.y + camera->y > otherPos.y + camera->y)
 				{
 					// Is Point Y ABOVE the object's BOTTOM edge?
-					if (point.y + camera->y < otherPos.y + TILE_WIDTH)
+					if (point.y + camera->y < otherPos.y + TILE_WIDTH + camera->y)
 					{
 						outEntity = object;
 						Log("Clicked an entity!", DEBUG);
 						Log(outEntity->name.c_str(), DEBUG);
 						return true;
 					}
-					return false;
 				}
-				return false;
 			}
-			return false;
 		}
 	}
+	outEntity = nullptr;
 	return false;
 }
 

@@ -147,7 +147,8 @@ bool Game::Tick(void)
 			if (clickedObject != nullptr)
 			{
 				// reset last entities edit mode
-				currentSelectedEntity->editMode = false;
+				if(currentSelectedEntity)
+					 currentSelectedEntity->editMode = false;
 
 				// set new entity and set their edit mode
 				currentSelectedEntity = clickedObject;
@@ -237,10 +238,25 @@ void Game::DrawHeirarchy()
 	{
 		ImGui::CheckboxFlags("Double Click to open", (unsigned int*)&treeNodeDoubleClick, ImGuiTreeNodeFlags_OpenOnDoubleClick);
 		ImGui::Text("");
-		SceneManager::Instance()->getCurrentScene()->PopulateHeirarchy();
+		Entity* temp = SceneManager::Instance()->getCurrentScene()->PopulateHeirarchy();
+		if (temp)
+			currentSelectedEntity = temp;
 	}
 
+
 	ImGui::EndChild();
+
+	ImGui::Text("New entity jazz");
+	if (ImGui::BeginPopupContextItem("New Entity"))
+	{
+		if (ImGui::Selectable("Empty Object"))
+		{
+			Entity* newEntity = new Entity();
+			newEntity->addComponent<PositionComponent>();
+			SceneManager::Instance()->getCurrentScene()->AddEntity(newEntity);
+		}
+		ImGui::EndPopup();
+	}
 	ImGui::End();
 }
 
@@ -258,6 +274,24 @@ void Game::DrawInspector()
 			component->PopulateInspector();
 			ImGui::Text("");
 		}
+
+		if (ImGui::Button("Add Component"))
+			ImGui::OpenPopup("ComponentAddPopUp");
+		if (ImGui::BeginPopup("ComponentAddPopUp"))
+		{
+			ImGui::Text("Wow some text");
+			ImGui::Text("OMG some more text!!!");
+			if (ImGui::Selectable("Sprite Component"))
+				if (currentSelectedEntity->hasComponent<SpriteComponent>() == false)
+				{
+					currentSelectedEntity->addComponent<SpriteComponent>();
+					// we must init due to the nature of how init is called
+					currentSelectedEntity->getComponent<SpriteComponent>().Init();
+				}
+
+			ImGui::EndPopup();
+		}
+
 	}
 	else
 	{
@@ -268,7 +302,7 @@ void Game::DrawInspector()
 
 void Game::DrawScenePicker()
 {
-	ImGui::Begin("Scene Picker", &scenePickerOpen);
+	ImGui::Begin("Assets", &scenePickerOpen);
 	for (const auto& entry : std::filesystem::directory_iterator(assetsPath))
 	{
 		std::string pathString = entry.path().string();

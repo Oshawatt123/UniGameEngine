@@ -8,6 +8,8 @@ class SpriteComponent : public Component
 {
 private:
 
+	std::string defaultPath = "../Assets/Sprites/ElvisPretzels.bmp";
+
 	PositionComponent* m_positionComponent;
 
 	BitMapPack m_bitMapPack;
@@ -17,7 +19,11 @@ public:
 
 	std::string m_filePath;
 
-	SpriteComponent() = default;
+	SpriteComponent()
+	{
+		m_bitMapPack = ResourceManager::Instance()->LoadBitMap(defaultPath, true);
+		m_filePath = defaultPath;
+	}
 	SpriteComponent(std::string path)
 	{
 		m_bitMapPack = ResourceManager::Instance()->LoadBitMap(path, true);
