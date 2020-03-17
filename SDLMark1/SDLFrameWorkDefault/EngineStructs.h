@@ -52,13 +52,6 @@ enum WindowEvents
 	WinEvent_QUIT=1
 };
 
-enum ComponentType
-{
-	COMPONENT_BASE,
-	COMPONENT_TRANSFORM,
-	COMPONENT_SPRITE
-};
-
 enum Verbosity
 {
 	EVERYONE,

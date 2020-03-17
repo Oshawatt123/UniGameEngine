@@ -167,6 +167,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BlackBoard.h" />
+    <ClInclude Include="CameraComponent.h" />
     <ClInclude Include="CharacterController.h" />
     <ClInclude Include="CollisionComponent.h" />
     <ClInclude Include="Components.h" />

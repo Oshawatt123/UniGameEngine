@@ -279,14 +279,26 @@ void Game::DrawInspector()
 			ImGui::OpenPopup("ComponentAddPopUp");
 		if (ImGui::BeginPopup("ComponentAddPopUp"))
 		{
-			ImGui::Text("Wow some text");
-			ImGui::Text("OMG some more text!!!");
 			if (ImGui::Selectable("Sprite Component"))
 				if (currentSelectedEntity->hasComponent<SpriteComponent>() == false)
 				{
 					currentSelectedEntity->addComponent<SpriteComponent>();
 					// we must init due to the nature of how init is called
 					currentSelectedEntity->getComponent<SpriteComponent>().Init();
+				}
+			if (ImGui::Selectable("Collision Component"))
+				if (currentSelectedEntity->hasComponent<CollisionComponent>() == false)
+				{
+					currentSelectedEntity->addComponent<CollisionComponent>();
+					// we must init due to the nature of how init is called
+					currentSelectedEntity->getComponent<CollisionComponent>().Init();
+				}
+			if (ImGui::Selectable("Character Controller"))
+				if (currentSelectedEntity->hasComponent<CharacterController>() == false)
+				{
+					currentSelectedEntity->addComponent<CharacterController>();
+					// we must init due to the nature of how init is called
+					currentSelectedEntity->getComponent<CharacterController>().Init();
 				}
 
 			ImGui::EndPopup();

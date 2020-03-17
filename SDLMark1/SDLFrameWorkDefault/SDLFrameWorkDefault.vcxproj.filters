@@ -191,5 +191,8 @@
     <ClInclude Include="Time.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="CameraComponent.h">
+      <Filter>Header Files\ECS</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

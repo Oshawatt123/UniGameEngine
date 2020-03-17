@@ -1,0 +1,52 @@
+\hypertarget{class_entity}{}\doxysection{Entity Class Reference}
+\label{class_entity}\index{Entity@{Entity}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_entity_aa22a085a7e57366fc81501e5a0ca9b04}\label{class_entity_aa22a085a7e57366fc81501e5a0ca9b04}} 
+void {\bfseries Tick} ()
+\item 
+\mbox{\Hypertarget{class_entity_a4dd2a634b00a4c542781c39578130693}\label{class_entity_a4dd2a634b00a4c542781c39578130693}} 
+void {\bfseries Editor\+Tick} ()
+\item 
+\mbox{\Hypertarget{class_entity_aea1c1568b4123d989c5310697030ad77}\label{class_entity_aea1c1568b4123d989c5310697030ad77}} 
+bool {\bfseries is\+Active} () const
+\item 
+\mbox{\Hypertarget{class_entity_a2a0f7811f8c3f8726be1549e1c4acba4}\label{class_entity_a2a0f7811f8c3f8726be1549e1c4acba4}} 
+bool {\bfseries is\+Enabled} () const
+\item 
+\mbox{\Hypertarget{class_entity_aeeaef7d2a48cc5a114dd5310a8d0e1a2}\label{class_entity_aeeaef7d2a48cc5a114dd5310a8d0e1a2}} 
+const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_component}{Component}} $>$ $>$ {\bfseries get\+Components} ()
+\item 
+\mbox{\Hypertarget{class_entity_a691dbe5f9ec930c27af2af0b97907a9e}\label{class_entity_a691dbe5f9ec930c27af2af0b97907a9e}} 
+void {\bfseries destroy} ()
+\item 
+\mbox{\Hypertarget{class_entity_aa622a8d79153a90d0e3b9b992ca2d38b}\label{class_entity_aa622a8d79153a90d0e3b9b992ca2d38b}} 
+{\footnotesize template$<$typename T $>$ }\\bool {\bfseries has\+Component} () const
+\item 
+\mbox{\Hypertarget{class_entity_a7bf861ddc1ae381796565481bbb873ef}\label{class_entity_a7bf861ddc1ae381796565481bbb873ef}} 
+{\footnotesize template$<$typename T , typename... T\+Args$>$ }\\T \& {\bfseries add\+Component} (T\+Args \&\&... m\+Args)
+\item 
+\mbox{\Hypertarget{class_entity_ab67b05516196a4ec97c5b9fd13638bbb}\label{class_entity_ab67b05516196a4ec97c5b9fd13638bbb}} 
+{\footnotesize template$<$typename T $>$ }\\T \& {\bfseries get\+Component} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_entity_a931b21fbdebb1a5963b4bcab5df128f5}\label{class_entity_a931b21fbdebb1a5963b4bcab5df128f5}} 
+std\+::string {\bfseries name} = \char`\"{}What a creative name!\char`\"{}
+\item 
+\mbox{\Hypertarget{class_entity_a164f61a1e96badb6bc873ec2ef01ea6d}\label{class_entity_a164f61a1e96badb6bc873ec2ef01ea6d}} 
+std\+::string {\bfseries tag} = \char`\"{}\char`\"{}
+\item 
+\mbox{\Hypertarget{class_entity_a6a249abbfcf8d6427561f14724f4f95a}\label{class_entity_a6a249abbfcf8d6427561f14724f4f95a}} 
+bool {\bfseries edit\+Mode}
+\item 
+\mbox{\Hypertarget{class_entity_a844794654f15fa342f4b02e2faaf395f}\label{class_entity_a844794654f15fa342f4b02e2faaf395f}} 
+bool {\bfseries enabled} = true
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+E\+C\+S.\+h\end{DoxyCompactItemize}
