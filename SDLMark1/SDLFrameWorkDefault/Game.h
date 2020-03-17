@@ -49,8 +49,7 @@ private:
 	PhysicsEngine* physicsEngine;
 	Time* _Time;
 
-	SDL_Rect camera = { 0, 0, SCREEN_WIDTH, SCREEN_HEIGHT};
-	SDL_Rect renderCamera;
+	SDL_Rect editorCamera = { 0, 0, SCREEN_WIDTH, SCREEN_HEIGHT };
 
 	// PLACEHOLDER SCENE
 	Scene* Level1;

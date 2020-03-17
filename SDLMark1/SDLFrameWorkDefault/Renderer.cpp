@@ -22,8 +22,8 @@ void Renderer::Draw(BitMapPack bitMapPack, SDL_Rect* destRect, SDL_Rect* srcRect
 void Renderer::Draw(BitMapPack bitMapPack, int x_in, int y_in, SDL_Rect* srcRect)
 {
 	SDL_Rect* destRect = new SDL_Rect();
-	destRect->x = x_in -camera->x;
-	destRect->y = y_in -camera->y;
+	destRect->x = x_in;
+	destRect->y = y_in;
 	destRect->w = bitMapPack.width;
 	destRect->h = bitMapPack.height;
 
@@ -51,7 +51,7 @@ Renderer* Renderer::Instance()
 	return sInstance;
 }
 SDL_Window* renderWindow;
-Renderer* Renderer::Instance(SDL_Window* Window, SDL_Rect* camera, SDL_Rect* renderCamera)
+Renderer* Renderer::Instance(SDL_Window* Window)
 {
 	renderWindow = Window;
 	if (sInstance == NULL)
@@ -59,8 +59,6 @@ Renderer* Renderer::Instance(SDL_Window* Window, SDL_Rect* camera, SDL_Rect* ren
 		Log("Initializing renderer with a renderer", DEBUG);
 		sInstance = new Renderer(renderWindow);
 	}
-	sInstance->camera = camera;
-	sInstance->renderCamera = renderCamera;
 	return sInstance;
 }
 
@@ -101,10 +99,10 @@ void Renderer::UpdateRenderer()
 	{
 		SDL_SetRenderDrawColor(m_pRenderer, line.color.r, line.color.g, line.color.b, line.color.a);
 		SDL_RenderDrawLine(m_pRenderer,
-			line.start.x - camera->x,
-			line.start.y - camera->y,
-			line.end.x - camera->x,
-			line.end.y - camera->y);
+			line.start.x,
+			line.start.y,
+			line.end.x,
+			line.end.y);
 	}
 	EditorRenderLines.clear();
 

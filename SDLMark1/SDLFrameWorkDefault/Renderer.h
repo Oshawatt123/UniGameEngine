@@ -24,8 +24,6 @@ private:
 
 	SDL_Renderer* m_pRenderer;
 
-	SDL_Rect* camera;
-	SDL_Rect* renderCamera;
 	std::vector<Line> EditorRenderLines;
 
 public:
@@ -37,7 +35,7 @@ public:
 
 	static Renderer* Instance();
 
-	static Renderer* Instance(SDL_Window* Window, SDL_Rect* camera, SDL_Rect* renderCamera);
+	static Renderer* Instance(SDL_Window* Window);
 
 	SDL_Renderer* getRenderer();
 

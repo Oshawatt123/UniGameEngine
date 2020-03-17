@@ -8,4 +8,6 @@
 #include "CharacterController.h"
 #include "CollisionComponent.h"
 
+#include "CameraComponent.h"
+
 #include "ECS.h"

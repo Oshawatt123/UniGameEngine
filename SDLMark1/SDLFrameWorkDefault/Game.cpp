@@ -67,13 +67,13 @@ Game::Game()
 	}
 
 	// set up render viewport
-	renderCamera.x = SCREEN_WIDTH * 0.25;
-	renderCamera.y = SCREEN_HEIGHT * 0.05;
-	renderCamera.w = RENDER_VIEW_WIDTH;
-	renderCamera.h = RENDER_VIEW_HEIGHT;
+	editorCamera.x = SCREEN_WIDTH * 0.25;
+	editorCamera.y = SCREEN_HEIGHT * 0.05;
+	editorCamera.w = RENDER_VIEW_WIDTH;
+	editorCamera.h = RENDER_VIEW_HEIGHT;
 
 	// create renderer
-	Renderer::Instance(m_Window, &camera, &renderCamera);
+	Renderer::Instance(m_Window);
 
 	// create physics engine
 	physicsEngine = new PhysicsEngine();
@@ -81,7 +81,7 @@ Game::Game()
 	// create resource manager
 	ResourceManager::Instance(Renderer::Instance()->getRenderer());
 
-	SceneManager::Instance(physicsEngine, &renderCamera);
+	SceneManager::Instance(physicsEngine, &editorCamera);
 
 	ImGui::CreateContext();
 	ImGuiSDL::Initialize(Renderer::Instance()->getRenderer(), SCREEN_WIDTH, SCREEN_HEIGHT);
@@ -279,6 +279,8 @@ void Game::DrawInspector()
 			ImGui::OpenPopup("ComponentAddPopUp");
 		if (ImGui::BeginPopup("ComponentAddPopUp"))
 		{
+			Log("FUNCTION PLEEASSEEEE", DEBUG);
+			// FUNCTION PLEASEEEEEEEEEEEEEEE
 			if (ImGui::Selectable("Sprite Component"))
 				if (currentSelectedEntity->hasComponent<SpriteComponent>() == false)
 				{
@@ -299,6 +301,13 @@ void Game::DrawInspector()
 					currentSelectedEntity->addComponent<CharacterController>();
 					// we must init due to the nature of how init is called
 					currentSelectedEntity->getComponent<CharacterController>().Init();
+				}
+			if (ImGui::Selectable("Camera"))
+				if (currentSelectedEntity->hasComponent<CameraComponent>() == false)
+				{
+					currentSelectedEntity->addComponent<CameraComponent>();
+					// we must init due to the nature of how init is called
+					currentSelectedEntity->getComponent<CameraComponent>().Init();
 				}
 
 			ImGui::EndPopup();

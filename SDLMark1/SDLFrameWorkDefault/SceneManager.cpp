@@ -41,7 +41,7 @@ void SceneManager::LoadScene(std::string sceneName)
 	std::string path = "../Assets/Scenes/" + sceneName + ".filthyscene";
 	if ((loadedScenes.find(path) == loadedScenes.end()))
 	{
-		Scene* newScene = new Scene(pe, camera, 1920, 1080);
+		Scene* newScene = new Scene(pe, 1920, 1080);
 		loadedScenes.insert(std::pair<std::string, Scene*>(path, newScene));
 	}
 	LoadScene(loadedScenes[path]);
@@ -71,7 +71,7 @@ void SceneManager::LoadSceneByPath(std::string path)
 	// voila!!!
 	if ((loadedScenes.find(path) == loadedScenes.end()))
 	{
-		Scene* newScene = new Scene(levelName, pe, camera, 1920, 1080);
+		Scene* newScene = new Scene(levelName, pe, 1920, 1080);
 		loadedScenes.insert(std::pair<std::string, Scene*>(path, newScene));
 	}
 	LoadScene(loadedScenes[path]);

@@ -34,13 +34,13 @@ private:
 	int yIndex;
 	int xIndex;
 
-	SDL_Rect* camera;
+	Vector2 gameCamera;
 	int SW, SH;
 
 public:
 
-	Scene(PhysicsEngine* PE, SDL_Rect* camera, int screen_width, int screen_height);
-	Scene(std::string name, PhysicsEngine* PE, SDL_Rect* camera, int screen_width, int screen_height);
+	Scene(PhysicsEngine* PE, int screen_width, int screen_height);
+	Scene(std::string name, PhysicsEngine* PE, int screen_width, int screen_height);
 
 	// updates every component except for rendering
 	void Tick();

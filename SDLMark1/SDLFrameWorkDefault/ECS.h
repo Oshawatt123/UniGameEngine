@@ -10,6 +10,8 @@
 
 #include "imgui.h"
 
+#include "BlackBoard.h"
+
 class Entity;
 class Component;
 
@@ -40,7 +42,7 @@ public:
 
 	Entity* entity;
 
-	virtual void Init() = 0;
+	virtual void Init() {};
 	virtual void Tick() {};
 	virtual void EditorTick() {};
 
@@ -50,12 +52,6 @@ public:
 	virtual std::string GetSaveData() { return ""; };
 };
 
-inline int getEntityID()
-{
-	static int lastEntityID = 0;
-	return lastEntityID++;
-}
-
 class Entity
 {
 public:
@@ -64,7 +60,7 @@ public:
 
 	Entity()
 	{
-		ID = getEntityID();
+		ID = BlackBoard::Instance()->getIDNumber();
 	}
 
 	std::string name = "What a creative name!";

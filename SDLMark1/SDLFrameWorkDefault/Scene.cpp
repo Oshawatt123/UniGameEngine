@@ -8,21 +8,19 @@ void AddBrace(std::string* data, std::string brace, bool end)
 		*data = *data + "</" + brace + ">";
 }
 
-Scene::Scene(PhysicsEngine* PE, SDL_Rect* camera, int screen_width, int screen_height)
+Scene::Scene(PhysicsEngine* PE, int screen_width, int screen_height)
 {
 	SceneBuildNumber = 0;
 	SceneName = "DefaultSceneName";
-	this->camera = camera;
 	SW = screen_width;
 	SH = screen_height;
 	SceneInit(PE);
 }
 
-Scene::Scene(std::string name, PhysicsEngine* PE, SDL_Rect* camera, int screen_width, int screen_height)
+Scene::Scene(std::string name, PhysicsEngine* PE, int screen_width, int screen_height)
 {
 	SceneBuildNumber = 0;
 	SceneName = name;
-	this->camera = camera;
 	SW = screen_width;
 	SH = screen_height;
 	SceneInit(PE);
@@ -35,11 +33,14 @@ void Scene::Tick()
 		if (entity->isEnabled())
 		{
 			entity->Tick();
-			if (entity->hasComponent<CharacterController>())
+			// move gameCamera to correct position
+			if (entity->hasComponent<CameraComponent>())
 			{
-				// world camera follow player & center over player
-				camera->x = entity->getComponent<PositionComponent>().getPos().x - SW / 2;
-				camera->y = entity->getComponent<PositionComponent>().getPos().y - SH / 2;
+				gameCamera.x = entity->getComponent<CameraComponent>().getPosition().x - SW / 2;
+				gameCamera.x += entity->getComponent<CameraComponent>().camOffset.x;
+
+				gameCamera.y = entity->getComponent<CameraComponent>().getPosition().y - SH / 2;
+				gameCamera.y += entity->getComponent<CameraComponent>().camOffset.y;
 			}
 		}
 	}
@@ -125,7 +126,7 @@ void Scene::Draw()
 		Xcounter++;
 	}
 
-	// Update Every GameObject
+	// Update Every GameObject's sprite component
    	for (auto entity : renderables)
 	{
 		if (entity->isEnabled())
@@ -158,7 +159,7 @@ Entity* Scene::PopulateHeirarchy()
 {
 	for (auto entity : EntityList)
 	{
-		std::string labelString = entity->ID + " " + entity->name;
+		std::string labelString = std::to_string(entity->ID) + " " + entity->name;
 		if (ImGui::Selectable(labelString.c_str()))
 		{
 			return entity;
@@ -194,16 +195,16 @@ bool Scene::CheckPointCollideEntityScreenSpace(Vector2 point, Entity*& outEntity
 		Vector2 otherPos = object->getComponent<PositionComponent>().getPos();
 
 		// Is Point X to the RIGHT of the object's LEFT edge?
-		if (point.x + camera->x > otherPos.x + camera->x)
+		if (point.x + gameCamera.x > otherPos.x + gameCamera.x)
 		{
 			// Is Point X to the LEFT of the object's RIGHT edge?
-			if (point.x + camera->x < otherPos.x + TILE_WIDTH + camera->x)
+			if (point.x + gameCamera.x < otherPos.x + TILE_WIDTH + gameCamera.x)
 			{
 				// Is Point Y BELOW the object's TOP edge?
-				if (point.y + camera->y > otherPos.y + camera->y)
+				if (point.y + gameCamera.y > otherPos.y + gameCamera.y)
 				{
 					// Is Point Y ABOVE the object's BOTTOM edge?
-					if (point.y + camera->y < otherPos.y + TILE_WIDTH + camera->y)
+					if (point.y + gameCamera.y < otherPos.y + TILE_WIDTH + gameCamera.y)
 					{
 						outEntity = object;
 						Log("Clicked an entity!", DEBUG);
