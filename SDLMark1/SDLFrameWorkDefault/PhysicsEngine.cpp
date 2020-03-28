@@ -12,7 +12,7 @@ bool PhysicsEngine::Tick()
 	{
 		for (Entity* objectB : Collidable)
 		{
-			if (objectA != objectB)
+			if (objectA->ID != objectB->ID)
 			{
 				bool collision = AABB(objectA->getComponent<CollisionComponent>().collider, objectB->getComponent<CollisionComponent>().collider);
 				if (collision)

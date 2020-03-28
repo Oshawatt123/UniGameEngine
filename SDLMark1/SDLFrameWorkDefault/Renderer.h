@@ -23,6 +23,8 @@ private:
 	static Renderer* sInstance;
 
 	SDL_Renderer* m_pRenderer;
+	Vector2 RenderOffset;
+	Vector2 EditorRenderOffset;
 
 	std::vector<Line> EditorRenderLines;
 
@@ -32,6 +34,10 @@ public:
 	void Draw(BitMapPack bitMapPack, int x, int y, SDL_Rect* srcRect = NULL);
 
 	void DrawLine(int x1, int y1, int x2, int y2, SDL_Color color = { 0,0,0,255 });
+
+	void SetRenderOffset(Vector2 renderOffset);
+
+	void SetRenderOffset(int x, int y);
 
 	static Renderer* Instance();
 

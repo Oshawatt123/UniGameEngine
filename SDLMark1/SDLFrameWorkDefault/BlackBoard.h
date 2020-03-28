@@ -12,6 +12,9 @@ public:
 
 	int getIDNumber();
 
+
+	bool EditMode;
+
 private:
 	BlackBoard();
 	~BlackBoard();

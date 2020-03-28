@@ -42,9 +42,12 @@ public:
 
 	void PopulateInspector()
 	{
+		ImGui::Text("WOW");
 		std::string tempString = "Collision state: " + std::string(colliding ? "True" : "False");
 		ImGui::Text(tempString.c_str());
 
+		ImGui::Text("Other Object: ");
+		ImGui::SameLine();
 		if (other != nullptr)
 		{
 			ImGui::Text(other->name.c_str());

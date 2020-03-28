@@ -22,8 +22,16 @@ void Renderer::Draw(BitMapPack bitMapPack, SDL_Rect* destRect, SDL_Rect* srcRect
 void Renderer::Draw(BitMapPack bitMapPack, int x_in, int y_in, SDL_Rect* srcRect)
 {
 	SDL_Rect* destRect = new SDL_Rect();
-	destRect->x = x_in;
-	destRect->y = y_in;
+	if (!blackboard->EditMode)
+	{
+		destRect->x = x_in - RenderOffset.x;
+		destRect->y = y_in - RenderOffset.y;
+	}
+	else
+	{
+		destRect->x = x_in - EditorRenderOffset.x;
+		destRect->y = y_in - EditorRenderOffset.y;
+	}
 	destRect->w = bitMapPack.width;
 	destRect->h = bitMapPack.height;
 
@@ -37,6 +45,16 @@ void Renderer::Draw(BitMapPack bitMapPack, int x_in, int y_in, SDL_Rect* srcRect
 void Renderer::DrawLine(int x1, int y1, int x2, int y2, SDL_Color color)
 {
 	EditorRenderLines.push_back(Line(x1, y1, x2, y2, color));
+}
+
+void Renderer::SetRenderOffset(Vector2 renderOffset)
+{
+	RenderOffset = renderOffset;
+}
+
+void Renderer::SetRenderOffset(int x, int y)
+{
+	SetRenderOffset(Vector2(x, y));
 }
 
 Renderer* Renderer::Instance()

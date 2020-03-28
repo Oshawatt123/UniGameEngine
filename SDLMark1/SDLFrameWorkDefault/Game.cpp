@@ -66,12 +66,6 @@ Game::Game()
 		return;
 	}
 
-	// set up render viewport
-	editorCamera.x = SCREEN_WIDTH * 0.25;
-	editorCamera.y = SCREEN_HEIGHT * 0.05;
-	editorCamera.w = RENDER_VIEW_WIDTH;
-	editorCamera.h = RENDER_VIEW_HEIGHT;
-
 	// create renderer
 	Renderer::Instance(m_Window);
 
@@ -81,7 +75,7 @@ Game::Game()
 	// create resource manager
 	ResourceManager::Instance(Renderer::Instance()->getRenderer());
 
-	SceneManager::Instance(physicsEngine, &editorCamera);
+	SceneManager::Instance(physicsEngine);
 
 	ImGui::CreateContext();
 	ImGuiSDL::Initialize(Renderer::Instance()->getRenderer(), SCREEN_WIDTH, SCREEN_HEIGHT);
@@ -99,6 +93,15 @@ Game::~Game()
 {
 	// CLEAN IN REVERSE ORDER!!
 
+	//SceneManager::Instance()->release();
+
+	ResourceManager::Instance()->release();	
+
+	delete(physicsEngine);
+	physicsEngine = nullptr;
+
+	//Renderer::Instance()->release();
+
 	if (m_Window)
 	{
 		ImGuiSDL::Deinitialize();
@@ -108,6 +111,9 @@ Game::~Game()
 
 		SDL_DestroyWindow(m_Window);
 	}
+
+	delete(_Time);
+	_Time = nullptr;
 
 	SDL_Quit();
 
@@ -130,7 +136,7 @@ bool Game::Tick(void)
 	//io.MouseWheel = static_cast<float>(InputManager::Instance()->mouseWheel);
 
 	// editor mode
-	if (!EditMode)
+	if (!blackboard->EditMode)
 	{
 		// scene tick
 		SceneManager::Instance()->getCurrentScene()->Tick();
@@ -356,7 +362,7 @@ void Game::DrawEngineDebug()
 	ImGui::Begin("Debug Window", &heirarchyOpen);
 	ImGui::Text(std::to_string(mousex).c_str());
 	ImGui::Text(std::to_string(mousey).c_str());
-	ImGui::Checkbox("EditMode", &EditMode);
+	ImGui::Checkbox("EditMode", &blackboard->EditMode);
  
 	ImGui::PlotLines("Frame time", _Time->deltaTimes, IM_ARRAYSIZE(_Time->deltaTimes));
 	ImGui::End();

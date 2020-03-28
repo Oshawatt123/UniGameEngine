@@ -2,13 +2,12 @@
 
 SceneManager* SceneManager::sInstance = NULL;
 
-SceneManager* SceneManager::Instance(PhysicsEngine* _pe, SDL_Rect* _camera)
+SceneManager* SceneManager::Instance(PhysicsEngine* _pe)
 {
 	if (sInstance == NULL)
 	{
 		sInstance = new SceneManager();
 		sInstance->pe = _pe;
-		sInstance->camera = _camera;
 	}
 	return sInstance;
 }
@@ -17,7 +16,7 @@ SceneManager* SceneManager::Instance()
 {
 	if (sInstance == NULL)
 	{
-		Log("SCENE MANAGER NOT INITIALIZED WITH PHYSICS ENGINE AND CAMERA!", DBERROR);
+		Log("SCENE MANAGER NOT INITIALIZED WITH PHYSICS ENGINE", DBERROR);
 		return 0;
 	}
 	return sInstance;
@@ -79,7 +78,15 @@ void SceneManager::LoadSceneByPath(std::string path)
 
 void SceneManager::SaveScene()
 {
-	std::string saveData = currentScene->generateSaveData();
+	std::ofstream outfile;
+	std::string scenePath = "../Assets/Scenes/" + currentScene->GetName() + ".filthyscene";
+	outfile.open(scenePath);
+	// do the save
+	outfile << currentScene->generateSaveData();
+
+	outfile.close();
+
+	currentScene->Reload();
 }
 
 Scene* SceneManager::getCurrentScene()

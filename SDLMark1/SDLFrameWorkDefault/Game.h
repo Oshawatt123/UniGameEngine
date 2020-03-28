@@ -49,8 +49,6 @@ private:
 	PhysicsEngine* physicsEngine;
 	Time* _Time;
 
-	SDL_Rect editorCamera = { 0, 0, SCREEN_WIDTH, SCREEN_HEIGHT };
-
 	// PLACEHOLDER SCENE
 	Scene* Level1;
 
@@ -58,7 +56,6 @@ private:
 
 
 	// Editor
-	bool EditMode = true;
 	Entity* currentSelectedEntity;
 
 	bool firstToolOpen = true;

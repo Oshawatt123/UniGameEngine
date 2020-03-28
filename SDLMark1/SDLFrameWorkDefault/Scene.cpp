@@ -14,7 +14,8 @@ Scene::Scene(PhysicsEngine* PE, int screen_width, int screen_height)
 	SceneName = "DefaultSceneName";
 	SW = screen_width;
 	SH = screen_height;
-	SceneInit(PE);
+	pe = PE;
+	SceneInit();
 }
 
 Scene::Scene(std::string name, PhysicsEngine* PE, int screen_width, int screen_height)
@@ -23,7 +24,8 @@ Scene::Scene(std::string name, PhysicsEngine* PE, int screen_width, int screen_h
 	SceneName = name;
 	SW = screen_width;
 	SH = screen_height;
-	SceneInit(PE);
+	pe = PE;
+	SceneInit();
 }
 
 void Scene::Tick()
@@ -36,11 +38,13 @@ void Scene::Tick()
 			// move gameCamera to correct position
 			if (entity->hasComponent<CameraComponent>())
 			{
-				gameCamera.x = entity->getComponent<CameraComponent>().getPosition().x - SW / 2;
-				gameCamera.x += entity->getComponent<CameraComponent>().camOffset.x;
+				gameCamera.x = entity->getComponent<CameraComponent>().getPosition().x;
+				gameCamera.x -= entity->getComponent<CameraComponent>().camOffset.x;
 
-				gameCamera.y = entity->getComponent<CameraComponent>().getPosition().y - SH / 2;
-				gameCamera.y += entity->getComponent<CameraComponent>().camOffset.y;
+				gameCamera.y = entity->getComponent<CameraComponent>().getPosition().y;
+				gameCamera.y -= entity->getComponent<CameraComponent>().camOffset.y;
+
+				Renderer::Instance()->SetRenderOffset(gameCamera);
 			}
 		}
 	}
@@ -265,8 +269,18 @@ Scene::~Scene()
 	}
 }
 
-void Scene::SceneInit(PhysicsEngine* PE)
+void Scene::Reload()
 {
+	SceneInit();
+}
+
+void Scene::SceneInit()
+{
+	// clean scene
+	EntityList.clear();
+	renderables.clear();
+
+
 	// load map
 	// needs to be replaced by an actual load function
 
@@ -380,7 +394,11 @@ void Scene::SceneInit(PhysicsEngine* PE)
 				if (std::string(entityData->first_attribute()->value()) == "CollisionComponent")
 				{
 					newEntity->addComponent<CollisionComponent>();
-					PE->AddCollidableObject(newEntity);
+					pe->AddCollidableObject(newEntity);
+				}
+				if (std::string(entityData->first_attribute()->value()) == "CameraComponent")
+				{
+					newEntity->addComponent<CameraComponent>();
 				}
 			}
 			else

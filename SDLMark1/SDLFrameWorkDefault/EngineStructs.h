@@ -1,6 +1,7 @@
 #pragma once
 #include "SDL.h"
 #include <string>
+#include "BlackBoard.h"
 
 #define ENGINE_EDITOR_MODE
 
@@ -15,6 +16,7 @@
 
 // REALLY USEFUL MACROS
 #define Log(string, verbosity) Logger::Instance()->LogString(string, verbosity)
+#define blackboard BlackBoard::Instance()
 const int TILE_WIDTH = 32;
 
 // FILE PATH MACROS

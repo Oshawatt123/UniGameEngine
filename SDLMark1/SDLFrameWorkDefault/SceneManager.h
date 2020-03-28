@@ -22,11 +22,10 @@ private:
 	int mNextBuildIndex;
 
 	PhysicsEngine* pe;
-	SDL_Rect* camera;
 
 public:
 
-	static SceneManager* Instance(PhysicsEngine* _pe, SDL_Rect* _camera);
+	static SceneManager* Instance(PhysicsEngine* _pe);
 
 	static SceneManager* Instance();
 

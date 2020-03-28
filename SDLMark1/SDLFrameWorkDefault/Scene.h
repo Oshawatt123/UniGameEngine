@@ -37,10 +37,15 @@ private:
 	Vector2 gameCamera;
 	int SW, SH;
 
+	PhysicsEngine* pe;
+
 public:
 
 	Scene(PhysicsEngine* PE, int screen_width, int screen_height);
 	Scene(std::string name, PhysicsEngine* PE, int screen_width, int screen_height);
+	~Scene();
+
+	void Reload();
 
 	// updates every component except for rendering
 	void Tick();
@@ -62,7 +67,6 @@ public:
 	std::string generateSaveData();
 
 private:
-	~Scene();
 
-	void SceneInit(PhysicsEngine* PE);
+	void SceneInit();
 };
