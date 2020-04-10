@@ -25,7 +25,8 @@ public:
 
 	void Tick() override
 	{
-		camPosition = pos->getPos();
+		camPosition.x = pos->getPos().x * Renderer::Instance()->getScale();
+		camPosition.y = pos->getPos().y * Renderer::Instance()->getScale();
 	}
 	
 	Vector2 getPosition()

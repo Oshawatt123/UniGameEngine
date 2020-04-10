@@ -10,4 +10,6 @@
 
 #include "CameraComponent.h"
 
+#include "EnemyControl.h"
+
 #include "ECS.h"

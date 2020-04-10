@@ -91,6 +91,15 @@ BitMapPack ResourceManager::LoadBitMap(std::string filePath, bool transparency)
 	return returnPack;
 }
 
+bool ResourceManager::testLoad(std::string filePath)
+{
+	if (SDL_LoadBMP(filePath.c_str()))
+	{
+		return true;
+	}
+	return false;
+}
+
 std::vector<std::string> ResourceManager::LoadMap(std::string filePath)
 {
 	inFile.open(filePath);

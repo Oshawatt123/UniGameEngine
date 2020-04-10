@@ -72,6 +72,14 @@ public:
 	// intended for end-user to be able to enable/disable objects
 	bool enabled = true;
 
+	void Init()
+	{
+		for (auto& c : components)
+		{
+			c->Init();
+		}
+	}
+
 	// tick DOES NOT render
 	void Tick()
 	{

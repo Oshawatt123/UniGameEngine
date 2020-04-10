@@ -172,6 +172,7 @@
     <ClInclude Include="CollisionComponent.h" />
     <ClInclude Include="Components.h" />
     <ClInclude Include="ECS.h" />
+    <ClInclude Include="EnemyControl.h" />
     <ClInclude Include="EngineStructs.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="imconfig.h" />

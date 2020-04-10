@@ -1,6 +1,8 @@
 #pragma once
 #include "PositionComponent.h"
 #include "InputManager.h"
+#include "EngineStructs.h"
+#include "MathHelper.h"
 
 class CharacterController : public Component
 {
@@ -12,8 +14,8 @@ private:
 public:
 	void Init() override
 	{
-		pos = & entity->getComponent<PositionComponent>();
-		speed = 2;
+		pos = &entity->getComponent<PositionComponent>();
+		speed = 100;
 		name = "CharacterController";
 	}
 	void Tick() override
@@ -48,7 +50,7 @@ public:
 			std::cout << "DASSHHHHH" << std::endl;
 
 		}
-		pos->translate(translation);
+		pos->translate(translation * filthyTime->deltaTime);
 	}
 
 	float& GetSpeed()

@@ -30,21 +30,32 @@ Scene::Scene(std::string name, PhysicsEngine* PE, int screen_width, int screen_h
 
 void Scene::Tick()
 {
-	for (auto entity : EntityList)
+	if (needToStart)
 	{
-		if (entity->isEnabled())
+		for (auto entity : EntityList)
 		{
-			entity->Tick();
-			// move gameCamera to correct position
-			if (entity->hasComponent<CameraComponent>())
+			entity->Init();
+		}
+		needToStart = false;
+	}
+	else
+	{
+		for (auto entity : EntityList)
+		{
+			if (entity->isEnabled())
 			{
-				gameCamera.x = entity->getComponent<CameraComponent>().getPosition().x;
-				gameCamera.x -= entity->getComponent<CameraComponent>().camOffset.x;
+				entity->Tick();
+				// move gameCamera to correct position
+				if (entity->hasComponent<CameraComponent>())
+				{
+					gameCamera.x = entity->getComponent<CameraComponent>().getPosition().x;
+					gameCamera.x -= entity->getComponent<CameraComponent>().camOffset.x;
 
-				gameCamera.y = entity->getComponent<CameraComponent>().getPosition().y;
-				gameCamera.y -= entity->getComponent<CameraComponent>().camOffset.y;
+					gameCamera.y = entity->getComponent<CameraComponent>().getPosition().y;
+					gameCamera.y -= entity->getComponent<CameraComponent>().camOffset.y;
 
-				Renderer::Instance()->SetRenderOffset(gameCamera);
+					Renderer::Instance()->SetRenderOffset(gameCamera);
+				}
 			}
 		}
 	}
@@ -276,6 +287,8 @@ void Scene::Reload()
 
 void Scene::SceneInit()
 {
+	needToStart = true;
+
 	// clean scene
 	EntityList.clear();
 	renderables.clear();
@@ -383,7 +396,7 @@ void Scene::SceneInit()
 				// check for sprite component
 				if (std::string(entityData->first_attribute()->value()) == "SpriteComponent")
 				{
-					newEntity->addComponent<SpriteComponent>(entityData->first_node()->first_node()->value());
+					newEntity->addComponent<SpriteComponent>(entityData->first_node()->value());
 				}
 				// check for charactercontroller
 				if (std::string(entityData->first_attribute()->value()) == "CharacterController")
@@ -399,6 +412,10 @@ void Scene::SceneInit()
 				if (std::string(entityData->first_attribute()->value()) == "CameraComponent")
 				{
 					newEntity->addComponent<CameraComponent>();
+				}
+				if (std::string(entityData->first_attribute()->value()) == "EnemyControl")
+				{
+					newEntity->addComponent<EnemyControl>();
 				}
 			}
 			else
@@ -430,7 +447,7 @@ void Scene::SceneInit()
 	if (sceneMap->MapLoaded())
 	{
 		Log("Scene Map loaded!", DEBUG);
-		sceneMap->tileSet = "../Assets/Sprites/defaultTiles.bmp";
+		sceneMap->tileSet = "../Assets/Sprites/grass.bmp";
 	}
 	else
 	{

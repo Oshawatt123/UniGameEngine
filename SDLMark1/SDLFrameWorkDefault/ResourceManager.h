@@ -34,6 +34,9 @@ public:
 	// should this and all member variables be static? NO
 	// do not static member variables. there is no point
 	BitMapPack LoadBitMap(std::string filePath, bool transparency);
+
+	bool testLoad(std::string filePath);
+
 	//Scene* LoadScene(std::string filePath);
 	std::vector<std::string> LoadMap(std::string filePath);
 

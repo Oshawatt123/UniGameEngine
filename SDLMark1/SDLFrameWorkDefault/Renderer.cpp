@@ -24,22 +24,39 @@ void Renderer::Draw(BitMapPack bitMapPack, int x_in, int y_in, SDL_Rect* srcRect
 	SDL_Rect* destRect = new SDL_Rect();
 	if (!blackboard->EditMode)
 	{
-		destRect->x = x_in - RenderOffset.x;
-		destRect->y = y_in - RenderOffset.y;
+		destRect->x = (x_in * scale) - RenderOffset.x;
+		destRect->y = (y_in * scale) - RenderOffset.y;
+		destRect->w = TILE_WIDTH * scale;
+		destRect->h = TILE_WIDTH * scale;
 	}
 	else
 	{
 		destRect->x = x_in - EditorRenderOffset.x;
 		destRect->y = y_in - EditorRenderOffset.y;
+		destRect->w = TILE_WIDTH;
+		destRect->h = TILE_WIDTH;
 	}
-	destRect->w = bitMapPack.width;
-	destRect->h = bitMapPack.height;
 
 	Draw(bitMapPack, destRect, srcRect);
 
 	delete destRect;
 	destRect = nullptr;
 
+}
+
+void Renderer::Draw(BitMapPack bitMapPack, int x, int y, int index)
+{
+	SDL_Rect* srcRect = new SDL_Rect();
+
+	srcRect->x = 0 + (TILE_WIDTH * index);
+	srcRect->y = 0;
+	srcRect->w = TILE_WIDTH;
+	srcRect->h = TILE_WIDTH;
+
+	Draw(bitMapPack, x, y, srcRect);
+
+	delete srcRect;
+	srcRect = nullptr;
 }
 
 void Renderer::DrawLine(int x1, int y1, int x2, int y2, SDL_Color color)
@@ -83,6 +100,11 @@ Renderer* Renderer::Instance(SDL_Window* Window)
 SDL_Renderer* Renderer::getRenderer()
 {
 	return m_pRenderer;
+}
+
+float Renderer::getScale()
+{
+	return scale;
 }
 
 Renderer::Renderer(SDL_Window* Window)

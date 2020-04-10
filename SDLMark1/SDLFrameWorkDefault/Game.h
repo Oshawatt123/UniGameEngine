@@ -47,11 +47,8 @@ private:
 
 	//My Own Jazz
 	PhysicsEngine* physicsEngine;
-	Time* _Time;
 
-	// PLACEHOLDER SCENE
-	Scene* Level1;
-
+	// IMGui
 	ImGuiIO io;
 
 

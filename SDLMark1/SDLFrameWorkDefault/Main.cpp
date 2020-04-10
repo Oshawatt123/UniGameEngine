@@ -5,6 +5,7 @@
 #include "Game.h"
 #include "InputManager.h"
 #include "Profiler.h"
+#include "Time.h"
 
 int main()
 {

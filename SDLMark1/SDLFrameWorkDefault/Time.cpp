@@ -1,7 +1,18 @@
 #include "Time.h"
 
+Time* Time::sInstance = NULL;
+
 Time::Time()
 {
+}
+
+Time* Time::Instance()
+{
+	if (sInstance == NULL)
+	{
+		sInstance = new Time();
+	}
+	return sInstance;
 }
 
 void Time::NewFrame()

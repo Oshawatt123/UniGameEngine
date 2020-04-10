@@ -39,6 +39,8 @@ private:
 
 	PhysicsEngine* pe;
 
+	bool needToStart;
+
 public:
 
 	Scene(PhysicsEngine* PE, int screen_width, int screen_height);

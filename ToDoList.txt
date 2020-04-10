@@ -6,9 +6,28 @@ Re-factor code to be cleaner
 Remember to clean up, and add release functions to all your systems (especially resource manager)
 Fix smol leak in input manager ( might just be SDL2 allocating enough memory, seems to plateau with time)
 
+
+Filthy Notes:
+Object instantiation
+
+Better script system to support not needing to add a bunch of hardcoded jazz into other code
+
+Better inspector to support public variable changing & saving of all public variables
+
+object A collides with object B, but object B does not collide with object A
+
+position component translates by int
+
+rework of scene required to not depend on "components.h"
+
+no 'save scene' button
+
+
 ####### TO DO #######
+Generic save system to save public variables
+Generic load system to load public variables
 [DONE] File system viewer
-Scene saving
+[DONE] Scene saving
 [DONE] Multiple scenes
 Seperate Scene and Game camera
 Widgets for invisible objects (e.g camera)

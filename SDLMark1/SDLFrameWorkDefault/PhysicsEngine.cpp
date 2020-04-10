@@ -10,6 +10,8 @@ bool PhysicsEngine::Tick()
 	// make a quad tree
 	for (Entity* objectA : Collidable)
 	{
+		objectA->getComponent<CollisionComponent>().colliding = false;
+		objectA->getComponent<CollisionComponent>().other = nullptr;
 		for (Entity* objectB : Collidable)
 		{
 			if (objectA->ID != objectB->ID)
@@ -27,8 +29,6 @@ bool PhysicsEngine::Tick()
 				}
 			}
 		}
-		objectA->getComponent<CollisionComponent>().colliding = false;
-		objectA->getComponent<CollisionComponent>().other = nullptr;
 	}
 	return true;
 }

@@ -9,11 +9,13 @@ class SpriteComponent : public Component
 private:
 
 	std::string defaultPath = "../Assets/Sprites/ElvisPretzels.bmp";
+	char pathBuffer[128];
 
 	PositionComponent* m_positionComponent;
 
 	BitMapPack m_bitMapPack;
-	int m_index;
+	int m_index = 0;
+	int spritesize;
 
 public:
 
@@ -45,7 +47,7 @@ public:
 	void Tick() override
 	{
 		//std::cout << "Drawing a dude" << std::endl;
-		Renderer::Instance()->Draw(m_bitMapPack, m_positionComponent->getPos().x, m_positionComponent->getPos().y);
+		Renderer::Instance()->Draw(m_bitMapPack, m_positionComponent->getPos().x, m_positionComponent->getPos().y, m_index);
 	}
 
 	SDL_Texture& getTexture()
@@ -60,7 +62,11 @@ public:
 
 	void PopulateInspector() override
 	{
-		ImGui::Text(m_filePath.c_str());
+		/*ImGui::InputText("File Path", pathBuffer, 64);
+		if (ResourceManager::Instance()->testLoad(pathBuffer))
+		{
+			m_bitMapPack = ResourceManager::Instance()->LoadBitMap(pathBuffer, true);
+		}*/
 		ImVec2 texSize = ImVec2(m_bitMapPack.width, m_bitMapPack.height);
 		ImGui::Image(m_bitMapPack.texture, texSize);
 	}
@@ -70,5 +76,10 @@ public:
 		std::string saveData;
 		saveData += "<sprite>" + m_filePath + "</sprite>";
 		return saveData;
+	}
+
+	void SetIndex(int index)
+	{
+		m_index = index;
 	}
 };

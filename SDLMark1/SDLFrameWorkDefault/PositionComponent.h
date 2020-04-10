@@ -39,7 +39,7 @@ public:
 		Position.y = y;
 	}
 
-	void translate(int x, int y)
+	void translate(float x, float y)
 	{
 		Position.x += x;
 		Position.y += y;

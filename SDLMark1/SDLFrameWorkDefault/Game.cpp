@@ -40,8 +40,6 @@ SDL_GLContext gl_context;
 
 Game::Game()
 {
-	_Time = new Time();
-
 	m_Window = nullptr;
 
 	//start up
@@ -112,16 +110,13 @@ Game::~Game()
 		SDL_DestroyWindow(m_Window);
 	}
 
-	delete(_Time);
-	_Time = nullptr;
-
 	SDL_Quit();
 
 }
 
 bool Game::Tick(void)
 {
-	_Time->NewFrame();
+	filthyTime->NewFrame();
 
 	UpdateInputManager();
 
@@ -172,6 +167,8 @@ bool Game::Tick(void)
 	}
 
 	UpdateRenderer();
+
+	filthyTime->EndFrame();
 
 	return true;
 }
@@ -224,8 +221,6 @@ void Game::UpdateRenderer(void)
 
 	// Update the renderer with the newly drawn Sprites
 	Renderer::Instance()->UpdateRenderer();
-
-	_Time->EndFrame();
 }
 
 void Game::UpdateInputManager(void)
@@ -315,9 +310,19 @@ void Game::DrawInspector()
 					// we must init due to the nature of how init is called
 					currentSelectedEntity->getComponent<CameraComponent>().Init();
 				}
+			if (ImGui::Selectable("Enemy"))
+				if (currentSelectedEntity->hasComponent<EnemyControl>() == false)
+				{
+					currentSelectedEntity->addComponent<EnemyControl>();
+					// we must init due to the nature of how init is called
+					currentSelectedEntity->getComponent<EnemyControl>().Init();
+				}
 
 			ImGui::EndPopup();
 		}
+
+		if (ImGui::Button("Destroy Entity"))
+			SceneManager::Instance()->getCurrentScene()->RemoveEntity(currentSelectedEntity);
 
 	}
 	else
@@ -364,6 +369,7 @@ void Game::DrawEngineDebug()
 	ImGui::Text(std::to_string(mousey).c_str());
 	ImGui::Checkbox("EditMode", &blackboard->EditMode);
  
-	ImGui::PlotLines("Frame time", _Time->deltaTimes, IM_ARRAYSIZE(_Time->deltaTimes));
+	ImGui::PlotLines("Frame time", filthyTime->deltaTimes, IM_ARRAYSIZE(filthyTime->deltaTimes));
+	std::cout << filthyTime->deltaTime << std::endl;
 	ImGui::End();
 }
