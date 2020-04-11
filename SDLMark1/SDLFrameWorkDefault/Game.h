@@ -16,6 +16,7 @@
 #include <thread>
 #include <memory>
 #include <filesystem>
+#include <bitset>
 
 // filthy includes
 #define RENDER_DEBUG

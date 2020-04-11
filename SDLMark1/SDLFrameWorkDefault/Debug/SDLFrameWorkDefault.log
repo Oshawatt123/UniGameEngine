@@ -1,5 +1,5 @@
 ﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(452,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (SDLFrameWorkDefault.vcxproj).  This can lead to incorrect clean and rebuild behavior.
-  SceneManager.cpp
+  Game.cpp
 D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\MathHelper.h(54,23): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
 D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\MathHelper.h(54,19): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
 D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\MathHelper.h(55,21): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
@@ -26,4 +26,6 @@ D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\SpriteComponent.h(60,
 D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\SpriteComponent.h(60,30): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
 D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\SpriteComponent.h(71,68): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
 D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\SpriteComponent.h(71,45): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\Game.h(45,45): warning C4244:  'initializing': conversion from 'float' to 'const int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\Game.h(46,47): warning C4244:  'initializing': conversion from 'float' to 'const int', possible loss of data
   SDLFrameWorkDefault.vcxproj -> D:\GitHub Tings\UniGameEngine\SDLMark1\Debug\FilthyEngine.exe

@@ -145,7 +145,7 @@ bool Game::Tick(void)
 	else
 	{
 		// clicking to view an entity in the inspector
-		if ((InputManager::Instance()->mouseButtons && SDL_BUTTON(SDL_BUTTON_LEFT)))
+		if ((InputManager::Instance()->mouseButtons & SDL_BUTTON(SDL_BUTTON_LEFT)))
 		{
 			SceneManager::Instance()->getCurrentScene()->CheckPointCollideEntityScreenSpace(Vector2(mousex, mousey), clickedObject);
 			if (clickedObject != nullptr)
@@ -159,9 +159,9 @@ bool Game::Tick(void)
 				currentSelectedEntity->editMode = true;
 			}
 		}
-		if (InputManager::Instance()->mouseButtons && SDL_BUTTON_MMASK)
+		if ((InputManager::Instance()->mouseButtons & SDL_BUTTON(SDL_BUTTON_MIDDLE)))
 		{
-			//Renderer::Instance()->TranslateEditorCamera(InputManager::Instance()->mouseDeltaX, InputManager::Instance()->mouseDeltaY);
+			Renderer::Instance()->TranslateEditorCamera(InputManager::Instance()->mouseDeltaX, InputManager::Instance()->mouseDeltaY);
 		}
 
 		SceneManager::Instance()->getCurrentScene()->EditorTick();
@@ -394,6 +394,11 @@ void Game::DrawEngineDebug()
 	ImGui::Checkbox("EditMode", &blackboard->EditMode);
  
 	ImGui::PlotLines("Frame time", filthyTime->deltaTimes, IM_ARRAYSIZE(filthyTime->deltaTimes));
-	std::cout << filthyTime->deltaTime << std::endl;
+	if (ImGui::Button("Save Scene", ImVec2(100, 20)))
+	{
+		SceneManager::Instance()->SaveScene();
+	}
+	std::bitset<8> buttonBits(InputManager::Instance()->mouseButtons);
+	ImGui::Text(buttonBits.to_string().c_str());
 	ImGui::End();
 }
