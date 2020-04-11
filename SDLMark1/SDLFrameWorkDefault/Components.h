@@ -11,5 +11,6 @@
 #include "CameraComponent.h"
 
 #include "EnemyControl.h"
+#include "StairControl.h"
 
 #include "ECS.h"

@@ -3,14 +3,12 @@
 #include <vector>
 
 #include "ECS.h"
-#include "Components.h"
 #include "Map.h"
 #include "Renderer.h"
 #include "ResourceManager.h"
 #include "EngineStructs.h"
-#include "PhysicsEngine.h"
 
-#include "rapidxml_utils.hpp"
+#include "Components.h"
 
 class Scene
 {
@@ -37,14 +35,14 @@ private:
 	Vector2 gameCamera;
 	int SW, SH;
 
-	PhysicsEngine* pe;
-
 	bool needToStart;
+
+	PhysicsEngine* pe;
 
 public:
 
-	Scene(PhysicsEngine* PE, int screen_width, int screen_height);
-	Scene(std::string name, PhysicsEngine* PE, int screen_width, int screen_height);
+	Scene(PhysicsEngine* _pe, int screen_width, int screen_height);
+	Scene(PhysicsEngine* _pe, std::string name, int screen_width, int screen_height);
 	~Scene();
 
 	void Reload();
@@ -71,4 +69,6 @@ public:
 private:
 
 	void SceneInit();
+
+	void LoadScene();
 };

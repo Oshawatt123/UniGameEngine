@@ -9,6 +9,8 @@
 #include <iostream>
 #include <fstream>
 
+#include "Components.h"
+
 class SceneManager
 {
 private:
@@ -22,6 +24,8 @@ private:
 	int mNextBuildIndex;
 
 	PhysicsEngine* pe;
+
+	Event* eventStore;
 
 public:
 
@@ -40,6 +44,8 @@ public:
 	void SaveScene();
 
 	Scene* getCurrentScene();
+
+	void Tick();
 
 private:
 

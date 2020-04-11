@@ -40,7 +40,7 @@ void SceneManager::LoadScene(std::string sceneName)
 	std::string path = "../Assets/Scenes/" + sceneName + ".filthyscene";
 	if ((loadedScenes.find(path) == loadedScenes.end()))
 	{
-		Scene* newScene = new Scene(pe, 1920, 1080);
+		Scene* newScene = new Scene(pe, sceneName, 1920, 1080);
 		loadedScenes.insert(std::pair<std::string, Scene*>(path, newScene));
 	}
 	LoadScene(loadedScenes[path]);
@@ -70,7 +70,7 @@ void SceneManager::LoadSceneByPath(std::string path)
 	// voila!!!
 	if ((loadedScenes.find(path) == loadedScenes.end()))
 	{
-		Scene* newScene = new Scene(levelName, pe, 1920, 1080);
+		Scene* newScene = new Scene(pe, levelName, 1920, 1080);
 		loadedScenes.insert(std::pair<std::string, Scene*>(path, newScene));
 	}
 	LoadScene(loadedScenes[path]);
@@ -92,6 +92,16 @@ void SceneManager::SaveScene()
 Scene* SceneManager::getCurrentScene()
 {
 	return currentScene;
+}
+
+void SceneManager::Tick()
+{
+	eventStore = EventSystem::Instance()->GetEvent(SCENE_LOAD);
+	if (eventStore)
+	{
+		LoadScene(eventStore->stringData);
+		eventStore = nullptr;
+	}
 }
 
 void SceneManager::LoadScene(Scene* scene)

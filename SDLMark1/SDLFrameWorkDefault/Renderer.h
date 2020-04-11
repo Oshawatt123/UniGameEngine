@@ -30,6 +30,7 @@ private:
 	std::vector<Line> EditorRenderLines;
 
 	float scale = 5;
+	float editorScale = 3;
 
 public:
 	void Draw(BitMapPack bitMapPack, SDL_Rect* destRect, SDL_Rect* srcRect = NULL);
@@ -43,6 +44,10 @@ public:
 	void SetRenderOffset(Vector2 renderOffset);
 
 	void SetRenderOffset(int x, int y);
+
+	void TranslateEditorCamera(Vector2 translation);
+
+	void TranslateEditorCamera(int x, int y);
 
 	static Renderer* Instance();
 

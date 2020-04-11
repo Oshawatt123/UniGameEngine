@@ -1,5 +1,6 @@
 #pragma once
 #include "PositionComponent.h"
+#include "CollisionComponent.h"
 #include "InputManager.h"
 #include "EngineStructs.h"
 #include "MathHelper.h"
@@ -8,6 +9,7 @@ class CharacterController : public Component
 {
 private:
 	PositionComponent* pos;
+	CollisionComponent* col;
 	float speed;
 	Vector2 translation;
 
@@ -15,6 +17,7 @@ public:
 	void Init() override
 	{
 		pos = &entity->getComponent<PositionComponent>();
+		col = &entity->getComponent<CollisionComponent>();
 		speed = 100;
 		name = "CharacterController";
 	}

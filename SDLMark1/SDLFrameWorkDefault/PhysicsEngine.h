@@ -3,7 +3,7 @@
 #include <vector>
 #include "MathHelper.h"
 #include "ECS.h"
-#include "Components.h"
+#include "CollisionComponent.h"
 
 class PhysicsEngine
 {

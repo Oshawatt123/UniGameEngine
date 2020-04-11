@@ -143,6 +143,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="BlackBoard.cpp" />
+    <ClCompile Include="Event.cpp" />
+    <ClCompile Include="EventSystem.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="gl3w.c" />
     <ClCompile Include="imgui.cpp" />
@@ -151,6 +153,7 @@
     <ClCompile Include="imgui_impl_opengl3.cpp" />
     <ClCompile Include="imgui_impl_sdl.cpp" />
     <ClCompile Include="imgui_sdl.cpp" />
+    <ClCompile Include="imgui_stdlib.cpp" />
     <ClCompile Include="imgui_widgets.cpp" />
     <ClCompile Include="InputManager.cpp" />
     <ClCompile Include="Logger.cpp" />
@@ -174,6 +177,8 @@
     <ClInclude Include="ECS.h" />
     <ClInclude Include="EnemyControl.h" />
     <ClInclude Include="EngineStructs.h" />
+    <ClInclude Include="Event.h" />
+    <ClInclude Include="EventSystem.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="imconfig.h" />
     <ClInclude Include="imgui.h" />
@@ -181,6 +186,7 @@
     <ClInclude Include="imgui_impl_sdl.h" />
     <ClInclude Include="imgui_internal.h" />
     <ClInclude Include="imgui_sdl.h" />
+    <ClInclude Include="imgui_stdlib.h" />
     <ClInclude Include="imstb_rectpack.h" />
     <ClInclude Include="imstb_textedit.h" />
     <ClInclude Include="imstb_truetype.h" />
@@ -196,6 +202,7 @@
     <ClInclude Include="Scene.h" />
     <ClInclude Include="SceneManager.h" />
     <ClInclude Include="SpriteComponent.h" />
+    <ClInclude Include="StairControl.h" />
     <ClInclude Include="test.h" />
     <ClInclude Include="Time.h" />
     <ClInclude Include="Timer.h" />

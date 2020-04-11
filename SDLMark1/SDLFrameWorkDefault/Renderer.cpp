@@ -31,10 +31,10 @@ void Renderer::Draw(BitMapPack bitMapPack, int x_in, int y_in, SDL_Rect* srcRect
 	}
 	else
 	{
-		destRect->x = x_in - EditorRenderOffset.x;
-		destRect->y = y_in - EditorRenderOffset.y;
-		destRect->w = TILE_WIDTH;
-		destRect->h = TILE_WIDTH;
+		destRect->x = (x_in * editorScale) - EditorRenderOffset.x;
+		destRect->y = (y_in * editorScale) - EditorRenderOffset.y;
+		destRect->w = TILE_WIDTH * editorScale;
+		destRect->h = TILE_WIDTH * editorScale;
 	}
 
 	Draw(bitMapPack, destRect, srcRect);
@@ -72,6 +72,16 @@ void Renderer::SetRenderOffset(Vector2 renderOffset)
 void Renderer::SetRenderOffset(int x, int y)
 {
 	SetRenderOffset(Vector2(x, y));
+}
+
+void Renderer::TranslateEditorCamera(Vector2 translation)
+{
+	EditorRenderOffset -= translation;
+}
+
+void Renderer::TranslateEditorCamera(int x, int y)
+{
+	TranslateEditorCamera(Vector2(x, y));
 }
 
 Renderer* Renderer::Instance()
@@ -139,10 +149,10 @@ void Renderer::UpdateRenderer()
 	{
 		SDL_SetRenderDrawColor(m_pRenderer, line.color.r, line.color.g, line.color.b, line.color.a);
 		SDL_RenderDrawLine(m_pRenderer,
-			line.start.x,
-			line.start.y,
-			line.end.x,
-			line.end.y);
+			line.start.x * editorScale - EditorRenderOffset.x,
+			line.start.y * editorScale - EditorRenderOffset.y,
+			line.end.x * editorScale - EditorRenderOffset.x,
+			line.end.y * editorScale - EditorRenderOffset.y);
 	}
 	EditorRenderLines.clear();
 

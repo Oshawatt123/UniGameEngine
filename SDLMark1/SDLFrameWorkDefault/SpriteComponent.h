@@ -67,7 +67,10 @@ public:
 		{
 			m_bitMapPack = ResourceManager::Instance()->LoadBitMap(pathBuffer, true);
 		}*/
-		ImVec2 texSize = ImVec2(m_bitMapPack.width, m_bitMapPack.height);
+		//ImVec2 texSize = ImVec2(m_bitMapPack.width, m_bitMapPack.height);
+		ImVec2 texSize = ImVec2(m_bitMapPack.width*3, m_bitMapPack.height*3);
+		std::string temp = "Index: " + std::to_string(m_index);
+		ImGui::Text(temp.c_str());
 		ImGui::Image(m_bitMapPack.texture, texSize);
 	}
 

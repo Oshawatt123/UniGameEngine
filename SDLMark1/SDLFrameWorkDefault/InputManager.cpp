@@ -32,6 +32,10 @@ void InputManager::Update()
 	WindowIsQuit = false;
 	mKeyBoardStates = SDL_GetKeyboardState(NULL);
 	mouseButtons = SDL_GetMouseState(&mouseX, &mouseY);
+
+	mouseDeltaX = mouseX - prevMouseX;
+	mouseDeltaY = mouseY - prevMouseY;
+
 	SDL_Event e;
 	while (SDL_PollEvent(&e))
 	{
@@ -45,6 +49,9 @@ void InputManager::Update()
 			mouseWheel = e.wheel.y;
 		}
 	}
+
+	prevMouseX = mouseX;
+	prevMouseY = mouseY;
 }
 
 InputManager::InputManager()

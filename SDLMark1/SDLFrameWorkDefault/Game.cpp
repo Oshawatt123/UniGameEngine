@@ -71,19 +71,20 @@ Game::Game()
 	physicsEngine = new PhysicsEngine();
 
 	// create resource manager
-	ResourceManager::Instance(Renderer::Instance()->getRenderer());
+	ResourceManager::Instance(Renderer::Instance()->getRenderer(), physicsEngine);
 
 	SceneManager::Instance(physicsEngine);
 
 	ImGui::CreateContext();
 	ImGuiSDL::Initialize(Renderer::Instance()->getRenderer(), SCREEN_WIDTH, SCREEN_HEIGHT);
 
-	SceneManager::Instance()->LoadSceneByPath("../Assets/Scenes/Level1.filthyscene");
-
+	
 	// ##### hard-coding ##### //
 
 
 	// replace this with a build list of scenes and load the first one in
+	SceneManager::Instance()->LoadSceneByPath("../Assets/Scenes/Level1.filthyscene");
+
 	currentSelectedEntity = SceneManager::Instance()->getCurrentScene()->getEntityByName("Player");
 }
 
@@ -138,6 +139,8 @@ bool Game::Tick(void)
 
 		// update physics
 		physicsEngine->Tick();
+
+		SceneManager::Instance()->Tick();
 	}
 	else
 	{
@@ -155,6 +158,10 @@ bool Game::Tick(void)
 				currentSelectedEntity = clickedObject;
 				currentSelectedEntity->editMode = true;
 			}
+		}
+		if (InputManager::Instance()->mouseButtons && SDL_BUTTON_MMASK)
+		{
+			//Renderer::Instance()->TranslateEditorCamera(InputManager::Instance()->mouseDeltaX, InputManager::Instance()->mouseDeltaY);
 		}
 
 		SceneManager::Instance()->getCurrentScene()->EditorTick();
@@ -271,9 +278,19 @@ void Game::DrawInspector()
 
 		for (auto component : currentSelectedEntity->getComponents())
 		{
+			// begin child window
+			ImGui::PushStyleColor(ImGuiCol_ChildBg, IM_COL32(0, 0, 128, 100));
+			ImGui::BeginChild(component->name.c_str(), ImVec2(ImGui::GetWindowContentRegionWidth(), 100), true, ImGuiWindowFlags_None);
+
+			// populate inspector
 			ImGui::Text(component->name.c_str());
 			component->PopulateInspector();
 			ImGui::Text("");
+
+			// end child window
+
+			ImGui::PopStyleColor();
+			ImGui::EndChild();
 		}
 
 		if (ImGui::Button("Add Component"))
@@ -316,6 +333,13 @@ void Game::DrawInspector()
 					currentSelectedEntity->addComponent<EnemyControl>();
 					// we must init due to the nature of how init is called
 					currentSelectedEntity->getComponent<EnemyControl>().Init();
+				}
+			if (ImGui::Selectable("Stair"))
+				if (currentSelectedEntity->hasComponent<StairControl>() == false)
+				{
+					currentSelectedEntity->addComponent<StairControl>();
+					// we must init due to the nature of how init is called
+					currentSelectedEntity->getComponent<StairControl>().Init();
 				}
 
 			ImGui::EndPopup();

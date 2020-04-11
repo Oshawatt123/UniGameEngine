@@ -65,3 +65,8 @@ enum Verbosity
 	DBERROR,
 	NOTHING
 };
+
+enum FilthyEventType
+{
+	SCENE_LOAD,
+};

@@ -2,9 +2,10 @@
 
 ResourceManager* ResourceManager::sInstance = NULL;
 
-ResourceManager::ResourceManager(SDL_Renderer* renderer)
+ResourceManager::ResourceManager(SDL_Renderer* renderer, PhysicsEngine* _pe)
 {
 	ResourceManager::m_pRenderer = renderer;
+	ResourceManager::pe = _pe;
 }
 
 ResourceManager::~ResourceManager()
@@ -125,19 +126,19 @@ ResourceManager* ResourceManager::Instance()
 {
 	if (sInstance == NULL)
 	{
-		std::cout << "Resource Manager Singleton not initialized with renderer!\n";
-		std::cout << "Please initialize with renderer before attempting to access.\n";
+		Log("Resource Manager Singleton not initialized with renderer!\n", DBERROR);
+		Log("Please initialize with renderer before attempting to access.\n", DBERROR);
 		return NULL;
 	}
 	return sInstance;
 }
 
-ResourceManager* ResourceManager::Instance(SDL_Renderer* renderer)
+ResourceManager* ResourceManager::Instance(SDL_Renderer* renderer, PhysicsEngine* _pe)
 {
 	if (sInstance == NULL)
 	{
 		Log("Initializing resource manager with a renderer.", DEBUG);
-		sInstance = new ResourceManager(renderer);
+		sInstance = new ResourceManager(renderer, _pe);
 	}
 	return sInstance;
 }

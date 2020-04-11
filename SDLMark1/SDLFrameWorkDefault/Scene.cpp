@@ -8,23 +8,23 @@ void AddBrace(std::string* data, std::string brace, bool end)
 		*data = *data + "</" + brace + ">";
 }
 
-Scene::Scene(PhysicsEngine* PE, int screen_width, int screen_height)
+Scene::Scene(PhysicsEngine* _pe, int screen_width, int screen_height)
 {
 	SceneBuildNumber = 0;
 	SceneName = "DefaultSceneName";
 	SW = screen_width;
 	SH = screen_height;
-	pe = PE;
+	pe = _pe;
 	SceneInit();
 }
 
-Scene::Scene(std::string name, PhysicsEngine* PE, int screen_width, int screen_height)
+Scene::Scene(PhysicsEngine* _pe, std::string name, int screen_width, int screen_height)
 {
 	SceneBuildNumber = 0;
 	SceneName = name;
 	SW = screen_width;
 	SH = screen_height;
-	pe = PE;
+	pe = _pe;
 	SceneInit();
 }
 
@@ -296,6 +296,13 @@ void Scene::SceneInit()
 
 	// load map
 	// needs to be replaced by an actual load function
+	LoadScene();
+
+	indexRect = new SDL_Rect();
+}
+
+void Scene::LoadScene()
+{
 
 	Log("#################### [XML DEBUG] #####################", DEBUG);
 	// load the scene file
@@ -417,6 +424,10 @@ void Scene::SceneInit()
 				{
 					newEntity->addComponent<EnemyControl>();
 				}
+				if (std::string(entityData->first_attribute()->value()) == "StairControl")
+				{
+					newEntity->addComponent<StairControl>();
+				}
 			}
 			else
 			{
@@ -440,10 +451,10 @@ void Scene::SceneInit()
 
 	// load map data into the scene
 	sceneMap = new Map();
-	sceneMap->mapTileData = ResourceManager::Instance()->LoadMap(mapNode->first_attribute()->value());
-	sceneMap->filePath = mapNode->first_attribute()->value();
 
-	indexRect = new SDL_Rect();
+	sceneMap->filePath = mapNode->first_attribute()->value();
+	sceneMap->mapTileData = ResourceManager::Instance()->LoadMap(sceneMap->filePath);
+
 	if (sceneMap->MapLoaded())
 	{
 		Log("Scene Map loaded!", DEBUG);
