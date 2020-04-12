@@ -3,19 +3,23 @@
 #include "EngineStructs.h"
 #include "Renderer.h"
 #include "ResourceManager.h"
+#include "InputManager.h"
+#include "imgui_stdlib.h"
 
 class SpriteComponent : public Component
 {
 private:
 
 	std::string defaultPath = "../Assets/Sprites/ElvisPretzels.bmp";
-	char pathBuffer[128];
+	std::string pathBuffer;
 
 	PositionComponent* m_positionComponent;
 
 	BitMapPack m_bitMapPack;
 	int m_index = 0;
 	int spritesize;
+
+	float offsetX, offsetY;
 
 public:
 
@@ -40,6 +44,8 @@ public:
 		m_index = 0;
 		m_bitMapPack.width *= entity->getComponent<PositionComponent>().scale;
 		m_bitMapPack.height *= entity->getComponent<PositionComponent>().scale;
+		offsetX = TILE_WIDTH / 2;
+		offsetY = TILE_WIDTH / 2;
 
 		name = "SpriteComponent";
 	}
@@ -47,12 +53,12 @@ public:
 	void Tick() override
 	{
 		//std::cout << "Drawing a dude" << std::endl;
-		Renderer::Instance()->Draw(m_bitMapPack, m_positionComponent->getPos().x, m_positionComponent->getPos().y, m_index);
+		Renderer::Instance()->Draw(m_bitMapPack, m_positionComponent->getPos().x - offsetX, m_positionComponent->getPos().y - offsetY, m_index);
 	}
 
 	void EditorTick() override
 	{
-		Renderer::Instance()->Draw(m_bitMapPack, m_positionComponent->getPos().x, m_positionComponent->getPos().y, m_index);
+		Renderer::Instance()->Draw(m_bitMapPack, m_positionComponent->getPos().x - offsetX, m_positionComponent->getPos().y - offsetY, m_index);
 	}
 
 	SDL_Texture& getTexture()
@@ -67,12 +73,18 @@ public:
 
 	void PopulateInspector() override
 	{
-		/*ImGui::InputText("File Path", pathBuffer, 64);
+		ImGui::InputText("File path", &pathBuffer);
 		if (ResourceManager::Instance()->testLoad(pathBuffer))
 		{
-			m_bitMapPack = ResourceManager::Instance()->LoadBitMap(pathBuffer, true);
-		}*/
-		//ImVec2 texSize = ImVec2(m_bitMapPack.width, m_bitMapPack.height);
+			ImGui::Text("Press Enter to select path");
+			if(InputManager::Instance()->KeyDown(SDL_SCANCODE_RETURN))
+				m_bitMapPack = ResourceManager::Instance()->LoadBitMap(pathBuffer, true);
+		}
+		else
+		{
+			ImGui::Text("Invalid sprite path");
+		}
+
 		ImVec2 texSize = ImVec2(m_bitMapPack.width*3, m_bitMapPack.height*3);
 		std::string temp = "Index: " + std::to_string(m_index);
 		ImGui::Text(temp.c_str());

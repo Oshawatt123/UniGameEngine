@@ -54,35 +54,40 @@ void PhysicsEngine::AddCollidableObject(Entity* object)
 	Collidable.push_back(object);
 }
 
-bool PhysicsEngine::CheckPointCollision(Vector2 point, Entity* outEntity)
+Entity* PhysicsEngine::CheckPointCollision(Vector2 point)
 {
 	SDL_Rect otherCollider;
+
+	Vector2 worldSpacePoint;
+	worldSpacePoint.x = point.x * filthyRenderer->getScale() - filthyRenderer->getRenderOffset().x;
+	worldSpacePoint.y = point.y * filthyRenderer->getScale() - filthyRenderer->getRenderOffset().y;
 	for (auto object : Collidable)
 	{
 		otherCollider = object->getComponent<CollisionComponent>().collider;
+
+		filthyRenderer->DrawLine(point.x, point.y, otherCollider.x, otherCollider.y, {0, 255, 0});
+		filthyRenderer->DrawLine(point.x, point.y, otherCollider.x + otherCollider.w, otherCollider.y + otherCollider.h, {0, 255, 0});
 		// Is Point X to the RIGHT of the object's LEFT edge?
-		if (point.x > otherCollider.x * filthyRenderer->getScale() - filthyRenderer->getRenderOffset().x)
+		if (point.x > otherCollider.x)
 		{
 			// Is Point X to the LEFT of the object's RIGHT edge?
-			if (point.x < (otherCollider.x + otherCollider.w) * filthyRenderer->getScale() - filthyRenderer->getRenderOffset().x)
+			if (point.x < (otherCollider.x + otherCollider.w))
 			{
 				// Is Point Y BELOW the object's TOP edge?
-				if (point.y < otherCollider.y * filthyRenderer->getScale() - filthyRenderer->getRenderOffset().y)
+				if (point.y > otherCollider.y)
 				{
 					// Is Point Y ABOVE the object's BOTTOM edge?
-					if (point.y > (otherCollider.y - otherCollider.h) * filthyRenderer->getScale() - filthyRenderer->getRenderOffset().y)
+					//std::string temp = std::to_string(point.y) + " < " + std::to_string(otherCollider.y + otherCollider.h);
+					//Log(temp, DEBUG);
+					if (point.y < (otherCollider.y + otherCollider.h))
 					{
-						outEntity = object;
-						return true;
+						return object;
 					}
-					return false;
 				}
-				return false;
 			}
-			return false;
 		}
 	}
-	return false;
+	return nullptr;
 }
 
 bool PhysicsEngine::AABB(const SDL_Rect& A, const SDL_Rect& B)

@@ -66,7 +66,7 @@ public:
 			direction *= TILE_WIDTH + 2;
 		}
 
-		Physics->CheckPointCollision(pos->getPos().Add(direction), collidingEntity);
+		collidingEntity = Physics->CheckPointCollision(pos->getPos().Add(direction));
 		if (collidingEntity)
 		{
 			if (collidingEntity->name == "Block")

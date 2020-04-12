@@ -209,16 +209,16 @@ bool Scene::CheckPointCollideEntityScreenSpace(Vector2 point, Entity*& outEntity
 		Vector2 otherPos = object->getComponent<PositionComponent>().getPos();
 
 		// Is Point X to the RIGHT of the object's LEFT edge?
-		if (point.x > otherPos.x * filthyRenderer->getEditorScale() - filthyRenderer->GetEditorCamera().x)
+		if (point.x > (otherPos.x - TILE_WIDTH / 2) * filthyRenderer->getEditorScale() - filthyRenderer->GetEditorCamera().x)
 		{
 			// Is Point X to the LEFT of the object's RIGHT edge?
-			if (point.x < (otherPos.x + TILE_WIDTH) * filthyRenderer->getEditorScale() - filthyRenderer->GetEditorCamera().x )
+			if (point.x < (otherPos.x + TILE_WIDTH/2) * filthyRenderer->getEditorScale() - filthyRenderer->GetEditorCamera().x )
 			{
 				// Is Point Y BELOW the object's TOP edge?
-				if (point.y > otherPos.y * filthyRenderer->getEditorScale() - filthyRenderer->GetEditorCamera().y )
+				if (point.y > (otherPos.y - TILE_WIDTH / 2) * filthyRenderer->getEditorScale() - filthyRenderer->GetEditorCamera().y )
 				{
 					// Is Point Y ABOVE the object's BOTTOM edge?
-					if (point.y < (otherPos.y + TILE_WIDTH) * filthyRenderer->getEditorScale() - filthyRenderer->GetEditorCamera().y )
+					if (point.y < (otherPos.y + TILE_WIDTH/2) * filthyRenderer->getEditorScale() - filthyRenderer->GetEditorCamera().y )
 					{
 						outEntity = object;
 						Log("Clicked an entity!", DEBUG);

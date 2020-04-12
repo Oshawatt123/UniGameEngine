@@ -22,20 +22,24 @@ public:
 
 	SDL_Color drawColor = { 255, 0, 0, 255 };
 
+	float offsetX, offsetY;
+
 	void Init() override
 	{
 		pos = &entity->getComponent<PositionComponent>();
 		colDimension.x = TILE_WIDTH * pos->scale;
 		colDimension.y = TILE_WIDTH * pos->scale;
+		offsetX = TILE_WIDTH / 2;
+		offsetY = TILE_WIDTH / 2;
 
-		name = "CollisionComponent";
+		name = "CollisionComponent";		
 	}
 
 	void Tick() override
 	{
 		colPosition = pos->getPos();
-		collider.x = colPosition.x;
-		collider.y = colPosition.y;
+		collider.x = colPosition.x - offsetX;
+		collider.y = colPosition.y - offsetX;
 		collider.w = colDimension.x;
 		collider.h = colDimension.y;
 
@@ -62,10 +66,11 @@ public:
 	void EditorTick() override
 	{
 		colPosition = pos->getPos();
-		collider.x = colPosition.x;
-		collider.y = colPosition.y;
+		collider.x = colPosition.x - offsetX;
+		collider.y = colPosition.y - offsetX;
 		collider.w = colDimension.x;
 		collider.h = colDimension.y;
+
 		Renderer::Instance()->DrawLine(collider.x, collider.y, collider.x + collider.w, collider.y + collider.h, {0, 255, 0, 255});
 	}
 

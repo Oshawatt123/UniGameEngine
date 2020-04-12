@@ -148,7 +148,7 @@ bool Game::Tick(void)
 				// set new entity and set their edit mode
 				currentSelectedEntity = clickedObject;
 				currentSelectedEntity->editMode = true;
-				currentSelectedEntity->getComponent<PositionComponent>().setPosition(filthyRenderer->screenToEditorWorldSpace(Vector2(mousex, mousey)).Subtract(Vector2(TILE_WIDTH/2, TILE_WIDTH/2)));
+				currentSelectedEntity->getComponent<PositionComponent>().setPosition(filthyRenderer->screenToEditorWorldSpace(Vector2(mousex, mousey)));
 			}
 		}
 		if ((InputManager::Instance()->mouseButtons & SDL_BUTTON(SDL_BUTTON_MIDDLE)))
@@ -388,6 +388,7 @@ void Game::DrawEngineDebug()
 	if (ImGui::Button("Save Scene", ImVec2(100, 20)))
 	{
 		SceneManager::Instance()->SaveScene();
+		currentSelectedEntity = nullptr;
 	}
 	std::bitset<8> buttonBits(InputManager::Instance()->mouseButtons);
 	ImGui::Text(buttonBits.to_string().c_str());
