@@ -33,7 +33,7 @@ public:
 			if (col->colliding && timer <= 0)
 			{
 				goingUp = false;
-				timer = 1;
+				timer = 0.2f;
 			}
 		}
 		else

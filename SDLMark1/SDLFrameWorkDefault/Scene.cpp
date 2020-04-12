@@ -129,7 +129,7 @@ void Scene::Draw()
 				indexRect->w = TILE_WIDTH;
 				indexRect->h = TILE_WIDTH;
 
-				Renderer::Instance()->Draw(indexBitMap, 0 + (Ycounter * TILE_WIDTH), 0 + (Xcounter * TILE_WIDTH), indexRect);
+				Renderer::Instance()->Draw(indexBitMap, 0 + (Ycounter * TILE_WIDTH), 0 + (Xcounter * TILE_WIDTH), 1, indexRect);
 			}
 			catch (int e)
 			{
@@ -291,7 +291,7 @@ void Scene::SceneInit()
 	// clean scene
 	EntityList.clear();
 	renderables.clear();
-
+	Physics->FlushEntities();
 
 	// load map
 	// needs to be replaced by an actual load function
@@ -420,6 +420,22 @@ void Scene::LoadScene()
 				if (std::string(entityData->first_attribute()->value()) == "CameraComponent")
 				{
 					newEntity->addComponent<CameraComponent>();
+					int camComponentX = 0;
+					int camComponenty = 0;
+
+					if (entityData->first_node("xpos"))
+					{
+						std::string xString = entityData->first_node("xpos")->value();
+						camComponentX = std::stoi(xString);
+						entityData->remove_first_node();
+					}
+					if (entityData->first_node("ypos"))
+					{
+						std::string yString = entityData->first_node("ypos")->value();
+						camComponenty = std::stoi(yString);
+						entityData->remove_first_node();
+					}
+					newEntity->getComponent<CameraComponent>().setCamPosition(camComponentX, camComponenty);
 				}
 				if (std::string(entityData->first_attribute()->value()) == "EnemyControl")
 				{
@@ -428,6 +444,12 @@ void Scene::LoadScene()
 				if (std::string(entityData->first_attribute()->value()) == "StairControl")
 				{
 					newEntity->addComponent<StairControl>();
+					std::string sceneToLoad = "";
+					if (entityData->first_node("sceneToLoad"))
+					{
+						sceneToLoad = entityData->first_node("sceneToLoad")->value();
+					}
+					newEntity->getComponent<StairControl>().setScene(sceneToLoad);
 				}
 			}
 			else

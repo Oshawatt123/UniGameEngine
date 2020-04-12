@@ -41,9 +41,9 @@ public:
 
 	void Draw(BitMapPack bitMapPack, SDL_Rect* destRect, SDL_Rect* srcRect = NULL);
 
-	void Draw(BitMapPack bitMapPack, int x, int y, SDL_Rect* srcRect = NULL);
+	void Draw(BitMapPack bitMapPack, int x, int y, float scale = 1, SDL_Rect* srcRect = NULL);
 
-	void Draw(BitMapPack bitMapPack, int x, int y, int index);
+	void Draw(BitMapPack bitMapPack, int x, int y, int index, float scale = 1);
 
 	void DrawLine(int x1, int y1, int x2, int y2, SDL_Color color = { 0,0,0,255 });
 

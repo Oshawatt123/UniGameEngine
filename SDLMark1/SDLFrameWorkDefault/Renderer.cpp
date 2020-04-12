@@ -19,22 +19,22 @@ void Renderer::Draw(BitMapPack bitMapPack, SDL_Rect* destRect, SDL_Rect* srcRect
 	}
 }
 
-void Renderer::Draw(BitMapPack bitMapPack, int x_in, int y_in, SDL_Rect* srcRect)
+void Renderer::Draw(BitMapPack bitMapPack, int x_in, int y_in, float _scale, SDL_Rect* srcRect)
 {
 	SDL_Rect* destRect = new SDL_Rect();
 	if (!blackboard->EditMode)
 	{
 		destRect->x = (x_in * scale) - RenderOffset.x;
 		destRect->y = (y_in * scale) - RenderOffset.y;
-		destRect->w = TILE_WIDTH * scale;
-		destRect->h = TILE_WIDTH * scale;
+		destRect->w = TILE_WIDTH * _scale * scale;
+		destRect->h = TILE_WIDTH * _scale * scale;
 	}
 	else
 	{
 		destRect->x = (x_in * editorScale) - EditorRenderOffset.x;
 		destRect->y = (y_in * editorScale) - EditorRenderOffset.y;
-		destRect->w = TILE_WIDTH * editorScale;
-		destRect->h = TILE_WIDTH * editorScale;
+		destRect->w = TILE_WIDTH * _scale * editorScale;
+		destRect->h = TILE_WIDTH * _scale * editorScale;
 	}
 
 	Draw(bitMapPack, destRect, srcRect);
@@ -44,7 +44,7 @@ void Renderer::Draw(BitMapPack bitMapPack, int x_in, int y_in, SDL_Rect* srcRect
 
 }
 
-void Renderer::Draw(BitMapPack bitMapPack, int x, int y, int index)
+void Renderer::Draw(BitMapPack bitMapPack, int x, int y, int index, float _scale)
 {
 	SDL_Rect* srcRect = new SDL_Rect();
 
@@ -53,7 +53,7 @@ void Renderer::Draw(BitMapPack bitMapPack, int x, int y, int index)
 	srcRect->w = TILE_WIDTH;
 	srcRect->h = TILE_WIDTH;
 
-	Draw(bitMapPack, x, y, srcRect);
+	Draw(bitMapPack, x, y, _scale, srcRect);
 
 	delete srcRect;
 	srcRect = nullptr;

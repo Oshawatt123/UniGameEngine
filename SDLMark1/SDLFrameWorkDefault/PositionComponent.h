@@ -9,7 +9,7 @@ public:
 	Vector2 Position;
 	Vector2 RenderPosition;
 	Vector2 Rotation;
-	int scale;
+	float scale;
 
 	PositionComponent()
 	{
@@ -64,6 +64,7 @@ public:
 	{		
 		ImGui::DragScalar("X Position", ImGuiDataType_Float, &Position.x, 0.5f, &f_min, &f_max, "%f", 1.0f);
 		ImGui::DragScalar("Y Position", ImGuiDataType_Float, &Position.y, 0.5f, &f_min, &f_max, "%f", 1.0f);
+		ImGui::DragScalar("X Scale", ImGuiDataType_Float, &scale, 0.2f, &f_min, &f_max, "%f", 0.5f);
 	}
 
 	void EditorTick() override

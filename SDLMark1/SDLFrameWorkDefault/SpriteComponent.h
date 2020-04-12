@@ -53,12 +53,17 @@ public:
 	void Tick() override
 	{
 		//std::cout << "Drawing a dude" << std::endl;
-		Renderer::Instance()->Draw(m_bitMapPack, m_positionComponent->getPos().x - offsetX, m_positionComponent->getPos().y - offsetY, m_index);
+		JointTick();
 	}
 
 	void EditorTick() override
 	{
-		Renderer::Instance()->Draw(m_bitMapPack, m_positionComponent->getPos().x - offsetX, m_positionComponent->getPos().y - offsetY, m_index);
+		JointTick();
+	}
+
+	void JointTick()
+	{
+		Renderer::Instance()->Draw(m_bitMapPack, m_positionComponent->getPos().x - offsetX, m_positionComponent->getPos().y - offsetY, m_index, m_positionComponent->scale);
 	}
 
 	SDL_Texture& getTexture()
@@ -77,15 +82,19 @@ public:
 		if (ResourceManager::Instance()->testLoad(pathBuffer))
 		{
 			ImGui::Text("Press Enter to select path");
-			if(InputManager::Instance()->KeyDown(SDL_SCANCODE_RETURN))
+			if (InputManager::Instance()->KeyDown(SDL_SCANCODE_RETURN))
+			{
 				m_bitMapPack = ResourceManager::Instance()->LoadBitMap(pathBuffer, true);
+				m_filePath = pathBuffer;
+			}
+				
 		}
 		else
 		{
 			ImGui::Text("Invalid sprite path");
 		}
 
-		ImVec2 texSize = ImVec2(m_bitMapPack.width*3, m_bitMapPack.height*3);
+		ImVec2 texSize = ImVec2(m_bitMapPack.width/ m_positionComponent->scale *3, m_bitMapPack.height/ m_positionComponent->scale *3);
 		std::string temp = "Index: " + std::to_string(m_index);
 		ImGui::Text(temp.c_str());
 		ImGui::Image(m_bitMapPack.texture, texSize);

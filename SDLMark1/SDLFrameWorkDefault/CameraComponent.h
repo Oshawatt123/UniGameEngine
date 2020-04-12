@@ -44,4 +44,17 @@ public:
 			camOffset.y = 1080 / 2;
 		}
 	}
+
+	std::string GetSaveData()
+	{
+		std::string saveData;
+		saveData += "<xpos>" + std::to_string(camOffset.x) + "</xpos>" + "<ypos>" + std::to_string(camOffset.y) + "</ypos>";
+		return saveData;
+	}
+
+	void setCamPosition(int _x, int _y)
+	{
+		camOffset.x = _x;
+		camOffset.y = _y;
+	}
 };

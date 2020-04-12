@@ -65,6 +65,21 @@ void SceneManager::LoadSceneByPath(std::string path)
 	LoadScene(loadedScenes[path]);
 }
 
+void SceneManager::LoadSceneNoSave(std::string sceneName)
+{
+	// get scene by name
+	// if scene does not exist already
+	std::string path = "../Assets/Scenes/" + sceneName + ".filthyscene";
+	if ((loadedScenes.find(path) == loadedScenes.end()))
+	{
+		Scene* newScene = new Scene(sceneName, 1920, 1080);
+		loadedScenes.insert(std::pair<std::string, Scene*>(path, newScene));
+	}
+
+	currentScene = loadedScenes[path];
+	currentScene->Reload();
+}
+
 void SceneManager::SaveScene()
 {
 	std::ofstream outfile;
@@ -88,7 +103,7 @@ void SceneManager::Tick()
 	eventStore = EventSystem::Instance()->GetEvent(SCENE_LOAD);
 	if (eventStore)
 	{
-		LoadScene(eventStore->stringData);
+		LoadSceneNoSave(eventStore->stringData);
 		eventStore = nullptr;
 	}
 }
