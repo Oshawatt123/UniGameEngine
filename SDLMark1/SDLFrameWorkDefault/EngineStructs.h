@@ -2,8 +2,6 @@
 #include "SDL.h"
 #include <string>
 
-#include "Time.h"
-
 #define ENGINE_EDITOR_MODE
 
 // DEBUG DEFINES
@@ -19,6 +17,9 @@
 #define Log(string, verbosity) Logger::Instance()->LogString(string, verbosity)
 #define blackboard BlackBoard::Instance()
 #define filthyTime Time::Instance()
+#define filthyRenderer Renderer::Instance()
+
+
 const int TILE_WIDTH = 16;
 
 // FILE PATH MACROS

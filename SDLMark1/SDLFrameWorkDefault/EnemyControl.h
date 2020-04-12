@@ -2,6 +2,7 @@
 #include "PositionComponent.h"
 #include "InputManager.h"
 #include "EngineStructs.h"
+#include "Time.h"
 
 class EnemyControl : public Component
 {

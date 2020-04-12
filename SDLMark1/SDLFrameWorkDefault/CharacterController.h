@@ -4,6 +4,9 @@
 #include "InputManager.h"
 #include "EngineStructs.h"
 #include "MathHelper.h"
+#include "Time.h"
+
+#include "PhysicsEngine.h"
 
 class CharacterController : public Component
 {
@@ -12,6 +15,7 @@ private:
 	CollisionComponent* col;
 	float speed;
 	Vector2 translation;
+	Vector2 direction;
 
 public:
 	void Init() override
@@ -53,6 +57,8 @@ public:
 			std::cout << "DASSHHHHH" << std::endl;
 
 		}
+		direction = translation;
+
 		pos->translate(translation * filthyTime->deltaTime);
 	}
 

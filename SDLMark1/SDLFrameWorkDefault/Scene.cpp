@@ -207,19 +207,20 @@ bool Scene::CheckPointCollideEntityScreenSpace(Vector2 point, Entity*& outEntity
 {
 	for (auto object : EntityList)
 	{
+
 		Vector2 otherPos = object->getComponent<PositionComponent>().getPos();
 
 		// Is Point X to the RIGHT of the object's LEFT edge?
-		if (point.x + gameCamera.x > otherPos.x + gameCamera.x)
+		if (point.x > otherPos.x * filthyRenderer->getEditorScale() - filthyRenderer->GetEditorCamera().x)
 		{
 			// Is Point X to the LEFT of the object's RIGHT edge?
-			if (point.x + gameCamera.x < otherPos.x + TILE_WIDTH + gameCamera.x)
+			if (point.x < (otherPos.x + TILE_WIDTH) * filthyRenderer->getEditorScale() - filthyRenderer->GetEditorCamera().x )
 			{
 				// Is Point Y BELOW the object's TOP edge?
-				if (point.y + gameCamera.y > otherPos.y + gameCamera.y)
+				if (point.y > otherPos.y * filthyRenderer->getEditorScale() - filthyRenderer->GetEditorCamera().y )
 				{
 					// Is Point Y ABOVE the object's BOTTOM edge?
-					if (point.y + gameCamera.y < otherPos.y + TILE_WIDTH + gameCamera.y)
+					if (point.y < (otherPos.y + TILE_WIDTH) * filthyRenderer->getEditorScale() - filthyRenderer->GetEditorCamera().y )
 					{
 						outEntity = object;
 						Log("Clicked an entity!", DEBUG);

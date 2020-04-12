@@ -84,6 +84,21 @@ void Renderer::TranslateEditorCamera(int x, int y)
 	TranslateEditorCamera(Vector2(x, y));
 }
 
+Vector2 Renderer::GetEditorCamera()
+{
+	return EditorRenderOffset;
+}
+
+Vector2 Renderer::screenToEditorWorldSpace(Vector2 screenSpace)
+{
+	Vector2 worldSpace;
+
+	worldSpace = screenSpace + EditorRenderOffset;
+	worldSpace /= editorScale;
+
+	return worldSpace;
+}
+
 Renderer* Renderer::Instance()
 {
 	if (sInstance == NULL)
@@ -115,6 +130,11 @@ SDL_Renderer* Renderer::getRenderer()
 float Renderer::getScale()
 {
 	return scale;
+}
+
+float Renderer::getEditorScale()
+{
+	return editorScale;
 }
 
 Renderer::Renderer(SDL_Window* Window)

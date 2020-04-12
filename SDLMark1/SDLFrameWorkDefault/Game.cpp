@@ -157,6 +157,7 @@ bool Game::Tick(void)
 				// set new entity and set their edit mode
 				currentSelectedEntity = clickedObject;
 				currentSelectedEntity->editMode = true;
+				currentSelectedEntity->getComponent<PositionComponent>().setPosition(filthyRenderer->screenToEditorWorldSpace(Vector2(mousex, mousey)).Subtract(Vector2(TILE_WIDTH/2, TILE_WIDTH/2)));
 			}
 		}
 		if ((InputManager::Instance()->mouseButtons & SDL_BUTTON(SDL_BUTTON_MIDDLE)))
@@ -274,6 +275,7 @@ void Game::DrawInspector()
 	if (currentSelectedEntity != nullptr)
 	{
 		ImGui::Checkbox("EntityEnabledCheck", &currentSelectedEntity->enabled);
+		ImGui::InputText("Entity Name", &currentSelectedEntity->name);
 		ImGui::TextColored(ImVec4(1, 1, 0, 1), currentSelectedEntity->name.c_str());
 
 		for (auto component : currentSelectedEntity->getComponents())
@@ -389,8 +391,6 @@ void Game::DrawScenePicker()
 void Game::DrawEngineDebug()
 {
 	ImGui::Begin("Debug Window", &heirarchyOpen);
-	ImGui::Text(std::to_string(mousex).c_str());
-	ImGui::Text(std::to_string(mousey).c_str());
 	ImGui::Checkbox("EditMode", &blackboard->EditMode);
  
 	ImGui::PlotLines("Frame time", filthyTime->deltaTimes, IM_ARRAYSIZE(filthyTime->deltaTimes));
@@ -400,5 +400,11 @@ void Game::DrawEngineDebug()
 	}
 	std::bitset<8> buttonBits(InputManager::Instance()->mouseButtons);
 	ImGui::Text(buttonBits.to_string().c_str());
+
+	std::string temp = "Mouse X : " + std::to_string(InputManager::Instance()->mouseX) + " Mouse Y : " + std::to_string(InputManager::Instance()->mouseY);
+	ImGui::Text(temp.c_str());
+
+	std::string temp2 = "Editor Render Offset : " + std::to_string(Renderer::Instance()->GetEditorCamera().x) + " : " + std::to_string(Renderer::Instance()->GetEditorCamera().y);
+	ImGui::Text(temp2.c_str());
 	ImGui::End();
 }

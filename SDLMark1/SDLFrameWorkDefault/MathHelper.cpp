@@ -122,7 +122,7 @@ Vector2& Vector2::operator*=(const float& value)
 
 Vector2& Vector2::operator/=(const float& value)
 {
-	return this->Multiply(value);
+	return this->Divide(value);
 }
 
 // does nothing, needs fixing

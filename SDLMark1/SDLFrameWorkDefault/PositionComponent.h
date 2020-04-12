@@ -33,10 +33,15 @@ public:
 
 	Vector2 getPos() { return Position; }
 
-	void setPosition(int x, int y)
+	void setPosition(float x, float y)
 	{
 		Position.x = x;
 		Position.y = y;
+	}
+
+	void setPosition(Vector2 pos)
+	{
+		setPosition(pos.x, pos.y);
 	}
 
 	void translate(float x, float y)

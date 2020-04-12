@@ -33,6 +33,12 @@ private:
 	float editorScale = 3;
 
 public:
+
+	static Renderer* Instance();
+
+	static Renderer* Instance(SDL_Window* Window);
+
+
 	void Draw(BitMapPack bitMapPack, SDL_Rect* destRect, SDL_Rect* srcRect = NULL);
 
 	void Draw(BitMapPack bitMapPack, int x, int y, SDL_Rect* srcRect = NULL);
@@ -49,13 +55,14 @@ public:
 
 	void TranslateEditorCamera(int x, int y);
 
-	static Renderer* Instance();
+	Vector2 GetEditorCamera();
 
-	static Renderer* Instance(SDL_Window* Window);
+	Vector2 screenToEditorWorldSpace(Vector2 screenSpace);
 
 	SDL_Renderer* getRenderer();
 
 	float getScale();
+	float getEditorScale();
 
 	void UpdateRenderer();
 

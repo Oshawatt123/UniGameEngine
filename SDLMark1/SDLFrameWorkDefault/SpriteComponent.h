@@ -50,6 +50,11 @@ public:
 		Renderer::Instance()->Draw(m_bitMapPack, m_positionComponent->getPos().x, m_positionComponent->getPos().y, m_index);
 	}
 
+	void EditorTick() override
+	{
+		Renderer::Instance()->Draw(m_bitMapPack, m_positionComponent->getPos().x, m_positionComponent->getPos().y, m_index);
+	}
+
 	SDL_Texture& getTexture()
 	{
 		return *m_bitMapPack.texture;

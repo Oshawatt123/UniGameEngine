@@ -6,6 +6,7 @@
  // 3rd party includes
 #include "imgui.h"
 #include "imgui_sdl.h"
+#include "imgui_stdlib.h"
 
 #include <SDL.h>
 #include <GL/gl3w.h>
