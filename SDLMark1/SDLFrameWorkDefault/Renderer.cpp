@@ -74,6 +74,11 @@ void Renderer::SetRenderOffset(int x, int y)
 	SetRenderOffset(Vector2(x, y));
 }
 
+Vector2 Renderer::getRenderOffset()
+{
+	return RenderOffset;
+}
+
 void Renderer::TranslateEditorCamera(Vector2 translation)
 {
 	EditorRenderOffset -= translation;
@@ -164,15 +169,17 @@ void Renderer::UpdateRenderer()
 {
 	//SDL_RenderSetViewport(m_pRenderer, renderCamera);
 
+	float usedScale = blackboard->EditMode ? editorScale : scale;
+
 	// draw all the editor lines
 	for (Line line : EditorRenderLines)
 	{
 		SDL_SetRenderDrawColor(m_pRenderer, line.color.r, line.color.g, line.color.b, line.color.a);
 		SDL_RenderDrawLine(m_pRenderer,
-			line.start.x * editorScale - EditorRenderOffset.x,
-			line.start.y * editorScale - EditorRenderOffset.y,
-			line.end.x * editorScale - EditorRenderOffset.x,
-			line.end.y * editorScale - EditorRenderOffset.y);
+			(line.start.x * usedScale) - EditorRenderOffset.x,
+			(line.start.y * usedScale) - EditorRenderOffset.y,
+			(line.end.x * usedScale) - EditorRenderOffset.x,
+			(line.end.y * usedScale) - EditorRenderOffset.y);
 	}
 	EditorRenderLines.clear();
 

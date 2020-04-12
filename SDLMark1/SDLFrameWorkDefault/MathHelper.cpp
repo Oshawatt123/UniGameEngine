@@ -129,5 +129,5 @@ Vector2& Vector2::operator/=(const float& value)
 void Vector2::Normalize()
 {
 	magnitude = sqrt((x * x) + (y * y));
-	//*this /= magnitude;
+	*this /= magnitude;
 }

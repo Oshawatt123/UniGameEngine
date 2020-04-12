@@ -16,6 +16,7 @@ private:
 	float speed;
 	Vector2 translation;
 	Vector2 direction;
+	Entity* collidingEntity;
 
 public:
 	void Init() override
@@ -57,9 +58,34 @@ public:
 			std::cout << "DASSHHHHH" << std::endl;
 
 		}
-		direction = translation;
 
+		if (translation.x != 0 || translation.y != 0)
+		{
+			direction = translation;
+			direction.Normalize();
+			direction *= TILE_WIDTH + 2;
+		}
+
+		Physics->CheckPointCollision(pos->getPos().Add(direction), collidingEntity);
+		if (collidingEntity)
+		{
+			if (collidingEntity->name == "Block")
+				translation = Vector2(0, 0);
+		}
 		pos->translate(translation * filthyTime->deltaTime);
+
+		filthyRenderer->DrawLine(pos->getPos().x, pos->getPos().y, pos->getPos().x + direction.x, pos->getPos().y + direction.y);
+	}
+
+	void PopulateInspector() override
+	{
+		std::string temp = "Direction => X: " + std::to_string(direction.x) + " Y: " + std::to_string(direction.y);
+		ImGui::Text(temp.c_str());
+		if (collidingEntity)
+			temp = "About to collide with: " + collidingEntity->name;
+		else
+			temp = "No collision inbound";
+		ImGui::Text(temp.c_str());
 	}
 
 	float& GetSpeed()

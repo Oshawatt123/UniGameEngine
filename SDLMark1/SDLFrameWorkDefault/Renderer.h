@@ -51,6 +51,8 @@ public:
 
 	void SetRenderOffset(int x, int y);
 
+	Vector2 getRenderOffset();
+
 	void TranslateEditorCamera(Vector2 translation);
 
 	void TranslateEditorCamera(int x, int y);

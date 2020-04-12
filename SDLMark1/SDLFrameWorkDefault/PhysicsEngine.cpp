@@ -61,16 +61,16 @@ bool PhysicsEngine::CheckPointCollision(Vector2 point, Entity* outEntity)
 	{
 		otherCollider = object->getComponent<CollisionComponent>().collider;
 		// Is Point X to the RIGHT of the object's LEFT edge?
-		if (point.x > otherCollider.x)
+		if (point.x > otherCollider.x - filthyRenderer->getRenderOffset().x)
 		{
 			// Is Point X to the LEFT of the object's RIGHT edge?
-			if (point.x < otherCollider.x + otherCollider.w)
+			if (point.x < otherCollider.x + otherCollider.w - filthyRenderer->getRenderOffset().x)
 			{
 				// Is Point Y BELOW the object's TOP edge?
-				if (point.y < otherCollider.y)
+				if (point.y < otherCollider.y - filthyRenderer->getRenderOffset().y)
 				{
 					// Is Point Y ABOVE the object's BOTTOM edge?
-					if (point.y > otherCollider.y - otherCollider.h)
+					if (point.y > otherCollider.y - otherCollider.h - filthyRenderer->getRenderOffset().y)
 					{
 						outEntity = object;
 						return true;
@@ -99,4 +99,10 @@ bool PhysicsEngine::AABB(const SDL_Rect& A, const SDL_Rect& B)
 	}
 
 	return false;
+}
+
+void PhysicsEngine::FlushEntities()
+{
+	MoveAble.clear();
+	Collidable.clear();
 }

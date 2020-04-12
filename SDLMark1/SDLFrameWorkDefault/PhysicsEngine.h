@@ -28,6 +28,8 @@ public:
 
 	bool AABB(const SDL_Rect& A, const SDL_Rect& B);
 
+	void FlushEntities();
+
 private:
 	PhysicsEngine() {}
 	~PhysicsEngine() {}

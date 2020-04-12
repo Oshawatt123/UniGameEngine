@@ -303,6 +303,8 @@ void Scene::SceneInit()
 void Scene::LoadScene()
 {
 
+	Physics->FlushEntities();
+
 	Log("#################### [XML DEBUG] #####################", DEBUG);
 	// load the scene file
 	std::string scenePath = "../Assets/Scenes/" + SceneName + ".filthyscene";
