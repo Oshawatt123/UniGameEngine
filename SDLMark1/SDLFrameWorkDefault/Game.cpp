@@ -67,13 +67,8 @@ Game::Game()
 	// create renderer
 	Renderer::Instance(m_Window);
 
-	// create physics engine
-	physicsEngine = new PhysicsEngine();
-
 	// create resource manager
-	ResourceManager::Instance(Renderer::Instance()->getRenderer(), physicsEngine);
-
-	SceneManager::Instance(physicsEngine);
+	ResourceManager::Instance(Renderer::Instance()->getRenderer());
 
 	ImGui::CreateContext();
 	ImGuiSDL::Initialize(Renderer::Instance()->getRenderer(), SCREEN_WIDTH, SCREEN_HEIGHT);
@@ -95,9 +90,6 @@ Game::~Game()
 	//SceneManager::Instance()->release();
 
 	ResourceManager::Instance()->release();	
-
-	delete(physicsEngine);
-	physicsEngine = nullptr;
 
 	//Renderer::Instance()->release();
 
@@ -137,8 +129,7 @@ bool Game::Tick(void)
 		// scene tick
 		SceneManager::Instance()->getCurrentScene()->Tick();
 
-		// update physics
-		physicsEngine->Tick();
+		Physics->Tick();
 
 		SceneManager::Instance()->Tick();
 	}

@@ -46,10 +46,6 @@ private:
 	const int RENDER_VIEW_WIDTH = SCREEN_WIDTH * 0.5f;
 	const int RENDER_VIEW_HEIGHT = SCREEN_HEIGHT * 0.65f;
 
-
-	//My Own Jazz
-	PhysicsEngine* physicsEngine;
-
 	// IMGui
 	ImGuiIO io;
 

@@ -1,7 +1,6 @@
 #pragma once
 
 #include "Scene.h"
-#include "PhysicsEngine.h"
 
 #include <string>
 #include <vector>
@@ -23,13 +22,9 @@ private:
 
 	int mNextBuildIndex;
 
-	PhysicsEngine* pe;
-
 	Event* eventStore;
 
 public:
-
-	static SceneManager* Instance(PhysicsEngine* _pe);
 
 	static SceneManager* Instance();
 

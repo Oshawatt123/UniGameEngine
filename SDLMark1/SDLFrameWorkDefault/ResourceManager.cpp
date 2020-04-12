@@ -2,10 +2,9 @@
 
 ResourceManager* ResourceManager::sInstance = NULL;
 
-ResourceManager::ResourceManager(SDL_Renderer* renderer, PhysicsEngine* _pe)
+ResourceManager::ResourceManager(SDL_Renderer* renderer)
 {
 	ResourceManager::m_pRenderer = renderer;
-	ResourceManager::pe = _pe;
 }
 
 ResourceManager::~ResourceManager()
@@ -133,12 +132,12 @@ ResourceManager* ResourceManager::Instance()
 	return sInstance;
 }
 
-ResourceManager* ResourceManager::Instance(SDL_Renderer* renderer, PhysicsEngine* _pe)
+ResourceManager* ResourceManager::Instance(SDL_Renderer* renderer)
 {
 	if (sInstance == NULL)
 	{
 		Log("Initializing resource manager with a renderer.", DEBUG);
-		sInstance = new ResourceManager(renderer, _pe);
+		sInstance = new ResourceManager(renderer);
 	}
 	return sInstance;
 }

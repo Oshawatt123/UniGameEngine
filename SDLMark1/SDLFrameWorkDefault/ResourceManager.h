@@ -39,7 +39,6 @@ private:
 
 	
 	SDL_Renderer* m_pRenderer;
-	PhysicsEngine* pe;
 
 	std::unordered_map<std::string, BitMapPack> m_textureHashMap;
 	//std::unordered_map<std::string, Scene> m_sceneHashMap;
@@ -55,7 +54,7 @@ public:
 	std::vector<std::string> LoadMap(std::string filePath);
 
 	static ResourceManager* Instance();
-	static ResourceManager* Instance(SDL_Renderer* renderer, PhysicsEngine* _pe);
+	static ResourceManager* Instance(SDL_Renderer* renderer);
 
 	std::vector<Entity*> LoadScene(Map& outMap, std::string sceneName);
 
@@ -64,6 +63,6 @@ public:
 private:
 	bool checkHashMap(std::string key);
 
-	ResourceManager(SDL_Renderer* renderer, PhysicsEngine* _pe);
+	ResourceManager(SDL_Renderer* renderer);
 	~ResourceManager();
 };

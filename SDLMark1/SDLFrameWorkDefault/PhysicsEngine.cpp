@@ -1,5 +1,16 @@
 #include "PhysicsEngine.h"
 
+PhysicsEngine* PhysicsEngine::sInstance = NULL;
+
+PhysicsEngine* PhysicsEngine::Instance()
+{
+	if (sInstance == NULL)
+	{
+		sInstance = new PhysicsEngine();
+	}
+	return sInstance;
+}
+
 bool PhysicsEngine::Tick()
 {
 	/*for (auto x : MoveAble)

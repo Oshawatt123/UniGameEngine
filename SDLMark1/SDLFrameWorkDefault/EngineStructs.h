@@ -18,6 +18,7 @@
 #define blackboard BlackBoard::Instance()
 #define filthyTime Time::Instance()
 #define filthyRenderer Renderer::Instance()
+#define Physics PhysicsEngine::Instance()
 
 
 const int TILE_WIDTH = 16;

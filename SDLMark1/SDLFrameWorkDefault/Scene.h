@@ -37,12 +37,10 @@ private:
 
 	bool needToStart;
 
-	PhysicsEngine* pe;
-
 public:
 
-	Scene(PhysicsEngine* _pe, int screen_width, int screen_height);
-	Scene(PhysicsEngine* _pe, std::string name, int screen_width, int screen_height);
+	Scene(int screen_width, int screen_height);
+	Scene(std::string name, int screen_width, int screen_height);
 	~Scene();
 
 	void Reload();

@@ -12,10 +12,12 @@ private:
 	std::vector<Entity*> MoveAble;
 	std::vector<Entity*> Collidable;
 
+	static PhysicsEngine* sInstance;
+
 public:
 
-	PhysicsEngine() {}
-	~PhysicsEngine() {}
+	static PhysicsEngine* Instance();
+
 	bool Tick();
 
 	void AddMoveableObject(Entity* object);
@@ -25,4 +27,8 @@ public:
 	bool CheckPointCollision(Vector2 point, Entity* outEntity);
 
 	bool AABB(const SDL_Rect& A, const SDL_Rect& B);
+
+private:
+	PhysicsEngine() {}
+	~PhysicsEngine() {}
 };

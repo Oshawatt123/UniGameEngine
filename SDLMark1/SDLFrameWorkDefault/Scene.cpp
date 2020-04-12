@@ -8,23 +8,21 @@ void AddBrace(std::string* data, std::string brace, bool end)
 		*data = *data + "</" + brace + ">";
 }
 
-Scene::Scene(PhysicsEngine* _pe, int screen_width, int screen_height)
+Scene::Scene(int screen_width, int screen_height)
 {
 	SceneBuildNumber = 0;
 	SceneName = "DefaultSceneName";
 	SW = screen_width;
 	SH = screen_height;
-	pe = _pe;
 	SceneInit();
 }
 
-Scene::Scene(PhysicsEngine* _pe, std::string name, int screen_width, int screen_height)
+Scene::Scene(std::string name, int screen_width, int screen_height)
 {
 	SceneBuildNumber = 0;
 	SceneName = name;
 	SW = screen_width;
 	SH = screen_height;
-	pe = _pe;
 	SceneInit();
 }
 
@@ -415,7 +413,7 @@ void Scene::LoadScene()
 				if (std::string(entityData->first_attribute()->value()) == "CollisionComponent")
 				{
 					newEntity->addComponent<CollisionComponent>();
-					pe->AddCollidableObject(newEntity);
+					Physics->AddCollidableObject(newEntity);
 				}
 				if (std::string(entityData->first_attribute()->value()) == "CameraComponent")
 				{

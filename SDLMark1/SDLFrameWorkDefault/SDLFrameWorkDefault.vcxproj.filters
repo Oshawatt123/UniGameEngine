@@ -57,9 +57,6 @@
     <ClCompile Include="Profiler.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="PhysicsEngine.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Map.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -104,6 +101,9 @@
     </ClCompile>
     <ClCompile Include="Event.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PhysicsEngine.cpp">
+      <Filter>Source Files\Statics</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -191,9 +191,6 @@
     <ClInclude Include="imgui_sdl.h">
       <Filter>Header Files\thirdparty</Filter>
     </ClInclude>
-    <ClInclude Include="PhysicsEngine.h">
-      <Filter>Header Files\Statics</Filter>
-    </ClInclude>
     <ClInclude Include="Timer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -217,6 +214,9 @@
     </ClInclude>
     <ClInclude Include="Event.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PhysicsEngine.h">
+      <Filter>Header Files\Statics</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -2,22 +2,11 @@
 
 SceneManager* SceneManager::sInstance = NULL;
 
-SceneManager* SceneManager::Instance(PhysicsEngine* _pe)
-{
-	if (sInstance == NULL)
-	{
-		sInstance = new SceneManager();
-		sInstance->pe = _pe;
-	}
-	return sInstance;
-}
-
 SceneManager* SceneManager::Instance()
 {
 	if (sInstance == NULL)
 	{
-		Log("SCENE MANAGER NOT INITIALIZED WITH PHYSICS ENGINE", DBERROR);
-		return 0;
+		sInstance = new SceneManager();
 	}
 	return sInstance;
 }
@@ -40,7 +29,7 @@ void SceneManager::LoadScene(std::string sceneName)
 	std::string path = "../Assets/Scenes/" + sceneName + ".filthyscene";
 	if ((loadedScenes.find(path) == loadedScenes.end()))
 	{
-		Scene* newScene = new Scene(pe, sceneName, 1920, 1080);
+		Scene* newScene = new Scene(sceneName, 1920, 1080);
 		loadedScenes.insert(std::pair<std::string, Scene*>(path, newScene));
 	}
 	LoadScene(loadedScenes[path]);
@@ -70,7 +59,7 @@ void SceneManager::LoadSceneByPath(std::string path)
 	// voila!!!
 	if ((loadedScenes.find(path) == loadedScenes.end()))
 	{
-		Scene* newScene = new Scene(pe, levelName, 1920, 1080);
+		Scene* newScene = new Scene(levelName, 1920, 1080);
 		loadedScenes.insert(std::pair<std::string, Scene*>(path, newScene));
 	}
 	LoadScene(loadedScenes[path]);
