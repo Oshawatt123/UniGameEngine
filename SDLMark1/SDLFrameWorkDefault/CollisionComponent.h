@@ -37,7 +37,9 @@ public:
 		collider.x = colPosition.x;
 		collider.y = colPosition.y;
 		collider.w = colDimension.x;
-		collider.h = colDimension.y;		
+		collider.h = colDimension.y;
+
+		Renderer::Instance()->DrawLine(collider.x, collider.y, collider.x + collider.w, collider.y + collider.h, { 0, 255, 0, 255 });
 	}
 
 	void PopulateInspector()

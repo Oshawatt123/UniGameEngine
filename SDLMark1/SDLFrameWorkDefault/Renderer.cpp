@@ -170,16 +170,17 @@ void Renderer::UpdateRenderer()
 	//SDL_RenderSetViewport(m_pRenderer, renderCamera);
 
 	float usedScale = blackboard->EditMode ? editorScale : scale;
+	Vector2 offsetUsed = blackboard->EditMode ? EditorRenderOffset : RenderOffset;
 
 	// draw all the editor lines
 	for (Line line : EditorRenderLines)
 	{
 		SDL_SetRenderDrawColor(m_pRenderer, line.color.r, line.color.g, line.color.b, line.color.a);
 		SDL_RenderDrawLine(m_pRenderer,
-			(line.start.x * usedScale) - EditorRenderOffset.x,
-			(line.start.y * usedScale) - EditorRenderOffset.y,
-			(line.end.x * usedScale) - EditorRenderOffset.x,
-			(line.end.y * usedScale) - EditorRenderOffset.y);
+			(line.start.x * usedScale) - offsetUsed.x,
+			(line.start.y * usedScale) - offsetUsed.y,
+			(line.end.x * usedScale) - offsetUsed.x,
+			(line.end.y * usedScale) - offsetUsed.y);
 	}
 	EditorRenderLines.clear();
 
