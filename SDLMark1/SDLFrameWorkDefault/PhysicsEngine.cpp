@@ -58,15 +58,12 @@ Entity* PhysicsEngine::CheckPointCollision(Vector2 point)
 {
 	SDL_Rect otherCollider;
 
-	Vector2 worldSpacePoint;
-	worldSpacePoint.x = point.x * filthyRenderer->getScale() - filthyRenderer->getRenderOffset().x;
-	worldSpacePoint.y = point.y * filthyRenderer->getScale() - filthyRenderer->getRenderOffset().y;
 	for (auto object : Collidable)
 	{
 		otherCollider = object->getComponent<CollisionComponent>().collider;
 
-		filthyRenderer->DrawLine(point.x, point.y, otherCollider.x, otherCollider.y, {0, 255, 0});
-		filthyRenderer->DrawLine(point.x, point.y, otherCollider.x + otherCollider.w, otherCollider.y + otherCollider.h, {0, 255, 0});
+		//filthyRenderer->DrawLine(point.x, point.y, otherCollider.x, otherCollider.y, {0, 255, 0});
+		//filthyRenderer->DrawLine(point.x, point.y, otherCollider.x + otherCollider.w, otherCollider.y + otherCollider.h, {0, 255, 0});
 		// Is Point X to the RIGHT of the object's LEFT edge?
 		if (point.x > otherCollider.x)
 		{

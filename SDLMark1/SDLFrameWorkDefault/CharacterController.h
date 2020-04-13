@@ -1,6 +1,9 @@
 #pragma once
 #include "PositionComponent.h"
 #include "CollisionComponent.h"
+#include "SpriteComponent.h"
+#include "EnemyControl.h"
+
 #include "InputManager.h"
 #include "EngineStructs.h"
 #include "MathHelper.h"
@@ -13,6 +16,8 @@ class CharacterController : public Component
 private:
 	PositionComponent* pos;
 	CollisionComponent* col;
+	SpriteComponent* spr;
+
 	float speed;
 	Vector2 translation;
 	Vector2 direction;
@@ -23,6 +28,8 @@ public:
 	{
 		pos = &entity->getComponent<PositionComponent>();
 		col = &entity->getComponent<CollisionComponent>();
+		spr = &entity->getComponent<SpriteComponent>();
+
 		speed = 100;
 		name = "CharacterController";
 	}
@@ -33,18 +40,22 @@ public:
 		if (InputManager::Instance()->KeyDown(SDL_SCANCODE_D))
 		{
 			translation.x += speed;
+			spr->SetIndex(2);
 		}
 		if (InputManager::Instance()->KeyDown(SDL_SCANCODE_A))
 		{
 			translation.x -= speed;
+			spr->SetIndex(1);
 		}
 		if (InputManager::Instance()->KeyDown(SDL_SCANCODE_W))
 		{
 			translation.y -= speed;
+			spr->SetIndex(3);
 		}
 		if (InputManager::Instance()->KeyDown(SDL_SCANCODE_S))
 		{
 			translation.y += speed;
+			spr->SetIndex(0);
 		}
 		if (InputManager::Instance()->KeyDown(SDL_SCANCODE_Q))
 		{
@@ -74,6 +85,27 @@ public:
 		}
 		pos->translate(translation * filthyTime->deltaTime);
 
+		if (InputManager::Instance()->KeyDown(SDL_SCANCODE_SPACE))
+		{
+			if (collidingEntity)
+			{
+				if (collidingEntity->name == "Crab")
+					collidingEntity->getComponent<EnemyControl>().damage();
+			}
+		}
+
+		// set sprite and animation
+		if (translation.Magnitude() > 0)
+		{
+			spr->setFilePath("../Assets/Sprites/knight.bmp");
+			spr->SetAnimated(false);
+		}
+		else
+		{
+			spr->setFilePath("../Assets/Sprites/knightIdle.bmp");
+			spr->SetAnimated(true);
+		}
+
 		filthyRenderer->DrawLine(pos->getPos().x, pos->getPos().y, pos->getPos().x + direction.x, pos->getPos().y + direction.y);
 	}
 
@@ -85,6 +117,9 @@ public:
 			temp = "About to collide with: " + collidingEntity->name;
 		else
 			temp = "No collision inbound";
+		ImGui::Text(temp.c_str());
+
+		temp = std::to_string(translation.Magnitude());
 		ImGui::Text(temp.c_str());
 	}
 

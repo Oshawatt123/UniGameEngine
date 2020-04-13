@@ -6,6 +6,8 @@
 #include "InputManager.h"
 #include "imgui_stdlib.h"
 
+#include "Time.h"
+
 class SpriteComponent : public Component
 {
 private:
@@ -21,9 +23,13 @@ private:
 
 	float offsetX, offsetY;
 
-public:
+	bool animated = false;
+	float animationFrameTime = 5;
+	float timer;
 
 	std::string m_filePath;
+
+public:
 
 	SpriteComponent()
 	{
@@ -54,6 +60,20 @@ public:
 	{
 		//std::cout << "Drawing a dude" << std::endl;
 		JointTick();
+		if (animated)
+		{
+			if (timer <= 0)
+			{
+				m_index += 1;
+				// hard-coded animation frame limit
+				if (m_index >= 4)
+				{
+					m_index = 0;
+				}
+				timer = animationFrameTime;
+			}
+			timer -= filthyTime->deltaTime;
+		}
 	}
 
 	void EditorTick() override
@@ -94,9 +114,14 @@ public:
 			ImGui::Text("Invalid sprite path");
 		}
 
+		ImGui::Text("Index : ");
+		ImGui::SameLine();
+		ImGui::InputInt("", &m_index);
+
+		ImGui::Checkbox("Animated : ", &animated);
+		ImGui::InputFloat("Animation FrameTime", &animationFrameTime);
+
 		ImVec2 texSize = ImVec2(m_bitMapPack.width/ m_positionComponent->scale *3, m_bitMapPack.height/ m_positionComponent->scale *3);
-		std::string temp = "Index: " + std::to_string(m_index);
-		ImGui::Text(temp.c_str());
 		ImGui::Image(m_bitMapPack.texture, texSize);
 	}
 
@@ -110,5 +135,16 @@ public:
 	void SetIndex(int index)
 	{
 		m_index = index;
+	}
+
+	void setFilePath(std::string filePath)
+	{
+		m_filePath = filePath;
+		m_bitMapPack = ResourceManager::Instance()->LoadBitMap(m_filePath, true);
+	}
+
+	void SetAnimated(bool _animated)
+	{
+		animated = _animated;
 	}
 };

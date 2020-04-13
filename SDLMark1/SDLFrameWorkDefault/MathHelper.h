@@ -4,11 +4,12 @@
 
 class Vector2
 {
+private:
+	float magnitude = 0;
 public:
 
 	float x;
 	float y;
-	float magnitude = 0;
 
 	float& getXAddr() { return x; }
 	float& getYAddr() { return y; }
@@ -40,6 +41,7 @@ public:
 	Vector2& operator/=(const float& value);
 
 	void Normalize();
+	float Magnitude();
 
 };
 

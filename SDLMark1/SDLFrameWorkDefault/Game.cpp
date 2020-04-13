@@ -273,7 +273,7 @@ void Game::DrawInspector()
 		{
 			// begin child window
 			ImGui::PushStyleColor(ImGuiCol_ChildBg, IM_COL32(0, 0, 128, 100));
-			ImGui::BeginChild(component->name.c_str(), ImVec2(ImGui::GetWindowContentRegionWidth(), 100), true, ImGuiWindowFlags_None);
+			ImGui::BeginChild(component->name.c_str(), ImVec2(ImGui::GetWindowContentRegionWidth(), 200), true, ImGuiWindowFlags_None);
 
 			// populate inspector
 			ImGui::Text(component->name.c_str());
