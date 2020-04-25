@@ -23,6 +23,9 @@ private:
 	Vector2 direction;
 	Entity* collidingEntity;
 
+	float timeBetweenAttacks = 1.0f;
+	float attackTimer;
+
 public:
 	void Init() override
 	{
@@ -85,12 +88,15 @@ public:
 		}
 		pos->translate(translation * filthyTime->deltaTime);
 
-		if (InputManager::Instance()->KeyDown(SDL_SCANCODE_SPACE))
+		if (InputManager::Instance()->KeyDown(SDL_SCANCODE_SPACE) && attackTimer <= 0)
 		{
+			attackTimer = timeBetweenAttacks;
 			if (collidingEntity)
 			{
 				if (collidingEntity->name == "Crab")
+				{
 					collidingEntity->getComponent<EnemyControl>().damage();
+				}
 			}
 		}
 
@@ -105,6 +111,8 @@ public:
 			spr->setFilePath("../Assets/Sprites/knightIdle.bmp");
 			spr->SetAnimated(true);
 		}
+
+		attackTimer -= filthyTime->deltaTime;
 
 		filthyRenderer->DrawLine(pos->getPos().x, pos->getPos().y, pos->getPos().x + direction.x, pos->getPos().y + direction.y);
 	}

@@ -26,6 +26,7 @@
 
 #include "Renderer.h"
 #include "ResourceManager.h"
+#include "AudioManager.h"
 #include "SceneManager.h"
 #include "PhysicsEngine.h"
 #include "InputManager.h"
@@ -52,6 +53,7 @@ private:
 
 	// Editor
 	Entity* currentSelectedEntity;
+	bool draggingEntity;
 
 	bool firstToolOpen = true;
 

@@ -233,6 +233,28 @@ bool Scene::CheckPointCollideEntityScreenSpace(Vector2 point, Entity*& outEntity
 	return false;
 }
 
+bool Scene::CheckPointCollideRectScreenSpace(Vector2 point, Vector2 RectStart, Vector2 RectEnd)
+{
+	if (point.x > (RectStart.x) * filthyRenderer->getEditorScale() - filthyRenderer->GetEditorCamera().x)
+	{
+		// Is Point X to the LEFT of the object's RIGHT edge?
+		if (point.x < (RectEnd.x) * filthyRenderer->getEditorScale() - filthyRenderer->GetEditorCamera().x)
+		{
+			// Is Point Y BELOW the object's TOP edge?
+			if (point.y > (RectStart.y) * filthyRenderer->getEditorScale() - filthyRenderer->GetEditorCamera().y)
+			{
+				// Is Point Y ABOVE the object's BOTTOM edge?
+				if (point.y < (RectEnd.y) * filthyRenderer->getEditorScale() - filthyRenderer->GetEditorCamera().y)
+				{
+					Log("Clicked an entity!", DEBUG);
+					return true;
+				}
+			}
+		}
+	}
+	return false;
+}
+
 std::string Scene::generateSaveData()
 {
 	std::string saveData;

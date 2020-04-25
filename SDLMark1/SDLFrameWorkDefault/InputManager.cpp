@@ -22,6 +22,16 @@ bool InputManager::KeyDown(SDL_Scancode scanCode)
 	return mKeyBoardStates[scanCode];
 }
 
+bool InputManager::MouseDown(int mouseButton)
+{
+	return mouseButtons && SDL_BUTTON(mouseButton);
+}
+
+bool InputManager::MouseUp(int mouseButton)
+{
+	return false;
+}
+
 bool InputManager::WindowQuit()
 {
 	return WindowIsQuit;
@@ -29,6 +39,11 @@ bool InputManager::WindowQuit()
 
 void InputManager::Update()
 {
+	// set last frames data
+	prevMouseX = mouseX;
+	prevMouseY = mouseY;
+	prevMouseButtons = mouseButtons;
+
 	WindowIsQuit = false;
 	mKeyBoardStates = SDL_GetKeyboardState(NULL);
 	mouseButtons = SDL_GetMouseState(&mouseX, &mouseY);
@@ -49,9 +64,6 @@ void InputManager::Update()
 			mouseWheel = e.wheel.y;
 		}
 	}
-
-	prevMouseX = mouseX;
-	prevMouseY = mouseY;
 }
 
 InputManager::InputManager()

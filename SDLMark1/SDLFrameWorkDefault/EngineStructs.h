@@ -18,6 +18,7 @@
 #define blackboard BlackBoard::Instance()
 #define filthyTime Time::Instance()
 #define filthyRenderer Renderer::Instance()
+#define filthyAudio AudioManager::Instance()
 #define Physics PhysicsEngine::Instance()
 
 
@@ -25,6 +26,7 @@ const int TILE_WIDTH = 16;
 
 // FILE PATH MACROS
 const std::string DEFAULT_TILE_PATH = "..Assets/Sprites/Floor_Placeholder.bmp";
+const std::string DEFAULT_ROOT = "../Assets/";
 
 // ImGui flags
 //static ImGuiTreeNodeFlags heirarchyFlags = ImGuiTreeNodeFlags_OpenOnArrow | ImGuiTreeNodeFlags_OpenOnDoubleClick | ImGuiTreeNodeFlags_SpanAvailWidth;
@@ -41,16 +43,28 @@ struct BitMapPack
 	int height;
 };
 
+struct AudioPack
+{
+	SDL_AudioSpec wavSpec;
+	Uint32 wavLength;
+	Uint8* wavBuffer;
+	SDL_AudioDeviceID devideID;
+};
+
 enum MyEventTypes
 {
-	KeyDown,
 	KeyUp,
-	LeftMouse,
-	RightMouse,
-	MiddleMouse,
-	MouseWheel,
-	MouseGesture,
-	Window
+	KeyDown,
+	Mouse,
+	Window,
+	NumEventTypes
+};
+
+enum MouseButtons
+{
+	LMB,
+	RMB,
+	MMB,
 };
 
 enum WindowEvents

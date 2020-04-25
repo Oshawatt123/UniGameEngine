@@ -15,6 +15,7 @@ private:
 
 	
 	int prevMouseX, prevMouseY;
+	int prevMouseButtons;
 
 public:
 	int mouseButtons;
@@ -26,6 +27,11 @@ public:
 	static void Release();
 
 	bool KeyDown(SDL_Scancode scanCode);
+	//bool KeyUp(SDL_Scancode scanCode);
+
+	bool MouseDown(int mouseButton);
+	bool MouseUp(int mouseButton);
+
 	bool WindowQuit();
 
 	void Update();

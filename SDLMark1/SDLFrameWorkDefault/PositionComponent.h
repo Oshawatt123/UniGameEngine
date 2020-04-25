@@ -72,6 +72,11 @@ public:
 		if (entity->editMode)
 		{
 			Renderer::Instance()->DrawLine(Position.x, Position.y, Position.x + 10, Position.y, SDL_Color{ 255, 0, 0, 255 });
+
+			Renderer::Instance()->DrawLine(Position.x - editBoxOffset, Position.y - editBoxOffset, Position.x + editBoxOffset, Position.y - editBoxOffset, SDL_Color{ 180, 200, 54, 200});
+			Renderer::Instance()->DrawLine(Position.x + editBoxOffset, Position.y - editBoxOffset, Position.x + editBoxOffset, Position.y + editBoxOffset, SDL_Color{ 180, 200, 54, 200 });
+			Renderer::Instance()->DrawLine(Position.x + editBoxOffset, Position.y + editBoxOffset, Position.x - editBoxOffset, Position.y + editBoxOffset, SDL_Color{ 180, 200, 54, 200 });
+			Renderer::Instance()->DrawLine(Position.x - editBoxOffset, Position.y + editBoxOffset, Position.x - editBoxOffset, Position.y - editBoxOffset, SDL_Color{ 180, 200, 54, 200 });
 		}
 	}
 
@@ -81,4 +86,24 @@ public:
 		saveData += "<xpos>" + std::to_string(Position.x) + "</xpos>" + "<ypos>" + std::to_string(Position.y) + "</ypos>" + "<scale>" + std::to_string(scale) + "</scale>";
 		return saveData;
 	}
+
+	Vector2 getEditBoxStart()
+	{
+		Vector2 editBoxStart;
+		editBoxStart.x = Position.x - editBoxOffset;
+		editBoxStart.y = Position.y - editBoxOffset;
+		return editBoxStart;
+	}
+
+	Vector2 getEditBoxEnd()
+	{
+		Vector2 editBoxEnd;
+		editBoxEnd.x = Position.x + editBoxOffset;
+		editBoxEnd.y = Position.y + editBoxOffset;
+		return editBoxEnd;
+	}
+
+
+private:
+	float editBoxOffset = 5;
 };

@@ -138,18 +138,42 @@ bool Game::Tick(void)
 		// clicking to view an entity in the inspector
 		if ((InputManager::Instance()->mouseButtons & SDL_BUTTON(SDL_BUTTON_LEFT)))
 		{
+			if (currentSelectedEntity != nullptr)
+			{
+				// do mouse check on position
+				if (SceneManager::Instance()->getCurrentScene()->CheckPointCollideRectScreenSpace(Vector2(mousex, mousey),
+					currentSelectedEntity->getComponent<PositionComponent>().getEditBoxStart(),
+					currentSelectedEntity->getComponent<PositionComponent>().getEditBoxEnd()))
+				{
+					draggingEntity = true;
+				}
+			}
+		}
+		else
+			draggingEntity = false;
+		if ((InputManager::Instance()->mouseButtons & SDL_BUTTON(SDL_BUTTON_RIGHT)))
+		{
 			SceneManager::Instance()->getCurrentScene()->CheckPointCollideEntityScreenSpace(Vector2(mousex, mousey), clickedObject);
+
+			// reset last entities edit mode
+			if (currentSelectedEntity)
+				currentSelectedEntity->editMode = false;
+
 			if (clickedObject != nullptr)
 			{
-				// reset last entities edit mode
-				if(currentSelectedEntity)
-					 currentSelectedEntity->editMode = false;
-
 				// set new entity and set their edit mode
 				currentSelectedEntity = clickedObject;
 				currentSelectedEntity->editMode = true;
-				currentSelectedEntity->getComponent<PositionComponent>().setPosition(filthyRenderer->screenToEditorWorldSpace(Vector2(mousex, mousey)));
 			}
+			else
+			{
+				currentSelectedEntity = clickedObject; // nullptr
+				draggingEntity = false;
+			}
+		}
+		if (draggingEntity)
+		{
+			currentSelectedEntity->getComponent<PositionComponent>().setPosition(filthyRenderer->screenToEditorWorldSpace(Vector2(mousex, mousey)));
 		}
 		if ((InputManager::Instance()->mouseButtons & SDL_BUTTON(SDL_BUTTON_MIDDLE)))
 		{
@@ -345,6 +369,7 @@ void Game::DrawInspector()
 	else
 	{
 		ImGui::TextColored(ImVec4(1, 1, 0, 1), "No Entity Selected");
+		ImGui::TextColored(ImVec4(1, 1, 0, 1), "Right Click an entity to select it!");
 	}
 	ImGui::End();
 }
@@ -387,8 +412,8 @@ void Game::DrawEngineDebug()
 	ImGui::PlotLines("Frame time", filthyTime->deltaTimes, IM_ARRAYSIZE(filthyTime->deltaTimes));
 	if (ImGui::Button("Save Scene", ImVec2(100, 20)))
 	{
-		SceneManager::Instance()->SaveScene();
 		currentSelectedEntity = nullptr;
+		SceneManager::Instance()->SaveScene();
 	}
 	std::bitset<8> buttonBits(InputManager::Instance()->mouseButtons);
 	ImGui::Text(buttonBits.to_string().c_str());

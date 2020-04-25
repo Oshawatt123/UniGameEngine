@@ -61,6 +61,7 @@ public:
 	Entity* getEntityByName(std::string name);
 
 	bool CheckPointCollideEntityScreenSpace(Vector2 point, Entity*& outEntity);
+	bool CheckPointCollideRectScreenSpace(Vector2 point, Vector2 RectStart, Vector2 RectEnd);
 
 	std::string generateSaveData();
 

@@ -5,6 +5,7 @@
 
 
 #include "EngineStructs.h"
+#include "AudioManager.h"
 #include "Time.h"
 
 class EnemyControl : public Component
@@ -20,6 +21,7 @@ private:
 	float timer;
 
 	int health = 3;
+	bool alive = true;
 
 public:
 	void Init() override
@@ -35,7 +37,7 @@ public:
 	void Tick() override
 	{
 
-		if (health > 0)
+		if (alive)
 		{
 			// walk up and down
 			if (goingUp)
@@ -69,6 +71,17 @@ public:
 
 	void damage()
 	{
-		health -= 1;
+		if (alive)
+		{
+			health -= 1;
+			if (health <= 0)
+			{
+				alive = false;
+				spr->SetIndex(5);
+				filthyAudio->PlayAudio("../Assets/Audio/Hit_Hurt10.wav");
+			}
+			else
+				filthyAudio->PlayAudio("../Assets/Audio/Hit_Hurt3.wav");
+		}
 	}
 };
