@@ -69,11 +69,11 @@ public:
 		return "";
 	}
 
-	void damage()
+	void damage(int _damage)
 	{
 		if (alive)
 		{
-			health -= 1;
+			health -= _damage;
 			if (health <= 0)
 			{
 				alive = false;

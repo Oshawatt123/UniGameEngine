@@ -68,6 +68,8 @@ private:
 	// Scene Picker Variables
 	bool scenePickerOpen = true;
 	std::string assetsPath = "../Assets/";
+	bool sceneSaveOpen = false;
+	std::string newScenePath = "";
 
 	// Debug window variables
 	bool debugOpen = true;
@@ -87,6 +89,8 @@ private:
 	void DrawInspector();
 	void DrawScenePicker();
 	void DrawEngineDebug();
+
+	void followFilePath(std::string path);
 };
 
 #endif

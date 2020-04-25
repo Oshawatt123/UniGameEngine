@@ -1,41 +1,5 @@
 #include "Game.h"
 
-void FollowFilePath(std::string path)
-{
-	// I AM THE BASE CASE
-	for (const auto& entry : std::filesystem::directory_iterator(path))
-	{
-		std::string pathString = entry.path().string();
-
-		// base case when there are no more folders to look through, as a folder should have no extension
-		if (entry.path().has_extension())
-		{
-			std::string extension = entry.path().extension().string();
-			if (extension == ".filthyscene")
-			{
-				if (ImGui::Button(pathString.c_str()))
-				{
-					// load a scene from this filePath
-					SceneManager::Instance()->LoadSceneByPath(pathString.c_str());
-				}
-			}
-			else if (ImGui::TreeNodeEx(pathString.c_str()))
-			{
-				ImGui::TreePop();
-			}
-		}
-		else
-		{
-			if (ImGui::TreeNodeEx(pathString.c_str()))
-			{
-				// warning : recursive
-				FollowFilePath(entry.path().string());
-				ImGui::TreePop();
-			}
-		}
-	}
-}
-
 SDL_GLContext gl_context;
 
 Game::Game()
@@ -395,11 +359,27 @@ void Game::DrawScenePicker()
 		{
 			if (ImGui::TreeNodeEx(pathString.c_str() ))
 			{
-				FollowFilePath(entry.path().string());
+				followFilePath(entry.path().string());
 				ImGui::TreePop();
 			}
 		}
 		ImGui::EndChild();
+	}
+	ImGui::End();
+
+	ImGui::Begin("Save scene?", &sceneSaveOpen);
+	ImGui::Text("Do you want to save the scene?");
+	if (ImGui::Button("Yes"))
+	{
+		SceneManager::Instance()->LoadSceneByPath(newScenePath);
+		sceneSaveOpen = false;
+	}
+
+	ImGui::SameLine();
+	if (ImGui::Button("No"))
+	{
+		SceneManager::Instance()->LoadSceneByPathNoSave(newScenePath);
+		sceneSaveOpen = false;
 	}
 	ImGui::End();
 }
@@ -424,4 +404,41 @@ void Game::DrawEngineDebug()
 	std::string temp2 = "Editor Render Offset : " + std::to_string(Renderer::Instance()->GetEditorCamera().x) + " : " + std::to_string(Renderer::Instance()->GetEditorCamera().y);
 	ImGui::Text(temp2.c_str());
 	ImGui::End();
+}
+
+void Game::followFilePath(std::string path)
+{
+	// I AM THE BASE CASE
+	for (const auto& entry : std::filesystem::directory_iterator(path))
+	{
+		std::string pathString = entry.path().string();
+
+		// base case when there are no more folders to look through, as a folder should have no extension
+		if (entry.path().has_extension())
+		{
+			std::string extension = entry.path().extension().string();
+			if (extension == ".filthyscene")
+			{
+				if (ImGui::Button(pathString.c_str()))
+				{
+					// open scene save window
+					sceneSaveOpen = true;
+					newScenePath = pathString;
+				}
+			}
+			else if (ImGui::TreeNodeEx(pathString.c_str()))
+			{
+				ImGui::TreePop();
+			}
+		}
+		else
+		{
+			if (ImGui::TreeNodeEx(pathString.c_str()))
+			{
+				// warning : recursive
+				followFilePath(entry.path().string());
+				ImGui::TreePop();
+			}
+		}
+	}
 }

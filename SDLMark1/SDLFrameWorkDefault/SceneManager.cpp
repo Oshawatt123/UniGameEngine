@@ -65,9 +65,28 @@ void SceneManager::LoadSceneByPath(std::string path)
 	LoadScene(loadedScenes[path]);
 }
 
+void SceneManager::LoadSceneByPathNoSave(std::string path)
+{
+	// get scene by path
+	// if scene does not exist already
+
+	// cut the string until we get the name
+	// cut the front off : "../assets/scenes/" - 17
+	std::string levelName = "";
+	levelName = path.substr(17, path.length() - 17);
+	std::cout << levelName << std::endl;
+
+	// cut the end off ".filthyscene" - 12
+	levelName = levelName.substr(0, levelName.length() - 12);
+	std::cout << levelName << std::endl;
+
+	LoadSceneNoSave(levelName);
+}
+
 void SceneManager::LoadSceneNoSave(std::string sceneName)
 {
 	// get scene by name
+
 	// if scene does not exist already
 	std::string path = "../Assets/Scenes/" + sceneName + ".filthyscene";
 	if ((loadedScenes.find(path) == loadedScenes.end()))

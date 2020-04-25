@@ -26,6 +26,8 @@ private:
 	float timeBetweenAttacks = 1.0f;
 	float attackTimer;
 
+	int damage = 1;
+
 public:
 	void Init() override
 	{
@@ -95,7 +97,13 @@ public:
 			{
 				if (collidingEntity->name == "Crab")
 				{
-					collidingEntity->getComponent<EnemyControl>().damage();
+					collidingEntity->getComponent<EnemyControl>().damage(damage);
+				}
+				if (collidingEntity->name == "Upgrade")
+				{
+					collidingEntity->enabled = false;
+					filthyAudio->PlayAudio("../Assets/Audio/Upgrade.wav");
+					damage = 3;
 				}
 			}
 		}

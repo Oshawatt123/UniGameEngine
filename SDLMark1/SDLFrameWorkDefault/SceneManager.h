@@ -35,6 +35,7 @@ public:
 	void LoadScene(std::string sceneName);
 	void LoadScene(int buildIndex);
 	void LoadSceneByPath(std::string path);
+	void LoadSceneByPathNoSave(std::string path);
 
 	void LoadSceneNoSave(std::string sceneName);
 
