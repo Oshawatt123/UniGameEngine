@@ -1,0 +1,19 @@
+# The Filthy Engine
+A University module turned part-time obsession.
+
+<img src = "Images/FilthyEngineCurrentState.png">
+
+The Filthy Engine is a 2D game engine, aimed towards making zelda-like games, and has been through a few iterations in the past year.
+
+The first use of the filthy engine was making a small AI-driven scene utilising some A* pathfinding and state machines
+<img src = "Images/FilthyEngineAI.gif">
+
+This first use of The Filthy taught me a lot about the engine. Specifically, a lot of the flaws...
+<img src = "Images/FilthyEngineLeak.gif">
+
+There have been some more small game prototypes using the filthy engine which were accidentally caught in a desktop cleaning purge.
+You will always be remembered.
+
+And that brings us to now. About 8 months into development on the day of writing, The Filthy Engine stands as the largest project I have ever undertaken.
+
+<img src = "Images/FilthyEngineCurrentState.png">
