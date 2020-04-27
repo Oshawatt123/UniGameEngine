@@ -1,0 +1,102 @@
+\hypertarget{class_event_system}{}\doxysection{Event\+System Class Reference}
+\label{class_event_system}\index{EventSystem@{EventSystem}}
+
+
+{\ttfamily \#include $<$Event\+System.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_event_system_a68fea19b1a1f85d6c3acae3b8c7ff292}{Raise\+Event}} (Filthy\+Event\+Type \+\_\+type, std\+::string data)
+\item 
+\mbox{\hyperlink{class_event}{Event}} $\ast$ \mbox{\hyperlink{class_event_system_a559bcdda2829641a5b319f84f158710a}{Get\+Event}} (Filthy\+Event\+Type \+\_\+type)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_event_system}{Event\+System}} $\ast$ \mbox{\hyperlink{class_event_system_ab7e7555674204a0a64408c27959e9b94}{Instance}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_event}{Event}} $\ast$ $>$ \mbox{\hyperlink{class_event_system_a5ea4ed83ba6246f88c6208918912c700}{events}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_event_system}{Event\+System}} $\ast$ \mbox{\hyperlink{class_event_system_a66874b51cffe02998099e81b79cde90d}{s\+Instance}} = N\+U\+LL
+\item 
+static int \mbox{\hyperlink{class_event_system_a63b427e390814b6b78d152dad0ff10bf}{event\+ID}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This is a V\+E\+RY rudimentary event system. It will hold a vector of events and can return an event of a specific Filthy\+Event\+Type. As of writing, the only use of the event system is to decouple \mbox{\hyperlink{class_entity}{Entity}} from \mbox{\hyperlink{class_scene_manager}{Scene\+Manager}} and allow the two to interact through the use of events.
+
+e.\+g\+: Player character collides with the stairs object and raises and event of type S\+C\+E\+N\+E\+\_\+\+L\+O\+AD and fills the event with the data of the scene it wants to load. On the next frame, \mbox{\hyperlink{class_scene_manager}{Scene\+Manager}} checks for events of type S\+C\+E\+N\+E\+\_\+\+L\+O\+AD, sees there is one, and processes the event by loading the scene stored in the \mbox{\hyperlink{class_event}{Event}} data.
+
+In general, this class is used to pass data in between systems that normally C\+AN N\+OT interact with eachother due to dependancy issues.
+
+\begin{DoxyNote}{Note}
+This class has been designed to be easily expandable by users, but the \mbox{\hyperlink{class_event}{Event}} class is a lot more restrictive with the data it can hold. 
+\end{DoxyNote}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_event_system_a559bcdda2829641a5b319f84f158710a}\label{class_event_system_a559bcdda2829641a5b319f84f158710a}} 
+\index{EventSystem@{EventSystem}!GetEvent@{GetEvent}}
+\index{GetEvent@{GetEvent}!EventSystem@{EventSystem}}
+\doxysubsubsection{\texorpdfstring{GetEvent()}{GetEvent()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_event}{Event}} $\ast$ Event\+System\+::\+Get\+Event (\begin{DoxyParamCaption}\item[{Filthy\+Event\+Type}]{\+\_\+type }\end{DoxyParamCaption})}
+
+Looks throught the events in the events vector. If an event of Filthy\+Event\+Type \+\_\+type is found, it is removed from the vector, and returned to the caller. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em \+\_\+type} & The event type to search for. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_event_system_ab7e7555674204a0a64408c27959e9b94}\label{class_event_system_ab7e7555674204a0a64408c27959e9b94}} 
+\index{EventSystem@{EventSystem}!Instance@{Instance}}
+\index{Instance@{Instance}!EventSystem@{EventSystem}}
+\doxysubsubsection{\texorpdfstring{Instance()}{Instance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_event_system}{Event\+System}} $\ast$ Event\+System\+::\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Method for getting instance of \mbox{\hyperlink{class_event_system}{Event\+System}}. \mbox{\Hypertarget{class_event_system_a68fea19b1a1f85d6c3acae3b8c7ff292}\label{class_event_system_a68fea19b1a1f85d6c3acae3b8c7ff292}} 
+\index{EventSystem@{EventSystem}!RaiseEvent@{RaiseEvent}}
+\index{RaiseEvent@{RaiseEvent}!EventSystem@{EventSystem}}
+\doxysubsubsection{\texorpdfstring{RaiseEvent()}{RaiseEvent()}}
+{\footnotesize\ttfamily void Event\+System\+::\+Raise\+Event (\begin{DoxyParamCaption}\item[{Filthy\+Event\+Type}]{\+\_\+type,  }\item[{std\+::string}]{data }\end{DoxyParamCaption})}
+
+Method for raising an event. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em \+\_\+type} & The type of event specified, enum held in Engine\+Structs. \\
+\hline
+\mbox{\texttt{ in}}  & {\em data} & The data to be stored in the event. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_event_system_a63b427e390814b6b78d152dad0ff10bf}\label{class_event_system_a63b427e390814b6b78d152dad0ff10bf}} 
+\index{EventSystem@{EventSystem}!eventID@{eventID}}
+\index{eventID@{eventID}!EventSystem@{EventSystem}}
+\doxysubsubsection{\texorpdfstring{eventID}{eventID}}
+{\footnotesize\ttfamily int Event\+System\+::event\+ID\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+When new events are generated, they are assigned an ID to keep them distinguishable. This stores the next ID number to be used. They are not re-\/used. \mbox{\Hypertarget{class_event_system_a5ea4ed83ba6246f88c6208918912c700}\label{class_event_system_a5ea4ed83ba6246f88c6208918912c700}} 
+\index{EventSystem@{EventSystem}!events@{events}}
+\index{events@{events}!EventSystem@{EventSystem}}
+\doxysubsubsection{\texorpdfstring{events}{events}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{class_event}{Event}}$\ast$$>$ Event\+System\+::events\hspace{0.3cm}{\ttfamily [private]}}
+
+The vector of Events that have been raised and not processed. \mbox{\Hypertarget{class_event_system_a66874b51cffe02998099e81b79cde90d}\label{class_event_system_a66874b51cffe02998099e81b79cde90d}} 
+\index{EventSystem@{EventSystem}!sInstance@{sInstance}}
+\index{sInstance@{sInstance}!EventSystem@{EventSystem}}
+\doxysubsubsection{\texorpdfstring{sInstance}{sInstance}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_event_system}{Event\+System}} $\ast$ Event\+System\+::s\+Instance = N\+U\+LL\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+The instance of \mbox{\hyperlink{class_event_system}{Event\+System}}. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Event\+System.\+h\item 
+Event\+System.\+cpp\end{DoxyCompactItemize}

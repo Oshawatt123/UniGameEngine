@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: CollisionComponent.h Source File</title>
+<title>The Filthy Engine: CollisionComponent.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">My Project
+   <div id="projectname">The Filthy Engine
    </div>
   </td>
  </tr>
@@ -78,44 +78,99 @@ $(function() {
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="class_vector2.html">Vector2</a> colPosition;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="class_vector2.html">Vector2</a> colDimension;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    SDL_Rect collider;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_collision_component.html#a02154046748bef4338302a49938fe166">   14</a></span>&#160;    <a class="code" href="class_vector2.html">Vector2</a> <a class="code" href="class_collision_component.html#a02154046748bef4338302a49938fe166">colPosition</a>; </div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_collision_component.html#afe0b0638838bccde84c24ffcddb393ba">   15</a></span>&#160;    <a class="code" href="class_vector2.html">Vector2</a> <a class="code" href="class_collision_component.html#afe0b0638838bccde84c24ffcddb393ba">colDimension</a>; </div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_collision_component.html#a82e1243db8933b0bd32e002c5d3eed3d">   16</a></span>&#160;    SDL_Rect <a class="code" href="class_collision_component.html#a82e1243db8933b0bd32e002c5d3eed3d">collider</a>; </div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="class_position_component.html">PositionComponent</a>* pos;</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">bool</span> colliding;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">bool</span> colliding = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    SDL_Color drawColor = { 255, 0, 0, 255 };</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">void</span> Init()<span class="keyword"> override</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        pos = &amp;entity-&gt;getComponent&lt;<a class="code" href="class_position_component.html">PositionComponent</a>&gt;();</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        colDimension.x = TILE_WIDTH * pos-&gt;scale;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        colDimension.y = TILE_WIDTH * pos-&gt;scale;</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="class_collision_component.html#af5157c04c04384567e6f5c58c58c858d">   26</a></span>&#160;    <a class="code" href="class_entity.html">Entity</a>* <a class="code" href="class_collision_component.html#af5157c04c04384567e6f5c58c58c858d">other</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    SDL_Color drawColor = { 255, 0, 0, 255 };</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        name = <span class="stringliteral">&quot;Box Collider&quot;</span>;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    }</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">void</span> Tick()<span class="keyword"> override</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        colPosition = pos-&gt;getPos();</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        collider.x = colPosition.x;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        collider.y = colPosition.y;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        collider.w = colDimension.x;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        collider.h = colDimension.y;        </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    }</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">void</span> EditorTick()<span class="keyword"> override</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        Renderer::Instance()-&gt;DrawLine(collider.x, collider.y, collider.x + collider.w, collider.y + collider.h);</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    }</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;};</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">float</span> offsetX, offsetY;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">void</span> Init()<span class="keyword"> override</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        pos = &amp;<a class="code" href="class_component.html#a6acb3f00c9d114d961c8763ede390d2c">entity</a>-&gt;<a class="code" href="class_entity.html#ab67b05516196a4ec97c5b9fd13638bbb">getComponent</a>&lt;<a class="code" href="class_position_component.html">PositionComponent</a>&gt;();</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <a class="code" href="class_collision_component.html#afe0b0638838bccde84c24ffcddb393ba">colDimension</a>.<a class="code" href="class_vector2.html#a046bb8d17a876acc49415128dc0502f2">x</a> = TILE_WIDTH * pos-&gt;<a class="code" href="class_position_component.html#a91dd5fe3ecec8868b98447a73c6925e2">scale</a>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <a class="code" href="class_collision_component.html#afe0b0638838bccde84c24ffcddb393ba">colDimension</a>.<a class="code" href="class_vector2.html#a0e07bad05f01ed811b909a2eef97f9e2">y</a> = TILE_WIDTH * pos-&gt;<a class="code" href="class_position_component.html#a91dd5fe3ecec8868b98447a73c6925e2">scale</a>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        offsetX = TILE_WIDTH / 2;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        offsetY = TILE_WIDTH / 2;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <a class="code" href="class_component.html#a46343549452bda5ee9752f7a9bc15efb">name</a> = <span class="stringliteral">&quot;CollisionComponent&quot;</span>;        </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    }</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="class_collision_component.html#a26ab38509eaa834cc3bf07437248b06a">   43</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_collision_component.html#a26ab38509eaa834cc3bf07437248b06a">Tick</a>()<span class="keyword"> override</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <a class="code" href="class_collision_component.html#a02154046748bef4338302a49938fe166">colPosition</a> = pos-&gt;<a class="code" href="class_position_component.html#aaaea83aa812d2f8bfb7985eaa6a9cfc8">getPos</a>();</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <a class="code" href="class_collision_component.html#a82e1243db8933b0bd32e002c5d3eed3d">collider</a>.x = <a class="code" href="class_collision_component.html#a02154046748bef4338302a49938fe166">colPosition</a>.<a class="code" href="class_vector2.html#a046bb8d17a876acc49415128dc0502f2">x</a> - offsetX;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <a class="code" href="class_collision_component.html#a82e1243db8933b0bd32e002c5d3eed3d">collider</a>.y = <a class="code" href="class_collision_component.html#a02154046748bef4338302a49938fe166">colPosition</a>.<a class="code" href="class_vector2.html#a0e07bad05f01ed811b909a2eef97f9e2">y</a> - offsetX;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <a class="code" href="class_collision_component.html#a82e1243db8933b0bd32e002c5d3eed3d">collider</a>.w = <a class="code" href="class_collision_component.html#afe0b0638838bccde84c24ffcddb393ba">colDimension</a>.<a class="code" href="class_vector2.html#a046bb8d17a876acc49415128dc0502f2">x</a>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <a class="code" href="class_collision_component.html#a82e1243db8933b0bd32e002c5d3eed3d">collider</a>.h = <a class="code" href="class_collision_component.html#afe0b0638838bccde84c24ffcddb393ba">colDimension</a>.<a class="code" href="class_vector2.html#a0e07bad05f01ed811b909a2eef97f9e2">y</a>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    }</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">void</span> PopulateInspector()</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    {</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        std::string tempString = <span class="stringliteral">&quot;Collision state: &quot;</span> + std::string(colliding ? <span class="stringliteral">&quot;True&quot;</span> : <span class="stringliteral">&quot;False&quot;</span>);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        ImGui::Text(tempString.c_str());</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        ImGui::Text(<span class="stringliteral">&quot;Other Object: &quot;</span>);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        ImGui::SameLine();</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="class_collision_component.html#af5157c04c04384567e6f5c58c58c858d">other</a> != <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        {</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            ImGui::Text(<a class="code" href="class_collision_component.html#af5157c04c04384567e6f5c58c58c858d">other</a>-&gt;<a class="code" href="class_entity.html#a931b21fbdebb1a5963b4bcab5df128f5">name</a>.c_str());</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        }</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        {</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            ImGui::Text(<span class="stringliteral">&quot;No reference to other collider&quot;</span>);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        }</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    }</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="class_collision_component.html#a05417457fe26e19a9e0e60515b75a917">   69</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_collision_component.html#a05417457fe26e19a9e0e60515b75a917">EditorTick</a>()<span class="keyword"> override</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="class_component.html#a6acb3f00c9d114d961c8763ede390d2c">entity</a>-&gt;<a class="code" href="class_entity.html#a6a249abbfcf8d6427561f14724f4f95a">editMode</a>)</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        {</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            <a class="code" href="class_collision_component.html#a02154046748bef4338302a49938fe166">colPosition</a> = pos-&gt;<a class="code" href="class_position_component.html#aaaea83aa812d2f8bfb7985eaa6a9cfc8">getPos</a>();</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            <a class="code" href="class_collision_component.html#a82e1243db8933b0bd32e002c5d3eed3d">collider</a>.x = <a class="code" href="class_collision_component.html#a02154046748bef4338302a49938fe166">colPosition</a>.<a class="code" href="class_vector2.html#a046bb8d17a876acc49415128dc0502f2">x</a> - offsetX;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            <a class="code" href="class_collision_component.html#a82e1243db8933b0bd32e002c5d3eed3d">collider</a>.y = <a class="code" href="class_collision_component.html#a02154046748bef4338302a49938fe166">colPosition</a>.<a class="code" href="class_vector2.html#a0e07bad05f01ed811b909a2eef97f9e2">y</a> - offsetX;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            <a class="code" href="class_collision_component.html#a82e1243db8933b0bd32e002c5d3eed3d">collider</a>.w = <a class="code" href="class_collision_component.html#afe0b0638838bccde84c24ffcddb393ba">colDimension</a>.<a class="code" href="class_vector2.html#a046bb8d17a876acc49415128dc0502f2">x</a>;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            <a class="code" href="class_collision_component.html#a82e1243db8933b0bd32e002c5d3eed3d">collider</a>.h = <a class="code" href="class_collision_component.html#afe0b0638838bccde84c24ffcddb393ba">colDimension</a>.<a class="code" href="class_vector2.html#a0e07bad05f01ed811b909a2eef97f9e2">y</a>;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            <a class="code" href="class_renderer.html#a1230f9655b42f3d37f6086ee94c631a4">Renderer::Instance</a>()-&gt;<a class="code" href="class_renderer.html#a6f44ca996fa1e446573eabd0590f17fb">DrawLine</a>(<a class="code" href="class_collision_component.html#a82e1243db8933b0bd32e002c5d3eed3d">collider</a>.x, <a class="code" href="class_collision_component.html#a82e1243db8933b0bd32e002c5d3eed3d">collider</a>.y, <a class="code" href="class_collision_component.html#a82e1243db8933b0bd32e002c5d3eed3d">collider</a>.x + <a class="code" href="class_collision_component.html#a82e1243db8933b0bd32e002c5d3eed3d">collider</a>.w, <a class="code" href="class_collision_component.html#a82e1243db8933b0bd32e002c5d3eed3d">collider</a>.y + <a class="code" href="class_collision_component.html#a82e1243db8933b0bd32e002c5d3eed3d">collider</a>.h, { 0, 255, 0, 255 });</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        }</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    }</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="class_collision_component.html#a3cfc73dfa3989bf0cf56119e2497cc6b">   83</a></span>&#160;    std::string <a class="code" href="class_collision_component.html#a3cfc73dfa3989bf0cf56119e2497cc6b">GetSaveData</a>()</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    {</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    }</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;};</div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclass_component_html"><div class="ttname"><a href="class_component.html">Component</a></div><div class="ttdef"><b>Definition:</b> ECS.h:36</div></div>
+<div class="ttc" id="aclass_component_html_a46343549452bda5ee9752f7a9bc15efb"><div class="ttname"><a href="class_component.html#a46343549452bda5ee9752f7a9bc15efb">Component::name</a></div><div class="ttdeci">std::string name</div><div class="ttdef"><b>Definition:</b> ECS.h:46</div></div>
+<div class="ttc" id="aclass_entity_html_a6a249abbfcf8d6427561f14724f4f95a"><div class="ttname"><a href="class_entity.html#a6a249abbfcf8d6427561f14724f4f95a">Entity::editMode</a></div><div class="ttdeci">bool editMode</div><div class="ttdef"><b>Definition:</b> ECS.h:91</div></div>
+<div class="ttc" id="aclass_collision_component_html_a82e1243db8933b0bd32e002c5d3eed3d"><div class="ttname"><a href="class_collision_component.html#a82e1243db8933b0bd32e002c5d3eed3d">CollisionComponent::collider</a></div><div class="ttdeci">SDL_Rect collider</div><div class="ttdef"><b>Definition:</b> CollisionComponent.h:16</div></div>
+<div class="ttc" id="aclass_vector2_html_a046bb8d17a876acc49415128dc0502f2"><div class="ttname"><a href="class_vector2.html#a046bb8d17a876acc49415128dc0502f2">Vector2::x</a></div><div class="ttdeci">float x</div><div class="ttdef"><b>Definition:</b> MathHelper.h:15</div></div>
+<div class="ttc" id="aclass_component_html"><div class="ttname"><a href="class_component.html">Component</a></div><div class="ttdef"><b>Definition:</b> ECS.h:43</div></div>
+<div class="ttc" id="aclass_renderer_html_a6f44ca996fa1e446573eabd0590f17fb"><div class="ttname"><a href="class_renderer.html#a6f44ca996fa1e446573eabd0590f17fb">Renderer::DrawLine</a></div><div class="ttdeci">void DrawLine(int x1, int y1, int x2, int y2, SDL_Color color={ 0, 0, 0, 255 })</div><div class="ttdef"><b>Definition:</b> Renderer.cpp:62</div></div>
+<div class="ttc" id="aclass_entity_html_ab67b05516196a4ec97c5b9fd13638bbb"><div class="ttname"><a href="class_entity.html#ab67b05516196a4ec97c5b9fd13638bbb">Entity::getComponent</a></div><div class="ttdeci">T &amp; getComponent() const</div><div class="ttdef"><b>Definition:</b> ECS.h:188</div></div>
+<div class="ttc" id="aclass_collision_component_html_afe0b0638838bccde84c24ffcddb393ba"><div class="ttname"><a href="class_collision_component.html#afe0b0638838bccde84c24ffcddb393ba">CollisionComponent::colDimension</a></div><div class="ttdeci">Vector2 colDimension</div><div class="ttdef"><b>Definition:</b> CollisionComponent.h:15</div></div>
+<div class="ttc" id="aclass_collision_component_html_a3cfc73dfa3989bf0cf56119e2497cc6b"><div class="ttname"><a href="class_collision_component.html#a3cfc73dfa3989bf0cf56119e2497cc6b">CollisionComponent::GetSaveData</a></div><div class="ttdeci">std::string GetSaveData()</div><div class="ttdef"><b>Definition:</b> CollisionComponent.h:83</div></div>
 <div class="ttc" id="aclass_position_component_html"><div class="ttname"><a href="class_position_component.html">PositionComponent</a></div><div class="ttdef"><b>Definition:</b> PositionComponent.h:5</div></div>
+<div class="ttc" id="aclass_position_component_html_a91dd5fe3ecec8868b98447a73c6925e2"><div class="ttname"><a href="class_position_component.html#a91dd5fe3ecec8868b98447a73c6925e2">PositionComponent::scale</a></div><div class="ttdeci">float scale</div><div class="ttdef"><b>Definition:</b> PositionComponent.h:12</div></div>
 <div class="ttc" id="aclass_collision_component_html"><div class="ttname"><a href="class_collision_component.html">CollisionComponent</a></div><div class="ttdef"><b>Definition:</b> CollisionComponent.h:10</div></div>
-<div class="ttc" id="aclass_vector2_html"><div class="ttname"><a href="class_vector2.html">Vector2</a></div><div class="ttdef"><b>Definition:</b> MathHelper.h:5</div></div>
+<div class="ttc" id="aclass_collision_component_html_a02154046748bef4338302a49938fe166"><div class="ttname"><a href="class_collision_component.html#a02154046748bef4338302a49938fe166">CollisionComponent::colPosition</a></div><div class="ttdeci">Vector2 colPosition</div><div class="ttdef"><b>Definition:</b> CollisionComponent.h:14</div></div>
+<div class="ttc" id="aclass_collision_component_html_a05417457fe26e19a9e0e60515b75a917"><div class="ttname"><a href="class_collision_component.html#a05417457fe26e19a9e0e60515b75a917">CollisionComponent::EditorTick</a></div><div class="ttdeci">void EditorTick() override</div><div class="ttdef"><b>Definition:</b> CollisionComponent.h:69</div></div>
+<div class="ttc" id="aclass_vector2_html_a0e07bad05f01ed811b909a2eef97f9e2"><div class="ttname"><a href="class_vector2.html#a0e07bad05f01ed811b909a2eef97f9e2">Vector2::y</a></div><div class="ttdeci">float y</div><div class="ttdef"><b>Definition:</b> MathHelper.h:16</div></div>
+<div class="ttc" id="aclass_collision_component_html_a26ab38509eaa834cc3bf07437248b06a"><div class="ttname"><a href="class_collision_component.html#a26ab38509eaa834cc3bf07437248b06a">CollisionComponent::Tick</a></div><div class="ttdeci">void Tick() override</div><div class="ttdef"><b>Definition:</b> CollisionComponent.h:43</div></div>
+<div class="ttc" id="aclass_entity_html_a931b21fbdebb1a5963b4bcab5df128f5"><div class="ttname"><a href="class_entity.html#a931b21fbdebb1a5963b4bcab5df128f5">Entity::name</a></div><div class="ttdeci">std::string name</div><div class="ttdef"><b>Definition:</b> ECS.h:81</div></div>
+<div class="ttc" id="aclass_component_html_a6acb3f00c9d114d961c8763ede390d2c"><div class="ttname"><a href="class_component.html#a6acb3f00c9d114d961c8763ede390d2c">Component::entity</a></div><div class="ttdeci">Entity * entity</div><div class="ttdef"><b>Definition:</b> ECS.h:48</div></div>
+<div class="ttc" id="aclass_entity_html"><div class="ttname"><a href="class_entity.html">Entity</a></div><div class="ttdef"><b>Definition:</b> ECS.h:67</div></div>
+<div class="ttc" id="aclass_collision_component_html_af5157c04c04384567e6f5c58c58c858d"><div class="ttname"><a href="class_collision_component.html#af5157c04c04384567e6f5c58c58c858d">CollisionComponent::other</a></div><div class="ttdeci">Entity * other</div><div class="ttdef"><b>Definition:</b> CollisionComponent.h:26</div></div>
+<div class="ttc" id="aclass_renderer_html_a1230f9655b42f3d37f6086ee94c631a4"><div class="ttname"><a href="class_renderer.html#a1230f9655b42f3d37f6086ee94c631a4">Renderer::Instance</a></div><div class="ttdeci">static Renderer * Instance()</div><div class="ttdef"><b>Definition:</b> Renderer.cpp:107</div></div>
+<div class="ttc" id="aclass_position_component_html_aaaea83aa812d2f8bfb7985eaa6a9cfc8"><div class="ttname"><a href="class_position_component.html#aaaea83aa812d2f8bfb7985eaa6a9cfc8">PositionComponent::getPos</a></div><div class="ttdeci">Vector2 getPos()</div><div class="ttdef"><b>Definition:</b> PositionComponent.h:54</div></div>
+<div class="ttc" id="aclass_vector2_html"><div class="ttname"><a href="class_vector2.html">Vector2</a></div><div class="ttdef"><b>Definition:</b> MathHelper.h:9</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

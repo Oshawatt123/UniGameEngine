@@ -1,18 +1,76 @@
 \hypertarget{class_logger}{}\doxysection{Logger Class Reference}
 \label{class_logger}\index{Logger@{Logger}}
+
+
+{\ttfamily \#include $<$Logger.\+h$>$}
+
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_logger_a5d8ec6d332e83fc79ee73e50a52e1b9a}\label{class_logger_a5d8ec6d332e83fc79ee73e50a52e1b9a}} 
-void {\bfseries Log\+String} (std\+::string message, Verbosity verbosity)
+void \mbox{\hyperlink{class_logger_a5d8ec6d332e83fc79ee73e50a52e1b9a}{Log\+String}} (std\+::string message, Verbosity verbosity)
 \end{DoxyCompactItemize}
 \doxysubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_logger_afae0bf19389387a916656073572cb846}\label{class_logger_afae0bf19389387a916656073572cb846}} 
-static \mbox{\hyperlink{class_logger}{Logger}} $\ast$ {\bfseries Instance} ()
+static \mbox{\hyperlink{class_logger}{Logger}} $\ast$ \mbox{\hyperlink{class_logger_afae0bf19389387a916656073572cb846}{Instance}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_logger_a4ad9786dcb9a12fc6de7d6c591b117b1}{m\+Verbosity}} = D\+E\+B\+UG
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_logger}{Logger}} $\ast$ \mbox{\hyperlink{class_logger_adb66affbab16471bafe6cf45d239b769}{s\+Instance}} = N\+U\+LL
 \end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+The logger is a QoL class to allow me to get only the information I need by changing which level of logging I want to perform. The enum for the logging levels is in Engine\+Structs, but can be seen here\+:
+
+enum Verbosity \{ E\+V\+E\+R\+Y\+O\+NE, F\+I\+L\+T\+H\+Y\+\_\+\+D\+E\+B\+UG, D\+E\+B\+UG, W\+A\+R\+N\+I\+NG, D\+B\+E\+R\+R\+OR, N\+O\+T\+H\+I\+NG \};
+
+If we are running a verbosity of D\+E\+B\+UG, nothing logged with a verbosity of F\+I\+L\+T\+H\+Y\+\_\+\+D\+E\+B\+UG will be printed to the console. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_logger_afae0bf19389387a916656073572cb846}\label{class_logger_afae0bf19389387a916656073572cb846}} 
+\index{Logger@{Logger}!Instance@{Instance}}
+\index{Instance@{Instance}!Logger@{Logger}}
+\doxysubsubsection{\texorpdfstring{Instance()}{Instance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_logger}{Logger}} $\ast$ Logger\+::\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Method for getting an instance of \mbox{\hyperlink{class_logger}{Logger}}. \mbox{\Hypertarget{class_logger_a5d8ec6d332e83fc79ee73e50a52e1b9a}\label{class_logger_a5d8ec6d332e83fc79ee73e50a52e1b9a}} 
+\index{Logger@{Logger}!LogString@{LogString}}
+\index{LogString@{LogString}!Logger@{Logger}}
+\doxysubsubsection{\texorpdfstring{LogString()}{LogString()}}
+{\footnotesize\ttfamily void Logger\+::\+Log\+String (\begin{DoxyParamCaption}\item[{std\+::string}]{message,  }\item[{Verbosity}]{verbosity }\end{DoxyParamCaption})}
+
+Logs a string, with a certain verbosity.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em message} & The message to log. \\
+\hline
+\mbox{\texttt{ in}}  & {\em verbosity} & The verbosity of the log. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_logger_a4ad9786dcb9a12fc6de7d6c591b117b1}\label{class_logger_a4ad9786dcb9a12fc6de7d6c591b117b1}} 
+\index{Logger@{Logger}!mVerbosity@{mVerbosity}}
+\index{mVerbosity@{mVerbosity}!Logger@{Logger}}
+\doxysubsubsection{\texorpdfstring{mVerbosity}{mVerbosity}}
+{\footnotesize\ttfamily int Logger\+::m\+Verbosity = D\+E\+B\+UG\hspace{0.3cm}{\ttfamily [private]}}
+
+The level of the logging. Everything logged under this verbosity is ignored. Enum for this is in Engine\+Structs \mbox{\Hypertarget{class_logger_adb66affbab16471bafe6cf45d239b769}\label{class_logger_adb66affbab16471bafe6cf45d239b769}} 
+\index{Logger@{Logger}!sInstance@{sInstance}}
+\index{sInstance@{sInstance}!Logger@{Logger}}
+\doxysubsubsection{\texorpdfstring{sInstance}{sInstance}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_logger}{Logger}} $\ast$ Logger\+::s\+Instance = N\+U\+LL\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+Static instance of the \mbox{\hyperlink{class_logger}{Logger}} class. 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

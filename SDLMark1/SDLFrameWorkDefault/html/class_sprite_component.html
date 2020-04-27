@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: SpriteComponent Class Reference</title>
+<title>The Filthy Engine: SpriteComponent Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">My Project
+   <div id="projectname">The Filthy Engine
    </div>
   </td>
  </tr>
@@ -63,7 +63,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_sprite_component-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">SpriteComponent Class Reference</div>  </div>
@@ -87,33 +87,342 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac50a94a2e8eba4a996852f666718715e"><td class="memItemLeft" align="right" valign="top"><a id="ac50a94a2e8eba4a996852f666718715e"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>Init</b> () override</td></tr>
 <tr class="separator:ac50a94a2e8eba4a996852f666718715e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6baacb0f33191ffe1b6a6c4650b4078d"><td class="memItemLeft" align="right" valign="top"><a id="a6baacb0f33191ffe1b6a6c4650b4078d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Tick</b> () override</td></tr>
+<tr class="memitem:a6baacb0f33191ffe1b6a6c4650b4078d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sprite_component.html#a6baacb0f33191ffe1b6a6c4650b4078d">Tick</a> () override</td></tr>
 <tr class="separator:a6baacb0f33191ffe1b6a6c4650b4078d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a04acd897d490a0726a0c7c1e3e1376d5"><td class="memItemLeft" align="right" valign="top"><a id="a04acd897d490a0726a0c7c1e3e1376d5"></a>
-SDL_Texture &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getTexture</b> ()</td></tr>
+<tr class="memitem:a0d576efe03344ead5816fe048310a909"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sprite_component.html#a0d576efe03344ead5816fe048310a909">EditorTick</a> () override</td></tr>
+<tr class="separator:a0d576efe03344ead5816fe048310a909"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5159a9c9ca7d026c4a6a0b38b215c6d5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sprite_component.html#a5159a9c9ca7d026c4a6a0b38b215c6d5">JointTick</a> ()</td></tr>
+<tr class="separator:a5159a9c9ca7d026c4a6a0b38b215c6d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04acd897d490a0726a0c7c1e3e1376d5"><td class="memItemLeft" align="right" valign="top">SDL_Texture &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sprite_component.html#a04acd897d490a0726a0c7c1e3e1376d5">getTexture</a> ()</td></tr>
 <tr class="separator:a04acd897d490a0726a0c7c1e3e1376d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ec202636d916ef3fae80df8c7c9a6cb"><td class="memItemLeft" align="right" valign="top"><a id="a8ec202636d916ef3fae80df8c7c9a6cb"></a>
-<a class="el" href="class_vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getTexDim</b> ()</td></tr>
+<tr class="memitem:a8ec202636d916ef3fae80df8c7c9a6cb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sprite_component.html#a8ec202636d916ef3fae80df8c7c9a6cb">getTexDim</a> ()</td></tr>
 <tr class="separator:a8ec202636d916ef3fae80df8c7c9a6cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a416fc805efe991583f881ad346eb8e42"><td class="memItemLeft" align="right" valign="top"><a id="a416fc805efe991583f881ad346eb8e42"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>PopulateInspector</b> () override</td></tr>
+<tr class="separator:a416fc805efe991583f881ad346eb8e42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4902386a5bf139c7af8d314235f47bc9"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sprite_component.html#a4902386a5bf139c7af8d314235f47bc9">GetSaveData</a> ()</td></tr>
+<tr class="separator:a4902386a5bf139c7af8d314235f47bc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8933e6c0606bfe46dff7b74b3b63a4f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sprite_component.html#ac8933e6c0606bfe46dff7b74b3b63a4f">SetIndex</a> (int index)</td></tr>
+<tr class="separator:ac8933e6c0606bfe46dff7b74b3b63a4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81bbc053fb5d40556fcae2dfb34ea7a6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sprite_component.html#a81bbc053fb5d40556fcae2dfb34ea7a6">setFilePath</a> (std::string filePath)</td></tr>
+<tr class="separator:a81bbc053fb5d40556fcae2dfb34ea7a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a603603c3752abf9b52a4f7a577b567a1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sprite_component.html#a603603c3752abf9b52a4f7a577b567a1">SetAnimated</a> (bool _animated)</td></tr>
+<tr class="separator:a603603c3752abf9b52a4f7a577b567a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_component"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_component')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_component.html">Component</a></td></tr>
-<tr class="memitem:ad54a5ed6c47801402e457e21723009db inherit pub_methods_class_component"><td class="memItemLeft" align="right" valign="top"><a id="ad54a5ed6c47801402e457e21723009db"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>EditorTick</b> ()</td></tr>
-<tr class="separator:ad54a5ed6c47801402e457e21723009db inherit pub_methods_class_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e9aa4348314d981f05f67397ad2f872 inherit pub_methods_class_component"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_component.html#a2e9aa4348314d981f05f67397ad2f872">~Component</a> ()</td></tr>
+<tr class="separator:a2e9aa4348314d981f05f67397ad2f872 inherit pub_methods_class_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a785f0dd5230137145144794f15558966"><td class="memItemLeft" align="right" valign="top"><a id="a785f0dd5230137145144794f15558966"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>defaultPath</b> = &quot;../Assets/Sprites/ElvisPretzels.bmp&quot;</td></tr>
+<tr class="separator:a785f0dd5230137145144794f15558966"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabd0605c8c63de8d52a1d522c83e8704"><td class="memItemLeft" align="right" valign="top"><a id="aabd0605c8c63de8d52a1d522c83e8704"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>pathBuffer</b></td></tr>
+<tr class="separator:aabd0605c8c63de8d52a1d522c83e8704"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59a74214718e4b1aba0c01a4b915029c"><td class="memItemLeft" align="right" valign="top"><a id="a59a74214718e4b1aba0c01a4b915029c"></a>
+<a class="el" href="class_position_component.html">PositionComponent</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>m_positionComponent</b></td></tr>
+<tr class="separator:a59a74214718e4b1aba0c01a4b915029c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a294017fc9525d769aa701d2c9e9e76d2"><td class="memItemLeft" align="right" valign="top"><a id="a294017fc9525d769aa701d2c9e9e76d2"></a>
+<a class="el" href="struct_bit_map_pack.html">BitMapPack</a>&#160;</td><td class="memItemRight" valign="bottom"><b>m_bitMapPack</b></td></tr>
+<tr class="separator:a294017fc9525d769aa701d2c9e9e76d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57f103df56516e27e279e23f1444b33f"><td class="memItemLeft" align="right" valign="top"><a id="a57f103df56516e27e279e23f1444b33f"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>m_index</b> = 0</td></tr>
+<tr class="separator:a57f103df56516e27e279e23f1444b33f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d85fe40395b81fce4d697b20c45aafb"><td class="memItemLeft" align="right" valign="top"><a id="a9d85fe40395b81fce4d697b20c45aafb"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>spritesize</b></td></tr>
+<tr class="separator:a9d85fe40395b81fce4d697b20c45aafb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7fac81c0d052e166607a711c9f13cb25"><td class="memItemLeft" align="right" valign="top"><a id="a7fac81c0d052e166607a711c9f13cb25"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>offsetX</b></td></tr>
+<tr class="separator:a7fac81c0d052e166607a711c9f13cb25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e00b8e61d982d7ec9e7bc7da60dda28"><td class="memItemLeft" align="right" valign="top"><a id="a5e00b8e61d982d7ec9e7bc7da60dda28"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>offsetY</b></td></tr>
+<tr class="separator:a5e00b8e61d982d7ec9e7bc7da60dda28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa29641eccdff377e5d0616e9ebfe6c94"><td class="memItemLeft" align="right" valign="top"><a id="aa29641eccdff377e5d0616e9ebfe6c94"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>animated</b> = false</td></tr>
+<tr class="separator:aa29641eccdff377e5d0616e9ebfe6c94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e2ff9a6c45bffd864b6f7190a26b8f3"><td class="memItemLeft" align="right" valign="top"><a id="a1e2ff9a6c45bffd864b6f7190a26b8f3"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>animationFrameTime</b> = 5</td></tr>
+<tr class="separator:a1e2ff9a6c45bffd864b6f7190a26b8f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2f414fcd6db9d1799751931b332a54d"><td class="memItemLeft" align="right" valign="top"><a id="ad2f414fcd6db9d1799751931b332a54d"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>timer</b></td></tr>
+<tr class="separator:ad2f414fcd6db9d1799751931b332a54d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac1b01fcd4451fcc7f2b7581660a22ce6"><td class="memItemLeft" align="right" valign="top"><a id="ac1b01fcd4451fcc7f2b7581660a22ce6"></a>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><b>m_filePath</b></td></tr>
 <tr class="separator:ac1b01fcd4451fcc7f2b7581660a22ce6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pub_attribs_class_component"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_class_component')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="class_component.html">Component</a></td></tr>
-<tr class="memitem:a46343549452bda5ee9752f7a9bc15efb inherit pub_attribs_class_component"><td class="memItemLeft" align="right" valign="top"><a id="a46343549452bda5ee9752f7a9bc15efb"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>name</b> = &quot;Look at this descriptive name!&quot;</td></tr>
+<tr class="memitem:a46343549452bda5ee9752f7a9bc15efb inherit pub_attribs_class_component"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_component.html#a46343549452bda5ee9752f7a9bc15efb">name</a> = &quot;Look at this descriptive name!&quot;</td></tr>
 <tr class="separator:a46343549452bda5ee9752f7a9bc15efb inherit pub_attribs_class_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6acb3f00c9d114d961c8763ede390d2c inherit pub_attribs_class_component"><td class="memItemLeft" align="right" valign="top"><a id="a6acb3f00c9d114d961c8763ede390d2c"></a>
-<a class="el" href="class_entity.html">Entity</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>entity</b></td></tr>
+<tr class="memitem:a6acb3f00c9d114d961c8763ede390d2c inherit pub_attribs_class_component"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_entity.html">Entity</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_component.html#a6acb3f00c9d114d961c8763ede390d2c">entity</a></td></tr>
 <tr class="separator:a6acb3f00c9d114d961c8763ede390d2c inherit pub_attribs_class_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a0d576efe03344ead5816fe048310a909"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d576efe03344ead5816fe048310a909">&#9670;&nbsp;</a></span>EditorTick()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SpriteComponent::EditorTick </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Base Tick has no behaviour. This is called every frame in game-mode. </p>
+
+<p>Reimplemented from <a class="el" href="class_component.html#ad54a5ed6c47801402e457e21723009db">Component</a>.</p>
+
+</div>
+</div>
+<a id="a4902386a5bf139c7af8d314235f47bc9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4902386a5bf139c7af8d314235f47bc9">&#9670;&nbsp;</a></span>GetSaveData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string SpriteComponent::GetSaveData </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Base PopulateInspector has no behaviour. This is used to populate the inspector with editable fields / useful information. </p>
+
+<p>Reimplemented from <a class="el" href="class_component.html#ac67aa475d8d1d08233d893a3d3665e5c">Component</a>.</p>
+
+</div>
+</div>
+<a id="a8ec202636d916ef3fae80df8c7c9a6cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ec202636d916ef3fae80df8c7c9a6cb">&#9670;&nbsp;</a></span>getTexDim()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_vector2.html">Vector2</a> SpriteComponent::getTexDim </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>QoL function to get the dimensions of the texture.</p>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_vector2.html">Vector2</a> of the size of the texture. </dd></dl>
+
+</div>
+</div>
+<a id="a04acd897d490a0726a0c7c1e3e1376d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04acd897d490a0726a0c7c1e3e1376d5">&#9670;&nbsp;</a></span>getTexture()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SDL_Texture&amp; SpriteComponent::getTexture </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>QoL function to get the texture of the sprite</p>
+<dl class="section return"><dt>Returns</dt><dd>Reference to the texture of the sprite. </dd></dl>
+
+</div>
+</div>
+<a id="a5159a9c9ca7d026c4a6a0b38b215c6d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5159a9c9ca7d026c4a6a0b38b215c6d5">&#9670;&nbsp;</a></span>JointTick()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SpriteComponent::JointTick </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Used in both Tick and EditorTick. </p>
+
+</div>
+</div>
+<a id="a603603c3752abf9b52a4f7a577b567a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a603603c3752abf9b52a4f7a577b567a1">&#9670;&nbsp;</a></span>SetAnimated()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SpriteComponent::SetAnimated </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>_animated</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>If animated, a sprite component will loop througha spritesheet's first 4 index's; creating an animation.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">_animated</td><td>Bool to set the animated boolean. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a81bbc053fb5d40556fcae2dfb34ea7a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81bbc053fb5d40556fcae2dfb34ea7a6">&#9670;&nbsp;</a></span>setFilePath()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SpriteComponent::setFilePath </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>filePath</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Mainly used in the inspector to change the file path of the sprite. Also used for animations. Changing the file path to load a different sprite sheet.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">filePath</td><td>The new file path for the sprite. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac8933e6c0606bfe46dff7b74b3b63a4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8933e6c0606bfe46dff7b74b3b63a4f">&#9670;&nbsp;</a></span>SetIndex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SpriteComponent::SetIndex </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Used for animations</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">index</td><td>The new index of the sprite. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a6baacb0f33191ffe1b6a6c4650b4078d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6baacb0f33191ffe1b6a6c4650b4078d">&#9670;&nbsp;</a></span>Tick()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SpriteComponent::Tick </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Base Init has no behaviour. This is called once after scene load. </p>
+
+<p>Reimplemented from <a class="el" href="class_component.html#a93b89e900390d88afd70993549007c9c">Component</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="_sprite_component_8h_source.html">SpriteComponent.h</a></li>
 </ul>

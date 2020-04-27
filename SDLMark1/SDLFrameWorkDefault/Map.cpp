@@ -1,10 +1,7 @@
 #include "Map.h"
 
 
-Map::Map()
-{
-	mapTileData.size();
-}
+Map::Map() {}
 
 Map::~Map() {}
 

@@ -1,0 +1,80 @@
+\hypertarget{class_enemy_control}{}\doxysection{Enemy\+Control Class Reference}
+\label{class_enemy_control}\index{EnemyControl@{EnemyControl}}
+Inheritance diagram for Enemy\+Control\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_enemy_control}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_enemy_control_acb224a75c2d92e59f2c93c21c3487ac9}\label{class_enemy_control_acb224a75c2d92e59f2c93c21c3487ac9}} 
+void {\bfseries Init} () override
+\item 
+void \mbox{\hyperlink{class_enemy_control_ababb171cddf332147f0601a2db3c5b1b}{Tick}} () override
+\item 
+std\+::string \mbox{\hyperlink{class_enemy_control_ae94ce808a0bd5672a9df903353c3f42e}{Get\+Save\+Data}} ()
+\item 
+\mbox{\Hypertarget{class_enemy_control_ac10603804602773ac4761eb7850b7e8f}\label{class_enemy_control_ac10603804602773ac4761eb7850b7e8f}} 
+void {\bfseries damage} (int \+\_\+damage)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_enemy_control_a90c641ff45de93216515c30614b4cad7}\label{class_enemy_control_a90c641ff45de93216515c30614b4cad7}} 
+\mbox{\hyperlink{class_position_component}{Position\+Component}} $\ast$ {\bfseries pos}
+\item 
+\mbox{\Hypertarget{class_enemy_control_aae1b1c9807cdcded04f5631cd7423c7d}\label{class_enemy_control_aae1b1c9807cdcded04f5631cd7423c7d}} 
+\mbox{\hyperlink{class_collision_component}{Collision\+Component}} $\ast$ {\bfseries col}
+\item 
+\mbox{\Hypertarget{class_enemy_control_ae3b015267b82a1bbee616146bd509091}\label{class_enemy_control_ae3b015267b82a1bbee616146bd509091}} 
+\mbox{\hyperlink{class_sprite_component}{Sprite\+Component}} $\ast$ {\bfseries spr}
+\item 
+\mbox{\Hypertarget{class_enemy_control_aebd4de313051ca6f8ebc770df99ad3d2}\label{class_enemy_control_aebd4de313051ca6f8ebc770df99ad3d2}} 
+float {\bfseries speed}
+\item 
+\mbox{\Hypertarget{class_enemy_control_a5ebeef53b1b6cab79729dd2c238011e2}\label{class_enemy_control_a5ebeef53b1b6cab79729dd2c238011e2}} 
+\mbox{\hyperlink{class_vector2}{Vector2}} {\bfseries translation}
+\item 
+\mbox{\Hypertarget{class_enemy_control_ab9a951e376d529e845acb6f41e9a251d}\label{class_enemy_control_ab9a951e376d529e845acb6f41e9a251d}} 
+bool {\bfseries going\+Up}
+\item 
+\mbox{\Hypertarget{class_enemy_control_a9aee17b49fff392066390775b82943a5}\label{class_enemy_control_a9aee17b49fff392066390775b82943a5}} 
+float {\bfseries timer}
+\item 
+\mbox{\Hypertarget{class_enemy_control_a12a95935353d4a7ee5e8e80df72bcfed}\label{class_enemy_control_a12a95935353d4a7ee5e8e80df72bcfed}} 
+int {\bfseries health} = 3
+\item 
+\mbox{\Hypertarget{class_enemy_control_a4ef35d1677bbf2652025d9cee0b670a3}\label{class_enemy_control_a4ef35d1677bbf2652025d9cee0b670a3}} 
+bool {\bfseries alive} = true
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_enemy_control_ae94ce808a0bd5672a9df903353c3f42e}\label{class_enemy_control_ae94ce808a0bd5672a9df903353c3f42e}} 
+\index{EnemyControl@{EnemyControl}!GetSaveData@{GetSaveData}}
+\index{GetSaveData@{GetSaveData}!EnemyControl@{EnemyControl}}
+\doxysubsubsection{\texorpdfstring{GetSaveData()}{GetSaveData()}}
+{\footnotesize\ttfamily std\+::string Enemy\+Control\+::\+Get\+Save\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Base Populate\+Inspector has no behaviour. This is used to populate the inspector with editable fields / useful information. 
+
+Reimplemented from \mbox{\hyperlink{class_component_ac67aa475d8d1d08233d893a3d3665e5c}{Component}}.
+
+\mbox{\Hypertarget{class_enemy_control_ababb171cddf332147f0601a2db3c5b1b}\label{class_enemy_control_ababb171cddf332147f0601a2db3c5b1b}} 
+\index{EnemyControl@{EnemyControl}!Tick@{Tick}}
+\index{Tick@{Tick}!EnemyControl@{EnemyControl}}
+\doxysubsubsection{\texorpdfstring{Tick()}{Tick()}}
+{\footnotesize\ttfamily void Enemy\+Control\+::\+Tick (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Base Init has no behaviour. This is called once after scene load. 
+
+Reimplemented from \mbox{\hyperlink{class_component_a93b89e900390d88afd70993549007c9c}{Component}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Enemy\+Control.\+h\end{DoxyCompactItemize}

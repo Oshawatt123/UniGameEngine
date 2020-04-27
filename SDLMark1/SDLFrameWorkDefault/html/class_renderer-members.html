@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: Member List</title>
+<title>The Filthy Engine: Member List</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">My Project
+   <div id="projectname">The Filthy Engine
    </div>
   </td>
  </tr>
@@ -68,14 +68,33 @@ $(function() {
 
 <p>This is the complete list of members for <a class="el" href="class_renderer.html">Renderer</a>, including all inherited members.</p>
 <table class="directory">
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>ClearRenderer</b>() (defined in <a class="el" href="class_renderer.html">Renderer</a>)</td><td class="entry"><a class="el" href="class_renderer.html">Renderer</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>Draw</b>(BitMapPack bitMapPack, SDL_Rect *destRect, SDL_Rect *srcRect=NULL) (defined in <a class="el" href="class_renderer.html">Renderer</a>)</td><td class="entry"><a class="el" href="class_renderer.html">Renderer</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>Draw</b>(BitMapPack bitMapPack, int x, int y, SDL_Rect *srcRect=NULL) (defined in <a class="el" href="class_renderer.html">Renderer</a>)</td><td class="entry"><a class="el" href="class_renderer.html">Renderer</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>DrawLine</b>(int x1, int y1, int x2, int y2, SDL_Color color={ 0, 0, 0, 255 }) (defined in <a class="el" href="class_renderer.html">Renderer</a>)</td><td class="entry"><a class="el" href="class_renderer.html">Renderer</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>getRenderer</b>() (defined in <a class="el" href="class_renderer.html">Renderer</a>)</td><td class="entry"><a class="el" href="class_renderer.html">Renderer</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>Instance</b>() (defined in <a class="el" href="class_renderer.html">Renderer</a>)</td><td class="entry"><a class="el" href="class_renderer.html">Renderer</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>Instance</b>(SDL_Window *Window, SDL_Rect *camera, SDL_Rect *renderCamera) (defined in <a class="el" href="class_renderer.html">Renderer</a>)</td><td class="entry"><a class="el" href="class_renderer.html">Renderer</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>UpdateRenderer</b>() (defined in <a class="el" href="class_renderer.html">Renderer</a>)</td><td class="entry"><a class="el" href="class_renderer.html">Renderer</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_renderer.html#a08bbc2c9ac50c96b10a70cd096357138">ClearRenderer</a>()</td><td class="entry"><a class="el" href="class_renderer.html">Renderer</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_renderer.html#a6372807844f96c89a1334c7a862b6ee2">Draw</a>(BitMapPack bitMapPack, SDL_Rect *destRect, SDL_Rect *srcRect=NULL)</td><td class="entry"><a class="el" href="class_renderer.html">Renderer</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_renderer.html#aa8211b7f85b21284c41707b6c05d344e">Draw</a>(BitMapPack bitMapPack, int x, int y, float scale=1, SDL_Rect *srcRect=NULL)</td><td class="entry"><a class="el" href="class_renderer.html">Renderer</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_renderer.html#a813ec479ef55992e28db717d693d636c">Draw</a>(BitMapPack bitMapPack, int x, int y, int index, float scale=1)</td><td class="entry"><a class="el" href="class_renderer.html">Renderer</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_renderer.html#a6f44ca996fa1e446573eabd0590f17fb">DrawLine</a>(int x1, int y1, int x2, int y2, SDL_Color color={ 0, 0, 0, 255 })</td><td class="entry"><a class="el" href="class_renderer.html">Renderer</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_renderer.html#a019726b0af387948735dd16dfec3ce67">EditorRenderLines</a></td><td class="entry"><a class="el" href="class_renderer.html">Renderer</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_renderer.html#a1d695cf57007c7a6add7eb22851c3b1e">EditorRenderOffset</a></td><td class="entry"><a class="el" href="class_renderer.html">Renderer</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_renderer.html#a0f652d77efa3ea15b03d7cf3c6e3e228">editorScale</a></td><td class="entry"><a class="el" href="class_renderer.html">Renderer</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_renderer.html#ab4dc779241cbf76f4eee3f472ac16fde">GetEditorCamera</a>()</td><td class="entry"><a class="el" href="class_renderer.html">Renderer</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_renderer.html#a416a763c4b51f2c6a11ce7438116a37b">getEditorScale</a>()</td><td class="entry"><a class="el" href="class_renderer.html">Renderer</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_renderer.html#ad5596806abe5f406c467581b0dc573bf">getRenderer</a>()</td><td class="entry"><a class="el" href="class_renderer.html">Renderer</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_renderer.html#ae04c310adac38dade4a0626226ff3c5d">getRenderOffset</a>()</td><td class="entry"><a class="el" href="class_renderer.html">Renderer</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_renderer.html#aa00cda96c29f1b98e4b11b6133a39c47">getScale</a>()</td><td class="entry"><a class="el" href="class_renderer.html">Renderer</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_renderer.html#a1230f9655b42f3d37f6086ee94c631a4">Instance</a>()</td><td class="entry"><a class="el" href="class_renderer.html">Renderer</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_renderer.html#a47a540ef1f74f7957c69a9c04467803b">Instance</a>(SDL_Window *Window)</td><td class="entry"><a class="el" href="class_renderer.html">Renderer</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_renderer.html#ad5adf56b607a7efd3773b890e57e3331">m_pRenderer</a></td><td class="entry"><a class="el" href="class_renderer.html">Renderer</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_renderer.html#abee49e0eeb05724852371d62d1362dc1">Renderer</a>(SDL_Window *Window)</td><td class="entry"><a class="el" href="class_renderer.html">Renderer</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_renderer.html#af79536a20070b7194f57a043c638df43">RenderOffset</a></td><td class="entry"><a class="el" href="class_renderer.html">Renderer</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_renderer.html#aeab228a83d206c55fc73c7a14a0f0761">scale</a></td><td class="entry"><a class="el" href="class_renderer.html">Renderer</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_renderer.html#a9dbf419ce75ccd9968f49e87f31e2dbb">screenToEditorWorldSpace</a>(Vector2 screenSpace)</td><td class="entry"><a class="el" href="class_renderer.html">Renderer</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_renderer.html#a8249a1a5ca58e9490721393b2add748a">SetRenderOffset</a>(Vector2 renderOffset)</td><td class="entry"><a class="el" href="class_renderer.html">Renderer</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_renderer.html#aa6bd88da75baeeb21ccaff70997a4b8f">SetRenderOffset</a>(int x, int y)</td><td class="entry"><a class="el" href="class_renderer.html">Renderer</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_renderer.html#a046ca43dfec41a930f4672cf2b677928">sInstance</a></td><td class="entry"><a class="el" href="class_renderer.html">Renderer</a></td><td class="entry"><span class="mlabel">private</span><span class="mlabel">static</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_renderer.html#aa9a6907e029b67e0b866cfddefe5e9b1">TranslateEditorCamera</a>(Vector2 translation)</td><td class="entry"><a class="el" href="class_renderer.html">Renderer</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_renderer.html#ab1b1d1e65a796179dd2446c86f4b1f10">TranslateEditorCamera</a>(int x, int y)</td><td class="entry"><a class="el" href="class_renderer.html">Renderer</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_renderer.html#ae535d9f0e30ecce44169907bab6b3829">UpdateRenderer</a>()</td><td class="entry"><a class="el" href="class_renderer.html">Renderer</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>~Renderer</b>() (defined in <a class="el" href="class_renderer.html">Renderer</a>)</td><td class="entry"><a class="el" href="class_renderer.html">Renderer</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
 </table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

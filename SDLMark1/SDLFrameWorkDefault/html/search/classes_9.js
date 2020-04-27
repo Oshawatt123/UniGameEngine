@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['scene_39',['Scene',['../class_scene.html',1,'']]],
-  ['scenemanager_40',['SceneManager',['../class_scene_manager.html',1,'']]],
-  ['spritecomponent_41',['SpriteComponent',['../class_sprite_component.html',1,'']]]
+  ['renderer_217',['Renderer',['../class_renderer.html',1,'']]],
+  ['resourcemanager_218',['ResourceManager',['../class_resource_manager.html',1,'']]]
 ];

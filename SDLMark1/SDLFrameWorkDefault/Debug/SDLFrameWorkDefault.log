@@ -1,9 +1,13 @@
 ﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(452,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (SDLFrameWorkDefault.vcxproj).  This can lead to incorrect clean and rebuild behavior.
-  SceneManager.cpp
-D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\MathHelper.h(56,23): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
-D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\MathHelper.h(56,19): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
-D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\MathHelper.h(57,21): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
-D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\MathHelper.h(57,17): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+  AudioManager.cpp
+  BlackBoard.cpp
+  Event.cpp
+  EventSystem.cpp
+  Game.cpp
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\MathHelper.h(116,23): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\MathHelper.h(116,19): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\MathHelper.h(117,21): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\MathHelper.h(117,17): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
 D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(22,16): warning C4244:  '=': conversion from 'int' to 'float', possible loss of data
 D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(23,16): warning C4244:  '=': conversion from 'int' to 'float', possible loss of data
 D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(29,16): warning C4244:  '=': conversion from 'int' to 'float', possible loss of data
@@ -33,10 +37,10 @@ D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\CollisionComponent.h(
 D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\CollisionComponent.h(42,30): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
 D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\CollisionComponent.h(43,28): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
 D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\CollisionComponent.h(44,28): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
-D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\CollisionComponent.h(67,30): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
-D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\CollisionComponent.h(68,30): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
-D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\CollisionComponent.h(69,28): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
-D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\CollisionComponent.h(70,28): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\CollisionComponent.h(69,31): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\CollisionComponent.h(70,31): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\CollisionComponent.h(71,29): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\CollisionComponent.h(72,29): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
 D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\SpriteComponent.h(51,1): warning C4244:  '*=': conversion from 'float' to 'int', possible loss of data
 D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\SpriteComponent.h(52,1): warning C4244:  '*=': conversion from 'float' to 'int', possible loss of data
 D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\SpriteComponent.h(86,119): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
@@ -48,5 +52,274 @@ D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\CharacterController.h
 D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\CharacterController.h(125,58): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
 D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\CharacterController.h(125,41): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
 D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\CameraComponent.h(57,17): warning C4244:  '=': conversion from 'int' to 'float', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\CameraComponent.h(58,17): warning C4244:  '=': conversion from 'int' to 'float', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\Game.h(47,45): warning C4244:  'initializing': conversion from 'float' to 'const int', possible loss of data
+  InputManager.cpp
+  Logger.cpp
+  Main.cpp
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\Game.h(48,47): warning C4244:  'initializing': conversion from 'float' to 'const int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\MathHelper.h(116,23): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\MathHelper.h(116,19): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\MathHelper.h(117,21): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\MathHelper.h(117,17): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(22,16): warning C4244:  '=': conversion from 'int' to 'float', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(23,16): warning C4244:  '=': conversion from 'int' to 'float', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(29,16): warning C4244:  '=': conversion from 'int' to 'float', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(30,16): warning C4244:  '=': conversion from 'int' to 'float', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(31,17): warning C4244:  '=': conversion from 'int' to 'float', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(74,84): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(74,70): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(74,55): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(74,43): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(76,130): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(76,102): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(76,74): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(76,46): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(77,130): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(77,102): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(77,74): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(77,46): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(78,130): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(78,102): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(78,74): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(78,46): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(79,130): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(79,102): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(79,74): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(79,46): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\CollisionComponent.h(41,30): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\CollisionComponent.h(42,30): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\CollisionComponent.h(43,28): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\CollisionComponent.h(44,28): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\CollisionComponent.h(69,31): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\CollisionComponent.h(70,31): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\CollisionComponent.h(71,29): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\CollisionComponent.h(72,29): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\SpriteComponent.h(51,1): warning C4244:  '*=': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\SpriteComponent.h(52,1): warning C4244:  '*=': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\SpriteComponent.h(86,119): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\SpriteComponent.h(86,76): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\SpriteComponent.h(96,50): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\SpriteComponent.h(96,30): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\CharacterController.h(125,109): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\CharacterController.h(125,78): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\CharacterController.h(125,58): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\CharacterController.h(125,41): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\CameraComponent.h(57,17): warning C4244:  '=': conversion from 'int' to 'float', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\CameraComponent.h(58,17): warning C4244:  '=': conversion from 'int' to 'float', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\Game.h(47,45): warning C4244:  'initializing': conversion from 'float' to 'const int', possible loss of data
+  Map.cpp
+  MathHelper.cpp
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\Game.h(48,47): warning C4244:  'initializing': conversion from 'float' to 'const int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\MathHelper.h(116,23): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\MathHelper.h(116,19): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\MathHelper.h(117,21): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\MathHelper.h(117,17): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+  PhysicsEngine.cpp
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\MathHelper.cpp(136,18): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\MathHelper.h(116,23): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\MathHelper.h(116,19): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\MathHelper.h(117,21): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\MathHelper.h(117,17): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(22,16): warning C4244:  '=': conversion from 'int' to 'float', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(23,16): warning C4244:  '=': conversion from 'int' to 'float', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(29,16): warning C4244:  '=': conversion from 'int' to 'float', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(30,16): warning C4244:  '=': conversion from 'int' to 'float', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(31,17): warning C4244:  '=': conversion from 'int' to 'float', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(74,84): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(74,70): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(74,55): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(74,43): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(76,130): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(76,102): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(76,74): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(76,46): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(77,130): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(77,102): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(77,74): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(77,46): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(78,130): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(78,102): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(78,74): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(78,46): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(79,130): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(79,102): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(79,74): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(79,46): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\CollisionComponent.h(41,30): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\CollisionComponent.h(42,30): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\CollisionComponent.h(43,28): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\CollisionComponent.h(44,28): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\CollisionComponent.h(69,31): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\CollisionComponent.h(70,31): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\CollisionComponent.h(71,29): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+  Renderer.cpp
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\CollisionComponent.h(72,29): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\MathHelper.h(116,23): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\MathHelper.h(116,19): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\MathHelper.h(117,21): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\MathHelper.h(117,17): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\Renderer.cpp(27,32): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\Renderer.cpp(28,32): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\Renderer.cpp(29,37): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\Renderer.cpp(30,37): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\Renderer.cpp(34,38): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\Renderer.cpp(35,38): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\Renderer.cpp(36,37): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\Renderer.cpp(37,37): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\Renderer.cpp(74,29): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\Renderer.cpp(74,26): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\Renderer.cpp(89,35): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\Renderer.cpp(89,32): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\Renderer.cpp(183,29): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\Renderer.cpp(182,29): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\Renderer.cpp(181,31): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+  ResourceManager.cpp
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\Renderer.cpp(180,31): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\MathHelper.h(116,23): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\MathHelper.h(116,19): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\MathHelper.h(117,21): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\MathHelper.h(117,17): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(22,16): warning C4244:  '=': conversion from 'int' to 'float', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(23,16): warning C4244:  '=': conversion from 'int' to 'float', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(29,16): warning C4244:  '=': conversion from 'int' to 'float', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(30,16): warning C4244:  '=': conversion from 'int' to 'float', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(31,17): warning C4244:  '=': conversion from 'int' to 'float', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(74,84): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(74,70): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(74,55): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(74,43): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(76,130): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(76,102): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(76,74): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(76,46): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(77,130): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(77,102): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(77,74): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(77,46): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(78,130): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(78,102): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(78,74): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(78,46): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(79,130): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(79,102): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(79,74): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(79,46): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\CollisionComponent.h(41,30): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\CollisionComponent.h(42,30): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\CollisionComponent.h(43,28): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\CollisionComponent.h(44,28): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\CollisionComponent.h(69,31): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\CollisionComponent.h(70,31): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\CollisionComponent.h(71,29): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+  Scene.cpp
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\CollisionComponent.h(72,29): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\MathHelper.h(116,23): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\MathHelper.h(116,19): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\MathHelper.h(117,21): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\MathHelper.h(117,17): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(22,16): warning C4244:  '=': conversion from 'int' to 'float', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(23,16): warning C4244:  '=': conversion from 'int' to 'float', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(29,16): warning C4244:  '=': conversion from 'int' to 'float', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(30,16): warning C4244:  '=': conversion from 'int' to 'float', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(31,17): warning C4244:  '=': conversion from 'int' to 'float', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(74,84): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(74,70): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(74,55): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(74,43): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(76,130): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(76,102): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(76,74): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(76,46): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(77,130): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(77,102): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(77,74): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(77,46): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(78,130): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(78,102): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(78,74): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(78,46): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(79,130): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(79,102): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(79,74): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(79,46): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\CollisionComponent.h(41,30): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\CollisionComponent.h(42,30): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\CollisionComponent.h(43,28): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\CollisionComponent.h(44,28): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\CollisionComponent.h(69,31): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\CollisionComponent.h(70,31): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\CollisionComponent.h(71,29): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\CollisionComponent.h(72,29): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\SpriteComponent.h(51,1): warning C4244:  '*=': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\SpriteComponent.h(52,1): warning C4244:  '*=': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\SpriteComponent.h(86,119): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\SpriteComponent.h(86,76): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\SpriteComponent.h(96,50): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\SpriteComponent.h(96,30): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\CharacterController.h(125,109): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\CharacterController.h(125,78): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\CharacterController.h(125,58): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\CharacterController.h(125,41): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\CameraComponent.h(57,17): warning C4244:  '=': conversion from 'int' to 'float', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\CameraComponent.h(58,17): warning C4244:  '=': conversion from 'int' to 'float', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\rapidxml_utils.hpp(40,25): warning C4244:  'initializing': conversion from 'std::streamoff' to 'size_t', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\rapidxml_utils.hpp(28): message :  while compiling class template member function 'rapidxml::file<char>::file(const char *)'
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\Scene.cpp(334): message :  see reference to function template instantiation 'rapidxml::file<char>::file(const char *)' being compiled
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\Scene.cpp(334): message :  see reference to class template instantiation 'rapidxml::file<char>' being compiled
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\chrono(591): message :  see reference to class template instantiation 'std::chrono::duration<double,std::ratio<1,1>>' being compiled
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\chrono(169): message :  see reference to class template instantiation 'std::chrono::duration<__int64,std::nano>' being compiled
+  SceneManager.cpp
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\chrono(570): message :  see reference to class template instantiation 'std::chrono::time_point<std::chrono::steady_clock,std::chrono::steady_clock::duration>' being compiled
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\MathHelper.h(116,23): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\MathHelper.h(116,19): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\MathHelper.h(117,21): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\MathHelper.h(117,17): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(22,16): warning C4244:  '=': conversion from 'int' to 'float', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(23,16): warning C4244:  '=': conversion from 'int' to 'float', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(29,16): warning C4244:  '=': conversion from 'int' to 'float', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(30,16): warning C4244:  '=': conversion from 'int' to 'float', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(31,17): warning C4244:  '=': conversion from 'int' to 'float', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(74,84): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(74,70): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(74,55): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(74,43): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(76,130): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(76,102): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(76,74): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(76,46): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(77,130): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(77,102): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(77,74): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(77,46): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(78,130): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(78,102): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(78,74): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(78,46): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(79,130): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(79,102): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(79,74): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\PositionComponent.h(79,46): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\CollisionComponent.h(41,30): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\CollisionComponent.h(42,30): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\CollisionComponent.h(43,28): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\CollisionComponent.h(44,28): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\CollisionComponent.h(69,31): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\CollisionComponent.h(70,31): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\CollisionComponent.h(71,29): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\CollisionComponent.h(72,29): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\SpriteComponent.h(51,1): warning C4244:  '*=': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\SpriteComponent.h(52,1): warning C4244:  '*=': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\SpriteComponent.h(86,119): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\SpriteComponent.h(86,76): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\SpriteComponent.h(96,50): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\SpriteComponent.h(96,30): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\CharacterController.h(125,109): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\CharacterController.h(125,78): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\CharacterController.h(125,58): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\CharacterController.h(125,41): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\CameraComponent.h(57,17): warning C4244:  '=': conversion from 'int' to 'float', possible loss of data
+  Time.cpp
+  Generating Code...
 D:\GitHub Tings\UniGameEngine\SDLMark1\SDLFrameWorkDefault\CameraComponent.h(58,17): warning C4244:  '=': conversion from 'int' to 'float', possible loss of data
   SDLFrameWorkDefault.vcxproj -> D:\GitHub Tings\UniGameEngine\SDLMark1\Debug\FilthyEngine.exe

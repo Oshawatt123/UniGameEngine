@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: BlackBoard.h Source File</title>
+<title>The Filthy Engine: BlackBoard.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">My Project
+   <div id="projectname">The Filthy Engine
    </div>
   </td>
  </tr>
@@ -69,18 +69,35 @@ $(function() {
 <div class="line"><a name="l00002"></a><span class="lineno"><a class="line" href="class_black_board.html">    2</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_black_board.html">BlackBoard</a></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;{</div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    <span class="keyword">static</span> <a class="code" href="class_black_board.html">BlackBoard</a>* bb;</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="keyword">static</span> <a class="code" href="class_black_board.html">BlackBoard</a>* Instance();</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> Release();</div>
+<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="class_black_board.html#aaf1e112cb440fe4b78b44a959ede558f">    5</a></span>&#160;    <span class="keyword">static</span> <a class="code" href="class_black_board.html">BlackBoard</a>* <a class="code" href="class_black_board.html#aaf1e112cb440fe4b78b44a959ede558f">bb</a>;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <span class="keywordtype">int</span> IDNumber;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="class_black_board.html">BlackBoard</a>();</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    ~<a class="code" href="class_black_board.html">BlackBoard</a>();</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;};</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keyword">static</span> <a class="code" href="class_black_board.html">BlackBoard</a>* <a class="code" href="class_black_board.html#ae8b8db9985d9a88ef995d557e9d13781">Instance</a>(); </div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_black_board.html#a5e71f2a59a79a487b31407fc2a83e8e6">Release</a>();</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="comment">/*</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">        Generates an ID number for entities so they can be uniquely identified. Originally used for ImGui labels but was adopted into the ECS.</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">        ID numbers are NOT re-used once discarded.</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">        \return A unique ID number.</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">int</span> getIDNumber();</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="class_black_board.html#a580f23fb4f3212a26b653d53bbe15b20">   32</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_black_board.html#a580f23fb4f3212a26b653d53bbe15b20">EditMode</a>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="class_black_board.html">BlackBoard</a>();</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    ~<a class="code" href="class_black_board.html">BlackBoard</a>();</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;};</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
 </div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_black_board_html_a580f23fb4f3212a26b653d53bbe15b20"><div class="ttname"><a href="class_black_board.html#a580f23fb4f3212a26b653d53bbe15b20">BlackBoard::EditMode</a></div><div class="ttdeci">bool EditMode</div><div class="ttdef"><b>Definition:</b> BlackBoard.h:32</div></div>
+<div class="ttc" id="aclass_black_board_html_a5e71f2a59a79a487b31407fc2a83e8e6"><div class="ttname"><a href="class_black_board.html#a5e71f2a59a79a487b31407fc2a83e8e6">BlackBoard::Release</a></div><div class="ttdeci">static void Release()</div></div>
+<div class="ttc" id="aclass_black_board_html_ae8b8db9985d9a88ef995d557e9d13781"><div class="ttname"><a href="class_black_board.html#ae8b8db9985d9a88ef995d557e9d13781">BlackBoard::Instance</a></div><div class="ttdeci">static BlackBoard * Instance()</div><div class="ttdef"><b>Definition:</b> BlackBoard.cpp:5</div></div>
+<div class="ttc" id="aclass_black_board_html_aaf1e112cb440fe4b78b44a959ede558f"><div class="ttname"><a href="class_black_board.html#aaf1e112cb440fe4b78b44a959ede558f">BlackBoard::bb</a></div><div class="ttdeci">static BlackBoard * bb</div><div class="ttdef"><b>Definition:</b> BlackBoard.h:5</div></div>
 <div class="ttc" id="aclass_black_board_html"><div class="ttname"><a href="class_black_board.html">BlackBoard</a></div><div class="ttdef"><b>Definition:</b> BlackBoard.h:2</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

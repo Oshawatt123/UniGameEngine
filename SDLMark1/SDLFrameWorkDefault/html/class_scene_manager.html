@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: SceneManager Class Reference</title>
+<title>The Filthy Engine: SceneManager Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">My Project
+   <div id="projectname">The Filthy Engine
    </div>
   </td>
  </tr>
@@ -64,6 +64,9 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="class_scene_manager-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">SceneManager Class Reference</div>  </div>
@@ -72,25 +75,421 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a1adf9e40216a2e68164ac269765b7676"><td class="memItemLeft" align="right" valign="top"><a id="a1adf9e40216a2e68164ac269765b7676"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>GetNextBuildIndex</b> ()</td></tr>
+<tr class="memitem:a1adf9e40216a2e68164ac269765b7676"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene_manager.html#a1adf9e40216a2e68164ac269765b7676">GetNextBuildIndex</a> ()</td></tr>
 <tr class="separator:a1adf9e40216a2e68164ac269765b7676"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:affa371dcdeb92c2f31a9cb8a88bfc738"><td class="memItemLeft" align="right" valign="top"><a id="affa371dcdeb92c2f31a9cb8a88bfc738"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>AddSceneToBuild</b> (<a class="el" href="class_scene.html">Scene</a> *scene)</td></tr>
+<tr class="memitem:affa371dcdeb92c2f31a9cb8a88bfc738"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene_manager.html#affa371dcdeb92c2f31a9cb8a88bfc738">AddSceneToBuild</a> (<a class="el" href="class_scene.html">Scene</a> *scene)</td></tr>
 <tr class="separator:affa371dcdeb92c2f31a9cb8a88bfc738"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abec9e62a4d4d09edee4b12abe8b1af64"><td class="memItemLeft" align="right" valign="top"><a id="abec9e62a4d4d09edee4b12abe8b1af64"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>LoadScene</b> (std::string sceneName)</td></tr>
+<tr class="memitem:abec9e62a4d4d09edee4b12abe8b1af64"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene_manager.html#abec9e62a4d4d09edee4b12abe8b1af64">LoadScene</a> (std::string sceneName)</td></tr>
 <tr class="separator:abec9e62a4d4d09edee4b12abe8b1af64"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aecf1d488a646b2bb552f729b25a80114"><td class="memItemLeft" align="right" valign="top"><a id="aecf1d488a646b2bb552f729b25a80114"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>LoadScene</b> (int buildIndex)</td></tr>
+<tr class="memitem:aecf1d488a646b2bb552f729b25a80114"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene_manager.html#aecf1d488a646b2bb552f729b25a80114">LoadScene</a> (int buildIndex)</td></tr>
 <tr class="separator:aecf1d488a646b2bb552f729b25a80114"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a678fa5b992f03a35c092dd2c2c6b035c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene_manager.html#a678fa5b992f03a35c092dd2c2c6b035c">LoadSceneByPath</a> (std::string path)</td></tr>
+<tr class="separator:a678fa5b992f03a35c092dd2c2c6b035c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acebd030174731c450074071ec807a8b0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene_manager.html#acebd030174731c450074071ec807a8b0">LoadSceneByPathNoSave</a> (std::string path)</td></tr>
+<tr class="separator:acebd030174731c450074071ec807a8b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae054e939e8220c2735d2b5e29dc814d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene_manager.html#aae054e939e8220c2735d2b5e29dc814d">LoadSceneNoSave</a> (std::string sceneName)</td></tr>
+<tr class="separator:aae054e939e8220c2735d2b5e29dc814d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78e75b349e9467e32ee0199e16d06a07"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene_manager.html#a78e75b349e9467e32ee0199e16d06a07">SaveScene</a> ()</td></tr>
+<tr class="separator:a78e75b349e9467e32ee0199e16d06a07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad307aea07c7664dcdcd8a18ac41fce89"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_scene.html">Scene</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene_manager.html#ad307aea07c7664dcdcd8a18ac41fce89">getCurrentScene</a> ()</td></tr>
+<tr class="separator:ad307aea07c7664dcdcd8a18ac41fce89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e2cb35aae5d94cc18593bfb85aa47ca"><td class="memItemLeft" align="right" valign="top"><a id="a0e2cb35aae5d94cc18593bfb85aa47ca"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Tick</b> ()</td></tr>
+<tr class="separator:a0e2cb35aae5d94cc18593bfb85aa47ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a972ad174745419ebc980802a5f6e874e"><td class="memItemLeft" align="right" valign="top"><a id="a972ad174745419ebc980802a5f6e874e"></a>
-static <a class="el" href="class_scene_manager.html">SceneManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>Instance</b> ()</td></tr>
+<tr class="memitem:a972ad174745419ebc980802a5f6e874e"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_scene_manager.html">SceneManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene_manager.html#a972ad174745419ebc980802a5f6e874e">Instance</a> ()</td></tr>
 <tr class="separator:a972ad174745419ebc980802a5f6e874e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a8ec4d4fed65cb3f194afccb8a11e57df"><td class="memItemLeft" align="right" valign="top"><a id="a8ec4d4fed65cb3f194afccb8a11e57df"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>LoadScene</b> (<a class="el" href="class_scene.html">Scene</a> *scene)</td></tr>
+<tr class="separator:a8ec4d4fed65cb3f194afccb8a11e57df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a6cf8d2575c33e89184ebe52b4f78689f"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_scene.html">Scene</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene_manager.html#a6cf8d2575c33e89184ebe52b4f78689f">mScenesInBuild</a></td></tr>
+<tr class="separator:a6cf8d2575c33e89184ebe52b4f78689f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0deb8915a4292005a5295e9e1a6bb63d"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; std::string, <a class="el" href="class_scene.html">Scene</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene_manager.html#a0deb8915a4292005a5295e9e1a6bb63d">loadedScenes</a></td></tr>
+<tr class="separator:a0deb8915a4292005a5295e9e1a6bb63d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61fb6deaad8c240b54833caf36c1f19a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_scene.html">Scene</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene_manager.html#a61fb6deaad8c240b54833caf36c1f19a">currentScene</a></td></tr>
+<tr class="separator:a61fb6deaad8c240b54833caf36c1f19a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1a7404139d58720072d1fea8e869d16"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene_manager.html#ae1a7404139d58720072d1fea8e869d16">mNextBuildIndex</a></td></tr>
+<tr class="separator:ae1a7404139d58720072d1fea8e869d16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a650934dac9ec9d77541c1ac46577f0ee"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_event.html">Event</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene_manager.html#a650934dac9ec9d77541c1ac46577f0ee">eventStore</a></td></tr>
+<tr class="separator:a650934dac9ec9d77541c1ac46577f0ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:a6dc0e6f31119367b6e0cd45ae063f782"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_scene_manager.html">SceneManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene_manager.html#a6dc0e6f31119367b6e0cd45ae063f782">sInstance</a> = NULL</td></tr>
+<tr class="separator:a6dc0e6f31119367b6e0cd45ae063f782"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="affa371dcdeb92c2f31a9cb8a88bfc738"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affa371dcdeb92c2f31a9cb8a88bfc738">&#9670;&nbsp;</a></span>AddSceneToBuild()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SceneManager::AddSceneToBuild </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_scene.html">Scene</a> *&#160;</td>
+          <td class="paramname"><em>scene</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Adds a scene to the build list. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">reference</td><td>to the scene to add to the build. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad307aea07c7664dcdcd8a18ac41fce89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad307aea07c7664dcdcd8a18ac41fce89">&#9670;&nbsp;</a></span>getCurrentScene()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_scene.html">Scene</a> * SceneManager::getCurrentScene </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns a reference to the current scene. </p><dl class="section return"><dt>Returns</dt><dd>A reference to the current scene. </dd></dl>
+
+</div>
+</div>
+<a id="a1adf9e40216a2e68164ac269765b7676"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1adf9e40216a2e68164ac269765b7676">&#9670;&nbsp;</a></span>GetNextBuildIndex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int SceneManager::GetNextBuildIndex </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Gets the next build index. </p><dl class="section return"><dt>Returns</dt><dd>The next build index. </dd></dl>
+
+</div>
+</div>
+<a id="a972ad174745419ebc980802a5f6e874e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a972ad174745419ebc980802a5f6e874e">&#9670;&nbsp;</a></span>Instance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_scene_manager.html">SceneManager</a> * SceneManager::Instance </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Method for getting an instance of <a class="el" href="class_scene_manager.html">SceneManager</a>. </p>
+
+</div>
+</div>
+<a id="aecf1d488a646b2bb552f729b25a80114"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aecf1d488a646b2bb552f729b25a80114">&#9670;&nbsp;</a></span>LoadScene() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SceneManager::LoadScene </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>buildIndex</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Load a scene by build index, </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">buildIndex</td><td>The build index of the scene to load, </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="abec9e62a4d4d09edee4b12abe8b1af64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abec9e62a4d4d09edee4b12abe8b1af64">&#9670;&nbsp;</a></span>LoadScene() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SceneManager::LoadScene </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>sceneName</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Load a scene by sceneName, </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">sceneName</td><td>The name of the scene to load, </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a678fa5b992f03a35c092dd2c2c6b035c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a678fa5b992f03a35c092dd2c2c6b035c">&#9670;&nbsp;</a></span>LoadSceneByPath()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SceneManager::LoadSceneByPath </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Load a scene by file path. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>The file path of the scene, including scene file. e.g: ../Assets/Scenes/Level1.filthyscene . </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="acebd030174731c450074071ec807a8b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acebd030174731c450074071ec807a8b0">&#9670;&nbsp;</a></span>LoadSceneByPathNoSave()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SceneManager::LoadSceneByPathNoSave </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Load a scene by file path, but DOES NOT save the previous scene!. When transitioning from one scene to the next in-game, you don't want to save all the dead enemies in the last scene to disk. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>The file path of the scene, including scene file. e.g: ../Assets/Scenes/Level1.filthyscene . </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aae054e939e8220c2735d2b5e29dc814d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae054e939e8220c2735d2b5e29dc814d">&#9670;&nbsp;</a></span>LoadSceneNoSave()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SceneManager::LoadSceneNoSave </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>sceneName</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Load a scene by sceneName, but DOES NOT save the previous scene!. When transitioning from one scene to the next in-game, you don't want to save all the dead enemies in the last scene to disk. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>The name of the scene. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a78e75b349e9467e32ee0199e16d06a07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78e75b349e9467e32ee0199e16d06a07">&#9670;&nbsp;</a></span>SaveScene()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SceneManager::SaveScene </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Saves the current scene, and reloads it to apply changes. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a61fb6deaad8c240b54833caf36c1f19a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61fb6deaad8c240b54833caf36c1f19a">&#9670;&nbsp;</a></span>currentScene</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_scene.html">Scene</a>* SceneManager::currentScene</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Reference to the current <a class="el" href="class_scene.html">Scene</a>. </p>
+
+</div>
+</div>
+<a id="a650934dac9ec9d77541c1ac46577f0ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a650934dac9ec9d77541c1ac46577f0ee">&#9670;&nbsp;</a></span>eventStore</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_event.html">Event</a>* SceneManager::eventStore</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The event being processed this frame. </p>
+
+</div>
+</div>
+<a id="a0deb8915a4292005a5295e9e1a6bb63d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0deb8915a4292005a5295e9e1a6bb63d">&#9670;&nbsp;</a></span>loadedScenes</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unordered_map&lt;std::string, <a class="el" href="class_scene.html">Scene</a>*&gt; SceneManager::loadedScenes</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>A hash map of the scenes which have been loaded, to save on load time. </p>
+
+</div>
+</div>
+<a id="ae1a7404139d58720072d1fea8e869d16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1a7404139d58720072d1fea8e869d16">&#9670;&nbsp;</a></span>mNextBuildIndex</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int SceneManager::mNextBuildIndex</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Int for what the next build index is when adding scenes to the build list. </p>
+
+</div>
+</div>
+<a id="a6cf8d2575c33e89184ebe52b4f78689f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6cf8d2575c33e89184ebe52b4f78689f">&#9670;&nbsp;</a></span>mScenesInBuild</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="class_scene.html">Scene</a>*&gt; SceneManager::mScenesInBuild</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>A vector of Scenes that are in the game. </p>
+
+</div>
+</div>
+<a id="a6dc0e6f31119367b6e0cd45ae063f782"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6dc0e6f31119367b6e0cd45ae063f782">&#9670;&nbsp;</a></span>sInstance</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_scene_manager.html">SceneManager</a> * SceneManager::sInstance = NULL</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Static instance of the <a class="el" href="class_scene_manager.html">SceneManager</a> class. </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="_scene_manager_8h_source.html">SceneManager.h</a></li>
 <li>SceneManager.cpp</li>

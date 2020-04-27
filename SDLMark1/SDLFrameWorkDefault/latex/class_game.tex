@@ -3,10 +3,140 @@
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_game_a59eb00968310859db29a5172a0239542}\label{class_game_a59eb00968310859db29a5172a0239542}} 
-bool {\bfseries Tick} (void)
+bool \mbox{\hyperlink{class_game_a59eb00968310859db29a5172a0239542}{Tick}} (void)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_game_a84f5a85324bc03930df6a0c6466cb35e}{Update\+Renderer}} (void)
+\item 
+void \mbox{\hyperlink{class_game_ac3e8755ffe08a14647086b30f4a18aba}{Update\+Input\+Manager}} (void)
+\item 
+void \mbox{\hyperlink{class_game_ad98e970bd152a05a3695736552613df8}{Draw\+Heirarchy}} ()
+\item 
+void \mbox{\hyperlink{class_game_a328073549867a69295414790545dd343}{Draw\+Inspector}} ()
+\item 
+void \mbox{\hyperlink{class_game_a22a287a0ffd2e2a4f0cc73736a19bc0d}{Draw\+Scene\+Picker}} ()
+\item 
+void \mbox{\hyperlink{class_game_a9b46b9740140c69ecd54b1cd7af9ce19}{Draw\+Engine\+Debug}} ()
+\item 
+void \mbox{\hyperlink{class_game_a1f12a4086df8eec3d469813dee203a4e}{follow\+File\+Path}} (std\+::string path)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_game_a37957a6b5594fe172ac19917907425d4}\label{class_game_a37957a6b5594fe172ac19917907425d4}} 
+S\+D\+L\+\_\+\+Window $\ast$ {\bfseries m\+\_\+\+Window}
+\item 
+\mbox{\Hypertarget{class_game_a8aee472d1972eced3c805bcc6f9e439b}\label{class_game_a8aee472d1972eced3c805bcc6f9e439b}} 
+const int {\bfseries S\+C\+R\+E\+E\+N\+\_\+\+W\+I\+D\+TH} = 1920
+\item 
+\mbox{\Hypertarget{class_game_ad2702f723f5e55929cb6047c79ebdf2e}\label{class_game_ad2702f723f5e55929cb6047c79ebdf2e}} 
+const int {\bfseries S\+C\+R\+E\+E\+N\+\_\+\+H\+E\+I\+G\+HT} = 1080
+\item 
+\mbox{\Hypertarget{class_game_af9b3401b1f2ef535ffd1413ad19fac78}\label{class_game_af9b3401b1f2ef535ffd1413ad19fac78}} 
+const int {\bfseries R\+E\+N\+D\+E\+R\+\_\+\+V\+I\+E\+W\+\_\+\+W\+I\+D\+TH} = S\+C\+R\+E\+E\+N\+\_\+\+W\+I\+D\+TH $\ast$ 0.\+5f
+\item 
+\mbox{\Hypertarget{class_game_a1cd2b38e853b540fbaa4191ca7b1c5d9}\label{class_game_a1cd2b38e853b540fbaa4191ca7b1c5d9}} 
+const int {\bfseries R\+E\+N\+D\+E\+R\+\_\+\+V\+I\+E\+W\+\_\+\+H\+E\+I\+G\+HT} = S\+C\+R\+E\+E\+N\+\_\+\+H\+E\+I\+G\+HT $\ast$ 0.\+65f
+\item 
+\mbox{\Hypertarget{class_game_a371a292aaaaf30ac6c4f56ecfe6de721}\label{class_game_a371a292aaaaf30ac6c4f56ecfe6de721}} 
+Im\+Gui\+IO {\bfseries io}
+\item 
+\mbox{\Hypertarget{class_game_a84873e7ee9a0ba3b9b43458a612134ca}\label{class_game_a84873e7ee9a0ba3b9b43458a612134ca}} 
+\mbox{\hyperlink{class_entity}{Entity}} $\ast$ {\bfseries current\+Selected\+Entity}
+\item 
+\mbox{\Hypertarget{class_game_a573bc1171a27a88604cf357df95cd051}\label{class_game_a573bc1171a27a88604cf357df95cd051}} 
+bool {\bfseries dragging\+Entity}
+\item 
+\mbox{\Hypertarget{class_game_afd3adab64915ef5a08a05ff8b5b9b94f}\label{class_game_afd3adab64915ef5a08a05ff8b5b9b94f}} 
+bool {\bfseries first\+Tool\+Open} = true
+\item 
+\mbox{\Hypertarget{class_game_aa0613d8438d92816d39db927f18a74d4}\label{class_game_aa0613d8438d92816d39db927f18a74d4}} 
+bool {\bfseries heirarchy\+Open} = true
+\item 
+\mbox{\Hypertarget{class_game_a259c6311543aceb429b792fb9ce59a63}\label{class_game_a259c6311543aceb429b792fb9ce59a63}} 
+bool {\bfseries tree\+Node\+Double\+Click} = false
+\item 
+\mbox{\Hypertarget{class_game_a0f3260383ec7fcd7e6d5b2c6f7433a15}\label{class_game_a0f3260383ec7fcd7e6d5b2c6f7433a15}} 
+bool {\bfseries inspector\+Open} = true
+\item 
+\mbox{\Hypertarget{class_game_abb07085738c411789548542709834900}\label{class_game_abb07085738c411789548542709834900}} 
+\mbox{\hyperlink{class_entity}{Entity}} $\ast$ {\bfseries clicked\+Object}
+\item 
+\mbox{\Hypertarget{class_game_a7bb9cb8fe9e5242f35e4a719adf057c4}\label{class_game_a7bb9cb8fe9e5242f35e4a719adf057c4}} 
+bool {\bfseries scene\+Picker\+Open} = true
+\item 
+\mbox{\Hypertarget{class_game_aa16c4dab0c23bbde06c1c327123eecc2}\label{class_game_aa16c4dab0c23bbde06c1c327123eecc2}} 
+std\+::string {\bfseries assets\+Path} = \char`\"{}../Assets/\char`\"{}
+\item 
+\mbox{\Hypertarget{class_game_a1080725e2157283cb3913f4fe9481cbd}\label{class_game_a1080725e2157283cb3913f4fe9481cbd}} 
+bool {\bfseries scene\+Save\+Open} = false
+\item 
+\mbox{\Hypertarget{class_game_a7c3d080245ae955dfc220782f3628904}\label{class_game_a7c3d080245ae955dfc220782f3628904}} 
+std\+::string {\bfseries new\+Scene\+Path} = \char`\"{}\char`\"{}
+\item 
+\mbox{\Hypertarget{class_game_aa0b5aa026dd86ac536d38007b83ced41}\label{class_game_aa0b5aa026dd86ac536d38007b83ced41}} 
+bool {\bfseries debug\+Open} = true
+\item 
+\mbox{\Hypertarget{class_game_a8afec83ceb1bd6de1f73a36fed947639}\label{class_game_a8afec83ceb1bd6de1f73a36fed947639}} 
+float {\bfseries mousex}
+\item 
+\mbox{\Hypertarget{class_game_a885829f2a451fb795750fc7946918526}\label{class_game_a885829f2a451fb795750fc7946918526}} 
+float {\bfseries mousey}
 \end{DoxyCompactItemize}
 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_game_a9b46b9740140c69ecd54b1cd7af9ce19}\label{class_game_a9b46b9740140c69ecd54b1cd7af9ce19}} 
+\index{Game@{Game}!DrawEngineDebug@{DrawEngineDebug}}
+\index{DrawEngineDebug@{DrawEngineDebug}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{DrawEngineDebug()}{DrawEngineDebug()}}
+{\footnotesize\ttfamily void Game\+::\+Draw\+Engine\+Debug (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Draw the Im\+Gui Engine Debug Window \mbox{\Hypertarget{class_game_ad98e970bd152a05a3695736552613df8}\label{class_game_ad98e970bd152a05a3695736552613df8}} 
+\index{Game@{Game}!DrawHeirarchy@{DrawHeirarchy}}
+\index{DrawHeirarchy@{DrawHeirarchy}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{DrawHeirarchy()}{DrawHeirarchy()}}
+{\footnotesize\ttfamily void Game\+::\+Draw\+Heirarchy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Draw the Im\+Gui Heirarchy Window \mbox{\Hypertarget{class_game_a328073549867a69295414790545dd343}\label{class_game_a328073549867a69295414790545dd343}} 
+\index{Game@{Game}!DrawInspector@{DrawInspector}}
+\index{DrawInspector@{DrawInspector}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{DrawInspector()}{DrawInspector()}}
+{\footnotesize\ttfamily void Game\+::\+Draw\+Inspector (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Draw the Im\+Gui Inspector Window \mbox{\Hypertarget{class_game_a22a287a0ffd2e2a4f0cc73736a19bc0d}\label{class_game_a22a287a0ffd2e2a4f0cc73736a19bc0d}} 
+\index{Game@{Game}!DrawScenePicker@{DrawScenePicker}}
+\index{DrawScenePicker@{DrawScenePicker}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{DrawScenePicker()}{DrawScenePicker()}}
+{\footnotesize\ttfamily void Game\+::\+Draw\+Scene\+Picker (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Draw the Im\+Gui \mbox{\hyperlink{class_scene}{Scene}} Picker Window \mbox{\Hypertarget{class_game_a1f12a4086df8eec3d469813dee203a4e}\label{class_game_a1f12a4086df8eec3d469813dee203a4e}} 
+\index{Game@{Game}!followFilePath@{followFilePath}}
+\index{followFilePath@{followFilePath}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{followFilePath()}{followFilePath()}}
+{\footnotesize\ttfamily void Game\+::follow\+File\+Path (\begin{DoxyParamCaption}\item[{std\+::string}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+A QoL function to help with generating the Im\+Gui tree for my file heirarchy (\mbox{\hyperlink{class_scene}{Scene}} Picker) \mbox{\Hypertarget{class_game_a59eb00968310859db29a5172a0239542}\label{class_game_a59eb00968310859db29a5172a0239542}} 
+\index{Game@{Game}!Tick@{Tick}}
+\index{Tick@{Tick}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{Tick()}{Tick()}}
+{\footnotesize\ttfamily bool Game\+::\+Tick (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+The Main tick of the game \mbox{\Hypertarget{class_game_ac3e8755ffe08a14647086b30f4a18aba}\label{class_game_ac3e8755ffe08a14647086b30f4a18aba}} 
+\index{Game@{Game}!UpdateInputManager@{UpdateInputManager}}
+\index{UpdateInputManager@{UpdateInputManager}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{UpdateInputManager()}{UpdateInputManager()}}
+{\footnotesize\ttfamily void Game\+::\+Update\+Input\+Manager (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Updates the Input Manager \mbox{\Hypertarget{class_game_a84f5a85324bc03930df6a0c6466cb35e}\label{class_game_a84f5a85324bc03930df6a0c6466cb35e}} 
+\index{Game@{Game}!UpdateRenderer@{UpdateRenderer}}
+\index{UpdateRenderer@{UpdateRenderer}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{UpdateRenderer()}{UpdateRenderer()}}
+{\footnotesize\ttfamily void Game\+::\+Update\+Renderer (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Updates the \mbox{\hyperlink{class_renderer}{Renderer}} 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

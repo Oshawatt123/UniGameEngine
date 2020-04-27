@@ -1,42 +1,326 @@
 \hypertarget{class_scene}{}\doxysection{Scene Class Reference}
 \label{class_scene}\index{Scene@{Scene}}
+
+
+{\ttfamily \#include $<$Scene.\+h$>$}
+
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_scene_a26bca07e22fec48733d4023e557e953a}\label{class_scene_a26bca07e22fec48733d4023e557e953a}} 
-{\bfseries Scene} (\mbox{\hyperlink{class_physics_engine}{Physics\+Engine}} $\ast$PE, S\+D\+L\+\_\+\+Rect $\ast$camera, int screen\+\_\+width, int screen\+\_\+height)
+\mbox{\hyperlink{class_scene_a77006864de7cee38085ee588c1e9ce36}{Scene}} (int screen\+\_\+width, int screen\+\_\+height)
 \item 
-\mbox{\Hypertarget{class_scene_a748a1bb14cafb6eba29a9a3bf1a993eb}\label{class_scene_a748a1bb14cafb6eba29a9a3bf1a993eb}} 
-{\bfseries Scene} (std\+::string name, \mbox{\hyperlink{class_physics_engine}{Physics\+Engine}} $\ast$PE, S\+D\+L\+\_\+\+Rect $\ast$camera, int screen\+\_\+width, int screen\+\_\+height)
+\mbox{\hyperlink{class_scene_ac16b9dd7ecc0be79cd4482f3713bd335}{Scene}} (std\+::string name, int screen\+\_\+width, int screen\+\_\+height)
 \item 
-\mbox{\Hypertarget{class_scene_aa507279dc450364c991c32ae4dd97639}\label{class_scene_aa507279dc450364c991c32ae4dd97639}} 
-void {\bfseries Save\+Scene} ()
+void \mbox{\hyperlink{class_scene_a3e72a9c49c0dad1ca01ee2e8e103e3e7}{Reload}} ()
 \item 
-\mbox{\Hypertarget{class_scene_ae463850301b6dc624013c3b2e1357366}\label{class_scene_ae463850301b6dc624013c3b2e1357366}} 
-void {\bfseries Tick} ()
+void \mbox{\hyperlink{class_scene_ae463850301b6dc624013c3b2e1357366}{Tick}} ()
 \item 
-\mbox{\Hypertarget{class_scene_a4914d6c965c4f6d815743bcbb62fd098}\label{class_scene_a4914d6c965c4f6d815743bcbb62fd098}} 
-void {\bfseries Editor\+Tick} ()
+void \mbox{\hyperlink{class_scene_a4914d6c965c4f6d815743bcbb62fd098}{Editor\+Tick}} ()
 \item 
-\mbox{\Hypertarget{class_scene_a4813338ee7c6c995f5bb6f10e3673804}\label{class_scene_a4813338ee7c6c995f5bb6f10e3673804}} 
-void {\bfseries Draw} ()
+void \mbox{\hyperlink{class_scene_a4813338ee7c6c995f5bb6f10e3673804}{Draw}} ()
 \item 
-\mbox{\Hypertarget{class_scene_a4f9821de9b15b4909900a10936b6c816}\label{class_scene_a4f9821de9b15b4909900a10936b6c816}} 
-void {\bfseries Add\+Entity} (\mbox{\hyperlink{class_entity}{Entity}} $\ast$const Entity\+To\+Add)
+void \mbox{\hyperlink{class_scene_a4f9821de9b15b4909900a10936b6c816}{Add\+Entity}} (\mbox{\hyperlink{class_entity}{Entity}} $\ast$const Entity\+To\+Add)
 \item 
-\mbox{\Hypertarget{class_scene_a888574f4eea5fae0674c1c3431cf9421}\label{class_scene_a888574f4eea5fae0674c1c3431cf9421}} 
-std\+::string {\bfseries Get\+Name} ()
+void \mbox{\hyperlink{class_scene_a1fcf27074a5a58a3628d7fc72ba088a8}{Remove\+Entity}} (\mbox{\hyperlink{class_entity}{Entity}} $\ast$const Entity\+To\+Remove)
 \item 
-\mbox{\Hypertarget{class_scene_ac8ec1848ff1ac8c3ea7a26b012204c7a}\label{class_scene_ac8ec1848ff1ac8c3ea7a26b012204c7a}} 
-void {\bfseries Populate\+Heirarchy} ()
+std\+::string \mbox{\hyperlink{class_scene_a888574f4eea5fae0674c1c3431cf9421}{Get\+Name}} ()
 \item 
-\mbox{\Hypertarget{class_scene_afde98bbd990c0e455320bdde490295bc}\label{class_scene_afde98bbd990c0e455320bdde490295bc}} 
-\mbox{\hyperlink{class_entity}{Entity}} $\ast$ {\bfseries get\+Entity\+By\+Name} (std\+::string name)
+\mbox{\hyperlink{class_entity}{Entity}} $\ast$ \mbox{\hyperlink{class_scene_af3270b341a75671cf95da8e03b008911}{Populate\+Heirarchy}} ()
 \item 
-\mbox{\Hypertarget{class_scene_a30dc22b14f545c6e7be5329b62ba5311}\label{class_scene_a30dc22b14f545c6e7be5329b62ba5311}} 
-bool {\bfseries Check\+Point\+Collide\+Entity\+Screen\+Space} (\mbox{\hyperlink{class_vector2}{Vector2}} point, \mbox{\hyperlink{class_entity}{Entity}} $\ast$\&out\+Entity)
+\mbox{\hyperlink{class_entity}{Entity}} $\ast$ \mbox{\hyperlink{class_scene_afde98bbd990c0e455320bdde490295bc}{get\+Entity\+By\+Name}} (std\+::string name)
+\item 
+bool \mbox{\hyperlink{class_scene_a30dc22b14f545c6e7be5329b62ba5311}{Check\+Point\+Collide\+Entity\+Screen\+Space}} (\mbox{\hyperlink{class_vector2}{Vector2}} point, \mbox{\hyperlink{class_entity}{Entity}} $\ast$\&out\+Entity)
+\item 
+bool \mbox{\hyperlink{class_scene_a961f178323cb5dbd68a6c04ce17fd412}{Check\+Point\+Collide\+Rect\+Screen\+Space}} (\mbox{\hyperlink{class_vector2}{Vector2}} point, \mbox{\hyperlink{class_vector2}{Vector2}} Rect\+Start, \mbox{\hyperlink{class_vector2}{Vector2}} Rect\+End)
+\item 
+std\+::string \mbox{\hyperlink{class_scene_a24c4eb48b4ca4e5b0b33141c603130a4}{generate\+Save\+Data}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_scene_a4b8a76fea189fd55b067568c1a24e18f}{Scene\+Init}} ()
+\item 
+void \mbox{\hyperlink{class_scene_ac8166819099030b0fd9008b0e90f06f7}{Load\+Scene}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_scene_aaaf007a5c9bfc0bd55446ad0812bf9ba}{Scene\+Name}}
+\item 
+int \mbox{\hyperlink{class_scene_a1e2ce3f9022b26cfb23e7d5c9e4d8dfc}{Scene\+Build\+Number}}
+\item 
+\mbox{\hyperlink{class_map}{Map}} $\ast$ \mbox{\hyperlink{class_scene_a29e8df31e75e3e2176e7836c14573458}{scene\+Map}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_entity}{Entity}} $\ast$ $>$ \mbox{\hyperlink{class_scene_a696995ce58efe9afc4b84696d13fe2c5}{Entity\+List}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_entity}{Entity}} $\ast$ $>$ \mbox{\hyperlink{class_scene_a9827cb40e599e6c589277d022f66b3e4}{renderables}}
+\item 
+\mbox{\hyperlink{struct_bit_map_pack}{Bit\+Map\+Pack}} \mbox{\hyperlink{class_scene_a4122955b32eab8ea844fb3ce2c934ec1}{tile\+Bit\+Map}}
+\item 
+\mbox{\hyperlink{struct_bit_map_pack}{Bit\+Map\+Pack}} \mbox{\hyperlink{class_scene_a71132d5cadd8aafe295646c38c4d13f9}{index\+Bit\+Map}}
+\item 
+\mbox{\Hypertarget{class_scene_a181a2c2f80cfc603ff6df11c48f3cf4e}\label{class_scene_a181a2c2f80cfc603ff6df11c48f3cf4e}} 
+int {\bfseries Xcounter}
+\item 
+S\+D\+L\+\_\+\+Rect $\ast$ \mbox{\hyperlink{class_scene_a770c5bd7f31b20505ccaa277266deb19}{index\+Rect}}
+\item 
+\mbox{\Hypertarget{class_scene_a764b8038c71aaf03f4870fa9c134648e}\label{class_scene_a764b8038c71aaf03f4870fa9c134648e}} 
+int {\bfseries index}
+\item 
+\mbox{\Hypertarget{class_scene_ae0e6392e658dc813ba87f74b6c2b1661}\label{class_scene_ae0e6392e658dc813ba87f74b6c2b1661}} 
+int {\bfseries y\+Index}
+\item 
+\mbox{\Hypertarget{class_scene_af350404a65c6aca8e9ff46dd989b02fd}\label{class_scene_af350404a65c6aca8e9ff46dd989b02fd}} 
+int {\bfseries x\+Index}
+\item 
+\mbox{\hyperlink{class_vector2}{Vector2}} \mbox{\hyperlink{class_scene_a0756777df7d9e55dc95dbcabe75b2279}{game\+Camera}}
+\item 
+\mbox{\Hypertarget{class_scene_a4c9a1a6647756a794a062048d6c2aee8}\label{class_scene_a4c9a1a6647756a794a062048d6c2aee8}} 
+int {\bfseries SW}
+\item 
+\mbox{\Hypertarget{class_scene_aac4021b6acc7dc95f3f67e74d99c3699}\label{class_scene_aac4021b6acc7dc95f3f67e74d99c3699}} 
+int {\bfseries SH}
+\item 
+bool \mbox{\hyperlink{class_scene_a8c7c942d5f278aacf28f76ed144bd99a}{need\+To\+Start}}
 \end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+A scene is defined as a collection of \mbox{\hyperlink{class_entity}{Entity}} \textquotesingle{}s, and a \mbox{\hyperlink{class_map}{Map}}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_scene_a77006864de7cee38085ee588c1e9ce36}\label{class_scene_a77006864de7cee38085ee588c1e9ce36}} 
+\index{Scene@{Scene}!Scene@{Scene}}
+\index{Scene@{Scene}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{Scene()}{Scene()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Scene\+::\+Scene (\begin{DoxyParamCaption}\item[{int}]{screen\+\_\+width,  }\item[{int}]{screen\+\_\+height }\end{DoxyParamCaption})}
+
+Basic constructor for \mbox{\hyperlink{class_scene}{Scene}} 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em screen\+\_\+width} & The width of the screen. \\
+\hline
+\mbox{\texttt{ in}}  & {\em screen\+\_\+height} & The height of the screen. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_scene_ac16b9dd7ecc0be79cd4482f3713bd335}\label{class_scene_ac16b9dd7ecc0be79cd4482f3713bd335}} 
+\index{Scene@{Scene}!Scene@{Scene}}
+\index{Scene@{Scene}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{Scene()}{Scene()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Scene\+::\+Scene (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{int}]{screen\+\_\+width,  }\item[{int}]{screen\+\_\+height }\end{DoxyParamCaption})}
+
+Override constructor for \mbox{\hyperlink{class_scene}{Scene}} 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em name} & The name of the scene. \\
+\hline
+\mbox{\texttt{ in}}  & {\em screen\+\_\+width} & The width of the screen. \\
+\hline
+\mbox{\texttt{ in}}  & {\em screen\+\_\+height} & The height of the screen. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_scene_a4f9821de9b15b4909900a10936b6c816}\label{class_scene_a4f9821de9b15b4909900a10936b6c816}} 
+\index{Scene@{Scene}!AddEntity@{AddEntity}}
+\index{AddEntity@{AddEntity}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{AddEntity()}{AddEntity()}}
+{\footnotesize\ttfamily void Scene\+::\+Add\+Entity (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_entity}{Entity}} $\ast$const}]{Entity\+To\+Add }\end{DoxyParamCaption})}
+
+Adds an entity to the scene. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em Entity\+To\+Add} & The entity to add into the scene. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_scene_a30dc22b14f545c6e7be5329b62ba5311}\label{class_scene_a30dc22b14f545c6e7be5329b62ba5311}} 
+\index{Scene@{Scene}!CheckPointCollideEntityScreenSpace@{CheckPointCollideEntityScreenSpace}}
+\index{CheckPointCollideEntityScreenSpace@{CheckPointCollideEntityScreenSpace}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{CheckPointCollideEntityScreenSpace()}{CheckPointCollideEntityScreenSpace()}}
+{\footnotesize\ttfamily bool Scene\+::\+Check\+Point\+Collide\+Entity\+Screen\+Space (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector2}{Vector2}}}]{point,  }\item[{\mbox{\hyperlink{class_entity}{Entity}} $\ast$\&}]{out\+Entity }\end{DoxyParamCaption})}
+
+This function is used to check if a point in screen space is over an entity. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em point} & The point in screen space we want to check. \\
+\hline
+\mbox{\texttt{ out}}  & {\em out\+Entity} & The entity that is at this point in screen space. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Whether or not there was an entity at point. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_scene_a961f178323cb5dbd68a6c04ce17fd412}\label{class_scene_a961f178323cb5dbd68a6c04ce17fd412}} 
+\index{Scene@{Scene}!CheckPointCollideRectScreenSpace@{CheckPointCollideRectScreenSpace}}
+\index{CheckPointCollideRectScreenSpace@{CheckPointCollideRectScreenSpace}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{CheckPointCollideRectScreenSpace()}{CheckPointCollideRectScreenSpace()}}
+{\footnotesize\ttfamily bool Scene\+::\+Check\+Point\+Collide\+Rect\+Screen\+Space (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector2}{Vector2}}}]{point,  }\item[{\mbox{\hyperlink{class_vector2}{Vector2}}}]{Rect\+Start,  }\item[{\mbox{\hyperlink{class_vector2}{Vector2}}}]{Rect\+End }\end{DoxyParamCaption})}
+
+This function is used to check if a point in screen space is over a rect. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em point} & The point in screen space we want to check. \\
+\hline
+\mbox{\texttt{ in}}  & {\em Rect\+Start} & The start of the rect we want to check against. \\
+\hline
+\mbox{\texttt{ in}}  & {\em Rect\+End} & The end of the rect we want to check against. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Whether or not there was an entity at point 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_scene_a4813338ee7c6c995f5bb6f10e3673804}\label{class_scene_a4813338ee7c6c995f5bb6f10e3673804}} 
+\index{Scene@{Scene}!Draw@{Draw}}
+\index{Draw@{Draw}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily void Scene\+::\+Draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Updates all the sprite components in renderables and renders the tilemap. \mbox{\Hypertarget{class_scene_a4914d6c965c4f6d815743bcbb62fd098}\label{class_scene_a4914d6c965c4f6d815743bcbb62fd098}} 
+\index{Scene@{Scene}!EditorTick@{EditorTick}}
+\index{EditorTick@{EditorTick}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{EditorTick()}{EditorTick()}}
+{\footnotesize\ttfamily void Scene\+::\+Editor\+Tick (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Like Tick, but runs when the engine is in edit-\/mode. This tick will run all the entity\textquotesingle{}s Editor\+Tick function. \mbox{\Hypertarget{class_scene_a24c4eb48b4ca4e5b0b33141c603130a4}\label{class_scene_a24c4eb48b4ca4e5b0b33141c603130a4}} 
+\index{Scene@{Scene}!generateSaveData@{generateSaveData}}
+\index{generateSaveData@{generateSaveData}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{generateSaveData()}{generateSaveData()}}
+{\footnotesize\ttfamily std\+::string Scene\+::generate\+Save\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Generate the save data for the scene. Loops over all entity and generates all of their save data. See entity, component, and a specific like \mbox{\hyperlink{class_position_component}{Position\+Component}} for more information on how save data is generated.
+
+\begin{DoxyNote}{Note}
+A L\+OT of string concatenation happens here so it can be slow. 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_scene_afde98bbd990c0e455320bdde490295bc}\label{class_scene_afde98bbd990c0e455320bdde490295bc}} 
+\index{Scene@{Scene}!getEntityByName@{getEntityByName}}
+\index{getEntityByName@{getEntityByName}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{getEntityByName()}{getEntityByName()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_entity}{Entity}} $\ast$ Scene\+::get\+Entity\+By\+Name (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})}
+
+Get a reference to a specific entity by name 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em name} & The name of the entity you want to find \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+If an entity is found, a reference to that entity is returned. nullptr if not. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_scene_a888574f4eea5fae0674c1c3431cf9421}\label{class_scene_a888574f4eea5fae0674c1c3431cf9421}} 
+\index{Scene@{Scene}!GetName@{GetName}}
+\index{GetName@{GetName}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{GetName()}{GetName()}}
+{\footnotesize\ttfamily std\+::string Scene\+::\+Get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+A getter function for the scene\+Name. \mbox{\Hypertarget{class_scene_ac8166819099030b0fd9008b0e90f06f7}\label{class_scene_ac8166819099030b0fd9008b0e90f06f7}} 
+\index{Scene@{Scene}!LoadScene@{LoadScene}}
+\index{LoadScene@{LoadScene}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{LoadScene()}{LoadScene()}}
+{\footnotesize\ttfamily void Scene\+::\+Load\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Loads the scene from an external file! The file is found from the Scene\+Name.
+
+\begin{DoxyWarning}{Warning}
+Function exceeds dedicated stack size. Unsure how to move more data to heap as it utilises Rapid\+X\+ML. On the to-\/do list. 
+\end{DoxyWarning}
+\mbox{\Hypertarget{class_scene_af3270b341a75671cf95da8e03b008911}\label{class_scene_af3270b341a75671cf95da8e03b008911}} 
+\index{Scene@{Scene}!PopulateHeirarchy@{PopulateHeirarchy}}
+\index{PopulateHeirarchy@{PopulateHeirarchy}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{PopulateHeirarchy()}{PopulateHeirarchy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_entity}{Entity}} $\ast$ Scene\+::\+Populate\+Heirarchy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This populates the heirarchy in the engine with all of the entities in the scene. \begin{DoxyReturn}{Returns}
+If an entity is selected in the heirarchy, the entity is returned so it can be displayed in the Inspector. nullptr if not. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_scene_a3e72a9c49c0dad1ca01ee2e8e103e3e7}\label{class_scene_a3e72a9c49c0dad1ca01ee2e8e103e3e7}} 
+\index{Scene@{Scene}!Reload@{Reload}}
+\index{Reload@{Reload}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{Reload()}{Reload()}}
+{\footnotesize\ttfamily void Scene\+::\+Reload (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Reloads the scene. Used in scene saving as we need to re-\/load the scene after we have saved. \mbox{\Hypertarget{class_scene_a1fcf27074a5a58a3628d7fc72ba088a8}\label{class_scene_a1fcf27074a5a58a3628d7fc72ba088a8}} 
+\index{Scene@{Scene}!RemoveEntity@{RemoveEntity}}
+\index{RemoveEntity@{RemoveEntity}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{RemoveEntity()}{RemoveEntity()}}
+{\footnotesize\ttfamily void Scene\+::\+Remove\+Entity (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_entity}{Entity}} $\ast$const}]{Entity\+To\+Remove }\end{DoxyParamCaption})}
+
+Removes an entity from the scene. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em Entity\+To\+Remove} & The entity to remove from the scene. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_scene_a4b8a76fea189fd55b067568c1a24e18f}\label{class_scene_a4b8a76fea189fd55b067568c1a24e18f}} 
+\index{Scene@{Scene}!SceneInit@{SceneInit}}
+\index{SceneInit@{SceneInit}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{SceneInit()}{SceneInit()}}
+{\footnotesize\ttfamily void Scene\+::\+Scene\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Initializes the scene. Vectors are cleared and the scene is loaded with Load\+Scene. \mbox{\Hypertarget{class_scene_ae463850301b6dc624013c3b2e1357366}\label{class_scene_ae463850301b6dc624013c3b2e1357366}} 
+\index{Scene@{Scene}!Tick@{Tick}}
+\index{Tick@{Tick}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{Tick()}{Tick()}}
+{\footnotesize\ttfamily void Scene\+::\+Tick (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Updates every component except for rendering. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_scene_a696995ce58efe9afc4b84696d13fe2c5}\label{class_scene_a696995ce58efe9afc4b84696d13fe2c5}} 
+\index{Scene@{Scene}!EntityList@{EntityList}}
+\index{EntityList@{EntityList}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{EntityList}{EntityList}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{class_entity}{Entity}}$\ast$$>$ Scene\+::\+Entity\+List\hspace{0.3cm}{\ttfamily [private]}}
+
+A vector of \mbox{\hyperlink{class_entity}{Entity}} in this scene. \mbox{\Hypertarget{class_scene_a0756777df7d9e55dc95dbcabe75b2279}\label{class_scene_a0756777df7d9e55dc95dbcabe75b2279}} 
+\index{Scene@{Scene}!gameCamera@{gameCamera}}
+\index{gameCamera@{gameCamera}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{gameCamera}{gameCamera}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector2}{Vector2}} Scene\+::game\+Camera\hspace{0.3cm}{\ttfamily [private]}}
+
+The position of the game camera. \mbox{\Hypertarget{class_scene_a71132d5cadd8aafe295646c38c4d13f9}\label{class_scene_a71132d5cadd8aafe295646c38c4d13f9}} 
+\index{Scene@{Scene}!indexBitMap@{indexBitMap}}
+\index{indexBitMap@{indexBitMap}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{indexBitMap}{indexBitMap}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_bit_map_pack}{Bit\+Map\+Pack}} Scene\+::index\+Bit\+Map\hspace{0.3cm}{\ttfamily [private]}}
+
+The clipped \mbox{\hyperlink{struct_bit_map_pack}{Bit\+Map\+Pack}} for the current tile on the map. \mbox{\Hypertarget{class_scene_a770c5bd7f31b20505ccaa277266deb19}\label{class_scene_a770c5bd7f31b20505ccaa277266deb19}} 
+\index{Scene@{Scene}!indexRect@{indexRect}}
+\index{indexRect@{indexRect}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{indexRect}{indexRect}}
+{\footnotesize\ttfamily S\+D\+L\+\_\+\+Rect$\ast$ Scene\+::index\+Rect\hspace{0.3cm}{\ttfamily [private]}}
+
+The position and size of the clip needed to take out of the Tile\+Map sprite for the current tile being drawn. \mbox{\Hypertarget{class_scene_a8c7c942d5f278aacf28f76ed144bd99a}\label{class_scene_a8c7c942d5f278aacf28f76ed144bd99a}} 
+\index{Scene@{Scene}!needToStart@{needToStart}}
+\index{needToStart@{needToStart}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{needToStart}{needToStart}}
+{\footnotesize\ttfamily bool Scene\+::need\+To\+Start\hspace{0.3cm}{\ttfamily [private]}}
+
+Used to determine if we need to call Scene\+Init again when loaded. \mbox{\Hypertarget{class_scene_a9827cb40e599e6c589277d022f66b3e4}\label{class_scene_a9827cb40e599e6c589277d022f66b3e4}} 
+\index{Scene@{Scene}!renderables@{renderables}}
+\index{renderables@{renderables}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{renderables}{renderables}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{class_entity}{Entity}}$\ast$$>$ Scene\+::renderables\hspace{0.3cm}{\ttfamily [private]}}
+
+Of the entities in Entity\+List, these are those which are renderable. This saves on checking which entities need to be rendered each frame. The vector is calculated in Scene\+Init. \mbox{\Hypertarget{class_scene_a1e2ce3f9022b26cfb23e7d5c9e4d8dfc}\label{class_scene_a1e2ce3f9022b26cfb23e7d5c9e4d8dfc}} 
+\index{Scene@{Scene}!SceneBuildNumber@{SceneBuildNumber}}
+\index{SceneBuildNumber@{SceneBuildNumber}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{SceneBuildNumber}{SceneBuildNumber}}
+{\footnotesize\ttfamily int Scene\+::\+Scene\+Build\+Number\hspace{0.3cm}{\ttfamily [private]}}
+
+The build number, to be used in some load functions. /note This is not yet implemented. \mbox{\Hypertarget{class_scene_a29e8df31e75e3e2176e7836c14573458}\label{class_scene_a29e8df31e75e3e2176e7836c14573458}} 
+\index{Scene@{Scene}!sceneMap@{sceneMap}}
+\index{sceneMap@{sceneMap}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{sceneMap}{sceneMap}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_map}{Map}}$\ast$ Scene\+::scene\+Map\hspace{0.3cm}{\ttfamily [private]}}
+
+The map data used by the scene \mbox{\Hypertarget{class_scene_aaaf007a5c9bfc0bd55446ad0812bf9ba}\label{class_scene_aaaf007a5c9bfc0bd55446ad0812bf9ba}} 
+\index{Scene@{Scene}!SceneName@{SceneName}}
+\index{SceneName@{SceneName}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{SceneName}{SceneName}}
+{\footnotesize\ttfamily std\+::string Scene\+::\+Scene\+Name\hspace{0.3cm}{\ttfamily [private]}}
+
+The name given to a scene, used in some load functions. \mbox{\Hypertarget{class_scene_a4122955b32eab8ea844fb3ce2c934ec1}\label{class_scene_a4122955b32eab8ea844fb3ce2c934ec1}} 
+\index{Scene@{Scene}!tileBitMap@{tileBitMap}}
+\index{tileBitMap@{tileBitMap}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{tileBitMap}{tileBitMap}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_bit_map_pack}{Bit\+Map\+Pack}} Scene\+::tile\+Bit\+Map\hspace{0.3cm}{\ttfamily [private]}}
+
+The \mbox{\hyperlink{struct_bit_map_pack}{Bit\+Map\+Pack}} used by the map, cached here for convenience. 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

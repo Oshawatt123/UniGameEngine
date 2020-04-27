@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: Entity Class Reference</title>
+<title>The Filthy Engine: Entity Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">My Project
+   <div id="projectname">The Filthy Engine
    </div>
   </td>
  </tr>
@@ -64,60 +64,406 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_entity-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Entity Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_e_c_s_8h_source.html">ECS.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aa22a085a7e57366fc81501e5a0ca9b04"><td class="memItemLeft" align="right" valign="top"><a id="aa22a085a7e57366fc81501e5a0ca9b04"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Tick</b> ()</td></tr>
+<tr class="memitem:a980f368aa07ce358583982821533a54a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a980f368aa07ce358583982821533a54a">Entity</a> ()</td></tr>
+<tr class="separator:a980f368aa07ce358583982821533a54a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a178d5acf6245f02a646e81d664cdbb53"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a178d5acf6245f02a646e81d664cdbb53">Init</a> ()</td></tr>
+<tr class="separator:a178d5acf6245f02a646e81d664cdbb53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa22a085a7e57366fc81501e5a0ca9b04"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#aa22a085a7e57366fc81501e5a0ca9b04">Tick</a> ()</td></tr>
 <tr class="separator:aa22a085a7e57366fc81501e5a0ca9b04"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4dd2a634b00a4c542781c39578130693"><td class="memItemLeft" align="right" valign="top"><a id="a4dd2a634b00a4c542781c39578130693"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>EditorTick</b> ()</td></tr>
+<tr class="memitem:a4dd2a634b00a4c542781c39578130693"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a4dd2a634b00a4c542781c39578130693">EditorTick</a> ()</td></tr>
 <tr class="separator:a4dd2a634b00a4c542781c39578130693"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aea1c1568b4123d989c5310697030ad77"><td class="memItemLeft" align="right" valign="top"><a id="aea1c1568b4123d989c5310697030ad77"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>isActive</b> () const</td></tr>
-<tr class="separator:aea1c1568b4123d989c5310697030ad77"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2a0f7811f8c3f8726be1549e1c4acba4"><td class="memItemLeft" align="right" valign="top"><a id="a2a0f7811f8c3f8726be1549e1c4acba4"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>isEnabled</b> () const</td></tr>
-<tr class="separator:a2a0f7811f8c3f8726be1549e1c4acba4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeeaef7d2a48cc5a114dd5310a8d0e1a2"><td class="memItemLeft" align="right" valign="top"><a id="aeeaef7d2a48cc5a114dd5310a8d0e1a2"></a>
-const std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_component.html">Component</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getComponents</b> ()</td></tr>
-<tr class="separator:aeeaef7d2a48cc5a114dd5310a8d0e1a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a691dbe5f9ec930c27af2af0b97907a9e"><td class="memItemLeft" align="right" valign="top"><a id="a691dbe5f9ec930c27af2af0b97907a9e"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>destroy</b> ()</td></tr>
-<tr class="separator:a691dbe5f9ec930c27af2af0b97907a9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa622a8d79153a90d0e3b9b992ca2d38b"><td class="memTemplParams" colspan="2"><a id="aa622a8d79153a90d0e3b9b992ca2d38b"></a>
-template&lt;typename T &gt; </td></tr>
-<tr class="memitem:aa622a8d79153a90d0e3b9b992ca2d38b"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><b>hasComponent</b> () const</td></tr>
+<tr class="memitem:aa622a8d79153a90d0e3b9b992ca2d38b"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:aa622a8d79153a90d0e3b9b992ca2d38b"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_entity.html#aa622a8d79153a90d0e3b9b992ca2d38b">hasComponent</a> () const</td></tr>
 <tr class="separator:aa622a8d79153a90d0e3b9b992ca2d38b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7bf861ddc1ae381796565481bbb873ef"><td class="memTemplParams" colspan="2"><a id="a7bf861ddc1ae381796565481bbb873ef"></a>
-template&lt;typename T , typename... TArgs&gt; </td></tr>
-<tr class="memitem:a7bf861ddc1ae381796565481bbb873ef"><td class="memTemplItemLeft" align="right" valign="top">T &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>addComponent</b> (TArgs &amp;&amp;... mArgs)</td></tr>
+<tr class="memitem:a7bf861ddc1ae381796565481bbb873ef"><td class="memTemplParams" colspan="2">template&lt;typename T , typename... TArgs&gt; </td></tr>
+<tr class="memitem:a7bf861ddc1ae381796565481bbb873ef"><td class="memTemplItemLeft" align="right" valign="top">T &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_entity.html#a7bf861ddc1ae381796565481bbb873ef">addComponent</a> (TArgs &amp;&amp;... mArgs)</td></tr>
 <tr class="separator:a7bf861ddc1ae381796565481bbb873ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab67b05516196a4ec97c5b9fd13638bbb"><td class="memTemplParams" colspan="2"><a id="ab67b05516196a4ec97c5b9fd13638bbb"></a>
-template&lt;typename T &gt; </td></tr>
-<tr class="memitem:ab67b05516196a4ec97c5b9fd13638bbb"><td class="memTemplItemLeft" align="right" valign="top">T &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>getComponent</b> () const</td></tr>
+<tr class="memitem:ab67b05516196a4ec97c5b9fd13638bbb"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ab67b05516196a4ec97c5b9fd13638bbb"><td class="memTemplItemLeft" align="right" valign="top">T &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_entity.html#ab67b05516196a4ec97c5b9fd13638bbb">getComponent</a> () const</td></tr>
 <tr class="separator:ab67b05516196a4ec97c5b9fd13638bbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a931b21fbdebb1a5963b4bcab5df128f5"><td class="memItemLeft" align="right" valign="top"><a id="a931b21fbdebb1a5963b4bcab5df128f5"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>name</b> = &quot;What a creative name!&quot;</td></tr>
+<tr class="memitem:a5c92b546dedae9ce473274d82c8585f6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a5c92b546dedae9ce473274d82c8585f6">ID</a></td></tr>
+<tr class="separator:a5c92b546dedae9ce473274d82c8585f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a931b21fbdebb1a5963b4bcab5df128f5"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a931b21fbdebb1a5963b4bcab5df128f5">name</a> = &quot;What a creative name!&quot;</td></tr>
 <tr class="separator:a931b21fbdebb1a5963b4bcab5df128f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a164f61a1e96badb6bc873ec2ef01ea6d"><td class="memItemLeft" align="right" valign="top"><a id="a164f61a1e96badb6bc873ec2ef01ea6d"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>tag</b> = &quot;&quot;</td></tr>
+<tr class="memitem:a164f61a1e96badb6bc873ec2ef01ea6d"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a164f61a1e96badb6bc873ec2ef01ea6d">tag</a> = &quot;&quot;</td></tr>
 <tr class="separator:a164f61a1e96badb6bc873ec2ef01ea6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a249abbfcf8d6427561f14724f4f95a"><td class="memItemLeft" align="right" valign="top"><a id="a6a249abbfcf8d6427561f14724f4f95a"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>editMode</b></td></tr>
+<tr class="memitem:a6a249abbfcf8d6427561f14724f4f95a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a6a249abbfcf8d6427561f14724f4f95a">editMode</a></td></tr>
 <tr class="separator:a6a249abbfcf8d6427561f14724f4f95a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a844794654f15fa342f4b02e2faaf395f"><td class="memItemLeft" align="right" valign="top"><a id="a844794654f15fa342f4b02e2faaf395f"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>enabled</b> = true</td></tr>
+<tr class="memitem:a844794654f15fa342f4b02e2faaf395f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a844794654f15fa342f4b02e2faaf395f">enabled</a> = true</td></tr>
 <tr class="separator:a844794654f15fa342f4b02e2faaf395f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a03f25ea00ebb0ecb6c20932b4e9dc606"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_component.html">Component</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a03f25ea00ebb0ecb6c20932b4e9dc606">components</a></td></tr>
+<tr class="separator:a03f25ea00ebb0ecb6c20932b4e9dc606"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a268b34f155900bef861b8b3ce6a5fa60"><td class="memItemLeft" align="right" valign="top">ComponentArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a268b34f155900bef861b8b3ce6a5fa60">componentArray</a></td></tr>
+<tr class="separator:a268b34f155900bef861b8b3ce6a5fa60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5427c0cedd55c80f3480659c3fa36f6d"><td class="memItemLeft" align="right" valign="top">ComponentBitSet&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a5427c0cedd55c80f3480659c3fa36f6d">componentBitSet</a></td></tr>
+<tr class="separator:a5427c0cedd55c80f3480659c3fa36f6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>An <a class="el" href="class_entity.html">Entity</a> is the base of every object inside FithyEngine.</p>
+<p>An entity is comprised of multiple Components, as well as some identifying features such as an ID, and name.</p>
+<p>EVERY entity will, by default, have a <a class="el" href="class_position_component.html">PositionComponent</a>. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a980f368aa07ce358583982821533a54a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a980f368aa07ce358583982821533a54a">&#9670;&nbsp;</a></span>Entity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Entity::Entity </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Base constructor sets the ID number of the entity to one generated by the blackboard. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a7bf861ddc1ae381796565481bbb873ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7bf861ddc1ae381796565481bbb873ef">&#9670;&nbsp;</a></span>addComponent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename... TArgs&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T&amp; Entity::addComponent </td>
+          <td>(</td>
+          <td class="paramtype">TArgs &amp;&amp;...&#160;</td>
+          <td class="paramname"><em>mArgs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Add a component of type T to this <a class="el" href="class_entity.html">Entity</a>. </p>
+
+</div>
+</div>
+<a id="a4dd2a634b00a4c542781c39578130693"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4dd2a634b00a4c542781c39578130693">&#9670;&nbsp;</a></span>EditorTick()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Entity::EditorTick </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>EditorTick runs the EditorTick function of all components attached to this entity.</p>
+<dl class="section note"><dt>Note</dt><dd>This DOES tick the sprite component's EditorTick function. </dd></dl>
+
+</div>
+</div>
+<a id="ab67b05516196a4ec97c5b9fd13638bbb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab67b05516196a4ec97c5b9fd13638bbb">&#9670;&nbsp;</a></span>getComponent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T&amp; Entity::getComponent </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Get a component of type T on this entity.</p>
+<dl class="section return"><dt>Returns</dt><dd>A reference to the component of type T.</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>There is NO check for if an <a class="el" href="class_entity.html">Entity</a> has a component before it is gotten from the componentArray. If the component is not attached to this <a class="el" href="class_entity.html">Entity</a>, it WILL crash. </dd></dl>
+
+</div>
+</div>
+<a id="aa622a8d79153a90d0e3b9b992ca2d38b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa622a8d79153a90d0e3b9b992ca2d38b">&#9670;&nbsp;</a></span>hasComponent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Entity::hasComponent </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Checks the componentBitSet to see if an object has component of type T.</p>
+<dl class="section return"><dt>Returns</dt><dd>Whether the component of type T has been found on this entity. </dd></dl>
+
+</div>
+</div>
+<a id="a178d5acf6245f02a646e81d664cdbb53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a178d5acf6245f02a646e81d664cdbb53">&#9670;&nbsp;</a></span>Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Entity::Init </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Initliazes the <a class="el" href="class_entity.html">Entity</a>.</p>
+<p>All components attached to this entity are initialized too. </p>
+
+</div>
+</div>
+<a id="aa22a085a7e57366fc81501e5a0ca9b04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa22a085a7e57366fc81501e5a0ca9b04">&#9670;&nbsp;</a></span>Tick()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Entity::Tick </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Tick runs the tick function of all components attached to this entity.</p>
+<dl class="section note"><dt>Note</dt><dd>This DOES NOT tick the sprite component!!! Entities are drawn at the end of the frame, and the sprite component is ticked by <a class="el" href="class_scene.html">Scene</a>'s Draw function. </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a268b34f155900bef861b8b3ce6a5fa60"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a268b34f155900bef861b8b3ce6a5fa60">&#9670;&nbsp;</a></span>componentArray</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ComponentArray Entity::componentArray</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>An array of component IDs attached to this entity. </p>
+
+</div>
+</div>
+<a id="a5427c0cedd55c80f3480659c3fa36f6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5427c0cedd55c80f3480659c3fa36f6d">&#9670;&nbsp;</a></span>componentBitSet</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ComponentBitSet Entity::componentBitSet</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>A bitset for the components attached to this object. </p>
+
+</div>
+</div>
+<a id="a03f25ea00ebb0ecb6c20932b4e9dc606"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03f25ea00ebb0ecb6c20932b4e9dc606">&#9670;&nbsp;</a></span>components</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;std::shared_ptr&lt;<a class="el" href="class_component.html">Component</a>&gt; &gt; Entity::components</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>A list of all the components. </p>
+
+</div>
+</div>
+<a id="a6a249abbfcf8d6427561f14724f4f95a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a249abbfcf8d6427561f14724f4f95a">&#9670;&nbsp;</a></span>editMode</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Entity::editMode</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Determines if the entity is in edit mode.</p>
+<dl class="section note"><dt>Note</dt><dd>This IS NOT the same as edit mode in the blackboard. THIS is used to determine that the entity has been selected whilst in edit mode, and is open for editing via inspector. </dd>
+<dd>
+Also changes behaviour in some components like collision component which will draw lines whilst it's entity is in edit mode. </dd></dl>
+
+</div>
+</div>
+<a id="a844794654f15fa342f4b02e2faaf395f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a844794654f15fa342f4b02e2faaf395f">&#9670;&nbsp;</a></span>enabled</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Entity::enabled = true</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Determines if the entity is enables. Disabled entities are not ticked or collided with. </p>
+
+</div>
+</div>
+<a id="a5c92b546dedae9ce473274d82c8585f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c92b546dedae9ce473274d82c8585f6">&#9670;&nbsp;</a></span>ID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Entity::ID</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Unique ID assigned to this <a class="el" href="class_entity.html">Entity</a>. </p>
+
+</div>
+</div>
+<a id="a931b21fbdebb1a5963b4bcab5df128f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a931b21fbdebb1a5963b4bcab5df128f5">&#9670;&nbsp;</a></span>name</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Entity::name = &quot;What a creative name!&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Name of the entity. </p>
+
+</div>
+</div>
+<a id="a164f61a1e96badb6bc873ec2ef01ea6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a164f61a1e96badb6bc873ec2ef01ea6d">&#9670;&nbsp;</a></span>tag</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Entity::tag = &quot;&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Tag of the entity. Intended for use of the physics system and collisions. </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="_e_c_s_8h_source.html">ECS.h</a></li>
 </ul>

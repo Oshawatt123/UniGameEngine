@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: PositionComponent Class Reference</title>
+<title>The Filthy Engine: PositionComponent Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">My Project
+   <div id="projectname">The Filthy Engine
    </div>
   </td>
  </tr>
@@ -64,6 +64,7 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_position_component-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">PositionComponent Class Reference</div>  </div>
@@ -81,60 +82,563 @@ Inheritance diagram for PositionComponent:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ab331a0acf33945d32cca402364d9986b"><td class="memItemLeft" align="right" valign="top"><a id="ab331a0acf33945d32cca402364d9986b"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>PositionComponent</b> (int x, int y)</td></tr>
+<tr class="memitem:ab331a0acf33945d32cca402364d9986b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_position_component.html#ab331a0acf33945d32cca402364d9986b">PositionComponent</a> (int x, int y)</td></tr>
 <tr class="separator:ab331a0acf33945d32cca402364d9986b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab6fdf5038c58d2eb7d9bfbf78593d931"><td class="memItemLeft" align="right" valign="top"><a id="ab6fdf5038c58d2eb7d9bfbf78593d931"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>PositionComponent</b> (int x, int y, int scale)</td></tr>
+<tr class="memitem:ab6fdf5038c58d2eb7d9bfbf78593d931"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_position_component.html#ab6fdf5038c58d2eb7d9bfbf78593d931">PositionComponent</a> (int x, int y, int <a class="el" href="class_position_component.html#a91dd5fe3ecec8868b98447a73c6925e2">scale</a>)</td></tr>
 <tr class="separator:ab6fdf5038c58d2eb7d9bfbf78593d931"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaaea83aa812d2f8bfb7985eaa6a9cfc8"><td class="memItemLeft" align="right" valign="top"><a id="aaaea83aa812d2f8bfb7985eaa6a9cfc8"></a>
-<a class="el" href="class_vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getPos</b> ()</td></tr>
+<tr class="memitem:aaaea83aa812d2f8bfb7985eaa6a9cfc8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_position_component.html#aaaea83aa812d2f8bfb7985eaa6a9cfc8">getPos</a> ()</td></tr>
 <tr class="separator:aaaea83aa812d2f8bfb7985eaa6a9cfc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a100a482378a87636fdd62f507ae9adbd"><td class="memItemLeft" align="right" valign="top"><a id="a100a482378a87636fdd62f507ae9adbd"></a>
-<a class="el" href="class_vector2.html">Vector2</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getPosAddr</b> ()</td></tr>
-<tr class="separator:a100a482378a87636fdd62f507ae9adbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab6566eb4ea8ddae68bd448f03451ad54"><td class="memItemLeft" align="right" valign="top"><a id="ab6566eb4ea8ddae68bd448f03451ad54"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setPosition</b> (int x, int y)</td></tr>
-<tr class="separator:ab6566eb4ea8ddae68bd448f03451ad54"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7c40436792d6191b69286a2273fea344"><td class="memItemLeft" align="right" valign="top"><a id="a7c40436792d6191b69286a2273fea344"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>translate</b> (int x, int y)</td></tr>
-<tr class="separator:a7c40436792d6191b69286a2273fea344"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0894363c874beb829a35eb3ecc020011"><td class="memItemLeft" align="right" valign="top"><a id="a0894363c874beb829a35eb3ecc020011"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>translate</b> (<a class="el" href="class_vector2.html">Vector2</a> movement)</td></tr>
+<tr class="memitem:af8bbee0e87eb4d31bfb4e9aeb39bf504"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_position_component.html#af8bbee0e87eb4d31bfb4e9aeb39bf504">setPosition</a> (float x, float y)</td></tr>
+<tr class="separator:af8bbee0e87eb4d31bfb4e9aeb39bf504"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa443a5d72523bd6cb5230a3d31c3a99"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_position_component.html#aaa443a5d72523bd6cb5230a3d31c3a99">setPosition</a> (<a class="el" href="class_vector2.html">Vector2</a> pos)</td></tr>
+<tr class="separator:aaa443a5d72523bd6cb5230a3d31c3a99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89e33a94a02fb3f3d83b27a688f46ca0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_position_component.html#a89e33a94a02fb3f3d83b27a688f46ca0">translate</a> (float x, float y)</td></tr>
+<tr class="separator:a89e33a94a02fb3f3d83b27a688f46ca0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0894363c874beb829a35eb3ecc020011"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_position_component.html#a0894363c874beb829a35eb3ecc020011">translate</a> (<a class="el" href="class_vector2.html">Vector2</a> movement)</td></tr>
 <tr class="separator:a0894363c874beb829a35eb3ecc020011"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a126dd549dee47bb279b3388c2bbe8f46"><td class="memItemLeft" align="right" valign="top"><a id="a126dd549dee47bb279b3388c2bbe8f46"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Init</b> () override</td></tr>
+<tr class="memitem:a126dd549dee47bb279b3388c2bbe8f46"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_position_component.html#a126dd549dee47bb279b3388c2bbe8f46">Init</a> () override</td></tr>
 <tr class="separator:a126dd549dee47bb279b3388c2bbe8f46"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8e690ebba9d108a643c8ba3119496ea9"><td class="memItemLeft" align="right" valign="top"><a id="a8e690ebba9d108a643c8ba3119496ea9"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>EditorTick</b> () override</td></tr>
+<tr class="memitem:aef984fb95f90b5edbffbd7cd35708eef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_position_component.html#aef984fb95f90b5edbffbd7cd35708eef">PopulateInspector</a> () override</td></tr>
+<tr class="separator:aef984fb95f90b5edbffbd7cd35708eef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e690ebba9d108a643c8ba3119496ea9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_position_component.html#a8e690ebba9d108a643c8ba3119496ea9">EditorTick</a> () override</td></tr>
 <tr class="separator:a8e690ebba9d108a643c8ba3119496ea9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5c45bb6eb6eba3f4b56d981b1051a1c"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_position_component.html#ae5c45bb6eb6eba3f4b56d981b1051a1c">GetSaveData</a> ()</td></tr>
+<tr class="separator:ae5c45bb6eb6eba3f4b56d981b1051a1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c6aff15181949e032b0066f03c6b82c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_position_component.html#a9c6aff15181949e032b0066f03c6b82c">getEditBoxStart</a> ()</td></tr>
+<tr class="separator:a9c6aff15181949e032b0066f03c6b82c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac18a27652bf06c80403c2193d3d7b659"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_position_component.html#ac18a27652bf06c80403c2193d3d7b659">getEditBoxEnd</a> ()</td></tr>
+<tr class="separator:ac18a27652bf06c80403c2193d3d7b659"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_component"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_component')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_component.html">Component</a></td></tr>
-<tr class="memitem:a93b89e900390d88afd70993549007c9c inherit pub_methods_class_component"><td class="memItemLeft" align="right" valign="top"><a id="a93b89e900390d88afd70993549007c9c"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>Tick</b> ()</td></tr>
+<tr class="memitem:a93b89e900390d88afd70993549007c9c inherit pub_methods_class_component"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_component.html#a93b89e900390d88afd70993549007c9c">Tick</a> ()</td></tr>
 <tr class="separator:a93b89e900390d88afd70993549007c9c inherit pub_methods_class_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e9aa4348314d981f05f67397ad2f872 inherit pub_methods_class_component"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_component.html#a2e9aa4348314d981f05f67397ad2f872">~Component</a> ()</td></tr>
+<tr class="separator:a2e9aa4348314d981f05f67397ad2f872 inherit pub_methods_class_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:aa4f5ead9f6c150abce3b2982a245f629"><td class="memItemLeft" align="right" valign="top"><a id="aa4f5ead9f6c150abce3b2982a245f629"></a>
-<a class="el" href="class_vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Position</b></td></tr>
+<tr class="memitem:aa4f5ead9f6c150abce3b2982a245f629"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_position_component.html#aa4f5ead9f6c150abce3b2982a245f629">Position</a></td></tr>
 <tr class="separator:aa4f5ead9f6c150abce3b2982a245f629"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a071292871cdec1a1bbf18c8cb2b1a87b"><td class="memItemLeft" align="right" valign="top"><a id="a071292871cdec1a1bbf18c8cb2b1a87b"></a>
-<a class="el" href="class_vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><b>RenderPosition</b></td></tr>
+<tr class="memitem:a071292871cdec1a1bbf18c8cb2b1a87b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_position_component.html#a071292871cdec1a1bbf18c8cb2b1a87b">RenderPosition</a></td></tr>
 <tr class="separator:a071292871cdec1a1bbf18c8cb2b1a87b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3cb2dc0aae0ea08b3fa9b4380b9b5e22"><td class="memItemLeft" align="right" valign="top"><a id="a3cb2dc0aae0ea08b3fa9b4380b9b5e22"></a>
-<a class="el" href="class_vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Rotation</b></td></tr>
+<tr class="memitem:a3cb2dc0aae0ea08b3fa9b4380b9b5e22"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_position_component.html#a3cb2dc0aae0ea08b3fa9b4380b9b5e22">Rotation</a></td></tr>
 <tr class="separator:a3cb2dc0aae0ea08b3fa9b4380b9b5e22"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af22302f66e74f95c354c471fd0a18374"><td class="memItemLeft" align="right" valign="top"><a id="af22302f66e74f95c354c471fd0a18374"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>scale</b></td></tr>
-<tr class="separator:af22302f66e74f95c354c471fd0a18374"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91dd5fe3ecec8868b98447a73c6925e2"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_position_component.html#a91dd5fe3ecec8868b98447a73c6925e2">scale</a></td></tr>
+<tr class="separator:a91dd5fe3ecec8868b98447a73c6925e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_attribs_class_component"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_class_component')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="class_component.html">Component</a></td></tr>
-<tr class="memitem:a46343549452bda5ee9752f7a9bc15efb inherit pub_attribs_class_component"><td class="memItemLeft" align="right" valign="top"><a id="a46343549452bda5ee9752f7a9bc15efb"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>name</b> = &quot;Look at this descriptive name!&quot;</td></tr>
+<tr class="memitem:a46343549452bda5ee9752f7a9bc15efb inherit pub_attribs_class_component"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_component.html#a46343549452bda5ee9752f7a9bc15efb">name</a> = &quot;Look at this descriptive name!&quot;</td></tr>
 <tr class="separator:a46343549452bda5ee9752f7a9bc15efb inherit pub_attribs_class_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6acb3f00c9d114d961c8763ede390d2c inherit pub_attribs_class_component"><td class="memItemLeft" align="right" valign="top"><a id="a6acb3f00c9d114d961c8763ede390d2c"></a>
-<a class="el" href="class_entity.html">Entity</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>entity</b></td></tr>
+<tr class="memitem:a6acb3f00c9d114d961c8763ede390d2c inherit pub_attribs_class_component"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_entity.html">Entity</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_component.html#a6acb3f00c9d114d961c8763ede390d2c">entity</a></td></tr>
 <tr class="separator:a6acb3f00c9d114d961c8763ede390d2c inherit pub_attribs_class_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a10f5d507c1fee4a716dba04780f608ae"><td class="memItemLeft" align="right" valign="top"><a id="a10f5d507c1fee4a716dba04780f608ae"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>editBoxOffset</b> = 5</td></tr>
+<tr class="separator:a10f5d507c1fee4a716dba04780f608ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ab331a0acf33945d32cca402364d9986b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab331a0acf33945d32cca402364d9986b">&#9670;&nbsp;</a></span>PositionComponent() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">PositionComponent::PositionComponent </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Override constructor. Position is set to the X and Y parameters. Scale is set to 1.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>The x position of the <a class="el" href="class_entity.html">Entity</a> in world-space. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>The y position of the <a class="el" href="class_entity.html">Entity</a> in world-space. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab6fdf5038c58d2eb7d9bfbf78593d931"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6fdf5038c58d2eb7d9bfbf78593d931">&#9670;&nbsp;</a></span>PositionComponent() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">PositionComponent::PositionComponent </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>scale</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Override constructor. Position is set to the X and Y parameters. Scale is set to the scale parameter.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>The x position of the <a class="el" href="class_entity.html">Entity</a> in world-space. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>The y position of the <a class="el" href="class_entity.html">Entity</a> in world-space. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">scale</td><td>The scale of the <a class="el" href="class_entity.html">Entity</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a8e690ebba9d108a643c8ba3119496ea9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e690ebba9d108a643c8ba3119496ea9">&#9670;&nbsp;</a></span>EditorTick()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PositionComponent::EditorTick </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Editor tick draws the drag box if the entity has been selected. </p>
+
+<p>Reimplemented from <a class="el" href="class_component.html#ad54a5ed6c47801402e457e21723009db">Component</a>.</p>
+
+</div>
+</div>
+<a id="ac18a27652bf06c80403c2193d3d7b659"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac18a27652bf06c80403c2193d3d7b659">&#9670;&nbsp;</a></span>getEditBoxEnd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_vector2.html">Vector2</a> PositionComponent::getEditBoxEnd </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>QoL function for generating the drag box. </p>
+
+</div>
+</div>
+<a id="a9c6aff15181949e032b0066f03c6b82c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c6aff15181949e032b0066f03c6b82c">&#9670;&nbsp;</a></span>getEditBoxStart()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_vector2.html">Vector2</a> PositionComponent::getEditBoxStart </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>QoL function for generating the drag box. </p>
+
+</div>
+</div>
+<a id="aaaea83aa812d2f8bfb7985eaa6a9cfc8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaaea83aa812d2f8bfb7985eaa6a9cfc8">&#9670;&nbsp;</a></span>getPos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_vector2.html">Vector2</a> PositionComponent::getPos </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>A getter function for the <a class="el" href="class_entity.html">Entity</a>'s position.</p>
+<dl class="section return"><dt>Returns</dt><dd>Position of the entity in world-space. </dd></dl>
+
+</div>
+</div>
+<a id="ae5c45bb6eb6eba3f4b56d981b1051a1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5c45bb6eb6eba3f4b56d981b1051a1c">&#9670;&nbsp;</a></span>GetSaveData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string PositionComponent::GetSaveData </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Save data is generated. </p>
+
+<p>Reimplemented from <a class="el" href="class_component.html#ac67aa475d8d1d08233d893a3d3665e5c">Component</a>.</p>
+
+</div>
+</div>
+<a id="a126dd549dee47bb279b3388c2bbe8f46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a126dd549dee47bb279b3388c2bbe8f46">&#9670;&nbsp;</a></span>Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PositionComponent::Init </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Init sets the name of the component. </p>
+
+<p>Reimplemented from <a class="el" href="class_component.html">Component</a>.</p>
+
+</div>
+</div>
+<a id="aef984fb95f90b5edbffbd7cd35708eef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef984fb95f90b5edbffbd7cd35708eef">&#9670;&nbsp;</a></span>PopulateInspector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PositionComponent::PopulateInspector </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Inspector is populated with sliders for position and scale. </p>
+
+<p>Reimplemented from <a class="el" href="class_component.html">Component</a>.</p>
+
+</div>
+</div>
+<a id="af8bbee0e87eb4d31bfb4e9aeb39bf504"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8bbee0e87eb4d31bfb4e9aeb39bf504">&#9670;&nbsp;</a></span>setPosition() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PositionComponent::setPosition </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the position of the entity.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>The new x position of the entity. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>The new y position of the entity. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aaa443a5d72523bd6cb5230a3d31c3a99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa443a5d72523bd6cb5230a3d31c3a99">&#9670;&nbsp;</a></span>setPosition() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PositionComponent::setPosition </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_vector2.html">Vector2</a>&#160;</td>
+          <td class="paramname"><em>pos</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Override for setPosition that takes a vector2 rather than 2 ints.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>The new position of the entity. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a89e33a94a02fb3f3d83b27a688f46ca0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89e33a94a02fb3f3d83b27a688f46ca0">&#9670;&nbsp;</a></span>translate() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PositionComponent::translate </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Translates the entity in world-space.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">The</td><td>value to translate the entity in the x-axis. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">The</td><td>value to translate the entity in the y-axis. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0894363c874beb829a35eb3ecc020011"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0894363c874beb829a35eb3ecc020011">&#9670;&nbsp;</a></span>translate() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PositionComponent::translate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_vector2.html">Vector2</a>&#160;</td>
+          <td class="paramname"><em>movement</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Override for translate. This calls the base function.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">movement</td><td>The translation vector to move the entity by. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="aa4f5ead9f6c150abce3b2982a245f629"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4f5ead9f6c150abce3b2982a245f629">&#9670;&nbsp;</a></span>Position</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_vector2.html">Vector2</a> PositionComponent::Position</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The position of the <a class="el" href="class_entity.html">Entity</a> in world-space. </p>
+
+</div>
+</div>
+<a id="a071292871cdec1a1bbf18c8cb2b1a87b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a071292871cdec1a1bbf18c8cb2b1a87b">&#9670;&nbsp;</a></span>RenderPosition</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_vector2.html">Vector2</a> PositionComponent::RenderPosition</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The position to render the entity. </p>
+
+</div>
+</div>
+<a id="a3cb2dc0aae0ea08b3fa9b4380b9b5e22"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3cb2dc0aae0ea08b3fa9b4380b9b5e22">&#9670;&nbsp;</a></span>Rotation</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_vector2.html">Vector2</a> PositionComponent::Rotation</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The rotation of the entity. </p>
+
+</div>
+</div>
+<a id="a91dd5fe3ecec8868b98447a73c6925e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91dd5fe3ecec8868b98447a73c6925e2">&#9670;&nbsp;</a></span>scale</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float PositionComponent::scale</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The scale of the entity. Base constructor takes no parameters. Sets position to 0, scale to 1. </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="_position_component_8h_source.html">PositionComponent.h</a></li>
 </ul>

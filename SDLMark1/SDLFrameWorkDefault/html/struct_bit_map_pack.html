@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: BitMapPack Struct Reference</title>
+<title>The Filthy Engine: BitMapPack Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">My Project
+   <div id="projectname">The Filthy Engine
    </div>
   </td>
  </tr>
@@ -68,19 +68,66 @@ $(function() {
 <div class="title">BitMapPack Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_engine_structs_8h_source.html">EngineStructs.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a22a4eb1a939886f0a59888298dc68e76"><td class="memItemLeft" align="right" valign="top"><a id="a22a4eb1a939886f0a59888298dc68e76"></a>
-SDL_Texture *&#160;</td><td class="memItemRight" valign="bottom"><b>texture</b> = nullptr</td></tr>
+<tr class="memitem:a22a4eb1a939886f0a59888298dc68e76"><td class="memItemLeft" align="right" valign="top">SDL_Texture *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_bit_map_pack.html#a22a4eb1a939886f0a59888298dc68e76">texture</a> = nullptr</td></tr>
 <tr class="separator:a22a4eb1a939886f0a59888298dc68e76"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ace6df890ecaf19c8640d2af75dc811e1"><td class="memItemLeft" align="right" valign="top"><a id="ace6df890ecaf19c8640d2af75dc811e1"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>width</b></td></tr>
+<tr class="memitem:ace6df890ecaf19c8640d2af75dc811e1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_bit_map_pack.html#ace6df890ecaf19c8640d2af75dc811e1">width</a></td></tr>
 <tr class="separator:ace6df890ecaf19c8640d2af75dc811e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af6da2c8af8e3d2b51d8220a6913d839a"><td class="memItemLeft" align="right" valign="top"><a id="af6da2c8af8e3d2b51d8220a6913d839a"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>height</b></td></tr>
+<tr class="memitem:af6da2c8af8e3d2b51d8220a6913d839a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_bit_map_pack.html#af6da2c8af8e3d2b51d8220a6913d839a">height</a></td></tr>
 <tr class="separator:af6da2c8af8e3d2b51d8220a6913d839a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><a class="el" href="struct_bit_map_pack.html">BitMapPack</a> is a storage class for textures, and their attributes. It exists to make passing textures around easier, as it eliminates the need to also pass the width and height as extra parameters just taking up space. This also exists because SDL_Texture does not contain a definition for width and height. That data is stored on the SDL_Surface, which is deleted as soon as the asset is loaded. Hence making it a wise idea to grab this data when the image is first loaded and the surface generated. </p>
+</div><h2 class="groupheader">Member Data Documentation</h2>
+<a id="af6da2c8af8e3d2b51d8220a6913d839a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6da2c8af8e3d2b51d8220a6913d839a">&#9670;&nbsp;</a></span>height</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int BitMapPack::height</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The height of the texture </p>
+
+</div>
+</div>
+<a id="a22a4eb1a939886f0a59888298dc68e76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22a4eb1a939886f0a59888298dc68e76">&#9670;&nbsp;</a></span>texture</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SDL_Texture* BitMapPack::texture = nullptr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The texture of the BitMap. </p>
+
+</div>
+</div>
+<a id="ace6df890ecaf19c8640d2af75dc811e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace6df890ecaf19c8640d2af75dc811e1">&#9670;&nbsp;</a></span>width</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int BitMapPack::width</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The width of the texture. </p>
+
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li><a class="el" href="_engine_structs_8h_source.html">EngineStructs.h</a></li>
 </ul>

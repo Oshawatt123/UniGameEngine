@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: Logger.h Source File</title>
+<title>The Filthy Engine: Logger.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">My Project
+   <div id="projectname">The Filthy Engine
    </div>
   </td>
  </tr>
@@ -72,23 +72,27 @@ $(function() {
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="class_logger.html">    8</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_logger.html">Logger</a></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keyword">static</span> <a class="code" href="class_logger.html">Logger</a>* sInstance;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keywordtype">int</span> mVerbosity = DEBUG;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keyword">static</span> <a class="code" href="class_logger.html">Logger</a>* Instance();</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordtype">void</span> LogString(std::string message, Verbosity verbosity);</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="class_logger.html">Logger</a>();</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    ~<a class="code" href="class_logger.html">Logger</a>();</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;};</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_logger.html">   24</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_logger.html">Logger</a></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="class_logger.html#adb66affbab16471bafe6cf45d239b769">   27</a></span>&#160;    <span class="keyword">static</span> <a class="code" href="class_logger.html">Logger</a>* <a class="code" href="class_logger.html#adb66affbab16471bafe6cf45d239b769">sInstance</a>; </div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="class_logger.html#a4ad9786dcb9a12fc6de7d6c591b117b1">   28</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_logger.html#a4ad9786dcb9a12fc6de7d6c591b117b1">mVerbosity</a> = DEBUG; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keyword">static</span> <a class="code" href="class_logger.html">Logger</a>* <a class="code" href="class_logger.html#afae0bf19389387a916656073572cb846">Instance</a>();</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_logger.html#a5d8ec6d332e83fc79ee73e50a52e1b9a">LogString</a>(std::string message, Verbosity verbosity);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <a class="code" href="class_logger.html">Logger</a>();</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    ~<a class="code" href="class_logger.html">Logger</a>();</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;};</div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclass_logger_html"><div class="ttname"><a href="class_logger.html">Logger</a></div><div class="ttdef"><b>Definition:</b> Logger.h:8</div></div>
+<div class="ttc" id="aclass_logger_html_a4ad9786dcb9a12fc6de7d6c591b117b1"><div class="ttname"><a href="class_logger.html#a4ad9786dcb9a12fc6de7d6c591b117b1">Logger::mVerbosity</a></div><div class="ttdeci">int mVerbosity</div><div class="ttdef"><b>Definition:</b> Logger.h:28</div></div>
+<div class="ttc" id="aclass_logger_html_a5d8ec6d332e83fc79ee73e50a52e1b9a"><div class="ttname"><a href="class_logger.html#a5d8ec6d332e83fc79ee73e50a52e1b9a">Logger::LogString</a></div><div class="ttdeci">void LogString(std::string message, Verbosity verbosity)</div><div class="ttdef"><b>Definition:</b> Logger.cpp:14</div></div>
+<div class="ttc" id="aclass_logger_html_afae0bf19389387a916656073572cb846"><div class="ttname"><a href="class_logger.html#afae0bf19389387a916656073572cb846">Logger::Instance</a></div><div class="ttdeci">static Logger * Instance()</div><div class="ttdef"><b>Definition:</b> Logger.cpp:5</div></div>
+<div class="ttc" id="aclass_logger_html_adb66affbab16471bafe6cf45d239b769"><div class="ttname"><a href="class_logger.html#adb66affbab16471bafe6cf45d239b769">Logger::sInstance</a></div><div class="ttdeci">static Logger * sInstance</div><div class="ttdef"><b>Definition:</b> Logger.h:27</div></div>
+<div class="ttc" id="aclass_logger_html"><div class="ttname"><a href="class_logger.html">Logger</a></div><div class="ttdef"><b>Definition:</b> Logger.h:24</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

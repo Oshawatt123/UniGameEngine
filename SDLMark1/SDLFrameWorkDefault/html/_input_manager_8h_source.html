@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: InputManager.h Source File</title>
+<title>The Filthy Engine: InputManager.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">My Project
+   <div id="projectname">The Filthy Engine
    </div>
   </td>
  </tr>
@@ -75,34 +75,52 @@ $(function() {
 <div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="class_input_manager.html">    8</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_input_manager.html">InputManager</a></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keyword">static</span> <a class="code" href="class_input_manager.html">InputManager</a>* sInstance;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keyword">const</span> Uint8* mKeyBoardStates;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordtype">bool</span> WindowIsQuit;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">int</span> mouseButtons;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">int</span> mouseX, mouseY;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">int</span> mouseWheel;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keyword">static</span> <a class="code" href="class_input_manager.html">InputManager</a>* Instance();</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> Release();</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">bool</span> KeyDown(SDL_Scancode scanCode);</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">bool</span> WindowQuit();</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">void</span> Update();</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="class_input_manager.html">InputManager</a>();</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    ~<a class="code" href="class_input_manager.html">InputManager</a>();</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;};</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_input_manager.html#af98a6a009af03695fd3b809a60314299">   11</a></span>&#160;    <span class="keyword">static</span> <a class="code" href="class_input_manager.html">InputManager</a>* <a class="code" href="class_input_manager.html#af98a6a009af03695fd3b809a60314299">sInstance</a>; </div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_input_manager.html#a74e53775b787fa379ccd290a5fa1c8ee">   13</a></span>&#160;    <span class="keyword">const</span> Uint8* <a class="code" href="class_input_manager.html#a74e53775b787fa379ccd290a5fa1c8ee">mKeyBoardStates</a>; </div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_input_manager.html#af8dbfcb4c60f03e53f1e0819ab60a3a9">   14</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_input_manager.html#af8dbfcb4c60f03e53f1e0819ab60a3a9">WindowIsQuit</a>; </div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_input_manager.html#a58ed5503ea1eebb374262798bbdf2279">   17</a></span>&#160;    <span class="keywordtype">int</span> prevMouseX, <a class="code" href="class_input_manager.html#a58ed5503ea1eebb374262798bbdf2279">prevMouseY</a>; </div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_input_manager.html#adf52ab8e346b1ba851c56206af4fbd24">   18</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_input_manager.html#adf52ab8e346b1ba851c56206af4fbd24">prevMouseButtons</a>; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="class_input_manager.html#ad3f6c633a8edf5d19ee43f1b27de1963">   21</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_input_manager.html#ad3f6c633a8edf5d19ee43f1b27de1963">mouseButtons</a>; </div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_input_manager.html#afb189c58dd5ee470a3202c685c5c7f1e">   22</a></span>&#160;    <span class="keywordtype">int</span> mouseX, <a class="code" href="class_input_manager.html#afb189c58dd5ee470a3202c685c5c7f1e">mouseY</a>; </div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="class_input_manager.html#aca3de515087c5470455be0ebee95b233">   23</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_input_manager.html#aca3de515087c5470455be0ebee95b233">mouseWheel</a>; </div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_input_manager.html#a52db1b39ec75b95a4b3c3a098bb942cc">   24</a></span>&#160;    <span class="keywordtype">int</span> mouseDeltaX, <a class="code" href="class_input_manager.html#a52db1b39ec75b95a4b3c3a098bb942cc">mouseDeltaY</a>; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keyword">static</span> <a class="code" href="class_input_manager.html">InputManager</a>* <a class="code" href="class_input_manager.html#a53a27e2e25bec96173a4c7532515d10e">Instance</a>();</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_input_manager.html#a01789f6350560c18a10f01847a200d39">Release</a>();</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_input_manager.html#a11fa034273f286b5ac9ae0ee29c9a6cc">KeyDown</a>(SDL_Scancode scanCode);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="comment">//bool KeyUp(SDL_Scancode scanCode);</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_input_manager.html#a9a0f19384d5b88370486e954e940cbce">MouseDown</a>(<span class="keywordtype">int</span> mouseButton);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="comment">//bool MouseUp(int mouseButton);</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_input_manager.html#a3c5e49a8cec0429394e0821dbd937d27">WindowQuit</a>();</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_input_manager.html#aa5480931dba2720e7d80dd00a53adae0">Update</a>();</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <a class="code" href="class_input_manager.html">InputManager</a>();</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    ~<a class="code" href="class_input_manager.html">InputManager</a>();</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;};</div>
 </div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_input_manager_html_aca3de515087c5470455be0ebee95b233"><div class="ttname"><a href="class_input_manager.html#aca3de515087c5470455be0ebee95b233">InputManager::mouseWheel</a></div><div class="ttdeci">int mouseWheel</div><div class="ttdef"><b>Definition:</b> InputManager.h:23</div></div>
+<div class="ttc" id="aclass_input_manager_html_af8dbfcb4c60f03e53f1e0819ab60a3a9"><div class="ttname"><a href="class_input_manager.html#af8dbfcb4c60f03e53f1e0819ab60a3a9">InputManager::WindowIsQuit</a></div><div class="ttdeci">bool WindowIsQuit</div><div class="ttdef"><b>Definition:</b> InputManager.h:14</div></div>
+<div class="ttc" id="aclass_input_manager_html_af98a6a009af03695fd3b809a60314299"><div class="ttname"><a href="class_input_manager.html#af98a6a009af03695fd3b809a60314299">InputManager::sInstance</a></div><div class="ttdeci">static InputManager * sInstance</div><div class="ttdef"><b>Definition:</b> InputManager.h:11</div></div>
+<div class="ttc" id="aclass_input_manager_html_a9a0f19384d5b88370486e954e940cbce"><div class="ttname"><a href="class_input_manager.html#a9a0f19384d5b88370486e954e940cbce">InputManager::MouseDown</a></div><div class="ttdeci">bool MouseDown(int mouseButton)</div><div class="ttdef"><b>Definition:</b> InputManager.cpp:25</div></div>
+<div class="ttc" id="aclass_input_manager_html_a53a27e2e25bec96173a4c7532515d10e"><div class="ttname"><a href="class_input_manager.html#a53a27e2e25bec96173a4c7532515d10e">InputManager::Instance</a></div><div class="ttdeci">static InputManager * Instance()</div><div class="ttdef"><b>Definition:</b> InputManager.cpp:5</div></div>
+<div class="ttc" id="aclass_input_manager_html_aa5480931dba2720e7d80dd00a53adae0"><div class="ttname"><a href="class_input_manager.html#aa5480931dba2720e7d80dd00a53adae0">InputManager::Update</a></div><div class="ttdeci">void Update()</div><div class="ttdef"><b>Definition:</b> InputManager.cpp:40</div></div>
+<div class="ttc" id="aclass_input_manager_html_a58ed5503ea1eebb374262798bbdf2279"><div class="ttname"><a href="class_input_manager.html#a58ed5503ea1eebb374262798bbdf2279">InputManager::prevMouseY</a></div><div class="ttdeci">int prevMouseY</div><div class="ttdef"><b>Definition:</b> InputManager.h:17</div></div>
+<div class="ttc" id="aclass_input_manager_html_a74e53775b787fa379ccd290a5fa1c8ee"><div class="ttname"><a href="class_input_manager.html#a74e53775b787fa379ccd290a5fa1c8ee">InputManager::mKeyBoardStates</a></div><div class="ttdeci">const Uint8 * mKeyBoardStates</div><div class="ttdef"><b>Definition:</b> InputManager.h:13</div></div>
+<div class="ttc" id="aclass_input_manager_html_a11fa034273f286b5ac9ae0ee29c9a6cc"><div class="ttname"><a href="class_input_manager.html#a11fa034273f286b5ac9ae0ee29c9a6cc">InputManager::KeyDown</a></div><div class="ttdeci">bool KeyDown(SDL_Scancode scanCode)</div><div class="ttdef"><b>Definition:</b> InputManager.cpp:20</div></div>
+<div class="ttc" id="aclass_input_manager_html_afb189c58dd5ee470a3202c685c5c7f1e"><div class="ttname"><a href="class_input_manager.html#afb189c58dd5ee470a3202c685c5c7f1e">InputManager::mouseY</a></div><div class="ttdeci">int mouseY</div><div class="ttdef"><b>Definition:</b> InputManager.h:22</div></div>
 <div class="ttc" id="aclass_input_manager_html"><div class="ttname"><a href="class_input_manager.html">InputManager</a></div><div class="ttdef"><b>Definition:</b> InputManager.h:8</div></div>
+<div class="ttc" id="aclass_input_manager_html_adf52ab8e346b1ba851c56206af4fbd24"><div class="ttname"><a href="class_input_manager.html#adf52ab8e346b1ba851c56206af4fbd24">InputManager::prevMouseButtons</a></div><div class="ttdeci">int prevMouseButtons</div><div class="ttdef"><b>Definition:</b> InputManager.h:18</div></div>
+<div class="ttc" id="aclass_input_manager_html_a52db1b39ec75b95a4b3c3a098bb942cc"><div class="ttname"><a href="class_input_manager.html#a52db1b39ec75b95a4b3c3a098bb942cc">InputManager::mouseDeltaY</a></div><div class="ttdeci">int mouseDeltaY</div><div class="ttdef"><b>Definition:</b> InputManager.h:24</div></div>
+<div class="ttc" id="aclass_input_manager_html_a3c5e49a8cec0429394e0821dbd937d27"><div class="ttname"><a href="class_input_manager.html#a3c5e49a8cec0429394e0821dbd937d27">InputManager::WindowQuit</a></div><div class="ttdeci">bool WindowQuit()</div><div class="ttdef"><b>Definition:</b> InputManager.cpp:35</div></div>
+<div class="ttc" id="aclass_input_manager_html_a01789f6350560c18a10f01847a200d39"><div class="ttname"><a href="class_input_manager.html#a01789f6350560c18a10f01847a200d39">InputManager::Release</a></div><div class="ttdeci">static void Release()</div><div class="ttdef"><b>Definition:</b> InputManager.cpp:14</div></div>
+<div class="ttc" id="aclass_input_manager_html_ad3f6c633a8edf5d19ee43f1b27de1963"><div class="ttname"><a href="class_input_manager.html#ad3f6c633a8edf5d19ee43f1b27de1963">InputManager::mouseButtons</a></div><div class="ttdeci">int mouseButtons</div><div class="ttdef"><b>Definition:</b> InputManager.h:21</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

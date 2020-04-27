@@ -1,0 +1,92 @@
+\hypertarget{class_audio_manager}{}\doxysection{Audio\+Manager Class Reference}
+\label{class_audio_manager}\index{AudioManager@{AudioManager}}
+
+
+{\ttfamily \#include $<$Audio\+Manager.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_audio_manager_a1f4e8d502ea7e1a6b5f6fad042d2ad24}{Play\+Audio}} (std\+::string file\+Path)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_audio_manager}{Audio\+Manager}} $\ast$ \mbox{\hyperlink{class_audio_manager_a014c2ce3fc771812638da4141a6e6cc6}{Instance}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_audio_manager_a64f1cb4dab9a2e3fe08ba3d55b83a6a1}{Check\+Hash\+Map}} (std\+::string key)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unordered\+\_\+map$<$ std\+::string, \mbox{\hyperlink{struct_audio_pack}{Audio\+Pack}} $>$ \mbox{\hyperlink{class_audio_manager_a3c83bb335a422c352243f88d787a5c0e}{audio\+Hash\+Map}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_audio_manager}{Audio\+Manager}} $\ast$ \mbox{\hyperlink{class_audio_manager_ab00c5599991cbe6c0632121c5f4e5bb9}{s\+Instance}} = N\+U\+LL
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The Audio Manager is a singleton that allows the playing of W\+AV files. The \mbox{\hyperlink{class_audio_manager}{Audio\+Manager}} relies on the \mbox{\hyperlink{struct_audio_pack}{Audio\+Pack}} to function. \begin{DoxyWarning}{Warning}
+This Audio Manager will O\+N\+LY play W\+AV files. Do not try other file types. You will void your warranty. 
+\end{DoxyWarning}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_audio_manager_a64f1cb4dab9a2e3fe08ba3d55b83a6a1}\label{class_audio_manager_a64f1cb4dab9a2e3fe08ba3d55b83a6a1}} 
+\index{AudioManager@{AudioManager}!CheckHashMap@{CheckHashMap}}
+\index{CheckHashMap@{CheckHashMap}!AudioManager@{AudioManager}}
+\doxysubsubsection{\texorpdfstring{CheckHashMap()}{CheckHashMap()}}
+{\footnotesize\ttfamily bool Audio\+Manager\+::\+Check\+Hash\+Map (\begin{DoxyParamCaption}\item[{std\+::string}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+A QoL function that checks if the audio\+Hash\+Map has a certain key. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em key} & The key to search for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Whether or not the key was found in the audio\+Hash\+Map. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_audio_manager_a014c2ce3fc771812638da4141a6e6cc6}\label{class_audio_manager_a014c2ce3fc771812638da4141a6e6cc6}} 
+\index{AudioManager@{AudioManager}!Instance@{Instance}}
+\index{Instance@{Instance}!AudioManager@{AudioManager}}
+\doxysubsubsection{\texorpdfstring{Instance()}{Instance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_audio_manager}{Audio\+Manager}} $\ast$ Audio\+Manager\+::\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Method for getting an instance of \mbox{\hyperlink{class_audio_manager}{Audio\+Manager}}. \mbox{\Hypertarget{class_audio_manager_a1f4e8d502ea7e1a6b5f6fad042d2ad24}\label{class_audio_manager_a1f4e8d502ea7e1a6b5f6fad042d2ad24}} 
+\index{AudioManager@{AudioManager}!PlayAudio@{PlayAudio}}
+\index{PlayAudio@{PlayAudio}!AudioManager@{AudioManager}}
+\doxysubsubsection{\texorpdfstring{PlayAudio()}{PlayAudio()}}
+{\footnotesize\ttfamily bool Audio\+Manager\+::\+Play\+Audio (\begin{DoxyParamCaption}\item[{std\+::string}]{file\+Path }\end{DoxyParamCaption})}
+
+An easy-\/to-\/use function that plays an audio file instantly. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em file\+Path} & The file\+Path of the audio file to be played. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_audio_manager_a3c83bb335a422c352243f88d787a5c0e}\label{class_audio_manager_a3c83bb335a422c352243f88d787a5c0e}} 
+\index{AudioManager@{AudioManager}!audioHashMap@{audioHashMap}}
+\index{audioHashMap@{audioHashMap}!AudioManager@{AudioManager}}
+\doxysubsubsection{\texorpdfstring{audioHashMap}{audioHashMap}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, \mbox{\hyperlink{struct_audio_pack}{Audio\+Pack}}$>$ Audio\+Manager\+::audio\+Hash\+Map\hspace{0.3cm}{\ttfamily [private]}}
+
+A hashmap for efficient storage of the Audio\+Packs. \mbox{\Hypertarget{class_audio_manager_ab00c5599991cbe6c0632121c5f4e5bb9}\label{class_audio_manager_ab00c5599991cbe6c0632121c5f4e5bb9}} 
+\index{AudioManager@{AudioManager}!sInstance@{sInstance}}
+\index{sInstance@{sInstance}!AudioManager@{AudioManager}}
+\doxysubsubsection{\texorpdfstring{sInstance}{sInstance}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_audio_manager}{Audio\+Manager}} $\ast$ Audio\+Manager\+::s\+Instance = N\+U\+LL\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+Static instance of the \mbox{\hyperlink{class_audio_manager}{Audio\+Manager}} class. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Audio\+Manager.\+h\item 
+Audio\+Manager.\+cpp\end{DoxyCompactItemize}

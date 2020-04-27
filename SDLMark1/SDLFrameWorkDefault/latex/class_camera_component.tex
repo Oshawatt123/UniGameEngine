@@ -1,0 +1,96 @@
+\hypertarget{class_camera_component}{}\doxysection{Camera\+Component Class Reference}
+\label{class_camera_component}\index{CameraComponent@{CameraComponent}}
+Inheritance diagram for Camera\+Component\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_camera_component}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_camera_component_a52d56401b088da4fa3cab5d7468905d2}\label{class_camera_component_a52d56401b088da4fa3cab5d7468905d2}} 
+void {\bfseries Init} () override
+\item 
+void \mbox{\hyperlink{class_camera_component_a0aa7c3deea61cdc4af316a4816b4c49e}{Tick}} () override
+\item 
+\mbox{\Hypertarget{class_camera_component_a414f0c759b0cedd2cd7081fda6fa0187}\label{class_camera_component_a414f0c759b0cedd2cd7081fda6fa0187}} 
+\mbox{\hyperlink{class_vector2}{Vector2}} {\bfseries get\+Position} ()
+\item 
+\mbox{\Hypertarget{class_camera_component_a71b3a62e77fb2faec8f277d6fa1674f1}\label{class_camera_component_a71b3a62e77fb2faec8f277d6fa1674f1}} 
+void {\bfseries Populate\+Inspector} () override
+\item 
+std\+::string \mbox{\hyperlink{class_camera_component_a6177e3e06814366709230a9dd4e8693a}{Get\+Save\+Data}} ()
+\item 
+\mbox{\Hypertarget{class_camera_component_a860cb8e99178e64c054d9e382162bb9d}\label{class_camera_component_a860cb8e99178e64c054d9e382162bb9d}} 
+void {\bfseries set\+Cam\+Position} (int \+\_\+x, int \+\_\+y)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_vector2}{Vector2}} \mbox{\hyperlink{class_camera_component_a5d00806a5d059282294df1fc0b4a7352}{cam\+Offset}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_position_component}{Position\+Component}} $\ast$ \mbox{\hyperlink{class_camera_component_ab70519738e3c919c5365073eaaaebc65}{pos}}
+\item 
+\mbox{\hyperlink{class_entity}{Entity}} $\ast$ \mbox{\hyperlink{class_camera_component_a9383f2f5533b060d203ed6708f41f70c}{entity\+To\+Follow}}
+\item 
+\mbox{\hyperlink{class_vector2}{Vector2}} \mbox{\hyperlink{class_camera_component_a7d27875ed5cdee105967eb559161d981}{cam\+Position}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_camera_component_a6177e3e06814366709230a9dd4e8693a}\label{class_camera_component_a6177e3e06814366709230a9dd4e8693a}} 
+\index{CameraComponent@{CameraComponent}!GetSaveData@{GetSaveData}}
+\index{GetSaveData@{GetSaveData}!CameraComponent@{CameraComponent}}
+\doxysubsubsection{\texorpdfstring{GetSaveData()}{GetSaveData()}}
+{\footnotesize\ttfamily std\+::string Camera\+Component\+::\+Get\+Save\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Base Populate\+Inspector has no behaviour. This is used to populate the inspector with editable fields / useful information. 
+
+Reimplemented from \mbox{\hyperlink{class_component_ac67aa475d8d1d08233d893a3d3665e5c}{Component}}.
+
+\mbox{\Hypertarget{class_camera_component_a0aa7c3deea61cdc4af316a4816b4c49e}\label{class_camera_component_a0aa7c3deea61cdc4af316a4816b4c49e}} 
+\index{CameraComponent@{CameraComponent}!Tick@{Tick}}
+\index{Tick@{Tick}!CameraComponent@{CameraComponent}}
+\doxysubsubsection{\texorpdfstring{Tick()}{Tick()}}
+{\footnotesize\ttfamily void Camera\+Component\+::\+Tick (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Base Init has no behaviour. This is called once after scene load. 
+
+Reimplemented from \mbox{\hyperlink{class_component_a93b89e900390d88afd70993549007c9c}{Component}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_camera_component_a5d00806a5d059282294df1fc0b4a7352}\label{class_camera_component_a5d00806a5d059282294df1fc0b4a7352}} 
+\index{CameraComponent@{CameraComponent}!camOffset@{camOffset}}
+\index{camOffset@{camOffset}!CameraComponent@{CameraComponent}}
+\doxysubsubsection{\texorpdfstring{camOffset}{camOffset}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector2}{Vector2}} Camera\+Component\+::cam\+Offset}
+
+The offset of the camera which is used in rendering the scene relative to the camera. \mbox{\Hypertarget{class_camera_component_a7d27875ed5cdee105967eb559161d981}\label{class_camera_component_a7d27875ed5cdee105967eb559161d981}} 
+\index{CameraComponent@{CameraComponent}!camPosition@{camPosition}}
+\index{camPosition@{camPosition}!CameraComponent@{CameraComponent}}
+\doxysubsubsection{\texorpdfstring{camPosition}{camPosition}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector2}{Vector2}} Camera\+Component\+::cam\+Position\hspace{0.3cm}{\ttfamily [private]}}
+
+The position of the camera, for use in generating offset. \mbox{\Hypertarget{class_camera_component_a9383f2f5533b060d203ed6708f41f70c}\label{class_camera_component_a9383f2f5533b060d203ed6708f41f70c}} 
+\index{CameraComponent@{CameraComponent}!entityToFollow@{entityToFollow}}
+\index{entityToFollow@{entityToFollow}!CameraComponent@{CameraComponent}}
+\doxysubsubsection{\texorpdfstring{entityToFollow}{entityToFollow}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_entity}{Entity}}$\ast$ Camera\+Component\+::entity\+To\+Follow\hspace{0.3cm}{\ttfamily [private]}}
+
+Reference to the entity to follow. \mbox{\Hypertarget{class_camera_component_ab70519738e3c919c5365073eaaaebc65}\label{class_camera_component_ab70519738e3c919c5365073eaaaebc65}} 
+\index{CameraComponent@{CameraComponent}!pos@{pos}}
+\index{pos@{pos}!CameraComponent@{CameraComponent}}
+\doxysubsubsection{\texorpdfstring{pos}{pos}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_position_component}{Position\+Component}}$\ast$ Camera\+Component\+::pos\hspace{0.3cm}{\ttfamily [private]}}
+
+Reference to the \mbox{\hyperlink{class_position_component}{Position\+Component}}. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Camera\+Component.\+h\end{DoxyCompactItemize}

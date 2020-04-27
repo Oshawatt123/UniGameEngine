@@ -1,18 +1,43 @@
 \hypertarget{struct_bit_map_pack}{}\doxysection{Bit\+Map\+Pack Struct Reference}
 \label{struct_bit_map_pack}\index{BitMapPack@{BitMapPack}}
+
+
+{\ttfamily \#include $<$Engine\+Structs.\+h$>$}
+
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{struct_bit_map_pack_a22a4eb1a939886f0a59888298dc68e76}\label{struct_bit_map_pack_a22a4eb1a939886f0a59888298dc68e76}} 
-S\+D\+L\+\_\+\+Texture $\ast$ {\bfseries texture} = nullptr
+S\+D\+L\+\_\+\+Texture $\ast$ \mbox{\hyperlink{struct_bit_map_pack_a22a4eb1a939886f0a59888298dc68e76}{texture}} = nullptr
 \item 
-\mbox{\Hypertarget{struct_bit_map_pack_ace6df890ecaf19c8640d2af75dc811e1}\label{struct_bit_map_pack_ace6df890ecaf19c8640d2af75dc811e1}} 
-int {\bfseries width}
+int \mbox{\hyperlink{struct_bit_map_pack_ace6df890ecaf19c8640d2af75dc811e1}{width}}
 \item 
-\mbox{\Hypertarget{struct_bit_map_pack_af6da2c8af8e3d2b51d8220a6913d839a}\label{struct_bit_map_pack_af6da2c8af8e3d2b51d8220a6913d839a}} 
-int {\bfseries height}
+int \mbox{\hyperlink{struct_bit_map_pack_af6da2c8af8e3d2b51d8220a6913d839a}{height}}
 \end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{struct_bit_map_pack}{Bit\+Map\+Pack}} is a storage class for textures, and their attributes. It exists to make passing textures around easier, as it eliminates the need to also pass the width and height as extra parameters just taking up space. This also exists because S\+D\+L\+\_\+\+Texture does not contain a definition for width and height. That data is stored on the S\+D\+L\+\_\+\+Surface, which is deleted as soon as the asset is loaded. Hence making it a wise idea to grab this data when the image is first loaded and the surface generated. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_bit_map_pack_af6da2c8af8e3d2b51d8220a6913d839a}\label{struct_bit_map_pack_af6da2c8af8e3d2b51d8220a6913d839a}} 
+\index{BitMapPack@{BitMapPack}!height@{height}}
+\index{height@{height}!BitMapPack@{BitMapPack}}
+\doxysubsubsection{\texorpdfstring{height}{height}}
+{\footnotesize\ttfamily int Bit\+Map\+Pack\+::height}
+
+The height of the texture \mbox{\Hypertarget{struct_bit_map_pack_a22a4eb1a939886f0a59888298dc68e76}\label{struct_bit_map_pack_a22a4eb1a939886f0a59888298dc68e76}} 
+\index{BitMapPack@{BitMapPack}!texture@{texture}}
+\index{texture@{texture}!BitMapPack@{BitMapPack}}
+\doxysubsubsection{\texorpdfstring{texture}{texture}}
+{\footnotesize\ttfamily S\+D\+L\+\_\+\+Texture$\ast$ Bit\+Map\+Pack\+::texture = nullptr}
+
+The texture of the Bit\+Map. \mbox{\Hypertarget{struct_bit_map_pack_ace6df890ecaf19c8640d2af75dc811e1}\label{struct_bit_map_pack_ace6df890ecaf19c8640d2af75dc811e1}} 
+\index{BitMapPack@{BitMapPack}!width@{width}}
+\index{width@{width}!BitMapPack@{BitMapPack}}
+\doxysubsubsection{\texorpdfstring{width}{width}}
+{\footnotesize\ttfamily int Bit\+Map\+Pack\+::width}
+
+The width of the texture. 
 
 The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

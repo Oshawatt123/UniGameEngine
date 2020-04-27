@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: EngineStructs.h Source File</title>
+<title>The Filthy Engine: EngineStructs.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">My Project
+   <div id="projectname">The Filthy Engine
    </div>
   </td>
  </tr>
@@ -82,57 +82,87 @@ $(function() {
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">// REALLY USEFUL MACROS</span></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#define Log(string, verbosity) Logger::Instance()-&gt;LogString(string, verbosity)</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">const</span> <span class="keywordtype">int</span> TILE_WIDTH = 32;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">// FILE PATH MACROS</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">const</span> std::string DEFAULT_TILE_PATH = <span class="stringliteral">&quot;..Assets/Sprites/Floor_Placeholder.bmp&quot;</span>;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">float</span> f_zero =  0.0f;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">float</span> f_min =  -10000;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">float</span> f_max =   10000;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#define blackboard BlackBoard::Instance()</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#define filthyTime Time::Instance()</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#define filthyRenderer Renderer::Instance()</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#define filthyAudio AudioManager::Instance()</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#define Physics PhysicsEngine::Instance()</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">const</span> <span class="keywordtype">int</span> TILE_WIDTH = 16;</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="struct_bit_map_pack.html">   27</a></span>&#160;<span class="keyword">struct </span><a class="code" href="struct_bit_map_pack.html">BitMapPack</a></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    SDL_Texture* texture = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">int</span> width;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">int</span> height;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;};</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">enum</span> MyEventTypes</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;{</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    KeyDown,</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    KeyUp,</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    LeftMouse,</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    RightMouse,</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    MiddleMouse,</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    MouseWheel,</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    MouseGesture,</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    Window</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;};</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keyword">enum</span> WindowEvents</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;{</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    WinEvent_QUIT=1</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">// FILE PATH MACROS</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">const</span> std::string DEFAULT_TILE_PATH = <span class="stringliteral">&quot;..Assets/Sprites/Floor_Placeholder.bmp&quot;</span>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">const</span> std::string DEFAULT_ROOT = <span class="stringliteral">&quot;../Assets/&quot;</span>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">// ImGui flags</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">//static ImGuiTreeNodeFlags heirarchyFlags = ImGuiTreeNodeFlags_OpenOnArrow | ImGuiTreeNodeFlags_OpenOnDoubleClick | ImGuiTreeNodeFlags_SpanAvailWidth;</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">//static ImGuiTreeNodeFlags fileViewerFlags = ImGuiTreeNodeFlags_OpenOnArrow | ImGuiTreeNodeFlags_OpenOnDoubleClick | ImGuiTreeNodeFlags_SpanAvailWidth;</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">float</span> f_zero =  0.0f;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">float</span> f_min =  -10000;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">float</span> f_max =   10000;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="struct_bit_map_pack.html">   44</a></span>&#160;<span class="keyword">struct </span><a class="code" href="struct_bit_map_pack.html">BitMapPack</a></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;{</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="struct_bit_map_pack.html#a22a4eb1a939886f0a59888298dc68e76">   46</a></span>&#160;    SDL_Texture* <a class="code" href="struct_bit_map_pack.html#a22a4eb1a939886f0a59888298dc68e76">texture</a> = <span class="keyword">nullptr</span>; </div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="struct_bit_map_pack.html#ace6df890ecaf19c8640d2af75dc811e1">   47</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="struct_bit_map_pack.html#ace6df890ecaf19c8640d2af75dc811e1">width</a>;                      </div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="struct_bit_map_pack.html#af6da2c8af8e3d2b51d8220a6913d839a">   48</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="struct_bit_map_pack.html#af6da2c8af8e3d2b51d8220a6913d839a">height</a>;                     </div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;};</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keyword">enum</span> ComponentType</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;{</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    COMPONENT_BASE,</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    COMPONENT_TRANSFORM,</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    COMPONENT_SPRITE</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;};</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keyword">enum</span> Verbosity</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;{</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    EVERYONE,</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    FILTHY_DEBUG,</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    DEBUG,</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    WARNING,</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    DBERROR,</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    NOTHING</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;};</div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="struct_audio_pack.html">   55</a></span>&#160;<span class="keyword">struct </span><a class="code" href="struct_audio_pack.html">AudioPack</a></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;{</div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="struct_audio_pack.html#a323c9bba41b29fccaa1956acd3f8ede4">   57</a></span>&#160;    SDL_AudioSpec <a class="code" href="struct_audio_pack.html#a323c9bba41b29fccaa1956acd3f8ede4">wavSpec</a>;      </div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="struct_audio_pack.html#a8ca32a7bb96ce5c2298f2d1206fa22cc">   58</a></span>&#160;    Uint32 <a class="code" href="struct_audio_pack.html#a8ca32a7bb96ce5c2298f2d1206fa22cc">wavLength</a>;           </div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="struct_audio_pack.html#a591451c22cee342c6607e3bcea2d0b30">   59</a></span>&#160;    Uint8* <a class="code" href="struct_audio_pack.html#a591451c22cee342c6607e3bcea2d0b30">wavBuffer</a>;           </div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="struct_audio_pack.html#aef1a8212aeb91364939ae534960d4f64">   60</a></span>&#160;    SDL_AudioDeviceID <a class="code" href="struct_audio_pack.html#aef1a8212aeb91364939ae534960d4f64">devideID</a>; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;};</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keyword">enum</span> MyEventTypes</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;{</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    KeyUp,</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    KeyDown,</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    Mouse,</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    Window,</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    NumEventTypes</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;};</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="keyword">enum</span> MouseButtons</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;{</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    LMB,</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    RMB,</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    MMB,</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;};</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="keyword">enum</span> WindowEvents</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;{</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    WinEvent_QUIT=1</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;};</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="keyword">enum</span> Verbosity</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;{</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    EVERYONE,</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    FILTHY_DEBUG,</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    DEBUG,</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    WARNING,</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    DBERROR,</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    NOTHING</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;};</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="keyword">enum</span> FilthyEventType</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;{</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    SCENE_LOAD,</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;};</div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="astruct_bit_map_pack_html"><div class="ttname"><a href="struct_bit_map_pack.html">BitMapPack</a></div><div class="ttdef"><b>Definition:</b> EngineStructs.h:27</div></div>
+<div class="ttc" id="astruct_audio_pack_html_a591451c22cee342c6607e3bcea2d0b30"><div class="ttname"><a href="struct_audio_pack.html#a591451c22cee342c6607e3bcea2d0b30">AudioPack::wavBuffer</a></div><div class="ttdeci">Uint8 * wavBuffer</div><div class="ttdef"><b>Definition:</b> EngineStructs.h:59</div></div>
+<div class="ttc" id="astruct_audio_pack_html_a8ca32a7bb96ce5c2298f2d1206fa22cc"><div class="ttname"><a href="struct_audio_pack.html#a8ca32a7bb96ce5c2298f2d1206fa22cc">AudioPack::wavLength</a></div><div class="ttdeci">Uint32 wavLength</div><div class="ttdef"><b>Definition:</b> EngineStructs.h:58</div></div>
+<div class="ttc" id="astruct_audio_pack_html_aef1a8212aeb91364939ae534960d4f64"><div class="ttname"><a href="struct_audio_pack.html#aef1a8212aeb91364939ae534960d4f64">AudioPack::devideID</a></div><div class="ttdeci">SDL_AudioDeviceID devideID</div><div class="ttdef"><b>Definition:</b> EngineStructs.h:60</div></div>
+<div class="ttc" id="astruct_bit_map_pack_html"><div class="ttname"><a href="struct_bit_map_pack.html">BitMapPack</a></div><div class="ttdef"><b>Definition:</b> EngineStructs.h:44</div></div>
+<div class="ttc" id="astruct_bit_map_pack_html_a22a4eb1a939886f0a59888298dc68e76"><div class="ttname"><a href="struct_bit_map_pack.html#a22a4eb1a939886f0a59888298dc68e76">BitMapPack::texture</a></div><div class="ttdeci">SDL_Texture * texture</div><div class="ttdef"><b>Definition:</b> EngineStructs.h:46</div></div>
+<div class="ttc" id="astruct_audio_pack_html_a323c9bba41b29fccaa1956acd3f8ede4"><div class="ttname"><a href="struct_audio_pack.html#a323c9bba41b29fccaa1956acd3f8ede4">AudioPack::wavSpec</a></div><div class="ttdeci">SDL_AudioSpec wavSpec</div><div class="ttdef"><b>Definition:</b> EngineStructs.h:57</div></div>
+<div class="ttc" id="astruct_bit_map_pack_html_af6da2c8af8e3d2b51d8220a6913d839a"><div class="ttname"><a href="struct_bit_map_pack.html#af6da2c8af8e3d2b51d8220a6913d839a">BitMapPack::height</a></div><div class="ttdeci">int height</div><div class="ttdef"><b>Definition:</b> EngineStructs.h:48</div></div>
+<div class="ttc" id="astruct_bit_map_pack_html_ace6df890ecaf19c8640d2af75dc811e1"><div class="ttname"><a href="struct_bit_map_pack.html#ace6df890ecaf19c8640d2af75dc811e1">BitMapPack::width</a></div><div class="ttdeci">int width</div><div class="ttdef"><b>Definition:</b> EngineStructs.h:47</div></div>
+<div class="ttc" id="astruct_audio_pack_html"><div class="ttname"><a href="struct_audio_pack.html">AudioPack</a></div><div class="ttdef"><b>Definition:</b> EngineStructs.h:55</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

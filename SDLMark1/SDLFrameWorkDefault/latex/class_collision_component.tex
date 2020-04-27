@@ -12,33 +12,104 @@ Inheritance diagram for Collision\+Component\+:\begin{figure}[H]
 \mbox{\Hypertarget{class_collision_component_afbe299659d23e528bf13a0df2a0768b8}\label{class_collision_component_afbe299659d23e528bf13a0df2a0768b8}} 
 void {\bfseries Init} () override
 \item 
-\mbox{\Hypertarget{class_collision_component_a26ab38509eaa834cc3bf07437248b06a}\label{class_collision_component_a26ab38509eaa834cc3bf07437248b06a}} 
-void {\bfseries Tick} () override
+void \mbox{\hyperlink{class_collision_component_a26ab38509eaa834cc3bf07437248b06a}{Tick}} () override
 \item 
-\mbox{\Hypertarget{class_collision_component_a05417457fe26e19a9e0e60515b75a917}\label{class_collision_component_a05417457fe26e19a9e0e60515b75a917}} 
-void {\bfseries Editor\+Tick} () override
+\mbox{\Hypertarget{class_collision_component_ad97fc60ee9811b3b492bb5d20e426d2f}\label{class_collision_component_ad97fc60ee9811b3b492bb5d20e426d2f}} 
+void {\bfseries Populate\+Inspector} ()
+\item 
+void \mbox{\hyperlink{class_collision_component_a05417457fe26e19a9e0e60515b75a917}{Editor\+Tick}} () override
+\item 
+std\+::string \mbox{\hyperlink{class_collision_component_a3cfc73dfa3989bf0cf56119e2497cc6b}{Get\+Save\+Data}} ()
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_collision_component_a02154046748bef4338302a49938fe166}\label{class_collision_component_a02154046748bef4338302a49938fe166}} 
-\mbox{\hyperlink{class_vector2}{Vector2}} {\bfseries col\+Position}
+\mbox{\hyperlink{class_vector2}{Vector2}} \mbox{\hyperlink{class_collision_component_a02154046748bef4338302a49938fe166}{col\+Position}}
 \item 
-\mbox{\Hypertarget{class_collision_component_afe0b0638838bccde84c24ffcddb393ba}\label{class_collision_component_afe0b0638838bccde84c24ffcddb393ba}} 
-\mbox{\hyperlink{class_vector2}{Vector2}} {\bfseries col\+Dimension}
+\mbox{\hyperlink{class_vector2}{Vector2}} \mbox{\hyperlink{class_collision_component_afe0b0638838bccde84c24ffcddb393ba}{col\+Dimension}}
 \item 
-\mbox{\Hypertarget{class_collision_component_a82e1243db8933b0bd32e002c5d3eed3d}\label{class_collision_component_a82e1243db8933b0bd32e002c5d3eed3d}} 
-S\+D\+L\+\_\+\+Rect {\bfseries collider}
+S\+D\+L\+\_\+\+Rect \mbox{\hyperlink{class_collision_component_a82e1243db8933b0bd32e002c5d3eed3d}{collider}}
 \item 
 \mbox{\Hypertarget{class_collision_component_a6e7858ea67ce0ad2b613fbc08cde8663}\label{class_collision_component_a6e7858ea67ce0ad2b613fbc08cde8663}} 
 \mbox{\hyperlink{class_position_component}{Position\+Component}} $\ast$ {\bfseries pos}
 \item 
 \mbox{\Hypertarget{class_collision_component_a74f9d63be71b437102933b49587dbca0}\label{class_collision_component_a74f9d63be71b437102933b49587dbca0}} 
-bool {\bfseries colliding}
+bool {\bfseries colliding} = false
+\item 
+\mbox{\hyperlink{class_entity}{Entity}} $\ast$ \mbox{\hyperlink{class_collision_component_af5157c04c04384567e6f5c58c58c858d}{other}} = nullptr
 \item 
 \mbox{\Hypertarget{class_collision_component_a1267f05e716bcf8e5292f67050b89153}\label{class_collision_component_a1267f05e716bcf8e5292f67050b89153}} 
 S\+D\+L\+\_\+\+Color {\bfseries draw\+Color} = \{ 255, 0, 0, 255 \}
+\item 
+\mbox{\Hypertarget{class_collision_component_af4634be271a303716e79568dd4b679b2}\label{class_collision_component_af4634be271a303716e79568dd4b679b2}} 
+float {\bfseries offsetX}
+\item 
+\mbox{\Hypertarget{class_collision_component_ae9d47e17827f722b149765d7f3a3c5cf}\label{class_collision_component_ae9d47e17827f722b149765d7f3a3c5cf}} 
+float {\bfseries offsetY}
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_collision_component_a05417457fe26e19a9e0e60515b75a917}\label{class_collision_component_a05417457fe26e19a9e0e60515b75a917}} 
+\index{CollisionComponent@{CollisionComponent}!EditorTick@{EditorTick}}
+\index{EditorTick@{EditorTick}!CollisionComponent@{CollisionComponent}}
+\doxysubsubsection{\texorpdfstring{EditorTick()}{EditorTick()}}
+{\footnotesize\ttfamily void Collision\+Component\+::\+Editor\+Tick (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Base Tick has no behaviour. This is called every frame in game-\/mode. 
+
+Reimplemented from \mbox{\hyperlink{class_component_ad54a5ed6c47801402e457e21723009db}{Component}}.
+
+\mbox{\Hypertarget{class_collision_component_a3cfc73dfa3989bf0cf56119e2497cc6b}\label{class_collision_component_a3cfc73dfa3989bf0cf56119e2497cc6b}} 
+\index{CollisionComponent@{CollisionComponent}!GetSaveData@{GetSaveData}}
+\index{GetSaveData@{GetSaveData}!CollisionComponent@{CollisionComponent}}
+\doxysubsubsection{\texorpdfstring{GetSaveData()}{GetSaveData()}}
+{\footnotesize\ttfamily std\+::string Collision\+Component\+::\+Get\+Save\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Base Populate\+Inspector has no behaviour. This is used to populate the inspector with editable fields / useful information. 
+
+Reimplemented from \mbox{\hyperlink{class_component_ac67aa475d8d1d08233d893a3d3665e5c}{Component}}.
+
+\mbox{\Hypertarget{class_collision_component_a26ab38509eaa834cc3bf07437248b06a}\label{class_collision_component_a26ab38509eaa834cc3bf07437248b06a}} 
+\index{CollisionComponent@{CollisionComponent}!Tick@{Tick}}
+\index{Tick@{Tick}!CollisionComponent@{CollisionComponent}}
+\doxysubsubsection{\texorpdfstring{Tick()}{Tick()}}
+{\footnotesize\ttfamily void Collision\+Component\+::\+Tick (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Base Init has no behaviour. This is called once after scene load. 
+
+Reimplemented from \mbox{\hyperlink{class_component_a93b89e900390d88afd70993549007c9c}{Component}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_collision_component_afe0b0638838bccde84c24ffcddb393ba}\label{class_collision_component_afe0b0638838bccde84c24ffcddb393ba}} 
+\index{CollisionComponent@{CollisionComponent}!colDimension@{colDimension}}
+\index{colDimension@{colDimension}!CollisionComponent@{CollisionComponent}}
+\doxysubsubsection{\texorpdfstring{colDimension}{colDimension}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector2}{Vector2}} Collision\+Component\+::col\+Dimension}
+
+Size of the collider. \mbox{\Hypertarget{class_collision_component_a82e1243db8933b0bd32e002c5d3eed3d}\label{class_collision_component_a82e1243db8933b0bd32e002c5d3eed3d}} 
+\index{CollisionComponent@{CollisionComponent}!collider@{collider}}
+\index{collider@{collider}!CollisionComponent@{CollisionComponent}}
+\doxysubsubsection{\texorpdfstring{collider}{collider}}
+{\footnotesize\ttfamily S\+D\+L\+\_\+\+Rect Collision\+Component\+::collider}
+
+A rect for storing this data compactly. \mbox{\Hypertarget{class_collision_component_a02154046748bef4338302a49938fe166}\label{class_collision_component_a02154046748bef4338302a49938fe166}} 
+\index{CollisionComponent@{CollisionComponent}!colPosition@{colPosition}}
+\index{colPosition@{colPosition}!CollisionComponent@{CollisionComponent}}
+\doxysubsubsection{\texorpdfstring{colPosition}{colPosition}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector2}{Vector2}} Collision\+Component\+::col\+Position}
+
+Position of the collider. \mbox{\Hypertarget{class_collision_component_af5157c04c04384567e6f5c58c58c858d}\label{class_collision_component_af5157c04c04384567e6f5c58c58c858d}} 
+\index{CollisionComponent@{CollisionComponent}!other@{other}}
+\index{other@{other}!CollisionComponent@{CollisionComponent}}
+\doxysubsubsection{\texorpdfstring{other}{other}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_entity}{Entity}}$\ast$ Collision\+Component\+::other = nullptr}
+
+The other entity we are currently colliding with. \begin{DoxyNote}{Note}
+If an entity collides with more than one object in one frame, the entity held here will be the one highest in the heirarchy. 
+\end{DoxyNote}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

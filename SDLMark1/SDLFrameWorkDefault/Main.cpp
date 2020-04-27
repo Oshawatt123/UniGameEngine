@@ -4,7 +4,6 @@
 
 #include "Game.h"
 #include "InputManager.h"
-#include "Profiler.h"
 #include "Time.h"
 
 int main()
@@ -21,18 +20,13 @@ int main()
 	// PhysicsEngine* PE = new PhysicsEngine();
 
 	Game* game = new Game();
-	Profiler myGhettoProfiler;
 
 	std::cout << "GET SCENE BUILD FROM SCENEMANAGER" << std::endl;
 
 	while (game != nullptr && running)
 	{
-		//myGhettoProfiler.StartProfile();
 		// run game main loop
 		running = game->Tick();
-
-		//SDL_Delay(32);
-		//myGhettoProfiler.EndProfile();
 	}
 
 	delete game;

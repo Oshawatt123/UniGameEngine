@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: Renderer Class Reference</title>
+<title>The Filthy Engine: Renderer Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">My Project
+   <div id="projectname">The Filthy Engine
    </div>
   </td>
  </tr>
@@ -64,6 +64,9 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="class_renderer-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Renderer Class Reference</div>  </div>
@@ -72,34 +75,816 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a6372807844f96c89a1334c7a862b6ee2"><td class="memItemLeft" align="right" valign="top"><a id="a6372807844f96c89a1334c7a862b6ee2"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Draw</b> (<a class="el" href="struct_bit_map_pack.html">BitMapPack</a> bitMapPack, SDL_Rect *destRect, SDL_Rect *srcRect=NULL)</td></tr>
+<tr class="memitem:a6372807844f96c89a1334c7a862b6ee2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_renderer.html#a6372807844f96c89a1334c7a862b6ee2">Draw</a> (<a class="el" href="struct_bit_map_pack.html">BitMapPack</a> bitMapPack, SDL_Rect *destRect, SDL_Rect *srcRect=NULL)</td></tr>
 <tr class="separator:a6372807844f96c89a1334c7a862b6ee2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac037c15abbcec4464f064e8a93b39138"><td class="memItemLeft" align="right" valign="top"><a id="ac037c15abbcec4464f064e8a93b39138"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Draw</b> (<a class="el" href="struct_bit_map_pack.html">BitMapPack</a> bitMapPack, int x, int y, SDL_Rect *srcRect=NULL)</td></tr>
-<tr class="separator:ac037c15abbcec4464f064e8a93b39138"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6f44ca996fa1e446573eabd0590f17fb"><td class="memItemLeft" align="right" valign="top"><a id="a6f44ca996fa1e446573eabd0590f17fb"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>DrawLine</b> (int x1, int y1, int x2, int y2, SDL_Color color={ 0, 0, 0, 255 })</td></tr>
+<tr class="memitem:aa8211b7f85b21284c41707b6c05d344e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_renderer.html#aa8211b7f85b21284c41707b6c05d344e">Draw</a> (<a class="el" href="struct_bit_map_pack.html">BitMapPack</a> bitMapPack, int x, int y, float <a class="el" href="class_renderer.html#aeab228a83d206c55fc73c7a14a0f0761">scale</a>=1, SDL_Rect *srcRect=NULL)</td></tr>
+<tr class="separator:aa8211b7f85b21284c41707b6c05d344e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a813ec479ef55992e28db717d693d636c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_renderer.html#a813ec479ef55992e28db717d693d636c">Draw</a> (<a class="el" href="struct_bit_map_pack.html">BitMapPack</a> bitMapPack, int x, int y, int index, float <a class="el" href="class_renderer.html#aeab228a83d206c55fc73c7a14a0f0761">scale</a>=1)</td></tr>
+<tr class="separator:a813ec479ef55992e28db717d693d636c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f44ca996fa1e446573eabd0590f17fb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_renderer.html#a6f44ca996fa1e446573eabd0590f17fb">DrawLine</a> (int x1, int y1, int x2, int y2, SDL_Color color={ 0, 0, 0, 255 })</td></tr>
 <tr class="separator:a6f44ca996fa1e446573eabd0590f17fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad5596806abe5f406c467581b0dc573bf"><td class="memItemLeft" align="right" valign="top"><a id="ad5596806abe5f406c467581b0dc573bf"></a>
-SDL_Renderer *&#160;</td><td class="memItemRight" valign="bottom"><b>getRenderer</b> ()</td></tr>
+<tr class="memitem:a8249a1a5ca58e9490721393b2add748a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_renderer.html#a8249a1a5ca58e9490721393b2add748a">SetRenderOffset</a> (<a class="el" href="class_vector2.html">Vector2</a> renderOffset)</td></tr>
+<tr class="separator:a8249a1a5ca58e9490721393b2add748a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6bd88da75baeeb21ccaff70997a4b8f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_renderer.html#aa6bd88da75baeeb21ccaff70997a4b8f">SetRenderOffset</a> (int x, int y)</td></tr>
+<tr class="separator:aa6bd88da75baeeb21ccaff70997a4b8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae04c310adac38dade4a0626226ff3c5d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_renderer.html#ae04c310adac38dade4a0626226ff3c5d">getRenderOffset</a> ()</td></tr>
+<tr class="separator:ae04c310adac38dade4a0626226ff3c5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9a6907e029b67e0b866cfddefe5e9b1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_renderer.html#aa9a6907e029b67e0b866cfddefe5e9b1">TranslateEditorCamera</a> (<a class="el" href="class_vector2.html">Vector2</a> translation)</td></tr>
+<tr class="separator:aa9a6907e029b67e0b866cfddefe5e9b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1b1d1e65a796179dd2446c86f4b1f10"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_renderer.html#ab1b1d1e65a796179dd2446c86f4b1f10">TranslateEditorCamera</a> (int x, int y)</td></tr>
+<tr class="separator:ab1b1d1e65a796179dd2446c86f4b1f10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4dc779241cbf76f4eee3f472ac16fde"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_renderer.html#ab4dc779241cbf76f4eee3f472ac16fde">GetEditorCamera</a> ()</td></tr>
+<tr class="separator:ab4dc779241cbf76f4eee3f472ac16fde"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9dbf419ce75ccd9968f49e87f31e2dbb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_renderer.html#a9dbf419ce75ccd9968f49e87f31e2dbb">screenToEditorWorldSpace</a> (<a class="el" href="class_vector2.html">Vector2</a> screenSpace)</td></tr>
+<tr class="separator:a9dbf419ce75ccd9968f49e87f31e2dbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5596806abe5f406c467581b0dc573bf"><td class="memItemLeft" align="right" valign="top">SDL_Renderer *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_renderer.html#ad5596806abe5f406c467581b0dc573bf">getRenderer</a> ()</td></tr>
 <tr class="separator:ad5596806abe5f406c467581b0dc573bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae535d9f0e30ecce44169907bab6b3829"><td class="memItemLeft" align="right" valign="top"><a id="ae535d9f0e30ecce44169907bab6b3829"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>UpdateRenderer</b> ()</td></tr>
+<tr class="memitem:aa00cda96c29f1b98e4b11b6133a39c47"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_renderer.html#aa00cda96c29f1b98e4b11b6133a39c47">getScale</a> ()</td></tr>
+<tr class="separator:aa00cda96c29f1b98e4b11b6133a39c47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a416a763c4b51f2c6a11ce7438116a37b"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_renderer.html#a416a763c4b51f2c6a11ce7438116a37b">getEditorScale</a> ()</td></tr>
+<tr class="separator:a416a763c4b51f2c6a11ce7438116a37b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae535d9f0e30ecce44169907bab6b3829"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_renderer.html#ae535d9f0e30ecce44169907bab6b3829">UpdateRenderer</a> ()</td></tr>
 <tr class="separator:ae535d9f0e30ecce44169907bab6b3829"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a08bbc2c9ac50c96b10a70cd096357138"><td class="memItemLeft" align="right" valign="top"><a id="a08bbc2c9ac50c96b10a70cd096357138"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>ClearRenderer</b> ()</td></tr>
+<tr class="memitem:a08bbc2c9ac50c96b10a70cd096357138"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_renderer.html#a08bbc2c9ac50c96b10a70cd096357138">ClearRenderer</a> ()</td></tr>
 <tr class="separator:a08bbc2c9ac50c96b10a70cd096357138"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a1230f9655b42f3d37f6086ee94c631a4"><td class="memItemLeft" align="right" valign="top"><a id="a1230f9655b42f3d37f6086ee94c631a4"></a>
-static <a class="el" href="class_renderer.html">Renderer</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>Instance</b> ()</td></tr>
+<tr class="memitem:a1230f9655b42f3d37f6086ee94c631a4"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_renderer.html">Renderer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_renderer.html#a1230f9655b42f3d37f6086ee94c631a4">Instance</a> ()</td></tr>
 <tr class="separator:a1230f9655b42f3d37f6086ee94c631a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a63e13f6ce0de32430960ef81da6f5af7"><td class="memItemLeft" align="right" valign="top"><a id="a63e13f6ce0de32430960ef81da6f5af7"></a>
-static <a class="el" href="class_renderer.html">Renderer</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>Instance</b> (SDL_Window *Window, SDL_Rect *camera, SDL_Rect *renderCamera)</td></tr>
-<tr class="separator:a63e13f6ce0de32430960ef81da6f5af7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47a540ef1f74f7957c69a9c04467803b"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_renderer.html">Renderer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_renderer.html#a47a540ef1f74f7957c69a9c04467803b">Instance</a> (SDL_Window *Window)</td></tr>
+<tr class="separator:a47a540ef1f74f7957c69a9c04467803b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:abee49e0eeb05724852371d62d1362dc1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_renderer.html#abee49e0eeb05724852371d62d1362dc1">Renderer</a> (SDL_Window *Window)</td></tr>
+<tr class="separator:abee49e0eeb05724852371d62d1362dc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:ad5adf56b607a7efd3773b890e57e3331"><td class="memItemLeft" align="right" valign="top">SDL_Renderer *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_renderer.html#ad5adf56b607a7efd3773b890e57e3331">m_pRenderer</a></td></tr>
+<tr class="separator:ad5adf56b607a7efd3773b890e57e3331"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af79536a20070b7194f57a043c638df43"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_renderer.html#af79536a20070b7194f57a043c638df43">RenderOffset</a></td></tr>
+<tr class="separator:af79536a20070b7194f57a043c638df43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d695cf57007c7a6add7eb22851c3b1e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_renderer.html#a1d695cf57007c7a6add7eb22851c3b1e">EditorRenderOffset</a></td></tr>
+<tr class="separator:a1d695cf57007c7a6add7eb22851c3b1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a019726b0af387948735dd16dfec3ce67"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="struct_line.html">Line</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_renderer.html#a019726b0af387948735dd16dfec3ce67">EditorRenderLines</a></td></tr>
+<tr class="separator:a019726b0af387948735dd16dfec3ce67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeab228a83d206c55fc73c7a14a0f0761"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_renderer.html#aeab228a83d206c55fc73c7a14a0f0761">scale</a> = 5</td></tr>
+<tr class="separator:aeab228a83d206c55fc73c7a14a0f0761"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f652d77efa3ea15b03d7cf3c6e3e228"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_renderer.html#a0f652d77efa3ea15b03d7cf3c6e3e228">editorScale</a> = 3</td></tr>
+<tr class="separator:a0f652d77efa3ea15b03d7cf3c6e3e228"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:a046ca43dfec41a930f4672cf2b677928"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_renderer.html">Renderer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_renderer.html#a046ca43dfec41a930f4672cf2b677928">sInstance</a> = NULL</td></tr>
+<tr class="separator:a046ca43dfec41a930f4672cf2b677928"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="abee49e0eeb05724852371d62d1362dc1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abee49e0eeb05724852371d62d1362dc1">&#9670;&nbsp;</a></span>Renderer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Renderer::Renderer </td>
+          <td>(</td>
+          <td class="paramtype">SDL_Window *&#160;</td>
+          <td class="paramname"><em>Window</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates a renderer with an SDL_Window. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a08bbc2c9ac50c96b10a70cd096357138"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08bbc2c9ac50c96b10a70cd096357138">&#9670;&nbsp;</a></span>ClearRenderer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Renderer::ClearRenderer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Clears the renderer ready for the next frame of draw calls. </p>
+
+</div>
+</div>
+<a id="aa8211b7f85b21284c41707b6c05d344e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8211b7f85b21284c41707b6c05d344e">&#9670;&nbsp;</a></span>Draw() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Renderer::Draw </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_bit_map_pack.html">BitMapPack</a>&#160;</td>
+          <td class="paramname"><em>bitMapPack</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>scale</em> = <code>1</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SDL_Rect *&#160;</td>
+          <td class="paramname"><em>srcRect</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Override draw function. Draws a bitmap to a point on the screen (x,y) with scale modification.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">bitMapPack</td><td>The <a class="el" href="struct_bit_map_pack.html">BitMapPack</a> to draw to the screen. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>The x position to draw the bitmap in world-space. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>The y position to draw the bitmap in world-space. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">scale</td><td>The scale to apply to the object. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">srcRect</td><td>The clip of the bitmap we want to render. Used for indexing into sprite-sheets. NULL assumes no clip; drawing the whole bitmap. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a813ec479ef55992e28db717d693d636c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a813ec479ef55992e28db717d693d636c">&#9670;&nbsp;</a></span>Draw() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Renderer::Draw </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_bit_map_pack.html">BitMapPack</a>&#160;</td>
+          <td class="paramname"><em>bitMapPack</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>scale</em> = <code>1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Override draw function. Draws a bitmap to a point on the screen (x,y) with scale modification.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">bitMapPack</td><td>The <a class="el" href="struct_bit_map_pack.html">BitMapPack</a> to draw to the screen. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>The x position to draw the bitmap in world-space. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>The y position to draw the bitmap in world-space. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">index</td><td>The index into the spritesheet that we want to render. Index uses the TILE_WIDTH macro defined in EngineStructs. Make sure this is set to the sprite size you want. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">scale</td><td>The scale to apply to the object </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a6372807844f96c89a1334c7a862b6ee2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6372807844f96c89a1334c7a862b6ee2">&#9670;&nbsp;</a></span>Draw() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Renderer::Draw </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_bit_map_pack.html">BitMapPack</a>&#160;</td>
+          <td class="paramname"><em>bitMapPack</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SDL_Rect *&#160;</td>
+          <td class="paramname"><em>destRect</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SDL_Rect *&#160;</td>
+          <td class="paramname"><em>srcRect</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Base draw function. Draws a bitmap to a point on the screen.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">bitMapPack</td><td>The <a class="el" href="struct_bit_map_pack.html">BitMapPack</a> to draw to the screen. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">destRect</td><td>The location to draw the bitmap, as well as size information for how big it should be. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">srcRect</td><td>The clip of the bitmap we want to render. Used for indexing into sprite-sheets. NULL assumes no clip; drawing the whole bitmap. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a6f44ca996fa1e446573eabd0590f17fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f44ca996fa1e446573eabd0590f17fb">&#9670;&nbsp;</a></span>DrawLine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Renderer::DrawLine </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SDL_Color&#160;</td>
+          <td class="paramname"><em>color</em> = <code>{&#160;0,0,0,255&#160;}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Adds a line to the EditorRenderLines vector. These are batch-drawn at the end of the frame in UpdateRenderer.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x1</td><td>Start X position of the line. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y1</td><td>Start y position of the line. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">x2</td><td>End X position of the line. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y2</td><td>End X position of the line. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">color</td><td>The color of the line. Black by default. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab4dc779241cbf76f4eee3f472ac16fde"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4dc779241cbf76f4eee3f472ac16fde">&#9670;&nbsp;</a></span>GetEditorCamera()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_vector2.html">Vector2</a> Renderer::GetEditorCamera </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Gets the offset of the editor camera.</p>
+<dl class="section return"><dt>Returns</dt><dd>The offset of the editor camera. </dd></dl>
+
+</div>
+</div>
+<a id="a416a763c4b51f2c6a11ce7438116a37b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a416a763c4b51f2c6a11ce7438116a37b">&#9670;&nbsp;</a></span>getEditorScale()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Renderer::getEditorScale </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>A method to get the scale of the edit-view camera.</p>
+<dl class="section return"><dt>Returns</dt><dd>The scale of the edit-view camera. </dd></dl>
+
+</div>
+</div>
+<a id="ad5596806abe5f406c467581b0dc573bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5596806abe5f406c467581b0dc573bf">&#9670;&nbsp;</a></span>getRenderer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SDL_Renderer * Renderer::getRenderer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>A QoL function to get reference to the renderer for use in other classes which may need it in certain SDL functions.</p>
+<dl class="section return"><dt>Returns</dt><dd>a reference to the SDL_Renderer used by the renderer. </dd></dl>
+
+</div>
+</div>
+<a id="ae04c310adac38dade4a0626226ff3c5d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae04c310adac38dade4a0626226ff3c5d">&#9670;&nbsp;</a></span>getRenderOffset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_vector2.html">Vector2</a> Renderer::getRenderOffset </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Gets the render offset of the game-view camera.</p>
+<dl class="section return"><dt>Returns</dt><dd>the render offset of the game-view camera. </dd></dl>
+
+</div>
+</div>
+<a id="aa00cda96c29f1b98e4b11b6133a39c47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa00cda96c29f1b98e4b11b6133a39c47">&#9670;&nbsp;</a></span>getScale()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Renderer::getScale </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>A method to get the scale of the game-view camera.</p>
+<dl class="section return"><dt>Returns</dt><dd>The scale of the game-view camera. </dd></dl>
+
+</div>
+</div>
+<a id="a1230f9655b42f3d37f6086ee94c631a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1230f9655b42f3d37f6086ee94c631a4">&#9670;&nbsp;</a></span>Instance() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_renderer.html">Renderer</a> * Renderer::Instance </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Method for getting an instance of <a class="el" href="class_renderer.html">Renderer</a>. </p>
+
+</div>
+</div>
+<a id="a47a540ef1f74f7957c69a9c04467803b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47a540ef1f74f7957c69a9c04467803b">&#9670;&nbsp;</a></span>Instance() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_renderer.html">Renderer</a> * Renderer::Instance </td>
+          <td>(</td>
+          <td class="paramtype">SDL_Window *&#160;</td>
+          <td class="paramname"><em>Window</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The renderer requires a Window, so this must be called first as an initialization.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">Window</td><td>Reference to the SDL_Window that we want to render onto. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a9dbf419ce75ccd9968f49e87f31e2dbb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9dbf419ce75ccd9968f49e87f31e2dbb">&#9670;&nbsp;</a></span>screenToEditorWorldSpace()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_vector2.html">Vector2</a> Renderer::screenToEditorWorldSpace </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_vector2.html">Vector2</a>&#160;</td>
+          <td class="paramname"><em>screenSpace</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>A QoL function to change a screen-space co-ordinate to a world-space co-ordinate in edit-view.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">screenSpace</td><td>A position in screen space.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The corresponding position in world-space using the editor camera. </dd></dl>
+
+</div>
+</div>
+<a id="aa6bd88da75baeeb21ccaff70997a4b8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6bd88da75baeeb21ccaff70997a4b8f">&#9670;&nbsp;</a></span>SetRenderOffset() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Renderer::SetRenderOffset </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>This function sets the render offset for game-view.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>The new renderOffset x value. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>The new renderOffset y value. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8249a1a5ca58e9490721393b2add748a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8249a1a5ca58e9490721393b2add748a">&#9670;&nbsp;</a></span>SetRenderOffset() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Renderer::SetRenderOffset </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_vector2.html">Vector2</a>&#160;</td>
+          <td class="paramname"><em>renderOffset</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>This function sets the render offset for game-view.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">renderOffset</td><td>The new renderOffset. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab1b1d1e65a796179dd2446c86f4b1f10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1b1d1e65a796179dd2446c86f4b1f10">&#9670;&nbsp;</a></span>TranslateEditorCamera() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Renderer::TranslateEditorCamera </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Override function for TranslateEditorCamera that takes two int's instead of a vector2.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>The x value to translate the camera by. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>The y value to translate the camera by. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa9a6907e029b67e0b866cfddefe5e9b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9a6907e029b67e0b866cfddefe5e9b1">&#9670;&nbsp;</a></span>TranslateEditorCamera() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Renderer::TranslateEditorCamera </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_vector2.html">Vector2</a>&#160;</td>
+          <td class="paramname"><em>translation</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Translates the Edit-view renderOffset. This uses translation rather than a position assignment due to the nature of the input moving the camera. The input is taken as mouse movement delta so there is no need to add an extra step in between.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">translation</td><td>The value to translate the editor camera by. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae535d9f0e30ecce44169907bab6b3829"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae535d9f0e30ecce44169907bab6b3829">&#9670;&nbsp;</a></span>UpdateRenderer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Renderer::UpdateRenderer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Updates the renderer.</p>
+<p>This function presents all bitmaps drawn this frame to the screen.</p>
+<p>It also batch-draws all the lines passed in this frame. This ensures they will render over the top of everything. This functionality is wanted as their use is for edit-mode and debugging. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a019726b0af387948735dd16dfec3ce67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a019726b0af387948735dd16dfec3ce67">&#9670;&nbsp;</a></span>EditorRenderLines</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="struct_line.html">Line</a>&gt; Renderer::EditorRenderLines</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>A vector that stores all lines to be drawn this frame. </p>
+
+</div>
+</div>
+<a id="a1d695cf57007c7a6add7eb22851c3b1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d695cf57007c7a6add7eb22851c3b1e">&#9670;&nbsp;</a></span>EditorRenderOffset</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_vector2.html">Vector2</a> Renderer::EditorRenderOffset</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The offset applied to all things being rendererd in edit-mode. Allows for a reasonable editor. </p>
+
+</div>
+</div>
+<a id="a0f652d77efa3ea15b03d7cf3c6e3e228"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f652d77efa3ea15b03d7cf3c6e3e228">&#9670;&nbsp;</a></span>editorScale</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Renderer::editorScale = 3</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Scale to be applied to all objects in edit-view on top of any they have themselves. Allows for camera zoom. </p>
+
+</div>
+</div>
+<a id="ad5adf56b607a7efd3773b890e57e3331"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5adf56b607a7efd3773b890e57e3331">&#9670;&nbsp;</a></span>m_pRenderer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SDL_Renderer* Renderer::m_pRenderer</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The SDL_Renderer which does all the heavy lifting. </p>
+
+</div>
+</div>
+<a id="af79536a20070b7194f57a043c638df43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af79536a20070b7194f57a043c638df43">&#9670;&nbsp;</a></span>RenderOffset</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_vector2.html">Vector2</a> Renderer::RenderOffset</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The offset applied to all things being rendered in game-mode. Allows for movement around a scene with the camera following. Or at least, the illusion of. </p>
+
+</div>
+</div>
+<a id="aeab228a83d206c55fc73c7a14a0f0761"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeab228a83d206c55fc73c7a14a0f0761">&#9670;&nbsp;</a></span>scale</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Renderer::scale = 5</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Scale to be applied to all objects in game-view on top of any they have themselves. Allows for camera zoom. </p>
+
+</div>
+</div>
+<a id="a046ca43dfec41a930f4672cf2b677928"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a046ca43dfec41a930f4672cf2b677928">&#9670;&nbsp;</a></span>sInstance</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_renderer.html">Renderer</a> * Renderer::sInstance = NULL</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Static instance of the <a class="el" href="class_renderer.html">Renderer</a> class. </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="_renderer_8h_source.html">Renderer.h</a></li>
 <li>Renderer.cpp</li>

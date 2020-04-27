@@ -1,25 +1,27 @@
 \hypertarget{class_time}{}\doxysection{Time Class Reference}
 \label{class_time}\index{Time@{Time}}
+
+
+{\ttfamily \#include $<$Time.\+h$>$}
+
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_time_a9b8ceb2af9406fbe1e4cded87688213f}\label{class_time_a9b8ceb2af9406fbe1e4cded87688213f}} 
-void {\bfseries New\+Frame} ()
+void \mbox{\hyperlink{class_time_a9b8ceb2af9406fbe1e4cded87688213f}{New\+Frame}} ()
 \item 
-\mbox{\Hypertarget{class_time_a386e8b91b05829a27841c09664bf5365}\label{class_time_a386e8b91b05829a27841c09664bf5365}} 
-float {\bfseries End\+Frame} ()
+float \mbox{\hyperlink{class_time_a386e8b91b05829a27841c09664bf5365}{End\+Frame}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_time}{Time}} $\ast$ \mbox{\hyperlink{class_time_ae1cc5c0791acaebb278162ab6b7db4d0}{Instance}} ()
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_time_ad0a5012c55b3eb19756a33c7c5de9704}\label{class_time_ad0a5012c55b3eb19756a33c7c5de9704}} 
-\mbox{\hyperlink{class_timer}{Timer}} {\bfseries timer}
+float \mbox{\hyperlink{class_time_a35fe30294c847679da506b540f05d593}{delta\+Time}}
 \item 
-\mbox{\Hypertarget{class_time_a35fe30294c847679da506b540f05d593}\label{class_time_a35fe30294c847679da506b540f05d593}} 
-float {\bfseries delta\+Time}
-\item 
-\mbox{\Hypertarget{class_time_a51fced9026faa9ab76387ec347ff7995}\label{class_time_a51fced9026faa9ab76387ec347ff7995}} 
-float {\bfseries delta\+Times} \mbox{[}100\mbox{]}
+float \mbox{\hyperlink{class_time_a51fced9026faa9ab76387ec347ff7995}{delta\+Times}} \mbox{[}100\mbox{]}
 \item 
 \mbox{\Hypertarget{class_time_a553fccd986d510453c785b65e787767c}\label{class_time_a553fccd986d510453c785b65e787767c}} 
 int {\bfseries index} = 0
@@ -33,7 +35,57 @@ std\+::chrono\+::time\+\_\+point$<$ std\+::chrono\+::steady\+\_\+clock $>$ {\bfs
 \mbox{\Hypertarget{class_time_acd13bee8a55dcb51f04bd7d10a19c9d5}\label{class_time_acd13bee8a55dcb51f04bd7d10a19c9d5}} 
 std\+::chrono\+::duration$<$ float $>$ {\bfseries duration}
 \end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_time}{Time}} $\ast$ \mbox{\hyperlink{class_time_aac3b47e64ccc616a0ecc76b203c599a5}{s\+Instance}} = N\+U\+LL
+\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{class_time}{Time}} class used to handle all things time in the Filthy Engine Primarily useful for calculating delta-\/time to ensure frame-\/independent running of the game 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_time_a386e8b91b05829a27841c09664bf5365}\label{class_time_a386e8b91b05829a27841c09664bf5365}} 
+\index{Time@{Time}!EndFrame@{EndFrame}}
+\index{EndFrame@{EndFrame}!Time@{Time}}
+\doxysubsubsection{\texorpdfstring{EndFrame()}{EndFrame()}}
+{\footnotesize\ttfamily float Time\+::\+End\+Frame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Denotes the end of a frame, and calculates the delta\+Time. \mbox{\Hypertarget{class_time_ae1cc5c0791acaebb278162ab6b7db4d0}\label{class_time_ae1cc5c0791acaebb278162ab6b7db4d0}} 
+\index{Time@{Time}!Instance@{Instance}}
+\index{Instance@{Instance}!Time@{Time}}
+\doxysubsubsection{\texorpdfstring{Instance()}{Instance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_time}{Time}} $\ast$ Time\+::\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Method for getting an instance of \mbox{\hyperlink{class_time}{Time}}. \mbox{\Hypertarget{class_time_a9b8ceb2af9406fbe1e4cded87688213f}\label{class_time_a9b8ceb2af9406fbe1e4cded87688213f}} 
+\index{Time@{Time}!NewFrame@{NewFrame}}
+\index{NewFrame@{NewFrame}!Time@{Time}}
+\doxysubsubsection{\texorpdfstring{NewFrame()}{NewFrame()}}
+{\footnotesize\ttfamily void Time\+::\+New\+Frame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Denotes the start of a new frame. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_time_a35fe30294c847679da506b540f05d593}\label{class_time_a35fe30294c847679da506b540f05d593}} 
+\index{Time@{Time}!deltaTime@{deltaTime}}
+\index{deltaTime@{deltaTime}!Time@{Time}}
+\doxysubsubsection{\texorpdfstring{deltaTime}{deltaTime}}
+{\footnotesize\ttfamily float Time\+::delta\+Time}
+
+Last frame\textquotesingle{}s delta time \mbox{\Hypertarget{class_time_a51fced9026faa9ab76387ec347ff7995}\label{class_time_a51fced9026faa9ab76387ec347ff7995}} 
+\index{Time@{Time}!deltaTimes@{deltaTimes}}
+\index{deltaTimes@{deltaTimes}!Time@{Time}}
+\doxysubsubsection{\texorpdfstring{deltaTimes}{deltaTimes}}
+{\footnotesize\ttfamily float Time\+::delta\+Times\mbox{[}100\mbox{]}}
+
+An array of the past 100 frames\textquotesingle{} delta time for displaying on a graph \mbox{\Hypertarget{class_time_aac3b47e64ccc616a0ecc76b203c599a5}\label{class_time_aac3b47e64ccc616a0ecc76b203c599a5}} 
+\index{Time@{Time}!sInstance@{sInstance}}
+\index{sInstance@{sInstance}!Time@{Time}}
+\doxysubsubsection{\texorpdfstring{sInstance}{sInstance}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_time}{Time}} $\ast$ Time\+::s\+Instance = N\+U\+LL\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+Static instance of the \mbox{\hyperlink{class_time}{Time}} class. 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

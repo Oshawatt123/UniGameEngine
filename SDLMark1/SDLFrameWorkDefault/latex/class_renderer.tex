@@ -3,34 +3,370 @@
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_renderer_a6372807844f96c89a1334c7a862b6ee2}\label{class_renderer_a6372807844f96c89a1334c7a862b6ee2}} 
-void {\bfseries Draw} (\mbox{\hyperlink{struct_bit_map_pack}{Bit\+Map\+Pack}} bit\+Map\+Pack, S\+D\+L\+\_\+\+Rect $\ast$dest\+Rect, S\+D\+L\+\_\+\+Rect $\ast$src\+Rect=N\+U\+LL)
+void \mbox{\hyperlink{class_renderer_a6372807844f96c89a1334c7a862b6ee2}{Draw}} (\mbox{\hyperlink{struct_bit_map_pack}{Bit\+Map\+Pack}} bit\+Map\+Pack, S\+D\+L\+\_\+\+Rect $\ast$dest\+Rect, S\+D\+L\+\_\+\+Rect $\ast$src\+Rect=N\+U\+LL)
 \item 
-\mbox{\Hypertarget{class_renderer_ac037c15abbcec4464f064e8a93b39138}\label{class_renderer_ac037c15abbcec4464f064e8a93b39138}} 
-void {\bfseries Draw} (\mbox{\hyperlink{struct_bit_map_pack}{Bit\+Map\+Pack}} bit\+Map\+Pack, int x, int y, S\+D\+L\+\_\+\+Rect $\ast$src\+Rect=N\+U\+LL)
+void \mbox{\hyperlink{class_renderer_aa8211b7f85b21284c41707b6c05d344e}{Draw}} (\mbox{\hyperlink{struct_bit_map_pack}{Bit\+Map\+Pack}} bit\+Map\+Pack, int x, int y, float \mbox{\hyperlink{class_renderer_aeab228a83d206c55fc73c7a14a0f0761}{scale}}=1, S\+D\+L\+\_\+\+Rect $\ast$src\+Rect=N\+U\+LL)
 \item 
-\mbox{\Hypertarget{class_renderer_a6f44ca996fa1e446573eabd0590f17fb}\label{class_renderer_a6f44ca996fa1e446573eabd0590f17fb}} 
-void {\bfseries Draw\+Line} (int x1, int y1, int x2, int y2, S\+D\+L\+\_\+\+Color color=\{ 0, 0, 0, 255 \})
+void \mbox{\hyperlink{class_renderer_a813ec479ef55992e28db717d693d636c}{Draw}} (\mbox{\hyperlink{struct_bit_map_pack}{Bit\+Map\+Pack}} bit\+Map\+Pack, int x, int y, int index, float \mbox{\hyperlink{class_renderer_aeab228a83d206c55fc73c7a14a0f0761}{scale}}=1)
 \item 
-\mbox{\Hypertarget{class_renderer_ad5596806abe5f406c467581b0dc573bf}\label{class_renderer_ad5596806abe5f406c467581b0dc573bf}} 
-S\+D\+L\+\_\+\+Renderer $\ast$ {\bfseries get\+Renderer} ()
+void \mbox{\hyperlink{class_renderer_a6f44ca996fa1e446573eabd0590f17fb}{Draw\+Line}} (int x1, int y1, int x2, int y2, S\+D\+L\+\_\+\+Color color=\{ 0, 0, 0, 255 \})
 \item 
-\mbox{\Hypertarget{class_renderer_ae535d9f0e30ecce44169907bab6b3829}\label{class_renderer_ae535d9f0e30ecce44169907bab6b3829}} 
-void {\bfseries Update\+Renderer} ()
+void \mbox{\hyperlink{class_renderer_a8249a1a5ca58e9490721393b2add748a}{Set\+Render\+Offset}} (\mbox{\hyperlink{class_vector2}{Vector2}} render\+Offset)
 \item 
-\mbox{\Hypertarget{class_renderer_a08bbc2c9ac50c96b10a70cd096357138}\label{class_renderer_a08bbc2c9ac50c96b10a70cd096357138}} 
-void {\bfseries Clear\+Renderer} ()
+void \mbox{\hyperlink{class_renderer_aa6bd88da75baeeb21ccaff70997a4b8f}{Set\+Render\+Offset}} (int x, int y)
+\item 
+\mbox{\hyperlink{class_vector2}{Vector2}} \mbox{\hyperlink{class_renderer_ae04c310adac38dade4a0626226ff3c5d}{get\+Render\+Offset}} ()
+\item 
+void \mbox{\hyperlink{class_renderer_aa9a6907e029b67e0b866cfddefe5e9b1}{Translate\+Editor\+Camera}} (\mbox{\hyperlink{class_vector2}{Vector2}} translation)
+\item 
+void \mbox{\hyperlink{class_renderer_ab1b1d1e65a796179dd2446c86f4b1f10}{Translate\+Editor\+Camera}} (int x, int y)
+\item 
+\mbox{\hyperlink{class_vector2}{Vector2}} \mbox{\hyperlink{class_renderer_ab4dc779241cbf76f4eee3f472ac16fde}{Get\+Editor\+Camera}} ()
+\item 
+\mbox{\hyperlink{class_vector2}{Vector2}} \mbox{\hyperlink{class_renderer_a9dbf419ce75ccd9968f49e87f31e2dbb}{screen\+To\+Editor\+World\+Space}} (\mbox{\hyperlink{class_vector2}{Vector2}} screen\+Space)
+\item 
+S\+D\+L\+\_\+\+Renderer $\ast$ \mbox{\hyperlink{class_renderer_ad5596806abe5f406c467581b0dc573bf}{get\+Renderer}} ()
+\item 
+float \mbox{\hyperlink{class_renderer_aa00cda96c29f1b98e4b11b6133a39c47}{get\+Scale}} ()
+\item 
+float \mbox{\hyperlink{class_renderer_a416a763c4b51f2c6a11ce7438116a37b}{get\+Editor\+Scale}} ()
+\item 
+void \mbox{\hyperlink{class_renderer_ae535d9f0e30ecce44169907bab6b3829}{Update\+Renderer}} ()
+\item 
+void \mbox{\hyperlink{class_renderer_a08bbc2c9ac50c96b10a70cd096357138}{Clear\+Renderer}} ()
 \end{DoxyCompactItemize}
 \doxysubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_renderer_a1230f9655b42f3d37f6086ee94c631a4}\label{class_renderer_a1230f9655b42f3d37f6086ee94c631a4}} 
-static \mbox{\hyperlink{class_renderer}{Renderer}} $\ast$ {\bfseries Instance} ()
+static \mbox{\hyperlink{class_renderer}{Renderer}} $\ast$ \mbox{\hyperlink{class_renderer_a1230f9655b42f3d37f6086ee94c631a4}{Instance}} ()
 \item 
-\mbox{\Hypertarget{class_renderer_a63e13f6ce0de32430960ef81da6f5af7}\label{class_renderer_a63e13f6ce0de32430960ef81da6f5af7}} 
-static \mbox{\hyperlink{class_renderer}{Renderer}} $\ast$ {\bfseries Instance} (S\+D\+L\+\_\+\+Window $\ast$Window, S\+D\+L\+\_\+\+Rect $\ast$camera, S\+D\+L\+\_\+\+Rect $\ast$render\+Camera)
+static \mbox{\hyperlink{class_renderer}{Renderer}} $\ast$ \mbox{\hyperlink{class_renderer_a47a540ef1f74f7957c69a9c04467803b}{Instance}} (S\+D\+L\+\_\+\+Window $\ast$Window)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_renderer_abee49e0eeb05724852371d62d1362dc1}{Renderer}} (S\+D\+L\+\_\+\+Window $\ast$Window)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+S\+D\+L\+\_\+\+Renderer $\ast$ \mbox{\hyperlink{class_renderer_ad5adf56b607a7efd3773b890e57e3331}{m\+\_\+p\+Renderer}}
+\item 
+\mbox{\hyperlink{class_vector2}{Vector2}} \mbox{\hyperlink{class_renderer_af79536a20070b7194f57a043c638df43}{Render\+Offset}}
+\item 
+\mbox{\hyperlink{class_vector2}{Vector2}} \mbox{\hyperlink{class_renderer_a1d695cf57007c7a6add7eb22851c3b1e}{Editor\+Render\+Offset}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{struct_line}{Line}} $>$ \mbox{\hyperlink{class_renderer_a019726b0af387948735dd16dfec3ce67}{Editor\+Render\+Lines}}
+\item 
+float \mbox{\hyperlink{class_renderer_aeab228a83d206c55fc73c7a14a0f0761}{scale}} = 5
+\item 
+float \mbox{\hyperlink{class_renderer_a0f652d77efa3ea15b03d7cf3c6e3e228}{editor\+Scale}} = 3
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_renderer}{Renderer}} $\ast$ \mbox{\hyperlink{class_renderer_a046ca43dfec41a930f4672cf2b677928}{s\+Instance}} = N\+U\+LL
 \end{DoxyCompactItemize}
 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_renderer_abee49e0eeb05724852371d62d1362dc1}\label{class_renderer_abee49e0eeb05724852371d62d1362dc1}} 
+\index{Renderer@{Renderer}!Renderer@{Renderer}}
+\index{Renderer@{Renderer}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{Renderer()}{Renderer()}}
+{\footnotesize\ttfamily Renderer\+::\+Renderer (\begin{DoxyParamCaption}\item[{S\+D\+L\+\_\+\+Window $\ast$}]{Window }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Creates a renderer with an S\+D\+L\+\_\+\+Window. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_renderer_a08bbc2c9ac50c96b10a70cd096357138}\label{class_renderer_a08bbc2c9ac50c96b10a70cd096357138}} 
+\index{Renderer@{Renderer}!ClearRenderer@{ClearRenderer}}
+\index{ClearRenderer@{ClearRenderer}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{ClearRenderer()}{ClearRenderer()}}
+{\footnotesize\ttfamily void Renderer\+::\+Clear\+Renderer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Clears the renderer ready for the next frame of draw calls. \mbox{\Hypertarget{class_renderer_aa8211b7f85b21284c41707b6c05d344e}\label{class_renderer_aa8211b7f85b21284c41707b6c05d344e}} 
+\index{Renderer@{Renderer}!Draw@{Draw}}
+\index{Draw@{Draw}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{Draw()}{Draw()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily void Renderer\+::\+Draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_bit_map_pack}{Bit\+Map\+Pack}}}]{bit\+Map\+Pack,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{float}]{scale = {\ttfamily 1},  }\item[{S\+D\+L\+\_\+\+Rect $\ast$}]{src\+Rect = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+Override draw function. Draws a bitmap to a point on the screen (x,y) with scale modification.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em bit\+Map\+Pack} & The \mbox{\hyperlink{struct_bit_map_pack}{Bit\+Map\+Pack}} to draw to the screen. \\
+\hline
+\mbox{\texttt{ in}}  & {\em x} & The x position to draw the bitmap in world-\/space. \\
+\hline
+\mbox{\texttt{ in}}  & {\em y} & The y position to draw the bitmap in world-\/space. \\
+\hline
+\mbox{\texttt{ in}}  & {\em scale} & The scale to apply to the object. \\
+\hline
+\mbox{\texttt{ in}}  & {\em src\+Rect} & The clip of the bitmap we want to render. Used for indexing into sprite-\/sheets. N\+U\+LL assumes no clip; drawing the whole bitmap. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_renderer_a813ec479ef55992e28db717d693d636c}\label{class_renderer_a813ec479ef55992e28db717d693d636c}} 
+\index{Renderer@{Renderer}!Draw@{Draw}}
+\index{Draw@{Draw}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{Draw()}{Draw()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily void Renderer\+::\+Draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_bit_map_pack}{Bit\+Map\+Pack}}}]{bit\+Map\+Pack,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{index,  }\item[{float}]{scale = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+Override draw function. Draws a bitmap to a point on the screen (x,y) with scale modification.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em bit\+Map\+Pack} & The \mbox{\hyperlink{struct_bit_map_pack}{Bit\+Map\+Pack}} to draw to the screen. \\
+\hline
+\mbox{\texttt{ in}}  & {\em x} & The x position to draw the bitmap in world-\/space. \\
+\hline
+\mbox{\texttt{ in}}  & {\em y} & The y position to draw the bitmap in world-\/space. \\
+\hline
+\mbox{\texttt{ in}}  & {\em index} & The index into the spritesheet that we want to render. Index uses the T\+I\+L\+E\+\_\+\+W\+I\+D\+TH macro defined in Engine\+Structs. Make sure this is set to the sprite size you want. \\
+\hline
+\mbox{\texttt{ in}}  & {\em scale} & The scale to apply to the object \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_renderer_a6372807844f96c89a1334c7a862b6ee2}\label{class_renderer_a6372807844f96c89a1334c7a862b6ee2}} 
+\index{Renderer@{Renderer}!Draw@{Draw}}
+\index{Draw@{Draw}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{Draw()}{Draw()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void Renderer\+::\+Draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_bit_map_pack}{Bit\+Map\+Pack}}}]{bit\+Map\+Pack,  }\item[{S\+D\+L\+\_\+\+Rect $\ast$}]{dest\+Rect,  }\item[{S\+D\+L\+\_\+\+Rect $\ast$}]{src\+Rect = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+Base draw function. Draws a bitmap to a point on the screen.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em bit\+Map\+Pack} & The \mbox{\hyperlink{struct_bit_map_pack}{Bit\+Map\+Pack}} to draw to the screen. \\
+\hline
+\mbox{\texttt{ in}}  & {\em dest\+Rect} & The location to draw the bitmap, as well as size information for how big it should be. \\
+\hline
+\mbox{\texttt{ in}}  & {\em src\+Rect} & The clip of the bitmap we want to render. Used for indexing into sprite-\/sheets. N\+U\+LL assumes no clip; drawing the whole bitmap. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_renderer_a6f44ca996fa1e446573eabd0590f17fb}\label{class_renderer_a6f44ca996fa1e446573eabd0590f17fb}} 
+\index{Renderer@{Renderer}!DrawLine@{DrawLine}}
+\index{DrawLine@{DrawLine}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{DrawLine()}{DrawLine()}}
+{\footnotesize\ttfamily void Renderer\+::\+Draw\+Line (\begin{DoxyParamCaption}\item[{int}]{x1,  }\item[{int}]{y1,  }\item[{int}]{x2,  }\item[{int}]{y2,  }\item[{S\+D\+L\+\_\+\+Color}]{color = {\ttfamily \{~0,0,0,255~\}} }\end{DoxyParamCaption})}
+
+Adds a line to the Editor\+Render\+Lines vector. These are batch-\/drawn at the end of the frame in Update\+Renderer.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em x1} & Start X position of the line. \\
+\hline
+\mbox{\texttt{ in}}  & {\em y1} & Start y position of the line. \\
+\hline
+\mbox{\texttt{ in}}  & {\em x2} & End X position of the line. \\
+\hline
+\mbox{\texttt{ in}}  & {\em y2} & End X position of the line. \\
+\hline
+\mbox{\texttt{ in}}  & {\em color} & The color of the line. Black by default. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_renderer_ab4dc779241cbf76f4eee3f472ac16fde}\label{class_renderer_ab4dc779241cbf76f4eee3f472ac16fde}} 
+\index{Renderer@{Renderer}!GetEditorCamera@{GetEditorCamera}}
+\index{GetEditorCamera@{GetEditorCamera}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{GetEditorCamera()}{GetEditorCamera()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector2}{Vector2}} Renderer\+::\+Get\+Editor\+Camera (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the offset of the editor camera.
+
+\begin{DoxyReturn}{Returns}
+The offset of the editor camera. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_renderer_a416a763c4b51f2c6a11ce7438116a37b}\label{class_renderer_a416a763c4b51f2c6a11ce7438116a37b}} 
+\index{Renderer@{Renderer}!getEditorScale@{getEditorScale}}
+\index{getEditorScale@{getEditorScale}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{getEditorScale()}{getEditorScale()}}
+{\footnotesize\ttfamily float Renderer\+::get\+Editor\+Scale (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+A method to get the scale of the edit-\/view camera.
+
+\begin{DoxyReturn}{Returns}
+The scale of the edit-\/view camera. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_renderer_ad5596806abe5f406c467581b0dc573bf}\label{class_renderer_ad5596806abe5f406c467581b0dc573bf}} 
+\index{Renderer@{Renderer}!getRenderer@{getRenderer}}
+\index{getRenderer@{getRenderer}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{getRenderer()}{getRenderer()}}
+{\footnotesize\ttfamily S\+D\+L\+\_\+\+Renderer $\ast$ Renderer\+::get\+Renderer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+A QoL function to get reference to the renderer for use in other classes which may need it in certain S\+DL functions.
+
+\begin{DoxyReturn}{Returns}
+a reference to the S\+D\+L\+\_\+\+Renderer used by the renderer. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_renderer_ae04c310adac38dade4a0626226ff3c5d}\label{class_renderer_ae04c310adac38dade4a0626226ff3c5d}} 
+\index{Renderer@{Renderer}!getRenderOffset@{getRenderOffset}}
+\index{getRenderOffset@{getRenderOffset}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{getRenderOffset()}{getRenderOffset()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector2}{Vector2}} Renderer\+::get\+Render\+Offset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the render offset of the game-\/view camera.
+
+\begin{DoxyReturn}{Returns}
+the render offset of the game-\/view camera. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_renderer_aa00cda96c29f1b98e4b11b6133a39c47}\label{class_renderer_aa00cda96c29f1b98e4b11b6133a39c47}} 
+\index{Renderer@{Renderer}!getScale@{getScale}}
+\index{getScale@{getScale}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{getScale()}{getScale()}}
+{\footnotesize\ttfamily float Renderer\+::get\+Scale (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+A method to get the scale of the game-\/view camera.
+
+\begin{DoxyReturn}{Returns}
+The scale of the game-\/view camera. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_renderer_a1230f9655b42f3d37f6086ee94c631a4}\label{class_renderer_a1230f9655b42f3d37f6086ee94c631a4}} 
+\index{Renderer@{Renderer}!Instance@{Instance}}
+\index{Instance@{Instance}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{Instance()}{Instance()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_renderer}{Renderer}} $\ast$ Renderer\+::\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Method for getting an instance of \mbox{\hyperlink{class_renderer}{Renderer}}. \mbox{\Hypertarget{class_renderer_a47a540ef1f74f7957c69a9c04467803b}\label{class_renderer_a47a540ef1f74f7957c69a9c04467803b}} 
+\index{Renderer@{Renderer}!Instance@{Instance}}
+\index{Instance@{Instance}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{Instance()}{Instance()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_renderer}{Renderer}} $\ast$ Renderer\+::\+Instance (\begin{DoxyParamCaption}\item[{S\+D\+L\+\_\+\+Window $\ast$}]{Window }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+The renderer requires a Window, so this must be called first as an initialization.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em Window} & Reference to the S\+D\+L\+\_\+\+Window that we want to render onto. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_renderer_a9dbf419ce75ccd9968f49e87f31e2dbb}\label{class_renderer_a9dbf419ce75ccd9968f49e87f31e2dbb}} 
+\index{Renderer@{Renderer}!screenToEditorWorldSpace@{screenToEditorWorldSpace}}
+\index{screenToEditorWorldSpace@{screenToEditorWorldSpace}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{screenToEditorWorldSpace()}{screenToEditorWorldSpace()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector2}{Vector2}} Renderer\+::screen\+To\+Editor\+World\+Space (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector2}{Vector2}}}]{screen\+Space }\end{DoxyParamCaption})}
+
+A QoL function to change a screen-\/space co-\/ordinate to a world-\/space co-\/ordinate in edit-\/view.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em screen\+Space} & A position in screen space.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The corresponding position in world-\/space using the editor camera. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_renderer_aa6bd88da75baeeb21ccaff70997a4b8f}\label{class_renderer_aa6bd88da75baeeb21ccaff70997a4b8f}} 
+\index{Renderer@{Renderer}!SetRenderOffset@{SetRenderOffset}}
+\index{SetRenderOffset@{SetRenderOffset}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{SetRenderOffset()}{SetRenderOffset()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Renderer\+::\+Set\+Render\+Offset (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+This function sets the render offset for game-\/view.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em x} & The new render\+Offset x value. \\
+\hline
+\mbox{\texttt{ in}}  & {\em y} & The new render\+Offset y value. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_renderer_a8249a1a5ca58e9490721393b2add748a}\label{class_renderer_a8249a1a5ca58e9490721393b2add748a}} 
+\index{Renderer@{Renderer}!SetRenderOffset@{SetRenderOffset}}
+\index{SetRenderOffset@{SetRenderOffset}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{SetRenderOffset()}{SetRenderOffset()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Renderer\+::\+Set\+Render\+Offset (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector2}{Vector2}}}]{render\+Offset }\end{DoxyParamCaption})}
+
+This function sets the render offset for game-\/view.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em render\+Offset} & The new render\+Offset. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_renderer_ab1b1d1e65a796179dd2446c86f4b1f10}\label{class_renderer_ab1b1d1e65a796179dd2446c86f4b1f10}} 
+\index{Renderer@{Renderer}!TranslateEditorCamera@{TranslateEditorCamera}}
+\index{TranslateEditorCamera@{TranslateEditorCamera}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{TranslateEditorCamera()}{TranslateEditorCamera()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Renderer\+::\+Translate\+Editor\+Camera (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+Override function for Translate\+Editor\+Camera that takes two int\textquotesingle{}s instead of a vector2.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em x} & The x value to translate the camera by. \\
+\hline
+\mbox{\texttt{ in}}  & {\em y} & The y value to translate the camera by. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_renderer_aa9a6907e029b67e0b866cfddefe5e9b1}\label{class_renderer_aa9a6907e029b67e0b866cfddefe5e9b1}} 
+\index{Renderer@{Renderer}!TranslateEditorCamera@{TranslateEditorCamera}}
+\index{TranslateEditorCamera@{TranslateEditorCamera}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{TranslateEditorCamera()}{TranslateEditorCamera()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Renderer\+::\+Translate\+Editor\+Camera (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector2}{Vector2}}}]{translation }\end{DoxyParamCaption})}
+
+Translates the Edit-\/view render\+Offset. This uses translation rather than a position assignment due to the nature of the input moving the camera. The input is taken as mouse movement delta so there is no need to add an extra step in between.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em translation} & The value to translate the editor camera by. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_renderer_ae535d9f0e30ecce44169907bab6b3829}\label{class_renderer_ae535d9f0e30ecce44169907bab6b3829}} 
+\index{Renderer@{Renderer}!UpdateRenderer@{UpdateRenderer}}
+\index{UpdateRenderer@{UpdateRenderer}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{UpdateRenderer()}{UpdateRenderer()}}
+{\footnotesize\ttfamily void Renderer\+::\+Update\+Renderer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Updates the renderer.
+
+This function presents all bitmaps drawn this frame to the screen.
+
+It also batch-\/draws all the lines passed in this frame. This ensures they will render over the top of everything. This functionality is wanted as their use is for edit-\/mode and debugging. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_renderer_a019726b0af387948735dd16dfec3ce67}\label{class_renderer_a019726b0af387948735dd16dfec3ce67}} 
+\index{Renderer@{Renderer}!EditorRenderLines@{EditorRenderLines}}
+\index{EditorRenderLines@{EditorRenderLines}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{EditorRenderLines}{EditorRenderLines}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{struct_line}{Line}}$>$ Renderer\+::\+Editor\+Render\+Lines\hspace{0.3cm}{\ttfamily [private]}}
+
+A vector that stores all lines to be drawn this frame. \mbox{\Hypertarget{class_renderer_a1d695cf57007c7a6add7eb22851c3b1e}\label{class_renderer_a1d695cf57007c7a6add7eb22851c3b1e}} 
+\index{Renderer@{Renderer}!EditorRenderOffset@{EditorRenderOffset}}
+\index{EditorRenderOffset@{EditorRenderOffset}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{EditorRenderOffset}{EditorRenderOffset}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector2}{Vector2}} Renderer\+::\+Editor\+Render\+Offset\hspace{0.3cm}{\ttfamily [private]}}
+
+The offset applied to all things being rendererd in edit-\/mode. Allows for a reasonable editor. \mbox{\Hypertarget{class_renderer_a0f652d77efa3ea15b03d7cf3c6e3e228}\label{class_renderer_a0f652d77efa3ea15b03d7cf3c6e3e228}} 
+\index{Renderer@{Renderer}!editorScale@{editorScale}}
+\index{editorScale@{editorScale}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{editorScale}{editorScale}}
+{\footnotesize\ttfamily float Renderer\+::editor\+Scale = 3\hspace{0.3cm}{\ttfamily [private]}}
+
+Scale to be applied to all objects in edit-\/view on top of any they have themselves. Allows for camera zoom. \mbox{\Hypertarget{class_renderer_ad5adf56b607a7efd3773b890e57e3331}\label{class_renderer_ad5adf56b607a7efd3773b890e57e3331}} 
+\index{Renderer@{Renderer}!m\_pRenderer@{m\_pRenderer}}
+\index{m\_pRenderer@{m\_pRenderer}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{m\_pRenderer}{m\_pRenderer}}
+{\footnotesize\ttfamily S\+D\+L\+\_\+\+Renderer$\ast$ Renderer\+::m\+\_\+p\+Renderer\hspace{0.3cm}{\ttfamily [private]}}
+
+The S\+D\+L\+\_\+\+Renderer which does all the heavy lifting. \mbox{\Hypertarget{class_renderer_af79536a20070b7194f57a043c638df43}\label{class_renderer_af79536a20070b7194f57a043c638df43}} 
+\index{Renderer@{Renderer}!RenderOffset@{RenderOffset}}
+\index{RenderOffset@{RenderOffset}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{RenderOffset}{RenderOffset}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector2}{Vector2}} Renderer\+::\+Render\+Offset\hspace{0.3cm}{\ttfamily [private]}}
+
+The offset applied to all things being rendered in game-\/mode. Allows for movement around a scene with the camera following. Or at least, the illusion of. \mbox{\Hypertarget{class_renderer_aeab228a83d206c55fc73c7a14a0f0761}\label{class_renderer_aeab228a83d206c55fc73c7a14a0f0761}} 
+\index{Renderer@{Renderer}!scale@{scale}}
+\index{scale@{scale}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{scale}{scale}}
+{\footnotesize\ttfamily float Renderer\+::scale = 5\hspace{0.3cm}{\ttfamily [private]}}
+
+Scale to be applied to all objects in game-\/view on top of any they have themselves. Allows for camera zoom. \mbox{\Hypertarget{class_renderer_a046ca43dfec41a930f4672cf2b677928}\label{class_renderer_a046ca43dfec41a930f4672cf2b677928}} 
+\index{Renderer@{Renderer}!sInstance@{sInstance}}
+\index{sInstance@{sInstance}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{sInstance}{sInstance}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_renderer}{Renderer}} $\ast$ Renderer\+::s\+Instance = N\+U\+LL\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+Static instance of the \mbox{\hyperlink{class_renderer}{Renderer}} class. 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

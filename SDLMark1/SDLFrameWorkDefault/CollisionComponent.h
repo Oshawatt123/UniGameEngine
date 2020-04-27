@@ -11,13 +11,18 @@ class CollisionComponent : public Component
 {
 public:
 
-	Vector2 colPosition;
-	Vector2 colDimension;
-	SDL_Rect collider;
+	Vector2 colPosition; /*!< Position of the collider.*/
+	Vector2 colDimension; /*!< Size of the collider.*/
+	SDL_Rect collider; /*!< A rect for storing this data compactly.*/
 
 	PositionComponent* pos;
 
 	bool colliding = false;
+
+	/*!
+		The other entity we are currently colliding with.
+		\note If an entity collides with more than one object in one frame, the entity held here will be the one highest in the heirarchy.
+	*/
 	Entity* other = nullptr;
 
 	SDL_Color drawColor = { 255, 0, 0, 255 };
@@ -63,13 +68,16 @@ public:
 
 	void EditorTick() override
 	{
-		colPosition = pos->getPos();
-		collider.x = colPosition.x - offsetX;
-		collider.y = colPosition.y - offsetX;
-		collider.w = colDimension.x;
-		collider.h = colDimension.y;
+		if (entity->editMode)
+		{
+			colPosition = pos->getPos();
+			collider.x = colPosition.x - offsetX;
+			collider.y = colPosition.y - offsetX;
+			collider.w = colDimension.x;
+			collider.h = colDimension.y;
 
-		Renderer::Instance()->DrawLine(collider.x, collider.y, collider.x + collider.w, collider.y + collider.h, {0, 255, 0, 255});
+			Renderer::Instance()->DrawLine(collider.x, collider.y, collider.x + collider.w, collider.y + collider.h, { 0, 255, 0, 255 });
+		}
 	}
 
 	std::string GetSaveData()

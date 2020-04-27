@@ -1,27 +1,87 @@
 \hypertarget{struct_line}{}\doxysection{Line Struct Reference}
 \label{struct_line}\index{Line@{Line}}
+
+
+{\ttfamily \#include $<$Math\+Helper.\+h$>$}
+
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{struct_line_a5bbd44bdaf40e8cd903acc55fe90e70f}\label{struct_line_a5bbd44bdaf40e8cd903acc55fe90e70f}} 
-{\bfseries Line} (int x1, int y1, int x2, int y2, S\+D\+L\+\_\+\+Color \+\_\+color=\{ 0, 0, 0, 255 \})
+\mbox{\hyperlink{struct_line_a5bbd44bdaf40e8cd903acc55fe90e70f}{Line}} (int x1, int y1, int x2, int y2, S\+D\+L\+\_\+\+Color \+\_\+color=\{ 0, 0, 0, 255 \})
 \item 
-\mbox{\Hypertarget{struct_line_abdc184d661ae772415256a14c80fd9bb}\label{struct_line_abdc184d661ae772415256a14c80fd9bb}} 
-{\bfseries Line} (\mbox{\hyperlink{class_vector2}{Vector2}} \+\_\+start, \mbox{\hyperlink{class_vector2}{Vector2}} \+\_\+end, S\+D\+L\+\_\+\+Color \+\_\+color=\{ 0, 0, 0, 255 \})
+\mbox{\hyperlink{struct_line_abdc184d661ae772415256a14c80fd9bb}{Line}} (\mbox{\hyperlink{class_vector2}{Vector2}} \+\_\+start, \mbox{\hyperlink{class_vector2}{Vector2}} \+\_\+end, S\+D\+L\+\_\+\+Color \+\_\+color=\{ 0, 0, 0, 255 \})
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{struct_line_a24c114fd8b910da4a5ce9a4d5d5ca86c}\label{struct_line_a24c114fd8b910da4a5ce9a4d5d5ca86c}} 
-\mbox{\hyperlink{class_vector2}{Vector2}} {\bfseries start}
+\mbox{\hyperlink{class_vector2}{Vector2}} \mbox{\hyperlink{struct_line_a24c114fd8b910da4a5ce9a4d5d5ca86c}{start}}
 \item 
-\mbox{\Hypertarget{struct_line_acd318c3cb81765cc79a002ec848205f2}\label{struct_line_acd318c3cb81765cc79a002ec848205f2}} 
-\mbox{\hyperlink{class_vector2}{Vector2}} {\bfseries end}
+\mbox{\hyperlink{class_vector2}{Vector2}} \mbox{\hyperlink{struct_line_acd318c3cb81765cc79a002ec848205f2}{end}}
 \item 
-\mbox{\Hypertarget{struct_line_a20d8f22b99671a4f69ae8e2bbf2f01fe}\label{struct_line_a20d8f22b99671a4f69ae8e2bbf2f01fe}} 
-S\+D\+L\+\_\+\+Color {\bfseries color}
+S\+D\+L\+\_\+\+Color \mbox{\hyperlink{struct_line_a20d8f22b99671a4f69ae8e2bbf2f01fe}{color}}
 \end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+A struct to help with drawing debug lines in Filthy\+Engine. A \mbox{\hyperlink{struct_line}{Line}} is defined by a 2 \mbox{\hyperlink{class_vector2}{Vector2}}\textquotesingle{}s for the start and end of the lines, treated as position co-\/ordinates in world-\/space as well as a color. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{struct_line_a5bbd44bdaf40e8cd903acc55fe90e70f}\label{struct_line_a5bbd44bdaf40e8cd903acc55fe90e70f}} 
+\index{Line@{Line}!Line@{Line}}
+\index{Line@{Line}!Line@{Line}}
+\doxysubsubsection{\texorpdfstring{Line()}{Line()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Line\+::\+Line (\begin{DoxyParamCaption}\item[{int}]{x1,  }\item[{int}]{y1,  }\item[{int}]{x2,  }\item[{int}]{y2,  }\item[{S\+D\+L\+\_\+\+Color}]{\+\_\+color = {\ttfamily \{~0,0,0,255~\}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Creates a line. 
+\begin{DoxyParams}{Parameters}
+{\em x1} & The x position to start the line in world-\/space. \\
+\hline
+{\em y1} & The y position to start the line in world-\/space. \\
+\hline
+{\em x2} & The x position to end the line in world-\/space. \\
+\hline
+{\em y2} & The y position to end the line in world-\/space. \\
+\hline
+{\em \+\_\+color} & The color of the line, defaulted at black. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{struct_line_abdc184d661ae772415256a14c80fd9bb}\label{struct_line_abdc184d661ae772415256a14c80fd9bb}} 
+\index{Line@{Line}!Line@{Line}}
+\index{Line@{Line}!Line@{Line}}
+\doxysubsubsection{\texorpdfstring{Line()}{Line()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Line\+::\+Line (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector2}{Vector2}}}]{\+\_\+start,  }\item[{\mbox{\hyperlink{class_vector2}{Vector2}}}]{\+\_\+end,  }\item[{S\+D\+L\+\_\+\+Color}]{\+\_\+color = {\ttfamily \{~0,0,0,255~\}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Override of the base constructor to take 2 \mbox{\hyperlink{class_vector2}{Vector2}}\textquotesingle{}s for start and end position. 
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+start} & \mbox{\hyperlink{class_vector2}{Vector2}} for the start of the line in world-\/space. \\
+\hline
+{\em \+\_\+end} & \mbox{\hyperlink{class_vector2}{Vector2}} for the end of the line in world-\/space. \\
+\hline
+{\em \+\_\+color} & The color of the line, defaulted at black. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_line_a20d8f22b99671a4f69ae8e2bbf2f01fe}\label{struct_line_a20d8f22b99671a4f69ae8e2bbf2f01fe}} 
+\index{Line@{Line}!color@{color}}
+\index{color@{color}!Line@{Line}}
+\doxysubsubsection{\texorpdfstring{color}{color}}
+{\footnotesize\ttfamily S\+D\+L\+\_\+\+Color Line\+::color}
+
+The color of the line. \mbox{\Hypertarget{struct_line_acd318c3cb81765cc79a002ec848205f2}\label{struct_line_acd318c3cb81765cc79a002ec848205f2}} 
+\index{Line@{Line}!end@{end}}
+\index{end@{end}!Line@{Line}}
+\doxysubsubsection{\texorpdfstring{end}{end}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector2}{Vector2}} Line\+::end}
+
+The End of the line, treated as a position in world-\/space. \mbox{\Hypertarget{struct_line_a24c114fd8b910da4a5ce9a4d5d5ca86c}\label{struct_line_a24c114fd8b910da4a5ce9a4d5d5ca86c}} 
+\index{Line@{Line}!start@{start}}
+\index{start@{start}!Line@{Line}}
+\doxysubsubsection{\texorpdfstring{start}{start}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector2}{Vector2}} Line\+::start}
+
+The Start of the line, treated as a position in world-\/space. 
 
 The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

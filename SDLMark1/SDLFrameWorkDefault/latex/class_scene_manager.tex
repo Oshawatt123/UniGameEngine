@@ -3,25 +3,195 @@
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_scene_manager_a1adf9e40216a2e68164ac269765b7676}\label{class_scene_manager_a1adf9e40216a2e68164ac269765b7676}} 
-int {\bfseries Get\+Next\+Build\+Index} ()
+int \mbox{\hyperlink{class_scene_manager_a1adf9e40216a2e68164ac269765b7676}{Get\+Next\+Build\+Index}} ()
 \item 
-\mbox{\Hypertarget{class_scene_manager_affa371dcdeb92c2f31a9cb8a88bfc738}\label{class_scene_manager_affa371dcdeb92c2f31a9cb8a88bfc738}} 
-void {\bfseries Add\+Scene\+To\+Build} (\mbox{\hyperlink{class_scene}{Scene}} $\ast$scene)
+void \mbox{\hyperlink{class_scene_manager_affa371dcdeb92c2f31a9cb8a88bfc738}{Add\+Scene\+To\+Build}} (\mbox{\hyperlink{class_scene}{Scene}} $\ast$scene)
 \item 
-\mbox{\Hypertarget{class_scene_manager_abec9e62a4d4d09edee4b12abe8b1af64}\label{class_scene_manager_abec9e62a4d4d09edee4b12abe8b1af64}} 
-void {\bfseries Load\+Scene} (std\+::string scene\+Name)
+void \mbox{\hyperlink{class_scene_manager_abec9e62a4d4d09edee4b12abe8b1af64}{Load\+Scene}} (std\+::string scene\+Name)
 \item 
-\mbox{\Hypertarget{class_scene_manager_aecf1d488a646b2bb552f729b25a80114}\label{class_scene_manager_aecf1d488a646b2bb552f729b25a80114}} 
-void {\bfseries Load\+Scene} (int build\+Index)
+void \mbox{\hyperlink{class_scene_manager_aecf1d488a646b2bb552f729b25a80114}{Load\+Scene}} (int build\+Index)
+\item 
+void \mbox{\hyperlink{class_scene_manager_a678fa5b992f03a35c092dd2c2c6b035c}{Load\+Scene\+By\+Path}} (std\+::string path)
+\item 
+void \mbox{\hyperlink{class_scene_manager_acebd030174731c450074071ec807a8b0}{Load\+Scene\+By\+Path\+No\+Save}} (std\+::string path)
+\item 
+void \mbox{\hyperlink{class_scene_manager_aae054e939e8220c2735d2b5e29dc814d}{Load\+Scene\+No\+Save}} (std\+::string scene\+Name)
+\item 
+void \mbox{\hyperlink{class_scene_manager_a78e75b349e9467e32ee0199e16d06a07}{Save\+Scene}} ()
+\item 
+\mbox{\hyperlink{class_scene}{Scene}} $\ast$ \mbox{\hyperlink{class_scene_manager_ad307aea07c7664dcdcd8a18ac41fce89}{get\+Current\+Scene}} ()
+\item 
+\mbox{\Hypertarget{class_scene_manager_a0e2cb35aae5d94cc18593bfb85aa47ca}\label{class_scene_manager_a0e2cb35aae5d94cc18593bfb85aa47ca}} 
+void {\bfseries Tick} ()
 \end{DoxyCompactItemize}
 \doxysubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_scene_manager_a972ad174745419ebc980802a5f6e874e}\label{class_scene_manager_a972ad174745419ebc980802a5f6e874e}} 
-static \mbox{\hyperlink{class_scene_manager}{Scene\+Manager}} $\ast$ {\bfseries Instance} ()
+static \mbox{\hyperlink{class_scene_manager}{Scene\+Manager}} $\ast$ \mbox{\hyperlink{class_scene_manager_a972ad174745419ebc980802a5f6e874e}{Instance}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_scene_manager_a8ec4d4fed65cb3f194afccb8a11e57df}\label{class_scene_manager_a8ec4d4fed65cb3f194afccb8a11e57df}} 
+void {\bfseries Load\+Scene} (\mbox{\hyperlink{class_scene}{Scene}} $\ast$scene)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_scene}{Scene}} $\ast$ $>$ \mbox{\hyperlink{class_scene_manager_a6cf8d2575c33e89184ebe52b4f78689f}{m\+Scenes\+In\+Build}}
+\item 
+std\+::unordered\+\_\+map$<$ std\+::string, \mbox{\hyperlink{class_scene}{Scene}} $\ast$ $>$ \mbox{\hyperlink{class_scene_manager_a0deb8915a4292005a5295e9e1a6bb63d}{loaded\+Scenes}}
+\item 
+\mbox{\hyperlink{class_scene}{Scene}} $\ast$ \mbox{\hyperlink{class_scene_manager_a61fb6deaad8c240b54833caf36c1f19a}{current\+Scene}}
+\item 
+int \mbox{\hyperlink{class_scene_manager_ae1a7404139d58720072d1fea8e869d16}{m\+Next\+Build\+Index}}
+\item 
+\mbox{\hyperlink{class_event}{Event}} $\ast$ \mbox{\hyperlink{class_scene_manager_a650934dac9ec9d77541c1ac46577f0ee}{event\+Store}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_scene_manager}{Scene\+Manager}} $\ast$ \mbox{\hyperlink{class_scene_manager_a6dc0e6f31119367b6e0cd45ae063f782}{s\+Instance}} = N\+U\+LL
 \end{DoxyCompactItemize}
 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_scene_manager_affa371dcdeb92c2f31a9cb8a88bfc738}\label{class_scene_manager_affa371dcdeb92c2f31a9cb8a88bfc738}} 
+\index{SceneManager@{SceneManager}!AddSceneToBuild@{AddSceneToBuild}}
+\index{AddSceneToBuild@{AddSceneToBuild}!SceneManager@{SceneManager}}
+\doxysubsubsection{\texorpdfstring{AddSceneToBuild()}{AddSceneToBuild()}}
+{\footnotesize\ttfamily void Scene\+Manager\+::\+Add\+Scene\+To\+Build (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_scene}{Scene}} $\ast$}]{scene }\end{DoxyParamCaption})}
+
+Adds a scene to the build list. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em reference} & to the scene to add to the build. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_scene_manager_ad307aea07c7664dcdcd8a18ac41fce89}\label{class_scene_manager_ad307aea07c7664dcdcd8a18ac41fce89}} 
+\index{SceneManager@{SceneManager}!getCurrentScene@{getCurrentScene}}
+\index{getCurrentScene@{getCurrentScene}!SceneManager@{SceneManager}}
+\doxysubsubsection{\texorpdfstring{getCurrentScene()}{getCurrentScene()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_scene}{Scene}} $\ast$ Scene\+Manager\+::get\+Current\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns a reference to the current scene. \begin{DoxyReturn}{Returns}
+A reference to the current scene. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_scene_manager_a1adf9e40216a2e68164ac269765b7676}\label{class_scene_manager_a1adf9e40216a2e68164ac269765b7676}} 
+\index{SceneManager@{SceneManager}!GetNextBuildIndex@{GetNextBuildIndex}}
+\index{GetNextBuildIndex@{GetNextBuildIndex}!SceneManager@{SceneManager}}
+\doxysubsubsection{\texorpdfstring{GetNextBuildIndex()}{GetNextBuildIndex()}}
+{\footnotesize\ttfamily int Scene\+Manager\+::\+Get\+Next\+Build\+Index (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the next build index. \begin{DoxyReturn}{Returns}
+The next build index. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_scene_manager_a972ad174745419ebc980802a5f6e874e}\label{class_scene_manager_a972ad174745419ebc980802a5f6e874e}} 
+\index{SceneManager@{SceneManager}!Instance@{Instance}}
+\index{Instance@{Instance}!SceneManager@{SceneManager}}
+\doxysubsubsection{\texorpdfstring{Instance()}{Instance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_scene_manager}{Scene\+Manager}} $\ast$ Scene\+Manager\+::\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Method for getting an instance of \mbox{\hyperlink{class_scene_manager}{Scene\+Manager}}. \mbox{\Hypertarget{class_scene_manager_aecf1d488a646b2bb552f729b25a80114}\label{class_scene_manager_aecf1d488a646b2bb552f729b25a80114}} 
+\index{SceneManager@{SceneManager}!LoadScene@{LoadScene}}
+\index{LoadScene@{LoadScene}!SceneManager@{SceneManager}}
+\doxysubsubsection{\texorpdfstring{LoadScene()}{LoadScene()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Scene\+Manager\+::\+Load\+Scene (\begin{DoxyParamCaption}\item[{int}]{build\+Index }\end{DoxyParamCaption})}
+
+Load a scene by build index, 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em build\+Index} & The build index of the scene to load, \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_scene_manager_abec9e62a4d4d09edee4b12abe8b1af64}\label{class_scene_manager_abec9e62a4d4d09edee4b12abe8b1af64}} 
+\index{SceneManager@{SceneManager}!LoadScene@{LoadScene}}
+\index{LoadScene@{LoadScene}!SceneManager@{SceneManager}}
+\doxysubsubsection{\texorpdfstring{LoadScene()}{LoadScene()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Scene\+Manager\+::\+Load\+Scene (\begin{DoxyParamCaption}\item[{std\+::string}]{scene\+Name }\end{DoxyParamCaption})}
+
+Load a scene by scene\+Name, 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em scene\+Name} & The name of the scene to load, \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_scene_manager_a678fa5b992f03a35c092dd2c2c6b035c}\label{class_scene_manager_a678fa5b992f03a35c092dd2c2c6b035c}} 
+\index{SceneManager@{SceneManager}!LoadSceneByPath@{LoadSceneByPath}}
+\index{LoadSceneByPath@{LoadSceneByPath}!SceneManager@{SceneManager}}
+\doxysubsubsection{\texorpdfstring{LoadSceneByPath()}{LoadSceneByPath()}}
+{\footnotesize\ttfamily void Scene\+Manager\+::\+Load\+Scene\+By\+Path (\begin{DoxyParamCaption}\item[{std\+::string}]{path }\end{DoxyParamCaption})}
+
+Load a scene by file path. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em path} & The file path of the scene, including scene file. e.\+g\+: ../\+Assets/\+Scenes/\+Level1.filthyscene . \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_scene_manager_acebd030174731c450074071ec807a8b0}\label{class_scene_manager_acebd030174731c450074071ec807a8b0}} 
+\index{SceneManager@{SceneManager}!LoadSceneByPathNoSave@{LoadSceneByPathNoSave}}
+\index{LoadSceneByPathNoSave@{LoadSceneByPathNoSave}!SceneManager@{SceneManager}}
+\doxysubsubsection{\texorpdfstring{LoadSceneByPathNoSave()}{LoadSceneByPathNoSave()}}
+{\footnotesize\ttfamily void Scene\+Manager\+::\+Load\+Scene\+By\+Path\+No\+Save (\begin{DoxyParamCaption}\item[{std\+::string}]{path }\end{DoxyParamCaption})}
+
+Load a scene by file path, but D\+O\+ES N\+OT save the previous scene!. When transitioning from one scene to the next in-\/game, you don\textquotesingle{}t want to save all the dead enemies in the last scene to disk. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em path} & The file path of the scene, including scene file. e.\+g\+: ../\+Assets/\+Scenes/\+Level1.filthyscene . \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_scene_manager_aae054e939e8220c2735d2b5e29dc814d}\label{class_scene_manager_aae054e939e8220c2735d2b5e29dc814d}} 
+\index{SceneManager@{SceneManager}!LoadSceneNoSave@{LoadSceneNoSave}}
+\index{LoadSceneNoSave@{LoadSceneNoSave}!SceneManager@{SceneManager}}
+\doxysubsubsection{\texorpdfstring{LoadSceneNoSave()}{LoadSceneNoSave()}}
+{\footnotesize\ttfamily void Scene\+Manager\+::\+Load\+Scene\+No\+Save (\begin{DoxyParamCaption}\item[{std\+::string}]{scene\+Name }\end{DoxyParamCaption})}
+
+Load a scene by scene\+Name, but D\+O\+ES N\+OT save the previous scene!. When transitioning from one scene to the next in-\/game, you don\textquotesingle{}t want to save all the dead enemies in the last scene to disk. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em path} & The name of the scene. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_scene_manager_a78e75b349e9467e32ee0199e16d06a07}\label{class_scene_manager_a78e75b349e9467e32ee0199e16d06a07}} 
+\index{SceneManager@{SceneManager}!SaveScene@{SaveScene}}
+\index{SaveScene@{SaveScene}!SceneManager@{SceneManager}}
+\doxysubsubsection{\texorpdfstring{SaveScene()}{SaveScene()}}
+{\footnotesize\ttfamily void Scene\+Manager\+::\+Save\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Saves the current scene, and reloads it to apply changes. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_scene_manager_a61fb6deaad8c240b54833caf36c1f19a}\label{class_scene_manager_a61fb6deaad8c240b54833caf36c1f19a}} 
+\index{SceneManager@{SceneManager}!currentScene@{currentScene}}
+\index{currentScene@{currentScene}!SceneManager@{SceneManager}}
+\doxysubsubsection{\texorpdfstring{currentScene}{currentScene}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_scene}{Scene}}$\ast$ Scene\+Manager\+::current\+Scene\hspace{0.3cm}{\ttfamily [private]}}
+
+Reference to the current \mbox{\hyperlink{class_scene}{Scene}}. \mbox{\Hypertarget{class_scene_manager_a650934dac9ec9d77541c1ac46577f0ee}\label{class_scene_manager_a650934dac9ec9d77541c1ac46577f0ee}} 
+\index{SceneManager@{SceneManager}!eventStore@{eventStore}}
+\index{eventStore@{eventStore}!SceneManager@{SceneManager}}
+\doxysubsubsection{\texorpdfstring{eventStore}{eventStore}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_event}{Event}}$\ast$ Scene\+Manager\+::event\+Store\hspace{0.3cm}{\ttfamily [private]}}
+
+The event being processed this frame. \mbox{\Hypertarget{class_scene_manager_a0deb8915a4292005a5295e9e1a6bb63d}\label{class_scene_manager_a0deb8915a4292005a5295e9e1a6bb63d}} 
+\index{SceneManager@{SceneManager}!loadedScenes@{loadedScenes}}
+\index{loadedScenes@{loadedScenes}!SceneManager@{SceneManager}}
+\doxysubsubsection{\texorpdfstring{loadedScenes}{loadedScenes}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, \mbox{\hyperlink{class_scene}{Scene}}$\ast$$>$ Scene\+Manager\+::loaded\+Scenes\hspace{0.3cm}{\ttfamily [private]}}
+
+A hash map of the scenes which have been loaded, to save on load time. \mbox{\Hypertarget{class_scene_manager_ae1a7404139d58720072d1fea8e869d16}\label{class_scene_manager_ae1a7404139d58720072d1fea8e869d16}} 
+\index{SceneManager@{SceneManager}!mNextBuildIndex@{mNextBuildIndex}}
+\index{mNextBuildIndex@{mNextBuildIndex}!SceneManager@{SceneManager}}
+\doxysubsubsection{\texorpdfstring{mNextBuildIndex}{mNextBuildIndex}}
+{\footnotesize\ttfamily int Scene\+Manager\+::m\+Next\+Build\+Index\hspace{0.3cm}{\ttfamily [private]}}
+
+Int for what the next build index is when adding scenes to the build list. \mbox{\Hypertarget{class_scene_manager_a6cf8d2575c33e89184ebe52b4f78689f}\label{class_scene_manager_a6cf8d2575c33e89184ebe52b4f78689f}} 
+\index{SceneManager@{SceneManager}!mScenesInBuild@{mScenesInBuild}}
+\index{mScenesInBuild@{mScenesInBuild}!SceneManager@{SceneManager}}
+\doxysubsubsection{\texorpdfstring{mScenesInBuild}{mScenesInBuild}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{class_scene}{Scene}}$\ast$$>$ Scene\+Manager\+::m\+Scenes\+In\+Build\hspace{0.3cm}{\ttfamily [private]}}
+
+A vector of Scenes that are in the game. \mbox{\Hypertarget{class_scene_manager_a6dc0e6f31119367b6e0cd45ae063f782}\label{class_scene_manager_a6dc0e6f31119367b6e0cd45ae063f782}} 
+\index{SceneManager@{SceneManager}!sInstance@{sInstance}}
+\index{sInstance@{sInstance}!SceneManager@{SceneManager}}
+\doxysubsubsection{\texorpdfstring{sInstance}{sInstance}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_scene_manager}{Scene\+Manager}} $\ast$ Scene\+Manager\+::s\+Instance = N\+U\+LL\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+Static instance of the \mbox{\hyperlink{class_scene_manager}{Scene\+Manager}} class. 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

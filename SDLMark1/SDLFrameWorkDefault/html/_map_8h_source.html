@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: Map.h Source File</title>
+<title>The Filthy Engine: Map.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">My Project
+   <div id="projectname">The Filthy Engine
    </div>
   </td>
  </tr>
@@ -68,21 +68,29 @@ $(function() {
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno"><a class="line" href="class_map.html">    4</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_map.html">Map</a></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;{</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    std::vector&lt;std::string&gt; mapTileData;</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    std::vector&lt;std::string&gt; mapCollisionData;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    std::vector&lt;std::string&gt; mapEntityData;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    std::string tileSet;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="class_map.html">Map</a>();</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    ~<a class="code" href="class_map.html">Map</a>();</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordtype">bool</span> MapLoaded();</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;};</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="class_map.html">   21</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_map.html">Map</a></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;{</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="class_map.html#a966c959908d016ce9594e7429e76aa5d">   25</a></span>&#160;    std::vector&lt;std::string&gt; <a class="code" href="class_map.html#a966c959908d016ce9594e7429e76aa5d">mapTileData</a>; </div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="class_map.html#a85d0395e1c06504d93b104d560523e0b">   30</a></span>&#160;    std::vector&lt;std::string&gt; <a class="code" href="class_map.html#a85d0395e1c06504d93b104d560523e0b">mapCollisionData</a>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="class_map.html#a629588d327b100c034d5ed4f88743d8f">   32</a></span>&#160;    std::string <a class="code" href="class_map.html#a629588d327b100c034d5ed4f88743d8f">filePath</a>; </div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="class_map.html#a26f35d519e6fc86f605ded7de25de86e">   34</a></span>&#160;    std::string <a class="code" href="class_map.html#a26f35d519e6fc86f605ded7de25de86e">tileSet</a>; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="class_map.html#a0f5ad0fd4563497b4214038cbca8b582">Map</a>();  </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="class_map.html#aa403fbe09394ccf39747588f5168e3b2">~Map</a>(); </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_map.html#ac4007b317aea62e21dc95e06d2a70702">MapLoaded</a>();</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;};</div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclass_map_html"><div class="ttname"><a href="class_map.html">Map</a></div><div class="ttdef"><b>Definition:</b> Map.h:4</div></div>
+<div class="ttc" id="aclass_map_html_a0f5ad0fd4563497b4214038cbca8b582"><div class="ttname"><a href="class_map.html#a0f5ad0fd4563497b4214038cbca8b582">Map::Map</a></div><div class="ttdeci">Map()</div><div class="ttdef"><b>Definition:</b> Map.cpp:4</div></div>
+<div class="ttc" id="aclass_map_html_a26f35d519e6fc86f605ded7de25de86e"><div class="ttname"><a href="class_map.html#a26f35d519e6fc86f605ded7de25de86e">Map::tileSet</a></div><div class="ttdeci">std::string tileSet</div><div class="ttdef"><b>Definition:</b> Map.h:34</div></div>
+<div class="ttc" id="aclass_map_html_a85d0395e1c06504d93b104d560523e0b"><div class="ttname"><a href="class_map.html#a85d0395e1c06504d93b104d560523e0b">Map::mapCollisionData</a></div><div class="ttdeci">std::vector&lt; std::string &gt; mapCollisionData</div><div class="ttdef"><b>Definition:</b> Map.h:30</div></div>
+<div class="ttc" id="aclass_map_html_aa403fbe09394ccf39747588f5168e3b2"><div class="ttname"><a href="class_map.html#aa403fbe09394ccf39747588f5168e3b2">Map::~Map</a></div><div class="ttdeci">~Map()</div><div class="ttdef"><b>Definition:</b> Map.cpp:6</div></div>
+<div class="ttc" id="aclass_map_html_ac4007b317aea62e21dc95e06d2a70702"><div class="ttname"><a href="class_map.html#ac4007b317aea62e21dc95e06d2a70702">Map::MapLoaded</a></div><div class="ttdeci">bool MapLoaded()</div><div class="ttdef"><b>Definition:</b> Map.cpp:8</div></div>
+<div class="ttc" id="aclass_map_html_a629588d327b100c034d5ed4f88743d8f"><div class="ttname"><a href="class_map.html#a629588d327b100c034d5ed4f88743d8f">Map::filePath</a></div><div class="ttdeci">std::string filePath</div><div class="ttdef"><b>Definition:</b> Map.h:32</div></div>
+<div class="ttc" id="aclass_map_html_a966c959908d016ce9594e7429e76aa5d"><div class="ttname"><a href="class_map.html#a966c959908d016ce9594e7429e76aa5d">Map::mapTileData</a></div><div class="ttdeci">std::vector&lt; std::string &gt; mapTileData</div><div class="ttdef"><b>Definition:</b> Map.h:25</div></div>
+<div class="ttc" id="aclass_map_html"><div class="ttname"><a href="class_map.html">Map</a></div><div class="ttdef"><b>Definition:</b> Map.h:21</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

@@ -1,27 +1,176 @@
 \hypertarget{class_resource_manager}{}\doxysection{Resource\+Manager Class Reference}
 \label{class_resource_manager}\index{ResourceManager@{ResourceManager}}
+
+
+{\ttfamily \#include $<$Resource\+Manager.\+h$>$}
+
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_resource_manager_ad997f36a23675d8176acd0d26ffd6114}\label{class_resource_manager_ad997f36a23675d8176acd0d26ffd6114}} 
-\mbox{\hyperlink{struct_bit_map_pack}{Bit\+Map\+Pack}} {\bfseries Load\+Bit\+Map} (std\+::string file\+Path, bool transparency)
+\mbox{\hyperlink{struct_bit_map_pack}{Bit\+Map\+Pack}} \mbox{\hyperlink{class_resource_manager_ad997f36a23675d8176acd0d26ffd6114}{Load\+Bit\+Map}} (std\+::string file\+Path, bool transparency)
 \item 
-\mbox{\Hypertarget{class_resource_manager_a76f68d22493ba42e0264eafe56abf46d}\label{class_resource_manager_a76f68d22493ba42e0264eafe56abf46d}} 
-std\+::vector$<$ std\+::string $>$ {\bfseries Load\+Map} (std\+::string file\+Path)
+bool \mbox{\hyperlink{class_resource_manager_a7baf26fe2d1a63e53f8fc162c9b1a802}{test\+Load}} (std\+::string file\+Path)
 \item 
-\mbox{\Hypertarget{class_resource_manager_acc03f41b13e08478e074c52a0bfeaf81}\label{class_resource_manager_acc03f41b13e08478e074c52a0bfeaf81}} 
-void {\bfseries release} ()
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{class_resource_manager_a76f68d22493ba42e0264eafe56abf46d}{Load\+Map}} (std\+::string file\+Path)
+\item 
+void \mbox{\hyperlink{class_resource_manager_acc03f41b13e08478e074c52a0bfeaf81}{release}} ()
 \end{DoxyCompactItemize}
 \doxysubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_resource_manager_a63d542726087c4f2ae121a05060a15e9}\label{class_resource_manager_a63d542726087c4f2ae121a05060a15e9}} 
-static \mbox{\hyperlink{class_resource_manager}{Resource\+Manager}} $\ast$ {\bfseries Instance} ()
+static \mbox{\hyperlink{class_resource_manager}{Resource\+Manager}} $\ast$ \mbox{\hyperlink{class_resource_manager_a63d542726087c4f2ae121a05060a15e9}{Instance}} ()
 \item 
-\mbox{\Hypertarget{class_resource_manager_af66b8b277afd86cdfd301ff5d4bbe3be}\label{class_resource_manager_af66b8b277afd86cdfd301ff5d4bbe3be}} 
-static \mbox{\hyperlink{class_resource_manager}{Resource\+Manager}} $\ast$ {\bfseries Instance} (S\+D\+L\+\_\+\+Renderer $\ast$renderer)
+static \mbox{\hyperlink{class_resource_manager}{Resource\+Manager}} $\ast$ \mbox{\hyperlink{class_resource_manager_af66b8b277afd86cdfd301ff5d4bbe3be}{Instance}} (S\+D\+L\+\_\+\+Renderer $\ast$renderer)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_resource_manager_aea7749988b7060e7ef9e4631e8c88746}{check\+Hash\+Map}} (std\+::string key)
+\item 
+\mbox{\hyperlink{class_resource_manager_a6ac459ffb9aa26161b50c0b38f828b3a}{Resource\+Manager}} (S\+D\+L\+\_\+\+Renderer $\ast$renderer)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ifstream \mbox{\hyperlink{class_resource_manager_acf2d1e9dd1fc552ee5523f548d093068}{in\+File}}
+\item 
+S\+D\+L\+\_\+\+Renderer $\ast$ \mbox{\hyperlink{class_resource_manager_adb2bca076a201aabcd7fded936338d74}{m\+\_\+p\+Renderer}}
+\item 
+std\+::unordered\+\_\+map$<$ std\+::string, \mbox{\hyperlink{struct_bit_map_pack}{Bit\+Map\+Pack}} $>$ \mbox{\hyperlink{class_resource_manager_a3737858f6795bd9e9ae10f5d324923d2}{m\+\_\+texture\+Hash\+Map}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_resource_manager}{Resource\+Manager}} $\ast$ \mbox{\hyperlink{class_resource_manager_a2e8e8b86e865a57ba0e126aa0860788d}{s\+Instance}} = N\+U\+LL
 \end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+The Resouce Manager is responsible for almost all of the resources used by the game. It prevents the loading of textures that have already been loaded. It also loads Maps and Scenes. Loading the same scene twice is handled by \mbox{\hyperlink{class_scene_manager}{Scene\+Manager}}. Audio is handled by the \mbox{\hyperlink{class_audio_manager}{Audio\+Manager}}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_resource_manager_a6ac459ffb9aa26161b50c0b38f828b3a}\label{class_resource_manager_a6ac459ffb9aa26161b50c0b38f828b3a}} 
+\index{ResourceManager@{ResourceManager}!ResourceManager@{ResourceManager}}
+\index{ResourceManager@{ResourceManager}!ResourceManager@{ResourceManager}}
+\doxysubsubsection{\texorpdfstring{ResourceManager()}{ResourceManager()}}
+{\footnotesize\ttfamily Resource\+Manager\+::\+Resource\+Manager (\begin{DoxyParamCaption}\item[{S\+D\+L\+\_\+\+Renderer $\ast$}]{renderer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Constructs a Resource Manager with a renderer. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_resource_manager_aea7749988b7060e7ef9e4631e8c88746}\label{class_resource_manager_aea7749988b7060e7ef9e4631e8c88746}} 
+\index{ResourceManager@{ResourceManager}!checkHashMap@{checkHashMap}}
+\index{checkHashMap@{checkHashMap}!ResourceManager@{ResourceManager}}
+\doxysubsubsection{\texorpdfstring{checkHashMap()}{checkHashMap()}}
+{\footnotesize\ttfamily bool Resource\+Manager\+::check\+Hash\+Map (\begin{DoxyParamCaption}\item[{std\+::string}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+A QoL function that checks if the audio\+Hash\+Map has a certain key. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em key} & The key to search for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Whether or not the key was found in the audio\+Hash\+Map. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_resource_manager_a63d542726087c4f2ae121a05060a15e9}\label{class_resource_manager_a63d542726087c4f2ae121a05060a15e9}} 
+\index{ResourceManager@{ResourceManager}!Instance@{Instance}}
+\index{Instance@{Instance}!ResourceManager@{ResourceManager}}
+\doxysubsubsection{\texorpdfstring{Instance()}{Instance()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_resource_manager}{Resource\+Manager}} $\ast$ Resource\+Manager\+::\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Method for getting an instance of \mbox{\hyperlink{class_resource_manager}{Resource\+Manager}}. \mbox{\Hypertarget{class_resource_manager_af66b8b277afd86cdfd301ff5d4bbe3be}\label{class_resource_manager_af66b8b277afd86cdfd301ff5d4bbe3be}} 
+\index{ResourceManager@{ResourceManager}!Instance@{Instance}}
+\index{Instance@{Instance}!ResourceManager@{ResourceManager}}
+\doxysubsubsection{\texorpdfstring{Instance()}{Instance()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_resource_manager}{Resource\+Manager}} $\ast$ Resource\+Manager\+::\+Instance (\begin{DoxyParamCaption}\item[{S\+D\+L\+\_\+\+Renderer $\ast$}]{renderer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Method for getting an instance of \mbox{\hyperlink{class_resource_manager}{Resource\+Manager}}. \begin{DoxyNote}{Note}
+This M\+U\+ST be called before any call to \mbox{\hyperlink{class_resource_manager_a63d542726087c4f2ae121a05060a15e9}{Instance()}} as the \mbox{\hyperlink{class_resource_manager}{Resource\+Manager}} has be to initialized with a \mbox{\hyperlink{class_renderer}{Renderer}}. 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_resource_manager_ad997f36a23675d8176acd0d26ffd6114}\label{class_resource_manager_ad997f36a23675d8176acd0d26ffd6114}} 
+\index{ResourceManager@{ResourceManager}!LoadBitMap@{LoadBitMap}}
+\index{LoadBitMap@{LoadBitMap}!ResourceManager@{ResourceManager}}
+\doxysubsubsection{\texorpdfstring{LoadBitMap()}{LoadBitMap()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_bit_map_pack}{Bit\+Map\+Pack}} Resource\+Manager\+::\+Load\+Bit\+Map (\begin{DoxyParamCaption}\item[{std\+::string}]{file\+Path,  }\item[{bool}]{transparency }\end{DoxyParamCaption})}
+
+Loads a bit map from a file. Prevents loading the same bit map twice by checking if it has already been loaded into the texture hash map.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em file\+Path} & The file path of the bitmap you want to load, including filename. \\
+\hline
+\mbox{\texttt{ in}}  & {\em transparency} & Whether or not the bitmap file uses transparency. Transparency value is (255, 0, 255, 255) or magenta.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The \mbox{\hyperlink{struct_bit_map_pack}{Bit\+Map\+Pack}} that has been loaded either from file or from the texture hash map. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_resource_manager_a76f68d22493ba42e0264eafe56abf46d}\label{class_resource_manager_a76f68d22493ba42e0264eafe56abf46d}} 
+\index{ResourceManager@{ResourceManager}!LoadMap@{LoadMap}}
+\index{LoadMap@{LoadMap}!ResourceManager@{ResourceManager}}
+\doxysubsubsection{\texorpdfstring{LoadMap()}{LoadMap()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ Resource\+Manager\+::\+Load\+Map (\begin{DoxyParamCaption}\item[{std\+::string}]{file\+Path }\end{DoxyParamCaption})}
+
+Loads a map from a given file\+Path.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em file\+Path} & The file path of the map.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector of strings representing the map. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_resource_manager_acc03f41b13e08478e074c52a0bfeaf81}\label{class_resource_manager_acc03f41b13e08478e074c52a0bfeaf81}} 
+\index{ResourceManager@{ResourceManager}!release@{release}}
+\index{release@{release}!ResourceManager@{ResourceManager}}
+\doxysubsubsection{\texorpdfstring{release()}{release()}}
+{\footnotesize\ttfamily void Resource\+Manager\+::release (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Cleans up the Instance of all the pointers it holds on to. Specifically, the texture hash map has lots of pointers to M\+Bs of data. \mbox{\Hypertarget{class_resource_manager_a7baf26fe2d1a63e53f8fc162c9b1a802}\label{class_resource_manager_a7baf26fe2d1a63e53f8fc162c9b1a802}} 
+\index{ResourceManager@{ResourceManager}!testLoad@{testLoad}}
+\index{testLoad@{testLoad}!ResourceManager@{ResourceManager}}
+\doxysubsubsection{\texorpdfstring{testLoad()}{testLoad()}}
+{\footnotesize\ttfamily bool Resource\+Manager\+::test\+Load (\begin{DoxyParamCaption}\item[{std\+::string}]{file\+Path }\end{DoxyParamCaption})}
+
+A function used by the Inspector to check if a file path can be loaded.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em file\+Path} & The file path to test loading.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Whether or not the given file path can be loaded. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_resource_manager_acf2d1e9dd1fc552ee5523f548d093068}\label{class_resource_manager_acf2d1e9dd1fc552ee5523f548d093068}} 
+\index{ResourceManager@{ResourceManager}!inFile@{inFile}}
+\index{inFile@{inFile}!ResourceManager@{ResourceManager}}
+\doxysubsubsection{\texorpdfstring{inFile}{inFile}}
+{\footnotesize\ttfamily std\+::ifstream Resource\+Manager\+::in\+File\hspace{0.3cm}{\ttfamily [private]}}
+
+A stack allocated std\+::ifstream to save on memory allocations when loading new files. \mbox{\Hypertarget{class_resource_manager_adb2bca076a201aabcd7fded936338d74}\label{class_resource_manager_adb2bca076a201aabcd7fded936338d74}} 
+\index{ResourceManager@{ResourceManager}!m\_pRenderer@{m\_pRenderer}}
+\index{m\_pRenderer@{m\_pRenderer}!ResourceManager@{ResourceManager}}
+\doxysubsubsection{\texorpdfstring{m\_pRenderer}{m\_pRenderer}}
+{\footnotesize\ttfamily S\+D\+L\+\_\+\+Renderer$\ast$ Resource\+Manager\+::m\+\_\+p\+Renderer\hspace{0.3cm}{\ttfamily [private]}}
+
+A reference to the renderer. \mbox{\Hypertarget{class_resource_manager_a3737858f6795bd9e9ae10f5d324923d2}\label{class_resource_manager_a3737858f6795bd9e9ae10f5d324923d2}} 
+\index{ResourceManager@{ResourceManager}!m\_textureHashMap@{m\_textureHashMap}}
+\index{m\_textureHashMap@{m\_textureHashMap}!ResourceManager@{ResourceManager}}
+\doxysubsubsection{\texorpdfstring{m\_textureHashMap}{m\_textureHashMap}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, \mbox{\hyperlink{struct_bit_map_pack}{Bit\+Map\+Pack}}$>$ Resource\+Manager\+::m\+\_\+texture\+Hash\+Map\hspace{0.3cm}{\ttfamily [private]}}
+
+The hash map where all game textures are stored. \mbox{\Hypertarget{class_resource_manager_a2e8e8b86e865a57ba0e126aa0860788d}\label{class_resource_manager_a2e8e8b86e865a57ba0e126aa0860788d}} 
+\index{ResourceManager@{ResourceManager}!sInstance@{sInstance}}
+\index{sInstance@{sInstance}!ResourceManager@{ResourceManager}}
+\doxysubsubsection{\texorpdfstring{sInstance}{sInstance}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_resource_manager}{Resource\+Manager}} $\ast$ Resource\+Manager\+::s\+Instance = N\+U\+LL\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+Static instance of the \mbox{\hyperlink{class_resource_manager}{Resource\+Manager}} class. 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

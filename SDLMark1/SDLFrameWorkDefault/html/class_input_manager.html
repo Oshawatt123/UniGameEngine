@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: InputManager Class Reference</title>
+<title>The Filthy Engine: InputManager Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">My Project
+   <div id="projectname">The Filthy Engine
    </div>
   </td>
  </tr>
@@ -65,6 +65,8 @@ $(function() {
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="class_input_manager-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">InputManager Class Reference</div>  </div>
@@ -73,40 +75,377 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a11fa034273f286b5ac9ae0ee29c9a6cc"><td class="memItemLeft" align="right" valign="top"><a id="a11fa034273f286b5ac9ae0ee29c9a6cc"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>KeyDown</b> (SDL_Scancode scanCode)</td></tr>
+<tr class="memitem:a11fa034273f286b5ac9ae0ee29c9a6cc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_input_manager.html#a11fa034273f286b5ac9ae0ee29c9a6cc">KeyDown</a> (SDL_Scancode scanCode)</td></tr>
 <tr class="separator:a11fa034273f286b5ac9ae0ee29c9a6cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3c5e49a8cec0429394e0821dbd937d27"><td class="memItemLeft" align="right" valign="top"><a id="a3c5e49a8cec0429394e0821dbd937d27"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>WindowQuit</b> ()</td></tr>
+<tr class="memitem:a9a0f19384d5b88370486e954e940cbce"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_input_manager.html#a9a0f19384d5b88370486e954e940cbce">MouseDown</a> (int mouseButton)</td></tr>
+<tr class="separator:a9a0f19384d5b88370486e954e940cbce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c5e49a8cec0429394e0821dbd937d27"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_input_manager.html#a3c5e49a8cec0429394e0821dbd937d27">WindowQuit</a> ()</td></tr>
 <tr class="separator:a3c5e49a8cec0429394e0821dbd937d27"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa5480931dba2720e7d80dd00a53adae0"><td class="memItemLeft" align="right" valign="top"><a id="aa5480931dba2720e7d80dd00a53adae0"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Update</b> ()</td></tr>
+<tr class="memitem:aa5480931dba2720e7d80dd00a53adae0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_input_manager.html#aa5480931dba2720e7d80dd00a53adae0">Update</a> ()</td></tr>
 <tr class="separator:aa5480931dba2720e7d80dd00a53adae0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a53a27e2e25bec96173a4c7532515d10e"><td class="memItemLeft" align="right" valign="top"><a id="a53a27e2e25bec96173a4c7532515d10e"></a>
-static <a class="el" href="class_input_manager.html">InputManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>Instance</b> ()</td></tr>
+<tr class="memitem:a53a27e2e25bec96173a4c7532515d10e"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_input_manager.html">InputManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_input_manager.html#a53a27e2e25bec96173a4c7532515d10e">Instance</a> ()</td></tr>
 <tr class="separator:a53a27e2e25bec96173a4c7532515d10e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01789f6350560c18a10f01847a200d39"><td class="memItemLeft" align="right" valign="top"><a id="a01789f6350560c18a10f01847a200d39"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>Release</b> ()</td></tr>
+<tr class="memitem:a01789f6350560c18a10f01847a200d39"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_input_manager.html#a01789f6350560c18a10f01847a200d39">Release</a> ()</td></tr>
 <tr class="separator:a01789f6350560c18a10f01847a200d39"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:ad3f6c633a8edf5d19ee43f1b27de1963"><td class="memItemLeft" align="right" valign="top"><a id="ad3f6c633a8edf5d19ee43f1b27de1963"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>mouseButtons</b></td></tr>
+<tr class="memitem:ad3f6c633a8edf5d19ee43f1b27de1963"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_input_manager.html#ad3f6c633a8edf5d19ee43f1b27de1963">mouseButtons</a></td></tr>
 <tr class="separator:ad3f6c633a8edf5d19ee43f1b27de1963"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a29fddcf9d741e4de04492ad76b7cb3af"><td class="memItemLeft" align="right" valign="top"><a id="a29fddcf9d741e4de04492ad76b7cb3af"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>mouseX</b></td></tr>
 <tr class="separator:a29fddcf9d741e4de04492ad76b7cb3af"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afb189c58dd5ee470a3202c685c5c7f1e"><td class="memItemLeft" align="right" valign="top"><a id="afb189c58dd5ee470a3202c685c5c7f1e"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>mouseY</b></td></tr>
+<tr class="memitem:afb189c58dd5ee470a3202c685c5c7f1e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_input_manager.html#afb189c58dd5ee470a3202c685c5c7f1e">mouseY</a></td></tr>
 <tr class="separator:afb189c58dd5ee470a3202c685c5c7f1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aca3de515087c5470455be0ebee95b233"><td class="memItemLeft" align="right" valign="top"><a id="aca3de515087c5470455be0ebee95b233"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>mouseWheel</b></td></tr>
+<tr class="memitem:aca3de515087c5470455be0ebee95b233"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_input_manager.html#aca3de515087c5470455be0ebee95b233">mouseWheel</a></td></tr>
 <tr class="separator:aca3de515087c5470455be0ebee95b233"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0259bc21815ecb65f37c14a0a6faf0f9"><td class="memItemLeft" align="right" valign="top"><a id="a0259bc21815ecb65f37c14a0a6faf0f9"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>mouseDeltaX</b></td></tr>
+<tr class="separator:a0259bc21815ecb65f37c14a0a6faf0f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52db1b39ec75b95a4b3c3a098bb942cc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_input_manager.html#a52db1b39ec75b95a4b3c3a098bb942cc">mouseDeltaY</a></td></tr>
+<tr class="separator:a52db1b39ec75b95a4b3c3a098bb942cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a74e53775b787fa379ccd290a5fa1c8ee"><td class="memItemLeft" align="right" valign="top">const Uint8 *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_input_manager.html#a74e53775b787fa379ccd290a5fa1c8ee">mKeyBoardStates</a></td></tr>
+<tr class="separator:a74e53775b787fa379ccd290a5fa1c8ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8dbfcb4c60f03e53f1e0819ab60a3a9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_input_manager.html#af8dbfcb4c60f03e53f1e0819ab60a3a9">WindowIsQuit</a></td></tr>
+<tr class="separator:af8dbfcb4c60f03e53f1e0819ab60a3a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3df5dade81ef9b3291cd6b65667b03c5"><td class="memItemLeft" align="right" valign="top"><a id="a3df5dade81ef9b3291cd6b65667b03c5"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>prevMouseX</b></td></tr>
+<tr class="separator:a3df5dade81ef9b3291cd6b65667b03c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58ed5503ea1eebb374262798bbdf2279"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_input_manager.html#a58ed5503ea1eebb374262798bbdf2279">prevMouseY</a></td></tr>
+<tr class="separator:a58ed5503ea1eebb374262798bbdf2279"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf52ab8e346b1ba851c56206af4fbd24"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_input_manager.html#adf52ab8e346b1ba851c56206af4fbd24">prevMouseButtons</a></td></tr>
+<tr class="separator:adf52ab8e346b1ba851c56206af4fbd24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:af98a6a009af03695fd3b809a60314299"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_input_manager.html">InputManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_input_manager.html#af98a6a009af03695fd3b809a60314299">sInstance</a> = NULL</td></tr>
+<tr class="separator:af98a6a009af03695fd3b809a60314299"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a53a27e2e25bec96173a4c7532515d10e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53a27e2e25bec96173a4c7532515d10e">&#9670;&nbsp;</a></span>Instance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_input_manager.html">InputManager</a> * InputManager::Instance </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Method for getting an instance of <a class="el" href="class_time.html">Time</a>. </p>
+
+</div>
+</div>
+<a id="a11fa034273f286b5ac9ae0ee29c9a6cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11fa034273f286b5ac9ae0ee29c9a6cc">&#9670;&nbsp;</a></span>KeyDown()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool InputManager::KeyDown </td>
+          <td>(</td>
+          <td class="paramtype">SDL_Scancode&#160;</td>
+          <td class="paramname"><em>scanCode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Checks whether a specific key has been pressed.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">scanCode</td><td>The SDL_Scancode for the key we want to check has been pressed.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>whether or not the key has been pressed. </dd></dl>
+
+</div>
+</div>
+<a id="a9a0f19384d5b88370486e954e940cbce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a0f19384d5b88370486e954e940cbce">&#9670;&nbsp;</a></span>MouseDown()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool InputManager::MouseDown </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mouseButton</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Checks whether a specific mouse button has been pressed.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">mouseButton</td><td>The mouse button that we want to check. 0 for left, 1 for right, 2 for middle.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>whether or not the mouse button has been pressed. </dd></dl>
+
+</div>
+</div>
+<a id="a01789f6350560c18a10f01847a200d39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01789f6350560c18a10f01847a200d39">&#9670;&nbsp;</a></span>Release()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void InputManager::Release </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Cleans up the Input Manager </p>
+
+</div>
+</div>
+<a id="aa5480931dba2720e7d80dd00a53adae0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5480931dba2720e7d80dd00a53adae0">&#9670;&nbsp;</a></span>Update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void InputManager::Update </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Updates the Input Manager.</p>
+<p>Here, all the input is gotten from SDL. Keyboard is updated, mouse input is updated and mouse delta is calculated. </p>
+
+</div>
+</div>
+<a id="a3c5e49a8cec0429394e0821dbd937d27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c5e49a8cec0429394e0821dbd937d27">&#9670;&nbsp;</a></span>WindowQuit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool InputManager::WindowQuit </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Getter function for if the window has been closed.</p>
+<dl class="section return"><dt>Returns</dt><dd>Whether or not the window has been closed. </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a74e53775b787fa379ccd290a5fa1c8ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74e53775b787fa379ccd290a5fa1c8ee">&#9670;&nbsp;</a></span>mKeyBoardStates</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const Uint8* InputManager::mKeyBoardStates</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>the current state of the keyboard this frame, stored as an integer for bitmasking. </p>
+
+</div>
+</div>
+<a id="ad3f6c633a8edf5d19ee43f1b27de1963"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3f6c633a8edf5d19ee43f1b27de1963">&#9670;&nbsp;</a></span>mouseButtons</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int InputManager::mouseButtons</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>the current state of the mouse buttons this frame. </p>
+
+</div>
+</div>
+<a id="a52db1b39ec75b95a4b3c3a098bb942cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52db1b39ec75b95a4b3c3a098bb942cc">&#9670;&nbsp;</a></span>mouseDeltaY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int InputManager::mouseDeltaY</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>the calculated mouse delta movement for this frame. </p>
+
+</div>
+</div>
+<a id="aca3de515087c5470455be0ebee95b233"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca3de515087c5470455be0ebee95b233">&#9670;&nbsp;</a></span>mouseWheel</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int InputManager::mouseWheel</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>the current state of the mouse wheel. </p>
+
+</div>
+</div>
+<a id="afb189c58dd5ee470a3202c685c5c7f1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb189c58dd5ee470a3202c685c5c7f1e">&#9670;&nbsp;</a></span>mouseY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int InputManager::mouseY</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>the current x and y positions of the mouse. </p>
+
+</div>
+</div>
+<a id="adf52ab8e346b1ba851c56206af4fbd24"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf52ab8e346b1ba851c56206af4fbd24">&#9670;&nbsp;</a></span>prevMouseButtons</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int InputManager::prevMouseButtons</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Used for calculating mouse press down and up. </p>
+
+</div>
+</div>
+<a id="a58ed5503ea1eebb374262798bbdf2279"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58ed5503ea1eebb374262798bbdf2279">&#9670;&nbsp;</a></span>prevMouseY</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int InputManager::prevMouseY</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Used for calculated mouse delta movement. </p>
+
+</div>
+</div>
+<a id="af98a6a009af03695fd3b809a60314299"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af98a6a009af03695fd3b809a60314299">&#9670;&nbsp;</a></span>sInstance</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_input_manager.html">InputManager</a> * InputManager::sInstance = NULL</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Static instance of the <a class="el" href="class_time.html">Time</a> class. </p>
+
+</div>
+</div>
+<a id="af8dbfcb4c60f03e53f1e0819ab60a3a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8dbfcb4c60f03e53f1e0819ab60a3a9">&#9670;&nbsp;</a></span>WindowIsQuit</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool InputManager::WindowIsQuit</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>A bool for if the window has been closed. </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="_input_manager_8h_source.html">InputManager.h</a></li>
 <li>InputManager.cpp</li>

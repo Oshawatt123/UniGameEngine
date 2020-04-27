@@ -15,21 +15,167 @@ Inheritance diagram for Sprite\+Component\+:\begin{figure}[H]
 \mbox{\Hypertarget{class_sprite_component_ac50a94a2e8eba4a996852f666718715e}\label{class_sprite_component_ac50a94a2e8eba4a996852f666718715e}} 
 void {\bfseries Init} () override
 \item 
-\mbox{\Hypertarget{class_sprite_component_a6baacb0f33191ffe1b6a6c4650b4078d}\label{class_sprite_component_a6baacb0f33191ffe1b6a6c4650b4078d}} 
-void {\bfseries Tick} () override
+void \mbox{\hyperlink{class_sprite_component_a6baacb0f33191ffe1b6a6c4650b4078d}{Tick}} () override
 \item 
-\mbox{\Hypertarget{class_sprite_component_a04acd897d490a0726a0c7c1e3e1376d5}\label{class_sprite_component_a04acd897d490a0726a0c7c1e3e1376d5}} 
-S\+D\+L\+\_\+\+Texture \& {\bfseries get\+Texture} ()
+void \mbox{\hyperlink{class_sprite_component_a0d576efe03344ead5816fe048310a909}{Editor\+Tick}} () override
 \item 
-\mbox{\Hypertarget{class_sprite_component_a8ec202636d916ef3fae80df8c7c9a6cb}\label{class_sprite_component_a8ec202636d916ef3fae80df8c7c9a6cb}} 
-\mbox{\hyperlink{class_vector2}{Vector2}} {\bfseries get\+Tex\+Dim} ()
+void \mbox{\hyperlink{class_sprite_component_a5159a9c9ca7d026c4a6a0b38b215c6d5}{Joint\+Tick}} ()
+\item 
+S\+D\+L\+\_\+\+Texture \& \mbox{\hyperlink{class_sprite_component_a04acd897d490a0726a0c7c1e3e1376d5}{get\+Texture}} ()
+\item 
+\mbox{\hyperlink{class_vector2}{Vector2}} \mbox{\hyperlink{class_sprite_component_a8ec202636d916ef3fae80df8c7c9a6cb}{get\+Tex\+Dim}} ()
+\item 
+\mbox{\Hypertarget{class_sprite_component_a416fc805efe991583f881ad346eb8e42}\label{class_sprite_component_a416fc805efe991583f881ad346eb8e42}} 
+void {\bfseries Populate\+Inspector} () override
+\item 
+std\+::string \mbox{\hyperlink{class_sprite_component_a4902386a5bf139c7af8d314235f47bc9}{Get\+Save\+Data}} ()
+\item 
+void \mbox{\hyperlink{class_sprite_component_ac8933e6c0606bfe46dff7b74b3b63a4f}{Set\+Index}} (int index)
+\item 
+void \mbox{\hyperlink{class_sprite_component_a81bbc053fb5d40556fcae2dfb34ea7a6}{set\+File\+Path}} (std\+::string file\+Path)
+\item 
+void \mbox{\hyperlink{class_sprite_component_a603603c3752abf9b52a4f7a577b567a1}{Set\+Animated}} (bool \+\_\+animated)
 \end{DoxyCompactItemize}
-\doxysubsection*{Public Attributes}
+\doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_sprite_component_a785f0dd5230137145144794f15558966}\label{class_sprite_component_a785f0dd5230137145144794f15558966}} 
+std\+::string {\bfseries default\+Path} = \char`\"{}../Assets/Sprites/Elvis\+Pretzels.\+bmp\char`\"{}
+\item 
+\mbox{\Hypertarget{class_sprite_component_aabd0605c8c63de8d52a1d522c83e8704}\label{class_sprite_component_aabd0605c8c63de8d52a1d522c83e8704}} 
+std\+::string {\bfseries path\+Buffer}
+\item 
+\mbox{\Hypertarget{class_sprite_component_a59a74214718e4b1aba0c01a4b915029c}\label{class_sprite_component_a59a74214718e4b1aba0c01a4b915029c}} 
+\mbox{\hyperlink{class_position_component}{Position\+Component}} $\ast$ {\bfseries m\+\_\+position\+Component}
+\item 
+\mbox{\Hypertarget{class_sprite_component_a294017fc9525d769aa701d2c9e9e76d2}\label{class_sprite_component_a294017fc9525d769aa701d2c9e9e76d2}} 
+\mbox{\hyperlink{struct_bit_map_pack}{Bit\+Map\+Pack}} {\bfseries m\+\_\+bit\+Map\+Pack}
+\item 
+\mbox{\Hypertarget{class_sprite_component_a57f103df56516e27e279e23f1444b33f}\label{class_sprite_component_a57f103df56516e27e279e23f1444b33f}} 
+int {\bfseries m\+\_\+index} = 0
+\item 
+\mbox{\Hypertarget{class_sprite_component_a9d85fe40395b81fce4d697b20c45aafb}\label{class_sprite_component_a9d85fe40395b81fce4d697b20c45aafb}} 
+int {\bfseries spritesize}
+\item 
+\mbox{\Hypertarget{class_sprite_component_a7fac81c0d052e166607a711c9f13cb25}\label{class_sprite_component_a7fac81c0d052e166607a711c9f13cb25}} 
+float {\bfseries offsetX}
+\item 
+\mbox{\Hypertarget{class_sprite_component_a5e00b8e61d982d7ec9e7bc7da60dda28}\label{class_sprite_component_a5e00b8e61d982d7ec9e7bc7da60dda28}} 
+float {\bfseries offsetY}
+\item 
+\mbox{\Hypertarget{class_sprite_component_aa29641eccdff377e5d0616e9ebfe6c94}\label{class_sprite_component_aa29641eccdff377e5d0616e9ebfe6c94}} 
+bool {\bfseries animated} = false
+\item 
+\mbox{\Hypertarget{class_sprite_component_a1e2ff9a6c45bffd864b6f7190a26b8f3}\label{class_sprite_component_a1e2ff9a6c45bffd864b6f7190a26b8f3}} 
+float {\bfseries animation\+Frame\+Time} = 5
+\item 
+\mbox{\Hypertarget{class_sprite_component_ad2f414fcd6db9d1799751931b332a54d}\label{class_sprite_component_ad2f414fcd6db9d1799751931b332a54d}} 
+float {\bfseries timer}
 \item 
 \mbox{\Hypertarget{class_sprite_component_ac1b01fcd4451fcc7f2b7581660a22ce6}\label{class_sprite_component_ac1b01fcd4451fcc7f2b7581660a22ce6}} 
 std\+::string {\bfseries m\+\_\+file\+Path}
 \end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sprite_component_a0d576efe03344ead5816fe048310a909}\label{class_sprite_component_a0d576efe03344ead5816fe048310a909}} 
+\index{SpriteComponent@{SpriteComponent}!EditorTick@{EditorTick}}
+\index{EditorTick@{EditorTick}!SpriteComponent@{SpriteComponent}}
+\doxysubsubsection{\texorpdfstring{EditorTick()}{EditorTick()}}
+{\footnotesize\ttfamily void Sprite\+Component\+::\+Editor\+Tick (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Base Tick has no behaviour. This is called every frame in game-\/mode. 
+
+Reimplemented from \mbox{\hyperlink{class_component_ad54a5ed6c47801402e457e21723009db}{Component}}.
+
+\mbox{\Hypertarget{class_sprite_component_a4902386a5bf139c7af8d314235f47bc9}\label{class_sprite_component_a4902386a5bf139c7af8d314235f47bc9}} 
+\index{SpriteComponent@{SpriteComponent}!GetSaveData@{GetSaveData}}
+\index{GetSaveData@{GetSaveData}!SpriteComponent@{SpriteComponent}}
+\doxysubsubsection{\texorpdfstring{GetSaveData()}{GetSaveData()}}
+{\footnotesize\ttfamily std\+::string Sprite\+Component\+::\+Get\+Save\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Base Populate\+Inspector has no behaviour. This is used to populate the inspector with editable fields / useful information. 
+
+Reimplemented from \mbox{\hyperlink{class_component_ac67aa475d8d1d08233d893a3d3665e5c}{Component}}.
+
+\mbox{\Hypertarget{class_sprite_component_a8ec202636d916ef3fae80df8c7c9a6cb}\label{class_sprite_component_a8ec202636d916ef3fae80df8c7c9a6cb}} 
+\index{SpriteComponent@{SpriteComponent}!getTexDim@{getTexDim}}
+\index{getTexDim@{getTexDim}!SpriteComponent@{SpriteComponent}}
+\doxysubsubsection{\texorpdfstring{getTexDim()}{getTexDim()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector2}{Vector2}} Sprite\+Component\+::get\+Tex\+Dim (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+QoL function to get the dimensions of the texture.
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_vector2}{Vector2}} of the size of the texture. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_sprite_component_a04acd897d490a0726a0c7c1e3e1376d5}\label{class_sprite_component_a04acd897d490a0726a0c7c1e3e1376d5}} 
+\index{SpriteComponent@{SpriteComponent}!getTexture@{getTexture}}
+\index{getTexture@{getTexture}!SpriteComponent@{SpriteComponent}}
+\doxysubsubsection{\texorpdfstring{getTexture()}{getTexture()}}
+{\footnotesize\ttfamily S\+D\+L\+\_\+\+Texture\& Sprite\+Component\+::get\+Texture (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+QoL function to get the texture of the sprite
+
+\begin{DoxyReturn}{Returns}
+Reference to the texture of the sprite. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_sprite_component_a5159a9c9ca7d026c4a6a0b38b215c6d5}\label{class_sprite_component_a5159a9c9ca7d026c4a6a0b38b215c6d5}} 
+\index{SpriteComponent@{SpriteComponent}!JointTick@{JointTick}}
+\index{JointTick@{JointTick}!SpriteComponent@{SpriteComponent}}
+\doxysubsubsection{\texorpdfstring{JointTick()}{JointTick()}}
+{\footnotesize\ttfamily void Sprite\+Component\+::\+Joint\+Tick (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Used in both Tick and Editor\+Tick. \mbox{\Hypertarget{class_sprite_component_a603603c3752abf9b52a4f7a577b567a1}\label{class_sprite_component_a603603c3752abf9b52a4f7a577b567a1}} 
+\index{SpriteComponent@{SpriteComponent}!SetAnimated@{SetAnimated}}
+\index{SetAnimated@{SetAnimated}!SpriteComponent@{SpriteComponent}}
+\doxysubsubsection{\texorpdfstring{SetAnimated()}{SetAnimated()}}
+{\footnotesize\ttfamily void Sprite\+Component\+::\+Set\+Animated (\begin{DoxyParamCaption}\item[{bool}]{\+\_\+animated }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+If animated, a sprite component will loop througha spritesheet\textquotesingle{}s first 4 index\textquotesingle{}s; creating an animation.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em \+\_\+animated} & Bool to set the animated boolean. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_sprite_component_a81bbc053fb5d40556fcae2dfb34ea7a6}\label{class_sprite_component_a81bbc053fb5d40556fcae2dfb34ea7a6}} 
+\index{SpriteComponent@{SpriteComponent}!setFilePath@{setFilePath}}
+\index{setFilePath@{setFilePath}!SpriteComponent@{SpriteComponent}}
+\doxysubsubsection{\texorpdfstring{setFilePath()}{setFilePath()}}
+{\footnotesize\ttfamily void Sprite\+Component\+::set\+File\+Path (\begin{DoxyParamCaption}\item[{std\+::string}]{file\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Mainly used in the inspector to change the file path of the sprite. Also used for animations. Changing the file path to load a different sprite sheet.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em file\+Path} & The new file path for the sprite. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_sprite_component_ac8933e6c0606bfe46dff7b74b3b63a4f}\label{class_sprite_component_ac8933e6c0606bfe46dff7b74b3b63a4f}} 
+\index{SpriteComponent@{SpriteComponent}!SetIndex@{SetIndex}}
+\index{SetIndex@{SetIndex}!SpriteComponent@{SpriteComponent}}
+\doxysubsubsection{\texorpdfstring{SetIndex()}{SetIndex()}}
+{\footnotesize\ttfamily void Sprite\+Component\+::\+Set\+Index (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Used for animations
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em index} & The new index of the sprite. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_sprite_component_a6baacb0f33191ffe1b6a6c4650b4078d}\label{class_sprite_component_a6baacb0f33191ffe1b6a6c4650b4078d}} 
+\index{SpriteComponent@{SpriteComponent}!Tick@{Tick}}
+\index{Tick@{Tick}!SpriteComponent@{SpriteComponent}}
+\doxysubsubsection{\texorpdfstring{Tick()}{Tick()}}
+{\footnotesize\ttfamily void Sprite\+Component\+::\+Tick (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Base Init has no behaviour. This is called once after scene load. 
+
+Reimplemented from \mbox{\hyperlink{class_component_a93b89e900390d88afd70993549007c9c}{Component}}.
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

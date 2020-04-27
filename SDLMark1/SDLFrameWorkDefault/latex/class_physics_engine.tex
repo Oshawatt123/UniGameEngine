@@ -1,24 +1,156 @@
 \hypertarget{class_physics_engine}{}\doxysection{Physics\+Engine Class Reference}
 \label{class_physics_engine}\index{PhysicsEngine@{PhysicsEngine}}
+
+
+{\ttfamily \#include $<$Physics\+Engine.\+h$>$}
+
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_physics_engine_aa2d2030963e541041762ddeefae7a43e}\label{class_physics_engine_aa2d2030963e541041762ddeefae7a43e}} 
-bool {\bfseries Tick} ()
+bool \mbox{\hyperlink{class_physics_engine_aa2d2030963e541041762ddeefae7a43e}{Tick}} ()
 \item 
-\mbox{\Hypertarget{class_physics_engine_ab12ae7c14dcc84e70fcd5b16f89a18b7}\label{class_physics_engine_ab12ae7c14dcc84e70fcd5b16f89a18b7}} 
-void {\bfseries Add\+Moveable\+Object} (\mbox{\hyperlink{class_entity}{Entity}} $\ast$object)
+void \mbox{\hyperlink{class_physics_engine_ab12ae7c14dcc84e70fcd5b16f89a18b7}{Add\+Moveable\+Object}} (\mbox{\hyperlink{class_entity}{Entity}} $\ast$object)
 \item 
-\mbox{\Hypertarget{class_physics_engine_a950a3daa18c5ea71bc9ef0889421bc67}\label{class_physics_engine_a950a3daa18c5ea71bc9ef0889421bc67}} 
-void {\bfseries Add\+Collidable\+Object} (\mbox{\hyperlink{class_entity}{Entity}} $\ast$object)
+void \mbox{\hyperlink{class_physics_engine_a950a3daa18c5ea71bc9ef0889421bc67}{Add\+Collidable\+Object}} (\mbox{\hyperlink{class_entity}{Entity}} $\ast$object)
 \item 
-\mbox{\Hypertarget{class_physics_engine_a8d2a9fee6daaa97cd94bce3b977c5e81}\label{class_physics_engine_a8d2a9fee6daaa97cd94bce3b977c5e81}} 
-bool {\bfseries Check\+Point\+Collision} (\mbox{\hyperlink{class_vector2}{Vector2}} point, \mbox{\hyperlink{class_entity}{Entity}} $\ast$out\+Entity)
+\mbox{\hyperlink{class_entity}{Entity}} $\ast$ \mbox{\hyperlink{class_physics_engine_a5c4c70f7d5c9d68439583bb568eb4dc1}{Check\+Point\+Collision}} (\mbox{\hyperlink{class_vector2}{Vector2}} point)
 \item 
-\mbox{\Hypertarget{class_physics_engine_ace98e19270cfa562584e5c4bc1e467f0}\label{class_physics_engine_ace98e19270cfa562584e5c4bc1e467f0}} 
-bool {\bfseries A\+A\+BB} (const S\+D\+L\+\_\+\+Rect \&A, const S\+D\+L\+\_\+\+Rect \&B)
+bool \mbox{\hyperlink{class_physics_engine_ace98e19270cfa562584e5c4bc1e467f0}{A\+A\+BB}} (const S\+D\+L\+\_\+\+Rect \&A, const S\+D\+L\+\_\+\+Rect \&B)
+\item 
+void \mbox{\hyperlink{class_physics_engine_ab391f1c77242ab2785ac032ec2ce9054}{Flush\+Entities}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_physics_engine}{Physics\+Engine}} $\ast$ \mbox{\hyperlink{class_physics_engine_a24e630a5280fcac069665aee469ddac3}{Instance}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_entity}{Entity}} $\ast$ $>$ \mbox{\hyperlink{class_physics_engine_a9c09a84286934ce77499d7a1c0a62dc7}{Move\+Able}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_entity}{Entity}} $\ast$ $>$ \mbox{\hyperlink{class_physics_engine_aa631d02caf050302737427246ac53e86}{Collidable}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_physics_engine}{Physics\+Engine}} $\ast$ \mbox{\hyperlink{class_physics_engine_a660360c3f60b017afd46cd187c3db5f2}{s\+Instance}} = N\+U\+LL
 \end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+The Physics Engine is not a fully fledged physics engine. This does N\+OT handle collisions. It will only detect and report collisions to the objects that have collided. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_physics_engine_ace98e19270cfa562584e5c4bc1e467f0}\label{class_physics_engine_ace98e19270cfa562584e5c4bc1e467f0}} 
+\index{PhysicsEngine@{PhysicsEngine}!AABB@{AABB}}
+\index{AABB@{AABB}!PhysicsEngine@{PhysicsEngine}}
+\doxysubsubsection{\texorpdfstring{AABB()}{AABB()}}
+{\footnotesize\ttfamily bool Physics\+Engine\+::\+A\+A\+BB (\begin{DoxyParamCaption}\item[{const S\+D\+L\+\_\+\+Rect \&}]{A,  }\item[{const S\+D\+L\+\_\+\+Rect \&}]{B }\end{DoxyParamCaption})}
+
+Performs an A\+A\+BB collision test for overlapping rectangles.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em A} & The first rectangle to check collisions with. \\
+\hline
+\mbox{\texttt{ in}}  & {\em B} & The second rectangle to check collisions with.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Whether there was an overlap on the two rectangles. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_physics_engine_a950a3daa18c5ea71bc9ef0889421bc67}\label{class_physics_engine_a950a3daa18c5ea71bc9ef0889421bc67}} 
+\index{PhysicsEngine@{PhysicsEngine}!AddCollidableObject@{AddCollidableObject}}
+\index{AddCollidableObject@{AddCollidableObject}!PhysicsEngine@{PhysicsEngine}}
+\doxysubsubsection{\texorpdfstring{AddCollidableObject()}{AddCollidableObject()}}
+{\footnotesize\ttfamily void Physics\+Engine\+::\+Add\+Collidable\+Object (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_entity}{Entity}} $\ast$}]{object }\end{DoxyParamCaption})}
+
+Adds an object to the Collidable vector.
+
+/param\mbox{[}in\mbox{]} object The entity to add into the collidable vector. \mbox{\Hypertarget{class_physics_engine_ab12ae7c14dcc84e70fcd5b16f89a18b7}\label{class_physics_engine_ab12ae7c14dcc84e70fcd5b16f89a18b7}} 
+\index{PhysicsEngine@{PhysicsEngine}!AddMoveableObject@{AddMoveableObject}}
+\index{AddMoveableObject@{AddMoveableObject}!PhysicsEngine@{PhysicsEngine}}
+\doxysubsubsection{\texorpdfstring{AddMoveableObject()}{AddMoveableObject()}}
+{\footnotesize\ttfamily void Physics\+Engine\+::\+Add\+Moveable\+Object (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_entity}{Entity}} $\ast$}]{object }\end{DoxyParamCaption})}
+
+Adds an object to the Move\+Able vector.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em object} & The entity to add into the Move\+Able vector. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_physics_engine_a5c4c70f7d5c9d68439583bb568eb4dc1}\label{class_physics_engine_a5c4c70f7d5c9d68439583bb568eb4dc1}} 
+\index{PhysicsEngine@{PhysicsEngine}!CheckPointCollision@{CheckPointCollision}}
+\index{CheckPointCollision@{CheckPointCollision}!PhysicsEngine@{PhysicsEngine}}
+\doxysubsubsection{\texorpdfstring{CheckPointCollision()}{CheckPointCollision()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_entity}{Entity}} $\ast$ Physics\+Engine\+::\+Check\+Point\+Collision (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector2}{Vector2}}}]{point }\end{DoxyParamCaption})}
+
+Checks if a point collides with anything in the collidables vector.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em point} & The point to check collisions for.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A reference to the entity collided with. nullptr if nothing is collided. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_physics_engine_ab391f1c77242ab2785ac032ec2ce9054}\label{class_physics_engine_ab391f1c77242ab2785ac032ec2ce9054}} 
+\index{PhysicsEngine@{PhysicsEngine}!FlushEntities@{FlushEntities}}
+\index{FlushEntities@{FlushEntities}!PhysicsEngine@{PhysicsEngine}}
+\doxysubsubsection{\texorpdfstring{FlushEntities()}{FlushEntities()}}
+{\footnotesize\ttfamily void Physics\+Engine\+::\+Flush\+Entities (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Flushes all entities out of the system.
+
+This is required every time we load a new scene as the old scene objects are still in the system and will register collisions. \mbox{\Hypertarget{class_physics_engine_a24e630a5280fcac069665aee469ddac3}\label{class_physics_engine_a24e630a5280fcac069665aee469ddac3}} 
+\index{PhysicsEngine@{PhysicsEngine}!Instance@{Instance}}
+\index{Instance@{Instance}!PhysicsEngine@{PhysicsEngine}}
+\doxysubsubsection{\texorpdfstring{Instance()}{Instance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_physics_engine}{Physics\+Engine}} $\ast$ Physics\+Engine\+::\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Method for getting an instance of \mbox{\hyperlink{class_physics_engine}{Physics\+Engine}}. \mbox{\Hypertarget{class_physics_engine_aa2d2030963e541041762ddeefae7a43e}\label{class_physics_engine_aa2d2030963e541041762ddeefae7a43e}} 
+\index{PhysicsEngine@{PhysicsEngine}!Tick@{Tick}}
+\index{Tick@{Tick}!PhysicsEngine@{PhysicsEngine}}
+\doxysubsubsection{\texorpdfstring{Tick()}{Tick()}}
+{\footnotesize\ttfamily bool Physics\+Engine\+::\+Tick (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Ticks the physics engine.
+
+All collision checks happen in this function.
+
+It uses a nested-\/for loop over all objects in the scene.
+
+\begin{DoxyNote}{Note}
+A quad tree is planned for the second version. 
+\end{DoxyNote}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_physics_engine_aa631d02caf050302737427246ac53e86}\label{class_physics_engine_aa631d02caf050302737427246ac53e86}} 
+\index{PhysicsEngine@{PhysicsEngine}!Collidable@{Collidable}}
+\index{Collidable@{Collidable}!PhysicsEngine@{PhysicsEngine}}
+\doxysubsubsection{\texorpdfstring{Collidable}{Collidable}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{class_entity}{Entity}}$\ast$$>$ Physics\+Engine\+::\+Collidable\hspace{0.3cm}{\ttfamily [private]}}
+
+All collidable entities. \mbox{\Hypertarget{class_physics_engine_a9c09a84286934ce77499d7a1c0a62dc7}\label{class_physics_engine_a9c09a84286934ce77499d7a1c0a62dc7}} 
+\index{PhysicsEngine@{PhysicsEngine}!MoveAble@{MoveAble}}
+\index{MoveAble@{MoveAble}!PhysicsEngine@{PhysicsEngine}}
+\doxysubsubsection{\texorpdfstring{MoveAble}{MoveAble}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{class_entity}{Entity}}$\ast$$>$ Physics\+Engine\+::\+Move\+Able\hspace{0.3cm}{\ttfamily [private]}}
+
+All move-\/able objects in the scene. \begin{DoxyNote}{Note}
+N\+OT implemented. Originally intended to be used as a method of the physics system moving objects and handling collisions itself. This is now the responsibility of the individual entity. 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_physics_engine_a660360c3f60b017afd46cd187c3db5f2}\label{class_physics_engine_a660360c3f60b017afd46cd187c3db5f2}} 
+\index{PhysicsEngine@{PhysicsEngine}!sInstance@{sInstance}}
+\index{sInstance@{sInstance}!PhysicsEngine@{PhysicsEngine}}
+\doxysubsubsection{\texorpdfstring{sInstance}{sInstance}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_physics_engine}{Physics\+Engine}} $\ast$ Physics\+Engine\+::s\+Instance = N\+U\+LL\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+Static instance of the \mbox{\hyperlink{class_physics_engine}{Physics\+Engine}} class. 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

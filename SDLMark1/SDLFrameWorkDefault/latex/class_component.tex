@@ -1,33 +1,102 @@
 \hypertarget{class_component}{}\doxysection{Component Class Reference}
 \label{class_component}\index{Component@{Component}}
+
+
+{\ttfamily \#include $<$E\+C\+S.\+h$>$}
+
 Inheritance diagram for Component\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.000000cm]{class_component}
+\includegraphics[height=1.203008cm]{class_component}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_component_a0bb954fe977d71269e2db01bc8a77e95}\label{class_component_a0bb954fe977d71269e2db01bc8a77e95}} 
-virtual void {\bfseries Init} ()=0
+\mbox{\Hypertarget{class_component_a5a5e595fab62ba757f03becc5b101732}\label{class_component_a5a5e595fab62ba757f03becc5b101732}} 
+virtual void {\bfseries Init} ()
 \item 
-\mbox{\Hypertarget{class_component_a93b89e900390d88afd70993549007c9c}\label{class_component_a93b89e900390d88afd70993549007c9c}} 
-virtual void {\bfseries Tick} ()
+virtual void \mbox{\hyperlink{class_component_a93b89e900390d88afd70993549007c9c}{Tick}} ()
 \item 
-\mbox{\Hypertarget{class_component_ad54a5ed6c47801402e457e21723009db}\label{class_component_ad54a5ed6c47801402e457e21723009db}} 
-virtual void {\bfseries Editor\+Tick} ()
+virtual void \mbox{\hyperlink{class_component_ad54a5ed6c47801402e457e21723009db}{Editor\+Tick}} ()
+\item 
+virtual \mbox{\hyperlink{class_component_a2e9aa4348314d981f05f67397ad2f872}{$\sim$\+Component}} ()
+\item 
+\mbox{\Hypertarget{class_component_af656eee556324ac2abb4b47c9f02e9ff}\label{class_component_af656eee556324ac2abb4b47c9f02e9ff}} 
+virtual void {\bfseries Populate\+Inspector} ()
+\item 
+virtual std\+::string \mbox{\hyperlink{class_component_ac67aa475d8d1d08233d893a3d3665e5c}{Get\+Save\+Data}} ()
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_component_a46343549452bda5ee9752f7a9bc15efb}\label{class_component_a46343549452bda5ee9752f7a9bc15efb}} 
-std\+::string {\bfseries name} = \char`\"{}Look at this descriptive name!\char`\"{}
+std\+::string \mbox{\hyperlink{class_component_a46343549452bda5ee9752f7a9bc15efb}{name}} = \char`\"{}Look at this descriptive name!\char`\"{}
 \item 
-\mbox{\Hypertarget{class_component_a6acb3f00c9d114d961c8763ede390d2c}\label{class_component_a6acb3f00c9d114d961c8763ede390d2c}} 
-\mbox{\hyperlink{class_entity}{Entity}} $\ast$ {\bfseries entity}
+\mbox{\hyperlink{class_entity}{Entity}} $\ast$ \mbox{\hyperlink{class_component_a6acb3f00c9d114d961c8763ede390d2c}{entity}}
 \end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+The base component used by the E\+CS system.
+
+A\+LL components must inherit from this class to be able to be added to an \mbox{\hyperlink{class_entity}{Entity}}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_component_a2e9aa4348314d981f05f67397ad2f872}\label{class_component_a2e9aa4348314d981f05f67397ad2f872}} 
+\index{Component@{Component}!````~Component@{$\sim$Component}}
+\index{````~Component@{$\sim$Component}!Component@{Component}}
+\doxysubsubsection{\texorpdfstring{$\sim$Component()}{~Component()}}
+{\footnotesize\ttfamily virtual Component\+::$\sim$\+Component (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Base Editor\+Tick has no behaviour. This is called every frame in edit-\/mode. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_component_ad54a5ed6c47801402e457e21723009db}\label{class_component_ad54a5ed6c47801402e457e21723009db}} 
+\index{Component@{Component}!EditorTick@{EditorTick}}
+\index{EditorTick@{EditorTick}!Component@{Component}}
+\doxysubsubsection{\texorpdfstring{EditorTick()}{EditorTick()}}
+{\footnotesize\ttfamily virtual void Component\+::\+Editor\+Tick (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Base Tick has no behaviour. This is called every frame in game-\/mode. 
+
+Reimplemented in \mbox{\hyperlink{class_position_component_a8e690ebba9d108a643c8ba3119496ea9}{Position\+Component}}, \mbox{\hyperlink{class_sprite_component_a0d576efe03344ead5816fe048310a909}{Sprite\+Component}}, and \mbox{\hyperlink{class_collision_component_a05417457fe26e19a9e0e60515b75a917}{Collision\+Component}}.
+
+\mbox{\Hypertarget{class_component_ac67aa475d8d1d08233d893a3d3665e5c}\label{class_component_ac67aa475d8d1d08233d893a3d3665e5c}} 
+\index{Component@{Component}!GetSaveData@{GetSaveData}}
+\index{GetSaveData@{GetSaveData}!Component@{Component}}
+\doxysubsubsection{\texorpdfstring{GetSaveData()}{GetSaveData()}}
+{\footnotesize\ttfamily virtual std\+::string Component\+::\+Get\+Save\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Base Populate\+Inspector has no behaviour. This is used to populate the inspector with editable fields / useful information. 
+
+Reimplemented in \mbox{\hyperlink{class_character_controller_a3c05a53ab97833de457d2bac87851c81}{Character\+Controller}}, \mbox{\hyperlink{class_sprite_component_a4902386a5bf139c7af8d314235f47bc9}{Sprite\+Component}}, \mbox{\hyperlink{class_position_component_ae5c45bb6eb6eba3f4b56d981b1051a1c}{Position\+Component}}, \mbox{\hyperlink{class_collision_component_a3cfc73dfa3989bf0cf56119e2497cc6b}{Collision\+Component}}, \mbox{\hyperlink{class_enemy_control_ae94ce808a0bd5672a9df903353c3f42e}{Enemy\+Control}}, \mbox{\hyperlink{class_camera_component_a6177e3e06814366709230a9dd4e8693a}{Camera\+Component}}, and \mbox{\hyperlink{class_stair_control_adbe9c011c2f614cca50797ffd4759730}{Stair\+Control}}.
+
+\mbox{\Hypertarget{class_component_a93b89e900390d88afd70993549007c9c}\label{class_component_a93b89e900390d88afd70993549007c9c}} 
+\index{Component@{Component}!Tick@{Tick}}
+\index{Tick@{Tick}!Component@{Component}}
+\doxysubsubsection{\texorpdfstring{Tick()}{Tick()}}
+{\footnotesize\ttfamily virtual void Component\+::\+Tick (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Base Init has no behaviour. This is called once after scene load. 
+
+Reimplemented in \mbox{\hyperlink{class_sprite_component_a6baacb0f33191ffe1b6a6c4650b4078d}{Sprite\+Component}}, \mbox{\hyperlink{class_collision_component_a26ab38509eaa834cc3bf07437248b06a}{Collision\+Component}}, \mbox{\hyperlink{class_character_controller_a0fd3cccc69e413dea162cc4b8ee08dfb}{Character\+Controller}}, \mbox{\hyperlink{class_enemy_control_ababb171cddf332147f0601a2db3c5b1b}{Enemy\+Control}}, \mbox{\hyperlink{class_camera_component_a0aa7c3deea61cdc4af316a4816b4c49e}{Camera\+Component}}, and \mbox{\hyperlink{class_stair_control_a5efe30eeebb9153f047d3456c4ff09ad}{Stair\+Control}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_component_a6acb3f00c9d114d961c8763ede390d2c}\label{class_component_a6acb3f00c9d114d961c8763ede390d2c}} 
+\index{Component@{Component}!entity@{entity}}
+\index{entity@{entity}!Component@{Component}}
+\doxysubsubsection{\texorpdfstring{entity}{entity}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_entity}{Entity}}$\ast$ Component\+::entity}
+
+Reference to the entity this component is attached to. Allows for interaction between components. \mbox{\Hypertarget{class_component_a46343549452bda5ee9752f7a9bc15efb}\label{class_component_a46343549452bda5ee9752f7a9bc15efb}} 
+\index{Component@{Component}!name@{name}}
+\index{name@{name}!Component@{Component}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily std\+::string Component\+::name = \char`\"{}Look at this descriptive name!\char`\"{}}
+
+The name of a component. This is used for identification and M\+U\+ST be unique to a component. 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

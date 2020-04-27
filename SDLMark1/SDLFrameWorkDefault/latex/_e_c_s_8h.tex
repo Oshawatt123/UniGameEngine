@@ -1,0 +1,76 @@
+\hypertarget{_e_c_s_8h}{}\doxysection{E\+C\+S.\+h File Reference}
+\label{_e_c_s_8h}\index{ECS.h@{ECS.h}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$bitset$>$}\newline
+{\ttfamily \#include $<$array$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include \char`\"{}imgui.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Black\+Board.\+h\char`\"{}}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_component}{Component}}
+\item 
+class \mbox{\hyperlink{class_entity}{Entity}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{_e_c_s_8h_a7b5b328beaf99c4cdb76fc8ce54ce91d}{Component\+ID}} = std\+::size\+\_\+t
+\item 
+using \mbox{\hyperlink{_e_c_s_8h_a5abe59fd2ecb9b846698d08b98c1f1e5}{Component\+Bit\+Set}} = std\+::bitset$<$ \mbox{\hyperlink{_e_c_s_8h_af0d0c12082765e70ad276af544e9af5a}{max\+Components}} $>$
+\item 
+using \mbox{\hyperlink{_e_c_s_8h_a9027f9cab1cf2163dc222cf6a759e637}{Component\+Array}} = std\+::array$<$ \mbox{\hyperlink{class_component}{Component}} $\ast$, \mbox{\hyperlink{_e_c_s_8h_af0d0c12082765e70ad276af544e9af5a}{max\+Components}} $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_e_c_s_8h_a7b5b328beaf99c4cdb76fc8ce54ce91d}{Component\+ID}} \mbox{\hyperlink{_e_c_s_8h_a027a6a1a7c07b364393e6ffe61cb2f76}{get\+Component\+Type\+ID}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+constexpr std\+::size\+\_\+t \mbox{\hyperlink{_e_c_s_8h_af0d0c12082765e70ad276af544e9af5a}{max\+Components}} = 32
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{_e_c_s_8h_a9027f9cab1cf2163dc222cf6a759e637}\label{_e_c_s_8h_a9027f9cab1cf2163dc222cf6a759e637}} 
+\index{ECS.h@{ECS.h}!ComponentArray@{ComponentArray}}
+\index{ComponentArray@{ComponentArray}!ECS.h@{ECS.h}}
+\doxysubsubsection{\texorpdfstring{ComponentArray}{ComponentArray}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{_e_c_s_8h_a9027f9cab1cf2163dc222cf6a759e637}{Component\+Array}} =  std\+::array$<$\mbox{\hyperlink{class_component}{Component}}$\ast$, \mbox{\hyperlink{_e_c_s_8h_af0d0c12082765e70ad276af544e9af5a}{max\+Components}}$>$}
+
+\mbox{\Hypertarget{_e_c_s_8h_a5abe59fd2ecb9b846698d08b98c1f1e5}\label{_e_c_s_8h_a5abe59fd2ecb9b846698d08b98c1f1e5}} 
+\index{ECS.h@{ECS.h}!ComponentBitSet@{ComponentBitSet}}
+\index{ComponentBitSet@{ComponentBitSet}!ECS.h@{ECS.h}}
+\doxysubsubsection{\texorpdfstring{ComponentBitSet}{ComponentBitSet}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{_e_c_s_8h_a5abe59fd2ecb9b846698d08b98c1f1e5}{Component\+Bit\+Set}} =  std\+::bitset$<$\mbox{\hyperlink{_e_c_s_8h_af0d0c12082765e70ad276af544e9af5a}{max\+Components}}$>$}
+
+\mbox{\Hypertarget{_e_c_s_8h_a7b5b328beaf99c4cdb76fc8ce54ce91d}\label{_e_c_s_8h_a7b5b328beaf99c4cdb76fc8ce54ce91d}} 
+\index{ECS.h@{ECS.h}!ComponentID@{ComponentID}}
+\index{ComponentID@{ComponentID}!ECS.h@{ECS.h}}
+\doxysubsubsection{\texorpdfstring{ComponentID}{ComponentID}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{_e_c_s_8h_a7b5b328beaf99c4cdb76fc8ce54ce91d}{Component\+ID}} =  std\+::size\+\_\+t}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_e_c_s_8h_a027a6a1a7c07b364393e6ffe61cb2f76}\label{_e_c_s_8h_a027a6a1a7c07b364393e6ffe61cb2f76}} 
+\index{ECS.h@{ECS.h}!getComponentTypeID@{getComponentTypeID}}
+\index{getComponentTypeID@{getComponentTypeID}!ECS.h@{ECS.h}}
+\doxysubsubsection{\texorpdfstring{getComponentTypeID()}{getComponentTypeID()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_e_c_s_8h_a7b5b328beaf99c4cdb76fc8ce54ce91d}{Component\+ID}} get\+Component\+Type\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{_e_c_s_8h_af0d0c12082765e70ad276af544e9af5a}\label{_e_c_s_8h_af0d0c12082765e70ad276af544e9af5a}} 
+\index{ECS.h@{ECS.h}!maxComponents@{maxComponents}}
+\index{maxComponents@{maxComponents}!ECS.h@{ECS.h}}
+\doxysubsubsection{\texorpdfstring{maxComponents}{maxComponents}}
+{\footnotesize\ttfamily constexpr std\+::size\+\_\+t max\+Components = 32\hspace{0.3cm}{\ttfamily [constexpr]}}
+

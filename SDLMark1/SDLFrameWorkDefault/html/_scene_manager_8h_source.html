@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: SceneManager.h Source File</title>
+<title>The Filthy Engine: SceneManager.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">My Project
+   <div id="projectname">The Filthy Engine
    </div>
   </td>
  </tr>
@@ -71,39 +71,81 @@ $(function() {
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="class_scene_manager.html">    8</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_scene_manager.html">SceneManager</a></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keyword">static</span> <a class="code" href="class_scene_manager.html">SceneManager</a>* sInstance;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    std::vector&lt;Scene*&gt; mScenesInBuild;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="class_scene.html">Scene</a>* currentScene;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;unordered_map&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;fstream&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;Components.h&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_scene_manager.html">   13</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_scene_manager.html">SceneManager</a></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;{</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordtype">int</span> mNextBuildIndex;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keyword">static</span> <a class="code" href="class_scene_manager.html">SceneManager</a>* Instance();</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">int</span> GetNextBuildIndex();</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">void</span> AddSceneToBuild(<a class="code" href="class_scene.html">Scene</a>* scene);</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">void</span> LoadScene(std::string sceneName);</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">void</span> LoadScene(<span class="keywordtype">int</span> buildIndex);</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">void</span> LoadScene(<a class="code" href="class_scene.html">Scene</a>* scene);</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_scene_manager.html#a6dc0e6f31119367b6e0cd45ae063f782">   17</a></span>&#160;    <span class="keyword">static</span> <a class="code" href="class_scene_manager.html">SceneManager</a>* <a class="code" href="class_scene_manager.html#a6dc0e6f31119367b6e0cd45ae063f782">sInstance</a>; </div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_scene_manager.html#a6cf8d2575c33e89184ebe52b4f78689f">   19</a></span>&#160;    std::vector&lt;Scene*&gt; <a class="code" href="class_scene_manager.html#a6cf8d2575c33e89184ebe52b4f78689f">mScenesInBuild</a>; </div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="class_scene_manager.html#a0deb8915a4292005a5295e9e1a6bb63d">   20</a></span>&#160;    std::unordered_map&lt;std::string, Scene*&gt; <a class="code" href="class_scene_manager.html#a0deb8915a4292005a5295e9e1a6bb63d">loadedScenes</a>; </div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="class_scene_manager.html#a61fb6deaad8c240b54833caf36c1f19a">   21</a></span>&#160;    <a class="code" href="class_scene.html">Scene</a>* <a class="code" href="class_scene_manager.html#a61fb6deaad8c240b54833caf36c1f19a">currentScene</a>; </div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="class_scene_manager.html#ae1a7404139d58720072d1fea8e869d16">   23</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_scene_manager.html#ae1a7404139d58720072d1fea8e869d16">mNextBuildIndex</a>; </div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="class_scene_manager.html#a650934dac9ec9d77541c1ac46577f0ee">   25</a></span>&#160;    <a class="code" href="class_event.html">Event</a>* <a class="code" href="class_scene_manager.html#a650934dac9ec9d77541c1ac46577f0ee">eventStore</a>; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keyword">static</span> <a class="code" href="class_scene_manager.html">SceneManager</a>* <a class="code" href="class_scene_manager.html#a972ad174745419ebc980802a5f6e874e">Instance</a>();</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="class_scene_manager.html">SceneManager</a>();</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    ~<a class="code" href="class_scene_manager.html">SceneManager</a>();</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;};</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_scene_manager.html#a1adf9e40216a2e68164ac269765b7676">GetNextBuildIndex</a>();</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_scene_manager.html#affa371dcdeb92c2f31a9cb8a88bfc738">AddSceneToBuild</a>(<a class="code" href="class_scene.html">Scene</a>* scene);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_scene_manager.html#abec9e62a4d4d09edee4b12abe8b1af64">LoadScene</a>(std::string sceneName);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_scene_manager.html#abec9e62a4d4d09edee4b12abe8b1af64">LoadScene</a>(<span class="keywordtype">int</span> buildIndex);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_scene_manager.html#a678fa5b992f03a35c092dd2c2c6b035c">LoadSceneByPath</a>(std::string path);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_scene_manager.html#acebd030174731c450074071ec807a8b0">LoadSceneByPathNoSave</a>(std::string path);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_scene_manager.html#aae054e939e8220c2735d2b5e29dc814d">LoadSceneNoSave</a>(std::string sceneName);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_scene_manager.html#a78e75b349e9467e32ee0199e16d06a07">SaveScene</a>();</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <a class="code" href="class_scene.html">Scene</a>* <a class="code" href="class_scene_manager.html#ad307aea07c7664dcdcd8a18ac41fce89">getCurrentScene</a>();</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="comment">/*</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="comment">        Tick checks for events from eventSystem and processes them if it finds one.</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordtype">void</span> Tick();</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="comment">/*</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="comment">        The base loadScene function which loads a scene from a reference to a scene. All load scene functions come back to this.</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="comment">        The exception is the LoadSceneNoSave functions which do it themselves as this function also saves the previous scene.</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="comment">        \param scene The scene to load.</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_scene_manager.html#abec9e62a4d4d09edee4b12abe8b1af64">LoadScene</a>(<a class="code" href="class_scene.html">Scene</a>* scene);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <a class="code" href="class_scene_manager.html">SceneManager</a>();</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    ~<a class="code" href="class_scene_manager.html">SceneManager</a>();</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;};</div>
 </div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_scene_manager_html_abec9e62a4d4d09edee4b12abe8b1af64"><div class="ttname"><a href="class_scene_manager.html#abec9e62a4d4d09edee4b12abe8b1af64">SceneManager::LoadScene</a></div><div class="ttdeci">void LoadScene(std::string sceneName)</div><div class="ttdef"><b>Definition:</b> SceneManager.cpp:25</div></div>
+<div class="ttc" id="aclass_scene_manager_html_a1adf9e40216a2e68164ac269765b7676"><div class="ttname"><a href="class_scene_manager.html#a1adf9e40216a2e68164ac269765b7676">SceneManager::GetNextBuildIndex</a></div><div class="ttdeci">int GetNextBuildIndex()</div><div class="ttdef"><b>Definition:</b> SceneManager.cpp:14</div></div>
+<div class="ttc" id="aclass_scene_manager_html_acebd030174731c450074071ec807a8b0"><div class="ttname"><a href="class_scene_manager.html#acebd030174731c450074071ec807a8b0">SceneManager::LoadSceneByPathNoSave</a></div><div class="ttdeci">void LoadSceneByPathNoSave(std::string path)</div><div class="ttdef"><b>Definition:</b> SceneManager.cpp:68</div></div>
+<div class="ttc" id="aclass_scene_manager_html_a650934dac9ec9d77541c1ac46577f0ee"><div class="ttname"><a href="class_scene_manager.html#a650934dac9ec9d77541c1ac46577f0ee">SceneManager::eventStore</a></div><div class="ttdeci">Event * eventStore</div><div class="ttdef"><b>Definition:</b> SceneManager.h:25</div></div>
+<div class="ttc" id="aclass_scene_manager_html_ad307aea07c7664dcdcd8a18ac41fce89"><div class="ttname"><a href="class_scene_manager.html#ad307aea07c7664dcdcd8a18ac41fce89">SceneManager::getCurrentScene</a></div><div class="ttdeci">Scene * getCurrentScene()</div><div class="ttdef"><b>Definition:</b> SceneManager.cpp:115</div></div>
+<div class="ttc" id="aclass_event_html"><div class="ttname"><a href="class_event.html">Event</a></div><div class="ttdef"><b>Definition:</b> Event.h:11</div></div>
+<div class="ttc" id="aclass_scene_manager_html_a61fb6deaad8c240b54833caf36c1f19a"><div class="ttname"><a href="class_scene_manager.html#a61fb6deaad8c240b54833caf36c1f19a">SceneManager::currentScene</a></div><div class="ttdeci">Scene * currentScene</div><div class="ttdef"><b>Definition:</b> SceneManager.h:21</div></div>
 <div class="ttc" id="aclass_scene_html"><div class="ttname"><a href="class_scene.html">Scene</a></div><div class="ttdef"><b>Definition:</b> Scene.h:15</div></div>
-<div class="ttc" id="aclass_scene_manager_html"><div class="ttname"><a href="class_scene_manager.html">SceneManager</a></div><div class="ttdef"><b>Definition:</b> SceneManager.h:8</div></div>
+<div class="ttc" id="aclass_scene_manager_html_ae1a7404139d58720072d1fea8e869d16"><div class="ttname"><a href="class_scene_manager.html#ae1a7404139d58720072d1fea8e869d16">SceneManager::mNextBuildIndex</a></div><div class="ttdeci">int mNextBuildIndex</div><div class="ttdef"><b>Definition:</b> SceneManager.h:23</div></div>
+<div class="ttc" id="aclass_scene_manager_html_a6dc0e6f31119367b6e0cd45ae063f782"><div class="ttname"><a href="class_scene_manager.html#a6dc0e6f31119367b6e0cd45ae063f782">SceneManager::sInstance</a></div><div class="ttdeci">static SceneManager * sInstance</div><div class="ttdef"><b>Definition:</b> SceneManager.h:17</div></div>
+<div class="ttc" id="aclass_scene_manager_html_a0deb8915a4292005a5295e9e1a6bb63d"><div class="ttname"><a href="class_scene_manager.html#a0deb8915a4292005a5295e9e1a6bb63d">SceneManager::loadedScenes</a></div><div class="ttdeci">std::unordered_map&lt; std::string, Scene * &gt; loadedScenes</div><div class="ttdef"><b>Definition:</b> SceneManager.h:20</div></div>
+<div class="ttc" id="aclass_scene_manager_html_a678fa5b992f03a35c092dd2c2c6b035c"><div class="ttname"><a href="class_scene_manager.html#a678fa5b992f03a35c092dd2c2c6b035c">SceneManager::LoadSceneByPath</a></div><div class="ttdeci">void LoadSceneByPath(std::string path)</div><div class="ttdef"><b>Definition:</b> SceneManager.cpp:44</div></div>
+<div class="ttc" id="aclass_scene_manager_html_affa371dcdeb92c2f31a9cb8a88bfc738"><div class="ttname"><a href="class_scene_manager.html#affa371dcdeb92c2f31a9cb8a88bfc738">SceneManager::AddSceneToBuild</a></div><div class="ttdeci">void AddSceneToBuild(Scene *scene)</div><div class="ttdef"><b>Definition:</b> SceneManager.cpp:19</div></div>
+<div class="ttc" id="aclass_scene_manager_html_a972ad174745419ebc980802a5f6e874e"><div class="ttname"><a href="class_scene_manager.html#a972ad174745419ebc980802a5f6e874e">SceneManager::Instance</a></div><div class="ttdeci">static SceneManager * Instance()</div><div class="ttdef"><b>Definition:</b> SceneManager.cpp:5</div></div>
+<div class="ttc" id="aclass_scene_manager_html"><div class="ttname"><a href="class_scene_manager.html">SceneManager</a></div><div class="ttdef"><b>Definition:</b> SceneManager.h:13</div></div>
+<div class="ttc" id="aclass_scene_manager_html_aae054e939e8220c2735d2b5e29dc814d"><div class="ttname"><a href="class_scene_manager.html#aae054e939e8220c2735d2b5e29dc814d">SceneManager::LoadSceneNoSave</a></div><div class="ttdeci">void LoadSceneNoSave(std::string sceneName)</div><div class="ttdef"><b>Definition:</b> SceneManager.cpp:86</div></div>
+<div class="ttc" id="aclass_scene_manager_html_a78e75b349e9467e32ee0199e16d06a07"><div class="ttname"><a href="class_scene_manager.html#a78e75b349e9467e32ee0199e16d06a07">SceneManager::SaveScene</a></div><div class="ttdeci">void SaveScene()</div><div class="ttdef"><b>Definition:</b> SceneManager.cpp:102</div></div>
+<div class="ttc" id="aclass_scene_manager_html_a6cf8d2575c33e89184ebe52b4f78689f"><div class="ttname"><a href="class_scene_manager.html#a6cf8d2575c33e89184ebe52b4f78689f">SceneManager::mScenesInBuild</a></div><div class="ttdeci">std::vector&lt; Scene * &gt; mScenesInBuild</div><div class="ttdef"><b>Definition:</b> SceneManager.h:19</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

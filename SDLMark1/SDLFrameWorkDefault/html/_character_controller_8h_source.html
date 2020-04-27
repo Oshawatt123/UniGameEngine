@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: CharacterController.h Source File</title>
+<title>The Filthy Engine: CharacterController.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">My Project
+   <div id="projectname">The Filthy Engine
    </div>
   </td>
  </tr>
@@ -67,67 +67,182 @@ $(function() {
 <div class="contents">
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;PositionComponent.h&quot;</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;InputManager.h&quot;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
-<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="class_character_controller.html">    5</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_character_controller.html">CharacterController</a> : <span class="keyword">public</span> <a class="code" href="class_component.html">Component</a></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;{</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <a class="code" href="class_position_component.html">PositionComponent</a>* pos;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keywordtype">float</span> speed;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <a class="code" href="class_vector2.html">Vector2</a> translation;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;CollisionComponent.h&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;SpriteComponent.h&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;EnemyControl.h&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;InputManager.h&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;EngineStructs.h&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;MathHelper.h&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;Time.h&quot;</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keywordtype">void</span> Init()<span class="keyword"> override</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        pos = &amp; entity-&gt;getComponent&lt;<a class="code" href="class_position_component.html">PositionComponent</a>&gt;();</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        speed = 2;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        name = <span class="stringliteral">&quot;Character Controller&quot;</span>;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    }</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">void</span> Tick()<span class="keyword"> override</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        translation.x = 0;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        translation.y = 0;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keywordflow">if</span> (InputManager::Instance()-&gt;KeyDown(SDL_SCANCODE_D))</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        {</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            translation.x += speed;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        }</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keywordflow">if</span> (InputManager::Instance()-&gt;KeyDown(SDL_SCANCODE_A))</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        {</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            translation.x -= speed;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        }</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keywordflow">if</span> (InputManager::Instance()-&gt;KeyDown(SDL_SCANCODE_W))</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        {</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            translation.y -= speed;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        }</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keywordflow">if</span> (InputManager::Instance()-&gt;KeyDown(SDL_SCANCODE_S))</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        {</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            translation.y += speed;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        }</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keywordflow">if</span> (InputManager::Instance()-&gt;KeyDown(SDL_SCANCODE_Q))</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        {</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            translation *= 2;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            std::cout &lt;&lt; <span class="stringliteral">&quot;DASSHHHHH&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            std::cout &lt;&lt; <span class="stringliteral">&quot;DASSHHHHH&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            std::cout &lt;&lt; <span class="stringliteral">&quot;DASSHHHHH&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            std::cout &lt;&lt; <span class="stringliteral">&quot;DASSHHHHH&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            std::cout &lt;&lt; <span class="stringliteral">&quot;DASSHHHHH&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            std::cout &lt;&lt; <span class="stringliteral">&quot;DASSHHHHH&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            std::cout &lt;&lt; <span class="stringliteral">&quot;DASSHHHHH&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        }</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        pos-&gt;translate(translation);</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    }</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">float</span>&amp; GetSpeed()</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    {</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordflow">return</span> speed;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    }</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;};</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;PhysicsEngine.h&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_character_controller.html">   14</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_character_controller.html">CharacterController</a> : <span class="keyword">public</span> <a class="code" href="class_component.html">Component</a></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="class_position_component.html">PositionComponent</a>* pos;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="class_collision_component.html">CollisionComponent</a>* col;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="class_sprite_component.html">SpriteComponent</a>* spr;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">float</span> speed;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="class_vector2.html">Vector2</a> translation;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="class_vector2.html">Vector2</a> direction;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="class_entity.html">Entity</a>* collidingEntity;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">float</span> timeBetweenAttacks = 1.0f;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">float</span> attackTimer;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">int</span> damage = 1;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">void</span> Init()<span class="keyword"> override</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        pos = &amp;<a class="code" href="class_component.html#a6acb3f00c9d114d961c8763ede390d2c">entity</a>-&gt;<a class="code" href="class_entity.html#ab67b05516196a4ec97c5b9fd13638bbb">getComponent</a>&lt;<a class="code" href="class_position_component.html">PositionComponent</a>&gt;();</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        col = &amp;<a class="code" href="class_component.html#a6acb3f00c9d114d961c8763ede390d2c">entity</a>-&gt;<a class="code" href="class_entity.html#ab67b05516196a4ec97c5b9fd13638bbb">getComponent</a>&lt;<a class="code" href="class_collision_component.html">CollisionComponent</a>&gt;();</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        spr = &amp;<a class="code" href="class_component.html#a6acb3f00c9d114d961c8763ede390d2c">entity</a>-&gt;<a class="code" href="class_entity.html#ab67b05516196a4ec97c5b9fd13638bbb">getComponent</a>&lt;<a class="code" href="class_sprite_component.html">SpriteComponent</a>&gt;();</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        speed = 100;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <a class="code" href="class_component.html#a46343549452bda5ee9752f7a9bc15efb">name</a> = <span class="stringliteral">&quot;CharacterController&quot;</span>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    }</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="class_character_controller.html#a0fd3cccc69e413dea162cc4b8ee08dfb">   41</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_character_controller.html#a0fd3cccc69e413dea162cc4b8ee08dfb">Tick</a>()<span class="keyword"> override</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        translation.<a class="code" href="class_vector2.html#a046bb8d17a876acc49415128dc0502f2">x</a> = 0;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        translation.<a class="code" href="class_vector2.html#a0e07bad05f01ed811b909a2eef97f9e2">y</a> = 0;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="class_input_manager.html#a53a27e2e25bec96173a4c7532515d10e">InputManager::Instance</a>()-&gt;KeyDown(SDL_SCANCODE_D))</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        {</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            translation.<a class="code" href="class_vector2.html#a046bb8d17a876acc49415128dc0502f2">x</a> += speed;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            spr-&gt;<a class="code" href="class_sprite_component.html#ac8933e6c0606bfe46dff7b74b3b63a4f">SetIndex</a>(2);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        }</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="class_input_manager.html#a53a27e2e25bec96173a4c7532515d10e">InputManager::Instance</a>()-&gt;KeyDown(SDL_SCANCODE_A))</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            translation.<a class="code" href="class_vector2.html#a046bb8d17a876acc49415128dc0502f2">x</a> -= speed;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            spr-&gt;<a class="code" href="class_sprite_component.html#ac8933e6c0606bfe46dff7b74b3b63a4f">SetIndex</a>(1);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        }</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="class_input_manager.html#a53a27e2e25bec96173a4c7532515d10e">InputManager::Instance</a>()-&gt;KeyDown(SDL_SCANCODE_W))</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            translation.<a class="code" href="class_vector2.html#a0e07bad05f01ed811b909a2eef97f9e2">y</a> -= speed;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            spr-&gt;<a class="code" href="class_sprite_component.html#ac8933e6c0606bfe46dff7b74b3b63a4f">SetIndex</a>(3);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        }</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="class_input_manager.html#a53a27e2e25bec96173a4c7532515d10e">InputManager::Instance</a>()-&gt;KeyDown(SDL_SCANCODE_S))</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            translation.<a class="code" href="class_vector2.html#a0e07bad05f01ed811b909a2eef97f9e2">y</a> += speed;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            spr-&gt;<a class="code" href="class_sprite_component.html#ac8933e6c0606bfe46dff7b74b3b63a4f">SetIndex</a>(0);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        }</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="class_input_manager.html#a53a27e2e25bec96173a4c7532515d10e">InputManager::Instance</a>()-&gt;KeyDown(SDL_SCANCODE_Q))</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        {</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            translation *= 2;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            std::cout &lt;&lt; <span class="stringliteral">&quot;DASSHHHHH&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            std::cout &lt;&lt; <span class="stringliteral">&quot;DASSHHHHH&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            std::cout &lt;&lt; <span class="stringliteral">&quot;DASSHHHHH&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            std::cout &lt;&lt; <span class="stringliteral">&quot;DASSHHHHH&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            std::cout &lt;&lt; <span class="stringliteral">&quot;DASSHHHHH&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            std::cout &lt;&lt; <span class="stringliteral">&quot;DASSHHHHH&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            std::cout &lt;&lt; <span class="stringliteral">&quot;DASSHHHHH&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        }</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keywordflow">if</span> (translation.<a class="code" href="class_vector2.html#a046bb8d17a876acc49415128dc0502f2">x</a> != 0 || translation.<a class="code" href="class_vector2.html#a0e07bad05f01ed811b909a2eef97f9e2">y</a> != 0)</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        {</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            direction = translation;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            direction.<a class="code" href="class_vector2.html#a3b597b3bfeb114dd9e157b86330e087d">Normalize</a>();</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            direction *= TILE_WIDTH + 2;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        }</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        collidingEntity = Physics-&gt;CheckPointCollision(pos-&gt;<a class="code" href="class_position_component.html#aaaea83aa812d2f8bfb7985eaa6a9cfc8">getPos</a>().<a class="code" href="class_vector2.html#a4b9b27a2d1c1685502a1d27f892c46d1">Add</a>(direction));</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="keywordflow">if</span> (collidingEntity)</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        {</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            <span class="keywordflow">if</span> (collidingEntity-&gt;<a class="code" href="class_entity.html#a931b21fbdebb1a5963b4bcab5df128f5">name</a> == <span class="stringliteral">&quot;Block&quot;</span>)</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                translation = <a class="code" href="class_vector2.html">Vector2</a>(0, 0);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        }</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        pos-&gt;<a class="code" href="class_position_component.html#a89e33a94a02fb3f3d83b27a688f46ca0">translate</a>(translation * filthyTime-&gt;deltaTime);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="class_input_manager.html#a53a27e2e25bec96173a4c7532515d10e">InputManager::Instance</a>()-&gt;KeyDown(SDL_SCANCODE_SPACE) &amp;&amp; attackTimer &lt;= 0)</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        {</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            attackTimer = timeBetweenAttacks;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            <span class="keywordflow">if</span> (collidingEntity)</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            {</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                <span class="keywordflow">if</span> (collidingEntity-&gt;<a class="code" href="class_entity.html#a931b21fbdebb1a5963b4bcab5df128f5">name</a> == <span class="stringliteral">&quot;Crab&quot;</span>)</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                {</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                    collidingEntity-&gt;<a class="code" href="class_entity.html#ab67b05516196a4ec97c5b9fd13638bbb">getComponent</a>&lt;<a class="code" href="class_enemy_control.html">EnemyControl</a>&gt;().damage(damage);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                }</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                <span class="keywordflow">if</span> (collidingEntity-&gt;<a class="code" href="class_entity.html#a931b21fbdebb1a5963b4bcab5df128f5">name</a> == <span class="stringliteral">&quot;Upgrade&quot;</span>)</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                {</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                    collidingEntity-&gt;<a class="code" href="class_entity.html#a844794654f15fa342f4b02e2faaf395f">enabled</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                    filthyAudio-&gt;PlayAudio(<span class="stringliteral">&quot;../Assets/Audio/Upgrade.wav&quot;</span>);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                    damage = 3;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;                }</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;            }</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        }</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        <span class="comment">// set sprite and animation</span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        <span class="keywordflow">if</span> (translation.<a class="code" href="class_vector2.html#afd0eb6f05e1a15b3d8656d5e0e12798a">Magnitude</a>() &gt; 0)</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        {</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            spr-&gt;<a class="code" href="class_sprite_component.html#a81bbc053fb5d40556fcae2dfb34ea7a6">setFilePath</a>(<span class="stringliteral">&quot;../Assets/Sprites/knight.bmp&quot;</span>);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            spr-&gt;<a class="code" href="class_sprite_component.html#a603603c3752abf9b52a4f7a577b567a1">SetAnimated</a>(<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        }</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        {</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;            spr-&gt;<a class="code" href="class_sprite_component.html#a81bbc053fb5d40556fcae2dfb34ea7a6">setFilePath</a>(<span class="stringliteral">&quot;../Assets/Sprites/knightIdle.bmp&quot;</span>);</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;            spr-&gt;<a class="code" href="class_sprite_component.html#a603603c3752abf9b52a4f7a577b567a1">SetAnimated</a>(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        }</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        attackTimer -= filthyTime-&gt;deltaTime;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        filthyRenderer-&gt;DrawLine(pos-&gt;<a class="code" href="class_position_component.html#aaaea83aa812d2f8bfb7985eaa6a9cfc8">getPos</a>().<a class="code" href="class_vector2.html#a046bb8d17a876acc49415128dc0502f2">x</a>, pos-&gt;<a class="code" href="class_position_component.html#aaaea83aa812d2f8bfb7985eaa6a9cfc8">getPos</a>().<a class="code" href="class_vector2.html#a0e07bad05f01ed811b909a2eef97f9e2">y</a>, pos-&gt;<a class="code" href="class_position_component.html#aaaea83aa812d2f8bfb7985eaa6a9cfc8">getPos</a>().<a class="code" href="class_vector2.html#a046bb8d17a876acc49415128dc0502f2">x</a> + direction.<a class="code" href="class_vector2.html#a046bb8d17a876acc49415128dc0502f2">x</a>, pos-&gt;<a class="code" href="class_position_component.html#aaaea83aa812d2f8bfb7985eaa6a9cfc8">getPos</a>().<a class="code" href="class_vector2.html#a0e07bad05f01ed811b909a2eef97f9e2">y</a> + direction.<a class="code" href="class_vector2.html#a0e07bad05f01ed811b909a2eef97f9e2">y</a>);</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    }</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <span class="keywordtype">void</span> PopulateInspector()<span class="keyword"> override</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        std::string temp = <span class="stringliteral">&quot;Direction =&gt; X: &quot;</span> + std::to_string(direction.<a class="code" href="class_vector2.html#a046bb8d17a876acc49415128dc0502f2">x</a>) + <span class="stringliteral">&quot; Y: &quot;</span> + std::to_string(direction.<a class="code" href="class_vector2.html#a0e07bad05f01ed811b909a2eef97f9e2">y</a>);</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        ImGui::Text(temp.c_str());</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        <span class="keywordflow">if</span> (collidingEntity)</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;            temp = <span class="stringliteral">&quot;About to collide with: &quot;</span> + collidingEntity-&gt;<a class="code" href="class_entity.html#a931b21fbdebb1a5963b4bcab5df128f5">name</a>;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;            temp = <span class="stringliteral">&quot;No collision inbound&quot;</span>;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        ImGui::Text(temp.c_str());</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160; </div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        temp = std::to_string(translation.<a class="code" href="class_vector2.html#afd0eb6f05e1a15b3d8656d5e0e12798a">Magnitude</a>());</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        ImGui::Text(temp.c_str());</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    }</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160; </div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <span class="keywordtype">float</span>&amp; GetSpeed()</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    {</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        <span class="keywordflow">return</span> speed;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    }</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160; </div>
+<div class="line"><a name="l00147"></a><span class="lineno"><a class="line" href="class_character_controller.html#a3c05a53ab97833de457d2bac87851c81">  147</a></span>&#160;    std::string <a class="code" href="class_character_controller.html#a3c05a53ab97833de457d2bac87851c81">GetSaveData</a>()</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    {</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    }</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;};</div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclass_component_html"><div class="ttname"><a href="class_component.html">Component</a></div><div class="ttdef"><b>Definition:</b> ECS.h:36</div></div>
+<div class="ttc" id="aclass_component_html_a46343549452bda5ee9752f7a9bc15efb"><div class="ttname"><a href="class_component.html#a46343549452bda5ee9752f7a9bc15efb">Component::name</a></div><div class="ttdeci">std::string name</div><div class="ttdef"><b>Definition:</b> ECS.h:46</div></div>
+<div class="ttc" id="aclass_vector2_html_a3b597b3bfeb114dd9e157b86330e087d"><div class="ttname"><a href="class_vector2.html#a3b597b3bfeb114dd9e157b86330e087d">Vector2::Normalize</a></div><div class="ttdeci">void Normalize()</div><div class="ttdef"><b>Definition:</b> MathHelper.cpp:129</div></div>
+<div class="ttc" id="aclass_vector2_html_a046bb8d17a876acc49415128dc0502f2"><div class="ttname"><a href="class_vector2.html#a046bb8d17a876acc49415128dc0502f2">Vector2::x</a></div><div class="ttdeci">float x</div><div class="ttdef"><b>Definition:</b> MathHelper.h:15</div></div>
+<div class="ttc" id="aclass_sprite_component_html"><div class="ttname"><a href="class_sprite_component.html">SpriteComponent</a></div><div class="ttdef"><b>Definition:</b> SpriteComponent.h:11</div></div>
+<div class="ttc" id="aclass_component_html"><div class="ttname"><a href="class_component.html">Component</a></div><div class="ttdef"><b>Definition:</b> ECS.h:43</div></div>
+<div class="ttc" id="aclass_entity_html_ab67b05516196a4ec97c5b9fd13638bbb"><div class="ttname"><a href="class_entity.html#ab67b05516196a4ec97c5b9fd13638bbb">Entity::getComponent</a></div><div class="ttdeci">T &amp; getComponent() const</div><div class="ttdef"><b>Definition:</b> ECS.h:188</div></div>
+<div class="ttc" id="aclass_enemy_control_html"><div class="ttname"><a href="class_enemy_control.html">EnemyControl</a></div><div class="ttdef"><b>Definition:</b> EnemyControl.h:11</div></div>
+<div class="ttc" id="aclass_character_controller_html_a0fd3cccc69e413dea162cc4b8ee08dfb"><div class="ttname"><a href="class_character_controller.html#a0fd3cccc69e413dea162cc4b8ee08dfb">CharacterController::Tick</a></div><div class="ttdeci">void Tick() override</div><div class="ttdef"><b>Definition:</b> CharacterController.h:41</div></div>
 <div class="ttc" id="aclass_position_component_html"><div class="ttname"><a href="class_position_component.html">PositionComponent</a></div><div class="ttdef"><b>Definition:</b> PositionComponent.h:5</div></div>
-<div class="ttc" id="aclass_character_controller_html"><div class="ttname"><a href="class_character_controller.html">CharacterController</a></div><div class="ttdef"><b>Definition:</b> CharacterController.h:5</div></div>
-<div class="ttc" id="aclass_vector2_html"><div class="ttname"><a href="class_vector2.html">Vector2</a></div><div class="ttdef"><b>Definition:</b> MathHelper.h:5</div></div>
+<div class="ttc" id="aclass_input_manager_html_a53a27e2e25bec96173a4c7532515d10e"><div class="ttname"><a href="class_input_manager.html#a53a27e2e25bec96173a4c7532515d10e">InputManager::Instance</a></div><div class="ttdeci">static InputManager * Instance()</div><div class="ttdef"><b>Definition:</b> InputManager.cpp:5</div></div>
+<div class="ttc" id="aclass_vector2_html_afd0eb6f05e1a15b3d8656d5e0e12798a"><div class="ttname"><a href="class_vector2.html#afd0eb6f05e1a15b3d8656d5e0e12798a">Vector2::Magnitude</a></div><div class="ttdeci">float Magnitude()</div><div class="ttdef"><b>Definition:</b> MathHelper.cpp:134</div></div>
+<div class="ttc" id="aclass_vector2_html_a4b9b27a2d1c1685502a1d27f892c46d1"><div class="ttname"><a href="class_vector2.html#a4b9b27a2d1c1685502a1d27f892c46d1">Vector2::Add</a></div><div class="ttdeci">Vector2 &amp; Add(const Vector2 &amp;vec)</div><div class="ttdef"><b>Definition:</b> MathHelper.cpp:17</div></div>
+<div class="ttc" id="aclass_collision_component_html"><div class="ttname"><a href="class_collision_component.html">CollisionComponent</a></div><div class="ttdef"><b>Definition:</b> CollisionComponent.h:10</div></div>
+<div class="ttc" id="aclass_character_controller_html"><div class="ttname"><a href="class_character_controller.html">CharacterController</a></div><div class="ttdef"><b>Definition:</b> CharacterController.h:14</div></div>
+<div class="ttc" id="aclass_vector2_html_a0e07bad05f01ed811b909a2eef97f9e2"><div class="ttname"><a href="class_vector2.html#a0e07bad05f01ed811b909a2eef97f9e2">Vector2::y</a></div><div class="ttdeci">float y</div><div class="ttdef"><b>Definition:</b> MathHelper.h:16</div></div>
+<div class="ttc" id="aclass_sprite_component_html_ac8933e6c0606bfe46dff7b74b3b63a4f"><div class="ttname"><a href="class_sprite_component.html#ac8933e6c0606bfe46dff7b74b3b63a4f">SpriteComponent::SetIndex</a></div><div class="ttdeci">void SetIndex(int index)</div><div class="ttdef"><b>Definition:</b> SpriteComponent.h:153</div></div>
+<div class="ttc" id="aclass_sprite_component_html_a603603c3752abf9b52a4f7a577b567a1"><div class="ttname"><a href="class_sprite_component.html#a603603c3752abf9b52a4f7a577b567a1">SpriteComponent::SetAnimated</a></div><div class="ttdeci">void SetAnimated(bool _animated)</div><div class="ttdef"><b>Definition:</b> SpriteComponent.h:175</div></div>
+<div class="ttc" id="aclass_entity_html_a844794654f15fa342f4b02e2faaf395f"><div class="ttname"><a href="class_entity.html#a844794654f15fa342f4b02e2faaf395f">Entity::enabled</a></div><div class="ttdeci">bool enabled</div><div class="ttdef"><b>Definition:</b> ECS.h:93</div></div>
+<div class="ttc" id="aclass_entity_html_a931b21fbdebb1a5963b4bcab5df128f5"><div class="ttname"><a href="class_entity.html#a931b21fbdebb1a5963b4bcab5df128f5">Entity::name</a></div><div class="ttdeci">std::string name</div><div class="ttdef"><b>Definition:</b> ECS.h:81</div></div>
+<div class="ttc" id="aclass_component_html_a6acb3f00c9d114d961c8763ede390d2c"><div class="ttname"><a href="class_component.html#a6acb3f00c9d114d961c8763ede390d2c">Component::entity</a></div><div class="ttdeci">Entity * entity</div><div class="ttdef"><b>Definition:</b> ECS.h:48</div></div>
+<div class="ttc" id="aclass_entity_html"><div class="ttname"><a href="class_entity.html">Entity</a></div><div class="ttdef"><b>Definition:</b> ECS.h:67</div></div>
+<div class="ttc" id="aclass_position_component_html_aaaea83aa812d2f8bfb7985eaa6a9cfc8"><div class="ttname"><a href="class_position_component.html#aaaea83aa812d2f8bfb7985eaa6a9cfc8">PositionComponent::getPos</a></div><div class="ttdeci">Vector2 getPos()</div><div class="ttdef"><b>Definition:</b> PositionComponent.h:54</div></div>
+<div class="ttc" id="aclass_position_component_html_a89e33a94a02fb3f3d83b27a688f46ca0"><div class="ttname"><a href="class_position_component.html#a89e33a94a02fb3f3d83b27a688f46ca0">PositionComponent::translate</a></div><div class="ttdeci">void translate(float x, float y)</div><div class="ttdef"><b>Definition:</b> PositionComponent.h:84</div></div>
+<div class="ttc" id="aclass_sprite_component_html_a81bbc053fb5d40556fcae2dfb34ea7a6"><div class="ttname"><a href="class_sprite_component.html#a81bbc053fb5d40556fcae2dfb34ea7a6">SpriteComponent::setFilePath</a></div><div class="ttdeci">void setFilePath(std::string filePath)</div><div class="ttdef"><b>Definition:</b> SpriteComponent.h:164</div></div>
+<div class="ttc" id="aclass_character_controller_html_a3c05a53ab97833de457d2bac87851c81"><div class="ttname"><a href="class_character_controller.html#a3c05a53ab97833de457d2bac87851c81">CharacterController::GetSaveData</a></div><div class="ttdeci">std::string GetSaveData()</div><div class="ttdef"><b>Definition:</b> CharacterController.h:147</div></div>
+<div class="ttc" id="aclass_vector2_html"><div class="ttname"><a href="class_vector2.html">Vector2</a></div><div class="ttdef"><b>Definition:</b> MathHelper.h:9</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

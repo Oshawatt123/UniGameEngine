@@ -162,7 +162,6 @@
     <ClCompile Include="Map.cpp" />
     <ClCompile Include="MathHelper.cpp" />
     <ClCompile Include="PhysicsEngine.cpp" />
-    <ClCompile Include="Profiler.cpp" />
     <ClCompile Include="Renderer.cpp" />
     <ClCompile Include="ResourceManager.cpp" />
     <ClCompile Include="Scene.cpp" />
@@ -198,14 +197,12 @@
     <ClInclude Include="MathHelper.h" />
     <ClInclude Include="PhysicsEngine.h" />
     <ClInclude Include="PositionComponent.h" />
-    <ClInclude Include="Profiler.h" />
     <ClInclude Include="Renderer.h" />
     <ClInclude Include="ResourceManager.h" />
     <ClInclude Include="Scene.h" />
     <ClInclude Include="SceneManager.h" />
     <ClInclude Include="SpriteComponent.h" />
     <ClInclude Include="StairControl.h" />
-    <ClInclude Include="test.h" />
     <ClInclude Include="Time.h" />
     <ClInclude Include="Timer.h" />
   </ItemGroup>

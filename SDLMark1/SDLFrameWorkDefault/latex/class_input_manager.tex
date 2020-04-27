@@ -3,40 +3,181 @@
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_input_manager_a11fa034273f286b5ac9ae0ee29c9a6cc}\label{class_input_manager_a11fa034273f286b5ac9ae0ee29c9a6cc}} 
-bool {\bfseries Key\+Down} (S\+D\+L\+\_\+\+Scancode scan\+Code)
+bool \mbox{\hyperlink{class_input_manager_a11fa034273f286b5ac9ae0ee29c9a6cc}{Key\+Down}} (S\+D\+L\+\_\+\+Scancode scan\+Code)
 \item 
-\mbox{\Hypertarget{class_input_manager_a3c5e49a8cec0429394e0821dbd937d27}\label{class_input_manager_a3c5e49a8cec0429394e0821dbd937d27}} 
-bool {\bfseries Window\+Quit} ()
+bool \mbox{\hyperlink{class_input_manager_a9a0f19384d5b88370486e954e940cbce}{Mouse\+Down}} (int mouse\+Button)
 \item 
-\mbox{\Hypertarget{class_input_manager_aa5480931dba2720e7d80dd00a53adae0}\label{class_input_manager_aa5480931dba2720e7d80dd00a53adae0}} 
-void {\bfseries Update} ()
+bool \mbox{\hyperlink{class_input_manager_a3c5e49a8cec0429394e0821dbd937d27}{Window\+Quit}} ()
+\item 
+void \mbox{\hyperlink{class_input_manager_aa5480931dba2720e7d80dd00a53adae0}{Update}} ()
 \end{DoxyCompactItemize}
 \doxysubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_input_manager_a53a27e2e25bec96173a4c7532515d10e}\label{class_input_manager_a53a27e2e25bec96173a4c7532515d10e}} 
-static \mbox{\hyperlink{class_input_manager}{Input\+Manager}} $\ast$ {\bfseries Instance} ()
+static \mbox{\hyperlink{class_input_manager}{Input\+Manager}} $\ast$ \mbox{\hyperlink{class_input_manager_a53a27e2e25bec96173a4c7532515d10e}{Instance}} ()
 \item 
-\mbox{\Hypertarget{class_input_manager_a01789f6350560c18a10f01847a200d39}\label{class_input_manager_a01789f6350560c18a10f01847a200d39}} 
-static void {\bfseries Release} ()
+static void \mbox{\hyperlink{class_input_manager_a01789f6350560c18a10f01847a200d39}{Release}} ()
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_input_manager_ad3f6c633a8edf5d19ee43f1b27de1963}\label{class_input_manager_ad3f6c633a8edf5d19ee43f1b27de1963}} 
-int {\bfseries mouse\+Buttons}
+int \mbox{\hyperlink{class_input_manager_ad3f6c633a8edf5d19ee43f1b27de1963}{mouse\+Buttons}}
 \item 
 \mbox{\Hypertarget{class_input_manager_a29fddcf9d741e4de04492ad76b7cb3af}\label{class_input_manager_a29fddcf9d741e4de04492ad76b7cb3af}} 
 int {\bfseries mouseX}
 \item 
-\mbox{\Hypertarget{class_input_manager_afb189c58dd5ee470a3202c685c5c7f1e}\label{class_input_manager_afb189c58dd5ee470a3202c685c5c7f1e}} 
-int {\bfseries mouseY}
+int \mbox{\hyperlink{class_input_manager_afb189c58dd5ee470a3202c685c5c7f1e}{mouseY}}
 \item 
-\mbox{\Hypertarget{class_input_manager_aca3de515087c5470455be0ebee95b233}\label{class_input_manager_aca3de515087c5470455be0ebee95b233}} 
-int {\bfseries mouse\+Wheel}
+int \mbox{\hyperlink{class_input_manager_aca3de515087c5470455be0ebee95b233}{mouse\+Wheel}}
+\item 
+\mbox{\Hypertarget{class_input_manager_a0259bc21815ecb65f37c14a0a6faf0f9}\label{class_input_manager_a0259bc21815ecb65f37c14a0a6faf0f9}} 
+int {\bfseries mouse\+DeltaX}
+\item 
+int \mbox{\hyperlink{class_input_manager_a52db1b39ec75b95a4b3c3a098bb942cc}{mouse\+DeltaY}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const Uint8 $\ast$ \mbox{\hyperlink{class_input_manager_a74e53775b787fa379ccd290a5fa1c8ee}{m\+Key\+Board\+States}}
+\item 
+bool \mbox{\hyperlink{class_input_manager_af8dbfcb4c60f03e53f1e0819ab60a3a9}{Window\+Is\+Quit}}
+\item 
+\mbox{\Hypertarget{class_input_manager_a3df5dade81ef9b3291cd6b65667b03c5}\label{class_input_manager_a3df5dade81ef9b3291cd6b65667b03c5}} 
+int {\bfseries prev\+MouseX}
+\item 
+int \mbox{\hyperlink{class_input_manager_a58ed5503ea1eebb374262798bbdf2279}{prev\+MouseY}}
+\item 
+int \mbox{\hyperlink{class_input_manager_adf52ab8e346b1ba851c56206af4fbd24}{prev\+Mouse\+Buttons}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_input_manager}{Input\+Manager}} $\ast$ \mbox{\hyperlink{class_input_manager_af98a6a009af03695fd3b809a60314299}{s\+Instance}} = N\+U\+LL
 \end{DoxyCompactItemize}
 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_input_manager_a53a27e2e25bec96173a4c7532515d10e}\label{class_input_manager_a53a27e2e25bec96173a4c7532515d10e}} 
+\index{InputManager@{InputManager}!Instance@{Instance}}
+\index{Instance@{Instance}!InputManager@{InputManager}}
+\doxysubsubsection{\texorpdfstring{Instance()}{Instance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_input_manager}{Input\+Manager}} $\ast$ Input\+Manager\+::\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Method for getting an instance of \mbox{\hyperlink{class_time}{Time}}. \mbox{\Hypertarget{class_input_manager_a11fa034273f286b5ac9ae0ee29c9a6cc}\label{class_input_manager_a11fa034273f286b5ac9ae0ee29c9a6cc}} 
+\index{InputManager@{InputManager}!KeyDown@{KeyDown}}
+\index{KeyDown@{KeyDown}!InputManager@{InputManager}}
+\doxysubsubsection{\texorpdfstring{KeyDown()}{KeyDown()}}
+{\footnotesize\ttfamily bool Input\+Manager\+::\+Key\+Down (\begin{DoxyParamCaption}\item[{S\+D\+L\+\_\+\+Scancode}]{scan\+Code }\end{DoxyParamCaption})}
+
+Checks whether a specific key has been pressed.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em scan\+Code} & The S\+D\+L\+\_\+\+Scancode for the key we want to check has been pressed.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+whether or not the key has been pressed. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_input_manager_a9a0f19384d5b88370486e954e940cbce}\label{class_input_manager_a9a0f19384d5b88370486e954e940cbce}} 
+\index{InputManager@{InputManager}!MouseDown@{MouseDown}}
+\index{MouseDown@{MouseDown}!InputManager@{InputManager}}
+\doxysubsubsection{\texorpdfstring{MouseDown()}{MouseDown()}}
+{\footnotesize\ttfamily bool Input\+Manager\+::\+Mouse\+Down (\begin{DoxyParamCaption}\item[{int}]{mouse\+Button }\end{DoxyParamCaption})}
+
+Checks whether a specific mouse button has been pressed.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em mouse\+Button} & The mouse button that we want to check. 0 for left, 1 for right, 2 for middle.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+whether or not the mouse button has been pressed. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_input_manager_a01789f6350560c18a10f01847a200d39}\label{class_input_manager_a01789f6350560c18a10f01847a200d39}} 
+\index{InputManager@{InputManager}!Release@{Release}}
+\index{Release@{Release}!InputManager@{InputManager}}
+\doxysubsubsection{\texorpdfstring{Release()}{Release()}}
+{\footnotesize\ttfamily void Input\+Manager\+::\+Release (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Cleans up the Input Manager \mbox{\Hypertarget{class_input_manager_aa5480931dba2720e7d80dd00a53adae0}\label{class_input_manager_aa5480931dba2720e7d80dd00a53adae0}} 
+\index{InputManager@{InputManager}!Update@{Update}}
+\index{Update@{Update}!InputManager@{InputManager}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Input\+Manager\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Updates the Input Manager.
+
+Here, all the input is gotten from S\+DL. Keyboard is updated, mouse input is updated and mouse delta is calculated. \mbox{\Hypertarget{class_input_manager_a3c5e49a8cec0429394e0821dbd937d27}\label{class_input_manager_a3c5e49a8cec0429394e0821dbd937d27}} 
+\index{InputManager@{InputManager}!WindowQuit@{WindowQuit}}
+\index{WindowQuit@{WindowQuit}!InputManager@{InputManager}}
+\doxysubsubsection{\texorpdfstring{WindowQuit()}{WindowQuit()}}
+{\footnotesize\ttfamily bool Input\+Manager\+::\+Window\+Quit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Getter function for if the window has been closed.
+
+\begin{DoxyReturn}{Returns}
+Whether or not the window has been closed. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_input_manager_a74e53775b787fa379ccd290a5fa1c8ee}\label{class_input_manager_a74e53775b787fa379ccd290a5fa1c8ee}} 
+\index{InputManager@{InputManager}!mKeyBoardStates@{mKeyBoardStates}}
+\index{mKeyBoardStates@{mKeyBoardStates}!InputManager@{InputManager}}
+\doxysubsubsection{\texorpdfstring{mKeyBoardStates}{mKeyBoardStates}}
+{\footnotesize\ttfamily const Uint8$\ast$ Input\+Manager\+::m\+Key\+Board\+States\hspace{0.3cm}{\ttfamily [private]}}
+
+the current state of the keyboard this frame, stored as an integer for bitmasking. \mbox{\Hypertarget{class_input_manager_ad3f6c633a8edf5d19ee43f1b27de1963}\label{class_input_manager_ad3f6c633a8edf5d19ee43f1b27de1963}} 
+\index{InputManager@{InputManager}!mouseButtons@{mouseButtons}}
+\index{mouseButtons@{mouseButtons}!InputManager@{InputManager}}
+\doxysubsubsection{\texorpdfstring{mouseButtons}{mouseButtons}}
+{\footnotesize\ttfamily int Input\+Manager\+::mouse\+Buttons}
+
+the current state of the mouse buttons this frame. \mbox{\Hypertarget{class_input_manager_a52db1b39ec75b95a4b3c3a098bb942cc}\label{class_input_manager_a52db1b39ec75b95a4b3c3a098bb942cc}} 
+\index{InputManager@{InputManager}!mouseDeltaY@{mouseDeltaY}}
+\index{mouseDeltaY@{mouseDeltaY}!InputManager@{InputManager}}
+\doxysubsubsection{\texorpdfstring{mouseDeltaY}{mouseDeltaY}}
+{\footnotesize\ttfamily int Input\+Manager\+::mouse\+DeltaY}
+
+the calculated mouse delta movement for this frame. \mbox{\Hypertarget{class_input_manager_aca3de515087c5470455be0ebee95b233}\label{class_input_manager_aca3de515087c5470455be0ebee95b233}} 
+\index{InputManager@{InputManager}!mouseWheel@{mouseWheel}}
+\index{mouseWheel@{mouseWheel}!InputManager@{InputManager}}
+\doxysubsubsection{\texorpdfstring{mouseWheel}{mouseWheel}}
+{\footnotesize\ttfamily int Input\+Manager\+::mouse\+Wheel}
+
+the current state of the mouse wheel. \mbox{\Hypertarget{class_input_manager_afb189c58dd5ee470a3202c685c5c7f1e}\label{class_input_manager_afb189c58dd5ee470a3202c685c5c7f1e}} 
+\index{InputManager@{InputManager}!mouseY@{mouseY}}
+\index{mouseY@{mouseY}!InputManager@{InputManager}}
+\doxysubsubsection{\texorpdfstring{mouseY}{mouseY}}
+{\footnotesize\ttfamily int Input\+Manager\+::mouseY}
+
+the current x and y positions of the mouse. \mbox{\Hypertarget{class_input_manager_adf52ab8e346b1ba851c56206af4fbd24}\label{class_input_manager_adf52ab8e346b1ba851c56206af4fbd24}} 
+\index{InputManager@{InputManager}!prevMouseButtons@{prevMouseButtons}}
+\index{prevMouseButtons@{prevMouseButtons}!InputManager@{InputManager}}
+\doxysubsubsection{\texorpdfstring{prevMouseButtons}{prevMouseButtons}}
+{\footnotesize\ttfamily int Input\+Manager\+::prev\+Mouse\+Buttons\hspace{0.3cm}{\ttfamily [private]}}
+
+Used for calculating mouse press down and up. \mbox{\Hypertarget{class_input_manager_a58ed5503ea1eebb374262798bbdf2279}\label{class_input_manager_a58ed5503ea1eebb374262798bbdf2279}} 
+\index{InputManager@{InputManager}!prevMouseY@{prevMouseY}}
+\index{prevMouseY@{prevMouseY}!InputManager@{InputManager}}
+\doxysubsubsection{\texorpdfstring{prevMouseY}{prevMouseY}}
+{\footnotesize\ttfamily int Input\+Manager\+::prev\+MouseY\hspace{0.3cm}{\ttfamily [private]}}
+
+Used for calculated mouse delta movement. \mbox{\Hypertarget{class_input_manager_af98a6a009af03695fd3b809a60314299}\label{class_input_manager_af98a6a009af03695fd3b809a60314299}} 
+\index{InputManager@{InputManager}!sInstance@{sInstance}}
+\index{sInstance@{sInstance}!InputManager@{InputManager}}
+\doxysubsubsection{\texorpdfstring{sInstance}{sInstance}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_input_manager}{Input\+Manager}} $\ast$ Input\+Manager\+::s\+Instance = N\+U\+LL\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+Static instance of the \mbox{\hyperlink{class_time}{Time}} class. \mbox{\Hypertarget{class_input_manager_af8dbfcb4c60f03e53f1e0819ab60a3a9}\label{class_input_manager_af8dbfcb4c60f03e53f1e0819ab60a3a9}} 
+\index{InputManager@{InputManager}!WindowIsQuit@{WindowIsQuit}}
+\index{WindowIsQuit@{WindowIsQuit}!InputManager@{InputManager}}
+\doxysubsubsection{\texorpdfstring{WindowIsQuit}{WindowIsQuit}}
+{\footnotesize\ttfamily bool Input\+Manager\+::\+Window\+Is\+Quit\hspace{0.3cm}{\ttfamily [private]}}
+
+A bool for if the window has been closed. 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

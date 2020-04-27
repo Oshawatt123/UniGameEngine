@@ -1,0 +1,52 @@
+\hypertarget{struct_audio_pack}{}\doxysection{Audio\+Pack Struct Reference}
+\label{struct_audio_pack}\index{AudioPack@{AudioPack}}
+
+
+{\ttfamily \#include $<$Engine\+Structs.\+h$>$}
+
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+S\+D\+L\+\_\+\+Audio\+Spec \mbox{\hyperlink{struct_audio_pack_a323c9bba41b29fccaa1956acd3f8ede4}{wav\+Spec}}
+\item 
+Uint32 \mbox{\hyperlink{struct_audio_pack_a8ca32a7bb96ce5c2298f2d1206fa22cc}{wav\+Length}}
+\item 
+Uint8 $\ast$ \mbox{\hyperlink{struct_audio_pack_a591451c22cee342c6607e3bcea2d0b30}{wav\+Buffer}}
+\item 
+S\+D\+L\+\_\+\+Audio\+Device\+ID \mbox{\hyperlink{struct_audio_pack_aef1a8212aeb91364939ae534960d4f64}{devide\+ID}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{struct_audio_pack}{Audio\+Pack}} is much like \mbox{\hyperlink{struct_bit_map_pack}{Bit\+Map\+Pack}} since it is a storage class for Audiofiles and they\textquotesingle{}re attributes. There is no need to have functions require so many parameters, so everything necessary is stored in this struct. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_audio_pack_aef1a8212aeb91364939ae534960d4f64}\label{struct_audio_pack_aef1a8212aeb91364939ae534960d4f64}} 
+\index{AudioPack@{AudioPack}!devideID@{devideID}}
+\index{devideID@{devideID}!AudioPack@{AudioPack}}
+\doxysubsubsection{\texorpdfstring{devideID}{devideID}}
+{\footnotesize\ttfamily S\+D\+L\+\_\+\+Audio\+Device\+ID Audio\+Pack\+::devide\+ID}
+
+The ID of this sound. \mbox{\Hypertarget{struct_audio_pack_a591451c22cee342c6607e3bcea2d0b30}\label{struct_audio_pack_a591451c22cee342c6607e3bcea2d0b30}} 
+\index{AudioPack@{AudioPack}!wavBuffer@{wavBuffer}}
+\index{wavBuffer@{wavBuffer}!AudioPack@{AudioPack}}
+\doxysubsubsection{\texorpdfstring{wavBuffer}{wavBuffer}}
+{\footnotesize\ttfamily Uint8$\ast$ Audio\+Pack\+::wav\+Buffer}
+
+The buffer used by S\+DL when playing the W\+AV file. \mbox{\Hypertarget{struct_audio_pack_a8ca32a7bb96ce5c2298f2d1206fa22cc}\label{struct_audio_pack_a8ca32a7bb96ce5c2298f2d1206fa22cc}} 
+\index{AudioPack@{AudioPack}!wavLength@{wavLength}}
+\index{wavLength@{wavLength}!AudioPack@{AudioPack}}
+\doxysubsubsection{\texorpdfstring{wavLength}{wavLength}}
+{\footnotesize\ttfamily Uint32 Audio\+Pack\+::wav\+Length}
+
+The length of the W\+AV file. \mbox{\Hypertarget{struct_audio_pack_a323c9bba41b29fccaa1956acd3f8ede4}\label{struct_audio_pack_a323c9bba41b29fccaa1956acd3f8ede4}} 
+\index{AudioPack@{AudioPack}!wavSpec@{wavSpec}}
+\index{wavSpec@{wavSpec}!AudioPack@{AudioPack}}
+\doxysubsubsection{\texorpdfstring{wavSpec}{wavSpec}}
+{\footnotesize\ttfamily S\+D\+L\+\_\+\+Audio\+Spec Audio\+Pack\+::wav\+Spec}
+
+The S\+D\+L\+\_\+\+Audio\+Spec needed by S\+DL. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Engine\+Structs.\+h\end{DoxyCompactItemize}

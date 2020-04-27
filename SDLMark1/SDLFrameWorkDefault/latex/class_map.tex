@@ -1,27 +1,98 @@
 \hypertarget{class_map}{}\doxysection{Map Class Reference}
 \label{class_map}\index{Map@{Map}}
+
+
+{\ttfamily \#include $<$Map.\+h$>$}
+
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_map_ac4007b317aea62e21dc95e06d2a70702}\label{class_map_ac4007b317aea62e21dc95e06d2a70702}} 
-bool {\bfseries Map\+Loaded} ()
+\mbox{\hyperlink{class_map_a0f5ad0fd4563497b4214038cbca8b582}{Map}} ()
+\item 
+\mbox{\hyperlink{class_map_aa403fbe09394ccf39747588f5168e3b2}{$\sim$\+Map}} ()
+\item 
+bool \mbox{\hyperlink{class_map_ac4007b317aea62e21dc95e06d2a70702}{Map\+Loaded}} ()
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_map_a966c959908d016ce9594e7429e76aa5d}\label{class_map_a966c959908d016ce9594e7429e76aa5d}} 
-std\+::vector$<$ std\+::string $>$ {\bfseries map\+Tile\+Data}
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{class_map_a966c959908d016ce9594e7429e76aa5d}{map\+Tile\+Data}}
 \item 
-\mbox{\Hypertarget{class_map_a85d0395e1c06504d93b104d560523e0b}\label{class_map_a85d0395e1c06504d93b104d560523e0b}} 
-std\+::vector$<$ std\+::string $>$ {\bfseries map\+Collision\+Data}
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{class_map_a85d0395e1c06504d93b104d560523e0b}{map\+Collision\+Data}}
 \item 
-\mbox{\Hypertarget{class_map_a4b99c37efdf11ae38a7463b735be8a8b}\label{class_map_a4b99c37efdf11ae38a7463b735be8a8b}} 
-std\+::vector$<$ std\+::string $>$ {\bfseries map\+Entity\+Data}
+std\+::string \mbox{\hyperlink{class_map_a629588d327b100c034d5ed4f88743d8f}{file\+Path}}
 \item 
-\mbox{\Hypertarget{class_map_a26f35d519e6fc86f605ded7de25de86e}\label{class_map_a26f35d519e6fc86f605ded7de25de86e}} 
-std\+::string {\bfseries tile\+Set}
+std\+::string \mbox{\hyperlink{class_map_a26f35d519e6fc86f605ded7de25de86e}{tile\+Set}}
 \end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{class_map}{Map}} class is responsible for holding data about a \char`\"{}map\char`\"{}. It will parse a text file that could look like the following \begin{DoxyVerb}ABBBBBBBBBC
+DJJJLJJJJJF
+DJLJJLKJJJF
+DJJKJLJJJJF
+DJJJJJJJKJF
+DJKLJKJJLJF
+DJJJJLJJJJF
+GHHHHHHHHHI
+\end{DoxyVerb}
+
+
+Each line is stored as a string and all the lines are kept in a vector. Each character is used to index into a tile\+Set, and the corresponding tile is drawn into the world. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_map_a0f5ad0fd4563497b4214038cbca8b582}\label{class_map_a0f5ad0fd4563497b4214038cbca8b582}} 
+\index{Map@{Map}!Map@{Map}}
+\index{Map@{Map}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{Map()}{Map()}}
+{\footnotesize\ttfamily Map\+::\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Nothing happens here. \mbox{\Hypertarget{class_map_aa403fbe09394ccf39747588f5168e3b2}\label{class_map_aa403fbe09394ccf39747588f5168e3b2}} 
+\index{Map@{Map}!````~Map@{$\sim$Map}}
+\index{````~Map@{$\sim$Map}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{$\sim$Map()}{~Map()}}
+{\footnotesize\ttfamily Map\+::$\sim$\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Nothing happens here. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_map_ac4007b317aea62e21dc95e06d2a70702}\label{class_map_ac4007b317aea62e21dc95e06d2a70702}} 
+\index{Map@{Map}!MapLoaded@{MapLoaded}}
+\index{MapLoaded@{MapLoaded}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{MapLoaded()}{MapLoaded()}}
+{\footnotesize\ttfamily bool Map\+::\+Map\+Loaded (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+A QoL function to see if the map has already been loaded, to save needing to do this in \mbox{\hyperlink{class_resource_manager}{Resource\+Manager}}. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_map_a629588d327b100c034d5ed4f88743d8f}\label{class_map_a629588d327b100c034d5ed4f88743d8f}} 
+\index{Map@{Map}!filePath@{filePath}}
+\index{filePath@{filePath}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{filePath}{filePath}}
+{\footnotesize\ttfamily std\+::string Map\+::file\+Path}
+
+The file path of the map file. \mbox{\Hypertarget{class_map_a85d0395e1c06504d93b104d560523e0b}\label{class_map_a85d0395e1c06504d93b104d560523e0b}} 
+\index{Map@{Map}!mapCollisionData@{mapCollisionData}}
+\index{mapCollisionData@{mapCollisionData}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{mapCollisionData}{mapCollisionData}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ Map\+::map\+Collision\+Data}
+
+The collision data of the tile \mbox{\hyperlink{class_map}{Map}}. Used to eliminate the need for creating seperate objects in the scene to do this. \begin{DoxyNote}{Note}
+This was never implemented and is not used. 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_map_a966c959908d016ce9594e7429e76aa5d}\label{class_map_a966c959908d016ce9594e7429e76aa5d}} 
+\index{Map@{Map}!mapTileData@{mapTileData}}
+\index{mapTileData@{mapTileData}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{mapTileData}{mapTileData}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ Map\+::map\+Tile\+Data}
+
+The tile data of this map. \mbox{\Hypertarget{class_map_a26f35d519e6fc86f605ded7de25de86e}\label{class_map_a26f35d519e6fc86f605ded7de25de86e}} 
+\index{Map@{Map}!tileSet@{tileSet}}
+\index{tileSet@{tileSet}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{tileSet}{tileSet}}
+{\footnotesize\ttfamily std\+::string Map\+::tile\+Set}
+
+The file path of the tile\+Set used by the map. This is set on \mbox{\hyperlink{class_scene}{Scene}} load. 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

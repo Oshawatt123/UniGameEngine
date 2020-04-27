@@ -1,0 +1,243 @@
+\hypertarget{_engine_structs_8h}{}\doxysection{Engine\+Structs.\+h File Reference}
+\label{_engine_structs_8h}\index{EngineStructs.h@{EngineStructs.h}}
+{\ttfamily \#include \char`\"{}S\+D\+L.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$string$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_bit_map_pack}{Bit\+Map\+Pack}}
+\item 
+struct \mbox{\hyperlink{struct_audio_pack}{Audio\+Pack}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_engine_structs_8h_a5995cee49e0f84a121d6cba65c0b7322}{E\+N\+G\+I\+N\+E\+\_\+\+E\+D\+I\+T\+O\+R\+\_\+\+M\+O\+DE}}
+\item 
+\#define \mbox{\hyperlink{_engine_structs_8h_a44e94ff0222492dba2720ddafc3c5f50}{Log}}(string,  verbosity)~\mbox{\hyperlink{class_logger_afae0bf19389387a916656073572cb846}{Logger\+::\+Instance}}()-\/$>$Log\+String(string, verbosity)
+\item 
+\#define \mbox{\hyperlink{_engine_structs_8h_a4e2c6c79184cb6689bbc09cd7eee400d}{blackboard}}~\mbox{\hyperlink{class_black_board_ae8b8db9985d9a88ef995d557e9d13781}{Black\+Board\+::\+Instance}}()
+\item 
+\#define \mbox{\hyperlink{_engine_structs_8h_add8f196164eb993b17e7a4d6e766e41b}{filthy\+Time}}~\mbox{\hyperlink{class_time_ae1cc5c0791acaebb278162ab6b7db4d0}{Time\+::\+Instance}}()
+\item 
+\#define \mbox{\hyperlink{_engine_structs_8h_a8f0576c43e0be479efa551bcac65dcf5}{filthy\+Renderer}}~\mbox{\hyperlink{class_renderer_a1230f9655b42f3d37f6086ee94c631a4}{Renderer\+::\+Instance}}()
+\item 
+\#define \mbox{\hyperlink{_engine_structs_8h_ad6cde2782c53c493255c53cf59457fbc}{filthy\+Audio}}~\mbox{\hyperlink{class_audio_manager_a014c2ce3fc771812638da4141a6e6cc6}{Audio\+Manager\+::\+Instance}}()
+\item 
+\#define \mbox{\hyperlink{_engine_structs_8h_a219292845ce92997f8e2d720c5e501b1}{Physics}}~\mbox{\hyperlink{class_physics_engine_a24e630a5280fcac069665aee469ddac3}{Physics\+Engine\+::\+Instance}}()
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{_engine_structs_8h_a296a77e73589cd46eae71a60debc03b4}{My\+Event\+Types}} \{ \newline
+\mbox{\hyperlink{_engine_structs_8h_a296a77e73589cd46eae71a60debc03b4aa7effd93e048b37c190aebbebde2ba29}{Key\+Up}}, 
+\mbox{\hyperlink{_engine_structs_8h_a296a77e73589cd46eae71a60debc03b4ac8dc7cbe1a4eb52ce2200b33b59730ef}{Key\+Down}}, 
+\mbox{\hyperlink{_engine_structs_8h_a296a77e73589cd46eae71a60debc03b4a3f366d19b692520f76c2e34d5dc45ef5}{Mouse}}, 
+\mbox{\hyperlink{_engine_structs_8h_a296a77e73589cd46eae71a60debc03b4afaa0e0e40662bc85cee2e839768efcce}{Window}}, 
+\newline
+\mbox{\hyperlink{_engine_structs_8h_a296a77e73589cd46eae71a60debc03b4a507e8085fc222891e296d086e26cc455}{Num\+Event\+Types}}
+ \}
+\item 
+enum \mbox{\hyperlink{_engine_structs_8h_ade7253f2c8330e54217bfab0f26c09e0}{Mouse\+Buttons}} \{ \mbox{\hyperlink{_engine_structs_8h_ade7253f2c8330e54217bfab0f26c09e0ae7cef03e77d376e23077b26f32812941}{L\+MB}}, 
+\mbox{\hyperlink{_engine_structs_8h_ade7253f2c8330e54217bfab0f26c09e0a400e1ca904c161e54b1e6bbcae677b35}{R\+MB}}, 
+\mbox{\hyperlink{_engine_structs_8h_ade7253f2c8330e54217bfab0f26c09e0a7cefa77797ecc93023e3b591fc9f9099}{M\+MB}}
+ \}
+\item 
+enum \mbox{\hyperlink{_engine_structs_8h_ae8bd9c32525d2d67e9ad8714ff60369f}{Window\+Events}} \{ \mbox{\hyperlink{_engine_structs_8h_ae8bd9c32525d2d67e9ad8714ff60369fabf02a55f17583cede6af2b4a6a7b4f8d}{Win\+Event\+\_\+\+Q\+U\+IT}} =1
+ \}
+\item 
+enum \mbox{\hyperlink{_engine_structs_8h_abf3be10d03894afb391f3a2935e3b313}{Verbosity}} \{ \newline
+\mbox{\hyperlink{_engine_structs_8h_abf3be10d03894afb391f3a2935e3b313aa9afb74d62243bf4caa14fb5837aac7d}{E\+V\+E\+R\+Y\+O\+NE}}, 
+\mbox{\hyperlink{_engine_structs_8h_abf3be10d03894afb391f3a2935e3b313a492d72dc71a61d8e8e0e8496fec20fe1}{F\+I\+L\+T\+H\+Y\+\_\+\+D\+E\+B\+UG}}, 
+\mbox{\hyperlink{_engine_structs_8h_abf3be10d03894afb391f3a2935e3b313a0593585da9181e972974c1274d8f2b4f}{D\+E\+B\+UG}}, 
+\mbox{\hyperlink{_engine_structs_8h_abf3be10d03894afb391f3a2935e3b313a984de77c680eaff141ec910e25568a81}{W\+A\+R\+N\+I\+NG}}, 
+\newline
+\mbox{\hyperlink{_engine_structs_8h_abf3be10d03894afb391f3a2935e3b313a58993825cd8999ca3ebf8806334eff1a}{D\+B\+E\+R\+R\+OR}}, 
+\mbox{\hyperlink{_engine_structs_8h_abf3be10d03894afb391f3a2935e3b313acfe24a7b308a82835c8a9a9a89bc4ca2}{N\+O\+T\+H\+I\+NG}}
+ \}
+\item 
+enum \mbox{\hyperlink{_engine_structs_8h_a0bde2cf4c0554c3028c5d0e86def668a}{Filthy\+Event\+Type}} \{ \mbox{\hyperlink{_engine_structs_8h_a0bde2cf4c0554c3028c5d0e86def668aa1e05eb73d6f747b258ee49d3fc1d9f8c}{S\+C\+E\+N\+E\+\_\+\+L\+O\+AD}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const int \mbox{\hyperlink{_engine_structs_8h_a9308a8ccab88ca272b896567bf38e736}{T\+I\+L\+E\+\_\+\+W\+I\+D\+TH}} = 16
+\item 
+const std\+::string \mbox{\hyperlink{_engine_structs_8h_a3703cd5227913f104c38842db0bcaca9}{D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+I\+L\+E\+\_\+\+P\+A\+TH}} = \char`\"{}..Assets/Sprites/Floor\+\_\+\+Placeholder.\+bmp\char`\"{}
+\item 
+const std\+::string \mbox{\hyperlink{_engine_structs_8h_a213d69c71f04e5e34b41d4e58dc5a2a5}{D\+E\+F\+A\+U\+L\+T\+\_\+\+R\+O\+OT}} = \char`\"{}../Assets/\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_engine_structs_8h_a4e2c6c79184cb6689bbc09cd7eee400d}\label{_engine_structs_8h_a4e2c6c79184cb6689bbc09cd7eee400d}} 
+\index{EngineStructs.h@{EngineStructs.h}!blackboard@{blackboard}}
+\index{blackboard@{blackboard}!EngineStructs.h@{EngineStructs.h}}
+\doxysubsubsection{\texorpdfstring{blackboard}{blackboard}}
+{\footnotesize\ttfamily \#define blackboard~\mbox{\hyperlink{class_black_board_ae8b8db9985d9a88ef995d557e9d13781}{Black\+Board\+::\+Instance}}()}
+
+\mbox{\Hypertarget{_engine_structs_8h_a5995cee49e0f84a121d6cba65c0b7322}\label{_engine_structs_8h_a5995cee49e0f84a121d6cba65c0b7322}} 
+\index{EngineStructs.h@{EngineStructs.h}!ENGINE\_EDITOR\_MODE@{ENGINE\_EDITOR\_MODE}}
+\index{ENGINE\_EDITOR\_MODE@{ENGINE\_EDITOR\_MODE}!EngineStructs.h@{EngineStructs.h}}
+\doxysubsubsection{\texorpdfstring{ENGINE\_EDITOR\_MODE}{ENGINE\_EDITOR\_MODE}}
+{\footnotesize\ttfamily \#define E\+N\+G\+I\+N\+E\+\_\+\+E\+D\+I\+T\+O\+R\+\_\+\+M\+O\+DE}
+
+\mbox{\Hypertarget{_engine_structs_8h_ad6cde2782c53c493255c53cf59457fbc}\label{_engine_structs_8h_ad6cde2782c53c493255c53cf59457fbc}} 
+\index{EngineStructs.h@{EngineStructs.h}!filthyAudio@{filthyAudio}}
+\index{filthyAudio@{filthyAudio}!EngineStructs.h@{EngineStructs.h}}
+\doxysubsubsection{\texorpdfstring{filthyAudio}{filthyAudio}}
+{\footnotesize\ttfamily \#define filthy\+Audio~\mbox{\hyperlink{class_audio_manager_a014c2ce3fc771812638da4141a6e6cc6}{Audio\+Manager\+::\+Instance}}()}
+
+\mbox{\Hypertarget{_engine_structs_8h_a8f0576c43e0be479efa551bcac65dcf5}\label{_engine_structs_8h_a8f0576c43e0be479efa551bcac65dcf5}} 
+\index{EngineStructs.h@{EngineStructs.h}!filthyRenderer@{filthyRenderer}}
+\index{filthyRenderer@{filthyRenderer}!EngineStructs.h@{EngineStructs.h}}
+\doxysubsubsection{\texorpdfstring{filthyRenderer}{filthyRenderer}}
+{\footnotesize\ttfamily \#define filthy\+Renderer~\mbox{\hyperlink{class_renderer_a1230f9655b42f3d37f6086ee94c631a4}{Renderer\+::\+Instance}}()}
+
+\mbox{\Hypertarget{_engine_structs_8h_add8f196164eb993b17e7a4d6e766e41b}\label{_engine_structs_8h_add8f196164eb993b17e7a4d6e766e41b}} 
+\index{EngineStructs.h@{EngineStructs.h}!filthyTime@{filthyTime}}
+\index{filthyTime@{filthyTime}!EngineStructs.h@{EngineStructs.h}}
+\doxysubsubsection{\texorpdfstring{filthyTime}{filthyTime}}
+{\footnotesize\ttfamily \#define filthy\+Time~\mbox{\hyperlink{class_time_ae1cc5c0791acaebb278162ab6b7db4d0}{Time\+::\+Instance}}()}
+
+\mbox{\Hypertarget{_engine_structs_8h_a44e94ff0222492dba2720ddafc3c5f50}\label{_engine_structs_8h_a44e94ff0222492dba2720ddafc3c5f50}} 
+\index{EngineStructs.h@{EngineStructs.h}!Log@{Log}}
+\index{Log@{Log}!EngineStructs.h@{EngineStructs.h}}
+\doxysubsubsection{\texorpdfstring{Log}{Log}}
+{\footnotesize\ttfamily \#define Log(\begin{DoxyParamCaption}\item[{}]{string,  }\item[{}]{verbosity }\end{DoxyParamCaption})~\mbox{\hyperlink{class_logger_afae0bf19389387a916656073572cb846}{Logger\+::\+Instance}}()-\/$>$Log\+String(string, verbosity)}
+
+\mbox{\Hypertarget{_engine_structs_8h_a219292845ce92997f8e2d720c5e501b1}\label{_engine_structs_8h_a219292845ce92997f8e2d720c5e501b1}} 
+\index{EngineStructs.h@{EngineStructs.h}!Physics@{Physics}}
+\index{Physics@{Physics}!EngineStructs.h@{EngineStructs.h}}
+\doxysubsubsection{\texorpdfstring{Physics}{Physics}}
+{\footnotesize\ttfamily \#define Physics~\mbox{\hyperlink{class_physics_engine_a24e630a5280fcac069665aee469ddac3}{Physics\+Engine\+::\+Instance}}()}
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{_engine_structs_8h_a0bde2cf4c0554c3028c5d0e86def668a}\label{_engine_structs_8h_a0bde2cf4c0554c3028c5d0e86def668a}} 
+\index{EngineStructs.h@{EngineStructs.h}!FilthyEventType@{FilthyEventType}}
+\index{FilthyEventType@{FilthyEventType}!EngineStructs.h@{EngineStructs.h}}
+\doxysubsubsection{\texorpdfstring{FilthyEventType}{FilthyEventType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_engine_structs_8h_a0bde2cf4c0554c3028c5d0e86def668a}{Filthy\+Event\+Type}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SCENE\_LOAD@{SCENE\_LOAD}!EngineStructs.h@{EngineStructs.h}}\index{EngineStructs.h@{EngineStructs.h}!SCENE\_LOAD@{SCENE\_LOAD}}}\mbox{\Hypertarget{_engine_structs_8h_a0bde2cf4c0554c3028c5d0e86def668aa1e05eb73d6f747b258ee49d3fc1d9f8c}\label{_engine_structs_8h_a0bde2cf4c0554c3028c5d0e86def668aa1e05eb73d6f747b258ee49d3fc1d9f8c}} 
+S\+C\+E\+N\+E\+\_\+\+L\+O\+AD&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{_engine_structs_8h_ade7253f2c8330e54217bfab0f26c09e0}\label{_engine_structs_8h_ade7253f2c8330e54217bfab0f26c09e0}} 
+\index{EngineStructs.h@{EngineStructs.h}!MouseButtons@{MouseButtons}}
+\index{MouseButtons@{MouseButtons}!EngineStructs.h@{EngineStructs.h}}
+\doxysubsubsection{\texorpdfstring{MouseButtons}{MouseButtons}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_engine_structs_8h_ade7253f2c8330e54217bfab0f26c09e0}{Mouse\+Buttons}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LMB@{LMB}!EngineStructs.h@{EngineStructs.h}}\index{EngineStructs.h@{EngineStructs.h}!LMB@{LMB}}}\mbox{\Hypertarget{_engine_structs_8h_ade7253f2c8330e54217bfab0f26c09e0ae7cef03e77d376e23077b26f32812941}\label{_engine_structs_8h_ade7253f2c8330e54217bfab0f26c09e0ae7cef03e77d376e23077b26f32812941}} 
+L\+MB&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RMB@{RMB}!EngineStructs.h@{EngineStructs.h}}\index{EngineStructs.h@{EngineStructs.h}!RMB@{RMB}}}\mbox{\Hypertarget{_engine_structs_8h_ade7253f2c8330e54217bfab0f26c09e0a400e1ca904c161e54b1e6bbcae677b35}\label{_engine_structs_8h_ade7253f2c8330e54217bfab0f26c09e0a400e1ca904c161e54b1e6bbcae677b35}} 
+R\+MB&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MMB@{MMB}!EngineStructs.h@{EngineStructs.h}}\index{EngineStructs.h@{EngineStructs.h}!MMB@{MMB}}}\mbox{\Hypertarget{_engine_structs_8h_ade7253f2c8330e54217bfab0f26c09e0a7cefa77797ecc93023e3b591fc9f9099}\label{_engine_structs_8h_ade7253f2c8330e54217bfab0f26c09e0a7cefa77797ecc93023e3b591fc9f9099}} 
+M\+MB&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{_engine_structs_8h_a296a77e73589cd46eae71a60debc03b4}\label{_engine_structs_8h_a296a77e73589cd46eae71a60debc03b4}} 
+\index{EngineStructs.h@{EngineStructs.h}!MyEventTypes@{MyEventTypes}}
+\index{MyEventTypes@{MyEventTypes}!EngineStructs.h@{EngineStructs.h}}
+\doxysubsubsection{\texorpdfstring{MyEventTypes}{MyEventTypes}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_engine_structs_8h_a296a77e73589cd46eae71a60debc03b4}{My\+Event\+Types}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{KeyUp@{KeyUp}!EngineStructs.h@{EngineStructs.h}}\index{EngineStructs.h@{EngineStructs.h}!KeyUp@{KeyUp}}}\mbox{\Hypertarget{_engine_structs_8h_a296a77e73589cd46eae71a60debc03b4aa7effd93e048b37c190aebbebde2ba29}\label{_engine_structs_8h_a296a77e73589cd46eae71a60debc03b4aa7effd93e048b37c190aebbebde2ba29}} 
+Key\+Up&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{KeyDown@{KeyDown}!EngineStructs.h@{EngineStructs.h}}\index{EngineStructs.h@{EngineStructs.h}!KeyDown@{KeyDown}}}\mbox{\Hypertarget{_engine_structs_8h_a296a77e73589cd46eae71a60debc03b4ac8dc7cbe1a4eb52ce2200b33b59730ef}\label{_engine_structs_8h_a296a77e73589cd46eae71a60debc03b4ac8dc7cbe1a4eb52ce2200b33b59730ef}} 
+Key\+Down&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Mouse@{Mouse}!EngineStructs.h@{EngineStructs.h}}\index{EngineStructs.h@{EngineStructs.h}!Mouse@{Mouse}}}\mbox{\Hypertarget{_engine_structs_8h_a296a77e73589cd46eae71a60debc03b4a3f366d19b692520f76c2e34d5dc45ef5}\label{_engine_structs_8h_a296a77e73589cd46eae71a60debc03b4a3f366d19b692520f76c2e34d5dc45ef5}} 
+Mouse&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Window@{Window}!EngineStructs.h@{EngineStructs.h}}\index{EngineStructs.h@{EngineStructs.h}!Window@{Window}}}\mbox{\Hypertarget{_engine_structs_8h_a296a77e73589cd46eae71a60debc03b4afaa0e0e40662bc85cee2e839768efcce}\label{_engine_structs_8h_a296a77e73589cd46eae71a60debc03b4afaa0e0e40662bc85cee2e839768efcce}} 
+Window&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NumEventTypes@{NumEventTypes}!EngineStructs.h@{EngineStructs.h}}\index{EngineStructs.h@{EngineStructs.h}!NumEventTypes@{NumEventTypes}}}\mbox{\Hypertarget{_engine_structs_8h_a296a77e73589cd46eae71a60debc03b4a507e8085fc222891e296d086e26cc455}\label{_engine_structs_8h_a296a77e73589cd46eae71a60debc03b4a507e8085fc222891e296d086e26cc455}} 
+Num\+Event\+Types&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{_engine_structs_8h_abf3be10d03894afb391f3a2935e3b313}\label{_engine_structs_8h_abf3be10d03894afb391f3a2935e3b313}} 
+\index{EngineStructs.h@{EngineStructs.h}!Verbosity@{Verbosity}}
+\index{Verbosity@{Verbosity}!EngineStructs.h@{EngineStructs.h}}
+\doxysubsubsection{\texorpdfstring{Verbosity}{Verbosity}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_engine_structs_8h_abf3be10d03894afb391f3a2935e3b313}{Verbosity}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EVERYONE@{EVERYONE}!EngineStructs.h@{EngineStructs.h}}\index{EngineStructs.h@{EngineStructs.h}!EVERYONE@{EVERYONE}}}\mbox{\Hypertarget{_engine_structs_8h_abf3be10d03894afb391f3a2935e3b313aa9afb74d62243bf4caa14fb5837aac7d}\label{_engine_structs_8h_abf3be10d03894afb391f3a2935e3b313aa9afb74d62243bf4caa14fb5837aac7d}} 
+E\+V\+E\+R\+Y\+O\+NE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FILTHY\_DEBUG@{FILTHY\_DEBUG}!EngineStructs.h@{EngineStructs.h}}\index{EngineStructs.h@{EngineStructs.h}!FILTHY\_DEBUG@{FILTHY\_DEBUG}}}\mbox{\Hypertarget{_engine_structs_8h_abf3be10d03894afb391f3a2935e3b313a492d72dc71a61d8e8e0e8496fec20fe1}\label{_engine_structs_8h_abf3be10d03894afb391f3a2935e3b313a492d72dc71a61d8e8e0e8496fec20fe1}} 
+F\+I\+L\+T\+H\+Y\+\_\+\+D\+E\+B\+UG&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEBUG@{DEBUG}!EngineStructs.h@{EngineStructs.h}}\index{EngineStructs.h@{EngineStructs.h}!DEBUG@{DEBUG}}}\mbox{\Hypertarget{_engine_structs_8h_abf3be10d03894afb391f3a2935e3b313a0593585da9181e972974c1274d8f2b4f}\label{_engine_structs_8h_abf3be10d03894afb391f3a2935e3b313a0593585da9181e972974c1274d8f2b4f}} 
+D\+E\+B\+UG&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{WARNING@{WARNING}!EngineStructs.h@{EngineStructs.h}}\index{EngineStructs.h@{EngineStructs.h}!WARNING@{WARNING}}}\mbox{\Hypertarget{_engine_structs_8h_abf3be10d03894afb391f3a2935e3b313a984de77c680eaff141ec910e25568a81}\label{_engine_structs_8h_abf3be10d03894afb391f3a2935e3b313a984de77c680eaff141ec910e25568a81}} 
+W\+A\+R\+N\+I\+NG&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DBERROR@{DBERROR}!EngineStructs.h@{EngineStructs.h}}\index{EngineStructs.h@{EngineStructs.h}!DBERROR@{DBERROR}}}\mbox{\Hypertarget{_engine_structs_8h_abf3be10d03894afb391f3a2935e3b313a58993825cd8999ca3ebf8806334eff1a}\label{_engine_structs_8h_abf3be10d03894afb391f3a2935e3b313a58993825cd8999ca3ebf8806334eff1a}} 
+D\+B\+E\+R\+R\+OR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NOTHING@{NOTHING}!EngineStructs.h@{EngineStructs.h}}\index{EngineStructs.h@{EngineStructs.h}!NOTHING@{NOTHING}}}\mbox{\Hypertarget{_engine_structs_8h_abf3be10d03894afb391f3a2935e3b313acfe24a7b308a82835c8a9a9a89bc4ca2}\label{_engine_structs_8h_abf3be10d03894afb391f3a2935e3b313acfe24a7b308a82835c8a9a9a89bc4ca2}} 
+N\+O\+T\+H\+I\+NG&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{_engine_structs_8h_ae8bd9c32525d2d67e9ad8714ff60369f}\label{_engine_structs_8h_ae8bd9c32525d2d67e9ad8714ff60369f}} 
+\index{EngineStructs.h@{EngineStructs.h}!WindowEvents@{WindowEvents}}
+\index{WindowEvents@{WindowEvents}!EngineStructs.h@{EngineStructs.h}}
+\doxysubsubsection{\texorpdfstring{WindowEvents}{WindowEvents}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_engine_structs_8h_ae8bd9c32525d2d67e9ad8714ff60369f}{Window\+Events}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{WinEvent\_QUIT@{WinEvent\_QUIT}!EngineStructs.h@{EngineStructs.h}}\index{EngineStructs.h@{EngineStructs.h}!WinEvent\_QUIT@{WinEvent\_QUIT}}}\mbox{\Hypertarget{_engine_structs_8h_ae8bd9c32525d2d67e9ad8714ff60369fabf02a55f17583cede6af2b4a6a7b4f8d}\label{_engine_structs_8h_ae8bd9c32525d2d67e9ad8714ff60369fabf02a55f17583cede6af2b4a6a7b4f8d}} 
+Win\+Event\+\_\+\+Q\+U\+IT&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{_engine_structs_8h_a213d69c71f04e5e34b41d4e58dc5a2a5}\label{_engine_structs_8h_a213d69c71f04e5e34b41d4e58dc5a2a5}} 
+\index{EngineStructs.h@{EngineStructs.h}!DEFAULT\_ROOT@{DEFAULT\_ROOT}}
+\index{DEFAULT\_ROOT@{DEFAULT\_ROOT}!EngineStructs.h@{EngineStructs.h}}
+\doxysubsubsection{\texorpdfstring{DEFAULT\_ROOT}{DEFAULT\_ROOT}}
+{\footnotesize\ttfamily const std\+::string D\+E\+F\+A\+U\+L\+T\+\_\+\+R\+O\+OT = \char`\"{}../Assets/\char`\"{}}
+
+\mbox{\Hypertarget{_engine_structs_8h_a3703cd5227913f104c38842db0bcaca9}\label{_engine_structs_8h_a3703cd5227913f104c38842db0bcaca9}} 
+\index{EngineStructs.h@{EngineStructs.h}!DEFAULT\_TILE\_PATH@{DEFAULT\_TILE\_PATH}}
+\index{DEFAULT\_TILE\_PATH@{DEFAULT\_TILE\_PATH}!EngineStructs.h@{EngineStructs.h}}
+\doxysubsubsection{\texorpdfstring{DEFAULT\_TILE\_PATH}{DEFAULT\_TILE\_PATH}}
+{\footnotesize\ttfamily const std\+::string D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+I\+L\+E\+\_\+\+P\+A\+TH = \char`\"{}..Assets/Sprites/Floor\+\_\+\+Placeholder.\+bmp\char`\"{}}
+
+\mbox{\Hypertarget{_engine_structs_8h_a9308a8ccab88ca272b896567bf38e736}\label{_engine_structs_8h_a9308a8ccab88ca272b896567bf38e736}} 
+\index{EngineStructs.h@{EngineStructs.h}!TILE\_WIDTH@{TILE\_WIDTH}}
+\index{TILE\_WIDTH@{TILE\_WIDTH}!EngineStructs.h@{EngineStructs.h}}
+\doxysubsubsection{\texorpdfstring{TILE\_WIDTH}{TILE\_WIDTH}}
+{\footnotesize\ttfamily const int T\+I\+L\+E\+\_\+\+W\+I\+D\+TH = 16}
+

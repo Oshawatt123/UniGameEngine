@@ -1,51 +1,190 @@
 \hypertarget{class_entity}{}\doxysection{Entity Class Reference}
 \label{class_entity}\index{Entity@{Entity}}
+
+
+{\ttfamily \#include $<$E\+C\+S.\+h$>$}
+
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_entity_aa22a085a7e57366fc81501e5a0ca9b04}\label{class_entity_aa22a085a7e57366fc81501e5a0ca9b04}} 
-void {\bfseries Tick} ()
+\mbox{\hyperlink{class_entity_a980f368aa07ce358583982821533a54a}{Entity}} ()
 \item 
-\mbox{\Hypertarget{class_entity_a4dd2a634b00a4c542781c39578130693}\label{class_entity_a4dd2a634b00a4c542781c39578130693}} 
-void {\bfseries Editor\+Tick} ()
+void \mbox{\hyperlink{class_entity_a178d5acf6245f02a646e81d664cdbb53}{Init}} ()
 \item 
-\mbox{\Hypertarget{class_entity_aea1c1568b4123d989c5310697030ad77}\label{class_entity_aea1c1568b4123d989c5310697030ad77}} 
-bool {\bfseries is\+Active} () const
+void \mbox{\hyperlink{class_entity_aa22a085a7e57366fc81501e5a0ca9b04}{Tick}} ()
 \item 
-\mbox{\Hypertarget{class_entity_a2a0f7811f8c3f8726be1549e1c4acba4}\label{class_entity_a2a0f7811f8c3f8726be1549e1c4acba4}} 
-bool {\bfseries is\+Enabled} () const
+void \mbox{\hyperlink{class_entity_a4dd2a634b00a4c542781c39578130693}{Editor\+Tick}} ()
 \item 
-\mbox{\Hypertarget{class_entity_aeeaef7d2a48cc5a114dd5310a8d0e1a2}\label{class_entity_aeeaef7d2a48cc5a114dd5310a8d0e1a2}} 
-const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_component}{Component}} $>$ $>$ {\bfseries get\+Components} ()
+{\footnotesize template$<$typename T $>$ }\\bool \mbox{\hyperlink{class_entity_aa622a8d79153a90d0e3b9b992ca2d38b}{has\+Component}} () const
 \item 
-\mbox{\Hypertarget{class_entity_a691dbe5f9ec930c27af2af0b97907a9e}\label{class_entity_a691dbe5f9ec930c27af2af0b97907a9e}} 
-void {\bfseries destroy} ()
+{\footnotesize template$<$typename T , typename... T\+Args$>$ }\\T \& \mbox{\hyperlink{class_entity_a7bf861ddc1ae381796565481bbb873ef}{add\+Component}} (T\+Args \&\&... m\+Args)
 \item 
-\mbox{\Hypertarget{class_entity_aa622a8d79153a90d0e3b9b992ca2d38b}\label{class_entity_aa622a8d79153a90d0e3b9b992ca2d38b}} 
-{\footnotesize template$<$typename T $>$ }\\bool {\bfseries has\+Component} () const
-\item 
-\mbox{\Hypertarget{class_entity_a7bf861ddc1ae381796565481bbb873ef}\label{class_entity_a7bf861ddc1ae381796565481bbb873ef}} 
-{\footnotesize template$<$typename T , typename... T\+Args$>$ }\\T \& {\bfseries add\+Component} (T\+Args \&\&... m\+Args)
-\item 
-\mbox{\Hypertarget{class_entity_ab67b05516196a4ec97c5b9fd13638bbb}\label{class_entity_ab67b05516196a4ec97c5b9fd13638bbb}} 
-{\footnotesize template$<$typename T $>$ }\\T \& {\bfseries get\+Component} () const
+{\footnotesize template$<$typename T $>$ }\\T \& \mbox{\hyperlink{class_entity_ab67b05516196a4ec97c5b9fd13638bbb}{get\+Component}} () const
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_entity_a931b21fbdebb1a5963b4bcab5df128f5}\label{class_entity_a931b21fbdebb1a5963b4bcab5df128f5}} 
-std\+::string {\bfseries name} = \char`\"{}What a creative name!\char`\"{}
+int \mbox{\hyperlink{class_entity_a5c92b546dedae9ce473274d82c8585f6}{ID}}
 \item 
-\mbox{\Hypertarget{class_entity_a164f61a1e96badb6bc873ec2ef01ea6d}\label{class_entity_a164f61a1e96badb6bc873ec2ef01ea6d}} 
-std\+::string {\bfseries tag} = \char`\"{}\char`\"{}
+std\+::string \mbox{\hyperlink{class_entity_a931b21fbdebb1a5963b4bcab5df128f5}{name}} = \char`\"{}What a creative name!\char`\"{}
 \item 
-\mbox{\Hypertarget{class_entity_a6a249abbfcf8d6427561f14724f4f95a}\label{class_entity_a6a249abbfcf8d6427561f14724f4f95a}} 
-bool {\bfseries edit\+Mode}
+std\+::string \mbox{\hyperlink{class_entity_a164f61a1e96badb6bc873ec2ef01ea6d}{tag}} = \char`\"{}\char`\"{}
 \item 
-\mbox{\Hypertarget{class_entity_a844794654f15fa342f4b02e2faaf395f}\label{class_entity_a844794654f15fa342f4b02e2faaf395f}} 
-bool {\bfseries enabled} = true
+bool \mbox{\hyperlink{class_entity_a6a249abbfcf8d6427561f14724f4f95a}{edit\+Mode}}
+\item 
+bool \mbox{\hyperlink{class_entity_a844794654f15fa342f4b02e2faaf395f}{enabled}} = true
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_component}{Component}} $>$ $>$ \mbox{\hyperlink{class_entity_a03f25ea00ebb0ecb6c20932b4e9dc606}{components}}
+\item 
+Component\+Array \mbox{\hyperlink{class_entity_a268b34f155900bef861b8b3ce6a5fa60}{component\+Array}}
+\item 
+Component\+Bit\+Set \mbox{\hyperlink{class_entity_a5427c0cedd55c80f3480659c3fa36f6d}{component\+Bit\+Set}}
 \end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+An \mbox{\hyperlink{class_entity}{Entity}} is the base of every object inside Fithy\+Engine.
+
+An entity is comprised of multiple Components, as well as some identifying features such as an ID, and name.
+
+E\+V\+E\+RY entity will, by default, have a \mbox{\hyperlink{class_position_component}{Position\+Component}}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_entity_a980f368aa07ce358583982821533a54a}\label{class_entity_a980f368aa07ce358583982821533a54a}} 
+\index{Entity@{Entity}!Entity@{Entity}}
+\index{Entity@{Entity}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{Entity()}{Entity()}}
+{\footnotesize\ttfamily Entity\+::\+Entity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Base constructor sets the ID number of the entity to one generated by the blackboard. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_entity_a7bf861ddc1ae381796565481bbb873ef}\label{class_entity_a7bf861ddc1ae381796565481bbb873ef}} 
+\index{Entity@{Entity}!addComponent@{addComponent}}
+\index{addComponent@{addComponent}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{addComponent()}{addComponent()}}
+{\footnotesize\ttfamily template$<$typename T , typename... T\+Args$>$ \\
+T\& Entity\+::add\+Component (\begin{DoxyParamCaption}\item[{T\+Args \&\&...}]{m\+Args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Add a component of type T to this \mbox{\hyperlink{class_entity}{Entity}}. \mbox{\Hypertarget{class_entity_a4dd2a634b00a4c542781c39578130693}\label{class_entity_a4dd2a634b00a4c542781c39578130693}} 
+\index{Entity@{Entity}!EditorTick@{EditorTick}}
+\index{EditorTick@{EditorTick}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{EditorTick()}{EditorTick()}}
+{\footnotesize\ttfamily void Entity\+::\+Editor\+Tick (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Editor\+Tick runs the Editor\+Tick function of all components attached to this entity.
+
+\begin{DoxyNote}{Note}
+This D\+O\+ES tick the sprite component\textquotesingle{}s Editor\+Tick function. 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_entity_ab67b05516196a4ec97c5b9fd13638bbb}\label{class_entity_ab67b05516196a4ec97c5b9fd13638bbb}} 
+\index{Entity@{Entity}!getComponent@{getComponent}}
+\index{getComponent@{getComponent}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{getComponent()}{getComponent()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T\& Entity\+::get\+Component (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get a component of type T on this entity.
+
+\begin{DoxyReturn}{Returns}
+A reference to the component of type T.
+\end{DoxyReturn}
+\begin{DoxyWarning}{Warning}
+There is NO check for if an \mbox{\hyperlink{class_entity}{Entity}} has a component before it is gotten from the component\+Array. If the component is not attached to this \mbox{\hyperlink{class_entity}{Entity}}, it W\+I\+LL crash. 
+\end{DoxyWarning}
+\mbox{\Hypertarget{class_entity_aa622a8d79153a90d0e3b9b992ca2d38b}\label{class_entity_aa622a8d79153a90d0e3b9b992ca2d38b}} 
+\index{Entity@{Entity}!hasComponent@{hasComponent}}
+\index{hasComponent@{hasComponent}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{hasComponent()}{hasComponent()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool Entity\+::has\+Component (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Checks the component\+Bit\+Set to see if an object has component of type T.
+
+\begin{DoxyReturn}{Returns}
+Whether the component of type T has been found on this entity. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_entity_a178d5acf6245f02a646e81d664cdbb53}\label{class_entity_a178d5acf6245f02a646e81d664cdbb53}} 
+\index{Entity@{Entity}!Init@{Init}}
+\index{Init@{Init}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Entity\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Initliazes the \mbox{\hyperlink{class_entity}{Entity}}.
+
+All components attached to this entity are initialized too. \mbox{\Hypertarget{class_entity_aa22a085a7e57366fc81501e5a0ca9b04}\label{class_entity_aa22a085a7e57366fc81501e5a0ca9b04}} 
+\index{Entity@{Entity}!Tick@{Tick}}
+\index{Tick@{Tick}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{Tick()}{Tick()}}
+{\footnotesize\ttfamily void Entity\+::\+Tick (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Tick runs the tick function of all components attached to this entity.
+
+\begin{DoxyNote}{Note}
+This D\+O\+ES N\+OT tick the sprite component!!! Entities are drawn at the end of the frame, and the sprite component is ticked by \mbox{\hyperlink{class_scene}{Scene}}\textquotesingle{}s Draw function. 
+\end{DoxyNote}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_entity_a268b34f155900bef861b8b3ce6a5fa60}\label{class_entity_a268b34f155900bef861b8b3ce6a5fa60}} 
+\index{Entity@{Entity}!componentArray@{componentArray}}
+\index{componentArray@{componentArray}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{componentArray}{componentArray}}
+{\footnotesize\ttfamily Component\+Array Entity\+::component\+Array\hspace{0.3cm}{\ttfamily [private]}}
+
+An array of component I\+Ds attached to this entity. \mbox{\Hypertarget{class_entity_a5427c0cedd55c80f3480659c3fa36f6d}\label{class_entity_a5427c0cedd55c80f3480659c3fa36f6d}} 
+\index{Entity@{Entity}!componentBitSet@{componentBitSet}}
+\index{componentBitSet@{componentBitSet}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{componentBitSet}{componentBitSet}}
+{\footnotesize\ttfamily Component\+Bit\+Set Entity\+::component\+Bit\+Set\hspace{0.3cm}{\ttfamily [private]}}
+
+A bitset for the components attached to this object. \mbox{\Hypertarget{class_entity_a03f25ea00ebb0ecb6c20932b4e9dc606}\label{class_entity_a03f25ea00ebb0ecb6c20932b4e9dc606}} 
+\index{Entity@{Entity}!components@{components}}
+\index{components@{components}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{components}{components}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{class_component}{Component}}$>$ $>$ Entity\+::components\hspace{0.3cm}{\ttfamily [private]}}
+
+A list of all the components. \mbox{\Hypertarget{class_entity_a6a249abbfcf8d6427561f14724f4f95a}\label{class_entity_a6a249abbfcf8d6427561f14724f4f95a}} 
+\index{Entity@{Entity}!editMode@{editMode}}
+\index{editMode@{editMode}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{editMode}{editMode}}
+{\footnotesize\ttfamily bool Entity\+::edit\+Mode}
+
+Determines if the entity is in edit mode.
+
+\begin{DoxyNote}{Note}
+This IS N\+OT the same as edit mode in the blackboard. T\+H\+IS is used to determine that the entity has been selected whilst in edit mode, and is open for editing via inspector. 
+
+Also changes behaviour in some components like collision component which will draw lines whilst it\textquotesingle{}s entity is in edit mode. 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_entity_a844794654f15fa342f4b02e2faaf395f}\label{class_entity_a844794654f15fa342f4b02e2faaf395f}} 
+\index{Entity@{Entity}!enabled@{enabled}}
+\index{enabled@{enabled}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{enabled}{enabled}}
+{\footnotesize\ttfamily bool Entity\+::enabled = true}
+
+Determines if the entity is enables. Disabled entities are not ticked or collided with. \mbox{\Hypertarget{class_entity_a5c92b546dedae9ce473274d82c8585f6}\label{class_entity_a5c92b546dedae9ce473274d82c8585f6}} 
+\index{Entity@{Entity}!ID@{ID}}
+\index{ID@{ID}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{ID}{ID}}
+{\footnotesize\ttfamily int Entity\+::\+ID}
+
+Unique ID assigned to this \mbox{\hyperlink{class_entity}{Entity}}. \mbox{\Hypertarget{class_entity_a931b21fbdebb1a5963b4bcab5df128f5}\label{class_entity_a931b21fbdebb1a5963b4bcab5df128f5}} 
+\index{Entity@{Entity}!name@{name}}
+\index{name@{name}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily std\+::string Entity\+::name = \char`\"{}What a creative name!\char`\"{}}
+
+Name of the entity. \mbox{\Hypertarget{class_entity_a164f61a1e96badb6bc873ec2ef01ea6d}\label{class_entity_a164f61a1e96badb6bc873ec2ef01ea6d}} 
+\index{Entity@{Entity}!tag@{tag}}
+\index{tag@{tag}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{tag}{tag}}
+{\footnotesize\ttfamily std\+::string Entity\+::tag = \char`\"{}\char`\"{}}
+
+Tag of the entity. Intended for use of the physics system and collisions. 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

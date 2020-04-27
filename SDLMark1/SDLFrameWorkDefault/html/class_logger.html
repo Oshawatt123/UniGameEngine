@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: Logger Class Reference</title>
+<title>The Filthy Engine: Logger Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">My Project
+   <div id="projectname">The Filthy Engine
    </div>
   </td>
  </tr>
@@ -64,24 +64,150 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="class_logger-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Logger Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_logger_8h_source.html">Logger.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a5d8ec6d332e83fc79ee73e50a52e1b9a"><td class="memItemLeft" align="right" valign="top"><a id="a5d8ec6d332e83fc79ee73e50a52e1b9a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>LogString</b> (std::string message, Verbosity verbosity)</td></tr>
+<tr class="memitem:a5d8ec6d332e83fc79ee73e50a52e1b9a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_logger.html#a5d8ec6d332e83fc79ee73e50a52e1b9a">LogString</a> (std::string message, Verbosity verbosity)</td></tr>
 <tr class="separator:a5d8ec6d332e83fc79ee73e50a52e1b9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:afae0bf19389387a916656073572cb846"><td class="memItemLeft" align="right" valign="top"><a id="afae0bf19389387a916656073572cb846"></a>
-static <a class="el" href="class_logger.html">Logger</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>Instance</b> ()</td></tr>
+<tr class="memitem:afae0bf19389387a916656073572cb846"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_logger.html">Logger</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_logger.html#afae0bf19389387a916656073572cb846">Instance</a> ()</td></tr>
 <tr class="separator:afae0bf19389387a916656073572cb846"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a4ad9786dcb9a12fc6de7d6c591b117b1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_logger.html#a4ad9786dcb9a12fc6de7d6c591b117b1">mVerbosity</a> = DEBUG</td></tr>
+<tr class="separator:a4ad9786dcb9a12fc6de7d6c591b117b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:adb66affbab16471bafe6cf45d239b769"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_logger.html">Logger</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_logger.html#adb66affbab16471bafe6cf45d239b769">sInstance</a> = NULL</td></tr>
+<tr class="separator:adb66affbab16471bafe6cf45d239b769"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>The logger is a QoL class to allow me to get only the information I need by changing which level of logging I want to perform. The enum for the logging levels is in EngineStructs, but can be seen here:</p>
+<p>enum Verbosity { EVERYONE, FILTHY_DEBUG, DEBUG, WARNING, DBERROR, NOTHING };</p>
+<p>If we are running a verbosity of DEBUG, nothing logged with a verbosity of FILTHY_DEBUG will be printed to the console. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="afae0bf19389387a916656073572cb846"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afae0bf19389387a916656073572cb846">&#9670;&nbsp;</a></span>Instance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_logger.html">Logger</a> * Logger::Instance </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Method for getting an instance of <a class="el" href="class_logger.html">Logger</a>. </p>
+
+</div>
+</div>
+<a id="a5d8ec6d332e83fc79ee73e50a52e1b9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d8ec6d332e83fc79ee73e50a52e1b9a">&#9670;&nbsp;</a></span>LogString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Logger::LogString </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>message</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Verbosity&#160;</td>
+          <td class="paramname"><em>verbosity</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Logs a string, with a certain verbosity.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">message</td><td>The message to log. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">verbosity</td><td>The verbosity of the log. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a4ad9786dcb9a12fc6de7d6c591b117b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ad9786dcb9a12fc6de7d6c591b117b1">&#9670;&nbsp;</a></span>mVerbosity</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Logger::mVerbosity = DEBUG</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The level of the logging. Everything logged under this verbosity is ignored. Enum for this is in EngineStructs </p>
+
+</div>
+</div>
+<a id="adb66affbab16471bafe6cf45d239b769"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb66affbab16471bafe6cf45d239b769">&#9670;&nbsp;</a></span>sInstance</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_logger.html">Logger</a> * Logger::sInstance = NULL</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Static instance of the <a class="el" href="class_logger.html">Logger</a> class. </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="_logger_8h_source.html">Logger.h</a></li>
 <li>Logger.cpp</li>

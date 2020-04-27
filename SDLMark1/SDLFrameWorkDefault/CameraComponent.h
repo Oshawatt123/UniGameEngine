@@ -7,15 +7,15 @@ class CameraComponent : public Component
 {
 private:
 
-	PositionComponent* pos;
+	PositionComponent* pos; /*!< Reference to the PositionComponent.*/
 
-	Entity* entityToFollow;
-	Vector2 camPosition;
+	Entity* entityToFollow; /*!< Reference to the entity to follow.*/
+	Vector2 camPosition; /*!< The position of the camera, for use in generating offset.*/
 
 
 public:
 
-	Vector2 camOffset;
+	Vector2 camOffset; /*!< The offset of the camera which is used in rendering the scene relative to the camera.*/
 
 	void Init() override
 	{

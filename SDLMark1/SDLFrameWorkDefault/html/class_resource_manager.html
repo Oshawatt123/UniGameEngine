@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: ResourceManager Class Reference</title>
+<title>The Filthy Engine: ResourceManager Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">My Project
+   <div id="projectname">The Filthy Engine
    </div>
   </td>
  </tr>
@@ -64,33 +64,373 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="class_resource_manager-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">ResourceManager Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_resource_manager_8h_source.html">ResourceManager.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ad997f36a23675d8176acd0d26ffd6114"><td class="memItemLeft" align="right" valign="top"><a id="ad997f36a23675d8176acd0d26ffd6114"></a>
-<a class="el" href="struct_bit_map_pack.html">BitMapPack</a>&#160;</td><td class="memItemRight" valign="bottom"><b>LoadBitMap</b> (std::string filePath, bool transparency)</td></tr>
+<tr class="memitem:ad997f36a23675d8176acd0d26ffd6114"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_bit_map_pack.html">BitMapPack</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_resource_manager.html#ad997f36a23675d8176acd0d26ffd6114">LoadBitMap</a> (std::string filePath, bool transparency)</td></tr>
 <tr class="separator:ad997f36a23675d8176acd0d26ffd6114"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a76f68d22493ba42e0264eafe56abf46d"><td class="memItemLeft" align="right" valign="top"><a id="a76f68d22493ba42e0264eafe56abf46d"></a>
-std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>LoadMap</b> (std::string filePath)</td></tr>
+<tr class="memitem:a7baf26fe2d1a63e53f8fc162c9b1a802"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_resource_manager.html#a7baf26fe2d1a63e53f8fc162c9b1a802">testLoad</a> (std::string filePath)</td></tr>
+<tr class="separator:a7baf26fe2d1a63e53f8fc162c9b1a802"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76f68d22493ba42e0264eafe56abf46d"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_resource_manager.html#a76f68d22493ba42e0264eafe56abf46d">LoadMap</a> (std::string filePath)</td></tr>
 <tr class="separator:a76f68d22493ba42e0264eafe56abf46d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acc03f41b13e08478e074c52a0bfeaf81"><td class="memItemLeft" align="right" valign="top"><a id="acc03f41b13e08478e074c52a0bfeaf81"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>release</b> ()</td></tr>
+<tr class="memitem:acc03f41b13e08478e074c52a0bfeaf81"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_resource_manager.html#acc03f41b13e08478e074c52a0bfeaf81">release</a> ()</td></tr>
 <tr class="separator:acc03f41b13e08478e074c52a0bfeaf81"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a63d542726087c4f2ae121a05060a15e9"><td class="memItemLeft" align="right" valign="top"><a id="a63d542726087c4f2ae121a05060a15e9"></a>
-static <a class="el" href="class_resource_manager.html">ResourceManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>Instance</b> ()</td></tr>
+<tr class="memitem:a63d542726087c4f2ae121a05060a15e9"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_resource_manager.html">ResourceManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_resource_manager.html#a63d542726087c4f2ae121a05060a15e9">Instance</a> ()</td></tr>
 <tr class="separator:a63d542726087c4f2ae121a05060a15e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af66b8b277afd86cdfd301ff5d4bbe3be"><td class="memItemLeft" align="right" valign="top"><a id="af66b8b277afd86cdfd301ff5d4bbe3be"></a>
-static <a class="el" href="class_resource_manager.html">ResourceManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>Instance</b> (SDL_Renderer *renderer)</td></tr>
+<tr class="memitem:af66b8b277afd86cdfd301ff5d4bbe3be"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_resource_manager.html">ResourceManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_resource_manager.html#af66b8b277afd86cdfd301ff5d4bbe3be">Instance</a> (SDL_Renderer *renderer)</td></tr>
 <tr class="separator:af66b8b277afd86cdfd301ff5d4bbe3be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:aea7749988b7060e7ef9e4631e8c88746"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_resource_manager.html#aea7749988b7060e7ef9e4631e8c88746">checkHashMap</a> (std::string key)</td></tr>
+<tr class="separator:aea7749988b7060e7ef9e4631e8c88746"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ac459ffb9aa26161b50c0b38f828b3a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_resource_manager.html#a6ac459ffb9aa26161b50c0b38f828b3a">ResourceManager</a> (SDL_Renderer *renderer)</td></tr>
+<tr class="separator:a6ac459ffb9aa26161b50c0b38f828b3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:acf2d1e9dd1fc552ee5523f548d093068"><td class="memItemLeft" align="right" valign="top">std::ifstream&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_resource_manager.html#acf2d1e9dd1fc552ee5523f548d093068">inFile</a></td></tr>
+<tr class="separator:acf2d1e9dd1fc552ee5523f548d093068"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb2bca076a201aabcd7fded936338d74"><td class="memItemLeft" align="right" valign="top">SDL_Renderer *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_resource_manager.html#adb2bca076a201aabcd7fded936338d74">m_pRenderer</a></td></tr>
+<tr class="separator:adb2bca076a201aabcd7fded936338d74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3737858f6795bd9e9ae10f5d324923d2"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; std::string, <a class="el" href="struct_bit_map_pack.html">BitMapPack</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_resource_manager.html#a3737858f6795bd9e9ae10f5d324923d2">m_textureHashMap</a></td></tr>
+<tr class="separator:a3737858f6795bd9e9ae10f5d324923d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:a2e8e8b86e865a57ba0e126aa0860788d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_resource_manager.html">ResourceManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_resource_manager.html#a2e8e8b86e865a57ba0e126aa0860788d">sInstance</a> = NULL</td></tr>
+<tr class="separator:a2e8e8b86e865a57ba0e126aa0860788d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>The Resouce Manager is responsible for almost all of the resources used by the game. It prevents the loading of textures that have already been loaded. It also loads Maps and Scenes. Loading the same scene twice is handled by <a class="el" href="class_scene_manager.html">SceneManager</a>. Audio is handled by the <a class="el" href="class_audio_manager.html">AudioManager</a>. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a6ac459ffb9aa26161b50c0b38f828b3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ac459ffb9aa26161b50c0b38f828b3a">&#9670;&nbsp;</a></span>ResourceManager()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ResourceManager::ResourceManager </td>
+          <td>(</td>
+          <td class="paramtype">SDL_Renderer *&#160;</td>
+          <td class="paramname"><em>renderer</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Constructs a Resource Manager with a renderer. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="aea7749988b7060e7ef9e4631e8c88746"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea7749988b7060e7ef9e4631e8c88746">&#9670;&nbsp;</a></span>checkHashMap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ResourceManager::checkHashMap </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>A QoL function that checks if the audioHashMap has a certain key. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">key</td><td>The key to search for </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Whether or not the key was found in the audioHashMap. </dd></dl>
+
+</div>
+</div>
+<a id="a63d542726087c4f2ae121a05060a15e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63d542726087c4f2ae121a05060a15e9">&#9670;&nbsp;</a></span>Instance() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_resource_manager.html">ResourceManager</a> * ResourceManager::Instance </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Method for getting an instance of <a class="el" href="class_resource_manager.html">ResourceManager</a>. </p>
+
+</div>
+</div>
+<a id="af66b8b277afd86cdfd301ff5d4bbe3be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af66b8b277afd86cdfd301ff5d4bbe3be">&#9670;&nbsp;</a></span>Instance() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_resource_manager.html">ResourceManager</a> * ResourceManager::Instance </td>
+          <td>(</td>
+          <td class="paramtype">SDL_Renderer *&#160;</td>
+          <td class="paramname"><em>renderer</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Method for getting an instance of <a class="el" href="class_resource_manager.html">ResourceManager</a>. </p><dl class="section note"><dt>Note</dt><dd>This MUST be called before any call to <a class="el" href="class_resource_manager.html#a63d542726087c4f2ae121a05060a15e9">Instance()</a> as the <a class="el" href="class_resource_manager.html">ResourceManager</a> has be to initialized with a <a class="el" href="class_renderer.html">Renderer</a>. </dd></dl>
+
+</div>
+</div>
+<a id="ad997f36a23675d8176acd0d26ffd6114"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad997f36a23675d8176acd0d26ffd6114">&#9670;&nbsp;</a></span>LoadBitMap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_bit_map_pack.html">BitMapPack</a> ResourceManager::LoadBitMap </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>filePath</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>transparency</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Loads a bit map from a file. Prevents loading the same bit map twice by checking if it has already been loaded into the texture hash map.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">filePath</td><td>The file path of the bitmap you want to load, including filename. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">transparency</td><td>Whether or not the bitmap file uses transparency. Transparency value is (255, 0, 255, 255) or magenta.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The <a class="el" href="struct_bit_map_pack.html">BitMapPack</a> that has been loaded either from file or from the texture hash map. </dd></dl>
+
+</div>
+</div>
+<a id="a76f68d22493ba42e0264eafe56abf46d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76f68d22493ba42e0264eafe56abf46d">&#9670;&nbsp;</a></span>LoadMap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; std::string &gt; ResourceManager::LoadMap </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>filePath</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Loads a map from a given filePath.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">filePath</td><td>The file path of the map.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A vector of strings representing the map. </dd></dl>
+
+</div>
+</div>
+<a id="acc03f41b13e08478e074c52a0bfeaf81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc03f41b13e08478e074c52a0bfeaf81">&#9670;&nbsp;</a></span>release()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ResourceManager::release </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Cleans up the Instance of all the pointers it holds on to. Specifically, the texture hash map has lots of pointers to MBs of data. </p>
+
+</div>
+</div>
+<a id="a7baf26fe2d1a63e53f8fc162c9b1a802"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7baf26fe2d1a63e53f8fc162c9b1a802">&#9670;&nbsp;</a></span>testLoad()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ResourceManager::testLoad </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>filePath</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>A function used by the Inspector to check if a file path can be loaded.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">filePath</td><td>The file path to test loading.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Whether or not the given file path can be loaded. </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="acf2d1e9dd1fc552ee5523f548d093068"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf2d1e9dd1fc552ee5523f548d093068">&#9670;&nbsp;</a></span>inFile</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ifstream ResourceManager::inFile</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>A stack allocated std::ifstream to save on memory allocations when loading new files. </p>
+
+</div>
+</div>
+<a id="adb2bca076a201aabcd7fded936338d74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb2bca076a201aabcd7fded936338d74">&#9670;&nbsp;</a></span>m_pRenderer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SDL_Renderer* ResourceManager::m_pRenderer</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>A reference to the renderer. </p>
+
+</div>
+</div>
+<a id="a3737858f6795bd9e9ae10f5d324923d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3737858f6795bd9e9ae10f5d324923d2">&#9670;&nbsp;</a></span>m_textureHashMap</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unordered_map&lt;std::string, <a class="el" href="struct_bit_map_pack.html">BitMapPack</a>&gt; ResourceManager::m_textureHashMap</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The hash map where all game textures are stored. </p>
+
+</div>
+</div>
+<a id="a2e8e8b86e865a57ba0e126aa0860788d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e8e8b86e865a57ba0e126aa0860788d">&#9670;&nbsp;</a></span>sInstance</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_resource_manager.html">ResourceManager</a> * ResourceManager::sInstance = NULL</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Static instance of the <a class="el" href="class_resource_manager.html">ResourceManager</a> class. </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="_resource_manager_8h_source.html">ResourceManager.h</a></li>
 <li>ResourceManager.cpp</li>

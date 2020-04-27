@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: PhysicsEngine Class Reference</title>
+<title>The Filthy Engine: PhysicsEngine Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">My Project
+   <div id="projectname">The Filthy Engine
    </div>
   </td>
  </tr>
@@ -63,30 +63,296 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="class_physics_engine-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">PhysicsEngine Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_physics_engine_8h_source.html">PhysicsEngine.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aa2d2030963e541041762ddeefae7a43e"><td class="memItemLeft" align="right" valign="top"><a id="aa2d2030963e541041762ddeefae7a43e"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>Tick</b> ()</td></tr>
+<tr class="memitem:aa2d2030963e541041762ddeefae7a43e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics_engine.html#aa2d2030963e541041762ddeefae7a43e">Tick</a> ()</td></tr>
 <tr class="separator:aa2d2030963e541041762ddeefae7a43e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab12ae7c14dcc84e70fcd5b16f89a18b7"><td class="memItemLeft" align="right" valign="top"><a id="ab12ae7c14dcc84e70fcd5b16f89a18b7"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>AddMoveableObject</b> (<a class="el" href="class_entity.html">Entity</a> *object)</td></tr>
+<tr class="memitem:ab12ae7c14dcc84e70fcd5b16f89a18b7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics_engine.html#ab12ae7c14dcc84e70fcd5b16f89a18b7">AddMoveableObject</a> (<a class="el" href="class_entity.html">Entity</a> *object)</td></tr>
 <tr class="separator:ab12ae7c14dcc84e70fcd5b16f89a18b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a950a3daa18c5ea71bc9ef0889421bc67"><td class="memItemLeft" align="right" valign="top"><a id="a950a3daa18c5ea71bc9ef0889421bc67"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>AddCollidableObject</b> (<a class="el" href="class_entity.html">Entity</a> *object)</td></tr>
+<tr class="memitem:a950a3daa18c5ea71bc9ef0889421bc67"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics_engine.html#a950a3daa18c5ea71bc9ef0889421bc67">AddCollidableObject</a> (<a class="el" href="class_entity.html">Entity</a> *object)</td></tr>
 <tr class="separator:a950a3daa18c5ea71bc9ef0889421bc67"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8d2a9fee6daaa97cd94bce3b977c5e81"><td class="memItemLeft" align="right" valign="top"><a id="a8d2a9fee6daaa97cd94bce3b977c5e81"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>CheckPointCollision</b> (<a class="el" href="class_vector2.html">Vector2</a> point, <a class="el" href="class_entity.html">Entity</a> *outEntity)</td></tr>
-<tr class="separator:a8d2a9fee6daaa97cd94bce3b977c5e81"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ace98e19270cfa562584e5c4bc1e467f0"><td class="memItemLeft" align="right" valign="top"><a id="ace98e19270cfa562584e5c4bc1e467f0"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>AABB</b> (const SDL_Rect &amp;A, const SDL_Rect &amp;B)</td></tr>
+<tr class="memitem:a5c4c70f7d5c9d68439583bb568eb4dc1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_entity.html">Entity</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics_engine.html#a5c4c70f7d5c9d68439583bb568eb4dc1">CheckPointCollision</a> (<a class="el" href="class_vector2.html">Vector2</a> point)</td></tr>
+<tr class="separator:a5c4c70f7d5c9d68439583bb568eb4dc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace98e19270cfa562584e5c4bc1e467f0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics_engine.html#ace98e19270cfa562584e5c4bc1e467f0">AABB</a> (const SDL_Rect &amp;A, const SDL_Rect &amp;B)</td></tr>
 <tr class="separator:ace98e19270cfa562584e5c4bc1e467f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab391f1c77242ab2785ac032ec2ce9054"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics_engine.html#ab391f1c77242ab2785ac032ec2ce9054">FlushEntities</a> ()</td></tr>
+<tr class="separator:ab391f1c77242ab2785ac032ec2ce9054"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a24e630a5280fcac069665aee469ddac3"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_physics_engine.html">PhysicsEngine</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics_engine.html#a24e630a5280fcac069665aee469ddac3">Instance</a> ()</td></tr>
+<tr class="separator:a24e630a5280fcac069665aee469ddac3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a9c09a84286934ce77499d7a1c0a62dc7"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_entity.html">Entity</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics_engine.html#a9c09a84286934ce77499d7a1c0a62dc7">MoveAble</a></td></tr>
+<tr class="separator:a9c09a84286934ce77499d7a1c0a62dc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa631d02caf050302737427246ac53e86"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_entity.html">Entity</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics_engine.html#aa631d02caf050302737427246ac53e86">Collidable</a></td></tr>
+<tr class="separator:aa631d02caf050302737427246ac53e86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:a660360c3f60b017afd46cd187c3db5f2"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_physics_engine.html">PhysicsEngine</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics_engine.html#a660360c3f60b017afd46cd187c3db5f2">sInstance</a> = NULL</td></tr>
+<tr class="separator:a660360c3f60b017afd46cd187c3db5f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>The Physics Engine is not a fully fledged physics engine. This does NOT handle collisions. It will only detect and report collisions to the objects that have collided. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="ace98e19270cfa562584e5c4bc1e467f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace98e19270cfa562584e5c4bc1e467f0">&#9670;&nbsp;</a></span>AABB()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool PhysicsEngine::AABB </td>
+          <td>(</td>
+          <td class="paramtype">const SDL_Rect &amp;&#160;</td>
+          <td class="paramname"><em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const SDL_Rect &amp;&#160;</td>
+          <td class="paramname"><em>B</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Performs an AABB collision test for overlapping rectangles.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">A</td><td>The first rectangle to check collisions with. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">B</td><td>The second rectangle to check collisions with.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Whether there was an overlap on the two rectangles. </dd></dl>
+
+</div>
+</div>
+<a id="a950a3daa18c5ea71bc9ef0889421bc67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a950a3daa18c5ea71bc9ef0889421bc67">&#9670;&nbsp;</a></span>AddCollidableObject()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PhysicsEngine::AddCollidableObject </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_entity.html">Entity</a> *&#160;</td>
+          <td class="paramname"><em>object</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Adds an object to the Collidable vector.</p>
+<p>/param[in] object The entity to add into the collidable vector. </p>
+
+</div>
+</div>
+<a id="ab12ae7c14dcc84e70fcd5b16f89a18b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab12ae7c14dcc84e70fcd5b16f89a18b7">&#9670;&nbsp;</a></span>AddMoveableObject()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PhysicsEngine::AddMoveableObject </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_entity.html">Entity</a> *&#160;</td>
+          <td class="paramname"><em>object</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Adds an object to the MoveAble vector.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">object</td><td>The entity to add into the MoveAble vector. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5c4c70f7d5c9d68439583bb568eb4dc1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c4c70f7d5c9d68439583bb568eb4dc1">&#9670;&nbsp;</a></span>CheckPointCollision()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_entity.html">Entity</a> * PhysicsEngine::CheckPointCollision </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_vector2.html">Vector2</a>&#160;</td>
+          <td class="paramname"><em>point</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Checks if a point collides with anything in the collidables vector.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">point</td><td>The point to check collisions for.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A reference to the entity collided with. nullptr if nothing is collided. </dd></dl>
+
+</div>
+</div>
+<a id="ab391f1c77242ab2785ac032ec2ce9054"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab391f1c77242ab2785ac032ec2ce9054">&#9670;&nbsp;</a></span>FlushEntities()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PhysicsEngine::FlushEntities </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Flushes all entities out of the system.</p>
+<p>This is required every time we load a new scene as the old scene objects are still in the system and will register collisions. </p>
+
+</div>
+</div>
+<a id="a24e630a5280fcac069665aee469ddac3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24e630a5280fcac069665aee469ddac3">&#9670;&nbsp;</a></span>Instance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_physics_engine.html">PhysicsEngine</a> * PhysicsEngine::Instance </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Method for getting an instance of <a class="el" href="class_physics_engine.html">PhysicsEngine</a>. </p>
+
+</div>
+</div>
+<a id="aa2d2030963e541041762ddeefae7a43e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2d2030963e541041762ddeefae7a43e">&#9670;&nbsp;</a></span>Tick()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool PhysicsEngine::Tick </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Ticks the physics engine.</p>
+<p>All collision checks happen in this function.</p>
+<p>It uses a nested-for loop over all objects in the scene.</p>
+<dl class="section note"><dt>Note</dt><dd>A quad tree is planned for the second version. </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="aa631d02caf050302737427246ac53e86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa631d02caf050302737427246ac53e86">&#9670;&nbsp;</a></span>Collidable</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="class_entity.html">Entity</a>*&gt; PhysicsEngine::Collidable</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>All collidable entities. </p>
+
+</div>
+</div>
+<a id="a9c09a84286934ce77499d7a1c0a62dc7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c09a84286934ce77499d7a1c0a62dc7">&#9670;&nbsp;</a></span>MoveAble</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="class_entity.html">Entity</a>*&gt; PhysicsEngine::MoveAble</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>All move-able objects in the scene. </p><dl class="section note"><dt>Note</dt><dd>NOT implemented. Originally intended to be used as a method of the physics system moving objects and handling collisions itself. This is now the responsibility of the individual entity. </dd></dl>
+
+</div>
+</div>
+<a id="a660360c3f60b017afd46cd187c3db5f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a660360c3f60b017afd46cd187c3db5f2">&#9670;&nbsp;</a></span>sInstance</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_physics_engine.html">PhysicsEngine</a> * PhysicsEngine::sInstance = NULL</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Static instance of the <a class="el" href="class_physics_engine.html">PhysicsEngine</a> class. </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="_physics_engine_8h_source.html">PhysicsEngine.h</a></li>
 <li>PhysicsEngine.cpp</li>

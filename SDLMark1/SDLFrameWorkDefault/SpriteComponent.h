@@ -81,16 +81,29 @@ public:
 		JointTick();
 	}
 
+	/*!
+		Used in both Tick and EditorTick.
+	*/
 	void JointTick()
 	{
 		Renderer::Instance()->Draw(m_bitMapPack, m_positionComponent->getPos().x - offsetX, m_positionComponent->getPos().y - offsetY, m_index, m_positionComponent->scale);
 	}
 
+	/*!
+		QoL function to get the texture of the sprite
+
+		\return Reference to the texture of the sprite.
+	*/
 	SDL_Texture& getTexture()
 	{
 		return *m_bitMapPack.texture;
 	}
 
+	/*!
+		QoL function to get the dimensions of the texture.
+
+		\return Vector2 of the size of the texture.
+	*/
 	Vector2 getTexDim()
 	{
 		return Vector2(m_bitMapPack.width, m_bitMapPack.height);
@@ -132,17 +145,33 @@ public:
 		return saveData;
 	}
 
+	/*!
+		Used for animations
+
+		\param[in] index	The new index of the sprite.
+	*/
 	void SetIndex(int index)
 	{
 		m_index = index;
 	}
 
+	/*!
+		Mainly used in the inspector to change the file path of the sprite.
+		Also used for animations. Changing the file path to load a different sprite sheet.
+
+		\param[in] filePath	The new file path for the sprite.
+	*/
 	void setFilePath(std::string filePath)
 	{
 		m_filePath = filePath;
 		m_bitMapPack = ResourceManager::Instance()->LoadBitMap(m_filePath, true);
 	}
 
+	/*!
+		If animated, a sprite component will loop througha spritesheet's first 4 index's; creating an animation.
+
+		\param[in] _animated	Bool to set the animated boolean.
+	*/
 	void SetAnimated(bool _animated)
 	{
 		animated = _animated;

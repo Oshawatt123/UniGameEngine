@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['scene_16',['Scene',['../class_scene.html',1,'']]],
-  ['scenemanager_17',['SceneManager',['../class_scene_manager.html',1,'']]],
-  ['spritecomponent_18',['SpriteComponent',['../class_sprite_component.html',1,'']]]
+  ['jointtick_92',['JointTick',['../class_sprite_component.html#a5159a9c9ca7d026c4a6a0b38b215c6d5',1,'SpriteComponent']]]
 ];

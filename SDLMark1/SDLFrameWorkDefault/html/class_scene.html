@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: Scene Class Reference</title>
+<title>The Filthy Engine: Scene Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">My Project
+   <div id="projectname">The Filthy Engine
    </div>
   </td>
  </tr>
@@ -63,48 +63,739 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_scene-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Scene Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_scene_8h_source.html">Scene.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a26bca07e22fec48733d4023e557e953a"><td class="memItemLeft" align="right" valign="top"><a id="a26bca07e22fec48733d4023e557e953a"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Scene</b> (<a class="el" href="class_physics_engine.html">PhysicsEngine</a> *PE, SDL_Rect *camera, int screen_width, int screen_height)</td></tr>
-<tr class="separator:a26bca07e22fec48733d4023e557e953a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a748a1bb14cafb6eba29a9a3bf1a993eb"><td class="memItemLeft" align="right" valign="top"><a id="a748a1bb14cafb6eba29a9a3bf1a993eb"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Scene</b> (std::string name, <a class="el" href="class_physics_engine.html">PhysicsEngine</a> *PE, SDL_Rect *camera, int screen_width, int screen_height)</td></tr>
-<tr class="separator:a748a1bb14cafb6eba29a9a3bf1a993eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa507279dc450364c991c32ae4dd97639"><td class="memItemLeft" align="right" valign="top"><a id="aa507279dc450364c991c32ae4dd97639"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SaveScene</b> ()</td></tr>
-<tr class="separator:aa507279dc450364c991c32ae4dd97639"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae463850301b6dc624013c3b2e1357366"><td class="memItemLeft" align="right" valign="top"><a id="ae463850301b6dc624013c3b2e1357366"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Tick</b> ()</td></tr>
+<tr class="memitem:a77006864de7cee38085ee588c1e9ce36"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#a77006864de7cee38085ee588c1e9ce36">Scene</a> (int screen_width, int screen_height)</td></tr>
+<tr class="separator:a77006864de7cee38085ee588c1e9ce36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac16b9dd7ecc0be79cd4482f3713bd335"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#ac16b9dd7ecc0be79cd4482f3713bd335">Scene</a> (std::string name, int screen_width, int screen_height)</td></tr>
+<tr class="separator:ac16b9dd7ecc0be79cd4482f3713bd335"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e72a9c49c0dad1ca01ee2e8e103e3e7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#a3e72a9c49c0dad1ca01ee2e8e103e3e7">Reload</a> ()</td></tr>
+<tr class="separator:a3e72a9c49c0dad1ca01ee2e8e103e3e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae463850301b6dc624013c3b2e1357366"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#ae463850301b6dc624013c3b2e1357366">Tick</a> ()</td></tr>
 <tr class="separator:ae463850301b6dc624013c3b2e1357366"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4914d6c965c4f6d815743bcbb62fd098"><td class="memItemLeft" align="right" valign="top"><a id="a4914d6c965c4f6d815743bcbb62fd098"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>EditorTick</b> ()</td></tr>
+<tr class="memitem:a4914d6c965c4f6d815743bcbb62fd098"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#a4914d6c965c4f6d815743bcbb62fd098">EditorTick</a> ()</td></tr>
 <tr class="separator:a4914d6c965c4f6d815743bcbb62fd098"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4813338ee7c6c995f5bb6f10e3673804"><td class="memItemLeft" align="right" valign="top"><a id="a4813338ee7c6c995f5bb6f10e3673804"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Draw</b> ()</td></tr>
+<tr class="memitem:a4813338ee7c6c995f5bb6f10e3673804"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#a4813338ee7c6c995f5bb6f10e3673804">Draw</a> ()</td></tr>
 <tr class="separator:a4813338ee7c6c995f5bb6f10e3673804"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4f9821de9b15b4909900a10936b6c816"><td class="memItemLeft" align="right" valign="top"><a id="a4f9821de9b15b4909900a10936b6c816"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>AddEntity</b> (<a class="el" href="class_entity.html">Entity</a> *const EntityToAdd)</td></tr>
+<tr class="memitem:a4f9821de9b15b4909900a10936b6c816"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#a4f9821de9b15b4909900a10936b6c816">AddEntity</a> (<a class="el" href="class_entity.html">Entity</a> *const EntityToAdd)</td></tr>
 <tr class="separator:a4f9821de9b15b4909900a10936b6c816"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a888574f4eea5fae0674c1c3431cf9421"><td class="memItemLeft" align="right" valign="top"><a id="a888574f4eea5fae0674c1c3431cf9421"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>GetName</b> ()</td></tr>
+<tr class="memitem:a1fcf27074a5a58a3628d7fc72ba088a8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#a1fcf27074a5a58a3628d7fc72ba088a8">RemoveEntity</a> (<a class="el" href="class_entity.html">Entity</a> *const EntityToRemove)</td></tr>
+<tr class="separator:a1fcf27074a5a58a3628d7fc72ba088a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a888574f4eea5fae0674c1c3431cf9421"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#a888574f4eea5fae0674c1c3431cf9421">GetName</a> ()</td></tr>
 <tr class="separator:a888574f4eea5fae0674c1c3431cf9421"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac8ec1848ff1ac8c3ea7a26b012204c7a"><td class="memItemLeft" align="right" valign="top"><a id="ac8ec1848ff1ac8c3ea7a26b012204c7a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>PopulateHeirarchy</b> ()</td></tr>
-<tr class="separator:ac8ec1848ff1ac8c3ea7a26b012204c7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afde98bbd990c0e455320bdde490295bc"><td class="memItemLeft" align="right" valign="top"><a id="afde98bbd990c0e455320bdde490295bc"></a>
-<a class="el" href="class_entity.html">Entity</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getEntityByName</b> (std::string name)</td></tr>
+<tr class="memitem:af3270b341a75671cf95da8e03b008911"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_entity.html">Entity</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#af3270b341a75671cf95da8e03b008911">PopulateHeirarchy</a> ()</td></tr>
+<tr class="separator:af3270b341a75671cf95da8e03b008911"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afde98bbd990c0e455320bdde490295bc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_entity.html">Entity</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#afde98bbd990c0e455320bdde490295bc">getEntityByName</a> (std::string name)</td></tr>
 <tr class="separator:afde98bbd990c0e455320bdde490295bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a30dc22b14f545c6e7be5329b62ba5311"><td class="memItemLeft" align="right" valign="top"><a id="a30dc22b14f545c6e7be5329b62ba5311"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>CheckPointCollideEntityScreenSpace</b> (<a class="el" href="class_vector2.html">Vector2</a> point, <a class="el" href="class_entity.html">Entity</a> *&amp;outEntity)</td></tr>
+<tr class="memitem:a30dc22b14f545c6e7be5329b62ba5311"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#a30dc22b14f545c6e7be5329b62ba5311">CheckPointCollideEntityScreenSpace</a> (<a class="el" href="class_vector2.html">Vector2</a> point, <a class="el" href="class_entity.html">Entity</a> *&amp;outEntity)</td></tr>
 <tr class="separator:a30dc22b14f545c6e7be5329b62ba5311"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a961f178323cb5dbd68a6c04ce17fd412"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#a961f178323cb5dbd68a6c04ce17fd412">CheckPointCollideRectScreenSpace</a> (<a class="el" href="class_vector2.html">Vector2</a> point, <a class="el" href="class_vector2.html">Vector2</a> RectStart, <a class="el" href="class_vector2.html">Vector2</a> RectEnd)</td></tr>
+<tr class="separator:a961f178323cb5dbd68a6c04ce17fd412"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24c4eb48b4ca4e5b0b33141c603130a4"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#a24c4eb48b4ca4e5b0b33141c603130a4">generateSaveData</a> ()</td></tr>
+<tr class="separator:a24c4eb48b4ca4e5b0b33141c603130a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a4b8a76fea189fd55b067568c1a24e18f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#a4b8a76fea189fd55b067568c1a24e18f">SceneInit</a> ()</td></tr>
+<tr class="separator:a4b8a76fea189fd55b067568c1a24e18f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8166819099030b0fd9008b0e90f06f7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#ac8166819099030b0fd9008b0e90f06f7">LoadScene</a> ()</td></tr>
+<tr class="separator:ac8166819099030b0fd9008b0e90f06f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:aaaf007a5c9bfc0bd55446ad0812bf9ba"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#aaaf007a5c9bfc0bd55446ad0812bf9ba">SceneName</a></td></tr>
+<tr class="separator:aaaf007a5c9bfc0bd55446ad0812bf9ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e2ce3f9022b26cfb23e7d5c9e4d8dfc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#a1e2ce3f9022b26cfb23e7d5c9e4d8dfc">SceneBuildNumber</a></td></tr>
+<tr class="separator:a1e2ce3f9022b26cfb23e7d5c9e4d8dfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29e8df31e75e3e2176e7836c14573458"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_map.html">Map</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#a29e8df31e75e3e2176e7836c14573458">sceneMap</a></td></tr>
+<tr class="separator:a29e8df31e75e3e2176e7836c14573458"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a696995ce58efe9afc4b84696d13fe2c5"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_entity.html">Entity</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#a696995ce58efe9afc4b84696d13fe2c5">EntityList</a></td></tr>
+<tr class="separator:a696995ce58efe9afc4b84696d13fe2c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9827cb40e599e6c589277d022f66b3e4"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_entity.html">Entity</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#a9827cb40e599e6c589277d022f66b3e4">renderables</a></td></tr>
+<tr class="separator:a9827cb40e599e6c589277d022f66b3e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4122955b32eab8ea844fb3ce2c934ec1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_bit_map_pack.html">BitMapPack</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#a4122955b32eab8ea844fb3ce2c934ec1">tileBitMap</a></td></tr>
+<tr class="separator:a4122955b32eab8ea844fb3ce2c934ec1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71132d5cadd8aafe295646c38c4d13f9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_bit_map_pack.html">BitMapPack</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#a71132d5cadd8aafe295646c38c4d13f9">indexBitMap</a></td></tr>
+<tr class="separator:a71132d5cadd8aafe295646c38c4d13f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a181a2c2f80cfc603ff6df11c48f3cf4e"><td class="memItemLeft" align="right" valign="top"><a id="a181a2c2f80cfc603ff6df11c48f3cf4e"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>Xcounter</b></td></tr>
+<tr class="separator:a181a2c2f80cfc603ff6df11c48f3cf4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a770c5bd7f31b20505ccaa277266deb19"><td class="memItemLeft" align="right" valign="top">SDL_Rect *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#a770c5bd7f31b20505ccaa277266deb19">indexRect</a></td></tr>
+<tr class="separator:a770c5bd7f31b20505ccaa277266deb19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a764b8038c71aaf03f4870fa9c134648e"><td class="memItemLeft" align="right" valign="top"><a id="a764b8038c71aaf03f4870fa9c134648e"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>index</b></td></tr>
+<tr class="separator:a764b8038c71aaf03f4870fa9c134648e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0e6392e658dc813ba87f74b6c2b1661"><td class="memItemLeft" align="right" valign="top"><a id="ae0e6392e658dc813ba87f74b6c2b1661"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>yIndex</b></td></tr>
+<tr class="separator:ae0e6392e658dc813ba87f74b6c2b1661"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af350404a65c6aca8e9ff46dd989b02fd"><td class="memItemLeft" align="right" valign="top"><a id="af350404a65c6aca8e9ff46dd989b02fd"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>xIndex</b></td></tr>
+<tr class="separator:af350404a65c6aca8e9ff46dd989b02fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0756777df7d9e55dc95dbcabe75b2279"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#a0756777df7d9e55dc95dbcabe75b2279">gameCamera</a></td></tr>
+<tr class="separator:a0756777df7d9e55dc95dbcabe75b2279"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c9a1a6647756a794a062048d6c2aee8"><td class="memItemLeft" align="right" valign="top"><a id="a4c9a1a6647756a794a062048d6c2aee8"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>SW</b></td></tr>
+<tr class="separator:a4c9a1a6647756a794a062048d6c2aee8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac4021b6acc7dc95f3f67e74d99c3699"><td class="memItemLeft" align="right" valign="top"><a id="aac4021b6acc7dc95f3f67e74d99c3699"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>SH</b></td></tr>
+<tr class="separator:aac4021b6acc7dc95f3f67e74d99c3699"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c7c942d5f278aacf28f76ed144bd99a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#a8c7c942d5f278aacf28f76ed144bd99a">needToStart</a></td></tr>
+<tr class="separator:a8c7c942d5f278aacf28f76ed144bd99a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A scene is defined as a collection of <a class="el" href="class_entity.html">Entity</a> 's, and a <a class="el" href="class_map.html">Map</a>. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a77006864de7cee38085ee588c1e9ce36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77006864de7cee38085ee588c1e9ce36">&#9670;&nbsp;</a></span>Scene() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Scene::Scene </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>screen_width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>screen_height</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Basic constructor for <a class="el" href="class_scene.html">Scene</a> </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">screen_width</td><td>The width of the screen. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">screen_height</td><td>The height of the screen. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac16b9dd7ecc0be79cd4482f3713bd335"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac16b9dd7ecc0be79cd4482f3713bd335">&#9670;&nbsp;</a></span>Scene() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Scene::Scene </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>screen_width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>screen_height</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Override constructor for <a class="el" href="class_scene.html">Scene</a> </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>The name of the scene. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">screen_width</td><td>The width of the screen. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">screen_height</td><td>The height of the screen. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a4f9821de9b15b4909900a10936b6c816"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f9821de9b15b4909900a10936b6c816">&#9670;&nbsp;</a></span>AddEntity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Scene::AddEntity </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_entity.html">Entity</a> *const&#160;</td>
+          <td class="paramname"><em>EntityToAdd</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Adds an entity to the scene. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">EntityToAdd</td><td>The entity to add into the scene. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a30dc22b14f545c6e7be5329b62ba5311"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30dc22b14f545c6e7be5329b62ba5311">&#9670;&nbsp;</a></span>CheckPointCollideEntityScreenSpace()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Scene::CheckPointCollideEntityScreenSpace </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_vector2.html">Vector2</a>&#160;</td>
+          <td class="paramname"><em>point</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_entity.html">Entity</a> *&amp;&#160;</td>
+          <td class="paramname"><em>outEntity</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>This function is used to check if a point in screen space is over an entity. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">point</td><td>The point in screen space we want to check. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">outEntity</td><td>The entity that is at this point in screen space. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Whether or not there was an entity at point. </dd></dl>
+
+</div>
+</div>
+<a id="a961f178323cb5dbd68a6c04ce17fd412"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a961f178323cb5dbd68a6c04ce17fd412">&#9670;&nbsp;</a></span>CheckPointCollideRectScreenSpace()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Scene::CheckPointCollideRectScreenSpace </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_vector2.html">Vector2</a>&#160;</td>
+          <td class="paramname"><em>point</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_vector2.html">Vector2</a>&#160;</td>
+          <td class="paramname"><em>RectStart</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_vector2.html">Vector2</a>&#160;</td>
+          <td class="paramname"><em>RectEnd</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>This function is used to check if a point in screen space is over a rect. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">point</td><td>The point in screen space we want to check. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">RectStart</td><td>The start of the rect we want to check against. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">RectEnd</td><td>The end of the rect we want to check against. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Whether or not there was an entity at point </dd></dl>
+
+</div>
+</div>
+<a id="a4813338ee7c6c995f5bb6f10e3673804"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4813338ee7c6c995f5bb6f10e3673804">&#9670;&nbsp;</a></span>Draw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Scene::Draw </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Updates all the sprite components in renderables and renders the tilemap. </p>
+
+</div>
+</div>
+<a id="a4914d6c965c4f6d815743bcbb62fd098"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4914d6c965c4f6d815743bcbb62fd098">&#9670;&nbsp;</a></span>EditorTick()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Scene::EditorTick </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Like Tick, but runs when the engine is in edit-mode. This tick will run all the entity's EditorTick function. </p>
+
+</div>
+</div>
+<a id="a24c4eb48b4ca4e5b0b33141c603130a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24c4eb48b4ca4e5b0b33141c603130a4">&#9670;&nbsp;</a></span>generateSaveData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Scene::generateSaveData </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Generate the save data for the scene. Loops over all entity and generates all of their save data. See entity, component, and a specific like <a class="el" href="class_position_component.html">PositionComponent</a> for more information on how save data is generated.</p>
+<dl class="section note"><dt>Note</dt><dd>A LOT of string concatenation happens here so it can be slow. </dd></dl>
+
+</div>
+</div>
+<a id="afde98bbd990c0e455320bdde490295bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afde98bbd990c0e455320bdde490295bc">&#9670;&nbsp;</a></span>getEntityByName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_entity.html">Entity</a> * Scene::getEntityByName </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get a reference to a specific entity by name </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>The name of the entity you want to find </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If an entity is found, a reference to that entity is returned. nullptr if not. </dd></dl>
+
+</div>
+</div>
+<a id="a888574f4eea5fae0674c1c3431cf9421"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a888574f4eea5fae0674c1c3431cf9421">&#9670;&nbsp;</a></span>GetName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Scene::GetName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>A getter function for the sceneName. </p>
+
+</div>
+</div>
+<a id="ac8166819099030b0fd9008b0e90f06f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8166819099030b0fd9008b0e90f06f7">&#9670;&nbsp;</a></span>LoadScene()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Scene::LoadScene </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Loads the scene from an external file! The file is found from the SceneName.</p>
+<dl class="section warning"><dt>Warning</dt><dd>Function exceeds dedicated stack size. Unsure how to move more data to heap as it utilises RapidXML. On the to-do list. </dd></dl>
+
+</div>
+</div>
+<a id="af3270b341a75671cf95da8e03b008911"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3270b341a75671cf95da8e03b008911">&#9670;&nbsp;</a></span>PopulateHeirarchy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_entity.html">Entity</a> * Scene::PopulateHeirarchy </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>This populates the heirarchy in the engine with all of the entities in the scene. </p><dl class="section return"><dt>Returns</dt><dd>If an entity is selected in the heirarchy, the entity is returned so it can be displayed in the Inspector. nullptr if not. </dd></dl>
+
+</div>
+</div>
+<a id="a3e72a9c49c0dad1ca01ee2e8e103e3e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e72a9c49c0dad1ca01ee2e8e103e3e7">&#9670;&nbsp;</a></span>Reload()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Scene::Reload </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Reloads the scene. Used in scene saving as we need to re-load the scene after we have saved. </p>
+
+</div>
+</div>
+<a id="a1fcf27074a5a58a3628d7fc72ba088a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fcf27074a5a58a3628d7fc72ba088a8">&#9670;&nbsp;</a></span>RemoveEntity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Scene::RemoveEntity </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_entity.html">Entity</a> *const&#160;</td>
+          <td class="paramname"><em>EntityToRemove</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Removes an entity from the scene. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">EntityToRemove</td><td>The entity to remove from the scene. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a4b8a76fea189fd55b067568c1a24e18f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b8a76fea189fd55b067568c1a24e18f">&#9670;&nbsp;</a></span>SceneInit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Scene::SceneInit </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Initializes the scene. Vectors are cleared and the scene is loaded with LoadScene. </p>
+
+</div>
+</div>
+<a id="ae463850301b6dc624013c3b2e1357366"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae463850301b6dc624013c3b2e1357366">&#9670;&nbsp;</a></span>Tick()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Scene::Tick </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Updates every component except for rendering. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a696995ce58efe9afc4b84696d13fe2c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a696995ce58efe9afc4b84696d13fe2c5">&#9670;&nbsp;</a></span>EntityList</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="class_entity.html">Entity</a>*&gt; Scene::EntityList</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>A vector of <a class="el" href="class_entity.html">Entity</a> in this scene. </p>
+
+</div>
+</div>
+<a id="a0756777df7d9e55dc95dbcabe75b2279"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0756777df7d9e55dc95dbcabe75b2279">&#9670;&nbsp;</a></span>gameCamera</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_vector2.html">Vector2</a> Scene::gameCamera</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The position of the game camera. </p>
+
+</div>
+</div>
+<a id="a71132d5cadd8aafe295646c38c4d13f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71132d5cadd8aafe295646c38c4d13f9">&#9670;&nbsp;</a></span>indexBitMap</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_bit_map_pack.html">BitMapPack</a> Scene::indexBitMap</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The clipped <a class="el" href="struct_bit_map_pack.html">BitMapPack</a> for the current tile on the map. </p>
+
+</div>
+</div>
+<a id="a770c5bd7f31b20505ccaa277266deb19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a770c5bd7f31b20505ccaa277266deb19">&#9670;&nbsp;</a></span>indexRect</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SDL_Rect* Scene::indexRect</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The position and size of the clip needed to take out of the TileMap sprite for the current tile being drawn. </p>
+
+</div>
+</div>
+<a id="a8c7c942d5f278aacf28f76ed144bd99a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c7c942d5f278aacf28f76ed144bd99a">&#9670;&nbsp;</a></span>needToStart</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Scene::needToStart</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Used to determine if we need to call SceneInit again when loaded. </p>
+
+</div>
+</div>
+<a id="a9827cb40e599e6c589277d022f66b3e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9827cb40e599e6c589277d022f66b3e4">&#9670;&nbsp;</a></span>renderables</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="class_entity.html">Entity</a>*&gt; Scene::renderables</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Of the entities in EntityList, these are those which are renderable. This saves on checking which entities need to be rendered each frame. The vector is calculated in SceneInit. </p>
+
+</div>
+</div>
+<a id="a1e2ce3f9022b26cfb23e7d5c9e4d8dfc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e2ce3f9022b26cfb23e7d5c9e4d8dfc">&#9670;&nbsp;</a></span>SceneBuildNumber</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Scene::SceneBuildNumber</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The build number, to be used in some load functions. /note This is not yet implemented. </p>
+
+</div>
+</div>
+<a id="a29e8df31e75e3e2176e7836c14573458"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29e8df31e75e3e2176e7836c14573458">&#9670;&nbsp;</a></span>sceneMap</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_map.html">Map</a>* Scene::sceneMap</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The map data used by the scene </p>
+
+</div>
+</div>
+<a id="aaaf007a5c9bfc0bd55446ad0812bf9ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaaf007a5c9bfc0bd55446ad0812bf9ba">&#9670;&nbsp;</a></span>SceneName</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Scene::SceneName</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The name given to a scene, used in some load functions. </p>
+
+</div>
+</div>
+<a id="a4122955b32eab8ea844fb3ce2c934ec1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4122955b32eab8ea844fb3ce2c934ec1">&#9670;&nbsp;</a></span>tileBitMap</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_bit_map_pack.html">BitMapPack</a> Scene::tileBitMap</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The <a class="el" href="struct_bit_map_pack.html">BitMapPack</a> used by the map, cached here for convenience. </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="_scene_8h_source.html">Scene.h</a></li>
 <li>Scene.cpp</li>

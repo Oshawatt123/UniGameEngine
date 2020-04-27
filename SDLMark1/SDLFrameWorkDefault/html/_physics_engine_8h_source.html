@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: PhysicsEngine.h Source File</title>
+<title>The Filthy Engine: PhysicsEngine.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">My Project
+   <div id="projectname">The Filthy Engine
    </div>
   </td>
  </tr>
@@ -70,33 +70,50 @@ $(function() {
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;MathHelper.h&quot;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;ECS.h&quot;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;Components.h&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;CollisionComponent.h&quot;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="class_physics_engine.html">    8</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_physics_engine.html">PhysicsEngine</a></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    std::vector&lt;Entity*&gt; MoveAble;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    std::vector&lt;Entity*&gt; Collidable;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="class_physics_engine.html">PhysicsEngine</a>() {}</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    ~<a class="code" href="class_physics_engine.html">PhysicsEngine</a>() {}</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">bool</span> Tick();</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">void</span> AddMoveableObject(<a class="code" href="class_entity.html">Entity</a>* <span class="keywordtype">object</span>);</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">void</span> AddCollidableObject(<a class="code" href="class_entity.html">Entity</a>* <span class="keywordtype">object</span>);</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">bool</span> CheckPointCollision(<a class="code" href="class_vector2.html">Vector2</a> point, <a class="code" href="class_entity.html">Entity</a>* outEntity);</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">bool</span> AABB(<span class="keyword">const</span> SDL_Rect&amp; A, <span class="keyword">const</span> SDL_Rect&amp; B);</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;};</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_physics_engine.html">   12</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_physics_engine.html">PhysicsEngine</a></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;{</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="class_physics_engine.html#a9c09a84286934ce77499d7a1c0a62dc7">   20</a></span>&#160;    std::vector&lt;Entity*&gt; <a class="code" href="class_physics_engine.html#a9c09a84286934ce77499d7a1c0a62dc7">MoveAble</a>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_physics_engine.html#aa631d02caf050302737427246ac53e86">   22</a></span>&#160;    std::vector&lt;Entity*&gt; <a class="code" href="class_physics_engine.html#aa631d02caf050302737427246ac53e86">Collidable</a>; </div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_physics_engine.html#a660360c3f60b017afd46cd187c3db5f2">   24</a></span>&#160;    <span class="keyword">static</span> <a class="code" href="class_physics_engine.html">PhysicsEngine</a>* <a class="code" href="class_physics_engine.html#a660360c3f60b017afd46cd187c3db5f2">sInstance</a>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keyword">static</span> <a class="code" href="class_physics_engine.html">PhysicsEngine</a>* <a class="code" href="class_physics_engine.html#a24e630a5280fcac069665aee469ddac3">Instance</a>(); </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_physics_engine.html#aa2d2030963e541041762ddeefae7a43e">Tick</a>();</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_physics_engine.html#ab12ae7c14dcc84e70fcd5b16f89a18b7">AddMoveableObject</a>(<a class="code" href="class_entity.html">Entity</a>* <span class="keywordtype">object</span>);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_physics_engine.html#a950a3daa18c5ea71bc9ef0889421bc67">AddCollidableObject</a>(<a class="code" href="class_entity.html">Entity</a>* <span class="keywordtype">object</span>);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <a class="code" href="class_entity.html">Entity</a>* <a class="code" href="class_physics_engine.html#a5c4c70f7d5c9d68439583bb568eb4dc1">CheckPointCollision</a>(<a class="code" href="class_vector2.html">Vector2</a> point);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_physics_engine.html#ace98e19270cfa562584e5c4bc1e467f0">AABB</a>(<span class="keyword">const</span> SDL_Rect&amp; A, <span class="keyword">const</span> SDL_Rect&amp; B);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_physics_engine.html#ab391f1c77242ab2785ac032ec2ce9054">FlushEntities</a>();</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <a class="code" href="class_physics_engine.html">PhysicsEngine</a>() {}</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    ~<a class="code" href="class_physics_engine.html">PhysicsEngine</a>() {}</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;};</div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclass_physics_engine_html"><div class="ttname"><a href="class_physics_engine.html">PhysicsEngine</a></div><div class="ttdef"><b>Definition:</b> PhysicsEngine.h:8</div></div>
-<div class="ttc" id="aclass_entity_html"><div class="ttname"><a href="class_entity.html">Entity</a></div><div class="ttdef"><b>Definition:</b> ECS.h:50</div></div>
-<div class="ttc" id="aclass_vector2_html"><div class="ttname"><a href="class_vector2.html">Vector2</a></div><div class="ttdef"><b>Definition:</b> MathHelper.h:5</div></div>
+<div class="ttc" id="aclass_physics_engine_html"><div class="ttname"><a href="class_physics_engine.html">PhysicsEngine</a></div><div class="ttdef"><b>Definition:</b> PhysicsEngine.h:12</div></div>
+<div class="ttc" id="aclass_physics_engine_html_ace98e19270cfa562584e5c4bc1e467f0"><div class="ttname"><a href="class_physics_engine.html#ace98e19270cfa562584e5c4bc1e467f0">PhysicsEngine::AABB</a></div><div class="ttdeci">bool AABB(const SDL_Rect &amp;A, const SDL_Rect &amp;B)</div><div class="ttdef"><b>Definition:</b> PhysicsEngine.cpp:90</div></div>
+<div class="ttc" id="aclass_physics_engine_html_aa2d2030963e541041762ddeefae7a43e"><div class="ttname"><a href="class_physics_engine.html#aa2d2030963e541041762ddeefae7a43e">PhysicsEngine::Tick</a></div><div class="ttdeci">bool Tick()</div><div class="ttdef"><b>Definition:</b> PhysicsEngine.cpp:14</div></div>
+<div class="ttc" id="aclass_physics_engine_html_a660360c3f60b017afd46cd187c3db5f2"><div class="ttname"><a href="class_physics_engine.html#a660360c3f60b017afd46cd187c3db5f2">PhysicsEngine::sInstance</a></div><div class="ttdeci">static PhysicsEngine * sInstance</div><div class="ttdef"><b>Definition:</b> PhysicsEngine.h:24</div></div>
+<div class="ttc" id="aclass_physics_engine_html_ab12ae7c14dcc84e70fcd5b16f89a18b7"><div class="ttname"><a href="class_physics_engine.html#ab12ae7c14dcc84e70fcd5b16f89a18b7">PhysicsEngine::AddMoveableObject</a></div><div class="ttdeci">void AddMoveableObject(Entity *object)</div><div class="ttdef"><b>Definition:</b> PhysicsEngine.cpp:47</div></div>
+<div class="ttc" id="aclass_physics_engine_html_a5c4c70f7d5c9d68439583bb568eb4dc1"><div class="ttname"><a href="class_physics_engine.html#a5c4c70f7d5c9d68439583bb568eb4dc1">PhysicsEngine::CheckPointCollision</a></div><div class="ttdeci">Entity * CheckPointCollision(Vector2 point)</div><div class="ttdef"><b>Definition:</b> PhysicsEngine.cpp:57</div></div>
+<div class="ttc" id="aclass_physics_engine_html_ab391f1c77242ab2785ac032ec2ce9054"><div class="ttname"><a href="class_physics_engine.html#ab391f1c77242ab2785ac032ec2ce9054">PhysicsEngine::FlushEntities</a></div><div class="ttdeci">void FlushEntities()</div><div class="ttdef"><b>Definition:</b> PhysicsEngine.cpp:106</div></div>
+<div class="ttc" id="aclass_entity_html"><div class="ttname"><a href="class_entity.html">Entity</a></div><div class="ttdef"><b>Definition:</b> ECS.h:67</div></div>
+<div class="ttc" id="aclass_physics_engine_html_a9c09a84286934ce77499d7a1c0a62dc7"><div class="ttname"><a href="class_physics_engine.html#a9c09a84286934ce77499d7a1c0a62dc7">PhysicsEngine::MoveAble</a></div><div class="ttdeci">std::vector&lt; Entity * &gt; MoveAble</div><div class="ttdef"><b>Definition:</b> PhysicsEngine.h:20</div></div>
+<div class="ttc" id="aclass_physics_engine_html_aa631d02caf050302737427246ac53e86"><div class="ttname"><a href="class_physics_engine.html#aa631d02caf050302737427246ac53e86">PhysicsEngine::Collidable</a></div><div class="ttdeci">std::vector&lt; Entity * &gt; Collidable</div><div class="ttdef"><b>Definition:</b> PhysicsEngine.h:22</div></div>
+<div class="ttc" id="aclass_physics_engine_html_a950a3daa18c5ea71bc9ef0889421bc67"><div class="ttname"><a href="class_physics_engine.html#a950a3daa18c5ea71bc9ef0889421bc67">PhysicsEngine::AddCollidableObject</a></div><div class="ttdeci">void AddCollidableObject(Entity *object)</div><div class="ttdef"><b>Definition:</b> PhysicsEngine.cpp:52</div></div>
+<div class="ttc" id="aclass_vector2_html"><div class="ttname"><a href="class_vector2.html">Vector2</a></div><div class="ttdef"><b>Definition:</b> MathHelper.h:9</div></div>
+<div class="ttc" id="aclass_physics_engine_html_a24e630a5280fcac069665aee469ddac3"><div class="ttname"><a href="class_physics_engine.html#a24e630a5280fcac069665aee469ddac3">PhysicsEngine::Instance</a></div><div class="ttdeci">static PhysicsEngine * Instance()</div><div class="ttdef"><b>Definition:</b> PhysicsEngine.cpp:5</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

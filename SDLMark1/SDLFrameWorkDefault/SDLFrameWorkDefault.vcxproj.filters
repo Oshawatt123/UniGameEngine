@@ -54,9 +54,6 @@
     <ClCompile Include="Logger.cpp">
       <Filter>Source Files\Statics</Filter>
     </ClCompile>
-    <ClCompile Include="Profiler.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Map.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -96,9 +93,6 @@
     <ClCompile Include="imgui_stdlib.cpp">
       <Filter>Source Files\thirdparty</Filter>
     </ClCompile>
-    <ClCompile Include="EventSystem.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Event.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -106,7 +100,10 @@
       <Filter>Source Files\Statics</Filter>
     </ClCompile>
     <ClCompile Include="AudioManager.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Statics</Filter>
+    </ClCompile>
+    <ClCompile Include="EventSystem.cpp">
+      <Filter>Source Files\Statics</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -137,9 +134,6 @@
     <ClInclude Include="Logger.h">
       <Filter>Header Files\Statics</Filter>
     </ClInclude>
-    <ClInclude Include="Profiler.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Map.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -163,9 +157,6 @@
     </ClInclude>
     <ClInclude Include="BlackBoard.h">
       <Filter>Header Files\Statics</Filter>
-    </ClInclude>
-    <ClInclude Include="test.h">
-      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="imconfig.h">
       <Filter>Header Files\thirdparty</Filter>
@@ -212,9 +203,6 @@
     <ClInclude Include="StairControl.h">
       <Filter>Header Files\ECS</Filter>
     </ClInclude>
-    <ClInclude Include="EventSystem.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Event.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -222,7 +210,10 @@
       <Filter>Header Files\Statics</Filter>
     </ClInclude>
     <ClInclude Include="AudioManager.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Statics</Filter>
+    </ClInclude>
+    <ClInclude Include="EventSystem.h">
+      <Filter>Header Files\Statics</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

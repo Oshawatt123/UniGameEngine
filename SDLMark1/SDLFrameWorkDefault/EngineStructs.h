@@ -36,19 +36,28 @@ static const float f_zero =	 0.0f;
 static const float f_min =	-10000;
 static const float f_max =   10000;
 
+/*!
+	BitMapPack is a storage class for textures, and their attributes.
+	It exists to make passing textures around easier, as it eliminates the need to also pass the width and height as extra parameters just taking up space.
+	This also exists because SDL_Texture does not contain a definition for width and height. That data is stored on the SDL_Surface, which is deleted as soon as the asset is loaded. Hence making it a wise idea to grab this data when the image is first loaded and the surface generated.
+*/
 struct BitMapPack
 {
-	SDL_Texture* texture = nullptr;
-	int width;
-	int height;
+	SDL_Texture* texture = nullptr; /*!< The texture of the BitMap.*/
+	int width;						/*!< The width of the texture.*/
+	int height;						/*!< The height of the texture*/
 };
 
+/*!
+	AudioPack is much like BitMapPack since it is a storage class for Audiofiles and they're attributes.
+	There is no need to have functions require so many parameters, so everything necessary is stored in this struct.
+*/
 struct AudioPack
 {
-	SDL_AudioSpec wavSpec;
-	Uint32 wavLength;
-	Uint8* wavBuffer;
-	SDL_AudioDeviceID devideID;
+	SDL_AudioSpec wavSpec;		/*!< The SDL_AudioSpec needed by SDL.*/
+	Uint32 wavLength;			/*!< The length of the WAV file.*/
+	Uint8* wavBuffer;			/*!< The buffer used by SDL when playing the WAV file.*/
+	SDL_AudioDeviceID devideID;	/*!< The ID of this sound.*/
 };
 
 enum MyEventTypes

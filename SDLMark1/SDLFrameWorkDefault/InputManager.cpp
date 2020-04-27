@@ -27,10 +27,10 @@ bool InputManager::MouseDown(int mouseButton)
 	return mouseButtons && SDL_BUTTON(mouseButton);
 }
 
-bool InputManager::MouseUp(int mouseButton)
+/*bool InputManager::MouseUp(int mouseButton)
 {
 	return false;
-}
+}*/
 
 bool InputManager::WindowQuit()
 {

@@ -1,16 +1,67 @@
 \hypertarget{class_black_board}{}\doxysection{Black\+Board Class Reference}
 \label{class_black_board}\index{BlackBoard@{BlackBoard}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_black_board_afefb4c77139327b1cc293293ed925fcc}\label{class_black_board_afefb4c77139327b1cc293293ed925fcc}} 
+int {\bfseries get\+I\+D\+Number} ()
+\end{DoxyCompactItemize}
 \doxysubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_black_board_a72f9d308ac0e925c1598097252cd199a}\label{class_black_board_a72f9d308ac0e925c1598097252cd199a}} 
-static \mbox{\hyperlink{class_black_board}{Black\+Board}} $\ast$ {\bfseries Instance} ()
+static \mbox{\hyperlink{class_black_board}{Black\+Board}} $\ast$ \mbox{\hyperlink{class_black_board_ae8b8db9985d9a88ef995d557e9d13781}{Instance}} ()
 \item 
-\mbox{\Hypertarget{class_black_board_a5e71f2a59a79a487b31407fc2a83e8e6}\label{class_black_board_a5e71f2a59a79a487b31407fc2a83e8e6}} 
-static void {\bfseries Release} ()
+static void \mbox{\hyperlink{class_black_board_a5e71f2a59a79a487b31407fc2a83e8e6}{Release}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_black_board_a580f23fb4f3212a26b653d53bbe15b20}{Edit\+Mode}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_black_board_afb8fa0e0d4b871ac05e9cecd3708fb69}\label{class_black_board_afb8fa0e0d4b871ac05e9cecd3708fb69}} 
+int {\bfseries I\+D\+Number}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_black_board}{Black\+Board}} $\ast$ \mbox{\hyperlink{class_black_board_aaf1e112cb440fe4b78b44a959ede558f}{bb}} = 0
 \end{DoxyCompactItemize}
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_black_board_ae8b8db9985d9a88ef995d557e9d13781}\label{class_black_board_ae8b8db9985d9a88ef995d557e9d13781}} 
+\index{BlackBoard@{BlackBoard}!Instance@{Instance}}
+\index{Instance@{Instance}!BlackBoard@{BlackBoard}}
+\doxysubsubsection{\texorpdfstring{Instance()}{Instance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_black_board}{Black\+Board}} $\ast$ Black\+Board\+::\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Method for getting an instance of \mbox{\hyperlink{class_black_board}{Black\+Board}}. \mbox{\Hypertarget{class_black_board_a5e71f2a59a79a487b31407fc2a83e8e6}\label{class_black_board_a5e71f2a59a79a487b31407fc2a83e8e6}} 
+\index{BlackBoard@{BlackBoard}!Release@{Release}}
+\index{Release@{Release}!BlackBoard@{BlackBoard}}
+\doxysubsubsection{\texorpdfstring{Release()}{Release()}}
+{\footnotesize\ttfamily static void Black\+Board\+::\+Release (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Cleans up the blackboard. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_black_board_aaf1e112cb440fe4b78b44a959ede558f}\label{class_black_board_aaf1e112cb440fe4b78b44a959ede558f}} 
+\index{BlackBoard@{BlackBoard}!bb@{bb}}
+\index{bb@{bb}!BlackBoard@{BlackBoard}}
+\doxysubsubsection{\texorpdfstring{bb}{bb}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_black_board}{Black\+Board}} $\ast$ Black\+Board\+::bb = 0\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+Static instance of the \mbox{\hyperlink{class_black_board}{Black\+Board}} class. \mbox{\Hypertarget{class_black_board_a580f23fb4f3212a26b653d53bbe15b20}\label{class_black_board_a580f23fb4f3212a26b653d53bbe15b20}} 
+\index{BlackBoard@{BlackBoard}!EditMode@{EditMode}}
+\index{EditMode@{EditMode}!BlackBoard@{BlackBoard}}
+\doxysubsubsection{\texorpdfstring{EditMode}{EditMode}}
+{\footnotesize\ttfamily bool Black\+Board\+::\+Edit\+Mode}
+
+Blackboard holds a boolean for the state of the engine. All classes which change behaviour if the engine is in edit mode or not, work off of this boolean. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-Black\+Board.\+h\end{DoxyCompactItemize}
+Black\+Board.\+h\item 
+Black\+Board.\+cpp\end{DoxyCompactItemize}

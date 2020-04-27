@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: SpriteComponent.h Source File</title>
+<title>The Filthy Engine: SpriteComponent.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">My Project
+   <div id="projectname">The Filthy Engine
    </div>
   </td>
  </tr>
@@ -70,62 +70,181 @@ $(function() {
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;EngineStructs.h&quot;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;Renderer.h&quot;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;ResourceManager.h&quot;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
-<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="class_sprite_component.html">    7</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_sprite_component.html">SpriteComponent</a> : <span class="keyword">public</span> <a class="code" href="class_component.html">Component</a></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;{</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;InputManager.h&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;imgui_stdlib.h&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;Time.h&quot;</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <a class="code" href="class_position_component.html">PositionComponent</a>* m_positionComponent;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="struct_bit_map_pack.html">BitMapPack</a> m_bitMapPack;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordtype">int</span> m_index;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_sprite_component.html">   11</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_sprite_component.html">SpriteComponent</a> : <span class="keyword">public</span> <a class="code" href="class_component.html">Component</a></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;{</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    std::string defaultPath = <span class="stringliteral">&quot;../Assets/Sprites/ElvisPretzels.bmp&quot;</span>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    std::string pathBuffer;</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    std::string m_filePath;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="class_position_component.html">PositionComponent</a>* m_positionComponent;</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="class_sprite_component.html">SpriteComponent</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="class_sprite_component.html">SpriteComponent</a>(std::string path)</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    {</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        m_bitMapPack = ResourceManager::Instance()-&gt;LoadBitMap(path, <span class="keyword">true</span>);</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        m_filePath = path;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    }</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="comment">// Init is not called in the constructor because if we add components, they are created and if we add them in a weird order, it will still work as long as we</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="comment">// have a position component on the object since Init() happens after a full load</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">void</span> Init()<span class="keyword"> override</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        m_positionComponent = &amp;entity-&gt;getComponent&lt;<a class="code" href="class_position_component.html">PositionComponent</a>&gt;();</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        m_index = 0;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        m_bitMapPack.width *= entity-&gt;getComponent&lt;<a class="code" href="class_position_component.html">PositionComponent</a>&gt;().scale;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        m_bitMapPack.height *= entity-&gt;getComponent&lt;<a class="code" href="class_position_component.html">PositionComponent</a>&gt;().scale;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        name = <span class="stringliteral">&quot;Sprite Component&quot;</span>;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    }</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">void</span> Tick()<span class="keyword"> override</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="comment">//std::cout &lt;&lt; &quot;Drawing a dude&quot; &lt;&lt; std::endl;</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        Renderer::Instance()-&gt;Draw(m_bitMapPack, m_positionComponent-&gt;getPos().x, m_positionComponent-&gt;getPos().y);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="struct_bit_map_pack.html">BitMapPack</a> m_bitMapPack;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">int</span> m_index = 0;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">int</span> spritesize;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">float</span> offsetX, offsetY;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">bool</span> animated = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">float</span> animationFrameTime = 5;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">float</span> timer;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    std::string m_filePath;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="class_sprite_component.html">SpriteComponent</a>()</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        m_bitMapPack = <a class="code" href="class_resource_manager.html#a63d542726087c4f2ae121a05060a15e9">ResourceManager::Instance</a>()-&gt;<a class="code" href="class_resource_manager.html#ad997f36a23675d8176acd0d26ffd6114">LoadBitMap</a>(defaultPath, <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        m_filePath = defaultPath;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    }</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="class_sprite_component.html">SpriteComponent</a>(std::string path)</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        m_bitMapPack = <a class="code" href="class_resource_manager.html#a63d542726087c4f2ae121a05060a15e9">ResourceManager::Instance</a>()-&gt;<a class="code" href="class_resource_manager.html#ad997f36a23675d8176acd0d26ffd6114">LoadBitMap</a>(path, <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        m_filePath = path;</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    }</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    SDL_Texture&amp; getTexture()</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    {</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordflow">return</span> *m_bitMapPack.texture;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    }</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <a class="code" href="class_vector2.html">Vector2</a> getTexDim()</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    {</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="class_vector2.html">Vector2</a>(m_bitMapPack.width, m_bitMapPack.height);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    }</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;};</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="comment">// Init is not called in the constructor because if we add components, they are created and if we add them in a weird order, it will still work as long as we</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="comment">// have a position component on the object since Init() happens after a full load</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">void</span> Init()<span class="keyword"> override</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        m_positionComponent = &amp;<a class="code" href="class_component.html#a6acb3f00c9d114d961c8763ede390d2c">entity</a>-&gt;<a class="code" href="class_entity.html#ab67b05516196a4ec97c5b9fd13638bbb">getComponent</a>&lt;<a class="code" href="class_position_component.html">PositionComponent</a>&gt;();</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        m_index = 0;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        m_bitMapPack.<a class="code" href="struct_bit_map_pack.html#ace6df890ecaf19c8640d2af75dc811e1">width</a> *= <a class="code" href="class_component.html#a6acb3f00c9d114d961c8763ede390d2c">entity</a>-&gt;<a class="code" href="class_entity.html#ab67b05516196a4ec97c5b9fd13638bbb">getComponent</a>&lt;<a class="code" href="class_position_component.html">PositionComponent</a>&gt;().scale;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        m_bitMapPack.<a class="code" href="struct_bit_map_pack.html#af6da2c8af8e3d2b51d8220a6913d839a">height</a> *= <a class="code" href="class_component.html#a6acb3f00c9d114d961c8763ede390d2c">entity</a>-&gt;<a class="code" href="class_entity.html#ab67b05516196a4ec97c5b9fd13638bbb">getComponent</a>&lt;<a class="code" href="class_position_component.html">PositionComponent</a>&gt;().scale;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        offsetX = TILE_WIDTH / 2;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        offsetY = TILE_WIDTH / 2;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <a class="code" href="class_component.html#a46343549452bda5ee9752f7a9bc15efb">name</a> = <span class="stringliteral">&quot;SpriteComponent&quot;</span>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    }</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="class_sprite_component.html#a6baacb0f33191ffe1b6a6c4650b4078d">   59</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_sprite_component.html#a6baacb0f33191ffe1b6a6c4650b4078d">Tick</a>()<span class="keyword"> override</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="comment">//std::cout &lt;&lt; &quot;Drawing a dude&quot; &lt;&lt; std::endl;</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <a class="code" href="class_sprite_component.html#a5159a9c9ca7d026c4a6a0b38b215c6d5">JointTick</a>();</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keywordflow">if</span> (animated)</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        {</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <span class="keywordflow">if</span> (timer &lt;= 0)</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            {</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                m_index += 1;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                <span class="comment">// hard-coded animation frame limit</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                <span class="keywordflow">if</span> (m_index &gt;= 4)</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                {</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                    m_index = 0;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                }</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                timer = animationFrameTime;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            }</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            timer -= filthyTime-&gt;deltaTime;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        }</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    }</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="class_sprite_component.html#a0d576efe03344ead5816fe048310a909">   79</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_sprite_component.html#a0d576efe03344ead5816fe048310a909">EditorTick</a>()<span class="keyword"> override</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <a class="code" href="class_sprite_component.html#a5159a9c9ca7d026c4a6a0b38b215c6d5">JointTick</a>();</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    }</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="class_sprite_component.html#a5159a9c9ca7d026c4a6a0b38b215c6d5">   87</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_sprite_component.html#a5159a9c9ca7d026c4a6a0b38b215c6d5">JointTick</a>()</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    {</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <a class="code" href="class_renderer.html#a1230f9655b42f3d37f6086ee94c631a4">Renderer::Instance</a>()-&gt;<a class="code" href="class_renderer.html#a6372807844f96c89a1334c7a862b6ee2">Draw</a>(m_bitMapPack, m_positionComponent-&gt;<a class="code" href="class_position_component.html#aaaea83aa812d2f8bfb7985eaa6a9cfc8">getPos</a>().<a class="code" href="class_vector2.html#a046bb8d17a876acc49415128dc0502f2">x</a> - offsetX, m_positionComponent-&gt;<a class="code" href="class_position_component.html#aaaea83aa812d2f8bfb7985eaa6a9cfc8">getPos</a>().<a class="code" href="class_vector2.html#a0e07bad05f01ed811b909a2eef97f9e2">y</a> - offsetY, m_index, m_positionComponent-&gt;<a class="code" href="class_position_component.html#a91dd5fe3ecec8868b98447a73c6925e2">scale</a>);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    }</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="class_sprite_component.html#a04acd897d490a0726a0c7c1e3e1376d5">   97</a></span>&#160;    SDL_Texture&amp; <a class="code" href="class_sprite_component.html#a04acd897d490a0726a0c7c1e3e1376d5">getTexture</a>()</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    {</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <span class="keywordflow">return</span> *m_bitMapPack.<a class="code" href="struct_bit_map_pack.html#a22a4eb1a939886f0a59888298dc68e76">texture</a>;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    }</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00107"></a><span class="lineno"><a class="line" href="class_sprite_component.html#a8ec202636d916ef3fae80df8c7c9a6cb">  107</a></span>&#160;    <a class="code" href="class_vector2.html">Vector2</a> <a class="code" href="class_sprite_component.html#a8ec202636d916ef3fae80df8c7c9a6cb">getTexDim</a>()</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    {</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="class_vector2.html">Vector2</a>(m_bitMapPack.<a class="code" href="struct_bit_map_pack.html#ace6df890ecaf19c8640d2af75dc811e1">width</a>, m_bitMapPack.<a class="code" href="struct_bit_map_pack.html#af6da2c8af8e3d2b51d8220a6913d839a">height</a>);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    }</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordtype">void</span> PopulateInspector()<span class="keyword"> override</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        ImGui::InputText(<span class="stringliteral">&quot;File path&quot;</span>, &amp;pathBuffer);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="class_resource_manager.html#a63d542726087c4f2ae121a05060a15e9">ResourceManager::Instance</a>()-&gt;testLoad(pathBuffer))</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        {</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            ImGui::Text(<span class="stringliteral">&quot;Press Enter to select path&quot;</span>);</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="class_input_manager.html#a53a27e2e25bec96173a4c7532515d10e">InputManager::Instance</a>()-&gt;KeyDown(SDL_SCANCODE_RETURN))</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;            {</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;                m_bitMapPack = <a class="code" href="class_resource_manager.html#a63d542726087c4f2ae121a05060a15e9">ResourceManager::Instance</a>()-&gt;<a class="code" href="class_resource_manager.html#ad997f36a23675d8176acd0d26ffd6114">LoadBitMap</a>(pathBuffer, <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;                m_filePath = pathBuffer;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;            }</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;                </div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        }</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        {</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;            ImGui::Text(<span class="stringliteral">&quot;Invalid sprite path&quot;</span>);</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        }</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        ImGui::Text(<span class="stringliteral">&quot;Index : &quot;</span>);</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        ImGui::SameLine();</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        ImGui::InputInt(<span class="stringliteral">&quot;&quot;</span>, &amp;m_index);</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        ImGui::Checkbox(<span class="stringliteral">&quot;Animated : &quot;</span>, &amp;animated);</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        ImGui::InputFloat(<span class="stringliteral">&quot;Animation FrameTime&quot;</span>, &amp;animationFrameTime);</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160; </div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        ImVec2 texSize = ImVec2(m_bitMapPack.<a class="code" href="struct_bit_map_pack.html#ace6df890ecaf19c8640d2af75dc811e1">width</a>/ m_positionComponent-&gt;<a class="code" href="class_position_component.html#a91dd5fe3ecec8868b98447a73c6925e2">scale</a> *3, m_bitMapPack.<a class="code" href="struct_bit_map_pack.html#af6da2c8af8e3d2b51d8220a6913d839a">height</a>/ m_positionComponent-&gt;<a class="code" href="class_position_component.html#a91dd5fe3ecec8868b98447a73c6925e2">scale</a> *3);</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        ImGui::Image(m_bitMapPack.<a class="code" href="struct_bit_map_pack.html#a22a4eb1a939886f0a59888298dc68e76">texture</a>, texSize);</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    }</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160; </div>
+<div class="line"><a name="l00141"></a><span class="lineno"><a class="line" href="class_sprite_component.html#a4902386a5bf139c7af8d314235f47bc9">  141</a></span>&#160;    std::string <a class="code" href="class_sprite_component.html#a4902386a5bf139c7af8d314235f47bc9">GetSaveData</a>()</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    {</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        std::string saveData;</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        saveData += <span class="stringliteral">&quot;&lt;sprite&gt;&quot;</span> + m_filePath + <span class="stringliteral">&quot;&lt;/sprite&gt;&quot;</span>;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        <span class="keywordflow">return</span> saveData;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    }</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160; </div>
+<div class="line"><a name="l00153"></a><span class="lineno"><a class="line" href="class_sprite_component.html#ac8933e6c0606bfe46dff7b74b3b63a4f">  153</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_sprite_component.html#ac8933e6c0606bfe46dff7b74b3b63a4f">SetIndex</a>(<span class="keywordtype">int</span> index)</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    {</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        m_index = index;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    }</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160; </div>
+<div class="line"><a name="l00164"></a><span class="lineno"><a class="line" href="class_sprite_component.html#a81bbc053fb5d40556fcae2dfb34ea7a6">  164</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_sprite_component.html#a81bbc053fb5d40556fcae2dfb34ea7a6">setFilePath</a>(std::string filePath)</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    {</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        m_filePath = filePath;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        m_bitMapPack = <a class="code" href="class_resource_manager.html#a63d542726087c4f2ae121a05060a15e9">ResourceManager::Instance</a>()-&gt;<a class="code" href="class_resource_manager.html#ad997f36a23675d8176acd0d26ffd6114">LoadBitMap</a>(m_filePath, <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    }</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160; </div>
+<div class="line"><a name="l00175"></a><span class="lineno"><a class="line" href="class_sprite_component.html#a603603c3752abf9b52a4f7a577b567a1">  175</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_sprite_component.html#a603603c3752abf9b52a4f7a577b567a1">SetAnimated</a>(<span class="keywordtype">bool</span> _animated)</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    {</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        animated = _animated;</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    }</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;};</div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclass_sprite_component_html"><div class="ttname"><a href="class_sprite_component.html">SpriteComponent</a></div><div class="ttdef"><b>Definition:</b> SpriteComponent.h:7</div></div>
-<div class="ttc" id="aclass_component_html"><div class="ttname"><a href="class_component.html">Component</a></div><div class="ttdef"><b>Definition:</b> ECS.h:36</div></div>
+<div class="ttc" id="aclass_sprite_component_html_a04acd897d490a0726a0c7c1e3e1376d5"><div class="ttname"><a href="class_sprite_component.html#a04acd897d490a0726a0c7c1e3e1376d5">SpriteComponent::getTexture</a></div><div class="ttdeci">SDL_Texture &amp; getTexture()</div><div class="ttdef"><b>Definition:</b> SpriteComponent.h:97</div></div>
+<div class="ttc" id="aclass_sprite_component_html_a4902386a5bf139c7af8d314235f47bc9"><div class="ttname"><a href="class_sprite_component.html#a4902386a5bf139c7af8d314235f47bc9">SpriteComponent::GetSaveData</a></div><div class="ttdeci">std::string GetSaveData()</div><div class="ttdef"><b>Definition:</b> SpriteComponent.h:141</div></div>
+<div class="ttc" id="aclass_component_html_a46343549452bda5ee9752f7a9bc15efb"><div class="ttname"><a href="class_component.html#a46343549452bda5ee9752f7a9bc15efb">Component::name</a></div><div class="ttdeci">std::string name</div><div class="ttdef"><b>Definition:</b> ECS.h:46</div></div>
+<div class="ttc" id="aclass_sprite_component_html_a5159a9c9ca7d026c4a6a0b38b215c6d5"><div class="ttname"><a href="class_sprite_component.html#a5159a9c9ca7d026c4a6a0b38b215c6d5">SpriteComponent::JointTick</a></div><div class="ttdeci">void JointTick()</div><div class="ttdef"><b>Definition:</b> SpriteComponent.h:87</div></div>
+<div class="ttc" id="aclass_sprite_component_html_a8ec202636d916ef3fae80df8c7c9a6cb"><div class="ttname"><a href="class_sprite_component.html#a8ec202636d916ef3fae80df8c7c9a6cb">SpriteComponent::getTexDim</a></div><div class="ttdeci">Vector2 getTexDim()</div><div class="ttdef"><b>Definition:</b> SpriteComponent.h:107</div></div>
+<div class="ttc" id="aclass_vector2_html_a046bb8d17a876acc49415128dc0502f2"><div class="ttname"><a href="class_vector2.html#a046bb8d17a876acc49415128dc0502f2">Vector2::x</a></div><div class="ttdeci">float x</div><div class="ttdef"><b>Definition:</b> MathHelper.h:15</div></div>
+<div class="ttc" id="aclass_sprite_component_html"><div class="ttname"><a href="class_sprite_component.html">SpriteComponent</a></div><div class="ttdef"><b>Definition:</b> SpriteComponent.h:11</div></div>
+<div class="ttc" id="aclass_component_html"><div class="ttname"><a href="class_component.html">Component</a></div><div class="ttdef"><b>Definition:</b> ECS.h:43</div></div>
+<div class="ttc" id="aclass_sprite_component_html_a0d576efe03344ead5816fe048310a909"><div class="ttname"><a href="class_sprite_component.html#a0d576efe03344ead5816fe048310a909">SpriteComponent::EditorTick</a></div><div class="ttdeci">void EditorTick() override</div><div class="ttdef"><b>Definition:</b> SpriteComponent.h:79</div></div>
+<div class="ttc" id="aclass_entity_html_ab67b05516196a4ec97c5b9fd13638bbb"><div class="ttname"><a href="class_entity.html#ab67b05516196a4ec97c5b9fd13638bbb">Entity::getComponent</a></div><div class="ttdeci">T &amp; getComponent() const</div><div class="ttdef"><b>Definition:</b> ECS.h:188</div></div>
+<div class="ttc" id="aclass_sprite_component_html_a6baacb0f33191ffe1b6a6c4650b4078d"><div class="ttname"><a href="class_sprite_component.html#a6baacb0f33191ffe1b6a6c4650b4078d">SpriteComponent::Tick</a></div><div class="ttdeci">void Tick() override</div><div class="ttdef"><b>Definition:</b> SpriteComponent.h:59</div></div>
 <div class="ttc" id="aclass_position_component_html"><div class="ttname"><a href="class_position_component.html">PositionComponent</a></div><div class="ttdef"><b>Definition:</b> PositionComponent.h:5</div></div>
-<div class="ttc" id="astruct_bit_map_pack_html"><div class="ttname"><a href="struct_bit_map_pack.html">BitMapPack</a></div><div class="ttdef"><b>Definition:</b> EngineStructs.h:27</div></div>
-<div class="ttc" id="aclass_vector2_html"><div class="ttname"><a href="class_vector2.html">Vector2</a></div><div class="ttdef"><b>Definition:</b> MathHelper.h:5</div></div>
+<div class="ttc" id="aclass_input_manager_html_a53a27e2e25bec96173a4c7532515d10e"><div class="ttname"><a href="class_input_manager.html#a53a27e2e25bec96173a4c7532515d10e">InputManager::Instance</a></div><div class="ttdeci">static InputManager * Instance()</div><div class="ttdef"><b>Definition:</b> InputManager.cpp:5</div></div>
+<div class="ttc" id="aclass_position_component_html_a91dd5fe3ecec8868b98447a73c6925e2"><div class="ttname"><a href="class_position_component.html#a91dd5fe3ecec8868b98447a73c6925e2">PositionComponent::scale</a></div><div class="ttdeci">float scale</div><div class="ttdef"><b>Definition:</b> PositionComponent.h:12</div></div>
+<div class="ttc" id="astruct_bit_map_pack_html"><div class="ttname"><a href="struct_bit_map_pack.html">BitMapPack</a></div><div class="ttdef"><b>Definition:</b> EngineStructs.h:44</div></div>
+<div class="ttc" id="astruct_bit_map_pack_html_a22a4eb1a939886f0a59888298dc68e76"><div class="ttname"><a href="struct_bit_map_pack.html#a22a4eb1a939886f0a59888298dc68e76">BitMapPack::texture</a></div><div class="ttdeci">SDL_Texture * texture</div><div class="ttdef"><b>Definition:</b> EngineStructs.h:46</div></div>
+<div class="ttc" id="aclass_vector2_html_a0e07bad05f01ed811b909a2eef97f9e2"><div class="ttname"><a href="class_vector2.html#a0e07bad05f01ed811b909a2eef97f9e2">Vector2::y</a></div><div class="ttdeci">float y</div><div class="ttdef"><b>Definition:</b> MathHelper.h:16</div></div>
+<div class="ttc" id="aclass_sprite_component_html_ac8933e6c0606bfe46dff7b74b3b63a4f"><div class="ttname"><a href="class_sprite_component.html#ac8933e6c0606bfe46dff7b74b3b63a4f">SpriteComponent::SetIndex</a></div><div class="ttdeci">void SetIndex(int index)</div><div class="ttdef"><b>Definition:</b> SpriteComponent.h:153</div></div>
+<div class="ttc" id="aclass_sprite_component_html_a603603c3752abf9b52a4f7a577b567a1"><div class="ttname"><a href="class_sprite_component.html#a603603c3752abf9b52a4f7a577b567a1">SpriteComponent::SetAnimated</a></div><div class="ttdeci">void SetAnimated(bool _animated)</div><div class="ttdef"><b>Definition:</b> SpriteComponent.h:175</div></div>
+<div class="ttc" id="aclass_renderer_html_a6372807844f96c89a1334c7a862b6ee2"><div class="ttname"><a href="class_renderer.html#a6372807844f96c89a1334c7a862b6ee2">Renderer::Draw</a></div><div class="ttdeci">void Draw(BitMapPack bitMapPack, SDL_Rect *destRect, SDL_Rect *srcRect=NULL)</div><div class="ttdef"><b>Definition:</b> Renderer.cpp:13</div></div>
+<div class="ttc" id="astruct_bit_map_pack_html_af6da2c8af8e3d2b51d8220a6913d839a"><div class="ttname"><a href="struct_bit_map_pack.html#af6da2c8af8e3d2b51d8220a6913d839a">BitMapPack::height</a></div><div class="ttdeci">int height</div><div class="ttdef"><b>Definition:</b> EngineStructs.h:48</div></div>
+<div class="ttc" id="aclass_component_html_a6acb3f00c9d114d961c8763ede390d2c"><div class="ttname"><a href="class_component.html#a6acb3f00c9d114d961c8763ede390d2c">Component::entity</a></div><div class="ttdeci">Entity * entity</div><div class="ttdef"><b>Definition:</b> ECS.h:48</div></div>
+<div class="ttc" id="astruct_bit_map_pack_html_ace6df890ecaf19c8640d2af75dc811e1"><div class="ttname"><a href="struct_bit_map_pack.html#ace6df890ecaf19c8640d2af75dc811e1">BitMapPack::width</a></div><div class="ttdeci">int width</div><div class="ttdef"><b>Definition:</b> EngineStructs.h:47</div></div>
+<div class="ttc" id="aclass_resource_manager_html_ad997f36a23675d8176acd0d26ffd6114"><div class="ttname"><a href="class_resource_manager.html#ad997f36a23675d8176acd0d26ffd6114">ResourceManager::LoadBitMap</a></div><div class="ttdeci">BitMapPack LoadBitMap(std::string filePath, bool transparency)</div><div class="ttdef"><b>Definition:</b> ResourceManager.cpp:14</div></div>
+<div class="ttc" id="aclass_resource_manager_html_a63d542726087c4f2ae121a05060a15e9"><div class="ttname"><a href="class_resource_manager.html#a63d542726087c4f2ae121a05060a15e9">ResourceManager::Instance</a></div><div class="ttdeci">static ResourceManager * Instance()</div><div class="ttdef"><b>Definition:</b> ResourceManager.cpp:124</div></div>
+<div class="ttc" id="aclass_renderer_html_a1230f9655b42f3d37f6086ee94c631a4"><div class="ttname"><a href="class_renderer.html#a1230f9655b42f3d37f6086ee94c631a4">Renderer::Instance</a></div><div class="ttdeci">static Renderer * Instance()</div><div class="ttdef"><b>Definition:</b> Renderer.cpp:107</div></div>
+<div class="ttc" id="aclass_position_component_html_aaaea83aa812d2f8bfb7985eaa6a9cfc8"><div class="ttname"><a href="class_position_component.html#aaaea83aa812d2f8bfb7985eaa6a9cfc8">PositionComponent::getPos</a></div><div class="ttdeci">Vector2 getPos()</div><div class="ttdef"><b>Definition:</b> PositionComponent.h:54</div></div>
+<div class="ttc" id="aclass_sprite_component_html_a81bbc053fb5d40556fcae2dfb34ea7a6"><div class="ttname"><a href="class_sprite_component.html#a81bbc053fb5d40556fcae2dfb34ea7a6">SpriteComponent::setFilePath</a></div><div class="ttdeci">void setFilePath(std::string filePath)</div><div class="ttdef"><b>Definition:</b> SpriteComponent.h:164</div></div>
+<div class="ttc" id="aclass_vector2_html"><div class="ttname"><a href="class_vector2.html">Vector2</a></div><div class="ttdef"><b>Definition:</b> MathHelper.h:9</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

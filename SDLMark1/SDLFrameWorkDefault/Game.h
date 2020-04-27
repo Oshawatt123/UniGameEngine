@@ -79,17 +79,46 @@ public:
 	Game();
 	~Game();
 
+	/**
+	* The Main tick of the game
+	*/
 	bool Tick(void);
 
 private:
+
+	/**
+	* Updates the Renderer
+	*/
 	void UpdateRenderer(void);
+
+	/**
+	* Updates the Input Manager
+	*/
 	void UpdateInputManager(void);
 
+	/**
+	* Draw the ImGui Heirarchy Window
+	*/
 	void DrawHeirarchy();
+
+	/**
+	* Draw the ImGui Inspector Window
+	*/
 	void DrawInspector();
+
+	/**
+	* Draw the ImGui Scene Picker Window
+	*/
 	void DrawScenePicker();
+
+	/**
+	* Draw the ImGui Engine Debug Window
+	*/
 	void DrawEngineDebug();
 
+	/**
+	* A QoL function to help with generating the ImGui tree for my file heirarchy (Scene Picker)
+	*/
 	void followFilePath(std::string path);
 };
 

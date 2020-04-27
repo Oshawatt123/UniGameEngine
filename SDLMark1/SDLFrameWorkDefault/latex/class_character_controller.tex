@@ -12,13 +12,73 @@ Inheritance diagram for Character\+Controller\+:\begin{figure}[H]
 \mbox{\Hypertarget{class_character_controller_a516fcd6e04b82ad945e72a75adebf941}\label{class_character_controller_a516fcd6e04b82ad945e72a75adebf941}} 
 void {\bfseries Init} () override
 \item 
-\mbox{\Hypertarget{class_character_controller_a0fd3cccc69e413dea162cc4b8ee08dfb}\label{class_character_controller_a0fd3cccc69e413dea162cc4b8ee08dfb}} 
-void {\bfseries Tick} () override
+void \mbox{\hyperlink{class_character_controller_a0fd3cccc69e413dea162cc4b8ee08dfb}{Tick}} () override
+\item 
+\mbox{\Hypertarget{class_character_controller_abf639400b661463cce7537476234e5b0}\label{class_character_controller_abf639400b661463cce7537476234e5b0}} 
+void {\bfseries Populate\+Inspector} () override
 \item 
 \mbox{\Hypertarget{class_character_controller_a6f40345e653725dd19e376dbb7a33a15}\label{class_character_controller_a6f40345e653725dd19e376dbb7a33a15}} 
 float \& {\bfseries Get\+Speed} ()
+\item 
+std\+::string \mbox{\hyperlink{class_character_controller_a3c05a53ab97833de457d2bac87851c81}{Get\+Save\+Data}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_character_controller_a0a872e932dee8c9025081c39f5422674}\label{class_character_controller_a0a872e932dee8c9025081c39f5422674}} 
+\mbox{\hyperlink{class_position_component}{Position\+Component}} $\ast$ {\bfseries pos}
+\item 
+\mbox{\Hypertarget{class_character_controller_aaecc9cb4403be428d1b5d99eb0573bf3}\label{class_character_controller_aaecc9cb4403be428d1b5d99eb0573bf3}} 
+\mbox{\hyperlink{class_collision_component}{Collision\+Component}} $\ast$ {\bfseries col}
+\item 
+\mbox{\Hypertarget{class_character_controller_a4d5003568cedd2f2c8d994121ce360c2}\label{class_character_controller_a4d5003568cedd2f2c8d994121ce360c2}} 
+\mbox{\hyperlink{class_sprite_component}{Sprite\+Component}} $\ast$ {\bfseries spr}
+\item 
+\mbox{\Hypertarget{class_character_controller_ad5a7592988f8614465c821e2bd5ba48e}\label{class_character_controller_ad5a7592988f8614465c821e2bd5ba48e}} 
+float {\bfseries speed}
+\item 
+\mbox{\Hypertarget{class_character_controller_a90d1f130e90fa0d05c9dc20397e1fb72}\label{class_character_controller_a90d1f130e90fa0d05c9dc20397e1fb72}} 
+\mbox{\hyperlink{class_vector2}{Vector2}} {\bfseries translation}
+\item 
+\mbox{\Hypertarget{class_character_controller_ae4af52c791e36dbefb77611c3914aef1}\label{class_character_controller_ae4af52c791e36dbefb77611c3914aef1}} 
+\mbox{\hyperlink{class_vector2}{Vector2}} {\bfseries direction}
+\item 
+\mbox{\Hypertarget{class_character_controller_ae08de69eaf01b8f51c53be864741584b}\label{class_character_controller_ae08de69eaf01b8f51c53be864741584b}} 
+\mbox{\hyperlink{class_entity}{Entity}} $\ast$ {\bfseries colliding\+Entity}
+\item 
+\mbox{\Hypertarget{class_character_controller_a592f72003c50329635aa0be680602842}\label{class_character_controller_a592f72003c50329635aa0be680602842}} 
+float {\bfseries time\+Between\+Attacks} = 1.\+0f
+\item 
+\mbox{\Hypertarget{class_character_controller_a343e1cc564f00f46ae303feee79b14e7}\label{class_character_controller_a343e1cc564f00f46ae303feee79b14e7}} 
+float {\bfseries attack\+Timer}
+\item 
+\mbox{\Hypertarget{class_character_controller_a0cc28d013f52e88c82c48317fc7cd580}\label{class_character_controller_a0cc28d013f52e88c82c48317fc7cd580}} 
+int {\bfseries damage} = 1
 \end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_character_controller_a3c05a53ab97833de457d2bac87851c81}\label{class_character_controller_a3c05a53ab97833de457d2bac87851c81}} 
+\index{CharacterController@{CharacterController}!GetSaveData@{GetSaveData}}
+\index{GetSaveData@{GetSaveData}!CharacterController@{CharacterController}}
+\doxysubsubsection{\texorpdfstring{GetSaveData()}{GetSaveData()}}
+{\footnotesize\ttfamily std\+::string Character\+Controller\+::\+Get\+Save\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Base Populate\+Inspector has no behaviour. This is used to populate the inspector with editable fields / useful information. 
+
+Reimplemented from \mbox{\hyperlink{class_component_ac67aa475d8d1d08233d893a3d3665e5c}{Component}}.
+
+\mbox{\Hypertarget{class_character_controller_a0fd3cccc69e413dea162cc4b8ee08dfb}\label{class_character_controller_a0fd3cccc69e413dea162cc4b8ee08dfb}} 
+\index{CharacterController@{CharacterController}!Tick@{Tick}}
+\index{Tick@{Tick}!CharacterController@{CharacterController}}
+\doxysubsubsection{\texorpdfstring{Tick()}{Tick()}}
+{\footnotesize\ttfamily void Character\+Controller\+::\+Tick (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Base Init has no behaviour. This is called once after scene load. 
+
+Reimplemented from \mbox{\hyperlink{class_component_a93b89e900390d88afd70993549007c9c}{Component}}.
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

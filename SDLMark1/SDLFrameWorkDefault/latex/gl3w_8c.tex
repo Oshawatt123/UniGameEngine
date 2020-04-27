@@ -1,0 +1,83 @@
+\hypertarget{gl3w_8c}{}\doxysection{gl3w.\+c File Reference}
+\label{gl3w_8c}\index{gl3w.c@{gl3w.c}}
+{\ttfamily \#include $<$G\+L/gl3w.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$dlfcn.\+h$>$}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{gl3w_8c_a6242a25f9d996f0cc4f4cdb911218b75}{A\+R\+R\+A\+Y\+\_\+\+S\+I\+ZE}}(x)~(sizeof(x) / sizeof((x)\mbox{[}0\mbox{]}))
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{gl3w_8c_a4b3f0fd85c98f44d38afbc954b6ad8ed}{gl3w\+Init}} (void)
+\item 
+int \mbox{\hyperlink{gl3w_8c_adfccbff41113dbf960180ffa9ea04273}{gl3w\+Init2}} (G\+L3\+W\+Get\+Proc\+Address\+Proc proc)
+\item 
+int \mbox{\hyperlink{gl3w_8c_ac13e74371feb77550cf7ced6cff4b739}{gl3w\+Is\+Supported}} (int \mbox{\hyperlink{gl3w_8c_ac8947941479c38403a09c14a60b03f01}{major}}, int \mbox{\hyperlink{gl3w_8c_aec7b96885baf2e6f10efbdef9d935a0b}{minor}})
+\item 
+G\+L3\+Wgl\+Proc \mbox{\hyperlink{gl3w_8c_a79ed8e6fac1581b80ac620e5a6c19d8a}{gl3w\+Get\+Proc\+Address}} (const char $\ast$proc)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+union G\+L3\+W\+Procs \mbox{\hyperlink{gl3w_8c_abba6434e33de1851ce3bd535dc45c1b6}{gl3w\+Procs}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{gl3w_8c_a6242a25f9d996f0cc4f4cdb911218b75}\label{gl3w_8c_a6242a25f9d996f0cc4f4cdb911218b75}} 
+\index{gl3w.c@{gl3w.c}!ARRAY\_SIZE@{ARRAY\_SIZE}}
+\index{ARRAY\_SIZE@{ARRAY\_SIZE}!gl3w.c@{gl3w.c}}
+\doxysubsubsection{\texorpdfstring{ARRAY\_SIZE}{ARRAY\_SIZE}}
+{\footnotesize\ttfamily \#define A\+R\+R\+A\+Y\+\_\+\+S\+I\+ZE(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(sizeof(x) / sizeof((x)\mbox{[}0\mbox{]}))}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{gl3w_8c_a79ed8e6fac1581b80ac620e5a6c19d8a}\label{gl3w_8c_a79ed8e6fac1581b80ac620e5a6c19d8a}} 
+\index{gl3w.c@{gl3w.c}!gl3wGetProcAddress@{gl3wGetProcAddress}}
+\index{gl3wGetProcAddress@{gl3wGetProcAddress}!gl3w.c@{gl3w.c}}
+\doxysubsubsection{\texorpdfstring{gl3wGetProcAddress()}{gl3wGetProcAddress()}}
+{\footnotesize\ttfamily G\+L3\+Wgl\+Proc gl3w\+Get\+Proc\+Address (\begin{DoxyParamCaption}\item[{const char $\ast$}]{proc }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{gl3w_8c_a4b3f0fd85c98f44d38afbc954b6ad8ed}\label{gl3w_8c_a4b3f0fd85c98f44d38afbc954b6ad8ed}} 
+\index{gl3w.c@{gl3w.c}!gl3wInit@{gl3wInit}}
+\index{gl3wInit@{gl3wInit}!gl3w.c@{gl3w.c}}
+\doxysubsubsection{\texorpdfstring{gl3wInit()}{gl3wInit()}}
+{\footnotesize\ttfamily int gl3w\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{gl3w_8c_adfccbff41113dbf960180ffa9ea04273}\label{gl3w_8c_adfccbff41113dbf960180ffa9ea04273}} 
+\index{gl3w.c@{gl3w.c}!gl3wInit2@{gl3wInit2}}
+\index{gl3wInit2@{gl3wInit2}!gl3w.c@{gl3w.c}}
+\doxysubsubsection{\texorpdfstring{gl3wInit2()}{gl3wInit2()}}
+{\footnotesize\ttfamily int gl3w\+Init2 (\begin{DoxyParamCaption}\item[{G\+L3\+W\+Get\+Proc\+Address\+Proc}]{proc }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{gl3w_8c_ac13e74371feb77550cf7ced6cff4b739}\label{gl3w_8c_ac13e74371feb77550cf7ced6cff4b739}} 
+\index{gl3w.c@{gl3w.c}!gl3wIsSupported@{gl3wIsSupported}}
+\index{gl3wIsSupported@{gl3wIsSupported}!gl3w.c@{gl3w.c}}
+\doxysubsubsection{\texorpdfstring{gl3wIsSupported()}{gl3wIsSupported()}}
+{\footnotesize\ttfamily int gl3w\+Is\+Supported (\begin{DoxyParamCaption}\item[{int}]{major,  }\item[{int}]{minor }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{gl3w_8c_abba6434e33de1851ce3bd535dc45c1b6}\label{gl3w_8c_abba6434e33de1851ce3bd535dc45c1b6}} 
+\index{gl3w.c@{gl3w.c}!gl3wProcs@{gl3wProcs}}
+\index{gl3wProcs@{gl3wProcs}!gl3w.c@{gl3w.c}}
+\doxysubsubsection{\texorpdfstring{gl3wProcs}{gl3wProcs}}
+{\footnotesize\ttfamily union G\+L3\+W\+Procs gl3w\+Procs}
+
+\mbox{\Hypertarget{gl3w_8c_ac8947941479c38403a09c14a60b03f01}\label{gl3w_8c_ac8947941479c38403a09c14a60b03f01}} 
+\index{gl3w.c@{gl3w.c}!major@{major}}
+\index{major@{major}!gl3w.c@{gl3w.c}}
+\doxysubsubsection{\texorpdfstring{major}{major}}
+{\footnotesize\ttfamily int major}
+
+\mbox{\Hypertarget{gl3w_8c_aec7b96885baf2e6f10efbdef9d935a0b}\label{gl3w_8c_aec7b96885baf2e6f10efbdef9d935a0b}} 
+\index{gl3w.c@{gl3w.c}!minor@{minor}}
+\index{minor@{minor}!gl3w.c@{gl3w.c}}
+\doxysubsubsection{\texorpdfstring{minor}{minor}}
+{\footnotesize\ttfamily int minor}
+

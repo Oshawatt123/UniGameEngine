@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['inputmanager_30',['InputManager',['../class_input_manager.html',1,'']]]
+  ['game_210',['Game',['../class_game.html',1,'']]]
 ];
