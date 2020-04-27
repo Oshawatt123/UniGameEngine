@@ -15,3 +15,18 @@ There have been some more small game prototypes using the filthy engine which we
 You will always be remembered.
 
 And that brings us to now. About 8 months into development on the day of writing, The Filthy Engine stands as the largest project I have ever undertaken, and it won't be getting smaller any time soon.
+
+For a non-comprehensive feature list see below:
+
+- Inspector & custom inspector writing
+- Heirarchy
+- FileTree
+- Resource Management
+- Scene Management
+- Audio Management
+- Input Management
+- Entity Component System
+- Animations
+- Custom Component writing
+- Debugging tools
+- Probably a few more I can't think of.
