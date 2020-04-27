@@ -1,7 +1,14 @@
+# Some Notes Before We Start:
+Documentation can be found at: UniGameEngine\SDLMark1\SDLFrameWorkDefault\html\index.html
+I'm having a hard time uploading this anywhere so bare with for now hahaha.
+UniGameEngine\SDLFrameWork has a solution but is *not* the solution to The Filthy Engine.
+UniGameEngine\SDLMark1 has the correct solution, FilthyEngine.sln
+
 # The Filthy Engine
 A University module turned part-time obsession.
 
 <img src = "Images/FilthyEngineCurrentState.png">
+
 
 The Filthy Engine is a 2D game engine, aimed towards making zelda-like games, and has been through a few iterations in the past year.
 
