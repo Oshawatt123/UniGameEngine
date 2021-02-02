@@ -18,7 +18,7 @@ The first use of the filthy engine was making a small AI-driven scene utilising 
 
 <img src = "Images/FilthyEngineAI.gif">
 
-This first use of The Filthy taught me a lot about the engine. Specifically, a lot of the flaws...
+This first use taught me a lot about the engine. Specifically, a lot of the flaws...
 <img src = "Images/FilthyEngineLeak.gif">
 
 There have been some more small game prototypes using the filthy engine which were accidentally caught in a desktop cleaning purge.
