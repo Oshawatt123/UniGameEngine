@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\Lewis Arnold\AppData\Local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Lewis Arnold\AppData\Local\JetBrains\Rider2020.1\resharper-host\Local\Transient\ReSharperHost\v201\SolutionCaches\_FilthyEngine.-1785357505.00" t="ExcludeRecursive" />
+    <e p="D:\GitHub Tings\UniGameEngine\SDLMark1" t="IncludeFlat">
+      <e p="FilthyEngine.sln" t="IncludeFlat" />
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="SDLFrameWorkDefault" t="IncludeRecursive">
+        <e p="AudioManager.cpp" t="Include" />
+        <e p="AudioManager.h" t="Include" />
+        <e p="BlackBoard.cpp" t="Include" />
+        <e p="BlackBoard.h" t="Include" />
+        <e p="CameraComponent.h" t="Include" />
+        <e p="CharacterController.h" t="Include" />
+        <e p="CollisionComponent.h" t="Include" />
+        <e p="Components.h" t="Include" />
+        <e p="ECS.h" t="Include" />
+        <e p="EnemyControl.h" t="Include" />
+        <e p="EngineStructs.h" t="Include" />
+        <e p="Event.cpp" t="Include" />
+        <e p="Event.h" t="Include" />
+        <e p="EventSystem.cpp" t="Include" />
+        <e p="EventSystem.h" t="Include" />
+        <e p="Game.cpp" t="Include" />
+        <e p="Game.h" t="Include" />
+        <e p="gl3w.c" t="Include" />
+        <e p="imconfig.h" t="Include" />
+        <e p="imgui.cpp" t="Include" />
+        <e p="imgui.h" t="Include" />
+        <e p="imgui_demo.cpp" t="Include" />
+        <e p="imgui_draw.cpp" t="Include" />
+        <e p="imgui_impl_opengl3.cpp" t="Include" />
+        <e p="imgui_impl_opengl3.h" t="Include" />
+        <e p="imgui_impl_sdl.cpp" t="Include" />
+        <e p="imgui_impl_sdl.h" t="Include" />
+        <e p="imgui_internal.h" t="Include" />
+        <e p="imgui_sdl.cpp" t="Include" />
+        <e p="imgui_sdl.h" t="Include" />
+        <e p="imgui_stdlib.cpp" t="Include" />
+        <e p="imgui_stdlib.h" t="Include" />
+        <e p="imgui_widgets.cpp" t="Include" />
+        <e p="imstb_rectpack.h" t="Include" />
+        <e p="imstb_textedit.h" t="Include" />
+        <e p="imstb_truetype.h" t="Include" />
+        <e p="InputManager.cpp" t="Include" />
+        <e p="InputManager.h" t="Include" />
+        <e p="Logger.cpp" t="Include" />
+        <e p="Logger.h" t="Include" />
+        <e p="Main.cpp" t="Include" />
+        <e p="Map.cpp" t="Include" />
+        <e p="Map.h" t="Include" />
+        <e p="MathHelper.cpp" t="Include" />
+        <e p="MathHelper.h" t="Include" />
+        <e p="PhysicsEngine.cpp" t="Include" />
+        <e p="PhysicsEngine.h" t="Include" />
+        <e p="PositionComponent.h" t="Include" />
+        <e p="Renderer.cpp" t="Include" />
+        <e p="Renderer.h" t="Include" />
+        <e p="ResourceManager.cpp" t="Include" />
+        <e p="ResourceManager.h" t="Include" />
+        <e p="Scene.cpp" t="Include" />
+        <e p="Scene.h" t="Include" />
+        <e p="SceneManager.cpp" t="Include" />
+        <e p="SceneManager.h" t="Include" />
+        <e p="SDLFrameWorkDefault.vcxproj" t="IncludeRecursive" />
+        <e p="SpriteComponent.h" t="Include" />
+        <e p="StairControl.h" t="Include" />
+        <e p="Time.cpp" t="Include" />
+        <e p="Time.h" t="Include" />
+        <e p="Timer.h" t="Include" />
+        <e p="x64\Debug" t="ExcludeRecursive" />
+      </e>
+      <e p="x64\Debug" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
